@@ -154,7 +154,7 @@ dependencies {
     implementation "curse.maven:apothic-attributes-898963:6302334"
     implementation "curse.maven:placebo-283644:6337156"
 
-    implementation "curse.maven:azurelib-817423:6541667"
+    implementation "mod.azure.azurelib:azurelib-neo-${minecraft_version}:${azurelib_version}"
 
     compileOnly "mezz.jei:jei-${jei_mc_version}-common-api:${jei_version}"
     compileOnly "mezz.jei:jei-${jei_mc_version}-neoforge-api:${jei_version}"
@@ -164,8 +164,6 @@ dependencies {
 
     localRuntime "curse.maven:better-combat-by-daedelus-639842:5723092"
     localRuntime "curse.maven:cloth-config-348521:5623420"
-
-
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

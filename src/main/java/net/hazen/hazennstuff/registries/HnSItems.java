@@ -1,11 +1,47 @@
 package net.hazen.hazennstuff.registries;
 
+import io.redspace.ironsspellbooks.item.UpgradeOrbItem;
+import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.render.CinderousRarity;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.block.custom.ModFlammableRotatedPillarBlock;
-import net.hazen.hazennstuff.item.armor.*;
-import net.hazen.hazennstuff.item.armor.Geckolib.*;
+import net.hazen.hazennstuff.item.armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorItem;
+import net.hazen.hazennstuff.item.armor.AzureLib.ChargedScourge.ChargedScourgeArmorItem;
+import net.hazen.hazennstuff.item.armor.AzureLib.CreakingSorcerer.CreakingSorcererArmorItem;
+import net.hazen.hazennstuff.item.armor.AzureLib.CryogenicRuler.CryogenicRulerArmorItem;
+import net.hazen.hazennstuff.item.armor.AzureLib.DarkRitualTemplar.DarkRitualTemplarArmorItem;
+import net.hazen.hazennstuff.item.armor.AzureLib.EnderDragon.EnderDragonArmorItem;
+import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageCrownedArmorItem;
+import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageHelmetArmorItem;
+import net.hazen.hazennstuff.item.armor.AzureLib.FleshMass.FleshMassArmorItem;
+import net.hazen.hazennstuff.item.armor.AzureLib.SLCCat.SLCCatArmorItem;
+import net.hazen.hazennstuff.item.armor.AzureLib.Seraph.SeraphArmorItem;
+import net.hazen.hazennstuff.item.armor.AzureLib.SoulFlame.SoulFlameArmorItem;
+import net.hazen.hazennstuff.item.armor.AzureLib.SupremeWitch.SupremeWitchArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.ArbitriumRobes.ArbitriumRobesGeckolibArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.Atlas.AtlasArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.Calamitas.CalamitasArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.ChargedScourge.GeckolibChargedScourgeArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.CreakingSorcerer.GeckolibCreakingSorcererArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.CryogenicRuler.GeckolibCryogenicRulerArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.DarkRitualTemplar.GeckolibDarkRitualTemplarArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.EnderDragon.GeckolibEnderDragonArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.FireblossomBattlemage.GeckolibFireblossomBattlemageCrownedArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.FireblossomBattlemage.GeckolibFireblossomBattlemageHelmetArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.FleshMass.GeckolibFleshMassArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.Frieren.GeckolibFrierenArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.Legionnaire.GeckolibLegionnaireArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.Maverick.MaverickArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.Miner.MinerArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.ProjectSekai.GeckolibProjectSekaiArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.RottenGirl.GeckolibRottenGirlArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.Seraph.GeckolibSeraphArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.SoulFlame.GeckolibSoulFlameArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.SpectralSpelunker.SpectralSpelunkerArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.SupremeWitch.GeckolibSupremeWitchArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.SynthesizerV.GeckolibSynthesizerVArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.Utau.GeckolibUtauArmorItem;
 import net.hazen.hazennstuff.item.curios.*;
 import net.hazen.hazennstuff.item.staves.rod_of_discord.RodOfDiscordItem;
 import net.hazen.hazennstuff.item.staves.wisewood_cane.WisewoodCaneItem;
@@ -16,9 +52,12 @@ import net.hazen.hazennstuff.item.weapons.bountiful_harvest.BountifulHarvestItem
 import net.hazen.hazennstuff.item.weapons.fireblossom_rapier.FireblossomRapierItem;
 import net.hazen.hazennstuff.item.weapons.hammer_of_justice.HammerOfJusticeItem;
 import net.hazen.hazennstuff.item.weapons.ice_pike.IcePikeItem;
+import net.hazen.hazennstuff.item.weapons.lights_bane.LightsBaneItem;
+import net.hazen.hazennstuff.item.weapons.nights_edge.NightsEdgeItem;
 import net.hazen.hazennstuff.item.weapons.skyscorcher.SkyscorcherItem;
 import net.hazen.hazennstuff.item.weapons.starfury.StarfuryItem;
-import net.hazen.hazennstuff.render.*;
+import net.hazen.hazennstuff.item.weapons.true_nights_edge.TrueNightsEdgeItem;
+import net.hazen.hazennstuff.rarity.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
@@ -53,64 +92,216 @@ public class HnSItems {
     // Just a little info for you!
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(HazenNStuff.MOD_ID);
 
+    /***
+     * Upgrade orbs
+     */
 
-    //Materials
-    public static final DeferredItem<Item> ZENALITE_INGOT = ITEMS.register("zenalite_ingot",
-            () -> new Item(new Item.Properties().rarity(DeusRarity.DEUS_RARITY_PROXY.getValue()).fireResistant()));
-    public static final DeferredItem<Item> PYRIUM_NUGGET = ITEMS.register("pyrium_nugget",
-            () -> new Item(new Item.Properties().rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue()).fireResistant()));
-    public static final DeferredItem<Item> SILVER_SCRAPS = ITEMS.register("silver_scraps",
-            () -> new Item(new Item.Properties().rarity(Rarity.EPIC).fireResistant()));
-    public static final DeferredItem<Item> EXCALIBUR_FRAGMENT = ITEMS.register("excalibur_fragment",
-            () -> new Item(new Item.Properties().rarity(DivineRarity.DIVINE_RARITY_PROXY.getValue()).fireResistant()));
+// Luminescent Upgrade Orb
+    public static final DeferredHolder<Item, Item> LUMINESCENT_UPGRADE_ORB = ITEMS.register("luminescent_upgrade_orb",
+            () -> new UpgradeOrbItem(ItemPropertiesHelper
+                    .material()
+                    .rarity(Rarity.UNCOMMON)
+                    .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.LUMINESCENT_SPELL_POWER))
+    );
+    // Melee Upgrade Orb
+    public static final DeferredHolder<Item, Item> MELEE_UPGRADE_ORB = ITEMS.register("melee_upgrade_orb",
+            () -> new UpgradeOrbItem(ItemPropertiesHelper
+                    .material()
+                    .rarity(Rarity.UNCOMMON)
+                    .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.MELEE_POWER))
+    );
+    // Health Upgrade Orb
+    public static final DeferredHolder<Item, Item> HEALTH_UPGRADE_ORB = ITEMS.register("health_upgrade_orb",
+            () -> new UpgradeOrbItem(ItemPropertiesHelper
+                    .material()
+                    .rarity(Rarity.UNCOMMON)
+                    .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.HEALTH_POWER))
+    );
+    // Archery Upgrade Orb
+    public static final DeferredHolder<Item, Item> ARCHERY_UPGRADE_ORB = ITEMS.register("archery_upgrade_orb",
+            () -> new UpgradeOrbItem(ItemPropertiesHelper
+                    .material()
+                    .rarity(Rarity.UNCOMMON)
+                    .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.ARCHERY_POWER))
+    );
+
+
+
+
+    /***
+     * Materials
+     */
+
+    //Raw Zenalite
     public static final DeferredItem<Item> RAW_ZENALITE = ITEMS.register("raw_zenalite",
-            () -> new Item(new Item.Properties().rarity(Rarity.EPIC).fireResistant()));
-    public static final DeferredItem<Item> STARKISSED_ZENALITE = ITEMS.register("starkissed_zenalite",
-            () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true).rarity(DeusRarity.DEUS_RARITY_PROXY.getValue()).fireResistant()));
-    public static final DeferredItem<Item> DIVINE_MOLD = ITEMS.register("divine_mold",
-            () -> new Item(new Item.Properties().rarity(DeusRarity.DEUS_RARITY_PROXY.getValue()).fireResistant().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
-    public static final DeferredItem<Item> DEUS_ESSENCE = ITEMS.register("deus_essence",
-            () -> new Item(new Item.Properties().rarity(Rarity.EPIC).fireResistant().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
-    public static final DeferredItem<Item> RUNESTONE_FRAGMENTS = ITEMS.register("runestone_fragments",
-            () -> new Item(new Item.Properties().rarity(Rarity.RARE).fireResistant()));
-    public static final DeferredItem<Item> PERMAFROST_FRAGMENT = ITEMS.register("permafrost_fragment",
-            () -> new Item(new Item.Properties().rarity(CryogenicRarity.CRYOGENIC_RARITY_PROXY.getValue()).fireResistant()));
-    public static final DeferredItem<Item> CHARRED_BONES = ITEMS.register("charred_bones",
-            () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> OVERGROWN_BONE = ITEMS.register("overgrown_bone",
-            () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> FLAMING_TEMPLATE = ITEMS.register("flaming_template",
-            () -> new Item(new Item.Properties().rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue()).fireResistant()));
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(Rarity.EPIC)
+                    .fireResistant())
 
-    //Weapons
+    );
+    //Starkissed Zenalite
+    public static final DeferredItem<Item> STARKISSED_ZENALITE = ITEMS.register("starkissed_zenalite",
+            () -> new Item(new Item
+                    .Properties()
+                    .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
+                    .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+                    .fireResistant())
+    );
+    // Zenalite Ingot
+    public static final DeferredItem<Item> ZENALITE_INGOT = ITEMS.register("zenalite_ingot",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+                    .fireResistant())
+
+    );
+    // Pyrium Nugget
+    public static final DeferredItem<Item> PYRIUM_NUGGET = ITEMS.register("pyrium_nugget",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
+                    .fireResistant())
+
+    );
+    // Silver Scrap
+    public static final DeferredItem<Item> SILVER_SCRAPS = ITEMS.register("silver_scraps",
+            () -> new Item(new Item.Properties()
+                    .rarity(Rarity.EPIC)
+                    .fireResistant())
+
+    );
+    //Excalibur
+    public static final DeferredItem<Item> EXCALIBUR_FRAGMENT = ITEMS.register("excalibur_fragment",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(DivineRarity.DIVINE_RARITY_PROXY.getValue())
+                    .fireResistant())
+
+    );
+    //Divine Mold
+    public static final DeferredItem<Item> DIVINE_MOLD = ITEMS.register("divine_mold",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+                    .fireResistant()
+                    .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
+
+    );
+    //Deus Essence
+    public static final DeferredItem<Item> DEUS_ESSENCE = ITEMS.register("deus_essence",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(Rarity.EPIC)
+                    .fireResistant()
+                    .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
+
+    );
+    //Runestone Fragment
+    public static final DeferredItem<Item> RUNESTONE_FRAGMENTS = ITEMS.register("runestone_fragments",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(Rarity.RARE)
+                    .fireResistant())
+
+    );
+    //Permafrost Fragment
+    public static final DeferredItem<Item> PERMAFROST_FRAGMENT = ITEMS.register("permafrost_fragment",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(CryogenicRarity.CRYOGENIC_RARITY_PROXY.getValue())
+                    .fireResistant())
+    );
+    //Charred Bones
+    public static final DeferredItem<Item> CHARRED_BONES = ITEMS.register("charred_bones",
+            () -> new Item(new Item
+                    .Properties())
+    );
+    //Overgrown Bone
+    public static final DeferredItem<Item> OVERGROWN_BONE = ITEMS.register("overgrown_bone",
+            () -> new Item(new Item
+                    .Properties())
+    );
+    //Flaming Template
+    public static final DeferredItem<Item> FLAMING_TEMPLATE = ITEMS.register("flaming_template",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
+                    .fireResistant())
+    );
+
+    /***
+     * Weapons
+     */
+
+    //Ice Pike
     public static final DeferredHolder<Item, Item> ICE_PIKE = ITEMS.register("ice_pike", IcePikeItem::new);
+    //Fireblossom Rapier
     public static final DeferredHolder<Item, Item> FIREBLOSSOM_RAPIER = ITEMS.register("fireblossom_rapier", FireblossomRapierItem::new);
+    //Beongae
     public static final DeferredHolder<Item, Item> BEONGAE = ITEMS.register("beongae", BeongaeItem::new);
+    //Ancient Warrior's Axe
     public static final DeferredHolder<Item, Item> ANCIENT_WARRIORS_AXE = ITEMS.register("ancient_warriors_axe", AncientWarriorsAxeItem::new);
+    //Skyscorcher
     public static final DeferredHolder<Item, Item> SKYSCORCHER = ITEMS.register("skyscorcher", SkyscorcherItem::new);
+    //Bountiful Harvest
     public static final DeferredHolder<Item, Item> BOUNTIFUL_HARVEST = ITEMS.register("bountiful_harvest", BountifulHarvestItem::new);
+    //Starfury
     public static final DeferredHolder<Item, Item> STARFURY = ITEMS.register("starfury", StarfuryItem::new);
+    //Hammer of Justice
     public static final DeferredHolder<Item, Item> HAMMER_OF_JUSTICE = ITEMS.register("hammer_of_justice", HammerOfJusticeItem::new);
 
-    //Staves
+
+    /***
+     * Staves
+     */
+
+    //Frieren's Staff
     public static final DeferredHolder<Item, Item> FRIEREN_STAFF = ITEMS.register("frieren_staff", FrierenStaffItem::new);
+    //Wisewood Cane
     public static final DeferredHolder<Item, Item> WISEWOOD_CANE = ITEMS.register("wisewood_cane", WisewoodCaneItem::new);
+    //Rod of Discord
     public static final DeferredHolder<Item, Item> ROD_OF_DISCORD = ITEMS.register("rod_of_discord", RodOfDiscordItem::new);
 
-    //Tools
-    public static final DeferredHolder<Item, Item> SPECTRAL_PICKAXE = ITEMS.register("spectral_pickaxe", SpectralPickaxeItem::new);
+    /***
+     * Tools
+     */
 
-    //Curios
+    //Spectral Pickaxe
+    public static final DeferredHolder<Item, Item> SPECTRAL_PICKAXE = ITEMS.register("spectral_pickaxe", SpectralPickaxeItem::new);
+    //Lights Bane
+    public static final DeferredHolder<Item, Item> LIGHTS_BANE = ITEMS.register("lights_bane", LightsBaneItem::new);
+    //Nights Edge
+    public static final DeferredHolder<Item, Item> NIGHTS_EDGE = ITEMS.register("nights_edge", NightsEdgeItem::new);
+    //True Nights Edge
+    public static final DeferredHolder<Item, Item> TRUE_NIGHTS_EDGE = ITEMS.register("true_nights_edge", TrueNightsEdgeItem::new);
+
+    /***
+     * Curios
+     */
+
+        //Mana Crystals
+
+    //Ruptured
     public static final DeferredItem<RupturedCurio> RUPTURED = ITEMS.register("ruptured", RupturedCurio::new);
+    //Refined
     public static final DeferredItem<RefinedCurio> REFINED = ITEMS.register("refined", RefinedCurio::new);
+    //Reinforced
     public static final DeferredItem<ReinforcedCurio> REINFORCED = ITEMS.register("reinforced", ReinforcedCurio::new);
+    //Radiance
     public static final DeferredItem<RadianceCurio> RADIANCE = ITEMS.register("radiance", RadianceCurio::new);
 
-    //Armor
+
+
+
+    /***
+     * AzureLib Armor
+     */
+
 
     //Creaking Armor
 
-    public static final DeferredHolder<Item, Item> CREAKING_HELMET = ITEMS.register("creaking_helmet", () -> new CreakingSorcererArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+        public static final DeferredHolder<Item, Item> CREAKING_HELMET = ITEMS.register("creaking_helmet", () -> new CreakingSorcererArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
             .rarity(NatureRarity.NATURE_RARITY_PROXY.getValue())
             .fireResistant()
@@ -393,7 +584,10 @@ public class HnSItems {
             .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(90))));
 
-    // Geckolib
+    /***
+     * GeckoLib Armor
+     */
+
 
     //Frieren Armor
 
@@ -527,7 +721,7 @@ public class HnSItems {
             .equipment(1)
             .durability(ArmorItem.Type.BOOTS.getDurability(37))));
 
-    //Utau Armor
+    //Atlas Armor
 
     public static final DeferredHolder<Item, Item> ATLAS_HELMET = ITEMS.register("atlas_helmet", () -> new AtlasArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
@@ -565,7 +759,9 @@ public class HnSItems {
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))));
 
-    //Geckolib Dark Ritual Templar Armor
+
+
+    //Maverick Armor
 
     public static final DeferredHolder<Item, Item> MAVERICK_HELMET = ITEMS.register("maverick_helmet", () -> new MaverickArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
@@ -873,7 +1069,7 @@ public class HnSItems {
                         .Properties.of()
                         .strength(4f)
                         .requiresCorrectToolForDrops()
-                        .sound(SoundType.ANCIENT_DEBRIS)
+                        .sound(HnSSounds.SPECIAL_ORE)
                 ));
         public static final DeferredBlock<Block> AQUASTONE = registerBlock("aquastone",
                 () -> new Block(BlockBehaviour
@@ -968,7 +1164,7 @@ public class HnSItems {
                                 .Properties.of()
                                 .strength(3f)
                                 .requiresCorrectToolForDrops()
-                                .sound(SoundType.STONE)
+                                .sound(HnSSounds.SPECIAL_ORE)
                 ));
         public static final DeferredBlock<Block> ZENALITE_DEEPSLATE_ORE = registerBlock("zenalite_deepslate_ore",
                 () -> new DropExperienceBlock(UniformInt.of(2, 4),
@@ -976,7 +1172,7 @@ public class HnSItems {
                                 .Properties.of()
                                 .strength(3f)
                                 .requiresCorrectToolForDrops()
-                                .sound(SoundType.DEEPSLATE)
+                                .sound(HnSSounds.SPECIAL_ORE)
                 ));
         public static final DeferredBlock<Block> ZENALITE_ABYSSLATE_ORE = registerBlock("zenalite_abysslate_ore",
                 () -> new DropExperienceBlock(UniformInt.of(2, 4),
@@ -984,7 +1180,7 @@ public class HnSItems {
                                 .Properties.of()
                                 .strength(3f)
                                 .requiresCorrectToolForDrops()
-                                .sound(SoundType.ANCIENT_DEBRIS)
+                                .sound(HnSSounds.SPECIAL_ORE)
                 ));
         public static final DeferredBlock<Block> ZENALITE_VOIDSTONE_ORE = registerBlock("zenalite_voidstone_ore",
                 () -> new DropExperienceBlock(UniformInt.of(2, 4),
@@ -992,7 +1188,7 @@ public class HnSItems {
                                 .Properties.of()
                                 .strength(3f)
                                 .requiresCorrectToolForDrops()
-                                .sound(SoundType.ANCIENT_DEBRIS)
+                                .sound(HnSSounds.SPECIAL_ORE)
                 ));
 
 
@@ -1136,28 +1332,28 @@ public class HnSItems {
                         .Properties.of()
                         .strength(4f)
                         .requiresCorrectToolForDrops()
-                        .sound(SoundType.NETHERITE_BLOCK)
+                        .sound(HnSSounds.SPECIAL_ORE)
                 ));
         public static final DeferredBlock<Block> PYRIUM_BLOCK = registerBlock("pyrium_block",
                 () -> new Block(BlockBehaviour
                         .Properties.of()
                         .strength(4f)
                         .requiresCorrectToolForDrops()
-                        .sound(SoundType.NETHERITE_BLOCK)
+                        .sound(HnSSounds.SPECIAL_ORE)
                 ));
         public static final DeferredBlock<Block> MITHRIL_BLOCK = registerBlock("mithril_block",
                 () -> new Block(BlockBehaviour
                         .Properties.of()
                         .strength(4f)
                         .requiresCorrectToolForDrops()
-                        .sound(SoundType.NETHERITE_BLOCK)
+                        .sound(HnSSounds.SPECIAL_ORE)
                 ));
         public static final DeferredBlock<Block> ARCANE_STEEL_BLOCK = registerBlock("arcane_steel_block",
                 () -> new Block(BlockBehaviour
                         .Properties.of()
                         .strength(4f)
                         .requiresCorrectToolForDrops()
-                        .sound(SoundType.NETHERITE_BLOCK)
+                        .sound(HnSSounds.SPECIAL_ORE)
                 ));
 
 

@@ -11,6 +11,12 @@ public class HnSTags {
      * Items
      */
 
+    // Luminescent School Focus
+    public static final TagKey<Item> LUMINESCENT_FOCUS = ItemTags.create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "luminescent_focus").toString()));
+    // Corrupt School Focus
+    public static final TagKey<Item> DARK_FOCUS = ItemTags.create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "luminescent_focus").toString()));
+
+
     // Armor Items For Idle
     public static final TagKey<Item> ARMORS_FOR_IDLE = ItemTags.create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors_for_idle").toString()));
     // Armor Items For Idle

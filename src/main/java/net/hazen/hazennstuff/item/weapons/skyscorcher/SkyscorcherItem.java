@@ -4,15 +4,22 @@ import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
+import io.redspace.ironsspellbooks.api.util.Utils;
+import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
+import io.redspace.ironsspellbooks.particle.ZapParticleOption;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.entity.render.item.weapons.IcePikeRenderer;
-import net.hazen.hazennstuff.entity.render.item.weapons.SkyscorcherRenderer;
+import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.render.ElectricRarity;
+import net.hazen.hazennstuff.rarity.ElectricRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.MaceItem;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.phys.Vec3;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -37,6 +44,48 @@ public class SkyscorcherItem extends MagicSwordItem implements GeoItem {
                         new SpellDataRegistryHolder(SpellRegistry.ASCENSION_SPELL, 10))
         );
     }
+
+
+    @Override
+    public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        if (attacker instanceof Player player) {
+            float fallDistance = player.fallDistance;
+
+            boolean isSmash = fallDistance > 0.0F
+                    && !player.onGround()
+                    && !player.isInWater()
+                    && !player.isInLava();
+
+            if (isSmash) {
+                // Calculate fall-based bonus damage (cap at 12)
+                float bonusDamage = Math.min(12.0F, fallDistance * 1.2F);
+
+                // Deal extra damage on top of base weapon damage
+                target.hurt(target.damageSources().playerAttack(player), bonusDamage);
+
+                // Apply directional knockback based on fall
+                Vec3 direction = target.position().subtract(player.position()).normalize();
+                double knockbackStrength = Math.min(1.5, fallDistance / 10.0);
+                target.push(direction.x * knockbackStrength, 0.4 + (fallDistance / 15.0), direction.z * knockbackStrength);
+
+                // Play smash sound
+                player.level().playSound(null, target.blockPosition(), SoundEvents.TRIDENT_THUNDER.value(), SoundSource.PLAYERS, 1.0F, 1.0F);
+
+                // Spawn impact particles
+                Vec3 pos = target.getBoundingBox().getCenter();
+                MagicManager.spawnParticles(player.level(), ParticleHelper.ELECTRIC_SPARKS, pos.x, pos.y, pos.z, 12, 0.08, 0.08, 0.08, 0.3, false);
+
+                // Don’t consume durability on smash
+                return true;
+            }
+        }
+
+        // Normal hit behavior + durability
+        return super.hurtEnemy(stack, target, attacker);
+    }
+
+
+
 
 
     @Override

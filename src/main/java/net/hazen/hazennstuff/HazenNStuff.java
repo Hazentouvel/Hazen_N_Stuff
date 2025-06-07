@@ -3,9 +3,21 @@ package net.hazen.hazennstuff;
 import mod.azure.azurelib.rewrite.animation.cache.AzIdentityRegistry;
 import mod.azure.azurelib.rewrite.render.armor.AzArmorRendererRegistry;
 import mod.azure.azurelib.rewrite.render.item.AzItemRendererRegistry;
+import net.hazen.hazennstuff.item.armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.ChargedScourge.ChargedScourgeArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.CreakingSorcerer.CreakingSorcererArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.CryogenicRuler.CryogenicRulerArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.DarkRitualTemplar.DarkRitualTemplarArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.EnderDragon.EnderDragonArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageCrownedArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageHelmetArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.FleshMass.FleshMassArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.SLCCat.SLCCatArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.Seraph.SeraphArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.SoulFlame.SoulFlameArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.SupremeWitch.SupremeWitchArmorRenderer;
 import net.hazen.hazennstuff.registries.*;
-import net.hazen.hazennstuff.entity.render.armor.*;
-import net.hazen.hazennstuff.entity.render.item.weapons.HammerOfJusticeRenderer;
+import net.hazen.hazennstuff.item.weapons.hammer_of_justice.HammerOfJusticeRenderer;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
@@ -54,7 +66,11 @@ public class HazenNStuff
         HnSEffects.register(modEventBus);
         HnSSounds.register(modEventBus);
         HnSEntityRegistry.register(modEventBus);
+        HnSParticleRegistry.register(modEventBus);
+
         SpellRegistries.register(modEventBus);
+        HnSAttributeRegistry.register(modEventBus);
+        HnSSchoolRegistry.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 

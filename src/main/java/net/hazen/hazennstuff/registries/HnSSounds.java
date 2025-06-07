@@ -6,19 +6,73 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.util.DeferredSoundType;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.function.Supplier;
 
 public class HnSSounds {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
             DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, HazenNStuff.MOD_ID);
 
-    // Spell Sounds
 
+    /***
+     * Entity
+     */
+
+
+
+    /***
+     * Spell Sounds
+     */
+
+    // Chaotic Teleport
     public static DeferredHolder<SoundEvent, SoundEvent> CHAOTIC_TELEPORT = registerSoundEvent("chaotic_teleport");
 
+    // Brimstone Cast
+    public static DeferredHolder<SoundEvent, SoundEvent> BRIMSTONE_CAST = registerSoundEvent("brimstone_cast");
+    // Brimstone Hellblast Impact
+    public static DeferredHolder<SoundEvent, SoundEvent> BRIMSTONE_HELLBLAST_IMPACT = registerSoundEvent("brimstone_hellblast_impact");
+    // Brimstone Hellblast Cast
+    public static DeferredHolder<SoundEvent, SoundEvent> BRIMSTONE_HELLBLAST_CAST = registerSoundEvent("brimstone_hellblast_cast");
 
-    // Equip Sounds
+    // Electric Cast
+    public static DeferredHolder<SoundEvent, SoundEvent> ELECTRIC_CAST = registerSoundEvent("electric_cast");
+
+    // Electric Impact
+    public static DeferredHolder<SoundEvent, SoundEvent> ELECTRIC_IMPACT_1 = registerSoundEvent("electric_impact_1");
+    public static DeferredHolder<SoundEvent, SoundEvent> ELECTRIC_IMPACT_2 = registerSoundEvent("electric_impact_2");
+
+    public static final Holder<SoundEvent> ELECTRIC_IMPACT = registerSoundEvent("electric_impact");
+
+    //Spark Cast
+    public static final Holder<SoundEvent> SPARK_CAST_1 = registerSoundEvent("spark_cast_1");
+    public static final Holder<SoundEvent> SPARK_CAST_2 = registerSoundEvent("spark_cast_2");
+    public static final Holder<SoundEvent> SPARK_CAST_3 = registerSoundEvent("spark_cast_3");
+
+    public static final Holder<SoundEvent> SPARK_CAST = registerSoundEvent("spark_cast");
+
+    // Charged
+    public static DeferredHolder<SoundEvent, SoundEvent> CHARGED = registerSoundEvent("charged");
+
+    // Syringe Barrage Cast
+    public static DeferredHolder<SoundEvent, SoundEvent> SYRINGE_BARRAGE_CAST = registerSoundEvent("syringe_barrage_cast");
+
+    //Syringe Barrage Hit
+    public static final Holder<SoundEvent> SYRINGE_BARRAGE_HIT_1 = registerSoundEvent("syringe_barrage_hit_1");
+    public static final Holder<SoundEvent> SYRINGE_BARRAGE_HIT_2 = registerSoundEvent("syringe_barrage_hit_2");
+    public static final Holder<SoundEvent> SYRINGE_BARRAGE_HIT_3 = registerSoundEvent("syringe_barrage_hit_3");
+
+    public static final Holder<SoundEvent> SYRINGE_BARRAGE_HIT = registerSoundEvent("syringe_barrage_hit");
+
+    // Syringe Barrage Miss
+    public static DeferredHolder<SoundEvent, SoundEvent> SYRINGE_BARRAGE_MISS = registerSoundEvent("syringe_barrage_miss");
+
+    /***
+     * Equip Sounds
+     */
+
 
 
     //Soul Flame Equip
@@ -96,6 +150,29 @@ public class HnSSounds {
 
     public static final Holder<SoundEvent> ENDER_DRAGON_EQUIP = registerSoundEvent("ender_dragon_equip");
 
+    //Calamitas
+    public static final Holder<SoundEvent> CALAMITAS_EQUIP_1 = registerSoundEvent("calamitas_equip_1");
+    public static final Holder<SoundEvent> CALAMITAS_EQUIP_2 = registerSoundEvent("calamitas_equip_2");
+    public static final Holder<SoundEvent> CALAMITAS_EQUIP_3 = registerSoundEvent("calamitas_equip_3");
+    public static final Holder<SoundEvent> CALAMITAS_EQUIP_4 = registerSoundEvent("calamitas_equip_4");
+
+    public static final Holder<SoundEvent> CALAMITAS_EQUIP = registerSoundEvent("calamitas_equip");
+
+
+    /***
+     * Block Sounds
+     */
+
+    //Special Ore
+    public static final Supplier<SoundEvent> SPECIAL_ORE_BREAK = registerSoundEvent("special_ore_break");
+    public static final Supplier<SoundEvent> SPECIAL_ORE_STEP = registerSoundEvent("special_ore_step");
+    public static final Supplier<SoundEvent> SPECIAL_ORE_PLACE = registerSoundEvent("special_ore_place");
+    public static final Supplier<SoundEvent> SPECIAL_ORE_HIT = registerSoundEvent("special_ore_hit");
+    public static final Supplier<SoundEvent> SPECIAL_ORE_FALL = registerSoundEvent("special_ore_fall");
+
+    public static final DeferredSoundType SPECIAL_ORE = new DeferredSoundType(1f, 1f,
+            HnSSounds.SPECIAL_ORE_BREAK, HnSSounds.SPECIAL_ORE_STEP, HnSSounds.SPECIAL_ORE_PLACE,
+            HnSSounds.SPECIAL_ORE_HIT, HnSSounds.SPECIAL_ORE_FALL);
 
 
 
@@ -104,6 +181,7 @@ public class HnSSounds {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent
                 (ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, name)));
     }
+
 
     public static void register(IEventBus eventBus) {
         SOUND_EVENTS.register(eventBus);

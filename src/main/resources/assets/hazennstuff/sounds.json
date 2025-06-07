@@ -1,6 +1,5 @@
 {
   "soul_flame_equip": {
-    "subtitle": "sounds.hazennstuff.soul_flame_equip",
     "sounds": [
       "hazennstuff:soul_flame_equip_1",
       "hazennstuff:soul_flame_equip_2",
@@ -73,6 +72,104 @@
     "hazennstuff:charged_scourge_equip_4"
   ]
 },
+  "calamitas_equip": {
+    "sounds": [
+      "hazennstuff:calamitas_equip_1",
+      "hazennstuff:calamitas_equip_2",
+      "hazennstuff:calamitas_equip_3",
+      "hazennstuff:calamitas_equip_4"
+    ]
+  },
+  "brimstone_cast": {
+    "sounds": [
+      "hazennstuff:brimstone_cast"
+    ]
+  },
+  "brimstone_hellblast_cast": {
+    "sounds": [
+      "hazennstuff:brimstone_hellblast_cast"
+    ]
+  },
+  "brimstone_hellblast_impact": {
+    "sounds": [
+      "hazennstuff:brimstone_hellblast_impact"
+    ]
+  },
+  "electric_impact": {
+    "sounds": [
+      "hazennstuff:electric_impact_1",
+      "hazennstuff:electric_impact_2"
+    ]
+  },
+  "electric_cast": {
+    "sounds": [
+      "hazennstuff:electric_cast"
+    ]
+  },
+  "charged": {
+    "sounds": [
+      "hazennstuff:charged"
+    ]
+  },
+  "special_ore_break": {
+    "sounds": [
+      "hazennstuff:special_ore_1",
+      "hazennstuff:special_ore_2",
+      "hazennstuff:special_ore_3"
+    ]
+  },
+  "special_ore_step": {
+    "sounds": [
+      "hazennstuff:special_ore_1",
+      "hazennstuff:special_ore_2",
+      "hazennstuff:special_ore_3"
+    ]
+  },
+  "special_ore_place": {
+    "sounds": [
+      "hazennstuff:special_ore_1",
+      "hazennstuff:special_ore_2",
+      "hazennstuff:special_ore_3"
+    ]
+  },
+  "special_ore_hit": {
+    "sounds": [
+      "hazennstuff:special_ore_1",
+      "hazennstuff:special_ore_2",
+      "hazennstuff:special_ore_3"
+    ]
+  },
+  "special_ore_fall": {
+    "sounds": [
+      "hazennstuff:special_ore_1",
+      "hazennstuff:special_ore_2",
+      "hazennstuff:special_ore_3"
+    ]
+  },
+  "spark_cast": {
+    "sounds": [
+      "hazennstuff:spark_cast_1",
+      "hazennstuff:spark_cast_2",
+      "hazennstuff:spark_cast_3"
+    ]
+  },
+  "syringe_barrage_hit": {
+    "sounds": [
+      "hazennstuff:syringe_barrage_hit_1",
+      "hazennstuff:syringe_barrage_hit_2",
+      "hazennstuff:syringe_barrage_hit_3"
+    ]
+  },
+  "syringe_barrage_miss": {
+    "sounds": [
+      "hazennstuff:syringe_barrage_miss"
+    ]
+  },
+  "syringe_barrage_cast": {
+    "sounds": [
+      "hazennstuff:syringe_barrage_cast"
+    ]
+  },
   "chaotic_teleport": {
     "sounds": [
       "hazennstuff:chaotic_teleport"

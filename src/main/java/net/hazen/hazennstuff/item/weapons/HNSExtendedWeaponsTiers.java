@@ -5,6 +5,8 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.item.weapons.IronsWeaponTier;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
+import net.hazen.hazennstuff.registries.HnSAttributeRegistry;
+import net.hazen.hazennstuff.registries.HnSDamageTypes;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -73,7 +75,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HNSExtendedWeaponsTiers MITHRIL = new HNSExtendedWeaponsTiers(
             4032,
             6,
-            1.0F,
+            5.0F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(ItemRegistry.MITHRIL_SCRAP.get()),
@@ -131,6 +133,44 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(Attributes.ATTACK_SPEED, -0.3, AttributeModifier.Operation.ADD_VALUE)
+    );
+
+    public static HNSExtendedWeaponsTiers LIGHTS_BANE = new HNSExtendedWeaponsTiers(
+            8064,
+            9,
+            -3.0F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(HnSAttributeRegistry.DARK_MAGIC_POWER, .5, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(Attributes.ATTACK_SPEED, .8 , AttributeModifier.Operation.ADD_VALUE)
+    );
+
+    public static HNSExtendedWeaponsTiers NIGHTS_EDGE = new HNSExtendedWeaponsTiers(
+            8064,
+            10,
+            -3.0F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(HnSAttributeRegistry.DARK_MAGIC_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(Attributes.ATTACK_SPEED, -0.3, AttributeModifier.Operation.ADD_VALUE)
+    );
+
+    public static HNSExtendedWeaponsTiers TRUE_NIGHTS_EDGE = new HNSExtendedWeaponsTiers(
+            8064,
+            12,
+            -3.0F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ALObjects.Attributes.CRIT_CHANCE, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(HnSAttributeRegistry.DARK_MAGIC_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(Attributes.ATTACK_SPEED, -0.4, AttributeModifier.Operation.ADD_VALUE)
     );
 
     //private final int level;

@@ -33,6 +33,8 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.OVERGROWN_BONE);
                         output.accept(HnSItems.CHARRED_BONES);
                         output.accept(HnSItems.PYRIUM_NUGGET);
+                        output.accept(HnSItems.LUMINESCENT_UPGRADE_ORB.get());
+                        output.accept(HnSItems.ARCHERY_UPGRADE_ORB.get());
                         output.accept(HnSItems.HnSBlocks.FIREBLOSSOM);
                     }).build());
 

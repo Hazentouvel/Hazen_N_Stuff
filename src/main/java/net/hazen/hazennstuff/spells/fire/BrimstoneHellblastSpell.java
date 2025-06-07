@@ -6,9 +6,9 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.entity.spells.brimstone_hellblast.BrimstoneHellblast;
+import net.hazen.hazennstuff.entity.spells.fire.brimstone_hellblast.BrimstoneHellblast;
+import net.hazen.hazennstuff.registries.HnSSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -48,6 +48,11 @@ public class BrimstoneHellblastSpell extends AbstractSpell {
     }
 
     @Override
+    public Optional<SoundEvent> getCastFinishSound() {
+        return Optional.of(HnSSounds.BRIMSTONE_HELLBLAST_CAST.get());
+    }
+
+    @Override
     public CastType getCastType() {
         return CastType.LONG;
     }
@@ -64,7 +69,7 @@ public class BrimstoneHellblastSpell extends AbstractSpell {
 
     @Override
     public Optional<SoundEvent> getCastStartSound() {
-        return Optional.of(SoundRegistry.FIREBALL_START.get());
+        return Optional.of(HnSSounds.BRIMSTONE_CAST.get());
     }
 
     @Override
@@ -95,10 +100,6 @@ public class BrimstoneHellblastSpell extends AbstractSpell {
         float damage = 8 + 5 * (float)(firePower + bloodPower + generalPower);
         return damage;
     }
-
-    //public float getDamage(int spellLevel, LivingEntity caster) {
-        //return 5 + 5 * getSpellPower(spellLevel, caster);
-    //}
 
     public int getRadius(int spellLevel, LivingEntity caster) {
         return 2 + (int) getSpellPower(spellLevel, caster);

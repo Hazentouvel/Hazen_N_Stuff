@@ -2,8 +2,11 @@ package net.hazen.hazennstuff.registries;
 
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.spells.dark.NightsEdgeStrikeSpell;
 import net.hazen.hazennstuff.spells.ender.ChaoticTeleportSpell;
 import net.hazen.hazennstuff.spells.fire.BrimstoneHellblastSpell;
+import net.hazen.hazennstuff.spells.lightning.SparkSpell;
+import net.hazen.hazennstuff.spells.luminescent.SyringeBarrageSpell;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -19,7 +22,7 @@ public class SpellRegistries {
     }
 
     /***
-     * Ender Spells
+     * Ender
      */
 
   //Chaotic Teleport
@@ -31,6 +34,28 @@ public class SpellRegistries {
 
     //Brimstone Hellblast
     public static final Supplier<AbstractSpell> BRIMSTONE_HELLBLAST = registerSpell(new BrimstoneHellblastSpell());
+
+    /***
+     * Lightning
+     */
+
+    //Brimstone Hellblast
+    public static final Supplier<AbstractSpell> SPARK = registerSpell(new SparkSpell());
+
+    /***
+     * Luminescent
+     */
+
+    //Syringe Barrage
+    public static final Supplier<AbstractSpell> SYRINGE_BARRAGE = registerSpell(new SyringeBarrageSpell());
+
+    /***
+     * Dark
+     */
+
+    //Syringe Barrage
+    public static final Supplier<AbstractSpell> NIGHTS_EDGE_STRIKE = registerSpell(new NightsEdgeStrikeSpell());
+
 
     public static void register(IEventBus eventBus)
     {

@@ -161,7 +161,7 @@ public class HnSArmorMaterials {
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> CALAMITAS_MATERIAL = register("calamitas",
             pureArmorMap(),
             40,
-            HnSSounds.SOUL_FLAME_EQUIP,
+            HnSSounds.CALAMITAS_EQUIP,
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
             2,
             0.1F);

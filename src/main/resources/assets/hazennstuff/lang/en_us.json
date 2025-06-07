@@ -14,6 +14,11 @@
   "item.hazennstuff.divine_mold": "Divine Mold",
 
 
+  "item.hazennstuff.luminescent_upgrade_orb": "Luminescent Upgrade Orb",
+  "item.hazennstuff.melee_upgrade_orb": "Melee Upgrade Orb",
+  "item.hazennstuff.archery_upgrade_orb": "Archery Upgrade Orb",
+  "item.hazennstuff.health_upgrade_orb": "Health Upgrade Orb",
+
 
   "item.hazennstuff.ruptured": "Ruptured Mana Crystal",
   "item.hazennstuff.refined": "Refined Mana Crystal",
@@ -239,6 +244,22 @@
   "item.hazennstuff.spectral_spelunker_leggings": "Spectral Spelunker Leggings",
   "item.hazennstuff.spectral_spelunker_boots": "Spectral Spelunker Boots",
 
+  "item.hazennstuff.calamitas_helmet": "Calamitas Hair",
+  "item.hazennstuff.calamitas_chestplate": "Calamitas Robes",
+  "item.hazennstuff.calamitas_leggings": "Calamitas Leggings",
+  "item.hazennstuff.calamitas_boots": "Calamitas Boots",
+
+
+  "item.hazennstuff.maverick_helmet": "Maverick Hair",
+  "item.hazennstuff.maverick_chestplate": "Maverick Poncho",
+  "item.hazennstuff.maverick_leggings": "Maverick Leggings",
+  "item.hazennstuff.maverick_boots": "Maverick Boots",
+
+  "item.hazennstuff.slc_cat_helmet": "Magic Girl Hair",
+  "item.hazennstuff.slc_cat_chestplate": "Magic Girl Dress",
+  "item.hazennstuff.slc_cat_leggings": "Magic Girl Socks",
+  "item.hazennstuff.slc_cat_boots": "Magic Girl Boots",
+
 
 
   "curios.modifiers.mana_crystal": "When using the Mana Crystal:",
@@ -249,6 +270,9 @@
 
 
   "spell.hazennstuff.chaotic_teleport": "Chaotic Teleport",
+  "spell.hazennstuff.spark": "Spark",
+  "spell.hazennstuff.brimstone_hellblast": "Brimstone Hellblast",
+  "spell.hazennstuff.syringe_barrage": "Syringe Barrage",
 
 
 
@@ -266,20 +290,12 @@
   "effect.hazennstuff.discerning_the_eldritch": "Discerning the Eldritch",
 
 
-  "sounds.hazennstuff.soul_flame_equip": "Soul Flame Armor Equipped",
-  "sounds.hazennstuff.charged_scourge_equip": "Charged Scourge Armor Equipped",
-  "sounds.hazennstuff.creaking_sorcerer_equip": "Creaking Sorcerer Armor Equipped",
-  "sounds.hazennstuff.seraph_equip": "Seraph Armor Equipped",
-  "sounds.hazennstuff.supreme_witch_equip": "Supreme Witch Armor Equipped",
-  "sounds.hazennstuff.cryogenic_ruler_equip": "Cryogenic Ruler Armor Equipped",
-  "sounds.hazennstuff.flesh_mass_equip": "Flesh Mass Armor Equipped",
-  "sounds.hazennstuff.ender_dragon_equip": "Ender Dragon Armor Equipped",
-  "sounds.hazennstuff.chaotic_teleport": "???",
-
-
 
   "creativetab.hazennstuff.hazennstuff_materials": "Hazen 'n Stuff Materials",
   "creativetab.hazennstuff.hazennstuff_blocks": "Hazen 'n Stuff Blocks",
   "creativetab.hazennstuff.hazennstuff_utility": "Hazen 'n Stuff Utility",
-  "creativetab.hazennstuff.hazennstuff_equipment": "Hazen 'n Stuff Equipment"
+  "creativetab.hazennstuff.hazennstuff_equipment": "Hazen 'n Stuff Equipment",
+
+  "attribute.hazennstuff.luminescent_spell_power": "Luminescent Spell Power",
+  "attribute.hazennstuff.luminescent_spell_resist": "Luminescent Spell Power"
 }

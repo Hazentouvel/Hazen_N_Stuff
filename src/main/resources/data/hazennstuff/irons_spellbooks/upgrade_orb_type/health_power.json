@@ -1,0 +1,9 @@
+{
+  "amount": 0.75,
+  "attribute": "minecraft:generic.max_health",
+  "containerItem": {
+    "count": 1,
+    "id": "hazennstuff:health_upgrade_orb"
+  },
+  "operation": "add_value"
+}

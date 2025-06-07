@@ -5,14 +5,12 @@ import com.google.common.collect.Multimap;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.render.DeusRarity;
+import net.hazen.hazennstuff.rarity.DeusRarity;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
-import org.w3c.dom.Attr;
 import top.theillusivec4.curios.api.SlotContext;
 
 public class RadianceCurio extends CurioBaseItem {

@@ -1,0 +1,25 @@
+package net.hazen.hazennstuff.entity.spells.luminescent.syringe;
+
+import io.redspace.ironsspellbooks.IronsSpellbooks;
+import net.hazen.hazennstuff.HazenNStuff;
+import net.minecraft.resources.ResourceLocation;
+import software.bernie.geckolib.model.DefaultedItemGeoModel;
+import software.bernie.geckolib.model.GeoModel;
+
+public class SyringeModel extends GeoModel<Syringe> {
+
+    @Override
+    public ResourceLocation getModelResource(Syringe animatable) {
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/syringe.geo.json");
+    }
+
+    @Override
+    public ResourceLocation getTextureResource(Syringe animatable) {
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/syringe/syringe_alt.png");
+    }
+
+    @Override
+    public ResourceLocation getAnimationResource(Syringe animatable) {
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/syringe.animation.json");
+    }
+}

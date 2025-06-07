@@ -5,7 +5,7 @@
       "name": "HAZENNSTUFF_RARITY_FLAMING",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/render/FlamingRarity",
+        "class": "net/hazen/hazennstuff/rarity/FlamingRarity",
         "field": "FLAMING_RARITY_PROXY"
       }
     },
@@ -14,7 +14,7 @@
       "name": "HAZENNSTUFF_RARITY_BLOOD",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/render/BloodRarity",
+        "class": "net/hazen/hazennstuff/rarity/BloodRarity",
         "field": "BLOOD_RARITY_PROXY"
       }
     },
@@ -23,7 +23,7 @@
       "name": "HAZENNSTUFF_RARITY_DIVINE",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/render/DivineRarity",
+        "class": "net/hazen/hazennstuff/rarity/DivineRarity",
         "field": "DIVINE_RARITY_PROXY"
       }
     },
@@ -32,7 +32,7 @@
       "name": "HAZENNSTUFF_RARITY_DEUS",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/render/DeusRarity",
+        "class": "net/hazen/hazennstuff/rarity/DeusRarity",
         "field": "DEUS_RARITY_PROXY"
       }
     },
@@ -41,7 +41,7 @@
       "name": "HAZENNSTUFF_RARITY_ELDRITCH",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/render/EldritchRarity",
+        "class": "net/hazen/hazennstuff/rarity/EldritchRarity",
         "field": "ELDRITCH_RARITY_PROXY"
       }
     },
@@ -50,7 +50,7 @@
       "name": "HAZENNSTUFF_RARITY_ENDER",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/render/EnderRarity",
+        "class": "net/hazen/hazennstuff/rarity/EnderRarity",
         "field": "ENDER_RARITY_PROXY"
       }
     },
@@ -59,7 +59,7 @@
       "name": "HAZENNSTUFF_RARITY_EVOCATION",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/render/EvocationRarity",
+        "class": "net/hazen/hazennstuff/rarity/EvocationRarity",
         "field": "EVOCATION_RARITY_PROXY"
       }
     },
@@ -68,7 +68,7 @@
       "name": "HAZENNSTUFF_RARITY_NATURE",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/render/NatureRarity",
+        "class": "net/hazen/hazennstuff/rarity/NatureRarity",
         "field": "NATURE_RARITY_PROXY"
       }
     },
@@ -77,7 +77,7 @@
       "name": "HAZENNSTUFF_RARITY_ELECTRIC",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/render/ElectricRarity",
+        "class": "net/hazen/hazennstuff/rarity/ElectricRarity",
         "field": "ELECTRIC_RARITY_PROXY"
       }
     },
@@ -86,8 +86,26 @@
       "name": "HAZENNSTUFF_RARITY_CRYOGENIC",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/render/CryogenicRarity",
+        "class": "net/hazen/hazennstuff/rarity/CryogenicRarity",
         "field": "CRYOGENIC_RARITY_PROXY"
+      }
+    },
+    {
+      "enum": "net/minecraft/world/item/Rarity",
+      "name": "HAZENNSTUFF_RARITY_DARK",
+      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
+      "parameters": {
+        "class": "net/hazen/hazennstuff/rarity/DarkRarity",
+        "field": "DARK_RARITY_PROXY"
+      }
+    },
+    {
+      "enum": "net/minecraft/world/item/Rarity",
+      "name": "HAZENNSTUFF_RARITY_LUMINESCENT",
+      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
+      "parameters": {
+        "class": "net/hazen/hazennstuff/rarity/LuminescentRarity",
+        "field": "LUMINESCENT_RARITY_PROXY"
       }
     }
   ]

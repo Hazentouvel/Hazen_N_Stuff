@@ -3,7 +3,6 @@ package net.hazen.hazennstuff.item.staves.wisewood_cane;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.entity.render.item.staves.WisewoodCaneRenderer;
 import net.hazen.hazennstuff.item.staves.HnSStaffTier;
 import net.hazen.hazennstuff.item.staves.ImbuableStaffItem;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;

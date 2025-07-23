@@ -24,7 +24,7 @@ import net.minecraft.world.item.ItemStack;
 public class SupremeWitchArmorRenderer extends AzArmorRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/armor/supreme_witch/supreme_witch_armor.geo.json"
+            "geo/armor/supreme_witch_armor.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(

@@ -12,12 +12,12 @@ public class WisewoodCaneModel extends DefaultedItemGeoModel<WisewoodCaneItem> {
 
     @Override
     public ResourceLocation getModelResource(WisewoodCaneItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/items/staves/wisewood_cane.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/item/staves/wisewood_cane.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(WisewoodCaneItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/items/staves/wisewood_cane/wisewood_cane.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/staves/wisewood_cane/wisewood_cane.png");
     }
 
     @Override

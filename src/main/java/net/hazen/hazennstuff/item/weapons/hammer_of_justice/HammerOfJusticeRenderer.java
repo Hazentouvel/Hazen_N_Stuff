@@ -10,7 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 public class HammerOfJusticeRenderer extends AzItemRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/hammer_of_justice.geo.json"
+            "geo/item/weapons/hammer_of_justice.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(

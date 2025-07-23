@@ -24,12 +24,12 @@ import net.minecraft.world.item.ItemStack;
 public class EnderDragonArmorRenderer extends AzArmorRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/ender_dragon_armor.geo.json"
+            "geo/armor/ender_dragon_armor.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/models/armor/ender_dragon_armor.png"
+            "textures/armor/ender_dragon_armor.png"
     );
 
     public EnderDragonArmorRenderer() {

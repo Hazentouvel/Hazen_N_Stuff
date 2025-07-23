@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class HammerOfJusticeAnimator extends AzItemAnimator {
     private static final ResourceLocation ANIMATIONS = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "animations/hammer_of_justice.animation.json"
+            "animations/item/weapons/hammer_of_justice.animation.json"
     );
 
     @Override

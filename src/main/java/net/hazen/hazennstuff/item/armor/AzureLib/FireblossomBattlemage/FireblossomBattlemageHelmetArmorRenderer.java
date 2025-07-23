@@ -14,6 +14,7 @@ import mod.azure.azurelib.rewrite.render.armor.bone.AzArmorBoneContext;
 import mod.azure.azurelib.rewrite.render.armor.bone.AzArmorBoneProvider;
 import mod.azure.azurelib.rewrite.render.layer.AzAutoGlowingLayer;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.item.armor.AzureLib.animators.BasicArmorAnimator;
 import net.hazen.hazennstuff.item.armor.AzureLib.animators.FireblossomAnimator;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
@@ -24,18 +25,18 @@ import net.minecraft.world.item.ItemStack;
 public class FireblossomBattlemageHelmetArmorRenderer extends AzArmorRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/armor/fireblossom/fireblossom_battlemage_armor.geo.json"
+            "geo/armor/fireblossom_battlemage_armor.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/armor/fireblossom/fireblossom_battlemage_helmet_armor.png"
+            "textures/armor/fireblossom_battlemage_helmet_armor.png"
     );
 
     public FireblossomBattlemageHelmetArmorRenderer() {
         super(
                 AzArmorRendererConfig.builder(GEO, TEX)
-                        .setAnimatorProvider(FireblossomAnimator::new)
+                        .setAnimatorProvider(BasicArmorAnimator::new)
                         .addRenderLayer(new AzAutoGlowingLayer<>())
                         .build()
         );

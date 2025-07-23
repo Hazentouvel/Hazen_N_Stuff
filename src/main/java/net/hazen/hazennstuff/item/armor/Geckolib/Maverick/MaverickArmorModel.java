@@ -12,12 +12,12 @@ public class MaverickArmorModel extends DefaultedEntityGeoModel<MaverickArmorIte
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(MaverickArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/maverick/maverick_armor.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/maverick.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(MaverickArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/maverick/maverick_armor.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/maverick_armor.png");
     }
 
     @Override

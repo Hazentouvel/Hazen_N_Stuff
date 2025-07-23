@@ -24,18 +24,18 @@ import net.minecraft.world.item.ItemStack;
 public class SeraphArmorRenderer extends AzArmorRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/seraph_armor.geo.json"
+            "geo/armor/seraph_armor.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/models/armor/seraph_armor.png"
+            "textures/armor/seraph_armor.png"
     );
 
     public SeraphArmorRenderer() {
         super(
                 AzArmorRendererConfig.builder(GEO, TEX)
-                        .setAnimatorProvider(SeraphAnimator::new)
+                        .setAnimatorProvider(BasicArmorAnimator::new)
                         .addRenderLayer(new AzAutoGlowingLayer<>())
                         .build()
         );

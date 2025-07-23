@@ -13,12 +13,12 @@ public class GeckolibProjectSekaiArmorModel extends DefaultedEntityGeoModel<Geck
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(GeckolibProjectSekaiArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/miku/project_sekai/project_sekai_armor.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/project_sekai_geckolib.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(GeckolibProjectSekaiArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/miku/project_sekai/project_sekai_armor.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/project_sekai_armor.png");
     }
 
     @Override

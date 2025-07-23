@@ -11,12 +11,12 @@ public class GeckolibSeraphArmorModel extends DefaultedEntityGeoModel<GeckolibSe
 
     @Override
     public ResourceLocation getModelResource(GeckolibSeraphArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/seraph/seraph_armor_geckolib.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/seraph_armor_geckolib.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(GeckolibSeraphArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/seraph/seraph_armor_geckolib.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/seraph_armor_geckolib.png");
     }
 
     @Override

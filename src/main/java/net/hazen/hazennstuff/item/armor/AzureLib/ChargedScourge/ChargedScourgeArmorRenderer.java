@@ -24,12 +24,12 @@ import net.minecraft.world.item.ItemStack;
 public class ChargedScourgeArmorRenderer extends AzArmorRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/armor/charged_scourge/charged_scourge_armor.geo.json"
+            "geo/armor/charged_scourge_armor.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/armor/charged_scourge/charged_scourge_armor.png"
+            "textures/armor/charged_scourge_armor.png"
     );
 
     public ChargedScourgeArmorRenderer() {

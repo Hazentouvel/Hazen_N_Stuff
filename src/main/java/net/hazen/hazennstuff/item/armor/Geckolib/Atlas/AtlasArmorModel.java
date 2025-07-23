@@ -12,12 +12,12 @@ public class AtlasArmorModel extends DefaultedEntityGeoModel<AtlasArmorItem> {
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(AtlasArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/atlas/atlas.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/atlas_armor.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(AtlasArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/atlas/atlas.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/atlas.png");
     }
 
     @Override

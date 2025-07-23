@@ -24,12 +24,12 @@ import net.minecraft.world.item.ItemStack;
 public class DarkRitualTemplarArmorRenderer extends AzArmorRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/dark_ritual_templar_armor.geo.json"
+            "geo/armor/dark_ritual_templar_armor.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/models/armor/dark_ritual_templar_armor.png"
+            "textures/armor/dark_ritual_templar_armor.png"
     );
 
     public DarkRitualTemplarArmorRenderer() {

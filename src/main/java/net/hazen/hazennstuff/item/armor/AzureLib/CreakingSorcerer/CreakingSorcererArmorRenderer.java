@@ -24,12 +24,12 @@ import net.minecraft.world.item.ItemStack;
 public class CreakingSorcererArmorRenderer extends AzArmorRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/armor/creaking_sorcerer/creaking_sorcerer_armor.geo.json"
+            "geo/armor/creaking_sorcerer_armor.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/armor/creaking_sorcerer/creaking_sorcerer_armor.png"
+            "textures/armor/creaking_sorcerer_armor.png"
     );
 
     public CreakingSorcererArmorRenderer() {

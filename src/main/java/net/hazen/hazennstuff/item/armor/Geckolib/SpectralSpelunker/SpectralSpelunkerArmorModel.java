@@ -13,12 +13,12 @@ public class SpectralSpelunkerArmorModel extends DefaultedEntityGeoModel<Spectra
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(SpectralSpelunkerArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/spectral_spelunker_armor.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/spectral_spelunker/spectral_spelunker_armor.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(SpectralSpelunkerArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/models/armor/geckolib/spectral_spelunker_armor.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/spectral_spelunker/spectral_spelunker_armor.png");
     }
 
     @Override

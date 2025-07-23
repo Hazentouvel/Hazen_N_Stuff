@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class SeraphAnimator extends AzItemAnimator {
     private static final ResourceLocation ANIMATIONS = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "animations/seraph_armor.animation.json"
+            "animations/seraph/seraph_armor.animation.json"
     );
 
     @Override

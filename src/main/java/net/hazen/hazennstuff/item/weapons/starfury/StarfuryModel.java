@@ -13,7 +13,7 @@ public class StarfuryModel extends DefaultedItemGeoModel<StarfuryItem> {
 
     @Override
     public ResourceLocation getModelResource(StarfuryItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/starfury.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/item/weapons/starfury.geo.json");
     }
 
     @Override

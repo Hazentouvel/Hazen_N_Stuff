@@ -24,12 +24,12 @@ import net.minecraft.world.item.ItemStack;
 public class FireblossomBattlemageHelmetArmorRenderer extends AzArmorRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/fireblossom_battlemage_armor.geo.json"
+            "geo/armor/fireblossom/fireblossom_battlemage_armor.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/models/armor/fireblossom_battlemage_helmet_armor.png"
+            "textures/armor/fireblossom/fireblossom_battlemage_helmet_armor.png"
     );
 
     public FireblossomBattlemageHelmetArmorRenderer() {

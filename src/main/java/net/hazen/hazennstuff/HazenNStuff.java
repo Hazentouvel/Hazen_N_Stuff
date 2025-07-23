@@ -6,12 +6,10 @@ import mod.azure.azurelib.rewrite.render.item.AzItemRendererRegistry;
 import net.hazen.hazennstuff.item.armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.ChargedScourge.ChargedScourgeArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.CreakingSorcerer.CreakingSorcererArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.CryogenicRuler.CryogenicRulerArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.DarkRitualTemplar.DarkRitualTemplarArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.EnderDragon.EnderDragonArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageCrownedArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageHelmetArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.FleshMass.FleshMassArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SLCCat.SLCCatArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.Seraph.SeraphArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SoulFlame.SoulFlameArmorRenderer;
@@ -66,7 +64,6 @@ public class HazenNStuff
         HnSEffects.register(modEventBus);
         HnSSounds.register(modEventBus);
         HnSEntityRegistry.register(modEventBus);
-        HnSParticleRegistry.register(modEventBus);
 
         SpellRegistries.register(modEventBus);
         HnSAttributeRegistry.register(modEventBus);
@@ -92,18 +89,6 @@ public class HazenNStuff
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
-
-
-        /*if (event.getTabKey() == CreativeModeTabs.COMBAT)
-            event.accept(ModItems.CREAKING_MASK);
-        if (event.getTabKey() == CreativeModeTabs.COMBAT)
-            event.accept(ModItems.CREAKING_CHESTPLATE);
-        if (event.getTabKey() == CreativeModeTabs.COMBAT)
-            event.accept(ModItems.CREAKING_LEGGINGS);
-        if (event.getTabKey() == CreativeModeTabs.COMBAT)
-            event.accept(ModItems.CREAKING_BOOTS);*/
-
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -145,13 +130,6 @@ public class HazenNStuff
                     HnSItems.CREAKING_LEGGINGS.get(),
                     HnSItems.CREAKING_BOOTS.get());
 
-            //Cryogenic Ruler
-            AzArmorRendererRegistry.register(CryogenicRulerArmorRenderer::new,
-                    HnSItems.CRYOGENIC_RULER_HELMET.get(),
-                    HnSItems.CRYOGENIC_RULER_CHESTPLATE.get(),
-                    HnSItems.CRYOGENIC_RULER_LEGGINGS.get(),
-                    HnSItems.CRYOGENIC_RULER_BOOTS.get());
-
             //Dark Ritual Templar
             AzArmorRendererRegistry.register(DarkRitualTemplarArmorRenderer::new,
                     HnSItems.DARK_RITUAL_TEMPLAR_HELMET.get(),
@@ -175,13 +153,6 @@ public class HazenNStuff
             // Fireblossom Crown
             AzArmorRendererRegistry.register(FireblossomBattlemageCrownedArmorRenderer::new,
                     HnSItems.FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
-
-            // Flesh Mass
-            AzArmorRendererRegistry.register(FleshMassArmorRenderer::new,
-                    HnSItems.FLESH_MASS_HELMET.get(),
-                    HnSItems.FLESH_MASS_CHESTPLATE.get(),
-                    HnSItems.FLESH_MASS_LEGGINGS.get(),
-                    HnSItems.FLESH_MASS_BOOTS.get());
 
             // Seraph
             AzArmorRendererRegistry.register(SeraphArmorRenderer::new,
@@ -231,10 +202,6 @@ public class HazenNStuff
                     HnSItems.CREAKING_CHESTPLATE.get(),
                     HnSItems.CREAKING_LEGGINGS.get(),
                     HnSItems.CREAKING_BOOTS.get(),
-                    HnSItems.CRYOGENIC_RULER_HELMET.get(),
-                    HnSItems.CRYOGENIC_RULER_CHESTPLATE.get(),
-                    HnSItems.CRYOGENIC_RULER_LEGGINGS.get(),
-                    HnSItems.CRYOGENIC_RULER_BOOTS.get(),
                     HnSItems.DARK_RITUAL_TEMPLAR_HELMET.get(),
                     HnSItems.DARK_RITUAL_TEMPLAR_CHESTPLATE.get(),
                     HnSItems.DARK_RITUAL_TEMPLAR_LEGGINGS.get(),

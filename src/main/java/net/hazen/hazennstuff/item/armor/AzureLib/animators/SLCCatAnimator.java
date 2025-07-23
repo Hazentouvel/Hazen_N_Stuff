@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class SLCCatAnimator extends AzItemAnimator {
     private static final ResourceLocation ANIMATIONS = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "animations/slc_cat.animation.json"
+            "animations/armor/slc_cat/slc_cat.animation.json"
     );
 
     @Override

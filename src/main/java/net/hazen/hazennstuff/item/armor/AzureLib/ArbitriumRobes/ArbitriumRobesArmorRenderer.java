@@ -24,12 +24,12 @@ import net.minecraft.world.item.ItemStack;
 public class ArbitriumRobesArmorRenderer extends AzArmorRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/arbitrium_robes.geo.json"
+            "geo/armor/arbitrium_robes/arbitrium_robes_armor.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/models/armor/arbitrium_robes.png"
+            "textures/armor/arbitrium_robes/arbitrium_robes_armor.png"
     );
 
     public ArbitriumRobesArmorRenderer() {

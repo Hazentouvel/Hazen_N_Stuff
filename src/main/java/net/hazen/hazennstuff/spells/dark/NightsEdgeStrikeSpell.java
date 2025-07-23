@@ -9,10 +9,11 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
+import io.redspace.ironsspellbooks.particle.FlameStrikeParticleOptions;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.particle.nights_edge_strike.NightsEdgeStrikeParticleOptions;
+import net.hazen.hazennstuff.entity.spells.dark.nights_edge_strike.NightsEdgeStrike;
 import net.hazen.hazennstuff.registries.HnSSchoolRegistry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
@@ -102,20 +103,31 @@ public class NightsEdgeStrikeSpell extends AbstractSpell {
         Vec3 hitLocation = entity.position().add(0, entity.getBbHeight() * .3f, 0).add(forward.scale(distance));
         var entities = level.getEntities(entity, AABB.ofSize(hitLocation, radius * 2, radius, radius * 2));
         var damageSource = this.getDamageSource(entity);
-        for (Entity targetEntity : entities) {
+        for (
+                Entity targetEntity : entities) {
             if (targetEntity instanceof LivingEntity && targetEntity.isAlive() && entity.isPickable() && targetEntity.position().subtract(entity.getEyePosition()).dot(forward) >= 0 && entity.distanceToSqr(targetEntity) < radius * radius && Utils.hasLineOfSight(level, entity.getEyePosition(), targetEntity.getBoundingBox().getCenter(), true)) {
                 Vec3 offsetVector = targetEntity.getBoundingBox().getCenter().subtract(entity.getEyePosition());
                 if (offsetVector.dot(forward) >= 0) {
                     if (DamageSources.applyDamage(targetEntity, getDamage(spellLevel, entity), damageSource)) {
-                        MagicManager.spawnParticles(level, ParticleHelper.FIRE, targetEntity.getX(), targetEntity.getY() + targetEntity.getBbHeight() * .5f, targetEntity.getZ(), 30, targetEntity.getBbWidth() * .5f, targetEntity.getBbHeight() * .5f, targetEntity.getBbWidth() * .5f, .03, false);
+
                         EnchantmentHelper.doPostAttackEffects((ServerLevel) level, targetEntity, damageSource);
                     }
                 }
             }
         }
         boolean mirrored = playerMagicData.getCastingEquipmentSlot().equals(SpellSelectionManager.OFFHAND);
-        MagicManager.spawnParticles(level, new NightsEdgeStrikeParticleOptions((float) forward.x, (float) forward.y, (float) forward.z, mirrored, false, 1f), hitLocation.x, hitLocation.y+.3, hitLocation.z, 1, 0, 0, 0, 0, true);
-        super.onCast(level, spellLevel, entity, castSource, playerMagicData);
+        NightsEdgeStrike over = new NightsEdgeStrike(level, mirrored);
+        over.moveTo(hitLocation);
+        over.setYRot(entity.getYRot());
+        over.setXRot(entity.getXRot());
+        level.addFreshEntity(over);
+        level.getEntities(entity, entity.getBoundingBox().inflate(radius, 4, radius), (target) -> !DamageSources.isFriendlyFireBetween(target, entity) && Utils.hasLineOfSight(level, entity, target, true)).forEach(target -> {
+
+            super.onCast(level, spellLevel, entity, castSource, playerMagicData);
+
+        });
+
+
     }
 
     @Override

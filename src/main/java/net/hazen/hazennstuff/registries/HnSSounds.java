@@ -69,6 +69,11 @@ public class HnSSounds {
     // Syringe Barrage Miss
     public static DeferredHolder<SoundEvent, SoundEvent> SYRINGE_BARRAGE_MISS = registerSoundEvent("syringe_barrage_miss");
 
+    // Vampire Knife Throw
+    public static DeferredHolder<SoundEvent, SoundEvent> VAMPIRE_KNIFE_THROW = registerSoundEvent("vampire_knife_throw");
+
+    public static DeferredHolder<SoundEvent, SoundEvent> VAMPIRE_KNIFE_HIT = registerSoundEvent("vampire_knife_hit");
+
     /***
      * Equip Sounds
      */

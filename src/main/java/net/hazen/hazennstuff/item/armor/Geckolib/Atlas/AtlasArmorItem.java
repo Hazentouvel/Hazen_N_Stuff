@@ -13,8 +13,8 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 public class AtlasArmorItem extends ImbuableGeckolibHnSArmorItem {
     public AtlasArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
-        super(HnSArmorMaterials.ATLAS_MATERIAL, type, settings,
-                new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
+        super(HnSArmorMaterials.BATTLEMAGE_MATERIAL, type, settings,
+                new AttributeContainer(AttributeRegistry.MAX_MANA, 125.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_VALUE)
         );
     }

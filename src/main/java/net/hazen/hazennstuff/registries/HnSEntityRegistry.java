@@ -1,6 +1,9 @@
 package net.hazen.hazennstuff.registries;
 
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife.LifestealKnife;
+import net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife.LifestealKnifeModel;
+import net.hazen.hazennstuff.entity.spells.dark.nights_edge_strike.NightsEdgeStrike;
 import net.hazen.hazennstuff.entity.spells.fire.brimstone_hellblast.BrimstoneHellblast;
 import net.hazen.hazennstuff.entity.spells.lightning.spark.Spark;
 import net.hazen.hazennstuff.entity.spells.luminescent.syringe.Syringe;
@@ -32,13 +35,28 @@ public class HnSEntityRegistry {
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "spark").toString())
             );
 
-    // Spark
+    // Syringe
     public static final DeferredHolder<EntityType<?>, EntityType<Syringe>> SYRINGE =
             ENTITIES.register("syringe", () -> EntityType.Builder.<Syringe>of(Syringe::new, MobCategory.MISC)
                     .sized(1f, 1f)
                     .clientTrackingRange(4)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "syringe").toString())
             );
+
+    // Lifesteal Knife
+    public static final DeferredHolder<EntityType<?>, EntityType<LifestealKnife>> LIFESTEAL_KNIFE =
+            ENTITIES.register("lifesteal_knife", () -> EntityType.Builder.<LifestealKnife>of(LifestealKnife::new, MobCategory.MISC)
+                    .sized(1f, 1f)
+                    .clientTrackingRange(4)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "lifesteal_knife").toString())
+            );
+
+    //Nights Edge Strike
+    public static final DeferredHolder<EntityType<?>, EntityType<NightsEdgeStrike>> NIGHTS_EDGE_STRIKE=
+            ENTITIES.register("nights_edge_strike", () -> EntityType.Builder.<NightsEdgeStrike>of(NightsEdgeStrike::new, MobCategory.MISC)
+                    .sized(8f, 1f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "overwhelm").toString()));
 
 
 

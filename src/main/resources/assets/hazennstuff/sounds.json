@@ -170,11 +170,19 @@
       "hazennstuff:syringe_barrage_cast"
     ]
   },
+  "vampire_knife_throw": {
+    "sounds": [
+      "hazennstuff:vampire_knife_throw"
+    ]
+  },
+  "vampire_knife_hit": {
+    "sounds": [
+      "hazennstuff:vampire_knife_hit"
+    ]
+  },
   "chaotic_teleport": {
     "sounds": [
       "hazennstuff:chaotic_teleport"
     ]
 }
-
-
 }

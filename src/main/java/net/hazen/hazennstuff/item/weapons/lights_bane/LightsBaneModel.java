@@ -13,7 +13,7 @@ public class LightsBaneModel extends DefaultedItemGeoModel<LightsBaneItem> {
 
     @Override
     public ResourceLocation getModelResource(LightsBaneItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/lights_bane.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/item/weapons/lights_bane.geo.json");
     }
 
     @Override

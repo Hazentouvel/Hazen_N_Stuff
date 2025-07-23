@@ -90,7 +90,7 @@ public class HnSCreativeModeTabs {
                     }).build());
 
     public static final Supplier<CreativeModeTab> HAZEN_N_STUFF_EQUIPMENT = CREATIVE_MODE_TAB.register("hazennstuff_equipment",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItems.CRYOGENIC_RULER_HELMET.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItems.CALAMITAS_HELMET.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "hazennstuff_materials"))
                     .title(Component.translatable("creativetab.hazennstuff.hazennstuff_equipment"))
                     .displayItems((itemDisplayParameters, output) -> {
@@ -235,8 +235,16 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.BOUNTIFUL_HARVEST.get());
                         //Starfury
                         output.accept(HnSItems.STARFURY.get());
-                        //Bountiful Harvest
+                        //Hammer of Justince
                         output.accept(HnSItems.HAMMER_OF_JUSTICE.get());
+                        //Lights Bane
+                        output.accept(HnSItems.LIGHTS_BANE.get());
+                        //Night's Edge
+                        output.accept(HnSItems.NIGHTS_EDGE.get());
+                        //True Night's Edge
+                        output.accept(HnSItems.TRUE_NIGHTS_EDGE.get());
+                        //Vampire Knives
+                        output.accept(HnSItems.VAMPIRE_KNIVES.get());
 
 
                         //Staves

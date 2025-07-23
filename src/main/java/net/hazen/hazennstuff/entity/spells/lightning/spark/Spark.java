@@ -10,6 +10,7 @@ import net.hazen.hazennstuff.registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.registries.HnSSounds;
 import net.hazen.hazennstuff.registries.SpellRegistries;
 import net.minecraft.core.Holder;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.EntityType;
@@ -68,10 +69,11 @@ public class Spark extends AbstractMagicProjectile implements GeoEntity {
         level().addParticle(new ZapParticleOption(random), pos.x, pos.y, pos.z, 0, 0, 0);
     }
 
-        @Override
+    @Override
     public void impactParticles(double x, double y, double z) {
         MagicManager.spawnParticles(level(), ParticleHelper.ELECTRIC_SPARKS, x, y, z, 12, .08, .08, .08, 0.3, false);
     }
+
 
     @Override
     public float getSpeed() {

@@ -12,17 +12,17 @@ public class GeckolibCryogenicRulerArmorModel extends DefaultedEntityGeoModel<Ge
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(GeckolibCryogenicRulerArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/cryogenic_ruler_armor_geckolib.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/cryogenic_ruler/cryogenic_ruler.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(GeckolibCryogenicRulerArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/models/armor/geckolib/cryogenic_ruler_armor.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/cryogenic_ruler/cryogenic_ruler.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(GeckolibCryogenicRulerArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/cryogenic_ruler_armor_geckolib.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/armor/cryogenic_ruler/cryogenic_ruler.animation.json");
 
     }
 }

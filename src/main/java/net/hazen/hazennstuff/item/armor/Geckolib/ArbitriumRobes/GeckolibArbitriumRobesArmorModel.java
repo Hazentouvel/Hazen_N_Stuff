@@ -12,16 +12,16 @@ public class GeckolibArbitriumRobesArmorModel extends DefaultedEntityGeoModel<Ar
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(ArbitriumRobesGeckolibArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/arbitrium_robes_geckolib.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/arbitrium_robes/arbitrium_robes_geckolib.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(ArbitriumRobesGeckolibArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/models/armor/geckolib/arbitrium_robes.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/arbitrium_robes/arbitrium_robes_geckolib.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(ArbitriumRobesGeckolibArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/arbitrium_robes_geckolib.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/armor/arbitrium_robes/arbitrium_robes_geckolib.animation.json");
     }
 }

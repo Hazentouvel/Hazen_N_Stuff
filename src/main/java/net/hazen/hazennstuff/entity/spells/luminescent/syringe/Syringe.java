@@ -1,11 +1,7 @@
 package net.hazen.hazennstuff.entity.spells.luminescent.syringe;
 
-import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
-import io.redspace.ironsspellbooks.particle.ZapParticleOption;
-import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.registries.HnSSounds;
 import net.hazen.hazennstuff.registries.SpellRegistries;
@@ -34,7 +30,6 @@ public class Syringe extends AbstractMagicProjectile implements GeoEntity {
 
     public Syringe(EntityType<? extends Projectile> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
-        this.setNoGravity(true);
     }
 
     public Syringe(Level level, LivingEntity shooter)
@@ -67,13 +62,11 @@ public class Syringe extends AbstractMagicProjectile implements GeoEntity {
 
     @Override
     public void trailParticles() {
-        // No trail
     }
 
 
     @Override
     public void impactParticles(double x, double y, double z) {
-        // No particles
     }
 
     @Override

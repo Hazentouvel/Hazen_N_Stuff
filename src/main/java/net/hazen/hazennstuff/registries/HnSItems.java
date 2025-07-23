@@ -9,12 +9,10 @@ import net.hazen.hazennstuff.block.custom.ModFlammableRotatedPillarBlock;
 import net.hazen.hazennstuff.item.armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorItem;
 import net.hazen.hazennstuff.item.armor.AzureLib.ChargedScourge.ChargedScourgeArmorItem;
 import net.hazen.hazennstuff.item.armor.AzureLib.CreakingSorcerer.CreakingSorcererArmorItem;
-import net.hazen.hazennstuff.item.armor.AzureLib.CryogenicRuler.CryogenicRulerArmorItem;
 import net.hazen.hazennstuff.item.armor.AzureLib.DarkRitualTemplar.DarkRitualTemplarArmorItem;
 import net.hazen.hazennstuff.item.armor.AzureLib.EnderDragon.EnderDragonArmorItem;
 import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageCrownedArmorItem;
 import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageHelmetArmorItem;
-import net.hazen.hazennstuff.item.armor.AzureLib.FleshMass.FleshMassArmorItem;
 import net.hazen.hazennstuff.item.armor.AzureLib.SLCCat.SLCCatArmorItem;
 import net.hazen.hazennstuff.item.armor.AzureLib.Seraph.SeraphArmorItem;
 import net.hazen.hazennstuff.item.armor.AzureLib.SoulFlame.SoulFlameArmorItem;
@@ -57,6 +55,7 @@ import net.hazen.hazennstuff.item.weapons.nights_edge.NightsEdgeItem;
 import net.hazen.hazennstuff.item.weapons.skyscorcher.SkyscorcherItem;
 import net.hazen.hazennstuff.item.weapons.starfury.StarfuryItem;
 import net.hazen.hazennstuff.item.weapons.true_nights_edge.TrueNightsEdgeItem;
+import net.hazen.hazennstuff.item.weapons.vampire_knives.VampireKnivesItem;
 import net.hazen.hazennstuff.rarity.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -250,6 +249,15 @@ public class HnSItems {
     public static final DeferredHolder<Item, Item> STARFURY = ITEMS.register("starfury", StarfuryItem::new);
     //Hammer of Justice
     public static final DeferredHolder<Item, Item> HAMMER_OF_JUSTICE = ITEMS.register("hammer_of_justice", HammerOfJusticeItem::new);
+    //Vampire Knives
+    public static final DeferredHolder<Item, Item> VAMPIRE_KNIVES = ITEMS.register("vampire_knives", VampireKnivesItem::new);
+    //Lights Bane
+    public static final DeferredHolder<Item, Item> LIGHTS_BANE = ITEMS.register("lights_bane", LightsBaneItem::new);
+    //Nights Edge
+    public static final DeferredHolder<Item, Item> NIGHTS_EDGE = ITEMS.register("nights_edge", NightsEdgeItem::new);
+    //True Nights Edge
+    public static final DeferredHolder<Item, Item> TRUE_NIGHTS_EDGE = ITEMS.register("true_nights_edge", TrueNightsEdgeItem::new);
+
 
 
     /***
@@ -269,12 +277,6 @@ public class HnSItems {
 
     //Spectral Pickaxe
     public static final DeferredHolder<Item, Item> SPECTRAL_PICKAXE = ITEMS.register("spectral_pickaxe", SpectralPickaxeItem::new);
-    //Lights Bane
-    public static final DeferredHolder<Item, Item> LIGHTS_BANE = ITEMS.register("lights_bane", LightsBaneItem::new);
-    //Nights Edge
-    public static final DeferredHolder<Item, Item> NIGHTS_EDGE = ITEMS.register("nights_edge", NightsEdgeItem::new);
-    //True Nights Edge
-    public static final DeferredHolder<Item, Item> TRUE_NIGHTS_EDGE = ITEMS.register("true_nights_edge", TrueNightsEdgeItem::new);
 
     /***
      * Curios
@@ -412,52 +414,6 @@ public class HnSItems {
     public static final DeferredHolder<Item, Item> SUPREME_WITCH_BOOTS = ITEMS.register("supreme_witch_boots", () -> new SupremeWitchArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
             .rarity(EvocationRarity.EVOCATION_RARITY_PROXY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))));
-
-    //Cryogenic Ruler Armor
-
-    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_HELMET = ITEMS.register("cryogenic_ruler_helmet", () -> new CryogenicRulerArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(CryogenicRarity.CRYOGENIC_RARITY_PROXY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))));
-    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_CHESTPLATE = ITEMS.register("cryogenic_ruler_chestplate", () -> new CryogenicRulerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(CryogenicRarity.CRYOGENIC_RARITY_PROXY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
-    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_LEGGINGS = ITEMS.register("cryogenic_ruler_leggings", () -> new CryogenicRulerArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(CryogenicRarity.CRYOGENIC_RARITY_PROXY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))));
-    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_BOOTS = ITEMS.register("cryogenic_ruler_boots", () -> new CryogenicRulerArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(CryogenicRarity.CRYOGENIC_RARITY_PROXY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))));
-
-    //Flesh Mass Armor
-
-    public static final DeferredHolder<Item, Item> FLESH_MASS_HELMET = ITEMS.register("flesh_mass_helmet", () -> new FleshMassArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(BloodRarity.BLOOD_RARITY_PROXY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))));
-    public static final DeferredHolder<Item, Item> FLESH_MASS_CHESTPLATE = ITEMS.register("flesh_mass_chestplate", () -> new FleshMassArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(BloodRarity.BLOOD_RARITY_PROXY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
-    public static final DeferredHolder<Item, Item> FLESH_MASS_LEGGINGS = ITEMS.register("flesh_mass_leggings", () -> new FleshMassArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(BloodRarity.BLOOD_RARITY_PROXY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))));
-    public static final DeferredHolder<Item, Item> FLESH_MASS_BOOTS = ITEMS.register("flesh_mass_boots", () -> new FleshMassArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(BloodRarity.BLOOD_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))));
 
@@ -925,22 +881,22 @@ public class HnSItems {
 
     //Geckolib Cryogenic Ruler Armor
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_CRYOGENIC_RULER_HELMET = ITEMS.register("geckolib_cryogenic_ruler_helmet", () -> new GeckolibCryogenicRulerArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_HELMET = ITEMS.register("geckolib_cryogenic_ruler_helmet", () -> new GeckolibCryogenicRulerArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
             .rarity(CryogenicRarity.CRYOGENIC_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))));
-    public static final DeferredHolder<Item, Item> GECKOLIB_CRYOGENIC_RULER_CHESTPLATE = ITEMS.register("geckolib_cryogenic_ruler_chestplate", () -> new GeckolibCryogenicRulerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_CHESTPLATE = ITEMS.register("geckolib_cryogenic_ruler_chestplate", () -> new GeckolibCryogenicRulerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
             .rarity(CryogenicRarity.CRYOGENIC_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
-    public static final DeferredHolder<Item, Item> GECKOLIB_CRYOGENIC_RULER_LEGGINGS = ITEMS.register("geckolib_cryogenic_ruler_leggings", () -> new GeckolibCryogenicRulerArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_LEGGINGS = ITEMS.register("geckolib_cryogenic_ruler_leggings", () -> new GeckolibCryogenicRulerArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
             .rarity(CryogenicRarity.CRYOGENIC_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))));
-    public static final DeferredHolder<Item, Item> GECKOLIB_CRYOGENIC_RULER_BOOTS = ITEMS.register("geckolib_cryogenic_ruler_boots", () -> new GeckolibCryogenicRulerArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_BOOTS = ITEMS.register("geckolib_cryogenic_ruler_boots", () -> new GeckolibCryogenicRulerArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
             .rarity(CryogenicRarity.CRYOGENIC_RARITY_PROXY.getValue())
             .fireResistant()
@@ -948,22 +904,22 @@ public class HnSItems {
 
     //Geckolib Flesh Mass Armor
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_FLESH_MASS_HELMET = ITEMS.register("geckolib_flesh_mass_helmet", () -> new GeckolibFleshMassArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> FLESH_MASS_HELMET = ITEMS.register("geckolib_flesh_mass_helmet", () -> new GeckolibFleshMassArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
             .rarity(BloodRarity.BLOOD_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FLESH_MASS_CHESTPLATE = ITEMS.register("geckolib_flesh_mass_chestplate", () -> new GeckolibFleshMassArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> FLESH_MASS_CHESTPLATE = ITEMS.register("geckolib_flesh_mass_chestplate", () -> new GeckolibFleshMassArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
             .rarity(BloodRarity.BLOOD_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FLESH_MASS_LEGGINGS = ITEMS.register("geckolib_flesh_mass_leggings", () -> new GeckolibFleshMassArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> FLESH_MASS_LEGGINGS = ITEMS.register("geckolib_flesh_mass_leggings", () -> new GeckolibFleshMassArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
             .rarity(BloodRarity.BLOOD_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FLESH_MASS_BOOTS = ITEMS.register("geckolib_flesh_mass_boots", () -> new GeckolibFleshMassArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> FLESH_MASS_BOOTS = ITEMS.register("geckolib_flesh_mass_boots", () -> new GeckolibFleshMassArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
             .rarity(BloodRarity.BLOOD_RARITY_PROXY.getValue())
             .fireResistant()

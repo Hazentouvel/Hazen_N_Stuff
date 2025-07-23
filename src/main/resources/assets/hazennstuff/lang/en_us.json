@@ -76,6 +76,13 @@
   "item.hazennstuff.skyscorcher": "Skyscorcher",
   "item.hazennstuff.bountiful_harvest": "Bountiful Harvest",
   "item.hazennstuff.starfury": "Starfury",
+  "item.hazennstuff.spectral_pickaxe": "Spectral Pickaxe",
+  "item.hazennstuff.lights_bane": "Light's Bane",
+  "item.hazennstuff.nights_edge": "Night's Edge",
+  "item.hazennstuff.true_nights_edge": "True Night's Edge",
+  "item.hazennstuff.vampire_knives": "Vampire Knives",
+
+
 
 
   "item.hazennstuff.frieren_staff": "Frieren's Staff",
@@ -295,6 +302,8 @@
   "creativetab.hazennstuff.hazennstuff_blocks": "Hazen 'n Stuff Blocks",
   "creativetab.hazennstuff.hazennstuff_utility": "Hazen 'n Stuff Utility",
   "creativetab.hazennstuff.hazennstuff_equipment": "Hazen 'n Stuff Equipment",
+
+  "tooltip.hazennstuff.spellbook_spell_count": "''Rapidly throw life stealing daggers'' -Terraria",
 
   "attribute.hazennstuff.luminescent_spell_power": "Luminescent Spell Power",
   "attribute.hazennstuff.luminescent_spell_resist": "Luminescent Spell Power"

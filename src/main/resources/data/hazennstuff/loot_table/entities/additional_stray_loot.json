@@ -4,28 +4,23 @@
       "rolls": 1,
       "entries": [
         {
-          "bonus_rolls": 0.0,
-          "entries": [
-            {
-              "type": "minecraft:item",
-              "name": "hazennstuff:permafrost_shard"
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:killed_by_player"
-            },
-            {
-              "condition": "minecraft:random_chance_with_enchanted_bonus",
-              "enchantment": "minecraft:looting",
-              "unenchanted_chance": 0.50,
-              "enchanted_chance": {
-                "type": "minecraft:linear",
-                "base": 0.55,
-                "per_level_above_first": 0.05
-              }
-            }
-          ]
+          "type": "minecraft:item",
+          "name": "hazennstuff:permafrost_shard"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchantment": "minecraft:looting",
+          "unenchanted_chance": 0.50,
+          "enchanted_chance": {
+            "type": "minecraft:linear",
+            "base": 0.55,
+            "per_level_above_first": 0.05
+          }
         }
       ]
     }

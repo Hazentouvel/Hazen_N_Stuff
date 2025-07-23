@@ -13,7 +13,7 @@ public class NightsEdgeModel extends DefaultedItemGeoModel<NightsEdgeItem> {
 
     @Override
     public ResourceLocation getModelResource(NightsEdgeItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/nights_edge.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/item/weapons/nights_edge.geo.json");
     }
 
     @Override

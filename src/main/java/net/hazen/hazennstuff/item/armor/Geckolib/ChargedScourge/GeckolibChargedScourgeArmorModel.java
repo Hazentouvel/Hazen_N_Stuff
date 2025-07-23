@@ -13,12 +13,12 @@ public class GeckolibChargedScourgeArmorModel extends DefaultedEntityGeoModel<Ge
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(GeckolibChargedScourgeArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/charged_scourge_armor_geckolib.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/charged_scourge/charged_scourge.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(GeckolibChargedScourgeArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/models/armor/geckolib/charged_scourge_armor.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/charged_scourge/charged_scourge.png");
     }
 
     @Override

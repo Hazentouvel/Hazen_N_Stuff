@@ -173,6 +173,19 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ATTACK_SPEED, -0.4, AttributeModifier.Operation.ADD_VALUE)
     );
 
+    public static HNSExtendedWeaponsTiers VAMPIRE_KNIVES = new HNSExtendedWeaponsTiers(
+            8064,
+            7,
+            -3.0F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ALObjects.Attributes.LIFE_STEAL, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(Attributes.ATTACK_SPEED, 1, AttributeModifier.Operation.ADD_VALUE)
+    );
+
     //private final int level;
     private final int uses;
     private final float speed;

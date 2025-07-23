@@ -12,17 +12,17 @@ public class GeckolibFleshMassArmorModel extends DefaultedEntityGeoModel<Geckoli
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(GeckolibFleshMassArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/flesh_mass_armor_geckolib.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/flesh_mass/flesh_mass_armor.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(GeckolibFleshMassArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/models/armor/geckolib/flesh_mass_armor.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/flesh_mass/flesh_mass_armor.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(GeckolibFleshMassArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/flesh_mass_armor_geckolib.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/armor/flesh_mass/flesh_mass_armor.animation.json");
     }
 }
 

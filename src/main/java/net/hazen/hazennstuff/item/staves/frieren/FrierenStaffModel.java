@@ -12,14 +12,13 @@ public class FrierenStaffModel extends DefaultedItemGeoModel<FrierenStaffItem> {
 
     @Override
     public ResourceLocation getModelResource(FrierenStaffItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/frieren_staff.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/items/staves/frieren_staff.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(FrierenStaffItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/staves/frieren_staff/frieren_staff.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/items/staves/frieren_staff/frieren_staff.png");
     }
-
     @Override
     public ResourceLocation getAnimationResource(FrierenStaffItem animatable) {
         return ResourceLocation.fromNamespaceAndPath(IronsSpellbooks.MODID, "animations/wizard_armor_animation.json");

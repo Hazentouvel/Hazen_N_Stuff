@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class FireblossomAnimator extends AzItemAnimator {
     private static final ResourceLocation ANIMATIONS = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "animations/fireblossom_battlemage_armor.animation.json"
+            "animations/armor/fireblossom/fireblossom_battlemage_armor.animation.json"
     );
 
     @Override

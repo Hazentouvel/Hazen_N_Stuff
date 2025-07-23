@@ -13,12 +13,12 @@ public class GeckolibSynthesizerVArmorModel extends DefaultedEntityGeoModel<Geck
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(GeckolibSynthesizerVArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/teto_kasane_synthesizer_v_armor_geckolib.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/teto_kasane/synthesizer_v/synthesizer_v_armor.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(GeckolibSynthesizerVArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/models/armor/geckolib/teto_kasane_synthesizer_v_armor_geckolib.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/teto_kasane/synthesizer_v/synthesizer_v_armor.png");
     }
 
     @Override

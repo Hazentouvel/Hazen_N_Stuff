@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class ArbitriumAnimator extends AzItemAnimator {
     private static final ResourceLocation ANIMATIONS = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "animations/arbitrium_robes.animation.json"
+            "animations/armor/arbitrium_robes_armor.animation.json"
     );
 
     @Override

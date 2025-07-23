@@ -95,42 +95,19 @@ public class HnSArmorMaterials {
             2,
             0.1F);
 
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> FRIEREN_MATERIAL = register("frieren",
+    public static DeferredHolder<ArmorMaterial, ArmorMaterial> BATTLEMAGE_MATERIAL = register("battlemage",
             battlemageArmorMap(),
             20,
             SoundEvents.ARMOR_EQUIP_LEATHER,
             () -> Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
             2,
-            0.1F);
+            0F);
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> DARK_RITUAL_TEMPLAR_MATERIAL = register("dark_ritual_templar",
             battlemageArmorMap(),
             40,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
-
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> TETO_MATERIAL = register("teto",
-            battlemageArmorMap(),
-            20,
-            SoundEvents.ARMOR_EQUIP_LEATHER,
-            () -> Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
-            2,
-            0.1F);
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> HATSUNE_MIKU_MATERIAL = register("miku",
-            battlemageArmorMap(),
-            20,
-            SoundEvents.ARMOR_EQUIP_LEATHER,
-            () -> Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
-            2,
-            0.1F);
-
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> ATLAS_MATERIAL = register("atlas",
-            battlemageArmorMap(),
-            20,
-            SoundEvents.ARMOR_EQUIP_LEATHER,
-            () -> Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
             2,
             0.1F);
 
@@ -181,6 +158,8 @@ public class HnSArmorMaterials {
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
             2,
             0.1F);
+
+
 
     private static DeferredHolder<ArmorMaterial, ArmorMaterial> register(
             String name,

@@ -13,12 +13,12 @@ public class MinerArmorModel extends DefaultedEntityGeoModel<MinerArmorItem> {
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(MinerArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/miner_armor_geckolib.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/miner/miner_armor.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(MinerArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/models/armor/geckolib/miner_armor.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/miner/miner_armor.png");
     }
 
     @Override

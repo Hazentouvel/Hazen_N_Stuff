@@ -14,7 +14,6 @@ import mod.azure.azurelib.rewrite.render.armor.bone.AzArmorBoneContext;
 import mod.azure.azurelib.rewrite.render.armor.bone.AzArmorBoneProvider;
 import mod.azure.azurelib.rewrite.render.layer.AzAutoGlowingLayer;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.item.armor.AzureLib.animators.*;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.resources.ResourceLocation;
@@ -24,12 +23,12 @@ import net.minecraft.world.item.ItemStack;
 public class SLCCatArmorRenderer extends AzArmorRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/slc_cat.geo.json"
+            "geo/armor/slc_cat.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/models/armor/slc_cat.png"
+            "textures/armor/slc_cat.png"
     );
 
     public SLCCatArmorRenderer() {

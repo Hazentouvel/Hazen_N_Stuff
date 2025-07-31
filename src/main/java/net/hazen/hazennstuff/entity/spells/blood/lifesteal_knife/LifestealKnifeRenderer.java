@@ -23,7 +23,7 @@ public class LifestealKnifeRenderer extends GeoEntityRenderer<LifestealKnife> {
 
     @Override
     public ResourceLocation getTextureLocation(LifestealKnife animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/lifesteal_knife/vampire_knife_projectile.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/vampire_knife_projectile.png");
     }
 
     @Override

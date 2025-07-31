@@ -17,7 +17,7 @@ public class BountifulHarvestModel extends DefaultedItemGeoModel<BountifulHarves
 
     @Override
     public ResourceLocation getTextureResource(BountifulHarvestItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/bountiful_harvest/bountiful_harvest.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/bountiful_harvest.png");
     }
 
     @Override

@@ -16,7 +16,7 @@ public class BeongaeModel extends DefaultedItemGeoModel<BeongaeItem> {
 
     @Override
     public ResourceLocation getTextureResource(BeongaeItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/beongae/beongae.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/beongae.png");
     }
 
     @Override

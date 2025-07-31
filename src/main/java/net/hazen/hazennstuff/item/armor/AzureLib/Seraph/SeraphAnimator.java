@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.item.armor.AzureLib.animators;
+package net.hazen.hazennstuff.item.armor.AzureLib.Seraph;
 
 import mod.azure.azurelib.rewrite.animation.controller.AzAnimationController;
 import mod.azure.azurelib.rewrite.animation.controller.AzAnimationControllerContainer;
@@ -8,10 +8,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
-public class ArbitriumAnimator extends AzItemAnimator {
+public class SeraphAnimator extends AzItemAnimator {
     private static final ResourceLocation ANIMATIONS = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "animations/armor/arbitrium_robes_armor.animation.json"
+            "animations/armor/seraph_armor.animation.json"
     );
 
     @Override

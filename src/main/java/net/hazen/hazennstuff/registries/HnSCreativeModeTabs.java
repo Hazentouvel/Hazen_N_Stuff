@@ -11,6 +11,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
+import static net.hazen.hazennstuff.registries.HnSItems.GECKOLIB_ARBITRIUM_ROBES_HELMET;
+
 public class HnSCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, HazenNStuff.MOD_ID);
@@ -109,11 +111,6 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.SERAPH_CHESTPLATE.get());
                         output.accept(HnSItems.SERAPH_LEGGINGS.get());
                         output.accept(HnSItems.SERAPH_BOOTS.get());
-                        // Scourge
-                        output.accept(HnSItems.CHARGED_SCOURGE_HELMET.get());
-                        output.accept(HnSItems.CHARGED_SCOURGE_CHESTPLATE.get());
-                        output.accept(HnSItems.CHARGED_SCOURGE_LEGGINGS.get());
-                        output.accept(HnSItems.CHARGED_SCOURGE_BOOTS.get());
                         // Soul Flamed
                         output.accept(HnSItems.SOUL_FLAME_HELMET.get());
                         output.accept(HnSItems.SOUL_FLAME_CHESTPLATE.get());
@@ -233,16 +230,10 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.SKYSCORCHER.get());
                         //Bountiful Harvest
                         output.accept(HnSItems.BOUNTIFUL_HARVEST.get());
-                        //Starfury
-                        output.accept(HnSItems.STARFURY.get());
                         //Hammer of Justince
                         output.accept(HnSItems.HAMMER_OF_JUSTICE.get());
                         //Lights Bane
                         output.accept(HnSItems.LIGHTS_BANE.get());
-                        //Night's Edge
-                        output.accept(HnSItems.NIGHTS_EDGE.get());
-                        //True Night's Edge
-                        output.accept(HnSItems.TRUE_NIGHTS_EDGE.get());
                         //Vampire Knives
                         output.accept(HnSItems.VAMPIRE_KNIVES.get());
 
@@ -264,6 +255,50 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.RADIANCE.get());
 
 
+                    }).build());
+
+    public static final Supplier<CreativeModeTab> HAZEN_N_STUFF_GECKOLIB = CREATIVE_MODE_TAB.register("hazennstuff_geckolib",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItems.DIVINE_MOLD.get()))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "hazennstuff_utility"))
+                    .title(Component.translatable("creativetab.hazennstuff.hazennstuff_geckolib"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(HnSItems.GECKOLIB_ARBITRIUM_ROBES_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_ARBITRIUM_ROBES_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_ARBITRIUM_ROBES_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_ARBITRIUM_ROBES_BOOTS.get());
+                        output.accept(HnSItems.GECKOLIB_CHARGED_SCOURGE_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_CHARGED_SCOURGE_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_CHARGED_SCOURGE_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_CHARGED_SCOURGE_BOOTS.get());
+                        output.accept(HnSItems.GECKOLIB_CREAKING_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_CREAKING_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_CREAKING_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_CREAKING_BOOTS.get());
+                        output.accept(HnSItems.GECKOLIB_DARK_RITUAL_TEMPLAR_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_DARK_RITUAL_TEMPLAR_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_DARK_RITUAL_TEMPLAR_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_DARK_RITUAL_TEMPLAR_BOOTS.get());
+                        output.accept(HnSItems.GECKOLIB_ENDER_DRAGON_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_ENDER_DRAGON_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_ENDER_DRAGON_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_ENDER_DRAGON_BOOTS.get());
+                        output.accept(HnSItems.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN.get());
+                        output.accept(HnSItems.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
+                        output.accept(HnSItems.GECKOLIB_SERAPH_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_SERAPH_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_SERAPH_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_SERAPH_BOOTS.get());
+                        output.accept(HnSItems.GECKOLIB_SOUL_FLAME_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_SOUL_FLAME_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_SOUL_FLAME_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_SOUL_FLAME_BOOTS.get());
+                        output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_BOOTS.get());
                     }).build());
 
 

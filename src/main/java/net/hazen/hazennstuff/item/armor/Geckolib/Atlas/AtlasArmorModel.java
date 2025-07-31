@@ -17,11 +17,11 @@ public class AtlasArmorModel extends DefaultedEntityGeoModel<AtlasArmorItem> {
 
     @Override
     public ResourceLocation getTextureResource(AtlasArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/atlas.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/atlas_armor.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(AtlasArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/armor/atlas/atlas.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/armor/atlas_armor.animation.json");
     }
 }

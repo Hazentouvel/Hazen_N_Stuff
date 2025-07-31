@@ -8,7 +8,7 @@ public class SparkModel extends GeoModel<Spark> {
 
     @Override
     public ResourceLocation getModelResource(Spark animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/spark.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/entities/spells/spark.geo.json");
     }
 
     @Override
@@ -16,11 +16,11 @@ public class SparkModel extends GeoModel<Spark> {
         int frameCount = 4;
         int frameDuration = 1; // ticks per frame
         int frame = (animatable.tickCount / frameDuration) % frameCount;
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/spark/spark_" + frame + ".png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/spark_" + frame + ".png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(Spark animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/spark.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/entities/spells/spark.animation.json");
     }
 }

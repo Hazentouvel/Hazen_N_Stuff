@@ -23,7 +23,7 @@ public class BrimstoneHellblastRenderer extends GeoEntityRenderer<BrimstoneHellb
     @Override
     public ResourceLocation getTextureLocation(BrimstoneHellblast animatable) {
         int frame = (animatable.tickCount / 2) % 4;
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/brimstone_hellblast/brimstone_hellblast_" + frame + ".png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/brimstone_hellblast_" + frame + ".png");
     }
 
     @Override

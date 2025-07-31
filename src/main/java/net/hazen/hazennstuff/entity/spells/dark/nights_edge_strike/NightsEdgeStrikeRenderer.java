@@ -18,10 +18,10 @@ import java.util.Random;
 public class NightsEdgeStrikeRenderer  extends EntityRenderer<NightsEdgeStrike> {
 
     private static final ResourceLocation[] TEXTURES = {
-            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/nights_edge_strike/nights_edge_strike_1.png"),
-            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/nights_edge_strike/nights_edge_strike_2.png"),
-            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/nights_edge_strike/nights_edge_strike_3.png"),
-            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/nights_edge_strike/nights_edge_strike_4.png"),
+            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/nights_edge_strike_1.png"),
+            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/nights_edge_strike_2.png"),
+            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/nights_edge_strike_3.png"),
+            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/nights_edge_strike_4.png"),
     };
 
     public NightsEdgeStrikeRenderer(EntityRendererProvider.Context context) {

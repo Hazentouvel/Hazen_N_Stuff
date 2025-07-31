@@ -35,12 +35,12 @@ public class SparkSpell extends AbstractSpell {
             .setMinRarity(SpellRarity.COMMON)
             .setSchoolResource(SchoolRegistry.LIGHTNING_RESOURCE)
             .setMaxLevel(10)
-            .setCooldownSeconds(2)
+            .setCooldownSeconds(3)
             .build();
 
     public SparkSpell() {
         this.manaCostPerLevel = 3;
-        this.baseSpellPower = 12;
+        this.baseSpellPower = 20;
         this.spellPowerPerLevel = 1;
         this.castTime = 0;
         this.baseManaCost = 30;

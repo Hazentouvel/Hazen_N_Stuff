@@ -2,7 +2,6 @@ package net.hazen.hazennstuff.item.weapons.lights_bane;
 
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.item.weapons.starfury.StarfuryItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 
@@ -18,7 +17,7 @@ public class LightsBaneModel extends DefaultedItemGeoModel<LightsBaneItem> {
 
     @Override
     public ResourceLocation getTextureResource(LightsBaneItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/lights_bane/lights_bane.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/lights_bane.png");
     }
 
     @Override

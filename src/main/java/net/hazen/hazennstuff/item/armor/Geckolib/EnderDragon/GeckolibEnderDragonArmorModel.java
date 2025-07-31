@@ -18,7 +18,7 @@ public class GeckolibEnderDragonArmorModel extends DefaultedEntityGeoModel<Gecko
 
     @Override
     public ResourceLocation getTextureResource(GeckolibEnderDragonArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/ender_dragon_geckolib.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/ender_dragon_armor_geckolib.png");
     }
 
     @Override

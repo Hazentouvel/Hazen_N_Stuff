@@ -17,11 +17,11 @@ public class CalamitasArmorModel extends DefaultedEntityGeoModel<CalamitasArmorI
 
     @Override
     public ResourceLocation getTextureResource(CalamitasArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/calamitas.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/calamitas_armor.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(CalamitasArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/armor/calamitas.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/armor/calamitas_armor.animation.json");
     }
 }

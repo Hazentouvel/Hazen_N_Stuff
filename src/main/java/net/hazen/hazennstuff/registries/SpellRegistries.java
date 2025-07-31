@@ -25,9 +25,6 @@ public class SpellRegistries {
      * Ender
      */
 
-  //Chaotic Teleport
-    public static final Supplier<AbstractSpell> CHAOTIC_TELEPORT = registerSpell(new ChaoticTeleportSpell());
-
     /***
      * Blood
      */
@@ -60,6 +57,9 @@ public class SpellRegistries {
 
     //Night's Edge Strike
     public static final Supplier<AbstractSpell> NIGHTS_EDGE_STRIKE = registerSpell(new NightsEdgeStrikeSpell());
+
+    //Chaotic Teleport
+    public static final Supplier<AbstractSpell> CHAOTIC_TELEPORT = registerSpell(new ChaoticTeleportSpell());
 
 
     public static void register(IEventBus eventBus)

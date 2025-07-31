@@ -4,7 +4,6 @@ import mod.azure.azurelib.rewrite.animation.cache.AzIdentityRegistry;
 import mod.azure.azurelib.rewrite.render.armor.AzArmorRendererRegistry;
 import mod.azure.azurelib.rewrite.render.item.AzItemRendererRegistry;
 import net.hazen.hazennstuff.item.armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.ChargedScourge.ChargedScourgeArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.CreakingSorcerer.CreakingSorcererArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.DarkRitualTemplar.DarkRitualTemplarArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.EnderDragon.EnderDragonArmorRenderer;
@@ -14,6 +13,9 @@ import net.hazen.hazennstuff.item.armor.AzureLib.SLCCat.SLCCatArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.Seraph.SeraphArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SoulFlame.SoulFlameArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SupremeWitch.SupremeWitchArmorRenderer;
+import net.hazen.hazennstuff.item.curios.Wings.AngelWings.AngelWingsRenderer;
+import net.hazen.hazennstuff.item.curios.Wings.WingsCurio;
+import net.hazen.hazennstuff.item.curios.Wings.WingsCurioRenderer;
 import net.hazen.hazennstuff.registries.*;
 import net.hazen.hazennstuff.item.weapons.hammer_of_justice.HammerOfJusticeRenderer;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
@@ -41,6 +43,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(HazenNStuff.MOD_ID)
@@ -107,6 +110,12 @@ public class HazenNStuff
         public static void onClientSetup(FMLClientSetupEvent event)
         {
 
+            // Curio Rendering Registry
+
+            event.enqueueWork(() -> {
+                HnSItems.getHnSItems().stream().filter(item -> item.get() instanceof WingsCurio).forEach((item) -> CuriosRendererRegistry.register(item.get(), WingsCurioRenderer::new));
+            });
+
             // Armor Rendering Registry
 
             //Arbitrium Robes
@@ -115,13 +124,6 @@ public class HazenNStuff
                     HnSItems.ARBITRIUM_ROBES_CHESTPLATE.get(),
                     HnSItems.ARBITRIUM_ROBES_LEGGINGS.get(),
                     HnSItems.ARBITRIUM_ROBES_BOOTS.get());
-
-            //Charged Scourge
-            AzArmorRendererRegistry.register(ChargedScourgeArmorRenderer::new,
-                    HnSItems.CHARGED_SCOURGE_HELMET.get(),
-                    HnSItems.CHARGED_SCOURGE_CHESTPLATE.get(),
-                    HnSItems.CHARGED_SCOURGE_LEGGINGS.get(),
-                    HnSItems.CHARGED_SCOURGE_BOOTS.get());
 
             //Creaking
             AzArmorRendererRegistry.register(CreakingSorcererArmorRenderer::new,
@@ -152,7 +154,7 @@ public class HazenNStuff
                     HnSItems.FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
             // Fireblossom Crown
             AzArmorRendererRegistry.register(FireblossomBattlemageCrownedArmorRenderer::new,
-                    HnSItems.FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
+                    HnSItems.FIREBLOSSOM_BATTLEMAGE_CROWN.get());
 
             // Seraph
             AzArmorRendererRegistry.register(SeraphArmorRenderer::new,
@@ -186,18 +188,19 @@ public class HazenNStuff
             // Item Rendering Registry
             AzItemRendererRegistry.register(HammerOfJusticeRenderer::new, HnSItems.HAMMER_OF_JUSTICE.get());
 
+            // Angel Wings
+            AzItemRendererRegistry.register(AngelWingsRenderer::new, HnSItems.ANGEL_WINGS.get());
 
 
             // Animation Registry
             AzIdentityRegistry.register(
+
+                    //Armor
+
                     HnSItems.ARBITRIUM_ROBES_HELMET.get(),
                     HnSItems.ARBITRIUM_ROBES_CHESTPLATE.get(),
                     HnSItems.ARBITRIUM_ROBES_LEGGINGS.get(),
                     HnSItems.ARBITRIUM_ROBES_BOOTS.get(),
-                    HnSItems.CHARGED_SCOURGE_HELMET.get(),
-                    HnSItems.CHARGED_SCOURGE_CHESTPLATE.get(),
-                    HnSItems.CHARGED_SCOURGE_LEGGINGS.get(),
-                    HnSItems.CHARGED_SCOURGE_BOOTS.get(),
                     HnSItems.CREAKING_HELMET.get(),
                     HnSItems.CREAKING_CHESTPLATE.get(),
                     HnSItems.CREAKING_LEGGINGS.get(),
@@ -235,6 +238,9 @@ public class HazenNStuff
                     HnSItems.SLC_CAT_CHESTPLATE.get(),
                     HnSItems.SLC_CAT_LEGGINGS.get(),
                     HnSItems.SLC_CAT_BOOTS.get(),
+
+                    // Weapons
+
                     HnSItems.HAMMER_OF_JUSTICE.get()
 
             );

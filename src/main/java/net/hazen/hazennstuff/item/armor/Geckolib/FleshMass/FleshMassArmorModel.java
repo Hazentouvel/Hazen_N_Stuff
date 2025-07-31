@@ -4,24 +4,24 @@ import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.DefaultedEntityGeoModel;
 
-public class GeckolibFleshMassArmorModel extends DefaultedEntityGeoModel<GeckolibFleshMassArmorItem> {
-    public GeckolibFleshMassArmorModel() {
+public class FleshMassArmorModel extends DefaultedEntityGeoModel<FleshMassArmorItem> {
+    public FleshMassArmorModel() {
         super(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, ""));
     }
 
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
-    public ResourceLocation getModelResource(GeckolibFleshMassArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/flesh_mass_armor_geckolib.geo.json");
+    public ResourceLocation getModelResource(FleshMassArmorItem animatable) {
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/flesh_mass_armor.geo.json");
     }
 
     @Override
-    public ResourceLocation getTextureResource(GeckolibFleshMassArmorItem animatable) {
+    public ResourceLocation getTextureResource(FleshMassArmorItem animatable) {
         return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/flesh_mass_armor.png");
     }
 
     @Override
-    public ResourceLocation getAnimationResource(GeckolibFleshMassArmorItem animatable) {
+    public ResourceLocation getAnimationResource(FleshMassArmorItem animatable) {
         return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/armor/flesh_mass_armor.animation.json");
     }
 }

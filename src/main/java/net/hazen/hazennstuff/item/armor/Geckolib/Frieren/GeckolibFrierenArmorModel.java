@@ -13,7 +13,7 @@ public class GeckolibFrierenArmorModel extends DefaultedEntityGeoModel<GeckolibF
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(GeckolibFrierenArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/frieren_armor_geckolib.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/frieren_armor.geo.json");
     }
 
     @Override

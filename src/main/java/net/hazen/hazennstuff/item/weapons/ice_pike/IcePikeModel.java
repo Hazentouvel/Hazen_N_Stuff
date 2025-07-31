@@ -17,7 +17,7 @@ public class IcePikeModel extends DefaultedItemGeoModel<IcePikeItem> {
 
     @Override
     public ResourceLocation getTextureResource(IcePikeItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/ice_pike/ice_pike.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/ice_pike.png");
     }
 
     @Override

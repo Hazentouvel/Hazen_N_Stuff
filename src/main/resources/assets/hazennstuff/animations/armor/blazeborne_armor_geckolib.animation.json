@@ -1,20 +1,9 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.blazeborne_armor.idle": {
-			"loop": true,
+		"idle": {
 			"animation_length": 6,
 			"bones": {
-				"blaze rods": {
-					"rotation": {
-						"0.0": {
-							"vector": [0, 0, 0]
-						},
-						"6.0": {
-							"vector": [0, -990, 0]
-						}
-					}
-				},
 				"blaze_rods2": {
 					"rotation": {
 						"0.0": {
@@ -22,6 +11,16 @@
 						},
 						"6.0": {
 							"vector": [0, -1440, 0]
+						}
+					}
+				},
+				"blaze rods": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"6.0": {
+							"vector": [0, -990, 0]
 						}
 					}
 				},

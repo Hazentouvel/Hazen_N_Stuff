@@ -10,16 +10,16 @@ public class SyringeModel extends GeoModel<Syringe> {
 
     @Override
     public ResourceLocation getModelResource(Syringe animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/syringe.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/entities/spells/syringe.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(Syringe animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/syringe/syringe_alt.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/syringe_alt.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(Syringe animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/syringe.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/entities/spells/syringe.animation.json");
     }
 }

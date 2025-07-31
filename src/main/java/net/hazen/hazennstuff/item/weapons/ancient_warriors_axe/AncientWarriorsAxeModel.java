@@ -17,7 +17,7 @@ public class AncientWarriorsAxeModel extends DefaultedItemGeoModel<AncientWarrio
 
     @Override
     public ResourceLocation getTextureResource(AncientWarriorsAxeItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/ancient_warriors_axe/ancient_warriors_axe.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/ancient_warriors_axe.png");
     }
 
     @Override

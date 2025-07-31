@@ -18,7 +18,7 @@ public class GeckolibCreakingSorcererArmorModel extends DefaultedEntityGeoModel<
 
     @Override
     public ResourceLocation getTextureResource(GeckolibCreakingSorcererArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/creaking_sorcerer_geckolib.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/creaking_sorcerer_armor_geckolib.png");
     }
 
     @Override

@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.item.armor.AzureLib.animators;
+package net.hazen.hazennstuff.item.armor.AzureLib;
 
 import mod.azure.azurelib.rewrite.animation.controller.AzAnimationController;
 import mod.azure.azurelib.rewrite.animation.controller.AzAnimationControllerContainer;

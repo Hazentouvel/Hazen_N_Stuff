@@ -14,7 +14,7 @@ import mod.azure.azurelib.rewrite.render.armor.bone.AzArmorBoneContext;
 import mod.azure.azurelib.rewrite.render.armor.bone.AzArmorBoneProvider;
 import mod.azure.azurelib.rewrite.render.layer.AzAutoGlowingLayer;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.item.armor.AzureLib.animators.BasicArmorAnimator;
+import net.hazen.hazennstuff.item.armor.AzureLib.BasicArmorAnimator;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.resources.ResourceLocation;
@@ -29,7 +29,7 @@ public class SupremeWitchArmorRenderer extends AzArmorRenderer {
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/armor/supreme_witch/supreme_witch_armor.png"
+            "textures/armor/supreme_witch_armor.png"
     );
 
     public SupremeWitchArmorRenderer() {

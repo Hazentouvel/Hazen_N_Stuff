@@ -17,7 +17,7 @@ public class SkyscorcherModel extends DefaultedItemGeoModel<SkyscorcherItem> {
 
     @Override
     public ResourceLocation getTextureResource(SkyscorcherItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/skyscorcher/skyscorcher.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/skyscorcher.png");
     }
 
     @Override

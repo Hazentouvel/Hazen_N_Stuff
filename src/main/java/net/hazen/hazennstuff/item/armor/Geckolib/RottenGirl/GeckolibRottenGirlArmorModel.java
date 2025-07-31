@@ -13,7 +13,7 @@ public class GeckolibRottenGirlArmorModel extends DefaultedEntityGeoModel<Geckol
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(GeckolibRottenGirlArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/rotten_girl_geckolib.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/rotten_girl_armor.geo.json");
     }
 
     @Override

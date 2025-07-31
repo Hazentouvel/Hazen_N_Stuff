@@ -8,7 +8,7 @@ public class BrimstoneHellblastModel extends GeoModel<BrimstoneHellblast> {
 
     @Override
     public ResourceLocation getModelResource(BrimstoneHellblast animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/brimstone_hellblast.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/entities/spells/brimstone_hellblast.geo.json");
     }
 
     @Override
@@ -16,12 +16,12 @@ public class BrimstoneHellblastModel extends GeoModel<BrimstoneHellblast> {
         int frameCount = 4;
         int frameDuration = 2; // ticks per frame
         int frame = (animatable.tickCount / frameDuration) % frameCount;
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/brimstone_hellblast/brimstone_hellblast_" + frame + ".png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/brimstone_hellblast_" + frame + ".png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(BrimstoneHellblast animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/brimstone_hellblast.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/entities/spells/brimstone_hellblast.animation.json");
     }
 
 }

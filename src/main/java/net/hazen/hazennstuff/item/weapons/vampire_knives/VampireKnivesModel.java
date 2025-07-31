@@ -2,7 +2,6 @@ package net.hazen.hazennstuff.item.weapons.vampire_knives;
 
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.item.weapons.starfury.StarfuryItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 
@@ -18,7 +17,7 @@ public class VampireKnivesModel extends DefaultedItemGeoModel<VampireKnivesItem>
 
     @Override
     public ResourceLocation getTextureResource(VampireKnivesItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/vampire_knives/vampire_knives.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/vampire_knives.png");
     }
 
     @Override

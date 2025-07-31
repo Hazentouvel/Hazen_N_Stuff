@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.blazeborne_armor.idle": {
+		"idle": {
 			"loop": true,
 			"animation_length": 6,
 			"bones": {

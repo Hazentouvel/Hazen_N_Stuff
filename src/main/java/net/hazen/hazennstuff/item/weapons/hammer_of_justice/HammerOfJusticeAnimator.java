@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.item.weapons.animators;
+package net.hazen.hazennstuff.item.weapons.hammer_of_justice;
 
 import mod.azure.azurelib.rewrite.animation.controller.AzAnimationController;
 import mod.azure.azurelib.rewrite.animation.controller.AzAnimationControllerContainer;

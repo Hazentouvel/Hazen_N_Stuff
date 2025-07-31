@@ -14,7 +14,6 @@ import mod.azure.azurelib.rewrite.render.armor.bone.AzArmorBoneContext;
 import mod.azure.azurelib.rewrite.render.armor.bone.AzArmorBoneProvider;
 import mod.azure.azurelib.rewrite.render.layer.AzAutoGlowingLayer;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.item.armor.AzureLib.animators.ArbitriumAnimator;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.resources.ResourceLocation;
@@ -24,12 +23,12 @@ import net.minecraft.world.item.ItemStack;
 public class ArbitriumRobesArmorRenderer extends AzArmorRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/armor/arbitrium_robes.geo.json"
+            "geo/armor/arbitrium_robes_armor.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/armor/arbitrium_robes.png"
+            "textures/armor/arbitrium_robes_armor.png"
     );
 
     public ArbitriumRobesArmorRenderer() {

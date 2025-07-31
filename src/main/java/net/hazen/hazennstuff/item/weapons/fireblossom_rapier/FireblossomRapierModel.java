@@ -17,7 +17,7 @@ public class FireblossomRapierModel extends DefaultedItemGeoModel<FireblossomRap
 
     @Override
     public ResourceLocation getTextureResource(FireblossomRapierItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/fireblossom_rapier/fireblossom_rapier.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/fireblossom_rapier.png");
     }
 
     @Override

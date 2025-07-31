@@ -17,7 +17,7 @@ public class GeckolibFireblossomBattlemageCrownedArmorModel extends DefaultedEnt
 
     @Override
     public ResourceLocation getTextureResource(GeckolibFireblossomBattlemageCrownedArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/fireblossom_battlemage_crowned_geckolib.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/fireblossom_battlemage_crowned_armor_geckolib.png");
     }
 
     @Override

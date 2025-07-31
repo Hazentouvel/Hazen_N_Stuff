@@ -23,7 +23,7 @@ public class SparkRenderer extends GeoEntityRenderer<Spark> {
     @Override
     public ResourceLocation getTextureLocation(Spark animatable) {
         int frame = (animatable.tickCount / 1) % 4;
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/spark/spark_" + frame + ".png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/spark_" + frame + ".png");
     }
 
     @Override

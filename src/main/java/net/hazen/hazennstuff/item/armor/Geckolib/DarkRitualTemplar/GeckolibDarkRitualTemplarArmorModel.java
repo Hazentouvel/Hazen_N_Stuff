@@ -18,7 +18,7 @@ public class GeckolibDarkRitualTemplarArmorModel extends DefaultedEntityGeoModel
 
     @Override
     public ResourceLocation getTextureResource(GeckolibDarkRitualTemplarArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/dark_ritual_templar_geckolib.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/dark_ritual_templar_armor_geckolib.png");
     }
 
     @Override

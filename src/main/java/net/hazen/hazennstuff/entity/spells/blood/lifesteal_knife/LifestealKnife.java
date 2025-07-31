@@ -115,11 +115,11 @@ public class LifestealKnife extends AbstractMagicProjectile implements GeoEntity
 
                 target.hurt(source, damage);
 
-                caster.heal(damage * 0.05f);
+                caster.heal(damage * 0.075f);
             }
 
             level().playSound(null, getX(), getY(), getZ(),
-                    HnSSounds.SYRINGE_BARRAGE_HIT, SoundSource.NEUTRAL, 2.0f, 1.0f
+                    HnSSounds.VAMPIRE_KNIFE_HIT, SoundSource.NEUTRAL, 2.0f, 1.0f
             );
 
             discard();

@@ -1,27 +1,25 @@
-package net.hazen.hazennstuff.item.weapons.hammer_of_justice;
+package net.hazen.hazennstuff.item.curios.Wings.AngelWings;
 
 import mod.azure.azurelib.rewrite.render.item.AzItemRenderer;
 import mod.azure.azurelib.rewrite.render.item.AzItemRendererConfig;
-import mod.azure.azurelib.rewrite.render.layer.AzAutoGlowingLayer;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.resources.ResourceLocation;
 
-public class HammerOfJusticeRenderer extends AzItemRenderer {
+public class AngelWingsRenderer extends AzItemRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/item/weapons/hammer_of_justice.geo.json"
+            "geo/curios/angel_wings.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/item/weapons/hammer_of_justice.png"
+            "textures/curios/angel_wings.png"
     );
 
-    public HammerOfJusticeRenderer() {
+    public AngelWingsRenderer() {
         super(
                 AzItemRendererConfig.builder(GEO, TEX)
-                        .setAnimatorProvider(HammerOfJusticeAnimator::new)
-                        .addRenderLayer(new AzAutoGlowingLayer<>())
+                        .setAnimatorProvider(AngelWingsAnimator::new)
                         .build()
         );
     }

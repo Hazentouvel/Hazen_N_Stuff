@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.item.armor.AzureLib.animators;
+package net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage;
 
 import mod.azure.azurelib.rewrite.animation.controller.AzAnimationController;
 import mod.azure.azurelib.rewrite.animation.controller.AzAnimationControllerContainer;
@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class FireblossomAnimator extends AzItemAnimator {
     private static final ResourceLocation ANIMATIONS = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "animations/armor/fireblossom/fireblossom_battlemage_armor.animation.json"
+            "animations/armor/fireblossom_battlemage_armor.animation.json"
     );
 
     @Override

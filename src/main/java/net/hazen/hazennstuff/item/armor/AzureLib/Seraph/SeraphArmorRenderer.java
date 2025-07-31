@@ -14,7 +14,7 @@ import mod.azure.azurelib.rewrite.render.armor.bone.AzArmorBoneContext;
 import mod.azure.azurelib.rewrite.render.armor.bone.AzArmorBoneProvider;
 import mod.azure.azurelib.rewrite.render.layer.AzAutoGlowingLayer;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.item.armor.AzureLib.animators.*;
+import net.hazen.hazennstuff.item.armor.AzureLib.BasicArmorAnimator;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.resources.ResourceLocation;
@@ -35,7 +35,7 @@ public class SeraphArmorRenderer extends AzArmorRenderer {
     public SeraphArmorRenderer() {
         super(
                 AzArmorRendererConfig.builder(GEO, TEX)
-                        .setAnimatorProvider(BasicArmorAnimator::new)
+                        .setAnimatorProvider(SeraphAnimator::new)
                         .addRenderLayer(new AzAutoGlowingLayer<>())
                         .build()
         );

@@ -17,8 +17,8 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
-public class GeckolibFleshMassArmorItem extends ImbuableGeckolibHnSArmorItem {
-    public GeckolibFleshMassArmorItem(Type type, Properties settings) {
+public class FleshMassArmorItem extends ImbuableGeckolibHnSArmorItem {
+    public FleshMassArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
         super(HnSArmorMaterials.FLESH_MASS_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
@@ -33,7 +33,7 @@ public class GeckolibFleshMassArmorItem extends ImbuableGeckolibHnSArmorItem {
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new GeckolibFleshMassArmorModel());
+        return new GenericCustomArmorRenderer<>(new FleshMassArmorModel());
     }
 
     @Override
@@ -50,9 +50,9 @@ public class GeckolibFleshMassArmorItem extends ImbuableGeckolibHnSArmorItem {
     }
 
     private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(ArmorItem.Type.HELMET.getSlot()).getItem() instanceof GeckolibFleshMassArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.CHESTPLATE.getSlot()).getItem() instanceof GeckolibFleshMassArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.LEGGINGS.getSlot()).getItem() instanceof GeckolibFleshMassArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.BOOTS.getSlot()).getItem() instanceof GeckolibFleshMassArmorItem;
+        return player.getItemBySlot(ArmorItem.Type.HELMET.getSlot()).getItem() instanceof FleshMassArmorItem &&
+                player.getItemBySlot(ArmorItem.Type.CHESTPLATE.getSlot()).getItem() instanceof FleshMassArmorItem &&
+                player.getItemBySlot(ArmorItem.Type.LEGGINGS.getSlot()).getItem() instanceof FleshMassArmorItem &&
+                player.getItemBySlot(ArmorItem.Type.BOOTS.getSlot()).getItem() instanceof FleshMassArmorItem;
     }
 }

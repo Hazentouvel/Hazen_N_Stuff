@@ -24,7 +24,7 @@ public class SyringeRenderer extends GeoEntityRenderer<Syringe> {
 
     @Override
     public ResourceLocation getTextureLocation(Syringe animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/syringe/syringe_alt.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/syringe_alt.png");
     }
 
     @Override

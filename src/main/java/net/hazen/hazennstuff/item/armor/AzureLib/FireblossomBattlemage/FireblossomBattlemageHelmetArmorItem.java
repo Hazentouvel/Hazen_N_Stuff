@@ -6,7 +6,7 @@ import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.item.armor.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.registries.HnSEffects;
-import net.hazen.hazennstuff.item.custom.HnSArmorDispatcher;
+import net.hazen.hazennstuff.item.dispatcher.HnSArmorDispatcher;
 import net.hazen.hazennstuff.registries.HnSItems;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;

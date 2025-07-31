@@ -1,11 +1,11 @@
-package net.hazen.hazennstuff.item.custom;
+package net.hazen.hazennstuff.item.dispatcher;
 
 import mod.azure.azurelib.rewrite.animation.dispatch.command.AzCommand;
 import mod.azure.azurelib.rewrite.animation.play_behavior.AzPlayBehaviors;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 
-public class HnSItemDispatcher {
+public class HnSCurioDispatcher {
     private static final AzCommand EQUIP_COMMAND = AzCommand.create(
             "base_controller",
             "equipping",
@@ -30,12 +30,6 @@ public class HnSItemDispatcher {
             AzPlayBehaviors.LOOP
     );
 
-    private static final AzCommand DIVINE_SMITE_COMMAND = AzCommand.create(
-            "base_controller",
-            "overhead_two_handed_swing",
-            AzPlayBehaviors.HOLD_ON_LAST_FRAME
-    );
-
     public void equip(Entity entity, ItemStack itemStack) {
         EQUIP_COMMAND.sendForItem(entity, itemStack);
     }
@@ -50,8 +44,5 @@ public class HnSItemDispatcher {
 
     public void casting(Entity entity, ItemStack itemStack) {
         CASTING_SPELL_COMMAND.sendForItem(entity, itemStack);
-    }
-
-    public void overhead_two_handed_swing(Entity entity, ItemStack itemStack) { DIVINE_SMITE_COMMAND.sendForItem(entity, itemStack);
     }
 }

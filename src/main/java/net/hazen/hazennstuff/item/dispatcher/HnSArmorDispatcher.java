@@ -1,9 +1,8 @@
-package net.hazen.hazennstuff.item.custom;
+package net.hazen.hazennstuff.item.dispatcher;
 
 import mod.azure.azurelib.rewrite.animation.dispatch.command.AzCommand;
 import mod.azure.azurelib.rewrite.animation.play_behavior.AzPlayBehaviors;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
 public class HnSArmorDispatcher {

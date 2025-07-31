@@ -40,7 +40,7 @@ import net.hazen.hazennstuff.item.armor.Geckolib.SupremeWitch.GeckolibSupremeWit
 import net.hazen.hazennstuff.item.armor.Geckolib.SynthesizerV.GeckolibSynthesizerVArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.Utau.GeckolibUtauArmorItem;
 import net.hazen.hazennstuff.item.curios.*;
-import net.hazen.hazennstuff.item.curios.Wings.AngelWings.AngelWingsCurio;
+import net.hazen.hazennstuff.item.curios.Wings.AngelWings.AngelWings;
 import net.hazen.hazennstuff.item.staves.rod_of_discord.RodOfDiscordItem;
 import net.hazen.hazennstuff.item.staves.wisewood_cane.WisewoodCaneItem;
 import net.hazen.hazennstuff.item.util.spectral_pickaxe.SpectralPickaxeItem;
@@ -285,7 +285,7 @@ public class HnSItems {
 
         // Wing
     // Radiance
-    public static final DeferredItem<AngelWingsCurio> ANGEL_WINGS = ITEMS.register("angel_wings", AngelWingsCurio::new);
+    public static final DeferredItem<AngelWings> ANGEL_WINGS = ITEMS.register("angel_wings", AngelWings::new);
 
 
 

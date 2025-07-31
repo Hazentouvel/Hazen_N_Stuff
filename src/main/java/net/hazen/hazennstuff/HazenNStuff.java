@@ -14,8 +14,8 @@ import net.hazen.hazennstuff.item.armor.AzureLib.Seraph.SeraphArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SoulFlame.SoulFlameArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SupremeWitch.SupremeWitchArmorRenderer;
 import net.hazen.hazennstuff.item.curios.Wings.AngelWings.AngelWingsRenderer;
-import net.hazen.hazennstuff.item.curios.Wings.WingsCurio;
-import net.hazen.hazennstuff.item.curios.Wings.WingsCurioRenderer;
+import net.hazen.hazennstuff.item.curios.Wings.AngelWings.AngelWingsCurio;
+import net.hazen.hazennstuff.item.curios.Wings.AngelWings.AngelWingsCurioRenderer;
 import net.hazen.hazennstuff.registries.*;
 import net.hazen.hazennstuff.item.weapons.hammer_of_justice.HammerOfJusticeRenderer;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
@@ -113,7 +113,7 @@ public class HazenNStuff
             // Curio Rendering Registry
 
             event.enqueueWork(() -> {
-                HnSItems.getHnSItems().stream().filter(item -> item.get() instanceof WingsCurio).forEach((item) -> CuriosRendererRegistry.register(item.get(), WingsCurioRenderer::new));
+                HnSItems.getHnSItems().stream().filter(item -> item.get() instanceof AngelWingsCurio).forEach((item) -> CuriosRendererRegistry.register(item.get(), AngelWingsCurioRenderer::new));
             });
 
             // Armor Rendering Registry

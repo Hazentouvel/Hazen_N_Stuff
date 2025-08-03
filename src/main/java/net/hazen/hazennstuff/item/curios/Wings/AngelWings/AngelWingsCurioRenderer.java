@@ -33,7 +33,7 @@ public class AngelWingsCurioRenderer implements ICurioRenderer {
 
         matrixStack.pushPose();
 
-        matrixStack.translate(0.5F, 1.1F, -0.75F);
+        matrixStack.translate(0.5F, 1.1F, -0.5F);
 
         matrixStack.mulPose(Axis.ZP.rotationDegrees(180.0F));
 

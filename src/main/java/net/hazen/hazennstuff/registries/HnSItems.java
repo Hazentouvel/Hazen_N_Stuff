@@ -40,7 +40,6 @@ import net.hazen.hazennstuff.item.armor.Geckolib.SupremeWitch.GeckolibSupremeWit
 import net.hazen.hazennstuff.item.armor.Geckolib.SynthesizerV.GeckolibSynthesizerVArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.Utau.GeckolibUtauArmorItem;
 import net.hazen.hazennstuff.item.curios.*;
-import net.hazen.hazennstuff.item.curios.Wings.AngelWings.AngelWings;
 import net.hazen.hazennstuff.item.staves.rod_of_discord.RodOfDiscordItem;
 import net.hazen.hazennstuff.item.staves.wisewood_cane.WisewoodCaneItem;
 import net.hazen.hazennstuff.item.util.spectral_pickaxe.SpectralPickaxeItem;
@@ -232,20 +231,28 @@ public class HnSItems {
 
     //Ice Pike
     public static final DeferredHolder<Item, Item> ICE_PIKE = ITEMS.register("ice_pike", IcePikeItem::new);
+
     //Fireblossom Rapier
     public static final DeferredHolder<Item, Item> FIREBLOSSOM_RAPIER = ITEMS.register("fireblossom_rapier", FireblossomRapierItem::new);
+
     //Beongae
     public static final DeferredHolder<Item, Item> BEONGAE = ITEMS.register("beongae", BeongaeItem::new);
+
     //Ancient Warrior's Axe
     public static final DeferredHolder<Item, Item> ANCIENT_WARRIORS_AXE = ITEMS.register("ancient_warriors_axe", AncientWarriorsAxeItem::new);
+
     //Skyscorcher
     public static final DeferredHolder<Item, Item> SKYSCORCHER = ITEMS.register("skyscorcher", SkyscorcherItem::new);
+
     //Bountiful Harvest
     public static final DeferredHolder<Item, Item> BOUNTIFUL_HARVEST = ITEMS.register("bountiful_harvest", BountifulHarvestItem::new);
+
     //Hammer of Justice
     public static final DeferredHolder<Item, Item> HAMMER_OF_JUSTICE = ITEMS.register("hammer_of_justice", HammerOfJusticeItem::new);
+
     //Vampire Knives
     public static final DeferredHolder<Item, Item> VAMPIRE_KNIVES = ITEMS.register("vampire_knives", VampireKnivesItem::new);
+
     //Lights Bane
     public static final DeferredHolder<Item, Item> LIGHTS_BANE = ITEMS.register("lights_bane", LightsBaneItem::new);
 
@@ -285,7 +292,7 @@ public class HnSItems {
 
         // Wing
     // Radiance
-    public static final DeferredItem<AngelWings> ANGEL_WINGS = ITEMS.register("angel_wings", AngelWings::new);
+//    public static final DeferredItem<AngelWings> ANGEL_WINGS = ITEMS.register("angel_wings", AngelWings::new);
 
 
 

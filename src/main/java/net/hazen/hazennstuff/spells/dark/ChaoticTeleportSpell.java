@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.spells.ender;
+package net.hazen.hazennstuff.spells.dark;
 
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
@@ -29,13 +29,15 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import java.util.List;
 import java.util.Optional;
 
+import static net.hazen.hazennstuff.registries.HnSSchoolRegistry.DARK_RESOURCE;
+
 @AutoSpellConfig
 public class ChaoticTeleportSpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "chaotic_teleport");
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.UNCOMMON)
-            .setSchoolResource(SchoolRegistry.ENDER_RESOURCE)
+            .setSchoolResource(DARK_RESOURCE)
             .setMaxLevel(5)
             .setCooldownSeconds(2)
             .build();

@@ -1,8 +1,9 @@
-package net.hazen.hazennstuff.item.armor.AzureLib.CreakingSorcerer;
+package net.hazen.hazennstuff.item.armor.AzureLib.Blazeborne;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
+import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.item.armor.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.registries.HnSEffects;
@@ -16,14 +17,16 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class CreakingSorcererArmorItem extends ImbuableHnSArmorItem implements IDisableJacket {
+public class BlazeborneArmorItem extends ImbuableHnSArmorItem implements IDisableJacket {
     // This is your class where you will setup the AzCommands/Animations you wish to play
     public final HnSArmorDispatcher dispatcher;
 
-    public CreakingSorcererArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.CREAKING_SORCERER_MATERIAL, type, settings,
-                new AttributeContainer(AttributeRegistry.MAX_MANA, 500.0, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, .25, AttributeModifier.Operation.ADD_VALUE)
+    public BlazeborneArmorItem(Type type, Properties settings) {
+        super(HnSArmorMaterials.SERAPH_MATERIAL, type, settings,
+                new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.ELDRITCH_SPELL_POWER, .05, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE)
         );
         // Create the instance of the class here to use later.
         this.dispatcher = new HnSArmorDispatcher();
@@ -36,16 +39,16 @@ public class CreakingSorcererArmorItem extends ImbuableHnSArmorItem implements I
         }
         if (!level.isClientSide && entity instanceof Player player ) {
             player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.is(HnSItems.CREAKING_HELMET)) {
+                if (wornArmor != null && wornArmor.is(HnSItems.SERAPH_HELMET)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.CREAKING_CHESTPLATE)) {
+                if (wornArmor != null && wornArmor.is(HnSItems.SERAPH_CHESTPLATE)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.CREAKING_LEGGINGS)) {
+                if (wornArmor != null && wornArmor.is(HnSItems.SERAPH_LEGGINGS)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.CREAKING_BOOTS)) {
+                if (wornArmor != null && wornArmor.is(HnSItems.SERAPH_BOOTS)) {
                     dispatcher.idle(player, wornArmor);
                 }
             });
@@ -56,12 +59,15 @@ public class CreakingSorcererArmorItem extends ImbuableHnSArmorItem implements I
         if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
             player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
         }
+        if (!player.hasEffect(MobEffectRegistry.ANGEL_WINGS)) {
+            player.addEffect(new MobEffectInstance(MobEffectRegistry.ANGEL_WINGS, 200, 0, false, false, false));
+        }
     }
 
     private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(ArmorItem.Type.HELMET.getSlot()).getItem() instanceof CreakingSorcererArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.CHESTPLATE.getSlot()).getItem() instanceof CreakingSorcererArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.LEGGINGS.getSlot()).getItem() instanceof CreakingSorcererArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.BOOTS.getSlot()).getItem() instanceof CreakingSorcererArmorItem;
+        return player.getItemBySlot(ArmorItem.Type.HELMET.getSlot()).getItem() instanceof BlazeborneArmorItem &&
+                player.getItemBySlot(ArmorItem.Type.CHESTPLATE.getSlot()).getItem() instanceof BlazeborneArmorItem &&
+                player.getItemBySlot(ArmorItem.Type.LEGGINGS.getSlot()).getItem() instanceof BlazeborneArmorItem &&
+                player.getItemBySlot(ArmorItem.Type.BOOTS.getSlot()).getItem() instanceof BlazeborneArmorItem;
     }
 }

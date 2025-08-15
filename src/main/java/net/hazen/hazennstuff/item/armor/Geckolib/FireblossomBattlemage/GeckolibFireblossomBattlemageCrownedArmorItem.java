@@ -44,8 +44,8 @@ public class GeckolibFireblossomBattlemageCrownedArmorItem extends ImbuableGecko
     }
 
     private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.FIREBLOSSOM_EFFECT)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.FIREBLOSSOM_EFFECT, 200, 0, false, false, false));
+        if (!player.hasEffect(HnSEffects.FIREBLOSSOM_RULER_EFFECT)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.FIREBLOSSOM_RULER_EFFECT, 200, 0, false, false, false));
         }
     }
 

@@ -3,8 +3,9 @@ package net.hazen.hazennstuff.registries;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.spells.dark.NightsEdgeStrikeSpell;
-import net.hazen.hazennstuff.spells.ender.ChaoticTeleportSpell;
+import net.hazen.hazennstuff.spells.dark.ChaoticTeleportSpell;
 import net.hazen.hazennstuff.spells.fire.BrimstoneHellblastSpell;
+import net.hazen.hazennstuff.spells.fire.CinderousStepSpell;
 import net.hazen.hazennstuff.spells.lightning.SparkSpell;
 import net.hazen.hazennstuff.spells.luminescent.SyringeBarrageSpell;
 import net.neoforged.bus.api.IEventBus;
@@ -37,6 +38,8 @@ public class SpellRegistries {
     //Brimstone Hellblast
     public static final Supplier<AbstractSpell> BRIMSTONE_HELLBLAST = registerSpell(new BrimstoneHellblastSpell());
 
+    //Cinderous Step
+    public static final Supplier<AbstractSpell> CINDEROUS_STEP = registerSpell(new CinderousStepSpell());
     /***
      * Lightning
      */

@@ -55,8 +55,8 @@ public class EnderDragonArmorItem extends ImbuableHnSArmorItem implements IDisab
     }
 
     private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.GRAND_ENDER_DRAGON_EFFECT)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.GRAND_ENDER_DRAGON_EFFECT, 200, 0, false, false, false));
+        if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
         }
     }
 

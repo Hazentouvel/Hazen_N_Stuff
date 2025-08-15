@@ -57,8 +57,8 @@ public class DarkRitualTemplarArmorItem extends ImbuableHnSArmorItem implements 
     }
 
     private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.DISCERNING_THE_ELDRITCH_EFFECT)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.DISCERNING_THE_ELDRITCH_EFFECT, 200, 0, false, false, false));
+        if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
         }
     }
 

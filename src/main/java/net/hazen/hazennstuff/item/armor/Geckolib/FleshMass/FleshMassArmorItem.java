@@ -44,8 +44,8 @@ public class FleshMassArmorItem extends ImbuableGeckolibHnSArmorItem {
     }
 
     private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.BUTCHERS_VANITY_EFFECT)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.BUTCHERS_VANITY_EFFECT, 200, 0, false, false, false));
+        if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
         }
     }
 

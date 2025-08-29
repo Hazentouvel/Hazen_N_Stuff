@@ -24,7 +24,4 @@ public class ClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.LIFESTEAL_KNIFE.get(), LifestealKnifeRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.NIGHTS_EDGE_STRIKE.get(), NightsEdgeStrikeRenderer::new);
     }
-
-
-
 }

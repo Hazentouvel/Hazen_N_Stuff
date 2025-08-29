@@ -4,6 +4,7 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
+import net.hazen.hazennstuff.compat.MalumCompat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.item.armor.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.registries.HnSEffects;
@@ -28,9 +29,20 @@ public class SeraphArmorItem extends ImbuableHnSArmorItem implements IDisableJac
                 new AttributeContainer(AttributeRegistry.ELDRITCH_SPELL_POWER, .05, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE)
         );
-        // Create the instance of the class here to use later.
         this.dispatcher = new HnSArmorDispatcher();
     }
+
+//    public SeraphArmorItem(Type type, Properties settings) {
+//        super(HnSArmorMaterials.SERAPH_MATERIAL, type, settings,
+//                new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
+//                new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE),
+//                new AttributeContainer(AttributeRegistry.ELDRITCH_SPELL_POWER, .05, AttributeModifier.Operation.ADD_VALUE),
+//                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE)
+//        );
+//        // Create the instance of the class here to use later.
+//        this.dispatcher = new HnSArmorDispatcher();
+//    }
+
 
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {

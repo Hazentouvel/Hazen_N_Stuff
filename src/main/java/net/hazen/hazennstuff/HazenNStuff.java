@@ -3,6 +3,7 @@ package net.hazen.hazennstuff;
 import mod.azure.azurelib.rewrite.animation.cache.AzIdentityRegistry;
 import mod.azure.azurelib.rewrite.render.armor.AzArmorRendererRegistry;
 import mod.azure.azurelib.rewrite.render.item.AzItemRendererRegistry;
+import net.hazen.hazennstuff.compat.MalumCompat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.CreakingSorcerer.CreakingSorcererArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.DarkRitualTemplar.DarkRitualTemplarArmorRenderer;
@@ -54,6 +55,8 @@ public class HazenNStuff
     {
         NeoForge.EVENT_BUS.register(this);
 
+        MalumCompat.init();
+
         HnSCreativeModeTabs.register(modEventBus);
 
         HnSItems.register(modEventBus);
@@ -70,7 +73,7 @@ public class HazenNStuff
 
         modEventBus.addListener(this::addCreative);
 
-      modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

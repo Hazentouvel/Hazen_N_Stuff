@@ -146,24 +146,36 @@ configurations {
 }
 
 dependencies {
+
+    //Iron's Spells 'n Spellbooks
     implementation "curse.maven:iss-855414:6497109"
     implementation "curse.maven:geckolib-388172:6304958"
     implementation "curse.maven:player_animator-658587:6024462"
     implementation "curse.maven:curios-309927:6342656"
 
+    //Apothic Attributes
     implementation "curse.maven:apothic-attributes-898963:6302334"
     implementation "curse.maven:placebo-283644:6337156"
+    compileOnly "curse.maven:apotheosis-${apotheosis_version}"
 
+    //AzureLib
     implementation "mod.azure.azurelib:azurelib-neo-${minecraft_version}:${azurelib_version}"
 
+    //JEI
     compileOnly "mezz.jei:jei-${jei_mc_version}-common-api:${jei_version}"
     compileOnly "mezz.jei:jei-${jei_mc_version}-neoforge-api:${jei_version}"
     runtimeOnly "mezz.jei:jei-${jei_mc_version}-neoforge:${jei_version}"
 
-    compileOnly "curse.maven:apotheosis-${apotheosis_version}"
-
+    //Better Combat
     localRuntime "curse.maven:better-combat-by-daedelus-639842:5723092"
     localRuntime "curse.maven:cloth-config-348521:5623420"
+
+    //Malum
+    localRuntime "curse.maven:malum-484064:6655805"
+    compileOnly "curse.maven:malum-484064:6655805"
+
+    localRuntime "curse.maven:lodestone-616457:6630047"
+    compileOnly "curse.maven:lodestone-616457:6630047"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

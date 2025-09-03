@@ -1,0 +1,285 @@
+{
+  "item.hazennstuff.zenalite_ingot": "神泽锭",
+  "item.hazennstuff.raw_zenalite": "粗神泽矿",
+  "item.hazennstuff.pyrium_nugget": "炽金粒",
+  "item.hazennstuff.silver_scraps": "银碎片",
+  "item.hazennstuff.excalibur_fragment": "圣剑残片",
+  "item.hazennstuff.starkissed_zenalite": "星祝神泽矿",
+  "item.hazennstuff.deus_essence": "神性源质",
+  "item.hazennstuff.runestone_fragments": "符文石残片",
+  "item.hazennstuff.permafrost_fragment": "永冻残片",
+  "item.hazennstuff.charred_bones": "焦骨",
+  "item.hazennstuff.overgrown_bone": "蔓骨",
+  "item.hazennstuff.flaming_template": "炽焰模板",
+  "item.hazennstuff.divine_mold": "神圣模具",
+
+
+
+  "item.hazennstuff.ruptured": "裂碎魔力水晶",
+  "item.hazennstuff.refined": "精粹魔力水晶",
+  "item.hazennstuff.reinforced": "不摧魔力水晶",
+  "item.hazennstuff.radiance": "光辉魔力水晶",
+
+
+
+  "block.hazennstuff.phantasmium": "幻影石",
+  "block.hazennstuff.abysslate": "渊板岩",
+
+
+  "block.hazennstuff.zenalite_deepslate_ore": "深层神泽矿石",
+  "block.hazennstuff.zenalite_stone_ore": "神泽矿石",
+  "block.hazennstuff.zenalite_abysslate_ore": "深渊神泽矿石",
+  "block.hazennstuff.zenalite_voidstone_ore": "虚空神泽矿石",
+
+  "block.hazennstuff.runestone_slag": "符文石渣",
+  "block.hazennstuff.aquastone": "海洋石",
+
+  "block.hazennstuff.fireblossom": "火焰花",
+
+
+  "block.hazennstuff.voidstone": "虚空石",
+  "block.hazennstuff.cobbled_voidstone": "虚空石圆石",
+
+
+  "block.hazennstuff.zenalite_bricks": "神泽砖块",
+  "block.hazennstuff.zenalite_stairs": "神泽楼梯",
+  "block.hazennstuff.zenalite_slab": "神泽台阶",
+
+  "block.hazennstuff.zenalite_block": "神泽块",
+  "block.hazennstuff.mithril_block": "秘银块",
+  "block.hazennstuff.pyrium_block": "炽金块",
+  "block.hazennstuff.arcane_steel_block": "奥术块",
+
+  "block.hazennstuff.wisewood_planks": "智慧木板",
+  "block.hazennstuff.wisewood_door": "智慧木门",
+  "block.hazennstuff.wisewood_slab": "智慧木台阶",
+  "block.hazennstuff.wisewood_fence": "智慧木栅栏",
+  "block.hazennstuff.wisewood_fence_gate": "智慧木栅栏门",
+  "block.hazennstuff.wisewood_stairs": "智慧木楼梯",
+  "block.hazennstuff.wisewood_leaves": "智慧树叶",
+  "block.hazennstuff.wisewood_log": "智慧原木",
+  "block.hazennstuff.wisewood_wood": "智慧木",
+  "block.hazennstuff.stripped_wisewood_log": "去皮智慧原木",
+  "block.hazennstuff.stripped_wisewood_wood": "去皮智慧木",
+  "block.hazennstuff.wisewood_trapdoor": "智慧木活板门",
+
+
+  "item.hazennstuff.ice_pike": "冰霜长矛",
+  "item.hazennstuff.beongae": "鸣雷",
+  "item.hazennstuff.fireblossom_rapier": "焰花刺剑",
+  "item.hazennstuff.ancient_warriors_axe": "古战士之斧",
+  "item.hazennstuff.skyscorcher": "破空者",
+  "item.hazennstuff.bountiful_harvest": "丰饶收割",
+  "item.hazennstuff.starfury": "星怒",
+
+
+  "item.hazennstuff.frieren_staff": "芙莉莲的法杖",
+  "item.hazennstuff.wisewood_cane": "智慧木手杖",
+  "item.hazennstuff.rod_of_discord": "无序之杖",
+
+
+
+  "item.hazennstuff.geckolib_creaking_helmet": "嘎枝面具",
+  "item.hazennstuff.geckolib_creaking_chestplate": "嘎枝胸甲",
+  "item.hazennstuff.geckolib_creaking_leggings": "嘎枝护腿",
+  "item.hazennstuff.geckolib_creaking_boots": "嘎枝靴子",
+
+  "item.hazennstuff.geckolib_seraph_helmet": "炽天使护面",
+  "item.hazennstuff.geckolib_seraph_chestplate": "炽天使胸铠",
+  "item.hazennstuff.geckolib_seraph_leggings": "炽天使护腿",
+  "item.hazennstuff.geckolib_seraph_boots": "炽天使翼靴",
+
+  "item.hazennstuff.geckolib_charged_scourge_helmet": "灾祸面具",
+  "item.hazennstuff.geckolib_charged_scourge_chestplate": "灾祸鳞铠",
+  "item.hazennstuff.geckolib_charged_scourge_leggings": "灾祸护膝",
+  "item.hazennstuff.geckolib_charged_scourge_boots": "灾祸踏靴",
+
+  "item.hazennstuff.geckolib_soul_flame_helmet": "魂焰面具",
+  "item.hazennstuff.geckolib_soul_flame_chestplate": "魂焰胸甲",
+  "item.hazennstuff.geckolib_soul_flame_leggings": "魂焰护腿",
+  "item.hazennstuff.geckolib_soul_flame_boots": "魂焰翼靴",
+
+  "item.hazennstuff.geckolib_supreme_witch_helmet": "至高女巫帽子",
+  "item.hazennstuff.geckolib_supreme_witch_chestplate": "至高女巫法袍",
+  "item.hazennstuff.geckolib_supreme_witch_leggings": "至高女巫护腿",
+  "item.hazennstuff.geckolib_supreme_witch_boots": "至高女巫靴子",
+
+  "item.hazennstuff.geckolib_cryogenic_ruler_helmet": "冰寒主宰之皇冠",
+  "item.hazennstuff.geckolib_cryogenic_ruler_chestplate": "冰寒主宰之胸甲",
+  "item.hazennstuff.geckolib_cryogenic_ruler_leggings": "冰寒主宰之护腿",
+  "item.hazennstuff.geckolib_cryogenic_ruler_boots": "疾雪靴子",
+
+  "item.hazennstuff.geckolib_ender_dragon_helmet": "末影龙角",
+  "item.hazennstuff.geckolib_ender_dragon_chestplate": "末影龙胸甲",
+  "item.hazennstuff.geckolib_ender_dragon_leggings": "末影龙护腿",
+  "item.hazennstuff.geckolib_ender_dragon_boots": "末影龙靴子",
+
+  "item.hazennstuff.geckolib_flesh_mass_helmet": "血肉头盔",
+  "item.hazennstuff.geckolib_flesh_mass_chestplate": "血肉胸甲",
+  "item.hazennstuff.geckolib_flesh_mass_leggings": "血肉护腿",
+  "item.hazennstuff.geckolib_flesh_mass_boots": "血肉靴子",
+
+  "item.hazennstuff.geckolib_dark_ritual_templar_helmet": "女性的头发",
+  "item.hazennstuff.geckolib_dark_ritual_templar_chestplate": "暗祭圣殿骑士胸甲",
+  "item.hazennstuff.geckolib_dark_ritual_templar_leggings": "暗祭圣殿骑士护腿",
+  "item.hazennstuff.geckolib_dark_ritual_templar_boots": "暗祭圣殿骑士靴子",
+
+  "item.hazennstuff.geckolib_fireblossom_crown": "焰花战斗法师皇冠",
+  "item.hazennstuff.geckolib_fireblossom_helmet": "焰花战斗法师头盔",
+  "item.hazennstuff.geckolib_fireblossom_chestplate": "焰花战斗法师胸甲",
+  "item.hazennstuff.geckolib_fireblossom_leggings": "焰花战斗法师护腿",
+  "item.hazennstuff.geckolib_fireblossom_boots": "焰花战斗法师靴子",
+
+  "item.hazennstuff.geckolib_arbitrium_robes_helmet": "圣裁之角",
+  "item.hazennstuff.geckolib_arbitrium_robes_chestplate": "圣裁法袍",
+  "item.hazennstuff.geckolib_arbitrium_robes_leggings": "圣裁护腿",
+  "item.hazennstuff.geckolib_arbitrium_robes_boots": "圣裁翼靴",
+
+  "item.hazennstuff.creaking_helmet": "嘎枝面具",
+  "item.hazennstuff.creaking_chestplate": "嘎枝胸甲",
+  "item.hazennstuff.creaking_leggings": "嘎枝护腿",
+  "item.hazennstuff.creaking_boots": "嘎枝靴子",
+
+  "item.hazennstuff.seraph_helmet": "炽天使护面",
+  "item.hazennstuff.seraph_chestplate": "炽天使胸铠",
+  "item.hazennstuff.seraph_leggings": "炽天使护腿",
+  "item.hazennstuff.seraph_boots": "炽天使翼靴",
+
+  "item.hazennstuff.legionnaire_helmet": "军团皇冠",
+  "item.hazennstuff.legionnaire_chestplate": "军团胸铠",
+  "item.hazennstuff.legionnaire_leggings": "军团护腿",
+  "item.hazennstuff.legionnaire_boots": "军团靴子",
+
+  "item.hazennstuff.charged_scourge_helmet": "灾祸面具",
+  "item.hazennstuff.charged_scourge_chestplate": "灾祸鳞铠",
+  "item.hazennstuff.charged_scourge_leggings": "灾祸护膝",
+  "item.hazennstuff.charged_scourge_boots": "灾祸踏靴",
+
+  "item.hazennstuff.soul_flame_helmet": "魂焰面具",
+  "item.hazennstuff.soul_flame_chestplate": "魂焰胸甲",
+  "item.hazennstuff.soul_flame_leggings": "魂焰护腿",
+  "item.hazennstuff.soul_flame_boots": "魂焰翼靴",
+
+  "item.hazennstuff.supreme_witch_helmet": "至高女巫帽子",
+  "item.hazennstuff.supreme_witch_chestplate": "至高女巫法袍",
+  "item.hazennstuff.supreme_witch_leggings": "至高女巫护腿",
+  "item.hazennstuff.supreme_witch_boots": "至高女巫靴子",
+
+  "item.hazennstuff.cryogenic_ruler_helmet": "冰寒主宰之皇冠",
+  "item.hazennstuff.cryogenic_ruler_chestplate": "冰寒主宰之胸甲",
+  "item.hazennstuff.cryogenic_ruler_leggings": "冰寒主宰之护腿",
+  "item.hazennstuff.cryogenic_ruler_boots": "疾雪靴子",
+
+  "item.hazennstuff.ender_dragon_helmet": "末影龙角",
+  "item.hazennstuff.ender_dragon_chestplate": "末影龙胸甲",
+  "item.hazennstuff.ender_dragon_leggings": "末影龙护腿",
+  "item.hazennstuff.ender_dragon_boots": "末影龙靴子",
+
+  "item.hazennstuff.flesh_mass_helmet": "血肉头盔",
+  "item.hazennstuff.flesh_mass_chestplate": "血肉胸甲",
+  "item.hazennstuff.flesh_mass_leggings": "血肉护腿",
+  "item.hazennstuff.flesh_mass_boots": "血肉靴子",
+
+  "item.hazennstuff.dark_ritual_templar_helmet": "某个女人的头发",
+  "item.hazennstuff.dark_ritual_templar_chestplate": "暗祭圣殿骑士胸甲",
+  "item.hazennstuff.dark_ritual_templar_leggings": "暗祭圣殿骑士护腿",
+  "item.hazennstuff.dark_ritual_templar_boots": "暗祭圣殿骑士靴子",
+
+  "item.hazennstuff.arbitrium_robes_helmet": "圣裁之角",
+  "item.hazennstuff.arbitrium_robes_chestplate": "圣裁法袍",
+  "item.hazennstuff.arbitrium_robes_leggings": "圣裁护腿",
+  "item.hazennstuff.arbitrium_robes_boots": "圣裁翼靴",
+
+  "item.hazennstuff.fireblossom_crown": "焰花战斗法师皇冠",
+  "item.hazennstuff.fireblossom_helmet": "焰花战斗法师头盔",
+  "item.hazennstuff.fireblossom_chestplate": "焰花战斗法师胸甲",
+  "item.hazennstuff.fireblossom_leggings": "焰花战斗法师护腿",
+  "item.hazennstuff.fireblossom_boots": "焰花战斗法师靴子",
+
+  "item.hazennstuff.frieren_helmet": "芙莉莲头发",
+  "item.hazennstuff.frieren_chestplate": "芙莉莲法袍",
+  "item.hazennstuff.frieren_leggings": "芙莉莲护腿",
+  "item.hazennstuff.frieren_boots": "芙莉莲靴子",
+
+  "item.hazennstuff.project_sekai_helmet": "Miku的头发",
+  "item.hazennstuff.project_sekai_chestplate": "Miku的制服",
+  "item.hazennstuff.project_sekai_leggings": "Miku的护腿",
+  "item.hazennstuff.project_sekai_boots": "Miku的靴子",
+
+
+  "item.hazennstuff.rotten_girl_helmet": "“Miku的”头发",
+  "item.hazennstuff.rotten_girl_chestplate": "“Miku的”制服",
+  "item.hazennstuff.rotten_girl_leggings": "“Miku的”护腿",
+  "item.hazennstuff.rotten_girl_boots": "“Miku的”靴子",
+
+
+  "item.hazennstuff.synthesizer_v_helmet": "Teto的头发",
+  "item.hazennstuff.synthesizer_v_chestplate": "Teto的制服",
+  "item.hazennstuff.synthesizer_v_leggings": "Teto的护腿",
+  "item.hazennstuff.synthesizer_v_boots": "Teto的靴子",
+
+
+  "item.hazennstuff.utau_helmet": "Teto的头发",
+  "item.hazennstuff.utau_chestplate": "Teto的制服",
+  "item.hazennstuff.utau_leggings": "Teto的护腿",
+  "item.hazennstuff.utau_boots": "Teto的靴子",
+
+  "item.hazennstuff.atlas_helmet": "Atlas的头盔",
+  "item.hazennstuff.atlas_chestplate": "Atlas的胸甲",
+  "item.hazennstuff.atlas_leggings": "Atlas的护腿",
+  "item.hazennstuff.atlas_boots": "Atlas的靴子",
+
+  "item.hazennstuff.miner_helmet": "矿工头盔",
+  "item.hazennstuff.miner_chestplate": "矿工胸甲",
+  "item.hazennstuff.miner_leggings": "矿工护腿",
+  "item.hazennstuff.miner_boots": "矿工靴子",
+
+  "item.hazennstuff.spectral_spelunker_helmet": "光灵探洞者头盔",
+  "item.hazennstuff.spectral_spelunker_chestplate": "光灵探洞者胸甲",
+  "item.hazennstuff.spectral_spelunker_leggings": "光灵探洞者护腿",
+  "item.hazennstuff.spectral_spelunker_boots": "光灵探洞者靴子",
+
+
+
+  "curios.modifiers.mana_crystal": "使用魔力水晶时：",
+
+
+
+  "curios.identifier.mana_crystal": "魔力水晶",
+
+
+  "spell.hazennstuff.chaotic_teleport": "混沌传送",
+
+
+
+  "effect.hazennstuff.tyrants_grace": "僭主施恩",
+  "effect.hazennstuff.scourges_gorge": "灾祸饕餮",
+  "effect.hazennstuff.call_of_the_garden": "苍园之唤",
+  "effect.hazennstuff.seraphs_might": "炽天使之势",
+  "effect.hazennstuff.sadistic_nature": "嗜虐天性",
+  "effect.hazennstuff.burning_point": "炽燃触点",
+  "effect.hazennstuff.butchers_vanity": "屠者虚荣",
+  "effect.hazennstuff.sub_zero": "零下冰点",
+  "effect.hazennstuff.grand_ender_dragon": "末影巨龙",
+  "effect.hazennstuff.fireblossom": "烈焰芳华",
+  "effect.hazennstuff.arbiter": "仲裁者",
+  "effect.hazennstuff.discerning_the_eldritch": "洞悉秘异",
+
+
+  "sounds.hazennstuff.soul_flame_equip": "装备魂焰盔甲",
+  "sounds.hazennstuff.charged_scourge_equip": "装备充能灾祸盔甲",
+  "sounds.hazennstuff.creaking_sorcerer_equip": "装备嘎枝术士盔甲",
+  "sounds.hazennstuff.seraph_equip": "装备炽天使盔甲",
+  "sounds.hazennstuff.supreme_witch_equip": "装备至高女巫盔甲",
+  "sounds.hazennstuff.cryogenic_ruler_equip": "装备冰寒主宰盔甲",
+  "sounds.hazennstuff.flesh_mass_equip": "装备血肉盔甲",
+  "sounds.hazennstuff.ender_dragon_equip": "装备末影龙盔甲",
+  "sounds.hazennstuff.chaotic_teleport": "？？？",
+
+
+
+  "creativetab.hazennstuff.hazennstuff_materials": "Hazen 'n Stuff 材料",
+  "creativetab.hazennstuff.hazennstuff_blocks": "Hazen 'n Stuff 方块",
+  "creativetab.hazennstuff.hazennstuff_utility": "Hazen 'n Stuff 实用",
+  "creativetab.hazennstuff.hazennstuff_equipment": "Hazen 'n Stuff 装备"
+}

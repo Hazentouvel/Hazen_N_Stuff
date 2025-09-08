@@ -1,6 +1,18 @@
 {
+  "loader": "neoforge:item_layers",
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/materials/deus_essence"
+    "layer0": "hazennstuff:item/materials/deus_essence",
+    "layer1": "hazennstuff:item/materials/deus_essence_glowmask"
+  },
+  "neoforge_data": {
+    "layers": {
+      "1": {
+        "color": "0xFFFFFFFF",
+        "block_light": 15,
+        "sky_light": 15,
+        "ambient_occlusion": false
+      }
+    }
   }
 }

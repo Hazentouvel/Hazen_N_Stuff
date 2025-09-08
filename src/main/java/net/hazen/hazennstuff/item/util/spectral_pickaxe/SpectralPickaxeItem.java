@@ -26,12 +26,12 @@ public class SpectralPickaxeItem extends MagicSwordItem implements GeoItem {
 
     public SpectralPickaxeItem() {
         super(
-                HNSExtendedWeaponsTiers.MITHRIL,
+                HNSExtendedWeaponsTiers.SPECTRAL_PICKAXE,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(Rarity.EPIC)
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.MITHRIL))
+                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.DIVINE_GREATSWORD))
                         .component(DataComponents.TOOL, Tiers.NETHERITE.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE)),
                 SpellDataRegistryHolder.of(
                         new SpellDataRegistryHolder(SpellRegistry.SPECTRAL_HAMMER_SPELL, 5))

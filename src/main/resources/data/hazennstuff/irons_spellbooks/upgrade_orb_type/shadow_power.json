@@ -1,0 +1,9 @@
+{
+  "amount": 0.05,
+  "attribute": "hazennstuff:shadow_spell_power",
+  "containerItem": {
+    "count": 1,
+    "id": "hazennstuff:shadow_upgrade_orb"
+  },
+  "operation": "add_multiplied_base"
+}

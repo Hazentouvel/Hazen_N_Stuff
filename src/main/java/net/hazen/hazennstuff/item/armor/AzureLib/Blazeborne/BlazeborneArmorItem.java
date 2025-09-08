@@ -4,6 +4,8 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
+import net.hazen.hazennstuff.compat.ArsNoveauCompat;
+import net.hazen.hazennstuff.compat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.item.armor.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.registries.HnSEffects;
@@ -11,11 +13,15 @@ import net.hazen.hazennstuff.item.dispatcher.HnSArmorDispatcher;
 import net.hazen.hazennstuff.registries.HnSItems;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Level;
+
+import java.util.List;
 
 public class BlazeborneArmorItem extends ImbuableHnSArmorItem implements IDisableJacket {
     // This is your class where you will setup the AzCommands/Animations you wish to play
@@ -32,6 +38,13 @@ public class BlazeborneArmorItem extends ImbuableHnSArmorItem implements IDisabl
         this.dispatcher = new HnSArmorDispatcher();
     }
 
+    public List<ItemAttributeModifiers.Entry> createExtraAttributes() {
+        var group = EquipmentSlotGroup.bySlot(getEquipmentSlot());
+        ItemAttributeModifiers.Builder attributes = ItemAttributeModifiers.builder();
+        MalumCompat.addArcaneResonance(attributes, group);
+        return attributes.build().modifiers();
+    }
+
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
         if (entity instanceof Player player && !level.isClientSide() && isWearingFullSet(player)) {
@@ -39,16 +52,16 @@ public class BlazeborneArmorItem extends ImbuableHnSArmorItem implements IDisabl
         }
         if (!level.isClientSide && entity instanceof Player player ) {
             player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.is(HnSItems.SERAPH_HELMET)) {
+                if (wornArmor != null && wornArmor.is(HnSItems.BLAZEBORNE_HELMET)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.SERAPH_CHESTPLATE)) {
+                if (wornArmor != null && wornArmor.is(HnSItems.BLAZEBORNE_CHESTPLATE)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.SERAPH_LEGGINGS)) {
+                if (wornArmor != null && wornArmor.is(HnSItems.BLAZEBORNE_LEGGINGS)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.SERAPH_BOOTS)) {
+                if (wornArmor != null && wornArmor.is(HnSItems.BLAZEBORNE_BOOTS)) {
                     dispatcher.idle(player, wornArmor);
                 }
             });

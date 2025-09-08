@@ -54,16 +54,6 @@ public class HnSEffects {
                             ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "fireblossom_warrior"), 0.15f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
-    public static final Holder<MobEffect> ARBITER_EFFECT = MOB_EFFECTS.register("arbiter",
-            () -> new HazensEffect(MobEffectCategory.BENEFICIAL, 0xfbb741)
-                    .addAttributeModifier(AttributeRegistry.CASTING_MOVESPEED,
-                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "arbiter"), 0.15f,
-                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                    .addAttributeModifier(AttributeRegistry.SPELL_RESIST,
-                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "arbiter"), 0.1f,
-                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-    );
-
     public static final Holder<MobEffect> PURE_ARMOR_SET_BONUS = MOB_EFFECTS.register("pure_armor_set_bonus",
             () -> new HazensEffect(MobEffectCategory.BENEFICIAL, 0xfbb741)
                     .addAttributeModifier(AttributeRegistry.CASTING_MOVESPEED,

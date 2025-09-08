@@ -13,7 +13,7 @@ public class GeckolibCreakingSorcererArmorModel extends DefaultedEntityGeoModel<
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(GeckolibCreakingSorcererArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/creaking_sorcerer_armor_geckolib.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/creaking_sorcerer_armor.geo.json");
     }
 
     @Override

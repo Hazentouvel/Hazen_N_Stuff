@@ -9,6 +9,7 @@
         "field": "FLAMING_RARITY_PROXY"
       }
     },
+
     {
       "enum": "net/minecraft/world/item/Rarity",
       "name": "HAZENNSTUFF_RARITY_BLOOD",
@@ -18,6 +19,7 @@
         "field": "BLOOD_RARITY_PROXY"
       }
     },
+
     {
       "enum": "net/minecraft/world/item/Rarity",
       "name": "HAZENNSTUFF_RARITY_DIVINE",
@@ -27,6 +29,7 @@
         "field": "DIVINE_RARITY_PROXY"
       }
     },
+
     {
       "enum": "net/minecraft/world/item/Rarity",
       "name": "HAZENNSTUFF_RARITY_DEUS",
@@ -36,6 +39,7 @@
         "field": "DEUS_RARITY_PROXY"
       }
     },
+
     {
       "enum": "net/minecraft/world/item/Rarity",
       "name": "HAZENNSTUFF_RARITY_ELDRITCH",
@@ -45,6 +49,7 @@
         "field": "ELDRITCH_RARITY_PROXY"
       }
     },
+
     {
       "enum": "net/minecraft/world/item/Rarity",
       "name": "HAZENNSTUFF_RARITY_ENDER",
@@ -54,6 +59,7 @@
         "field": "ENDER_RARITY_PROXY"
       }
     },
+
     {
       "enum": "net/minecraft/world/item/Rarity",
       "name": "HAZENNSTUFF_RARITY_EVOCATION",
@@ -63,6 +69,7 @@
         "field": "EVOCATION_RARITY_PROXY"
       }
     },
+
     {
       "enum": "net/minecraft/world/item/Rarity",
       "name": "HAZENNSTUFF_RARITY_NATURE",
@@ -72,6 +79,7 @@
         "field": "NATURE_RARITY_PROXY"
       }
     },
+
     {
       "enum": "net/minecraft/world/item/Rarity",
       "name": "HAZENNSTUFF_RARITY_ELECTRIC",
@@ -81,6 +89,7 @@
         "field": "ELECTRIC_RARITY_PROXY"
       }
     },
+
     {
       "enum": "net/minecraft/world/item/Rarity",
       "name": "HAZENNSTUFF_RARITY_CRYOGENIC",
@@ -90,23 +99,36 @@
         "field": "CRYOGENIC_RARITY_PROXY"
       }
     },
+
     {
       "enum": "net/minecraft/world/item/Rarity",
-      "name": "HAZENNSTUFF_RARITY_DARK",
+      "name": "HAZENNSTUFF_RARITY_SHADOW",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/rarity/DarkRarity",
-        "field": "DARK_RARITY_PROXY"
+        "class": "net/hazen/hazennstuff/rarity/ShadowRarity",
+        "field": "SHADOW_RARITY_PROXY"
       }
     },
+
     {
       "enum": "net/minecraft/world/item/Rarity",
-      "name": "HAZENNSTUFF_RARITY_LUMINESCENT",
+      "name": "HAZENNSTUFF_RARITY_RADIANCE",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/rarity/LuminescentRarity",
-        "field": "LUMINESCENT_RARITY_PROXY"
+        "class": "net/hazen/hazennstuff/rarity/RadianceRarity",
+        "field": "RADIANCE_RARITY_PROXY"
+      }
+    },
+
+    {
+      "enum": "net/minecraft/world/item/Rarity",
+      "name": "HAZENNSTUFF_RARITY_TECHNOLOGICAL",
+      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
+      "parameters": {
+        "class": "net/hazen/hazennstuff/rarity/TechnologicalRarity",
+        "field": "TECHNOLOGICAL_RARITY_PROXY"
       }
     }
+
   ]
 }

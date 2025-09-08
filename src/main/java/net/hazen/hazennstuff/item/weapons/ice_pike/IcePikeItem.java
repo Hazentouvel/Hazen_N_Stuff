@@ -1,19 +1,23 @@
 package net.hazen.hazennstuff.item.weapons.ice_pike;
 
+import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
+import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.CryogenicRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.world.item.ItemStack;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.Map;
 import java.util.function.Consumer;
 
 public class IcePikeItem extends MagicSwordItem implements GeoItem {
@@ -29,7 +33,7 @@ public class IcePikeItem extends MagicSwordItem implements GeoItem {
                         .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.ICE_PIKE)
                         ),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(SpellRegistry.ICE_SPIKES_SPELL, 10)
+                        new SpellDataRegistryHolder(SpellRegistry.ICE_SPIKES_SPELL, 8)
                 )
         );
     }
@@ -71,5 +75,17 @@ public class IcePikeItem extends MagicSwordItem implements GeoItem {
                 return this.renderer;
             }
         });
+    }
+
+    @Override
+    public void initializeSpellContainer(ItemStack itemStack) {
+        if (itemStack == null) {
+            return;
+        }
+
+        super.initializeSpellContainer(itemStack);
+        itemStack.set(ComponentRegistry.AFFINITY_COMPONENT, new AffinityData(Map.of(
+                SpellRegistry.ICE_SPIKES_SPELL.get().getSpellResource(), 1
+        )));
     }
 }

@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "hazennstuff:item/schools/luminescent/affinity_ring_luminescent"
-  }
-}

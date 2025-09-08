@@ -16,12 +16,12 @@ public class HnSDamageTypes {
         );
     }
 
-    public static final ResourceKey<DamageType> LUMINESCENT_MAGIC = register("luminescent");
-    public static final ResourceKey<DamageType> DARK_MAGIC = register("corrupt");
+    public static final ResourceKey<DamageType> RADIANCE_MAGIC = register("radiance");
+    public static final ResourceKey<DamageType> SHADOW_MAGIC = register("shadow");
 
     public static void bootstrap(BootstrapContext<DamageType> context)
     {
-        context.register(LUMINESCENT_MAGIC, new DamageType(LUMINESCENT_MAGIC.location().getPath(), DamageScaling.WHEN_CAUSED_BY_LIVING_NON_PLAYER, 0F));
-        context.register(DARK_MAGIC, new DamageType(DARK_MAGIC.location().getPath(), DamageScaling.WHEN_CAUSED_BY_LIVING_NON_PLAYER, 0F));
+        context.register(RADIANCE_MAGIC, new DamageType(RADIANCE_MAGIC.location().getPath(), DamageScaling.WHEN_CAUSED_BY_LIVING_NON_PLAYER, 0F));
+        context.register(SHADOW_MAGIC, new DamageType(SHADOW_MAGIC.location().getPath(), DamageScaling.WHEN_CAUSED_BY_LIVING_NON_PLAYER, 0F));
     }
 }

@@ -3,7 +3,6 @@ package net.hazen.hazennstuff.spells.dark;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
-import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
@@ -29,7 +28,7 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import java.util.List;
 import java.util.Optional;
 
-import static net.hazen.hazennstuff.registries.HnSSchoolRegistry.DARK_RESOURCE;
+import static net.hazen.hazennstuff.registries.HnSSchoolRegistry.SHADOW_RESOURCE;
 
 @AutoSpellConfig
 public class ChaoticTeleportSpell extends AbstractSpell {
@@ -37,7 +36,7 @@ public class ChaoticTeleportSpell extends AbstractSpell {
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.UNCOMMON)
-            .setSchoolResource(DARK_RESOURCE)
+            .setSchoolResource(SHADOW_RESOURCE)
             .setMaxLevel(5)
             .setCooldownSeconds(2)
             .build();

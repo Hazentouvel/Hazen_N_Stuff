@@ -13,8 +13,10 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
@@ -49,7 +51,29 @@ public class HnSArmorItem extends ArmorItem {
     }
 
     @Override
+    public ItemAttributeModifiers getDefaultAttributeModifiers(ItemStack stack) {
+        ItemAttributeModifiers modifiers = super.getDefaultAttributeModifiers(stack);
+        ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder();
+
+        List<ItemAttributeModifiers.Entry> entries = modifiers.modifiers();
+        for (ItemAttributeModifiers.Entry entry : entries) {
+            builder.add(entry.attribute(), entry.modifier(), entry.slot());
+        }
+
+        List<ItemAttributeModifiers.Entry> extraEntries = createExtraAttributes();
+        for (ItemAttributeModifiers.Entry entry : extraEntries) {
+            builder.add(entry.attribute(), entry.modifier(), entry.slot());
+        }
+
+        return builder.build();
+    }
+
+    @Override
     public ItemAttributeModifiers getDefaultAttributeModifiers() {
         return this.defaultModifiers.get();
+    }
+
+    public List<ItemAttributeModifiers.Entry> createExtraAttributes() {
+        return List.of(); // or Collections.emptyList();
     }
 }

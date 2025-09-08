@@ -33,7 +33,7 @@ public class SyringeBarrageSpell extends AbstractSpell {
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.COMMON)
-            .setSchoolResource(HnSSchoolRegistry.LUMINESCENT_RESOURCE)
+            .setSchoolResource(HnSSchoolRegistry.RADIANCE_RESOURCE)
             .setMaxLevel(10)
             .setCooldownSeconds(2)
             .build();

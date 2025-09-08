@@ -26,6 +26,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import javax.annotation.Nullable;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
@@ -57,24 +58,6 @@ public class HnSGeckolibArmorItem extends ArmorItem implements GeoItem {
 
             return builder.build();
         });
-    }
-
-    public static AttributeContainer[] schoolAttributes(Holder<Attribute> school, int mana, float schoolSpellPower, float spellPower)
-    {
-        return new AttributeContainer[]{
-                new AttributeContainer(AttributeRegistry.MAX_MANA, mana, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(school, schoolSpellPower, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, spellPower, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)};
-    }
-
-    // Can also be used for giving two attributes, doesn't have to be resistance
-    public static AttributeContainer[] schoolAttributesWithResistance(Holder<Attribute> school, Holder<Attribute> resistSchool, int mana, float schoolSpellPower, float spellPower, float resistSpellPower)
-    {
-        return new AttributeContainer[]{
-                new AttributeContainer(AttributeRegistry.MAX_MANA, mana, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(school, schoolSpellPower, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(resistSchool, resistSpellPower, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, spellPower, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)};
     }
 
     @Override
@@ -114,26 +97,30 @@ public class HnSGeckolibArmorItem extends ArmorItem implements GeoItem {
         });
     }
 
+    @Override
+    public ItemAttributeModifiers getDefaultAttributeModifiers(ItemStack stack) {
+        ItemAttributeModifiers modifiers = super.getDefaultAttributeModifiers(stack);
+        ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder();
+
+        List<ItemAttributeModifiers.Entry> entries = modifiers.modifiers();
+        for (ItemAttributeModifiers.Entry entry : entries) {
+            builder.add(entry.attribute(), entry.modifier(), entry.slot());
+        }
+
+        List<ItemAttributeModifiers.Entry> extraEntries = createExtraAttributes();
+        for (ItemAttributeModifiers.Entry entry : extraEntries) {
+            builder.add(entry.attribute(), entry.modifier(), entry.slot());
+        }
+
+        return builder.build();
+    }
+
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
         return null;
     }
 
-    /*@Override
-    public void createRenderer(Consumer<RenderProvider> consumer) {
-        // Can I just leave this empty?
+    public List<ItemAttributeModifiers.Entry> createExtraAttributes() {
+        return List.of(); // or Collections.emptyList();
     }
-
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "controler", 0, event ->
-        {
-            return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
-        }));
-    }
-
-    @Override
-    public AnimatableInstanceCache getAnimatableInstanceCache() {
-        return cache;
-    }*/
 }

@@ -3,17 +3,24 @@ package net.hazen.hazennstuff;
 import mod.azure.azurelib.rewrite.animation.cache.AzIdentityRegistry;
 import mod.azure.azurelib.rewrite.render.armor.AzArmorRendererRegistry;
 import mod.azure.azurelib.rewrite.render.item.AzItemRendererRegistry;
-import net.hazen.hazennstuff.compat.MalumCompat.MalumCompat;
+import net.hazen.hazennstuff.compat.*;
 import net.hazen.hazennstuff.item.armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.Blazeborne.BlazeborneArmorItem;
+import net.hazen.hazennstuff.item.armor.AzureLib.Blazeborne.BlazeborneArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.CreakingSorcerer.CreakingSorcererArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.DarkRitualTemplar.DarkRitualTemplarArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.EnderDragon.EnderDragonArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageCrownedArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageHelmetArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.Infestation.InfestationArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.LemonGod.Ascended.AscendedLemonGodArmorItem;
+import net.hazen.hazennstuff.item.armor.AzureLib.LemonGod.Ascended.AscendedLemonGodArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.LemonGod.LemonGodArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SLCCat.SLCCatArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.Seraph.SeraphArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SoulFlame.SoulFlameArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SupremeWitch.SupremeWitchArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.TheWither.TheWitherArmorRenderer;
 import net.hazen.hazennstuff.registries.*;
 import net.hazen.hazennstuff.item.weapons.hammer_of_justice.HammerOfJusticeRenderer;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
@@ -55,7 +62,16 @@ public class HazenNStuff
     {
         NeoForge.EVENT_BUS.register(this);
 
+        //Magic Mod Compat
         MalumCompat.init();
+        ArsNoveauCompat.init();
+
+        //ISS Addons Compat
+        AeromancyAdditionsCompat.init();
+        CataclysmSpellbooksCompat.init();
+        EndersSpellsAndStuffCompat.init();
+        FamiliarsLibCompat.init();
+        MFTECompat.init();
 
         HnSCreativeModeTabs.register(modEventBus);
 
@@ -101,8 +117,7 @@ public class HazenNStuff
         LOGGER.info("HELP!");
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = MOD_ID, value = Dist.CLIENT)
     public static class ClientModEvents
     {
         @SubscribeEvent
@@ -171,12 +186,47 @@ public class HazenNStuff
                     HnSItems.SUPREME_WITCH_LEGGINGS.get(),
                     HnSItems.SUPREME_WITCH_BOOTS.get());
 
-            //Charged Scourge
+            // SLC!Cat
             AzArmorRendererRegistry.register(SLCCatArmorRenderer::new,
                     HnSItems.SLC_CAT_HELMET.get(),
                     HnSItems.SLC_CAT_CHESTPLATE.get(),
                     HnSItems.SLC_CAT_LEGGINGS.get(),
                     HnSItems.SLC_CAT_BOOTS.get());
+
+            // Infestation
+            AzArmorRendererRegistry.register(InfestationArmorRenderer::new,
+                    HnSItems.INFESTATION_HELMET.get(),
+                    HnSItems.INFESTATION_CHESTPLATE.get(),
+                    HnSItems.INFESTATION_LEGGINGS.get(),
+                    HnSItems.INFESTATION_BOOTS.get());
+
+            // Blazeborne
+            AzArmorRendererRegistry.register(BlazeborneArmorRenderer::new,
+                    HnSItems.BLAZEBORNE_HELMET.get(),
+                    HnSItems.BLAZEBORNE_CHESTPLATE.get(),
+                    HnSItems.BLAZEBORNE_LEGGINGS.get(),
+                    HnSItems.BLAZEBORNE_BOOTS.get());
+
+            //
+            AzArmorRendererRegistry.register(LemonGodArmorRenderer::new,
+                    HnSItems.LEMON_GOD_HELMET.get(),
+                    HnSItems.LEMON_GOD_CHESTPLATE.get(),
+                    HnSItems.LEMON_GOD_LEGGINGS.get(),
+                    HnSItems.LEMON_GOD_BOOTS.get());
+
+            //
+            AzArmorRendererRegistry.register(AscendedLemonGodArmorRenderer::new,
+                    HnSItems.ASCENDED_LEMON_GOD_HELMET.get(),
+                    HnSItems.ASCENDED_LEMON_GOD_CHESTPLATE.get(),
+                    HnSItems.ASCENDED_LEMON_GOD_LEGGINGS.get(),
+                    HnSItems.ASCENDED_LEMON_GOD_BOOTS.get());
+
+            // The Wither
+            AzArmorRendererRegistry.register(TheWitherArmorRenderer::new,
+                    HnSItems.THE_WITHER_HELMET.get(),
+                    HnSItems.THE_WITHER_CHESTPLATE.get(),
+                    HnSItems.THE_WITHER_LEGGINGS.get(),
+                    HnSItems.THE_WITHER_BOOTS.get());
 
 
             // Item Rendering Registry
@@ -192,43 +242,62 @@ public class HazenNStuff
                     HnSItems.ARBITRIUM_ROBES_CHESTPLATE.get(),
                     HnSItems.ARBITRIUM_ROBES_LEGGINGS.get(),
                     HnSItems.ARBITRIUM_ROBES_BOOTS.get(),
+
                     HnSItems.CREAKING_HELMET.get(),
                     HnSItems.CREAKING_CHESTPLATE.get(),
                     HnSItems.CREAKING_LEGGINGS.get(),
                     HnSItems.CREAKING_BOOTS.get(),
+
                     HnSItems.DARK_RITUAL_TEMPLAR_HELMET.get(),
                     HnSItems.DARK_RITUAL_TEMPLAR_CHESTPLATE.get(),
                     HnSItems.DARK_RITUAL_TEMPLAR_LEGGINGS.get(),
                     HnSItems.DARK_RITUAL_TEMPLAR_BOOTS.get(),
+
                     HnSItems.ENDER_DRAGON_HELMET.get(),
                     HnSItems.ENDER_DRAGON_CHESTPLATE.get(),
                     HnSItems.ENDER_DRAGON_LEGGINGS.get(),
                     HnSItems.ENDER_DRAGON_BOOTS.get(),
+
                     HnSItems.FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
                     HnSItems.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
                     HnSItems.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
                     HnSItems.FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
                     HnSItems.FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
-                    HnSItems.FLESH_MASS_HELMET.get(),
-                    HnSItems.FLESH_MASS_CHESTPLATE.get(),
-                    HnSItems.FLESH_MASS_LEGGINGS.get(),
-                    HnSItems.FLESH_MASS_BOOTS.get(),
+
                     HnSItems.SERAPH_HELMET.get(),
                     HnSItems.SERAPH_CHESTPLATE.get(),
                     HnSItems.SERAPH_LEGGINGS.get(),
                     HnSItems.SERAPH_BOOTS.get(),
+
                     HnSItems.SOUL_FLAME_HELMET.get(),
                     HnSItems.SOUL_FLAME_CHESTPLATE.get(),
                     HnSItems.SOUL_FLAME_LEGGINGS.get(),
                     HnSItems.SOUL_FLAME_BOOTS.get(),
+
                     HnSItems.SUPREME_WITCH_HELMET.get(),
                     HnSItems.SUPREME_WITCH_CHESTPLATE.get(),
                     HnSItems.SUPREME_WITCH_LEGGINGS.get(),
                     HnSItems.SUPREME_WITCH_BOOTS.get(),
+
                     HnSItems.SLC_CAT_HELMET.get(),
                     HnSItems.SLC_CAT_CHESTPLATE.get(),
                     HnSItems.SLC_CAT_LEGGINGS.get(),
                     HnSItems.SLC_CAT_BOOTS.get(),
+
+                    HnSItems.INFESTATION_HELMET.get(),
+                    HnSItems.INFESTATION_CHESTPLATE.get(),
+                    HnSItems.INFESTATION_LEGGINGS.get(),
+                    HnSItems.INFESTATION_BOOTS.get(),
+
+                    HnSItems.BLAZEBORNE_HELMET.get(),
+                    HnSItems.BLAZEBORNE_CHESTPLATE.get(),
+                    HnSItems.BLAZEBORNE_LEGGINGS.get(),
+                    HnSItems.BLAZEBORNE_BOOTS.get(),
+
+                    HnSItems.LEMON_GOD_HELMET.get(),
+                    HnSItems.LEMON_GOD_CHESTPLATE.get(),
+                    HnSItems.LEMON_GOD_LEGGINGS.get(),
+                    HnSItems.LEMON_GOD_BOOTS.get(),
 
                     // Weapons
 

@@ -13,7 +13,7 @@ public class GeckolibSupremeWitchArmorModel extends DefaultedEntityGeoModel<Geck
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(GeckolibSupremeWitchArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/supreme_witch_armor_geckolib.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/supreme_witch_armor.geo.json");
     }
 
     @Override

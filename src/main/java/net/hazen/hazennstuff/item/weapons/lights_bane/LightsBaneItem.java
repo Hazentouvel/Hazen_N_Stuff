@@ -6,8 +6,7 @@ import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.rarity.DarkRarity;
-import net.hazen.hazennstuff.rarity.FlamingRarity;
+import net.hazen.hazennstuff.rarity.ShadowRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
@@ -26,7 +25,7 @@ public class LightsBaneItem extends MagicSwordItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(DarkRarity.DARK_RARITY_PROXY.getValue())
+                        .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.LIGHTS_BANE)
                         ),
                 SpellDataRegistryHolder.of(

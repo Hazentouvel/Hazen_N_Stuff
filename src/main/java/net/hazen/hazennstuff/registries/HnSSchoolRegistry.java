@@ -26,29 +26,29 @@ public class HnSSchoolRegistry {
         return HNS_SCHOOLS.register(type.getId().getPath(), () -> type);
     }
 
-    public static final ResourceLocation LUMINESCENT_RESOURCE = HazenNStuff.id("luminescent");
+    public static final ResourceLocation RADIANCE_RESOURCE = HazenNStuff.id("radiance");
 
-    public static final Supplier<SchoolType> LUMINESCENT = registerSchool(new SchoolType
+    public static final Supplier<SchoolType> RADIANCE = registerSchool(new SchoolType
             (
-                    LUMINESCENT_RESOURCE,
-                    HnSTags.LUMINESCENT_FOCUS,
-                    Component.translatable("school.hazennstuff.luminescent").withStyle(Style.EMPTY.withColor(0x2c2fb0)),
-                    HnSAttributeRegistry.LUMINESCENT_MAGIC_POWER,
-                    HnSAttributeRegistry.LUMINESCENT_MAGIC_RESIST,
+                    RADIANCE_RESOURCE,
+                    HnSTags.RADIANCE_FOCUS,
+                    Component.translatable("school.hazennstuff.radiance").withStyle(Style.EMPTY.withColor(0x2c2fb0)),
+                    HnSAttributeRegistry.RADIANCE_MAGIC_POWER,
+                    HnSAttributeRegistry.RADIANCE_MAGIC_RESIST,
                     SoundRegistry.EVOCATION_CAST,
-                    HnSDamageTypes.LUMINESCENT_MAGIC
+                    HnSDamageTypes.RADIANCE_MAGIC
             ));
 
-    public static final ResourceLocation DARK_RESOURCE = HazenNStuff.id("dark");
+    public static final ResourceLocation SHADOW_RESOURCE = HazenNStuff.id("shadow");
 
-    public static final Supplier<SchoolType> DARK = registerSchool(new SchoolType
+    public static final Supplier<SchoolType> SHADOW = registerSchool(new SchoolType
             (
-                    DARK_RESOURCE,
+                    SHADOW_RESOURCE,
                     HnSTags.DARK_FOCUS,
-                    Component.translatable("school.hazennstuff.dark").withStyle(Style.EMPTY.withColor(0x553a7f)),
-                    HnSAttributeRegistry.DARK_MAGIC_POWER,
-                    HnSAttributeRegistry.DARK_MAGIC_RESIST,
+                    Component.translatable("school.hazennstuff.shadow").withStyle(Style.EMPTY.withColor(0x553a7f)),
+                    HnSAttributeRegistry.SHADOW_MAGIC_POWER,
+                    HnSAttributeRegistry.SHADOW_MAGIC_RESIST,
                     SoundRegistry.BLOOD_CAST,
-                    HnSDamageTypes.DARK_MAGIC
+                    HnSDamageTypes.SHADOW_MAGIC
             ));
 }

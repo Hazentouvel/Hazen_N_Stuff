@@ -35,8 +35,11 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.OVERGROWN_BONE);
                         output.accept(HnSItems.CHARRED_BONES);
                         output.accept(HnSItems.PYRIUM_NUGGET);
-                        output.accept(HnSItems.LUMINESCENT_UPGRADE_ORB.get());
+                        output.accept(HnSItems.RADIANCE_UPGRADE_ORB.get());
+                        output.accept(HnSItems.SHADOW_UPGRADE_ORB.get());
                         output.accept(HnSItems.ARCHERY_UPGRADE_ORB.get());
+                        output.accept(HnSItems.MELEE_UPGRADE_ORB.get());
+                        output.accept(HnSItems.HEALTH_UPGRADE_ORB.get());
                         output.accept(HnSItems.HnSBlocks.FIREBLOSSOM);
                     }).build());
 
@@ -96,117 +99,428 @@ public class HnSCreativeModeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "hazennstuff_materials"))
                     .title(Component.translatable("creativetab.hazennstuff.hazennstuff_equipment"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        // Creaking
-                        output.accept(HnSItems.CREAKING_HELMET.get());
-                        output.accept(HnSItems.CREAKING_CHESTPLATE.get());
-                        output.accept(HnSItems.CREAKING_LEGGINGS.get());
-                        output.accept(HnSItems.CREAKING_BOOTS.get());
-                        // Legionnaire
-                        output.accept(HnSItems.LEGIONNAIRE_HELMET.get());
-                        output.accept(HnSItems.LEGIONNAIRE_CHESTPLATE.get());
-                        output.accept(HnSItems.LEGIONNAIRE_LEGGINGS.get());
-                        output.accept(HnSItems.LEGIONNAIRE_BOOTS.get());
-                        // Seraph
-                        output.accept(HnSItems.SERAPH_HELMET.get());
-                        output.accept(HnSItems.SERAPH_CHESTPLATE.get());
-                        output.accept(HnSItems.SERAPH_LEGGINGS.get());
-                        output.accept(HnSItems.SERAPH_BOOTS.get());
+
+                        /*
+                        *** Fire
+                         */
+
                         // Soul Flamed
                         output.accept(HnSItems.SOUL_FLAME_HELMET.get());
                         output.accept(HnSItems.SOUL_FLAME_CHESTPLATE.get());
                         output.accept(HnSItems.SOUL_FLAME_LEGGINGS.get());
                         output.accept(HnSItems.SOUL_FLAME_BOOTS.get());
-                        // Supreme Witch
-                        output.accept(HnSItems.SUPREME_WITCH_HELMET.get());
-                        output.accept(HnSItems.SUPREME_WITCH_CHESTPLATE.get());
-                        output.accept(HnSItems.SUPREME_WITCH_LEGGINGS.get());
-                        output.accept(HnSItems.SUPREME_WITCH_BOOTS.get());
+
+                        // Blazeborne
+                        output.accept(HnSItems.BLAZEBORNE_HELMET.get());
+                        output.accept(HnSItems.BLAZEBORNE_CHESTPLATE.get());
+                        output.accept(HnSItems.BLAZEBORNE_LEGGINGS.get());
+                        output.accept(HnSItems.BLAZEBORNE_BOOTS.get());
+
+                        // Calamitas
+                        output.accept(HnSItems.CALAMITAS_HELMET.get());
+                        output.accept(HnSItems.CALAMITAS_CHESTPLATE.get());
+                        output.accept(HnSItems.CALAMITAS_LEGGINGS.get());
+                        output.accept(HnSItems.CALAMITAS_BOOTS.get());
+
+                        // Hazel
+                        output.accept(HnSItems.HAZEL_HELMET.get());
+                        output.accept(HnSItems.HAZEL_CHESTPLATE.get());
+                        output.accept(HnSItems.HAZEL_HOLY_MOLLY_CHESTPLATE.get());
+                        output.accept(HnSItems.HAZEL_LEGGINGS.get());
+                        output.accept(HnSItems.HAZEL_BOOTS.get());
+
+                        /*
+                        *** Ice
+                         */
+
                         // Cryogenic Ruler
                         output.accept(HnSItems.CRYOGENIC_RULER_HELMET.get());
                         output.accept(HnSItems.CRYOGENIC_RULER_CHESTPLATE.get());
                         output.accept(HnSItems.CRYOGENIC_RULER_LEGGINGS.get());
                         output.accept(HnSItems.CRYOGENIC_RULER_BOOTS.get());
+
+                        // Crystal Arachnid
+                        output.accept(HnSItems.CRYSTAL_ARACHNID_HELMET.get());
+                        output.accept(HnSItems.CRYSTAL_ARACHNID_CHESTPLATE.get());
+                        output.accept(HnSItems.CRYSTAL_ARACHNID_LEGGINGS.get());
+                        output.accept(HnSItems.CRYSTAL_ARACHNID_BOOTS.get());
+
+                        // Herta Puppet
+                        output.accept(HnSItems.HERTA_PUPPET_HELMET.get());
+                        output.accept(HnSItems.HERTA_PUPPET_CHESTPLATE.get());
+                        output.accept(HnSItems.HERTA_PUPPET_LEGGINGS.get());
+                        output.accept(HnSItems.HERTA_PUPPET_BOOTS.get());
+
+                        /*
+                        *** Lightning
+                         */
+
+                        output.accept(HnSItems.CHARGED_SCOURGE_HELMET.get());
+                        output.accept(HnSItems.CHARGED_SCOURGE_CHESTPLATE.get());
+                        output.accept(HnSItems.CHARGED_SCOURGE_LEGGINGS.get());
+                        output.accept(HnSItems.CHARGED_SCOURGE_BOOTS.get());
+
+                        output.accept(HnSItems.THUNDER_PROWLER_HELMET.get());
+                        output.accept(HnSItems.THUNDER_PROWLER_CHESTPLATE.get());
+                        output.accept(HnSItems.THUNDER_PROWLER_LEGGINGS.get());
+                        output.accept(HnSItems.THUNDER_PROWLER_BOOTS.get());
+
+                        /*
+                        *** Nature
+                         */
+
+                        // Creaking
+                        output.accept(HnSItems.CREAKING_HELMET.get());
+                        output.accept(HnSItems.CREAKING_CHESTPLATE.get());
+                        output.accept(HnSItems.CREAKING_LEGGINGS.get());
+                        output.accept(HnSItems.CREAKING_BOOTS.get());
+
+                        /*
+                        *** Blood
+                         */
+
                         // Flesh Mass
                         output.accept(HnSItems.FLESH_MASS_HELMET.get());
                         output.accept(HnSItems.FLESH_MASS_CHESTPLATE.get());
                         output.accept(HnSItems.FLESH_MASS_LEGGINGS.get());
                         output.accept(HnSItems.FLESH_MASS_BOOTS.get());
+
+                        // The Wither
+                        output.accept(HnSItems.THE_WITHER_HELMET.get());
+                        output.accept(HnSItems.THE_WITHER_CHESTPLATE.get());
+                        output.accept(HnSItems.THE_WITHER_LEGGINGS.get());
+                        output.accept(HnSItems.THE_WITHER_BOOTS.get());
+
+                        /*
+                        *** Ender
+                         */
+
                         // Ender Dragon
                         output.accept(HnSItems.ENDER_DRAGON_HELMET.get());
                         output.accept(HnSItems.ENDER_DRAGON_CHESTPLATE.get());
                         output.accept(HnSItems.ENDER_DRAGON_LEGGINGS.get());
                         output.accept(HnSItems.ENDER_DRAGON_BOOTS.get());
+
+                        /*
+                        *** Holy
+                         */
+
+                        // Seraph
+                        output.accept(HnSItems.SERAPH_HELMET.get());
+                        output.accept(HnSItems.SERAPH_CHESTPLATE.get());
+                        output.accept(HnSItems.SERAPH_LEGGINGS.get());
+                        output.accept(HnSItems.SERAPH_BOOTS.get());
+
+                        // Mothic Witch
+                        output.accept(HnSItems.MOTHIC_WITCH_HELMET.get());
+                        output.accept(HnSItems.MOTHIC_WITCH_CHESTPLATE.get());
+                        output.accept(HnSItems.MOTHIC_WITCH_SECRET_CHESTPLATE.get());
+                        output.accept(HnSItems.MOTHIC_WITCH_LEGGINGS.get());
+                        output.accept(HnSItems.MOTHIC_WITCH_BOOTS.get());
+
+                        /*
+                        *** Evocation
+                         */
+
+                        // Supreme Witch
+                        output.accept(HnSItems.SUPREME_WITCH_HELMET.get());
+                        output.accept(HnSItems.SUPREME_WITCH_CHESTPLATE.get());
+                        output.accept(HnSItems.SUPREME_WITCH_LEGGINGS.get());
+                        output.accept(HnSItems.SUPREME_WITCH_BOOTS.get());
+
+                        // Alchemist Supreme
+                        output.accept(HnSItems.ALCHEMIST_SUPREME_HELMET.get());
+                        output.accept(HnSItems.ALCHEMIST_SUPREME_CHESTPLATE.get());
+                        output.accept(HnSItems.ALCHEMIST_SUPREME_LEGGINGS.get());
+                        output.accept(HnSItems.ALCHEMIST_SUPREME_BOOTS.get());
+
+                        /*
+                        *** Radiance
+                         */
+
+
+
+                        // Mycelium Guardian
+                        output.accept(HnSItems.MYCELIUM_GUARDIAN_HELMET.get());
+                        output.accept(HnSItems.MYCELIUM_GUARDIAN_CHESTPLATE.get());
+                        output.accept(HnSItems.MYCELIUM_GUARDIAN_LEGGINGS.get());
+                        output.accept(HnSItems.MYCELIUM_GUARDIAN_BOOTS.get());
+
+
+
+                        /*
+                         *** Shadow
+                         */
+
+
+                        // Shadow Scale
+                        output.accept(HnSItems.SHADOW_SCALE_HELMET.get());
+                        output.accept(HnSItems.SHADOW_SCALE_CHESTPLATE.get());
+                        output.accept(HnSItems.SHADOW_SCALE_LEGGINGS.get());
+                        output.accept(HnSItems.SHADOW_SCALE_BOOTS.get());
+
+                        /*
+                         *** Eldritch
+                         */
+
                         // Dark Ritual Templar
                         output.accept(HnSItems.DARK_RITUAL_TEMPLAR_HELMET.get());
                         output.accept(HnSItems.DARK_RITUAL_TEMPLAR_CHESTPLATE.get());
                         output.accept(HnSItems.DARK_RITUAL_TEMPLAR_LEGGINGS.get());
                         output.accept(HnSItems.DARK_RITUAL_TEMPLAR_BOOTS.get());
+
+                        // Infestation
+                        output.accept(HnSItems.INFESTATION_HELMET.get());
+                        output.accept(HnSItems.INFESTATION_CHESTPLATE.get());
+                        output.accept(HnSItems.INFESTATION_LEGGINGS.get());
+                        output.accept(HnSItems.INFESTATION_BOOTS.get());
+
+                        /*
+                         *** Pyrium
+                         */
+
+
+
+                        // Pyrium
+                        output.accept(HnSItems.PYRIUM_HELMET.get());
+                        output.accept(HnSItems.PYRIUM_CHESTPLATE.get());
+                        output.accept(HnSItems.PYRIUM_LEGGINGS.get());
+                        output.accept(HnSItems.PYRIUM_BOOTS.get());
+
+                        // Legionnaire
+                        output.accept(HnSItems.LEGIONNAIRE_HELMET.get());
+                        output.accept(HnSItems.LEGIONNAIRE_CHESTPLATE.get());
+                        output.accept(HnSItems.LEGIONNAIRE_LEGGINGS.get());
+                        output.accept(HnSItems.LEGIONNAIRE_BOOTS.get());
+
+                        // Legionnaire Commander
+                        output.accept(HnSItems.LEGIONNAIRE_COMMANDER_HELMET.get());
+                        output.accept(HnSItems.LEGIONNAIRE_COMMANDER_CHESTPLATE.get());
+                        output.accept(HnSItems.LEGIONNAIRE_COMMANDER_LEGGINGS.get());
+                        output.accept(HnSItems.LEGIONNAIRE_COMMANDER_BOOTS.get());
+
+                        // Legionnaire Battlemage
+                        output.accept(HnSItems.PYRIUM_BATTLEMAGE_HELMET.get());
+                        output.accept(HnSItems.PYRIUM_BATTLEMAGE_CHESTPLATE.get());
+                        output.accept(HnSItems.PYRIUM_BATTLEMAGE_LEGGINGS.get());
+                        output.accept(HnSItems.PYRIUM_BATTLEMAGE_BOOTS.get());
+
+                        // Tyros
+                        output.accept(HnSItems.TYROS_HELMET.get());
+                        output.accept(HnSItems.TYROS_CHESTPLATE.get());
+                        output.accept(HnSItems.TYROS_LEGGINGS.get());
+                        output.accept(HnSItems.TYROS_BOOTS.get());
+
+                        // Tyros Soul
+                        output.accept(HnSItems.TYROS_SOUL_HELMET.get());
+                        output.accept(HnSItems.TYROS_SOUL_CHESTPLATE.get());
+                        output.accept(HnSItems.TYROS_SOUL_LEGGINGS.get());
+                        output.accept(HnSItems.TYROS_SOUL_BOOTS.get());
+
+
+                        /*
+                         *** Cosmetic Battlemage
+                         */
+
                         // Frieren
                         output.accept(HnSItems.FRIEREN_HELMET.get());
                         output.accept(HnSItems.FRIEREN_CHESTPLATE.get());
                         output.accept(HnSItems.FRIEREN_LEGGINGS.get());
                         output.accept(HnSItems.FRIEREN_BOOTS.get());
+
                         // Synthesizer V
                         output.accept(HnSItems.SYNTHESIZER_V_HELMET.get());
                         output.accept(HnSItems.SYNTHESIZER_V_CHESTPLATE.get());
                         output.accept(HnSItems.SYNTHESIZER_V_LEGGINGS.get());
                         output.accept(HnSItems.SYNTHESIZER_V_BOOTS.get());
+
                         // Utau
                         output.accept(HnSItems.UTAU_HELMET.get());
                         output.accept(HnSItems.UTAU_CHESTPLATE.get());
                         output.accept(HnSItems.UTAU_LEGGINGS.get());
                         output.accept(HnSItems.UTAU_BOOTS.get());
+
                         // Project Sekai
                         output.accept(HnSItems.PROJECT_SEKAI_HELMET.get());
                         output.accept(HnSItems.PROJECT_SEKAI_CHESTPLATE.get());
                         output.accept(HnSItems.PROJECT_SEKAI_LEGGINGS.get());
                         output.accept(HnSItems.PROJECT_SEKAI_BOOTS.get());
+
                         // Rotten Girl
                         output.accept(HnSItems.ROTTEN_GIRL_HELMET.get());
                         output.accept(HnSItems.ROTTEN_GIRL_CHESTPLATE.get());
                         output.accept(HnSItems.ROTTEN_GIRL_LEGGINGS.get());
                         output.accept(HnSItems.ROTTEN_GIRL_BOOTS.get());
+
+                        // Neru
+                        output.accept(HnSItems.NERU_HELMET.get());
+                        output.accept(HnSItems.NERU_CHESTPLATE.get());
+                        output.accept(HnSItems.NERU_LEGGINGS.get());
+                        output.accept(HnSItems.NERU_BOOTS.get());
+
+                        // Giorno Giovanna
+                        output.accept(HnSItems.GIORNO_GIOVANNA_HELMET.get());
+                        output.accept(HnSItems.GIORNO_GIOVANNA_CHESTPLATE.get());
+                        output.accept(HnSItems.GIORNO_GIOVANNA_LEGGINGS.get());
+                        output.accept(HnSItems.GIORNO_GIOVANNA_BOOTS.get());
+
+
+                        /*
+                        *** Mining Armor Sets
+                         */
+
+                        // Miner
+                        output.accept(HnSItems.MINER_HELMET.get());
+                        output.accept(HnSItems.MINER_CHESTPLATE.get());
+                        output.accept(HnSItems.MINER_LEGGINGS.get());
+                        output.accept(HnSItems.MINER_BOOTS.get());
+
+                        // Spectral Spelunker
+                        output.accept(HnSItems.SPECTRAL_SPELUNKER_HELMET.get());
+                        output.accept(HnSItems.SPECTRAL_SPELUNKER_CHESTPLATE.get());
+                        output.accept(HnSItems.SPECTRAL_SPELUNKER_LEGGINGS.get());
+                        output.accept(HnSItems.SPECTRAL_SPELUNKER_BOOTS.get());
+
+
+
+                        /*
+                        *** Melee Armor Sets
+                         */
+
+
+
+                        // Frostbite Knight
+                        output.accept(HnSItems.FROSTBITE_KNIGHT_HELMET.get());
+                        output.accept(HnSItems.FROSTBITE_KNIGHT_CHESTPLATE.get());
+                        output.accept(HnSItems.FROSTBITE_KNIGHT_LEGGINGS.get());
+                        output.accept(HnSItems.FROSTBITE_KNIGHT_BOOTS.get());
+
+
+
+                        /*
+                         *** Archer Armor Sets
+                         */
+
+
+
+                        // Bounty Hunter
+                        output.accept(HnSItems.BOUNTY_HUNTER_HELMET.get());
+                        output.accept(HnSItems.BOUNTY_HUNTER_CHESTPLATE.get());
+                        output.accept(HnSItems.BOUNTY_HUNTER_LEGGINGS.get());
+                        output.accept(HnSItems.BOUNTY_HUNTER_BOOTS.get());
+
+                        // Frostbite Hunter
+                        output.accept(HnSItems.FROSTBITE_HUNTER_HELMET.get());
+                        output.accept(HnSItems.FROSTBITE_HUNTER_CHESTPLATE.get());
+                        output.accept(HnSItems.FROSTBITE_HUNTER_LEGGINGS.get());
+                        output.accept(HnSItems.FROSTBITE_HUNTER_BOOTS.get());
+
+                        // Permafrost Prince
+                        output.accept(HnSItems.PERMAFROST_PRINCE_HELMET.get());
+                        output.accept(HnSItems.PERMAFROST_PRINCE_CHESTPLATE.get());
+                        output.accept(HnSItems.PERMAFROST_PRINCE_LEGGINGS.get());
+                        output.accept(HnSItems.PERMAFROST_PRINCE_BOOTS.get());
+
+
+
+                        /*
+                        *** Misc
+                         */
+
+
+
+                        // Magehunter
+                        output.accept(HnSItems.MAGEHUNTER_HELMET.get());
+                        output.accept(HnSItems.MAGEHUNTER_CHESTPLATE.get());
+                        output.accept(HnSItems.MAGEHUNTER_LEGGINGS.get());
+                        output.accept(HnSItems.MAGEHUNTER_BOOTS.get());
+
+                        // Mithril Battlemage
+                        output.accept(HnSItems.MITHRIL_BATTLEMAGE_HELMET.get());
+                        output.accept(HnSItems.MITHRIL_BATTLEMAGE_CHESTPLATE.get());
+                        output.accept(HnSItems.MITHRIL_BATTLEMAGE_LEGGINGS.get());
+                        output.accept(HnSItems.MITHRIL_BATTLEMAGE_BOOTS.get());
+
+
+
+                        /*
+                         *** Tribute Armor Sets
+                         */
+
+
                         // Fireblossom
                         output.accept(HnSItems.FIREBLOSSOM_BATTLEMAGE_CROWN.get());
                         output.accept(HnSItems.FIREBLOSSOM_BATTLEMAGE_HELMET.get());
                         output.accept(HnSItems.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get());
                         output.accept(HnSItems.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get());
                         output.accept(HnSItems.FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
-                        // Miner
-                        output.accept(HnSItems.MINER_HELMET.get());
-                        output.accept(HnSItems.MINER_CHESTPLATE.get());
-                        output.accept(HnSItems.MINER_LEGGINGS.get());
-                        output.accept(HnSItems.MINER_BOOTS.get());
-                        // Spectral Spelunker
-                        output.accept(HnSItems.SPECTRAL_SPELUNKER_HELMET.get());
-                        output.accept(HnSItems.SPECTRAL_SPELUNKER_CHESTPLATE.get());
-                        output.accept(HnSItems.SPECTRAL_SPELUNKER_LEGGINGS.get());
-                        output.accept(HnSItems.SPECTRAL_SPELUNKER_BOOTS.get());
+
                         // Arbitrium Robes
                         output.accept(HnSItems.ARBITRIUM_ROBES_HELMET.get());
                         output.accept(HnSItems.ARBITRIUM_ROBES_CHESTPLATE.get());
                         output.accept(HnSItems.ARBITRIUM_ROBES_LEGGINGS.get());
                         output.accept(HnSItems.ARBITRIUM_ROBES_BOOTS.get());
+
                         // Atlas
                         output.accept(HnSItems.ATLAS_HELMET.get());
                         output.accept(HnSItems.ATLAS_CHESTPLATE.get());
                         output.accept(HnSItems.ATLAS_LEGGINGS.get());
                         output.accept(HnSItems.ATLAS_BOOTS.get());
-                        // Calamitas
-                        output.accept(HnSItems.CALAMITAS_HELMET.get());
-                        output.accept(HnSItems.CALAMITAS_CHESTPLATE.get());
-                        output.accept(HnSItems.CALAMITAS_LEGGINGS.get());
-                        output.accept(HnSItems.CALAMITAS_BOOTS.get());
+
                         // Maverick
                         output.accept(HnSItems.MAVERICK_HELMET.get());
                         output.accept(HnSItems.MAVERICK_CHESTPLATE.get());
                         output.accept(HnSItems.MAVERICK_LEGGINGS.get());
                         output.accept(HnSItems.MAVERICK_BOOTS.get());
+
                         // SLC!Cat
                         output.accept(HnSItems.SLC_CAT_HELMET.get());
                         output.accept(HnSItems.SLC_CAT_CHESTPLATE.get());
                         output.accept(HnSItems.SLC_CAT_LEGGINGS.get());
                         output.accept(HnSItems.SLC_CAT_BOOTS.get());
+
+                        // Abberant Predator
+                        output.accept(HnSItems.ABBERANT_PREDATOR_HELMET.get());
+                        output.accept(HnSItems.ABBERANT_PREDATOR_CHESTPLATE.get());
+                        output.accept(HnSItems.ABBERANT_PREDATOR_LEGGINGS.get());
+                        output.accept(HnSItems.ABBERANT_PREDATOR_BOOTS.get());
+
+                        // Iron 431
+                        output.accept(HnSItems.IRON431_HELMET.get());
+                        output.accept(HnSItems.IRON431_CHESTPLATE.get());
+                        output.accept(HnSItems.IRON431_LEGGINGS.get());
+                        output.accept(HnSItems.IRON431_BOOTS.get());
+
+                        // Ascended Iron 431
+                        output.accept(HnSItems.ASCENDED_IRON431_HELMET.get());
+                        output.accept(HnSItems.ASCENDED_IRON431_CHESTPLATE.get());
+                        output.accept(HnSItems.ASCENDED_IRON431_LEGGINGS.get());
+                        output.accept(HnSItems.ASCENDED_IRON431_BOOTS.get());
+
+                        // Sacred Robes
+                        output.accept(HnSItems.SACRED_ROBES_HELMET.get());
+                        output.accept(HnSItems.SACRED_ROBES_CHESTPLATE.get());
+                        output.accept(HnSItems.SACRED_ROBES_LEGGINGS.get());
+                        output.accept(HnSItems.SACRED_ROBES_BOOTS.get());
+
+                        // Ascended Sacred Robes
+                        output.accept(HnSItems.ASCENDED_SACRED_ROBES_HELMET.get());
+                        output.accept(HnSItems.ASCENDED_SACRED_ROBES_CHESTPLATE.get());
+                        output.accept(HnSItems.ASCENDED_SACRED_ROBES_LEGGINGS.get());
+                        output.accept(HnSItems.ASCENDED_SACRED_ROBES_BOOTS.get());
+
+                        // Lemon God
+                        output.accept(HnSItems.LEMON_GOD_HELMET.get());
+                        output.accept(HnSItems.LEMON_GOD_CHESTPLATE.get());
+                        output.accept(HnSItems.LEMON_GOD_LEGGINGS.get());
+                        output.accept(HnSItems.LEMON_GOD_BOOTS.get());
+
+                        // Lemon God
+                        output.accept(HnSItems.ASCENDED_LEMON_GOD_HELMET.get());
+                        output.accept(HnSItems.ASCENDED_LEMON_GOD_CHESTPLATE.get());
+                        output.accept(HnSItems.ASCENDED_LEMON_GOD_LEGGINGS.get());
+                        output.accept(HnSItems.ASCENDED_LEMON_GOD_BOOTS.get());
+
                     }).build());
 
     public static final Supplier<CreativeModeTab> HAZEN_N_STUFF_UTILITY = CREATIVE_MODE_TAB.register("hazennstuff_utility",
@@ -215,30 +529,133 @@ public class HnSCreativeModeTabs {
                     .title(Component.translatable("creativetab.hazennstuff.hazennstuff_utility"))
                     .displayItems((itemDisplayParameters, output) -> {
 
-                        //Weapons
+                        /*
+                        *** Weapons
+                         */
+
+
+                        //Fire
 
 
                         //Fireblossom Rapier
                         output.accept(HnSItems.FIREBLOSSOM_RAPIER.get());
-                        //Beongae
-                        output.accept(HnSItems.BEONGAE.get());
-                        //Ancient Warriors Axe
-                        output.accept(HnSItems.ANCIENT_WARRIORS_AXE.get());
+                        //Fire Brand
+                        output.accept(HnSItems.FIREBRAND.get());
+                        //Fire Brand
+                        output.accept(HnSItems.DRACONIC_SPLITTER.get());
+
+
+                        //Ice
+
+
                         //Ice Pike
                         output.accept(HnSItems.ICE_PIKE.get());
+                        //Ice Pike
+                        output.accept(HnSItems.FROSTBURN_DAGGER.get());
+
+
+                        //Lightning
+
+
+                        //Beongae
+                        output.accept(HnSItems.BEONGAE.get());
                         //Skyscorcher
                         output.accept(HnSItems.SKYSCORCHER.get());
+
+
+                        //Nature
+
+
                         //Bountiful Harvest
                         output.accept(HnSItems.BOUNTIFUL_HARVEST.get());
-                        //Hammer of Justince
-                        output.accept(HnSItems.HAMMER_OF_JUSTICE.get());
-                        //Lights Bane
-                        output.accept(HnSItems.LIGHTS_BANE.get());
+                        //Bountiful Harvest
+                        output.accept(HnSItems.THORN_CHAKRAM.get());
+
+
+                        //Blood
+
+
                         //Vampire Knives
                         output.accept(HnSItems.VAMPIRE_KNIVES.get());
 
 
-                        //Staves
+                        //Ender
+
+
+                        //Vampire Knives
+                        output.accept(HnSItems.OBSIDIAN_CLAYMORE.get());
+                        //Vampire Knives
+                        output.accept(HnSItems.STARFURY.get());
+
+
+                        //Holy
+
+
+                        //Hammer of Justice
+                        output.accept(HnSItems.HAMMER_OF_JUSTICE.get());
+                        //Excalibur
+                        output.accept(HnSItems.EXCALIBUR.get());
+                        //Excalibur Divine Gold
+                        output.accept(HnSItems.ISS_EXCALIBUR.get());
+                        //Hazen's Excalibur
+                        output.accept(HnSItems.HAZENS_EXCALIBUR.get());
+                        //Divine Greatsword
+                        output.accept(HnSItems.DIVINE_GREATSWORD.get());
+
+
+                        //Radiance
+
+
+                        //Hammush
+                        output.accept(HnSItems.HAMMUSH.get());
+                        //Meowmere
+                        output.accept(HnSItems.MEOWMERE.get());
+                        //Spectrum
+                        output.accept(HnSItems.SPECTRUM.get());
+
+
+                        //Evocation
+
+
+                        //Ancient Warriors Axe
+                        output.accept(HnSItems.ANCIENT_WARRIORS_AXE.get());
+                        //Malice
+                        output.accept(HnSItems.MALICE.get());
+
+
+                        //Shadow
+
+
+                        //Lights Bane
+                        output.accept(HnSItems.LIGHTS_BANE.get());
+                        //Nights Edge
+                        output.accept(HnSItems.NIGHTS_EDGE.get());
+                        //True Nights Edge
+                        output.accept(HnSItems.TRUE_NIGHTS_EDGE.get());
+
+
+                        //Eldritch
+
+
+                        //The Devourer
+                        output.accept(HnSItems.THE_DEVOURER.get());
+
+
+                        //Misc
+
+
+                        //Mage Bane
+                        output.accept(HnSItems.MAGE_BANE.get());
+
+
+
+
+                        /*
+                        ***Staves
+                         */
+
+
+
 
                         //Wisewood Cane
                         output.accept(HnSItems.WISEWOOD_CANE.get());
@@ -248,11 +665,30 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.ROD_OF_DISCORD.get());
 
 
-                        //Curios
+                        /*
+                        ***Curios
+                         */
+
+
+
+                        //Mana Crystals
                         output.accept(HnSItems.RUPTURED.get());
                         output.accept(HnSItems.REFINED.get());
                         output.accept(HnSItems.REINFORCED.get());
                         output.accept(HnSItems.RADIANCE.get());
+
+                        //Life Crystals
+
+
+                        //Soul Crystals
+
+
+                        //Epitome
+
+
+                        //Misc
+
+
 
 
                     }).build());
@@ -262,43 +698,74 @@ public class HnSCreativeModeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "hazennstuff_utility"))
                     .title(Component.translatable("creativetab.hazennstuff.hazennstuff_geckolib"))
                     .displayItems((itemDisplayParameters, output) -> {
+
+
                         output.accept(HnSItems.GECKOLIB_ARBITRIUM_ROBES_HELMET.get());
                         output.accept(HnSItems.GECKOLIB_ARBITRIUM_ROBES_CHESTPLATE.get());
                         output.accept(HnSItems.GECKOLIB_ARBITRIUM_ROBES_LEGGINGS.get());
                         output.accept(HnSItems.GECKOLIB_ARBITRIUM_ROBES_BOOTS.get());
-                        output.accept(HnSItems.GECKOLIB_CHARGED_SCOURGE_HELMET.get());
-                        output.accept(HnSItems.GECKOLIB_CHARGED_SCOURGE_CHESTPLATE.get());
-                        output.accept(HnSItems.GECKOLIB_CHARGED_SCOURGE_LEGGINGS.get());
-                        output.accept(HnSItems.GECKOLIB_CHARGED_SCOURGE_BOOTS.get());
+
+                        output.accept(HnSItems.GECKOLIB_ASCENDED_ARBITRIUM_ROBES_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_ASCENDED_ARBITRIUM_ROBES_BOOTS.get());
+
                         output.accept(HnSItems.GECKOLIB_CREAKING_HELMET.get());
                         output.accept(HnSItems.GECKOLIB_CREAKING_CHESTPLATE.get());
                         output.accept(HnSItems.GECKOLIB_CREAKING_LEGGINGS.get());
                         output.accept(HnSItems.GECKOLIB_CREAKING_BOOTS.get());
+
                         output.accept(HnSItems.GECKOLIB_DARK_RITUAL_TEMPLAR_HELMET.get());
                         output.accept(HnSItems.GECKOLIB_DARK_RITUAL_TEMPLAR_CHESTPLATE.get());
                         output.accept(HnSItems.GECKOLIB_DARK_RITUAL_TEMPLAR_LEGGINGS.get());
                         output.accept(HnSItems.GECKOLIB_DARK_RITUAL_TEMPLAR_BOOTS.get());
+
                         output.accept(HnSItems.GECKOLIB_ENDER_DRAGON_HELMET.get());
                         output.accept(HnSItems.GECKOLIB_ENDER_DRAGON_CHESTPLATE.get());
                         output.accept(HnSItems.GECKOLIB_ENDER_DRAGON_LEGGINGS.get());
                         output.accept(HnSItems.GECKOLIB_ENDER_DRAGON_BOOTS.get());
+
                         output.accept(HnSItems.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN.get());
                         output.accept(HnSItems.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get());
                         output.accept(HnSItems.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get());
                         output.accept(HnSItems.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get());
                         output.accept(HnSItems.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
+
                         output.accept(HnSItems.GECKOLIB_SERAPH_HELMET.get());
                         output.accept(HnSItems.GECKOLIB_SERAPH_CHESTPLATE.get());
                         output.accept(HnSItems.GECKOLIB_SERAPH_LEGGINGS.get());
                         output.accept(HnSItems.GECKOLIB_SERAPH_BOOTS.get());
+
                         output.accept(HnSItems.GECKOLIB_SOUL_FLAME_HELMET.get());
                         output.accept(HnSItems.GECKOLIB_SOUL_FLAME_CHESTPLATE.get());
                         output.accept(HnSItems.GECKOLIB_SOUL_FLAME_LEGGINGS.get());
                         output.accept(HnSItems.GECKOLIB_SOUL_FLAME_BOOTS.get());
+
                         output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_HELMET.get());
                         output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_CHESTPLATE.get());
                         output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_LEGGINGS.get());
                         output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_BOOTS.get());
+
+                        output.accept(HnSItems.GECKOLIB_LEMON_GOD_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_LEMON_GOD_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_LEMON_GOD_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_LEMON_GOD_BOOTS.get());
+
+                        output.accept(HnSItems.GECKOLIB_ASCENDED_LEMON_GOD_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_ASCENDED_LEMON_GOD_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_ASCENDED_LEMON_GOD_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_ASCENDED_LEMON_GOD_BOOTS.get());
+
+                        output.accept(HnSItems.GECKOLIB_THE_WITHER_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_THE_WITHER_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_THE_WITHER_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_THE_WITHER_BOOTS.get());
+
+                        output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_BOOTS.get());
+
                     }).build());
 
 

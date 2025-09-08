@@ -13,7 +13,7 @@ public class GeckolibDarkRitualTemplarArmorModel extends DefaultedEntityGeoModel
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(GeckolibDarkRitualTemplarArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/dark_ritual_templar_armor_geckolib.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/dark_ritual_templar_armor.geo.json");
     }
 
     @Override

@@ -23,12 +23,12 @@ import net.minecraft.world.item.ItemStack;
 public class BlazeborneArmorRenderer extends AzArmorRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/armor/seraph_armor.geo.json"
+            "geo/armor/blazeborne_armor.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/armor/seraph_armor.png"
+            "textures/armor/blazeborne_armor_animated.png"
     );
 
     public BlazeborneArmorRenderer() {

@@ -6,12 +6,9 @@ import io.redspace.ironsspellbooks.api.magic.SpellSelectionManager;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
-import io.redspace.ironsspellbooks.particle.FlameStrikeParticleOptions;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
-import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.entity.spells.dark.nights_edge_strike.NightsEdgeStrike;
 import net.hazen.hazennstuff.registries.HnSSchoolRegistry;
@@ -46,7 +43,7 @@ public class NightsEdgeStrikeSpell extends AbstractSpell {
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.COMMON)
-            .setSchoolResource(HnSSchoolRegistry.DARK_RESOURCE)
+            .setSchoolResource(HnSSchoolRegistry.SHADOW_RESOURCE)
             .setMaxLevel(5)
             .setCooldownSeconds(15)
             .build();

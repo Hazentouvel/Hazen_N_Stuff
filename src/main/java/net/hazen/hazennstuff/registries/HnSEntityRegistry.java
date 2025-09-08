@@ -2,7 +2,6 @@ package net.hazen.hazennstuff.registries;
 
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife.LifestealKnife;
-import net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife.LifestealKnifeModel;
 import net.hazen.hazennstuff.entity.spells.dark.nights_edge_strike.NightsEdgeStrike;
 import net.hazen.hazennstuff.entity.spells.fire.brimstone_hellblast.BrimstoneHellblast;
 import net.hazen.hazennstuff.entity.spells.lightning.spark.Spark;
@@ -56,7 +55,8 @@ public class HnSEntityRegistry {
             ENTITIES.register("nights_edge_strike", () -> EntityType.Builder.<NightsEdgeStrike>of(NightsEdgeStrike::new, MobCategory.MISC)
                     .sized(8f, 1f)
                     .clientTrackingRange(64)
-                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "overwhelm").toString()));
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "nights_edge_strike").toString()));
+
 
 
 

@@ -87,8 +87,6 @@ public class HazenNStuff
         HnSAttributeRegistry.register(modEventBus);
         HnSSchoolRegistry.register(modEventBus);
 
-        modEventBus.addListener(this::addCreative);
-
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
@@ -105,9 +103,6 @@ public class HazenNStuff
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-    }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
@@ -304,14 +299,6 @@ public class HazenNStuff
                     HnSItems.HAMMER_OF_JUSTICE.get()
 
             );
-        }
-    }
-
-    {
-        {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
     }
 

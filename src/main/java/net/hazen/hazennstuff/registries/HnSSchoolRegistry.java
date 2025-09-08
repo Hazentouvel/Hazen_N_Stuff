@@ -44,7 +44,7 @@ public class HnSSchoolRegistry {
     public static final Supplier<SchoolType> SHADOW = registerSchool(new SchoolType
             (
                     SHADOW_RESOURCE,
-                    HnSTags.DARK_FOCUS,
+                    HnSTags.SHADOW_FOCUS,
                     Component.translatable("school.hazennstuff.shadow").withStyle(Style.EMPTY.withColor(0x553a7f)),
                     HnSAttributeRegistry.SHADOW_MAGIC_POWER,
                     HnSAttributeRegistry.SHADOW_MAGIC_RESIST,

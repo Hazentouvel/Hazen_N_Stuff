@@ -127,8 +127,8 @@ public class GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem extends Imbuab
             ItemStack mainHand = caster.getMainHandItem();
             ItemStack offHand = caster.getOffhandItem();
 
-            boolean wearingSoulArmor = mainHand.getItem() instanceof VampireKnivesItem ||
-                    offHand.getItem() instanceof VampireKnivesItem;
+            boolean wearingSoulArmor = mainHand.getItem() instanceof GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem ||
+                    offHand.getItem() instanceof GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem;
 
             if (wearingSoulArmor) {
                 event.addLevels(2);

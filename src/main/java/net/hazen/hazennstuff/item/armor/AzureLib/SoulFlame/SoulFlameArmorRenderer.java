@@ -29,7 +29,7 @@ public class SoulFlameArmorRenderer extends AzArmorRenderer {
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/armor/soul_flame_armor.png"
+            "textures/armor/soul_flame_armor_animated.png"
     );
 
     public SoulFlameArmorRenderer() {

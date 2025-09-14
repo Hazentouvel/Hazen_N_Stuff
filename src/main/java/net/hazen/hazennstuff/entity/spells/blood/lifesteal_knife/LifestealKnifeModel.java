@@ -1,7 +1,6 @@
 package net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife;
 
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.entity.spells.luminescent.syringe.Syringe;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.GeoModel;
 

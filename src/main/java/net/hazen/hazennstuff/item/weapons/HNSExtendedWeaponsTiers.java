@@ -216,7 +216,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HNSExtendedWeaponsTiers THORN_CHAKRAM = new HNSExtendedWeaponsTiers(
             8064,
             7,
-            -3.0F,
+            1.2F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -414,6 +414,20 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.SPELL_RESIST, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(Attributes.ATTACK_SPEED, -3, AttributeModifier.Operation.ADD_VALUE),
+            new AttributeContainer(ASAttributeRegistry.MANA_REND, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ASAttributeRegistry.SPELL_RES_PENETRATION, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
+    public static HNSExtendedWeaponsTiers LEGIONNAIRE_WARLOCK_AXE = new HNSExtendedWeaponsTiers(
+            8064,
+            11,
+            -3F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(Attributes.ATTACK_SPEED, -0.3, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(AttributeRegistry.SPELL_RESIST, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ASAttributeRegistry.MANA_REND, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ASAttributeRegistry.SPELL_RES_PENETRATION, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );

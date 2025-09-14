@@ -52,19 +52,16 @@ public class ArbitriumRobesArmorItem extends ImbuableHnSArmorItem implements IDi
         player.getArmorSlots().forEach(wornArmor -> {
             if (wornArmor != null && wornArmor.getItem() instanceof ArbitriumRobesArmorItem) {
                 if (isFlying) {
-                    dispatcher.flight(player, wornArmor);  // Play flight animation
+                    dispatcher.flight(player, wornArmor);
                 } else {
-                    dispatcher.idle(player, wornArmor);   // Play idle animation
+                    dispatcher.idle(player, wornArmor);
                 }
             }
         });
-
-        // Armor effect logic
         if (isWearingFullSet(player) && !player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
             player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
         }
     }
-
     private void evaluateArmorEffects(Player player) {
         if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
             player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
@@ -78,25 +75,6 @@ public class ArbitriumRobesArmorItem extends ImbuableHnSArmorItem implements IDi
                 player.getItemBySlot(ArmorItem.Type.BOOTS.getSlot()).getItem() instanceof ArbitriumRobesArmorItem;
     }
 
-    //@Override
-    //public boolean elytraFlightTick(ItemStack stack, LivingEntity entity, int flightTicks) {
-        //if (!entity.level().isClientSide && entity instanceof Player player )
-        //{
-                //player.getArmorSlots().forEach(wornArmor -> {
-                    // Doing this through tags rather than listing everything in an or condition
-                    //if (wornArmor != null && wornArmor.is(HnSTags.ARMORS_FOR_IDLE)) {
-                        //dispatcher.idle(player, wornArmor);
-                    //}
-                    //if (wornArmor != null && wornArmor.is(HnSTags.ARMORS_FOR_FLIGHT) && player.isFallFlying()) {
-                        //dispatcher.flight(player, wornArmor);
-                    //}
-                //});
-       // }
-       // return true;
-    //}
-
-    //   if (!level.isClientSide && entity instanceof Player player ) {
-
     @Override
     public boolean canElytraFly(ItemStack stack, LivingEntity entity) {
         return true;
@@ -104,6 +82,6 @@ public class ArbitriumRobesArmorItem extends ImbuableHnSArmorItem implements IDi
 
     @Override
     public boolean elytraFlightTick(ItemStack stack, LivingEntity entity, int flightTicks) {
-        return true; // Needed to allow flight ticking
+        return true;
     }
 }

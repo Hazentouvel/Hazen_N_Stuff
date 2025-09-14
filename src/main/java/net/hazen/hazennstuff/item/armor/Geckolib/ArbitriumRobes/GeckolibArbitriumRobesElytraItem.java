@@ -51,7 +51,7 @@ public class GeckolibArbitriumRobesElytraItem extends ImbuableChestplateArmorIte
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new GeckolibArbitriumRobesArmorModel());
+        return new GenericCustomArmorRenderer<>(new GeckolibArbitriumRobesElytraModel());
     }
 
     @Override

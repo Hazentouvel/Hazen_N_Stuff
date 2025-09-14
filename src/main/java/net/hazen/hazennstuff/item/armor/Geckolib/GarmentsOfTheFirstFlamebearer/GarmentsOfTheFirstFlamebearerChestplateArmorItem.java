@@ -118,7 +118,6 @@ public class GarmentsOfTheFirstFlamebearerChestplateArmorItem extends ImbuableGe
             LivingEntity caster = event.getEntity();
             if (caster == null) return;
 
-            // 🔍 Only modify a specific spell (e.g., Magic Missile)
             if (event.getSpell() != SpellRegistry.RAISE_HELL_SPELL.get()) {
                 return;
             }
@@ -126,8 +125,8 @@ public class GarmentsOfTheFirstFlamebearerChestplateArmorItem extends ImbuableGe
             ItemStack mainHand = caster.getMainHandItem();
             ItemStack offHand = caster.getOffhandItem();
 
-            boolean wearingSoulArmor = mainHand.getItem() instanceof VampireKnivesItem ||
-                    offHand.getItem() instanceof VampireKnivesItem;
+            boolean wearingSoulArmor = mainHand.getItem() instanceof GarmentsOfTheFirstFlamebearerChestplateArmorItem ||
+                    offHand.getItem() instanceof GarmentsOfTheFirstFlamebearerChestplateArmorItem;
 
             if (wearingSoulArmor) {
                 event.addLevels(2);

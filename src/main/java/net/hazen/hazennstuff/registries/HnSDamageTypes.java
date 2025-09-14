@@ -16,12 +16,20 @@ public class HnSDamageTypes {
         );
     }
 
-    public static final ResourceKey<DamageType> RADIANCE_MAGIC = register("radiance");
-    public static final ResourceKey<DamageType> SHADOW_MAGIC = register("shadow");
+    public static final ResourceKey<DamageType> RADIANCE_MAGIC = register("radiance_magic");
+    public static final ResourceKey<DamageType> SHADOW_MAGIC = register("shadow_magic");
+
+    public static final ResourceKey<DamageType> ICE_CLOUD = register("ice_cloud");
+
+    public static final ResourceKey<DamageType> SPORES = register("spores");
 
     public static void bootstrap(BootstrapContext<DamageType> context)
     {
         context.register(RADIANCE_MAGIC, new DamageType(RADIANCE_MAGIC.location().getPath(), DamageScaling.WHEN_CAUSED_BY_LIVING_NON_PLAYER, 0F));
         context.register(SHADOW_MAGIC, new DamageType(SHADOW_MAGIC.location().getPath(), DamageScaling.WHEN_CAUSED_BY_LIVING_NON_PLAYER, 0F));
+
+        context.register(ICE_CLOUD, new DamageType(ICE_CLOUD.location().getPath(), DamageScaling.WHEN_CAUSED_BY_LIVING_NON_PLAYER, 0f));
+
+        context.register(SPORES, new DamageType(SPORES.location().getPath(), DamageScaling.WHEN_CAUSED_BY_LIVING_NON_PLAYER, 0f));
     }
 }

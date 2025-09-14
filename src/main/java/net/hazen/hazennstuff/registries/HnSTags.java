@@ -26,6 +26,36 @@ public class HnSTags {
     public static final TagKey<Item> ZENALITE = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ores/zenalite").toString()));
 
+    //Armor
+    public static final TagKey<Item> SCHOOL_HELMET = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armor/school_armor/school_helmet").toString()));
+    public static final TagKey<Item> SCHOOL_CHESTPLATE = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armor/school_armor/school_helmet").toString()));
+    public static final TagKey<Item> SCHOOL_LEGGINGS = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armor/school_armor/school_helmet").toString()));
+    public static final TagKey<Item> SCHOOL_BOOTS = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armor/school_armor/school_helmet").toString()));
+
+
+    public static final TagKey<Item> NETHERITE_BATTLEMAGE_HELMET = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armor/netherite_battlemage/netherite_battlemage_helmet").toString()));
+    public static final TagKey<Item> NETHERITE_BATTLEMAGE_CHESTPLATE = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armor/netherite_battlemage/netherite_battlemage_chestplate").toString()));
+    public static final TagKey<Item> NETHERITE_BATTLEMAGE_LEGGINGS = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armor/netherite_battlemage/netherite_battlemage_leggings").toString()));
+    public static final TagKey<Item> NETHERITE_BATTLEMAGE_BOOTS = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armor/netherite_battlemage/netherite_battlemage_boots").toString()));
+
+
+    public static final TagKey<Item> PURE_HELMET = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armor/pure_armor/pure_helmet").toString()));
+    public static final TagKey<Item> PURE_CHESTPLATE = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armor/pure_armor/pure_chestplate").toString()));
+    public static final TagKey<Item> PURE_LEGGINGS = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armor/pure_armor/pure_leggings").toString()));
+    public static final TagKey<Item> PURE_BOOTS = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armor/pure_armor/pure_boots").toString()));
+
 
 
     public static class Blocks {

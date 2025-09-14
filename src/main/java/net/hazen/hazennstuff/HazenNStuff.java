@@ -5,15 +5,14 @@ import mod.azure.azurelib.rewrite.render.armor.AzArmorRendererRegistry;
 import mod.azure.azurelib.rewrite.render.item.AzItemRendererRegistry;
 import net.hazen.hazennstuff.compat.*;
 import net.hazen.hazennstuff.item.armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.Blazeborne.BlazeborneArmorItem;
 import net.hazen.hazennstuff.item.armor.AzureLib.Blazeborne.BlazeborneArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.CreakingSorcerer.CreakingSorcererArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.DarkRitualTemplar.DarkRitualTemplarArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.EnderDragon.EnderDragonArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageCrownedArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageHelmetArmorRenderer;
+import net.hazen.hazennstuff.item.armor.AzureLib.GabrielULTRAKILL.GabrielArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.Infestation.InfestationArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.LemonGod.Ascended.AscendedLemonGodArmorItem;
 import net.hazen.hazennstuff.item.armor.AzureLib.LemonGod.Ascended.AscendedLemonGodArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.LemonGod.LemonGodArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SLCCat.SLCCatArmorRenderer;
@@ -30,7 +29,6 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
@@ -45,7 +43,6 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -80,10 +77,11 @@ public class HazenNStuff
         HnSArmorMaterials.register(modEventBus);
 
         HnSEffects.register(modEventBus);
+        HnSParticleRegistry.register(modEventBus);
         HnSSounds.register(modEventBus);
         HnSEntityRegistry.register(modEventBus);
 
-        SpellRegistries.register(modEventBus);
+        HnSSpellRegistries.register(modEventBus);
         HnSAttributeRegistry.register(modEventBus);
         HnSSchoolRegistry.register(modEventBus);
 
@@ -209,7 +207,7 @@ public class HazenNStuff
                     HnSItems.LEMON_GOD_LEGGINGS.get(),
                     HnSItems.LEMON_GOD_BOOTS.get());
 
-            //
+            // Ascended Lemon God
             AzArmorRendererRegistry.register(AscendedLemonGodArmorRenderer::new,
                     HnSItems.ASCENDED_LEMON_GOD_HELMET.get(),
                     HnSItems.ASCENDED_LEMON_GOD_CHESTPLATE.get(),
@@ -222,6 +220,21 @@ public class HazenNStuff
                     HnSItems.THE_WITHER_CHESTPLATE.get(),
                     HnSItems.THE_WITHER_LEGGINGS.get(),
                     HnSItems.THE_WITHER_BOOTS.get());
+
+            // Ascended Arbitrium Robes
+            AzArmorRendererRegistry.register(ArbitriumRobesArmorRenderer::new,
+                    HnSItems.ASCENDED_ARBITRIUM_ROBES_HELMET.get(),
+                    HnSItems.ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get(),
+                    HnSItems.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get(),
+                    HnSItems.ASCENDED_ARBITRIUM_ROBES_BOOTS.get());
+
+            // Gabriel Ultrakill
+            AzArmorRendererRegistry.register(GabrielArmorRenderer::new,
+                    HnSItems.GABRIEL_ULTRAKILL_HELMET.get(),
+                    HnSItems.GABRIEL_ULTRAKILL_CHESTPLATE.get(),
+                    HnSItems.GABRIEL_ULTRAKILL_LEGGINGS.get(),
+                    HnSItems.GABRIEL_ULTRAKILL_BOOTS.get());
+
 
 
             // Item Rendering Registry

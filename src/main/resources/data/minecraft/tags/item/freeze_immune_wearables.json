@@ -4,10 +4,6 @@
     "hazennstuff:cryogenic_ruler_helmet",
     "hazennstuff:cryogenic_ruler_chestplate",
     "hazennstuff:cryogenic_ruler_leggings",
-    "hazennstuff:cryogenic_ruler_boots",
-    "hazennstuff:geckolib_cryogenic_ruler_helmet",
-    "hazennstuff:geckolib_cryogenic_ruler_chestplate",
-    "hazennstuff:geckolib_cryogenic_ruler_leggings",
-    "hazennstuff:geckolib_cryogenic_ruler_boots"
+    "hazennstuff:cryogenic_ruler_boots"
   ]
 }

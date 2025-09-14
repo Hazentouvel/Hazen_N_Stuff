@@ -6,6 +6,7 @@ import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
+import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.spells.ender.TeleportSpell;
 import net.hazen.hazennstuff.HazenNStuff;
@@ -124,8 +125,7 @@ public class CinderousStepSpell extends AbstractSpell {
         entity.resetFallDistance();
         level.playSound(null, dest.x, dest.y, dest.z, getCastFinishSound().get(), SoundSource.NEUTRAL, 1f, 1f);
 
-        entity.addEffect(new MobEffectInstance(HnSEffects.FLAME_KISSED, 100, 0, false, false, true));
-
+        entity.addEffect(new MobEffectInstance(HnSEffects.FLAME_KISSED, (int)(this.getSpellPower(spellLevel, entity) * 20.0F), spellLevel - 1, false, false, true));
 
         super.onCast(level, spellLevel, entity, castSource, playerMagicData);
     }

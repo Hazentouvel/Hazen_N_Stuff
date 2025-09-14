@@ -79,6 +79,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .define('T', HnSItems.ZENALITE_INGOT.get())
                     .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "recipe/crafting/tungsten_block"));
 
+
+        //Armor Upgrading  Recipes -----------------------------------------------------------------------------------------------------------------------------------+
+
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItems.CREAKING_HELMET.get())
+                    .pattern("TTT")
+                    .pattern("TPT")
+                    .pattern("")
+                    .define('T', HnSItems.ZENALITE_INGOT.get())
+                    .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "recipe/crafting/tungsten_block"));
+
         //Holy Priest Armor
 //        SmithingTransformRecipeBuilder.smithing(Ingredient.of(HnSItems.RUNESTONE_FRAGMENTS.get()),
 //                Ingredient.of(ItemRegistry.WIZARD_HELMET.get()),
@@ -112,7 +122,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //Shapeless recipes -------------------------------------------------------------------------------------------------------------------------------------------+
 
 //        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItems.ZENALITE_INGOT.get(), 9)
-//                .requires(HnSItems.HnSBlocks.TUNGSTENBLOCK)
+//                .requires(HnSItems.HnSBlocks.ZENALITE_BLOCK)
 //                .unlockedBy("has_tungsten_block",
 //                has(HnSItems.HnSBlocks.TUNGSTENBLOCK))
 

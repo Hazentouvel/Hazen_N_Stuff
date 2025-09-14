@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "irons_spellbooks:cinder_essence",
-    "hazennstuff:charred_bones",
-    "minecraft:ender_eye"
+    "hazennstuff:charred_bones"
   ]
 }

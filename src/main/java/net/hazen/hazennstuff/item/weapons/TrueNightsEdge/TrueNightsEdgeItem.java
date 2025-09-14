@@ -5,9 +5,8 @@ import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.item.weapons.NightsEdge.NightsEdgeRenderer;
 import net.hazen.hazennstuff.rarity.ShadowRarity;
-import net.hazen.hazennstuff.registries.SpellRegistries;
+import net.hazen.hazennstuff.registries.HnSSpellRegistries;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
@@ -30,7 +29,7 @@ public class TrueNightsEdgeItem extends MagicSwordItem implements GeoItem {
                         .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.TRUE_NIGHTS_EDGE)
                         ),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(SpellRegistries.NIGHTS_EDGE_STRIKE, 8)
+                        new SpellDataRegistryHolder(HnSSpellRegistries.NIGHTS_EDGE_STRIKE, 8)
                 )
         );
     }

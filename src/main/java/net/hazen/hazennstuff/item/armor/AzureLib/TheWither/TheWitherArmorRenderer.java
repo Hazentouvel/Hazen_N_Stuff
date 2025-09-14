@@ -29,7 +29,7 @@ public class TheWitherArmorRenderer extends AzArmorRenderer {
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/armor/the_wither_armor.png"
+            "textures/armor/the_wither_armor_azurelib.png"
     );
 
     public TheWitherArmorRenderer() {

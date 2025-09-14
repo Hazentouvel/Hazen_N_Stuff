@@ -218,6 +218,12 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.MOTHIC_WITCH_LEGGINGS.get());
                         output.accept(HnSItems.MOTHIC_WITCH_BOOTS.get());
 
+                        // Gabriel Ultrakill
+                        output.accept(HnSItems.GABRIEL_ULTRAKILL_HELMET.get());
+                        output.accept(HnSItems.GABRIEL_ULTRAKILL_CHESTPLATE.get());
+                        output.accept(HnSItems.GABRIEL_ULTRAKILL_LEGGINGS.get());
+                        output.accept(HnSItems.GABRIEL_ULTRAKILL_BOOTS.get());
+
                         /*
                         *** Evocation
                          */
@@ -292,6 +298,18 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.LEGIONNAIRE_CHESTPLATE.get());
                         output.accept(HnSItems.LEGIONNAIRE_LEGGINGS.get());
                         output.accept(HnSItems.LEGIONNAIRE_BOOTS.get());
+
+                        // Legionnaire Ruler
+                        output.accept(HnSItems.LEGIONNAIRE_RULER_HELMET.get());
+                        output.accept(HnSItems.LEGIONNAIRE_RULER_CHESTPLATE.get());
+                        output.accept(HnSItems.LEGIONNAIRE_RULER_LEGGINGS.get());
+                        output.accept(HnSItems.LEGIONNAIRE_RULER_BOOTS.get());
+
+                        // Legionnaire Ruler Soul
+                        output.accept(HnSItems.SOUL_LEGIONNAIRE_RULER_HELMET.get());
+                        output.accept(HnSItems.SOUL_LEGIONNAIRE_RULER_CHESTPLATE.get());
+                        output.accept(HnSItems.SOUL_LEGIONNAIRE_RULER_LEGGINGS.get());
+                        output.accept(HnSItems.SOUL_LEGIONNAIRE_RULER_BOOTS.get());
 
                         // Legionnaire Commander
                         output.accept(HnSItems.LEGIONNAIRE_COMMANDER_HELMET.get());
@@ -395,6 +413,12 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.FROSTBITE_KNIGHT_LEGGINGS.get());
                         output.accept(HnSItems.FROSTBITE_KNIGHT_BOOTS.get());
 
+                        // Frostbite Knight
+                        output.accept(HnSItems.DREADSTEEL_KNIGHT_HELMET.get());
+                        output.accept(HnSItems.DREADSTEEL_KNIGHT_CHESTPLATE.get());
+                        output.accept(HnSItems.DREADSTEEL_KNIGHT_LEGGINGS.get());
+                        output.accept(HnSItems.DREADSTEEL_KNIGHT_BOOTS.get());
+
 
 
                         /*
@@ -461,6 +485,11 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.ARBITRIUM_ROBES_LEGGINGS.get());
                         output.accept(HnSItems.ARBITRIUM_ROBES_BOOTS.get());
 
+                        output.accept(HnSItems.ASCENDED_ARBITRIUM_ROBES_HELMET.get());
+                        output.accept(HnSItems.ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get());
+                        output.accept(HnSItems.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get());
+                        output.accept(HnSItems.ASCENDED_ARBITRIUM_ROBES_BOOTS.get());
+
                         // Atlas
                         output.accept(HnSItems.ATLAS_HELMET.get());
                         output.accept(HnSItems.ATLAS_CHESTPLATE.get());
@@ -515,7 +544,7 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.LEMON_GOD_LEGGINGS.get());
                         output.accept(HnSItems.LEMON_GOD_BOOTS.get());
 
-                        // Lemon God
+                        // Ascended Lemon God
                         output.accept(HnSItems.ASCENDED_LEMON_GOD_HELMET.get());
                         output.accept(HnSItems.ASCENDED_LEMON_GOD_CHESTPLATE.get());
                         output.accept(HnSItems.ASCENDED_LEMON_GOD_LEGGINGS.get());
@@ -647,7 +676,8 @@ public class HnSCreativeModeTabs {
                         //Mage Bane
                         output.accept(HnSItems.MAGE_BANE.get());
 
-
+                        //Legionnaire Warlock Axe
+                        output.accept(HnSItems.LEGIONNAIRE_WARLOCK_AXE.get());
 
 
                         /*
@@ -765,6 +795,11 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_CHESTPLATE.get());
                         output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_LEGGINGS.get());
                         output.accept(HnSItems.GECKOLIB_SUPREME_WITCH_BOOTS.get());
+
+                        output.accept(HnSItems.GECKOLIB_GABRIEL_ULTRAKILL_HELMET.get());
+                        output.accept(HnSItems.GECKOLIB_GABRIEL_ULTRAKILL_CHESTPLATE.get());
+                        output.accept(HnSItems.GECKOLIB_GABRIEL_ULTRAKILL_LEGGINGS.get());
+                        output.accept(HnSItems.GECKOLIB_GABRIEL_ULTRAKILL_BOOTS.get());
 
                     }).build());
 

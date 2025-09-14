@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#hazennstuff:needs_mithril_tool",
     "hazennstuff:zenalite_block",
     "hazennstuff:pyrium_block",
     "hazennstuff:mithril_block",

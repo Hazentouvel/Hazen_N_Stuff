@@ -26,6 +26,6 @@ public class PyriumArmorItem extends ImbuableChestplateArmorItem {
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new UtauArmorModel());
+        return new GenericCustomArmorRenderer<>(new PyriumArmorModel());
     }
 }

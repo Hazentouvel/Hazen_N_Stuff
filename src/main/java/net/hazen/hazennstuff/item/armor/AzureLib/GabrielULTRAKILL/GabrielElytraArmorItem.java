@@ -4,6 +4,7 @@ import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
+import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.compat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorItem;
@@ -12,6 +13,7 @@ import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.item.armor.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.item.dispatcher.HnSArmorDispatcher;
 import net.hazen.hazennstuff.registries.HnSEffects;
+import net.hazen.hazennstuff.registries.HnSItems;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -50,34 +52,22 @@ public class GabrielElytraArmorItem extends ImbuableHnSArmorItem implements IDis
 
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
-        if (!(entity instanceof Player player) || level.isClientSide) return;
-
-        boolean isFlying = player.isFallFlying();
-
-        player.getArmorSlots().forEach(wornArmor -> {
-            if (wornArmor != null && wornArmor.getItem() instanceof GabrielElytraArmorItem) {
-                if (isFlying) {
-                    dispatcher.flight(player, wornArmor);
-                } else {
+        if (!level.isClientSide && entity instanceof Player player ) {
+            player.getArmorSlots().forEach(wornArmor -> {
+                if (wornArmor != null && wornArmor.is(HnSItems.GABRIEL_ULTRAKILL_HELMET)) {
                     dispatcher.idle(player, wornArmor);
                 }
-            }
-        });
-        if (isWearingFullSet(player) && !player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
+                if (wornArmor != null && wornArmor.is(HnSItems.GABRIEL_ULTRAKILL_CHESTPLATE)) {
+                    dispatcher.idle(player, wornArmor);
+                }
+                if (wornArmor != null && wornArmor.is(HnSItems.GABRIEL_ULTRAKILL_LEGGINGS)) {
+                    dispatcher.idle(player, wornArmor);
+                }
+                if (wornArmor != null && wornArmor.is(HnSItems.GABRIEL_ULTRAKILL_BOOTS)) {
+                    dispatcher.idle(player, wornArmor);
+                }
+            });
         }
-    }
-    private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
-        }
-    }
-
-    private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(ArmorItem.Type.HELMET.getSlot()).getItem() instanceof GabrielArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.CHESTPLATE.getSlot()).getItem() instanceof GabrielElytraArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.LEGGINGS.getSlot()).getItem() instanceof GabrielArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.BOOTS.getSlot()).getItem() instanceof GabrielArmorItem;
     }
 
     @Override

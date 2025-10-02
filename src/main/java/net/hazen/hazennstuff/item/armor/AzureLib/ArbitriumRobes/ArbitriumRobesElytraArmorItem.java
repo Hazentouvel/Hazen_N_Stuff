@@ -29,7 +29,7 @@ public class ArbitriumRobesElytraArmorItem extends ImbuableHnSArmorItem implemen
     public ArbitriumRobesElytraArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
                 new AttributeContainer(ALObjects.Attributes.ELYTRA_FLIGHT, 1, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.MAX_MANA, 500.0, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.MAX_MANA, 300.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .25, AttributeModifier.Operation.ADD_VALUE)
         );
         this.dispatcher = new HnSArmorDispatcher();

@@ -1,10 +1,8 @@
 package net.hazen.hazennstuff.item.armor.Geckolib.BountyHunter;
 
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
-import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
-import net.hazen.hazennstuff.item.armor.Geckolib.FrostbiteHunter.FrostbiteHunterArmorModel;
 import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.registries.HnSEffects;

@@ -1,10 +1,17 @@
 package net.hazen.hazennstuff.setup;
 
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.entity.mobs.ReignOfTyros.Aegis.AegisRenderer;
-import net.hazen.hazennstuff.entity.mobs.ReignOfTyros.Aptos.AptosRenderer;
-import net.hazen.hazennstuff.entity.mobs.ReignOfTyros.Pyromus.PyromusRenderer;
-import net.hazen.hazennstuff.entity.mobs.wizards.Electromancer.ElectromancerRenderer;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.BishopOfDeciet.BishopOfDeceitRenderer;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.Necromancers.NamelessOne.NamelessOneRenderer;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.Necromancers.Necromancer.NecromancerRenderer;
+import net.hazen.hazennstuff.entity.mobs.wizards.Good.Dryad.DryadRenderer;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.ReignOfTyros.Aegis.AegisRenderer;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.ReignOfTyros.Aptos.AptosRenderer;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.ReignOfTyros.Pyromus.PyromusRenderer;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.Electromancer.ElectromancerRenderer;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.PiglinPyromancer.PiglinPyromancerRenderer;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.ServantsOfEnder.ServantsOfEnderRenderer;
+import net.hazen.hazennstuff.entity.mobs.wizards.Good.TheRecluse.TheRecluseRenderer;
 import net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife.LifestealKnifeRenderer;
 import net.hazen.hazennstuff.entity.spells.shadow.nights_edge_strike.NightsEdgeStrikeRenderer;
 import net.hazen.hazennstuff.entity.spells.fire.brimstone_hellblast.BrimstoneHellblastRenderer;
@@ -51,6 +58,13 @@ public class ClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.APTOS.get(), AptosRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.PYROMUS.get(), PyromusRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.AEGIS.get(), AegisRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.THE_RECLUSE.get(), TheRecluseRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.PIGLIN_PYROMANCER.get(), PiglinPyromancerRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.SERVANT_OF_ENDER.get(), ServantsOfEnderRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.BISHOP_OF_DECEIT.get(), BishopOfDeceitRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.DRYAD.get(), DryadRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.NECROMANCER.get(), NecromancerRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.NAMELESS_ONE.get(), NamelessOneRenderer::new);
 
 
         /*

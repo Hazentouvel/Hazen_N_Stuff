@@ -2,7 +2,6 @@ package net.hazen.hazennstuff.item.weapons.ThornChakram;
 
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.item.weapons.bountiful_harvest.BountifulHarvestItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 

@@ -74,6 +74,25 @@ public class HnSSounds {
 
     public static DeferredHolder<SoundEvent, SoundEvent> VAMPIRE_KNIFE_HIT = registerSoundEvent("vampire_knife_hit");
 
+
+    //Terrablade Slash
+    public static DeferredHolder<SoundEvent, SoundEvent> TERRABLADE_SLASH = registerSoundEvent("terrablade_slash");
+
+
+    //Terraria Sword Sounds
+    public static DeferredHolder<SoundEvent, SoundEvent> TERRARIA_SWING = registerSoundEvent("terraria_swing");
+    public static DeferredHolder<SoundEvent, SoundEvent> TERRARIA_IMPACT = registerSoundEvent("terraria_impact");
+
+
+    //Star Cast
+    public static DeferredHolder<SoundEvent, SoundEvent> STAR_CAST_1 = registerSoundEvent("star_cast_1");
+    public static DeferredHolder<SoundEvent, SoundEvent> STAR_CAST_2 = registerSoundEvent("star_cast_2");
+
+    //Cat Sounds
+    public static DeferredHolder<SoundEvent, SoundEvent> CAT_SWING = registerSoundEvent("cat_swing");
+    public static DeferredHolder<SoundEvent, SoundEvent> CAT_CAST = registerSoundEvent("cat_cast");
+    public static DeferredHolder<SoundEvent, SoundEvent> CAT_IMPACT = registerSoundEvent("cat_impact");
+
     /***
      * Equip Sounds
      */

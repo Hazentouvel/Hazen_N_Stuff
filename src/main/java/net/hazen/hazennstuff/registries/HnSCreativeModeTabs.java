@@ -1,6 +1,7 @@
 package net.hazen.hazennstuff.registries;
 
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.block.HnSBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -11,8 +12,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-import static net.hazen.hazennstuff.registries.HnSItems.GECKOLIB_ARBITRIUM_ROBES_HELMET;
-
 public class HnSCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, HazenNStuff.MOD_ID);
@@ -22,76 +21,168 @@ public class HnSCreativeModeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "hazennstuff_blocks"))
                     .title(Component.translatable("creativetab.hazennstuff.hazennstuff_materials"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(HnSItems.ZENALITE_INGOT);
+
+                        //Raw Materials
                         output.accept(HnSItems.RAW_ZENALITE);
                         output.accept(HnSItems.STARKISSED_ZENALITE);
-                        output.accept(HnSItems.DIVINE_MOLD);
+                        output.accept(HnSItems.DREADSTONE);
+                        output.accept(HnSItems.CRUDE_METAL);
+                        output.accept(HnSItems.CHLOROPHYTE_CHUNK);
+
+                        //Ingots/Crystals/Gems
+                        output.accept(HnSItems.ROSE_QUARTZ);
+                        output.accept(HnSItems.ROSE_GOLD_INGOT);
+                        output.accept(HnSItems.ZENALITE_INGOT);
+                        output.accept(HnSItems.DREADSTEEL_INGOT);
+                        output.accept(HnSItems.SOLAR_CORE);
                         output.accept(HnSItems.SILVER_SCRAPS);
-                        output.accept(HnSItems.EXCALIBUR_FRAGMENT);
+                        output.accept(HnSItems.CHLOROPHYTE_INGOT);
+                        output.accept(HnSItems.HALLOWED_INGOT);
+
+                        //Nuggets
+                        output.accept(HnSItems.PYRIUM_NUGGET);
+                        output.accept(HnSItems.STEEL_NUGGET);
+
+                        //Templates/Molds
+                        output.accept(HnSItems.DIVINE_MOLD);
                         output.accept(HnSItems.FLAMING_TEMPLATE);
-                        output.accept(HnSItems.DEUS_ESSENCE);
+
+                        //Fragments
                         output.accept(HnSItems.RUNESTONE_FRAGMENTS);
                         output.accept(HnSItems.PERMAFROST_FRAGMENT);
+                        output.accept(HnSItems.EXCALIBUR_FRAGMENT);
+
+                        //Bones
                         output.accept(HnSItems.OVERGROWN_BONE);
                         output.accept(HnSItems.CHARRED_BONES);
-                        output.accept(HnSItems.PYRIUM_NUGGET);
+
+                        //Focus Materials
+                        output.accept(HnSItems.GLOWING_MUSHROOM);
+                        output.accept(HnSItems.SHADOW_SCALE);
+
+                        //Misc
+                        output.accept(HnSBlocks.FIREBLOSSOM);
+                        output.accept(HnSItems.DEUS_ESSENCE);
+                        output.accept(HnSItems.CLOTH_OF_THE_FLAMEBEARER);
+                        output.accept(HnSItems.LEMON);
+                        output.accept(HnSItems.DIVINE_LEMON);
+
+                        //Upgrade Orbs
                         output.accept(HnSItems.RADIANCE_UPGRADE_ORB.get());
                         output.accept(HnSItems.SHADOW_UPGRADE_ORB.get());
                         output.accept(HnSItems.ARCHERY_UPGRADE_ORB.get());
                         output.accept(HnSItems.MELEE_UPGRADE_ORB.get());
                         output.accept(HnSItems.HEALTH_UPGRADE_ORB.get());
-                        output.accept(HnSItems.HnSBlocks.FIREBLOSSOM);
+
+                        //Runes
+                        output.accept(HnSItems.MELEE_RUNE.get());
+                        output.accept(HnSItems.ARCHERY_RUNE.get());
+                        output.accept(HnSItems.HEALTH_RUNE.get());
+                        output.accept(HnSItems.SHADOW_RUNE.get());
+                        output.accept(HnSItems.RADIANCE_RUNE.get());
+
+
+
                     }).build());
 
     public static final Supplier<CreativeModeTab> HAZEN_N_STUFF_BLOCKS = CREATIVE_MODE_TAB.register("hazennstuff_blocks",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItems.HnSBlocks.WISEWOOD_PLANK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSBlocks.WISEWOOD_PLANKS.get()))
                     .title(Component.translatable("creativetab.hazennstuff.hazennstuff_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
 
                         //Compact Blocks
-                        output.accept(HnSItems.HnSBlocks.ZENALITE_BLOCK);
-                        output.accept(HnSItems.HnSBlocks.PYRIUM_BLOCK);
-                        output.accept(HnSItems.HnSBlocks.MITHRIL_BLOCK);
-                        output.accept(HnSItems.HnSBlocks.ARCANE_STEEL_BLOCK);
+                        output.accept(HnSBlocks.ZENALITE_BLOCK);
+                        output.accept(HnSBlocks.PYRIUM_BLOCK);
+                        output.accept(HnSBlocks.MITHRIL_BLOCK);
+                        output.accept(HnSBlocks.ARCANE_STEEL_BLOCK);
 
 
-                        //Zenalite Set
-                        output.accept(HnSItems.HnSBlocks.ZENALITE_BRICKS);
-                        output.accept(HnSItems.HnSBlocks.ZENALITE_SLAB);
-                        output.accept(HnSItems.HnSBlocks.ZENALITE_STAIRS);
+                        /*
+                        *** Sets
+                         */
 
+                        // Zenalite Brick
+                        output.accept(HnSBlocks.ZENALITE_BRICKS);
+                        output.accept(HnSBlocks.ZENALITE_BRICK_SLAB);
+                        output.accept(HnSBlocks.ZENALITE_BRICK_STAIRS);
+                        output.accept(HnSBlocks.ZENALITE_BRICK_WALL);
 
-                        //Ore
-                        output.accept(HnSItems.HnSBlocks.ZENALITE_DEEPSLATE_ORE);
-                        output.accept(HnSItems.HnSBlocks.ZENALITE_STONE_ORE);
-                        output.accept(HnSItems.HnSBlocks.ZENALITE_ABYSSLATE_ORE);
-                        output.accept(HnSItems.HnSBlocks.ZENALITE_VOIDSTONE_ORE);
-
-                        //Overworld Blocks
-                        output.accept(HnSItems.HnSBlocks.RUNESTONE_SLAG);
-                        output.accept(HnSItems.HnSBlocks.AQUASTONE);
-
-                        //Nether Blocks
-
-                        //End Blocks
-                        output.accept(HnSItems.HnSBlocks.ABYSSLATE);
-                        output.accept(HnSItems.HnSBlocks.PHANTASMIUM);
-                        output.accept(HnSItems.HnSBlocks.COBBLED_VOIDSTONE);
-                        output.accept(HnSItems.HnSBlocks.VOIDSTONE);
+                        // Mossy Mud Bricks
+                        output.accept(HnSBlocks.MOSSY_MUD_BRICKS);
+                        output.accept(HnSBlocks.MOSSY_MUD_BRICK_STAIRS);
+                        output.accept(HnSBlocks.MOSSY_MUD_BRICK_SLAB);
+                        output.accept(HnSBlocks.MOSSY_MUD_BRICK_WALL);
 
                         //Wisewood Set
-                        output.accept(HnSItems.HnSBlocks.WISEWOOD_PLANK);
-                        output.accept(HnSItems.HnSBlocks.WISEWOOD_DOOR);
-                        output.accept(HnSItems.HnSBlocks.WISEWOOD_TRAPDOOR);
-                        output.accept(HnSItems.HnSBlocks.WISEWOOD_SLAB);
-                        output.accept(HnSItems.HnSBlocks.WISEWOOD_FENCE);
-                        output.accept(HnSItems.HnSBlocks.WISEWOOD_FENCE_GATE);
-                        output.accept(HnSItems.HnSBlocks.WISEWOOD_STAIRS);
-                        output.accept(HnSItems.HnSBlocks.WISEWOOD_LEAVES);
-                        output.accept(HnSItems.HnSBlocks.WISEWOOD_LOG);
-                        output.accept(HnSItems.HnSBlocks.WISEWOOD_WOOD);
-                        output.accept(HnSItems.HnSBlocks.STRIPPED_WISEWOOD_LOG);
-                        output.accept(HnSItems.HnSBlocks.STRIPPED_WISEWOOD_WOOD);
+                        output.accept(HnSBlocks.WISEWOOD_PLANKS);
+                        output.accept(HnSBlocks.WISEWOOD_DOOR);
+                        output.accept(HnSBlocks.WISEWOOD_TRAPDOOR);
+                        output.accept(HnSBlocks.WISEWOOD_SLAB);
+                        output.accept(HnSBlocks.WISEWOOD_FENCE);
+                        output.accept(HnSBlocks.WISEWOOD_FENCE_GATE);
+                        output.accept(HnSBlocks.WISEWOOD_STAIRS);
+                        output.accept(HnSBlocks.WISEWOOD_LEAVES);
+                        output.accept(HnSBlocks.WISEWOOD_LOG);
+                        output.accept(HnSBlocks.WISEWOOD_WOOD);
+                        output.accept(HnSBlocks.STRIPPED_WISEWOOD_LOG);
+                        output.accept(HnSBlocks.STRIPPED_WISEWOOD_WOOD);
+                        output.accept(HnSBlocks.WISEWOOD_BUTTON);
+                        output.accept(HnSBlocks.WISEWOOD_PRESSURE_PLATE);
+
+                        //Wisewood Set
+                        output.accept(HnSBlocks.FROSTBITE_BIRCH_PLANKS);
+                        output.accept(HnSBlocks.FROSTBITE_BIRCH_NAILED_PLANKS);
+                        output.accept(HnSBlocks.FROSTBITE_BIRCH_STAIRS);
+                        output.accept(HnSBlocks.FROSTBITE_BIRCH_SLAB);
+                        output.accept(HnSBlocks.FROSTBITE_BIRCH_LOG);
+                        output.accept(HnSBlocks.FROSTBITE_BIRCH_WOOD);
+                        output.accept(HnSBlocks.STRIPPED_FROSTBITE_BIRCH_LOG);
+                        output.accept(HnSBlocks.STRIPPED_FROSTBITE_BIRCH_WOOD);
+                        output.accept(HnSBlocks.FROSTBITE_BIRCH_FENCE_GATE);
+                        output.accept(HnSBlocks.FROSTBITE_BIRCH_FENCE);
+                        output.accept(HnSBlocks.FROSTBITE_BIRCH_BUTTON);
+                        output.accept(HnSBlocks.FROSTBITE_BIRCH_PRESSURE_PLATE);
+
+
+                        /*
+                        *** Ores
+                         */
+
+                        // Zenalite
+                        output.accept(HnSBlocks.ZENALITE_DEEPSLATE_ORE);
+                        output.accept(HnSBlocks.ZENALITE_STONE_ORE);
+                        output.accept(HnSBlocks.ZENALITE_END_STONE_ORE);
+                        output.accept(HnSBlocks.ZENALITE_ABYSSLATE_ORE);
+                        output.accept(HnSBlocks.ZENALITE_VOIDSTONE_ORE);
+
+                        output.accept(HnSBlocks.SOLAR_CORE_BLACKSTONE_ORE);
+                        output.accept(HnSBlocks.SOLAR_CORE_NETHERACK_ORE);
+
+                        output.accept(HnSBlocks.DREADSTONE_ORE);
+
+                        output.accept(HnSBlocks.CHLOROPHYTE_ORE);
+
+
+
+                        /*
+                        *** Overworld Blocks
+                         */
+                        output.accept(HnSBlocks.RUNESTONE_SLAG);
+                        output.accept(HnSBlocks.AQUASTONE);
+
+                        /*
+                        *** Nether Blocks
+                         */
+
+                        /*
+                        ***End Blocks
+                         */
+
+                        output.accept(HnSBlocks.ABYSSLATE);
+                        output.accept(HnSBlocks.PHANTASMIUM);
+                        output.accept(HnSBlocks.COBBLED_VOIDSTONE);
+                        output.accept(HnSBlocks.VOIDSTONE);
+
                     }).build());
 
     public static final Supplier<CreativeModeTab> HAZEN_N_STUFF_EQUIPMENT = CREATIVE_MODE_TAB.register("hazennstuff_equipment",
@@ -708,15 +799,19 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.RADIANCE.get());
 
                         //Life Crystals
-
+                        output.accept(HnSItems.SHATTERED.get());
+                        output.accept(HnSItems.SACRED.get());
+                        output.accept(HnSItems.STRENGTHENED.get());
+                        output.accept(HnSItems.SINGULARITY.get());
 
                         //Soul Crystals
-
-
-                        //Epitome
-
+                        output.accept(HnSItems.ABSTRACT.get());
+                        output.accept(HnSItems.ADVANCED.get());
+                        output.accept(HnSItems.ABOMINATION.get());
+                        output.accept(HnSItems.ABSOLUTE.get());
 
                         //Misc
+                        output.accept(HnSItems.RING_OF_EFFECIENCY.get());
 
 
 
@@ -800,6 +895,27 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.GECKOLIB_GABRIEL_ULTRAKILL_CHESTPLATE.get());
                         output.accept(HnSItems.GECKOLIB_GABRIEL_ULTRAKILL_LEGGINGS.get());
                         output.accept(HnSItems.GECKOLIB_GABRIEL_ULTRAKILL_BOOTS.get());
+
+                        output.accept(HnSItems.ENDERMAN_HOOD.get());
+                        output.accept(HnSItems.ENDERMAN_MASKED.get());
+                        output.accept(HnSItems.ENDERMAN_BLINDFOLD.get());
+                        output.accept(HnSItems.ENDERMAN_CHESTPLATE.get());
+                        output.accept(HnSItems.ENDERMAN_LEGGINGS.get());
+                        output.accept(HnSItems.ENDERMAN_BOOTS.get());
+
+                        output.accept(HnSItems.PYROMANCER_BRUTE_HELMET.get());
+                        output.accept(HnSItems.PYROMANCER_BRUTE_CHESTPLATE.get());
+
+                        output.accept(HnSItems.BISHOP_OF_DECEIT_HELMET.get());
+                        output.accept(HnSItems.BISHOP_OF_DECEIT_CHESTPLATE.get());
+
+                        output.accept(HnSItems.NECROMANCER_HELMET.get());
+                        output.accept(HnSItems.NECROMANCER_CHESTPLATE.get());
+                        output.accept(HnSItems.NECROMANCER_LEGGINGS.get());
+
+                        output.accept(HnSItems.NAMELESS_ONE_HELMET.get());
+                        output.accept(HnSItems.NAMELESS_ONE_CHESTPLATE.get());
+                        output.accept(HnSItems.NAMELESS_ONE_LEGGINGS.get());
 
                     }).build());
 

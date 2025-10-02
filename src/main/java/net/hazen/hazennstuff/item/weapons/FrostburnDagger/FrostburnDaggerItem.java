@@ -8,7 +8,6 @@ import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.item.weapons.ice_pike.IcePikeRenderer;
 import net.hazen.hazennstuff.rarity.CryogenicRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.world.item.ItemStack;

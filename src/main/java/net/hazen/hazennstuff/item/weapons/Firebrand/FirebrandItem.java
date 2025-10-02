@@ -8,7 +8,6 @@ import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
-import net.hazen.hazennstuff.item.weapons.DraconicSplitter.DraconicSplitterRenderer;
 import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.FlamingRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;

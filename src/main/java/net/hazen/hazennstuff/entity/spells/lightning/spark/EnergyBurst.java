@@ -23,8 +23,6 @@ import software.bernie.geckolib.animatable.GeoAnimatable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
-import software.bernie.geckolib.animation.AnimationController;
-import software.bernie.geckolib.animation.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.Optional;
@@ -114,7 +112,7 @@ public class EnergyBurst extends AbstractMagicProjectile implements GeoEntity {
     //ANIMATION
     private final RawAnimation idle = RawAnimation.begin().thenLoop("animation.spark.idle");
 
-    private PlayState predicate(software.bernie.geckolib.animation.AnimationState event) {
+    private PlayState predicate(AnimationState event) {
         event.getController().setAnimation(idle);
         return PlayState.CONTINUE;
     }

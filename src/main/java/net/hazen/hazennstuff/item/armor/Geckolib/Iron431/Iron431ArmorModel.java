@@ -2,8 +2,6 @@ package net.hazen.hazennstuff.item.armor.Geckolib.Iron431;
 
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.item.armor.Geckolib.ArbitriumRobes.GeckolibArbitriumRobesArmorItem;
-import net.hazen.hazennstuff.item.armor.Geckolib.Hazel.HazelHOLYMOLYArmorItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.DefaultedEntityGeoModel;
 

@@ -7,8 +7,8 @@ import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.compat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
-import net.hazen.hazennstuff.registries.HnSEffects;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.registries.HnSEffects;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
@@ -16,7 +16,6 @@ import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ElytraItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
@@ -72,10 +71,10 @@ public class GeckolibGabrielArmorItem extends ImbuableGeckolibHnSArmorItem imple
     }
 
     private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(ArmorItem.Type.HELMET.getSlot()).getItem() instanceof GeckolibGabrielArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.CHESTPLATE.getSlot()).getItem() instanceof GeckolibGabrielElytraItem &&
-                player.getItemBySlot(ArmorItem.Type.LEGGINGS.getSlot()).getItem() instanceof GeckolibGabrielArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.BOOTS.getSlot()).getItem() instanceof GeckolibGabrielArmorItem;
+        return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof GeckolibGabrielArmorItem &&
+                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof GeckolibGabrielElytraItem &&
+                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof GeckolibGabrielArmorItem &&
+                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof GeckolibGabrielArmorItem;
     }
 
     @Override

@@ -1,7 +1,6 @@
 package net.hazen.hazennstuff.item.armor.Geckolib.ArbitriumRobes.Ascended;
 
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.item.armor.Geckolib.ArbitriumRobes.GeckolibArbitriumRobesElytraItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.DefaultedEntityGeoModel;
 

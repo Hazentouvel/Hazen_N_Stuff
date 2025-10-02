@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class TheWitherAnimator extends AzItemAnimator {
     private static final ResourceLocation ANIMATIONS = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "animations/armor/the_wither_armor.animation.json"
+            "animations/armor/the_wither_azurelib.animation.json"
     );
 
     @Override

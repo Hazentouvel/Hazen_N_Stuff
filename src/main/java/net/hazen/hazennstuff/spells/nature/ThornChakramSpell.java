@@ -8,13 +8,16 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.entity.spells.ball_lightning.BallLightning;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.entity.spells.nature.thorn_chakram.ThornChakram;
+import net.hazen.hazennstuff.registries.HnSSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
+import java.util.Optional;
 
 @AutoSpellConfig
 public class ThornChakramSpell extends AbstractSpell {
@@ -37,6 +40,11 @@ public class ThornChakramSpell extends AbstractSpell {
         this.spellPowerPerLevel = 1;
         this.castTime = 0;
         this.baseManaCost = 20;
+    }
+
+    @Override
+    public Optional<SoundEvent> getCastFinishSound() {
+        return Optional.of(HnSSounds.TERRARIA_SWING.get());
     }
 
     @Override

@@ -2,7 +2,6 @@ package net.hazen.hazennstuff.item.weapons.legionnaire_warlock_axe;
 
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.item.weapons.Firebrand.FirebrandItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 

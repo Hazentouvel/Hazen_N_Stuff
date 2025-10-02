@@ -28,7 +28,7 @@ public class ArbitriumRobesArmorItem extends ImbuableHnSArmorItem implements IDi
 
     public ArbitriumRobesArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
-                new AttributeContainer(AttributeRegistry.MAX_MANA, 500.0, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.MAX_MANA, 300.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .25, AttributeModifier.Operation.ADD_VALUE)
         );
         this.dispatcher = new HnSArmorDispatcher();

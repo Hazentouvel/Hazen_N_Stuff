@@ -51,16 +51,16 @@ public class AscendedLemonGodArmorItem extends ImbuableHnSArmorItem implements I
         }
         if (!level.isClientSide && entity instanceof Player player ) {
             player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.is(HnSItems.LEMON_GOD_HELMET)) {
+                if (wornArmor != null && wornArmor.is(HnSItems.ASCENDED_LEMON_GOD_HELMET)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.LEMON_GOD_CHESTPLATE)) {
+                if (wornArmor != null && wornArmor.is(HnSItems.ASCENDED_LEMON_GOD_CHESTPLATE)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.LEMON_GOD_LEGGINGS)) {
+                if (wornArmor != null && wornArmor.is(HnSItems.ASCENDED_LEMON_GOD_LEGGINGS)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.LEMON_GOD_BOOTS)) {
+                if (wornArmor != null && wornArmor.is(HnSItems.ASCENDED_LEMON_GOD_BOOTS)) {
                     dispatcher.idle(player, wornArmor);
                 }
             });

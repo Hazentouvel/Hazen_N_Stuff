@@ -2,7 +2,6 @@ package net.hazen.hazennstuff.item.armor.Geckolib.BountyHunter;
 
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.item.armor.Geckolib.FrostbiteHunter.FrostbiteHunterArmorItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.DefaultedEntityGeoModel;
 

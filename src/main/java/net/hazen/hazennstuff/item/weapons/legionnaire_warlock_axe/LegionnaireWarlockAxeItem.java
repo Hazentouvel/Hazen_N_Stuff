@@ -4,11 +4,8 @@ import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
-import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
-import net.hazen.hazennstuff.item.weapons.Firebrand.FirebrandRenderer;
 import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.FlamingRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
@@ -23,7 +20,6 @@ import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
-import java.util.Map;
 import java.util.function.Consumer;
 
 public class LegionnaireWarlockAxeItem extends MagicSwordItem implements GeoItem {

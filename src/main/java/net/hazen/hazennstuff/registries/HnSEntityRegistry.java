@@ -1,10 +1,17 @@
 package net.hazen.hazennstuff.registries;
 
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.entity.mobs.ReignOfTyros.Aegis.AegisEntity;
-import net.hazen.hazennstuff.entity.mobs.ReignOfTyros.Aptos.AptosEntity;
-import net.hazen.hazennstuff.entity.mobs.ReignOfTyros.Pyromus.PyromusEntity;
-import net.hazen.hazennstuff.entity.mobs.wizards.Electromancer.ElectromancerEntity;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.BishopOfDeciet.BishopOfDeceitEntity;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.Necromancers.NamelessOne.NamelessOneEntity;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.Necromancers.Necromancer.NecromancerEntity;
+import net.hazen.hazennstuff.entity.mobs.wizards.Good.Dryad.DryadEntity;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.ReignOfTyros.Aegis.AegisEntity;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.ReignOfTyros.Aptos.AptosEntity;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.ReignOfTyros.Pyromus.PyromusEntity;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.Electromancer.ElectromancerEntity;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.PiglinPyromancer.PiglinPyromancerEntity;
+import net.hazen.hazennstuff.entity.mobs.wizards.Evil.ServantsOfEnder.ServantsOfEnderEntity;
+import net.hazen.hazennstuff.entity.mobs.wizards.Good.TheRecluse.TheRecluseEntity;
 import net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife.LifestealKnife;
 import net.hazen.hazennstuff.entity.spells.shadow.nights_edge_strike.NightsEdgeStrike;
 import net.hazen.hazennstuff.entity.spells.fire.brimstone_hellblast.BrimstoneHellblast;
@@ -134,6 +141,64 @@ public class HnSEntityRegistry {
                     .clientTrackingRange(64)
                     .eyeHeight(2.3f)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "aegis").toString()));
+
+    //The Recluse
+    public static final DeferredHolder<EntityType<?>, EntityType<TheRecluseEntity>> THE_RECLUSE =
+            ENTITIES.register("the_recluse", () -> EntityType.Builder.<TheRecluseEntity>of(TheRecluseEntity::new, MobCategory.MONSTER)
+                    .sized(.6f, 3f)
+                    .clientTrackingRange(64)
+                    .eyeHeight(3f)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "the_recluse").toString()));
+
+    //Piglin Pyromancer
+    public static final DeferredHolder<EntityType<?>, EntityType<PiglinPyromancerEntity>> PIGLIN_PYROMANCER =
+            ENTITIES.register("piglin_pyromancer", () -> EntityType.Builder.<PiglinPyromancerEntity>of(PiglinPyromancerEntity::new, MobCategory.MONSTER)
+                    .sized(.6f, 1.8f)
+                    .clientTrackingRange(64)
+                    .eyeHeight(2.3f)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "piglin_pyromancer").toString()));
+
+    //Servant of Ender
+    public static final DeferredHolder<EntityType<?>, EntityType<ServantsOfEnderEntity>> SERVANT_OF_ENDER =
+            ENTITIES.register("servant_of_ender", () -> EntityType.Builder.<ServantsOfEnderEntity>of(ServantsOfEnderEntity::new, MobCategory.MONSTER)
+                    .sized(.6f, 3f)
+                    .clientTrackingRange(64)
+                    .eyeHeight(3f)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "servant_of_ender").toString()));
+
+    //Bishop of Deceit
+    public static final DeferredHolder<EntityType<?>, EntityType<BishopOfDeceitEntity>> BISHOP_OF_DECEIT =
+            ENTITIES.register("bishop_of_deceit", () -> EntityType.Builder.<BishopOfDeceitEntity>of(BishopOfDeceitEntity::new, MobCategory.MONSTER)
+                    .sized(.6f, 1.8f)
+                    .clientTrackingRange(64)
+                    .eyeHeight(3f)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "bishop_of_deceit").toString()));
+
+    //Dryad
+    public static final DeferredHolder<EntityType<?>, EntityType<DryadEntity>> DRYAD =
+            ENTITIES.register("dryad", () -> EntityType.Builder.<DryadEntity>of(DryadEntity::new, MobCategory.MONSTER)
+                    .sized(.6f, 1.8f)
+                    .clientTrackingRange(64)
+                    .eyeHeight(3f)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "dryad").toString()));
+
+    //Nameless One
+    public static final DeferredHolder<EntityType<?>, EntityType<NamelessOneEntity>> NAMELESS_ONE =
+            ENTITIES.register("nameless_one", () -> EntityType.Builder.<NamelessOneEntity>of(NamelessOneEntity::new, MobCategory.MONSTER)
+                    .sized(.6f, 1.8f)
+                    .clientTrackingRange(64)
+                    .eyeHeight(3f)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "nameless_one").toString()));
+
+    //Necromancer
+    public static final DeferredHolder<EntityType<?>, EntityType<NecromancerEntity>> NECROMANCER =
+            ENTITIES.register("necromancer", () -> EntityType.Builder.<NecromancerEntity>of(NecromancerEntity::new, MobCategory.MONSTER)
+                    .sized(.6f, 1.8f)
+                    .clientTrackingRange(64)
+                    .eyeHeight(3f)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "necromancer").toString()));
+
+
 
     /*
     *** Particles

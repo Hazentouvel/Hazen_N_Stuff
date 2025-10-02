@@ -1,25 +1,18 @@
 package net.hazen.hazennstuff.item.weapons.Hammush;
 
-import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
-import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.item.weapons.ice_pike.IcePikeRenderer;
-import net.hazen.hazennstuff.rarity.CryogenicRarity;
 import net.hazen.hazennstuff.rarity.RadianceRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
-import net.minecraft.world.item.ItemStack;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-import java.util.Map;
 import java.util.function.Consumer;
 
 public class HammushItem extends MagicSwordItem implements GeoItem {

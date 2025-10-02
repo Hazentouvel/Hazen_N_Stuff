@@ -2,8 +2,6 @@ package net.hazen.hazennstuff.entity.spells.radiance.syringe;
 
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
-import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
-import net.hazen.hazennstuff.registries.HnSEffects;
 import net.hazen.hazennstuff.registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.registries.HnSSounds;
 import net.hazen.hazennstuff.registries.HnSSpellRegistries;
@@ -11,7 +9,6 @@ import net.hazen.hazennstuff.registries.effects.InfestedEffect;
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.Projectile;
@@ -23,8 +20,6 @@ import software.bernie.geckolib.animatable.GeoAnimatable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
-import software.bernie.geckolib.animation.AnimationController;
-import software.bernie.geckolib.animation.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.Optional;
@@ -118,7 +113,7 @@ public class Syringe extends AbstractMagicProjectile implements GeoEntity {
     //ANIMATION
     private final RawAnimation idle = RawAnimation.begin().thenLoop("animation.syringe.idle");
 
-    private PlayState predicate(software.bernie.geckolib.animation.AnimationState event) {
+    private PlayState predicate(AnimationState event) {
         event.getController().setAnimation(idle);
         return PlayState.CONTINUE;
     }

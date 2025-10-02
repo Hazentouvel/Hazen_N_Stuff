@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.item.armor.AzureLib.ArbitriumRobes.Ascended;
 
+import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
@@ -29,7 +30,8 @@ public class AscendedArbitriumRobesArmorItem extends ImbuableHnSArmorItem implem
     public final HnSArmorDispatcher dispatcher;
 
     public AscendedArbitriumRobesArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.DEUS_MATERIAL, type, settings,
+        super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
+                new AttributeContainer(ALObjects.Attributes.ELYTRA_FLIGHT, 1, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 9900, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, 1, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.COOLDOWN_REDUCTION, 0.90, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
@@ -48,20 +50,26 @@ public class AscendedArbitriumRobesArmorItem extends ImbuableHnSArmorItem implem
 
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
-        if (!(entity instanceof Player player)) return;
+        if (!(entity instanceof Player player) || level.isClientSide) return;
 
-        if (level.isClientSide) {
-            boolean isFlying = player.isFallFlying();
+        boolean isFlying = player.isFallFlying();
 
-            player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.getItem() instanceof AscendedArbitriumRobesArmorItem) {
-                    if (isFlying) {
-                        dispatcher.flight(player, wornArmor);
-                    } else {
-                        dispatcher.idle(player, wornArmor);
-                    }
+        player.getArmorSlots().forEach(wornArmor -> {
+            if (wornArmor != null && wornArmor.getItem() instanceof AscendedArbitriumRobesArmorItem) {
+                if (isFlying) {
+                    dispatcher.flight(player, wornArmor);
+                } else {
+                    dispatcher.idle(player, wornArmor);
                 }
-            });
+            }
+        });
+        if (isWearingFullSet(player) && !player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
+        }
+    }
+    private void evaluateArmorEffects(Player player) {
+        if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
         }
     }
 

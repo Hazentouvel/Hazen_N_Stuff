@@ -7,6 +7,7 @@ import io.redspace.ironsspellbooks.item.weapons.IronsWeaponTier;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.hazen.hazennstuff.registries.HnSAttributeRegistry;
+import net.hazen.hazennstuff.registries.HnSItems;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -14,7 +15,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
-import net.hazen.hazennstuff.registries.HnSItems;
+
 import java.util.function.Supplier;
 
 public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {

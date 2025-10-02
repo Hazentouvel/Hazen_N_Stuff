@@ -1,6 +1,0 @@
-{
-  "parent": "hazennstuff:block/zenalite_bricks",
-  "textures": {
-    "all": "hazennstuff:block/zenalite_bricks"
-  }
-}

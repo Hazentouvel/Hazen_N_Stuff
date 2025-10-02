@@ -2,10 +2,7 @@ package net.hazen.hazennstuff.registries;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.registries.effects.FlameKissedEffect;
-import net.hazen.hazennstuff.registries.effects.HazensEffect;
-import net.hazen.hazennstuff.registries.effects.InfestedEffect;
-import net.hazen.hazennstuff.registries.effects.SporeEffect;
+import net.hazen.hazennstuff.registries.effects.*;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -81,6 +78,23 @@ public class HnSEffects {
             .addAttributeModifier(ALObjects.Attributes.FIRE_DAMAGE,
                     HazenNStuff.id("flame_kissed"),
                     FlameKissedEffect.FIRE_DAMAGE_PER_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
+    public static final DeferredHolder<MobEffect, MobEffect> DRYADS_BLESSING = MOB_EFFECTS.register("dryads_blessing", () -> new DryadsBlessingEffect(MobEffectCategory.BENEFICIAL, 3311322)
+            .addAttributeModifier(Attributes.ARMOR,
+                    HazenNStuff.id("dryads_blessing"),
+                    DryadsBlessingEffect.ARMOR_PER_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+
+            .addAttributeModifier(ALObjects.Attributes.OVERHEAL,
+                    HazenNStuff.id("dryads_blessing"),
+                    DryadsBlessingEffect.OVERHEAL_PER_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+
+            .addAttributeModifier(ALObjects.Attributes.HEALING_RECEIVED,
+                    HazenNStuff.id("dryads_blessing"),
+                    DryadsBlessingEffect.HEALING_RECIEVED_PER_LEVEL,
                     AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 

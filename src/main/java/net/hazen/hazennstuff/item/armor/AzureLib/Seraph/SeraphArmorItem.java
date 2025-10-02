@@ -23,7 +23,6 @@ import net.minecraft.world.level.Level;
 import java.util.List;
 
 public class SeraphArmorItem extends ImbuableHnSArmorItem implements IDisableJacket {
-    // This is your class where you will setup the AzCommands/Animations you wish to play
     public final HnSArmorDispatcher dispatcher;
 
     public SeraphArmorItem(Type type, Properties settings) {
@@ -71,9 +70,6 @@ public class SeraphArmorItem extends ImbuableHnSArmorItem implements IDisableJac
     private void evaluateArmorEffects(Player player) {
         if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
             player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
-        }
-        if (!player.hasEffect(MobEffectRegistry.ANGEL_WINGS)) {
-            player.addEffect(new MobEffectInstance(MobEffectRegistry.ANGEL_WINGS, 200, 0, false, false, false));
         }
     }
 

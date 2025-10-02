@@ -1,6 +1,11 @@
 package net.hazen.hazennstuff.datagen;
 
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.datagen.ItemGenerator.HnSBlockStateProvider;
+import net.hazen.hazennstuff.datagen.ItemGenerator.HnSBlockTagProvider;
+import net.hazen.hazennstuff.datagen.ItemGenerator.HnSItemModelProvider;
+import net.hazen.hazennstuff.datagen.ItemGenerator.HnSItemTagProvider;
+import net.hazen.hazennstuff.datagen.LootTables.HnSBlockLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -25,14 +30,17 @@ public class DataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-//        generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
-//                List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
-//        generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
+                List.of(new LootTableProvider.SubProviderEntry(HnSBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
+        generator.addProvider(event.includeServer(), new HnSRecipeProvider(packOutput, lookupProvider));
 
-        BlockTagsProvider blockTagsProvider = new ModBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
+        BlockTagsProvider blockTagsProvider = new HnSBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
         generator.addProvider(event.includeServer(), blockTagsProvider);
-        generator.addProvider(event.includeServer(), new ModItemTagProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
+        generator.addProvider(event.includeServer(), new HnSItemTagProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
 
-//        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new HnSItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new HnSBlockStateProvider(packOutput, existingFileHelper));
+
+        generator.addProvider(event.includeServer(), new HnSDatapackProvider(packOutput, lookupProvider));
     }
 }

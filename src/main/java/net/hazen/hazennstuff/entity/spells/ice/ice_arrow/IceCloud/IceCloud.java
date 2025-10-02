@@ -1,7 +1,6 @@
 package net.hazen.hazennstuff.entity.spells.ice.ice_arrow.IceCloud;
 
 import io.redspace.ironsspellbooks.damage.DamageSources;
-import io.redspace.ironsspellbooks.damage.ISSDamageTypes;
 import io.redspace.ironsspellbooks.entity.spells.AoeEntity;
 import net.hazen.hazennstuff.registries.HnSDamageTypes;
 import net.hazen.hazennstuff.registries.HnSEntityRegistry;

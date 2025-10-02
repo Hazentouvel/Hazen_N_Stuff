@@ -7,7 +7,6 @@ import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.compat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
-import net.hazen.hazennstuff.item.armor.Geckolib.LemonGod.GeckolibLemonGodArmorModel;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.registries.HnSEffects;
 import net.minecraft.world.effect.MobEffectInstance;

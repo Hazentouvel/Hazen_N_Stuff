@@ -5,7 +5,6 @@ import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.item.weapons.Excalibur.Terraria.ExcaliburRenderer;
 import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.DivineRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;

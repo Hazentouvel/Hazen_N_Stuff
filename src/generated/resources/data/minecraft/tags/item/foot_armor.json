@@ -5,7 +5,7 @@
     "hazennstuff:soul_flame_boots",
     "hazennstuff:geckolib_soul_flame_boots",
     "hazennstuff:hazel_boots",
-    "hazennstuff:geckolib_cryogenic_ruler_boots",
+    "hazennstuff:cryogenic_ruler_boots",
     "hazennstuff:crystal_arachnid_boots",
     "hazennstuff:herta_puppet_boots",
     "hazennstuff:charged_scourge_boots",
@@ -68,6 +68,7 @@
     "hazennstuff:lemon_god_boots",
     "hazennstuff:ascended_lemon_god_boots",
     "hazennstuff:geckolib_lemon_god_boots",
-    "hazennstuff:geckolib_ascended_lemon_god_boots"
+    "hazennstuff:geckolib_ascended_lemon_god_boots",
+    "hazennstuff:shadowwalker_enderman_boots"
   ]
 }

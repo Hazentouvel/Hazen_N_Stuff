@@ -10,8 +10,6 @@ import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife.LifestealKnife;
 import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.item.weapons.vampire_knives.VampireKnivesRenderer;
-import net.hazen.hazennstuff.rarity.BloodRarity;
 import net.hazen.hazennstuff.rarity.EldritchRarity;
 import net.hazen.hazennstuff.registries.HnSSounds;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;

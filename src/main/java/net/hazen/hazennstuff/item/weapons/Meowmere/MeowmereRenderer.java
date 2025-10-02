@@ -1,7 +1,5 @@
 package net.hazen.hazennstuff.item.weapons.Meowmere;
 
-import net.hazen.hazennstuff.item.weapons.Hammush.HammushItem;
-import net.hazen.hazennstuff.item.weapons.Hammush.HammushModel;
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
 

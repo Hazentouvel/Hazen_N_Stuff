@@ -5,15 +5,14 @@ import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.Geckolib.HnSGeckolibArmorItem;
-import net.hazen.hazennstuff.registries.HnSEffects;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.registries.HnSEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Level;
@@ -60,9 +59,9 @@ public class OldLegionnaireArmorItem extends HnSGeckolibArmorItem {
     }
 
     private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(ArmorItem.Type.HELMET.getSlot()).getItem() instanceof OldLegionnaireArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.CHESTPLATE.getSlot()).getItem() instanceof OldLegionnaireArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.LEGGINGS.getSlot()).getItem() instanceof OldLegionnaireArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.BOOTS.getSlot()).getItem() instanceof OldLegionnaireArmorItem;
+        return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof OldLegionnaireArmorItem &&
+                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof OldLegionnaireArmorItem &&
+                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof OldLegionnaireArmorItem &&
+                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof OldLegionnaireArmorItem;
     }
 }

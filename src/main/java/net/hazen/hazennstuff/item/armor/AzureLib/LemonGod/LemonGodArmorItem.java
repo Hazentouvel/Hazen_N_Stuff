@@ -72,9 +72,6 @@ public class LemonGodArmorItem extends ImbuableHnSArmorItem implements IDisableJ
         if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
             player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
         }
-        if (!player.hasEffect(MobEffectRegistry.ANGEL_WINGS)) {
-            player.addEffect(new MobEffectInstance(MobEffectRegistry.ANGEL_WINGS, 200, 0, false, false, false));
-        }
     }
 
     private boolean isWearingFullSet(Player player) {

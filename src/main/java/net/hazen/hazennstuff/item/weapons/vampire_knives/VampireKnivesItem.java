@@ -1,42 +1,34 @@
 package net.hazen.hazennstuff.item.weapons.vampire_knives;
 
 import io.redspace.ironsspellbooks.api.events.ModifySpellLevelEvent;
-import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
-import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife.LifestealKnife;
 import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.BloodRarity;
 import net.hazen.hazennstuff.registries.HnSSounds;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
-import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-import java.util.List;
-import java.util.Map;
 import java.util.function.Consumer;
 
 public class VampireKnivesItem extends MagicSwordItem implements GeoItem {

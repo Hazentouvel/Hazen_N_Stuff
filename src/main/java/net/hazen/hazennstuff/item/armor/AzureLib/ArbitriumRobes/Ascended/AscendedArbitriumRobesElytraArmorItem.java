@@ -51,28 +51,19 @@ public class AscendedArbitriumRobesElytraArmorItem extends ImbuableHnSArmorItem 
 
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
-        if (!(entity instanceof Player player)) return;
+        if (!(entity instanceof Player player) || level.isClientSide) return;
 
-        if (level.isClientSide) {
-            boolean isFlying = player.isFallFlying();
+        boolean isFlying = player.isFallFlying();
 
-            player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.getItem() instanceof AscendedArbitriumRobesElytraArmorItem) {
-                    if (isFlying) {
-                        dispatcher.flight(player, wornArmor);
-                    } else {
-                        dispatcher.idle(player, wornArmor);
-                    }
+        player.getArmorSlots().forEach(wornArmor -> {
+            if (wornArmor != null && wornArmor.getItem() instanceof AscendedArbitriumRobesElytraArmorItem) {
+                if (isFlying) {
+                    dispatcher.flight(player, wornArmor);  // Play flight animation
+                } else {
+                    dispatcher.idle(player, wornArmor);   // Play idle animation
                 }
-            });
-        }
-    }
-
-    private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(ArmorItem.Type.HELMET.getSlot()).getItem() instanceof AscendedArbitriumRobesArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.CHESTPLATE.getSlot()).getItem() instanceof AscendedArbitriumRobesElytraArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.LEGGINGS.getSlot()).getItem() instanceof AscendedArbitriumRobesArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.BOOTS.getSlot()).getItem() instanceof AscendedArbitriumRobesArmorItem;
+            }
+        });
     }
 
     @Override

@@ -11,7 +11,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
@@ -52,9 +51,9 @@ public class SpectralSpelunkerArmorItem extends ImbuableGeckolibHnSArmorItem {
     }
 
     private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(ArmorItem.Type.HELMET.getSlot()).getItem() instanceof SpectralSpelunkerArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.CHESTPLATE.getSlot()).getItem() instanceof SpectralSpelunkerArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.LEGGINGS.getSlot()).getItem() instanceof SpectralSpelunkerArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.BOOTS.getSlot()).getItem() instanceof SpectralSpelunkerArmorItem;
+        return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof SpectralSpelunkerArmorItem &&
+                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof SpectralSpelunkerArmorItem &&
+                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof SpectralSpelunkerArmorItem &&
+                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof SpectralSpelunkerArmorItem;
     }
 }

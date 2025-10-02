@@ -5,7 +5,7 @@
     "hazennstuff:soul_flame_helmet",
     "hazennstuff:geckolib_soul_flame_helmet",
     "hazennstuff:hazel_helmet",
-    "hazennstuff:geckolib_cryogenic_ruler_helmet",
+    "hazennstuff:cryogenic_ruler_helmet",
     "hazennstuff:crystal_arachnid_helmet",
     "hazennstuff:herta_puppet_helmet",
     "hazennstuff:charged_scourge_helmet",
@@ -68,6 +68,13 @@
     "hazennstuff:lemon_god_helmet",
     "hazennstuff:ascended_lemon_god_helmet",
     "hazennstuff:geckolib_lemon_god_helmet",
-    "hazennstuff:geckolib_ascended_lemon_god_helmet"
+    "hazennstuff:geckolib_ascended_lemon_god_helmet",
+    "hazennstuff:shadowwalker_enderman_masked",
+    "hazennstuff:shadowwalker_enderman_blindfold",
+    "hazennstuff:shadowwalker_enderman_hood",
+    "hazennstuff:pyromancer_brute_helmet",
+    "hazennstuff:bishop_of_deceit_helmet",
+    "hazennstuff:necromancer_helmet",
+    "hazennstuff:nameless_one_helmet"
   ]
 }

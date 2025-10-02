@@ -3,6 +3,7 @@ package net.hazen.hazennstuff.registries;
 import io.redspace.ironsspellbooks.api.spells.SchoolType;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.datagen.HnSTags;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;

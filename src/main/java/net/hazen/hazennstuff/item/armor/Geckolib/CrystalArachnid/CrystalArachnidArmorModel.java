@@ -2,8 +2,6 @@ package net.hazen.hazennstuff.item.armor.Geckolib.CrystalArachnid;
 
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.item.armor.Geckolib.ChargedScourge.GeckolibChargedScourgeArmorItem;
-import net.hazen.hazennstuff.item.armor.Geckolib.CryogenicRuler.CryogenicRulerArmorItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.DefaultedEntityGeoModel;
 

@@ -3,6 +3,7 @@ package net.hazen.hazennstuff;
 import mod.azure.azurelib.rewrite.animation.cache.AzIdentityRegistry;
 import mod.azure.azurelib.rewrite.render.armor.AzArmorRendererRegistry;
 import mod.azure.azurelib.rewrite.render.item.AzItemRendererRegistry;
+import net.hazen.hazennstuff.block.HnSBlocks;
 import net.hazen.hazennstuff.compat.*;
 import net.hazen.hazennstuff.item.armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.Blazeborne.BlazeborneArmorRenderer;
@@ -13,7 +14,6 @@ import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.Firebloss
 import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageHelmetArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.GabrielULTRAKILL.GabrielArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.Infestation.InfestationArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.LemonGod.Ascended.AscendedLemonGodArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.LemonGod.LemonGodArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SLCCat.SLCCatArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.Seraph.SeraphArmorRenderer;
@@ -52,9 +52,6 @@ public class HazenNStuff
 {
     public static final String MOD_ID = "hazennstuff";
     private static final Logger LOGGER = LogUtils.getLogger();
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MOD_ID);
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MOD_ID);
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
     public HazenNStuff(IEventBus modEventBus, ModContainer modContainer)
     {
         NeoForge.EVENT_BUS.register(this);
@@ -73,7 +70,7 @@ public class HazenNStuff
         HnSCreativeModeTabs.register(modEventBus);
 
         HnSItems.register(modEventBus);
-        HnSItems.HnSBlocks.register(modEventBus);
+        HnSBlocks.register(modEventBus);
         HnSArmorMaterials.register(modEventBus);
 
         HnSEffects.register(modEventBus);
@@ -208,7 +205,7 @@ public class HazenNStuff
                     HnSItems.LEMON_GOD_BOOTS.get());
 
             // Ascended Lemon God
-            AzArmorRendererRegistry.register(AscendedLemonGodArmorRenderer::new,
+            AzArmorRendererRegistry.register(LemonGodArmorRenderer::new,
                     HnSItems.ASCENDED_LEMON_GOD_HELMET.get(),
                     HnSItems.ASCENDED_LEMON_GOD_CHESTPLATE.get(),
                     HnSItems.ASCENDED_LEMON_GOD_LEGGINGS.get(),
@@ -250,6 +247,10 @@ public class HazenNStuff
                     HnSItems.ARBITRIUM_ROBES_CHESTPLATE.get(),
                     HnSItems.ARBITRIUM_ROBES_LEGGINGS.get(),
                     HnSItems.ARBITRIUM_ROBES_BOOTS.get(),
+                    HnSItems.ASCENDED_ARBITRIUM_ROBES_HELMET.get(),
+                    HnSItems.ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get(),
+                    HnSItems.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get(),
+                    HnSItems.ASCENDED_ARBITRIUM_ROBES_BOOTS.get(),
 
                     HnSItems.CREAKING_HELMET.get(),
                     HnSItems.CREAKING_CHESTPLATE.get(),
@@ -306,6 +307,21 @@ public class HazenNStuff
                     HnSItems.LEMON_GOD_CHESTPLATE.get(),
                     HnSItems.LEMON_GOD_LEGGINGS.get(),
                     HnSItems.LEMON_GOD_BOOTS.get(),
+
+                    HnSItems.ASCENDED_LEMON_GOD_HELMET.get(),
+                    HnSItems.ASCENDED_LEMON_GOD_CHESTPLATE.get(),
+                    HnSItems.ASCENDED_LEMON_GOD_LEGGINGS.get(),
+                    HnSItems.ASCENDED_LEMON_GOD_BOOTS.get(),
+
+                    HnSItems.THE_WITHER_HELMET.get(),
+                    HnSItems.THE_WITHER_CHESTPLATE.get(),
+                    HnSItems.THE_WITHER_LEGGINGS.get(),
+                    HnSItems.THE_WITHER_BOOTS.get(),
+
+                    HnSItems.GABRIEL_ULTRAKILL_HELMET.get(),
+                    HnSItems.GABRIEL_ULTRAKILL_CHESTPLATE.get(),
+                    HnSItems.GABRIEL_ULTRAKILL_LEGGINGS.get(),
+                    HnSItems.GABRIEL_ULTRAKILL_BOOTS.get(),
 
                     // Weapons
 

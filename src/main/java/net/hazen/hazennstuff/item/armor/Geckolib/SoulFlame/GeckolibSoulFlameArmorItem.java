@@ -7,15 +7,14 @@ import net.hazen.hazennstuff.compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.compat.MFTECompat;
 import net.hazen.hazennstuff.compat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
-import net.hazen.hazennstuff.registries.HnSEffects;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.registries.HnSEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Level;
@@ -72,9 +71,9 @@ public class GeckolibSoulFlameArmorItem extends ImbuableGeckolibHnSArmorItem {
     }
 
     private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(ArmorItem.Type.HELMET.getSlot()).getItem() instanceof GeckolibSoulFlameArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.CHESTPLATE.getSlot()).getItem() instanceof GeckolibSoulFlameArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.LEGGINGS.getSlot()).getItem() instanceof GeckolibSoulFlameArmorItem &&
-                player.getItemBySlot(ArmorItem.Type.BOOTS.getSlot()).getItem() instanceof GeckolibSoulFlameArmorItem;
+        return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof GeckolibSoulFlameArmorItem &&
+                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof GeckolibSoulFlameArmorItem &&
+                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof GeckolibSoulFlameArmorItem &&
+                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof GeckolibSoulFlameArmorItem;
     }
 }

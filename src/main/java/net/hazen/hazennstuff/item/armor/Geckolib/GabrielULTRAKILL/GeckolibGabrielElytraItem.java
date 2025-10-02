@@ -8,7 +8,6 @@ import io.redspace.ironsspellbooks.item.armor.ImbuableChestplateArmorItem;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.compat.MalumCompat;
-import net.hazen.hazennstuff.item.armor.Geckolib.ArbitriumRobes.GeckolibArbitriumRobesArmorModel;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.EquipmentSlotGroup;

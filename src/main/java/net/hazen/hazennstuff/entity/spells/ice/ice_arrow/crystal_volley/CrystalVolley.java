@@ -3,7 +3,6 @@ package net.hazen.hazennstuff.entity.spells.ice.ice_arrow.crystal_volley;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
-import io.redspace.ironsspellbooks.entity.spells.poison_cloud.PoisonCloud;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.entity.spells.ice.ice_arrow.IceCloud.IceCloud;
 import net.hazen.hazennstuff.registries.HnSEntityRegistry;

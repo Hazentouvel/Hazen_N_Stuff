@@ -6,6 +6,7 @@ import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.item.weapons.IronsWeaponTier;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
+import net.hazen.hazennstuff.datagen.HnSTags;
 import net.hazen.hazennstuff.registries.HnSAttributeRegistry;
 import net.hazen.hazennstuff.registries.HnSItems;
 import net.minecraft.tags.BlockTags;
@@ -91,6 +92,32 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ATTACK_SPEED, 1.3, AttributeModifier.Operation.ADD_VALUE),
             new AttributeContainer(ALObjects.Attributes.FIRE_DAMAGE, 3, AttributeModifier.Operation.ADD_VALUE),
             new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 2, AttributeModifier.Operation.ADD_VALUE)
+    );
+
+    public static HNSExtendedWeaponsTiers WARFLAMING_LANCE = new HNSExtendedWeaponsTiers(
+            8064,
+            7,
+            -3.0F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(ALObjects.Attributes.FIRE_DAMAGE, 5, AttributeModifier.Operation.ADD_VALUE),
+            new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 3, AttributeModifier.Operation.ADD_VALUE),
+            new AttributeContainer(Attributes.ATTACK_SPEED, -0.1, AttributeModifier.Operation.ADD_VALUE)
+    );
+
+    public static HNSExtendedWeaponsTiers RAVENS_BANE = new HNSExtendedWeaponsTiers(
+            8064,
+            7,
+            -3.0F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(ALObjects.Attributes.FIRE_DAMAGE, 5, AttributeModifier.Operation.ADD_VALUE),
+            new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 3, AttributeModifier.Operation.ADD_VALUE),
+            new AttributeContainer(Attributes.ATTACK_SPEED, -0.1, AttributeModifier.Operation.ADD_VALUE)
     );
 
     /*
@@ -403,6 +430,16 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(ItemRegistry.MITHRIL_SCRAP.get()),
             new AttributeContainer(AttributeRegistry.EVOCATION_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HNSExtendedWeaponsTiers PICKAXE_AXE = new HNSExtendedWeaponsTiers(
+            4032,
+            6,
+            5.0F,
+            10,
+            HnSTags.Blocks.INCORRECT_FOR_MITHRIL_TOOl,
+            () -> Ingredient.of(ItemRegistry.MITHRIL_SCRAP.get()),
+            new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
     public static HNSExtendedWeaponsTiers MAGE_BANE = new HNSExtendedWeaponsTiers(

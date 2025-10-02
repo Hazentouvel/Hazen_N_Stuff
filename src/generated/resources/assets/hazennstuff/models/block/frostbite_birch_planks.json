@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "hazennstuff:block/frostbite_birch_planks"
+  }
+}

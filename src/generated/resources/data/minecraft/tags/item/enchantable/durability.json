@@ -297,6 +297,8 @@
     "hazennstuff:fireblossom_rapier",
     "hazennstuff:draconic_splitter",
     "hazennstuff:firebrand",
+    "hazennstuff:war_flaming_lance",
+    "hazennstuff:ravens_bane",
     "hazennstuff:ice_pike",
     "hazennstuff:frostburn_dagger",
     "hazennstuff:beongae",
@@ -322,6 +324,8 @@
     "hazennstuff:the_devourer",
     "hazennstuff:mage_bane",
     "hazennstuff:legionnaire_warlock_axe",
-    "hazennstuff:spectral_pickaxe"
+    "hazennstuff:spectral_pickaxe",
+    "hazennstuff:pickaxe_axe",
+    "hazennstuff:pickaxe_axe_divine_gold"
   ]
 }

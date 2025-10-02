@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hazennstuff:zenalite_brick_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_zenalite_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hazennstuff:zenalite_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_zenalite_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hazennstuff:zenalite_brick_slab"
+    ]
+  }
+}

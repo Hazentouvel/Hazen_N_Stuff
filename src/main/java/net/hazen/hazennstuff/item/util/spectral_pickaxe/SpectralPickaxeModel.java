@@ -17,7 +17,7 @@ public class SpectralPickaxeModel extends DefaultedItemGeoModel<SpectralPickaxeI
 
     @Override
     public ResourceLocation getTextureResource(SpectralPickaxeItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/tools/spectral_pickaxe/spectral_pickaxe.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/tools/spectral_pickaxe.png");
     }
 
     @Override

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "hazennstuff:block/frostbite_birch_planks"
+  }
+}

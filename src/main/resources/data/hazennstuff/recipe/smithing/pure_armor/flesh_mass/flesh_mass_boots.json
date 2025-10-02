@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:zenalite_ingot"
+  },
+  "base": {
+    "item": "irons_spellbooks:cultist_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:flesh_mass_boots"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

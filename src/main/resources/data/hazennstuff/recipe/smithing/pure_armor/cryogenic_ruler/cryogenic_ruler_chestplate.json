@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:zenalite_ingot"
+  },
+  "base": {
+    "item": "irons_spellbooks:cryomancer_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:cryogenic_ruler_chestplate"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

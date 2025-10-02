@@ -791,6 +791,14 @@ public class HnSCreativeModeTabs {
                         //Frieren Staff
                         output.accept(HnSItems.ROD_OF_DISCORD.get());
 
+                        /*
+                        *** Tools
+                         */
+
+                        //Frieren Staff
+                        output.accept(HnSItems.SPECTRAL_PICKAXE.get());
+                        output.accept(HnSItems.PICKAXE_AXE.get());
+                        output.accept(HnSItems.PICKAXE_AXE_DIVINE_GOLD.get());
 
                         /*
                         ***Curios

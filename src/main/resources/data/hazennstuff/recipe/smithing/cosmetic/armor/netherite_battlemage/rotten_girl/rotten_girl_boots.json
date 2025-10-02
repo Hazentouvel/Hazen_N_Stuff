@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:green_dye"
+  },
+  "base": {
+    "tag": "hazennstuff:armors/netherite_battlemage/netherite_battlemage_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:rotten_girl_boots"
+  },
+  "template": {
+    "item": "minecraft:leather"
+  }
+}

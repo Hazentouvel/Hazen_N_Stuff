@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:zenalite_ingot"
+  },
+  "base": {
+    "item": "irons_spellbooks:archevoker_helmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:supreme_witch_helmet"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

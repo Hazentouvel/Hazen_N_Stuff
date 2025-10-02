@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:jungle",
+    "minecraft:bamboo_jungle"
+  ],
+  "features": "hazennstuff:chlorophyte_ore_placed",
+  "step": "underground_ores"
+}

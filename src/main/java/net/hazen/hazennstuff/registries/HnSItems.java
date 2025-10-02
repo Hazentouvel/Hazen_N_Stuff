@@ -113,6 +113,8 @@ import net.hazen.hazennstuff.item.curios.Rings.RingOfEffeciencyCurio;
 import net.hazen.hazennstuff.item.misc.HnSFoodProperties;
 import net.hazen.hazennstuff.item.staves.rod_of_discord.RodOfDiscordItem;
 import net.hazen.hazennstuff.item.staves.wisewood_cane.WisewoodCaneItem;
+import net.hazen.hazennstuff.item.util.PickaxeAxe.DivineGold.PickaxeAxeDivineGoldItem;
+import net.hazen.hazennstuff.item.util.PickaxeAxe.PickaxeAxeItem;
 import net.hazen.hazennstuff.item.util.spectral_pickaxe.SpectralPickaxeItem;
 import net.hazen.hazennstuff.item.weapons.DivineGreatsword.DivineGreatswordItem;
 import net.hazen.hazennstuff.item.weapons.DraconicSplitter.DraconicSplitterItem;
@@ -734,6 +736,12 @@ public class HnSItems {
 
     //Spectral Pickaxe
     public static final DeferredHolder<Item, Item> SPECTRAL_PICKAXE = ITEMS.register("spectral_pickaxe", SpectralPickaxeItem::new);
+
+    //Spectral Pickaxe
+    public static final DeferredHolder<Item, Item> PICKAXE_AXE = ITEMS.register("pickaxe_axe", PickaxeAxeItem::new);
+    //Spectral Pickaxe
+    public static final DeferredHolder<Item, Item> PICKAXE_AXE_DIVINE_GOLD = ITEMS.register("pickaxe_axe_divine_gold", PickaxeAxeDivineGoldItem::new);
+
 
     /***
      * Curios
@@ -2590,6 +2598,40 @@ public class HnSItems {
             .equipment(1)
             .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
+
+
+    //Chlorophyte Armor
+
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_HELMET = ITEMS.register("chlorophyte_helmet", () -> new ShadowScaleArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(64))));
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_MASK = ITEMS.register("chlorophyte_mask", () -> new ShadowScaleArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(64))));
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_HEADGEAR = ITEMS.register("chlorophyte_headgear", () -> new ShadowScaleArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(64))));
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_CHESTPLATE = ITEMS.register("chlorophyte_chestplate", () -> new ShadowScaleArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_LEGGINGS = ITEMS.register("chlorophyte_leggings", () -> new ShadowScaleArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))));
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_BOOTS = ITEMS.register("chlorophyte_boots", () -> new ShadowScaleArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.BOOTS.getDurability(64))));
 
 
 

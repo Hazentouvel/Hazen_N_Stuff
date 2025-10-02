@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "mossy_mud_bricks",
+  "key": {
+    "#": {
+      "item": "hazennstuff:mossy_mud_bricks"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "hazennstuff:mossy_mud_brick_slab"
+  }
+}

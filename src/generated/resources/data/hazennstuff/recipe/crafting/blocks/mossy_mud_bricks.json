@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:mud_bricks"
+    },
+    "D": {
+      "item": "minecraft:moss_block"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ADA",
+    "AAA"
+  ],
+  "result": {
+    "count": 4,
+    "id": "hazennstuff:mossy_mud_bricks"
+  }
+}

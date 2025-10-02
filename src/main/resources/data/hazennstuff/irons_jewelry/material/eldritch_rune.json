@@ -1,0 +1,18 @@
+{
+  "descriptionId": "material.hazennstuff.rune_eldritch",
+  "ingredient": {
+    "item": "hazennstuff:eldritch_rune"
+  },
+  "materialType": [
+    "spellbooks_rune"
+  ],
+  "paletteLocation": "hazennstuff:palettes/rune_eldritch",
+  "quality": 1.5,
+  "bonusParameters": {
+    "irons_jewelry:attribute": {
+      "attribute": "irons_spellbooks:eldritch_spell_power",
+      "amount": 0.025,
+      "operation": "add_multiplied_total"
+    }
+  }
+}

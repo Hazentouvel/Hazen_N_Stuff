@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:zenalite_ingot"
+  },
+  "base": {
+    "item": "irons_spellbooks:priest_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:seraph_chestplate"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

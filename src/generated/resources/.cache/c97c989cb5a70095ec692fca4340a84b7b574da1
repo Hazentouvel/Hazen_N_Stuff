@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-01T12:39:19.2944282	Tags for minecraft:item mod id hazennstuff
+// 1.21.1	2025-10-02T11:08:29.3334758	Tags for minecraft:item mod id hazennstuff
 954b355308b39f2b01d65ac5c21306701c726e2a data/c/tags/item/armors.json
 740053467c0e6401606132b0ce14777e5339d91f data/c/tags/item/bones.json
 954b355308b39f2b01d65ac5c21306701c726e2a data/c/tags/item/enchantables.json
@@ -22,7 +22,7 @@ b9954a780f37e2d30b2edd1085646f77332ff93c data/hazennstuff/tags/item/armor/nether
 a823f3237a2a08d8f4f5d6c9d92a8252a8b6b487 data/minecraft/tags/item/doors.json
 954b355308b39f2b01d65ac5c21306701c726e2a data/minecraft/tags/item/enchantable/armor.json
 1707c39242de491e4a62fbce36ef88438c5c069e data/minecraft/tags/item/enchantable/chest_armor.json
-8501f948ce9f1ed96a6dac15bf4ed4bc695e82a5 data/minecraft/tags/item/enchantable/durability.json
+72add24a3ba56730943c7cbecef4b5f39458d315 data/minecraft/tags/item/enchantable/durability.json
 4bca7382264f13f33275b4643cb522828a1c29e3 data/minecraft/tags/item/enchantable/equippable.json
 9d18438099e257fd93a7f44307bb7a1b38826325 data/minecraft/tags/item/enchantable/foot_armor.json
 9951b6371192eb42dd4d5bf307db5c1038a31890 data/minecraft/tags/item/enchantable/head_armor.json
@@ -37,7 +37,7 @@ b872243d12a21c1f8e375b365846724ae7bbe51b data/minecraft/tags/item/head_armor.jso
 85d7045af8ce43f1a317b3db46fbfdc07123b6cf data/minecraft/tags/item/leg_armor.json
 2a055035ec9a4f8e66e0865cf2586b8647ce7c71 data/minecraft/tags/item/logs.json
 771267b892a1213842d55bce5ac3db17984a6254 data/minecraft/tags/item/logs_that_burn.json
-06caf0b91efebe8bbb278ced2f83a1cc92e37fd5 data/minecraft/tags/item/pickaxes.json
+eb246ec29a19a160da18d2e464bfb9abcf33cc72 data/minecraft/tags/item/pickaxes.json
 021712811ee0c535a3d6610b5112dbd760cb6fa9 data/minecraft/tags/item/planks.json
 c416520655ce67e3f3e70b681379639d13d7f48a data/minecraft/tags/item/saplings.json
 bbcc45f758c938a9048a87bc78085f600fae1ee8 data/minecraft/tags/item/slabs.json

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:flesh_mass_leggings"
+  },
+  "base": {
+    "item": "hazennstuff:blazeborne_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:calamitas_leggings"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

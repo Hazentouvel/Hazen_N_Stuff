@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "item": "hazennstuff:divine_mold"
+    },
+    "P": {
+      "item": "irons_spellbooks:priest_boots"
+    },
+    "R": {
+      "item": "irons_spellbooks:holy_rune"
+    },
+    "T": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "RMR",
+    "TPT",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:seraph_boots"
+  }
+}

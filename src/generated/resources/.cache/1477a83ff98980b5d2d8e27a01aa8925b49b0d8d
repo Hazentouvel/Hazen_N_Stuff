@@ -1,4 +1,5 @@
-// 1.21.1	2025-10-01T12:39:19.3124425	Tags for minecraft:block mod id hazennstuff
+// 1.21.1	2025-10-02T11:08:29.3588747	Tags for minecraft:block mod id hazennstuff
+d403b06095b060e2ba6a1188962d016f7424528e data/hazennstuff/tags/block/needs_mithril_tool.json
 38d011491e26808115f49deb2c491a9330d2fcc4 data/minecraft/tags/block/beacon_base_blocks.json
 aecf1bc58f9dfe93291370ab966b25cfea8f33a4 data/minecraft/tags/block/buttons.json
 98d22c3304124b860afa35dcb57f66d9d06a206a data/minecraft/tags/block/deepslate_ore_replaceables.json
@@ -17,7 +18,7 @@ d54cf0f2057899aeaaf474dc16114e6798a95ba1 data/minecraft/tags/block/incorrect_for
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/block/mineable/hoe.json
 b9166f08339f8dd5dc1cbc7fa7467262cec925f0 data/minecraft/tags/block/mineable/pickaxe.json
 a823f3237a2a08d8f4f5d6c9d92a8252a8b6b487 data/minecraft/tags/block/mob_interactable_doors.json
-68cb5582f937bd6a845ae3631ae0caac7c895738 data/minecraft/tags/block/needs_diamond_tool.json
+ce2d89ea61528620e04cde0838b1f0464f1900c4 data/minecraft/tags/block/needs_diamond_tool.json
 e8271b7a2e8034028e00b385eb4972023d938361 data/minecraft/tags/block/needs_iron_tool.json
 e8271b7a2e8034028e00b385eb4972023d938361 data/minecraft/tags/block/needs_stone_tool.json
 d26b40c017f88c737ea76f579c79f73521094b08 data/minecraft/tags/block/planks.json
@@ -34,3 +35,4 @@ a823f3237a2a08d8f4f5d6c9d92a8252a8b6b487 data/minecraft/tags/block/wooden_doors.
 4dcb2c6d6edf70b3ef972673ee1b8562d3cdd8d2 data/minecraft/tags/block/wooden_slabs.json
 6759d3bbf6523ce7f45da3fed4b0938e89f92faf data/minecraft/tags/block/wooden_stairs.json
 bd8c816b312257ab92ef16eeecaf8062f88b4dfe data/minecraft/tags/block/wooden_trapdoors.json
+8ebdb36e323f8dd4a8cfb9c45a27283fa6307e2b data/neoforge/tags/block/needs_netherite_tool.json

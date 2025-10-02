@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "item": "hazennstuff:divine_mold"
+    },
+    "P": {
+      "item": "irons_spellbooks:cryomancer_boots"
+    },
+    "R": {
+      "item": "irons_spellbooks:ice_rune"
+    },
+    "T": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "RMR",
+    "TPT",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:cryogenic_ruler_boots"
+  }
+}

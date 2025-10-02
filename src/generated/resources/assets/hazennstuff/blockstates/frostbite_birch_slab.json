@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hazennstuff:block/frostbite_birch_slab"
+    },
+    "type=double": {
+      "model": "hazennstuff:block/frostbite_birch_planks"
+    },
+    "type=top": {
+      "model": "hazennstuff:block/frostbite_birch_slab_top"
+    }
+  }
+}

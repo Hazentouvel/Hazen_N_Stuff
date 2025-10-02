@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hazennstuff:block/mossy_mud_brick_slab"
+    },
+    "type=double": {
+      "model": "hazennstuff:block/mossy_mud_bricks"
+    },
+    "type=top": {
+      "model": "hazennstuff:block/mossy_mud_brick_slab_top"
+    }
+  }
+}

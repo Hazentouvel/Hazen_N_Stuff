@@ -43,7 +43,7 @@ public class LifestealKnifeRenderer extends GeoEntityRenderer<LifestealKnife> {
     public void render(LifestealKnife entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
         poseStack.pushPose();
 
-        poseStack.scale(0.75F, 0.75F, 0.75F); // Example: 1.5x size
+        poseStack.scale(1F, 1F, 1F); // Example: 1.5x size
 
         super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
 

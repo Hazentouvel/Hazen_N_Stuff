@@ -4,8 +4,7 @@
       "hazennstuff:soul_flame_equip_1",
       "hazennstuff:soul_flame_equip_2",
       "hazennstuff:soul_flame_equip_3",
-      "hazennstuff:soul_flame_equip_4",
-      "hazennstuff:soul_flame_equip_5"
+      "hazennstuff:soul_flame_equip_4"
     ]
   },
 
@@ -184,5 +183,45 @@
     "sounds": [
       "hazennstuff:chaotic_teleport"
     ]
-}
+  },
+  "terrablade_slash": {
+    "sounds": [
+      "hazennstuff:terrablade_slash"
+    ]
+  },
+  "terraria_impact": {
+    "sounds": [
+      "hazennstuff:terraria_impact"
+    ]
+  },
+  "terraria_swing": {
+    "sounds": [
+      "hazennstuff:terraria_swing"
+    ]
+  },
+  "star_cast_1": {
+    "sounds": [
+      "hazennstuff:star_cast_1"
+    ]
+  },
+  "star_cast_2": {
+    "sounds": [
+      "hazennstuff:star_cast_2"
+    ]
+  },
+  "cat_swing": {
+    "sounds": [
+      "hazennstuff:cat_swing"
+    ]
+  },
+  "cat_cast": {
+    "sounds": [
+      "hazennstuff:cat_cast"
+    ]
+  },
+  "cat_impact": {
+    "sounds": [
+      "hazennstuff:cat_impact"
+    ]
+  }
 }

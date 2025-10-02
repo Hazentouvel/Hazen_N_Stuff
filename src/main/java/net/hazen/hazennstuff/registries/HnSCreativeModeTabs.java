@@ -28,6 +28,7 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.DREADSTONE);
                         output.accept(HnSItems.CRUDE_METAL);
                         output.accept(HnSItems.CHLOROPHYTE_CHUNK);
+                        output.accept(HnSItems.SHADESTONE);
 
                         //Ingots/Crystals/Gems
                         output.accept(HnSItems.ROSE_QUARTZ);
@@ -38,6 +39,7 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.SILVER_SCRAPS);
                         output.accept(HnSItems.CHLOROPHYTE_INGOT);
                         output.accept(HnSItems.HALLOWED_INGOT);
+                        output.accept(HnSItems.DEMONITE_INGOT);
 
                         //Nuggets
                         output.accept(HnSItems.PYRIUM_NUGGET);
@@ -661,8 +663,12 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.FIREBLOSSOM_RAPIER.get());
                         //Fire Brand
                         output.accept(HnSItems.FIREBRAND.get());
-                        //Fire Brand
+                        //Draconic Splitter
                         output.accept(HnSItems.DRACONIC_SPLITTER.get());
+                        //Ravens Bane
+                        output.accept(HnSItems.RAVENS_BANE.get());
+                        // War-Flaming Lance
+                        output.accept(HnSItems.WARFLAMING_LANCE.get());
 
 
                         //Ice
@@ -670,7 +676,7 @@ public class HnSCreativeModeTabs {
 
                         //Ice Pike
                         output.accept(HnSItems.ICE_PIKE.get());
-                        //Ice Pike
+                        // Frostburn Dagger
                         output.accept(HnSItems.FROSTBURN_DAGGER.get());
 
 
@@ -688,7 +694,7 @@ public class HnSCreativeModeTabs {
 
                         //Bountiful Harvest
                         output.accept(HnSItems.BOUNTIFUL_HARVEST.get());
-                        //Bountiful Harvest
+                        //Thorn Chakram
                         output.accept(HnSItems.THORN_CHAKRAM.get());
 
 
@@ -702,24 +708,24 @@ public class HnSCreativeModeTabs {
                         //Ender
 
 
-                        //Vampire Knives
+                        // Obsidian Claymore
                         output.accept(HnSItems.OBSIDIAN_CLAYMORE.get());
-                        //Vampire Knives
+                        // Star Fury
                         output.accept(HnSItems.STARFURY.get());
 
 
                         //Holy
 
 
-                        //Hammer of Justice
+                        // Hammer of Justice
                         output.accept(HnSItems.HAMMER_OF_JUSTICE.get());
-                        //Excalibur
+                        // Excalibur
                         output.accept(HnSItems.EXCALIBUR.get());
-                        //Excalibur Divine Gold
+                        // Excalibur Divine Gold
                         output.accept(HnSItems.ISS_EXCALIBUR.get());
-                        //Hazen's Excalibur
+                        // Hazen's Excalibur
                         output.accept(HnSItems.HAZENS_EXCALIBUR.get());
-                        //Divine Greatsword
+                        // Divine Greatsword
                         output.accept(HnSItems.DIVINE_GREATSWORD.get());
 
 

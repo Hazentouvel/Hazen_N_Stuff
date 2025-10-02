@@ -1,0 +1,112 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
+  "texture_size": [
+    128,
+    128
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        0,
+        -90,
+        0
+      ],
+      "translation": [
+        0,
+        -10,
+        0
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "translation": [
+        0,
+        -10,
+        0
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        -17,
+        -92,
+        8
+      ],
+      "translation": [
+        1.25,
+        -5.25,
+        2.5
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        -17,
+        92,
+        8
+      ],
+      "translation": [
+        1.25,
+        -7.5,
+        2.5
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "ground": {
+      "rotation": [
+        -28,
+        90,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        5
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        -45
+      ],
+      "translation": [
+        -6.75,
+        -7.25,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "fixed": {
+      "translation": [
+        0,
+        -25.25,
+        -0.25
+      ]
+    }
+  },
+  "textures": {
+    "particle": "item/fireblossom_rapier_glowmask"
+  }
+}

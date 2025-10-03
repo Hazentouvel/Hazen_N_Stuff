@@ -143,6 +143,7 @@ public class HnSBlockTagProvider extends BlockTagsProvider {
 
                 .add(HnSBlocks.SOLAR_CORE_BLACKSTONE_ORE.get())
                 .add(HnSBlocks.SOLAR_CORE_NETHERACK_ORE.get())
+                .add(HnSBlocks.SOLAR_CORE_NETHERACK_ORE.get())
 
                 .add(HnSBlocks.RUNESTONE_SLAG.get())
         ;
@@ -157,12 +158,6 @@ public class HnSBlockTagProvider extends BlockTagsProvider {
         ;
 
         tag(BlockTags.NEEDS_STONE_TOOL)
-
-                .add(HnSBlocks.DREADSTONE_ORE.get())
-                .add(HnSBlocks.ZENALITE_BLOCK.get())
-                .add(HnSBlocks.ARCANE_STEEL_BLOCK.get())
-                .add(HnSBlocks.MITHRIL_BLOCK.get())
-                .add(HnSBlocks.PYRIUM_BLOCK.get())
         ;
 
 

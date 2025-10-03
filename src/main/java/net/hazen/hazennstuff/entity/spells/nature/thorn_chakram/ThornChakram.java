@@ -8,6 +8,8 @@ import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.registries.HnSEntityRegistry;
+import net.hazen.hazennstuff.registries.HnSParticleHelper;
+import net.hazen.hazennstuff.registries.HnSSpellRegistries;
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.Entity;
@@ -55,12 +57,12 @@ public class ThornChakram extends AbstractMagicProjectile implements GeoEntity {
         Vec3 pos = this.getBoundingBox().getCenter().add(getDeltaMovement());
         Vec3 random = Utils.getRandomVec3(0);
         pos = pos.add(getDeltaMovement());
-        level().addParticle(ParticleHelper.ELECTRIC_SPARKS, pos.x, pos.y, pos.z, random.x, random.y, random.z);
+        level().addParticle(HnSParticleHelper.LEAF_PARTICLE, pos.x, pos.y, pos.z, random.x, random.y, random.z);
     }
 
     @Override
     public void impactParticles(double x, double y, double z) {
-        MagicManager.spawnParticles(level(), ParticleHelper.ELECTRIC_SPARKS, x, y, z, 12, .08, .08, .08, 0.3, false);
+        MagicManager.spawnParticles(level(), HnSParticleHelper.LEAF_PARTICLE, x, y, z, 12, .08, .08, .08, 0.3, false);
     }
 
     @Override
@@ -131,25 +133,6 @@ public class ThornChakram extends AbstractMagicProjectile implements GeoEntity {
         }
     }
 
-
-//    @Override
-//    public void handleHitDetection() {
-//        Vec3 vec3 = this.getDeltaMovement();
-//        Vec3 pos = this.position();
-//        Vec3 vec32 = pos.add(vec3);
-//        HitResult hitresult = level().clip(new ClipContext(pos, vec32, ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, this));
-//        if (hitresult.getType() != HitResult.Type.MISS) {
-//            //block hits
-//            onHit(hitresult);
-//        } else {
-//            //entity hits
-//            var entities = level().getEntities(this, this.getBoundingBox(), this::canHitEntity);
-//            for (Entity entity : entities) {
-//                onHit(new EntityHitResult(entity, this.getBoundingBox().getCenter().add(entity.getBoundingBox().getCenter())));
-//            }
-//        }
-//    }
-
     public boolean canHitVictim(Entity entity) {
         var timestamp = victims.get(entity.getUUID());
         return timestamp == null || entity.tickCount - timestamp >= 10;
@@ -165,7 +148,7 @@ public class ThornChakram extends AbstractMagicProjectile implements GeoEntity {
             DamageSources.ignoreNextKnockback(livingEntity);
         }
 
-        DamageSources.applyDamage(target, getDamage(), SpellRegistry.BALL_LIGHTNING_SPELL.get().getDamageSource(this, getOwner()));
+        DamageSources.applyDamage(target, getDamage(), HnSSpellRegistries.THORN_CHAKRAM.get().getDamageSource(this, getOwner()));
         victims.put(target.getUUID(), target.tickCount);
 
         // Increment hit count and discard if maxHits is reached

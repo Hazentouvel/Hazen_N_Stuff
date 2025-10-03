@@ -226,7 +226,7 @@ public class HnSBlocks {
                                 .sound(SoundType.ANCIENT_DEBRIS)
                 ));
 
-        public static final DeferredBlock<Block> SOLAR_CORE_NETHERACK_ORE = registerBlock("solar_core_netherack_ore",
+        public static final DeferredBlock<Block> SOLAR_CORE_NETHERACK_ORE = registerBlock("solar_core_netherrack_ore",
                 () -> new DropExperienceBlock(UniformInt.of(2, 4),
                         BlockBehaviour
                                 .Properties.of()

@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-01T12:39:19.3054466	Loot Tables
+// 1.21.1	2025-10-02T13:49:05.7997808	Loot Tables
 2b0ffadc8522cd05885f9067632f60c3d782db8d data/hazennstuff/loot_table/blocks/abysslate.json
 7ffa4e8c1b11b0e85b7f0727b7a0e0ed8746ca03 data/hazennstuff/loot_table/blocks/aquastone.json
 5331dac023bb700beff981ac3508797fe2a8bfda data/hazennstuff/loot_table/blocks/arcane_steel_block.json
@@ -27,7 +27,7 @@ bb5da0a9368567fc0eec3307eb146d53916d0b3d data/hazennstuff/loot_table/blocks/perm
 f16a716c1c737b4d0024fa513d65ea359f7b0c67 data/hazennstuff/loot_table/blocks/pyrium_block.json
 86e798f9717d2b3dfa660683c1d12e067a1f8fb2 data/hazennstuff/loot_table/blocks/runestone_slag.json
 ce555fab8893422fedf8c77485ce5f53cb259807 data/hazennstuff/loot_table/blocks/solar_core_blackstone_ore.json
-fa6dab06258307340dc5eea592604ed724780f8b data/hazennstuff/loot_table/blocks/solar_core_netherack_ore.json
+3df1ba2e506dfb8f85ccc6c590f35d2f1e688b91 data/hazennstuff/loot_table/blocks/solar_core_netherrack_ore.json
 d21927cf76311b9dedc929bc9831c6388fdb5c50 data/hazennstuff/loot_table/blocks/stripped_frostbite_birch_log.json
 ba9455d9031555c8e951b4beada91842b1c44b88 data/hazennstuff/loot_table/blocks/stripped_frostbite_birch_wood.json
 7848ba1fffab638fb4c79e170ebdca50071212b1 data/hazennstuff/loot_table/blocks/stripped_wisewood_log.json

@@ -13,12 +13,12 @@ public class DreadsteelArmorModel extends DefaultedEntityGeoModel<DreadsteelKnig
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(DreadsteelKnightArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/frostbite_knight_armor.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/dreadsteel_knight_armor.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(DreadsteelKnightArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/frostbite_knight_armor.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/dreadsteel_knight_armor.png");
     }
 
     @Override

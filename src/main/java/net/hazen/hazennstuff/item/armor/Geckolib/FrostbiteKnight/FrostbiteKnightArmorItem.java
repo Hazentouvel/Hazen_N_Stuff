@@ -53,7 +53,7 @@ public class FrostbiteKnightArmorItem extends ImbuableGeckolibHnSArmorItem {
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new FrostbiteHunterArmorModel());
+        return new GenericCustomArmorRenderer<>(new FrostbiteKnightArmorModel());
     }
 
     @Override

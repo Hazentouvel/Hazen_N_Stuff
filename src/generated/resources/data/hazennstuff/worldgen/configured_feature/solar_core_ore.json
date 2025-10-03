@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "hazennstuff:solar_core_netherack_ore"
+          "Name": "hazennstuff:solar_core_netherrack_ore"
         },
         "target": {
           "block": "minecraft:netherrack",

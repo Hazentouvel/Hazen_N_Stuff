@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class GabrielAnimator extends AzItemAnimator {
     private static final ResourceLocation ANIMATIONS = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "animations/armor/gabriel_ultrakill_armor_azurelib.animation.json"
+            "animations/armor/gabriel_ultrakill_armor.animation.json"
     );
 
     @Override

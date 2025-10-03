@@ -68,6 +68,10 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.CLOTH_OF_THE_FLAMEBEARER);
                         output.accept(HnSItems.LEMON);
                         output.accept(HnSItems.DIVINE_LEMON);
+                        output.accept(HnSItems.STORM_WEAVE);
+                        output.accept(HnSItems.SPIDER_FANG);
+                        output.accept(HnSItems.PRISMATIC_SHARD);
+                        output.accept(HnSItems.VOLT_CORE);
 
                         //Upgrade Orbs
                         output.accept(HnSItems.RADIANCE_UPGRADE_ORB.get());
@@ -267,6 +271,14 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.CREAKING_CHESTPLATE.get());
                         output.accept(HnSItems.CREAKING_LEGGINGS.get());
                         output.accept(HnSItems.CREAKING_BOOTS.get());
+
+                        // Chlorophyte
+                        output.accept(HnSItems.CHLOROPHYTE_HELMET.get());
+                        output.accept(HnSItems.CHLOROPHYTE_HEADGEAR.get());
+                        output.accept(HnSItems.CHLOROPHYTE_MASK.get());
+                        output.accept(HnSItems.CHLOROPHYTE_CHESTPLATE.get());
+                        output.accept(HnSItems.CHLOROPHYTE_LEGGINGS.get());
+                        output.accept(HnSItems.CHLOROPHYTE_BOOTS.get());
 
                         /*
                         *** Blood

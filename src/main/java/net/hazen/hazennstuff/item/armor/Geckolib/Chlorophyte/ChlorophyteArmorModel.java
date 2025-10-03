@@ -19,7 +19,7 @@ public class ChlorophyteArmorModel extends DefaultedEntityGeoModel<ChlorophyteAr
 
     @Override
     public ResourceLocation getTextureResource(ChlorophyteArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/creaking_sorcerer_armor_geckolib.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/chlorophyte_helmet_armor.png");
     }
 
     @Override

@@ -36,6 +36,11 @@ import net.hazen.hazennstuff.item.armor.Geckolib.BishopOfDeceitArmor.BishopOfDec
 import net.hazen.hazennstuff.item.armor.Geckolib.BountyHunter.BountyHunterArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.Calamitas.CalamitasArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.ChargedScourge.GeckolibChargedScourgeArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.Chlorophyte.ChlorophyteArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.Chlorophyte.ChlorophyteArmorModel;
+import net.hazen.hazennstuff.item.armor.Geckolib.Chlorophyte.Headgear.ChlorophyteHeadgearArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.Chlorophyte.Helmet.ChlorophyteHelmetArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.Chlorophyte.Mask.ChlorophyteMaskArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.CreakingSorcerer.GeckolibCreakingSorcererArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.CryogenicRuler.CryogenicRulerArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.CrystalArachnid.CrystalArachnidArmorItem;
@@ -278,6 +283,42 @@ public class HnSItems {
     *** Crafting Materials
      */
 
+    //Spider Fang
+    public static final DeferredItem<Item> SPIDER_FANG = ITEMS.register("spider_fang",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(Rarity.RARE)
+                    .fireResistant())
+
+    );
+
+    //Storm Weave
+    public static final DeferredItem<Item> STORM_WEAVE = ITEMS.register("storm_weave",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(Rarity.RARE)
+                    .fireResistant())
+
+    );
+
+    //Volt Core
+    public static final DeferredItem<Item> VOLT_CORE = ITEMS.register("volt_core",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(Rarity.RARE)
+                    .fireResistant())
+
+    );
+
+    //Prismatic Shard
+    public static final DeferredItem<Item> PRISMATIC_SHARD = ITEMS.register("prismatic_shard",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(Rarity.RARE)
+                    .fireResistant())
+
+    );
+
     //Excalibur
     public static final DeferredItem<Item> EXCALIBUR_FRAGMENT = ITEMS.register("excalibur_fragment",
             () -> new Item(new Item
@@ -334,7 +375,6 @@ public class HnSItems {
                     .fireResistant())
 
     );
-
 
     //Shadow Scale
     public static final DeferredItem<Item> SHADOW_SCALE = ITEMS.register("shadow_scale",
@@ -2602,32 +2642,32 @@ public class HnSItems {
 
     //Chlorophyte Armor
 
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_HELMET = ITEMS.register("chlorophyte_helmet", () -> new ShadowScaleArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_HELMET = ITEMS.register("chlorophyte_helmet", () -> new ChlorophyteHelmetArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
             .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_MASK = ITEMS.register("chlorophyte_mask", () -> new ShadowScaleArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_MASK = ITEMS.register("chlorophyte_mask", () -> new ChlorophyteMaskArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
             .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_HEADGEAR = ITEMS.register("chlorophyte_headgear", () -> new ShadowScaleArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_HEADGEAR = ITEMS.register("chlorophyte_headgear", () -> new ChlorophyteHeadgearArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
             .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_CHESTPLATE = ITEMS.register("chlorophyte_chestplate", () -> new ShadowScaleArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_CHESTPLATE = ITEMS.register("chlorophyte_chestplate", () -> new ChlorophyteArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
             .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_LEGGINGS = ITEMS.register("chlorophyte_leggings", () -> new ShadowScaleArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_LEGGINGS = ITEMS.register("chlorophyte_leggings", () -> new ChlorophyteArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
             .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_BOOTS = ITEMS.register("chlorophyte_boots", () -> new ShadowScaleArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_BOOTS = ITEMS.register("chlorophyte_boots", () -> new ChlorophyteArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
             .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
             .fireResistant()

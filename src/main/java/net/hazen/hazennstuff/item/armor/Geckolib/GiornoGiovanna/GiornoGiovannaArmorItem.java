@@ -19,6 +19,6 @@ public class GiornoGiovannaArmorItem extends ImbuableChestplateArmorItem {
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new FrierenArmorModel());
+        return new GenericCustomArmorRenderer<>(new GiornoGiovannaArmorModel());
     }
 }

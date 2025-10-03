@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-01T12:39:19.3114441	Registries
+// 1.21.1	2025-10-02T13:49:05.8027774	Registries
 cca82824ae61ee054b91f70bc104c03fbb16dc02 data/hazennstuff/neoforge/biome_modifier/add_chlorophyte_ore.json
 dc904eb632835b9955937c393dfe2b22454676e4 data/hazennstuff/neoforge/biome_modifier/add_dreadstone_ore.json
 cfdaa261b0dbb7777c4ff7ceb0351c4433e4f46c data/hazennstuff/neoforge/biome_modifier/add_runestone_slag.json
@@ -8,7 +8,7 @@ cfdaa261b0dbb7777c4ff7ceb0351c4433e4f46c data/hazennstuff/neoforge/biome_modifie
 061c2c9ee3908d36fb2d5ecd33321cbc5a6064be data/hazennstuff/worldgen/configured_feature/dreadstone_ore.json
 7300e40fa77e60676c1660a022cbf39bc5091c10 data/hazennstuff/worldgen/configured_feature/frostbite_birch.json
 76edbee8a050c5d3f015c5591350704e0217383f data/hazennstuff/worldgen/configured_feature/runestone_slag.json
-874057d245205979a81129c7b26de89ad57a25b6 data/hazennstuff/worldgen/configured_feature/solar_core_ore.json
+ec75ee3caa8cf2014d01b839cfed53685e2d5cdb data/hazennstuff/worldgen/configured_feature/solar_core_ore.json
 7465eac5b3d09130515742bf93e1cdff13ff22ee data/hazennstuff/worldgen/configured_feature/wisewood.json
 eca3258e6ecec6d0d7bf1c3f56f86776a7edbfe3 data/hazennstuff/worldgen/configured_feature/zenalite_ore.json
 392e30d7d2bc599dc29359d53a06ca9f3b9c59d8 data/hazennstuff/worldgen/placed_feature/chlorophyte_ore_placed.json

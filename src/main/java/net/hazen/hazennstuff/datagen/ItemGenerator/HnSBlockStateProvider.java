@@ -40,6 +40,9 @@ public class HnSBlockStateProvider extends BlockStateProvider {
         stairsBlock(HnSBlocks.ZENALITE_BRICK_STAIRS.get(), blockTexture(HnSBlocks.ZENALITE_BRICKS.get()));
         slabBlock(HnSBlocks.ZENALITE_BRICK_SLAB.get(), blockTexture(HnSBlocks.ZENALITE_BRICKS.get()), blockTexture(HnSBlocks.ZENALITE_BRICKS.get()));
 
+        blockItem(HnSBlocks.ZENALITE_BRICK_SLAB);
+        blockItem(HnSBlocks.ZENALITE_BRICK_STAIRS);
+
         /*
          *** Ores
          */

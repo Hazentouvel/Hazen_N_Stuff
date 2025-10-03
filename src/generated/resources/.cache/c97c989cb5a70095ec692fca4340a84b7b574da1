@@ -1,7 +1,7 @@
-// 1.21.1	2025-10-02T11:08:29.3334758	Tags for minecraft:item mod id hazennstuff
-954b355308b39f2b01d65ac5c21306701c726e2a data/c/tags/item/armors.json
+// 1.21.1	2025-10-02T11:52:18.5684502	Tags for minecraft:item mod id hazennstuff
+57ddc60e6a975db6eabd32e18d2d456dc3dfce34 data/c/tags/item/armors.json
 740053467c0e6401606132b0ce14777e5339d91f data/c/tags/item/bones.json
-954b355308b39f2b01d65ac5c21306701c726e2a data/c/tags/item/enchantables.json
+57ddc60e6a975db6eabd32e18d2d456dc3dfce34 data/c/tags/item/enchantables.json
 b8b267e340593959ba088ed02a1727a3c39d5606 data/c/tags/item/gems.json
 7aa24cfa00593b4dbd92d0e19b403da85cb4cda6 data/c/tags/item/gems/quartz.json
 689293c1724f58bcc49e08e20b600fab23258396 data/c/tags/item/hidden_from_recipe_viewers.json
@@ -17,24 +17,24 @@ b9954a780f37e2d30b2edd1085646f77332ff93c data/hazennstuff/tags/item/armor/nether
 0fd9b110e434eb6e16384c3d1604c526e49c8648 data/hazennstuff/tags/item/armor/netherite_battlemage/netherite_battlemage_leggings.json
 86c15ace5244ad42780ca494c5f364c751d069ba data/hazennstuff/tags/item/armor/school_armor/school_helmet.json
 3a65407953f7484e090e8898b4658df2a5eff741 data/hazennstuff/tags/item/ores/zenalite.json
-9d8d70afad291a59d1d7b6b564bdaee12e6d20b0 data/minecraft/tags/item/axes.json
-1bbb82aa68e1eeb0524f95959f2a0efc89286171 data/minecraft/tags/item/chest_armor.json
+f551afd2077ca15213570bee683ca4bd6e1179c0 data/minecraft/tags/item/axes.json
+e5f476767d238880ecf6f705e2e7665bd5f980cd data/minecraft/tags/item/chest_armor.json
 a823f3237a2a08d8f4f5d6c9d92a8252a8b6b487 data/minecraft/tags/item/doors.json
-954b355308b39f2b01d65ac5c21306701c726e2a data/minecraft/tags/item/enchantable/armor.json
-1707c39242de491e4a62fbce36ef88438c5c069e data/minecraft/tags/item/enchantable/chest_armor.json
-72add24a3ba56730943c7cbecef4b5f39458d315 data/minecraft/tags/item/enchantable/durability.json
-4bca7382264f13f33275b4643cb522828a1c29e3 data/minecraft/tags/item/enchantable/equippable.json
-9d18438099e257fd93a7f44307bb7a1b38826325 data/minecraft/tags/item/enchantable/foot_armor.json
-9951b6371192eb42dd4d5bf307db5c1038a31890 data/minecraft/tags/item/enchantable/head_armor.json
-92c78d002b55e68881fe67827a304c5ac9c21ca0 data/minecraft/tags/item/enchantable/leg_armor.json
+57ddc60e6a975db6eabd32e18d2d456dc3dfce34 data/minecraft/tags/item/enchantable/armor.json
+afcc90102a0ca483f90405400ee1d3729e985398 data/minecraft/tags/item/enchantable/chest_armor.json
+9a7fdf9ffe464b9a7f566ab91e6dadb51a2be9b1 data/minecraft/tags/item/enchantable/durability.json
+dcec72b169f3ac43f8f9309679196fe9581fc6ff data/minecraft/tags/item/enchantable/equippable.json
+fce008deec6e8cfd0d0806b6f18990846a01dcb1 data/minecraft/tags/item/enchantable/foot_armor.json
+dc4791298c16fdd6d8e1465349a459b787142803 data/minecraft/tags/item/enchantable/head_armor.json
+44da74bc1e1bbe7a54a3bc76120413011c15177a data/minecraft/tags/item/enchantable/leg_armor.json
 68f33931873211ee1de5bcb19f7714e2082852f4 data/minecraft/tags/item/enchantable/mace.json
-1d570d91a46447c3f3d9b7ec7b840a570b911bef data/minecraft/tags/item/enchantable/sharp_weapon.json
+01f90197271dd4c5869e0f01adbf2ca5705b9752 data/minecraft/tags/item/enchantable/sharp_weapon.json
 8997331671aa7cba8a9cb970be783438fe63873e data/minecraft/tags/item/fences.json
 7747a657bf35c413736b2132fc993249218293e2 data/minecraft/tags/item/fence_gates.json
-9f316683174230677e00bc864e6682d9d6eed86e data/minecraft/tags/item/foot_armor.json
-b872243d12a21c1f8e375b365846724ae7bbe51b data/minecraft/tags/item/head_armor.json
+35a2b1238e88fa88f1b6f1448c6164c31452f683 data/minecraft/tags/item/foot_armor.json
+ec0bb40be5f157b6274dad08b4741d5d8ee9add3 data/minecraft/tags/item/head_armor.json
 6edcba37d2555de390d6e7cf4fae15b3ce573dc6 data/minecraft/tags/item/leaves.json
-85d7045af8ce43f1a317b3db46fbfdc07123b6cf data/minecraft/tags/item/leg_armor.json
+c91279b051eddcfb27eab8acde4124d01f7c8dc9 data/minecraft/tags/item/leg_armor.json
 2a055035ec9a4f8e66e0865cf2586b8647ce7c71 data/minecraft/tags/item/logs.json
 771267b892a1213842d55bce5ac3db17984a6254 data/minecraft/tags/item/logs_that_burn.json
 eb246ec29a19a160da18d2e464bfb9abcf33cc72 data/minecraft/tags/item/pickaxes.json
@@ -43,7 +43,7 @@ c416520655ce67e3f3e70b681379639d13d7f48a data/minecraft/tags/item/saplings.json
 bbcc45f758c938a9048a87bc78085f600fae1ee8 data/minecraft/tags/item/slabs.json
 dc051d6cd6f2a6cf9880e9f6bfa44f4b9815cf33 data/minecraft/tags/item/stairs.json
 957903c4265ea628bafbfa1757928f7dcbcf31ef data/minecraft/tags/item/stone_bricks.json
-1d570d91a46447c3f3d9b7ec7b840a570b911bef data/minecraft/tags/item/swords.json
+01f90197271dd4c5869e0f01adbf2ca5705b9752 data/minecraft/tags/item/swords.json
 bd8c816b312257ab92ef16eeecaf8062f88b4dfe data/minecraft/tags/item/trapdoors.json
 016bf5130740f289f1e90f036cc5612b28225a7a data/minecraft/tags/item/walls.json
 a823f3237a2a08d8f4f5d6c9d92a8252a8b6b487 data/minecraft/tags/item/wooden_doors.json

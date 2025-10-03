@@ -13,7 +13,7 @@ public class NerfedMothicWitchArmorModel extends DefaultedEntityGeoModel<NerfedM
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(NerfedMothicWitchArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/nerfed_mothic_witch_armor.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/mothic_witch_armor.geo.json");
     }
 
     @Override

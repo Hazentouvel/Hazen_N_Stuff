@@ -166,6 +166,14 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.CREAKING_LEGGINGS.get())
                 .add(HnSItems.CREAKING_BOOTS.get())
 
+                // Chlorophyte Armor
+                .add(HnSItems.CHLOROPHYTE_HELMET.get())
+                .add(HnSItems.CHLOROPHYTE_MASK.get())
+                .add(HnSItems.CHLOROPHYTE_HEADGEAR.get())
+                .add(HnSItems.CHLOROPHYTE_CHESTPLATE.get())
+                .add(HnSItems.CHLOROPHYTE_LEGGINGS.get())
+                .add(HnSItems.CHLOROPHYTE_BOOTS.get())
+
                 /*
                 *** Blood
                  */
@@ -673,6 +681,14 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.CREAKING_LEGGINGS.get())
                 .add(HnSItems.CREAKING_BOOTS.get())
 
+                // Chlorophyte Armor
+                .add(HnSItems.CHLOROPHYTE_HELMET.get())
+                .add(HnSItems.CHLOROPHYTE_MASK.get())
+                .add(HnSItems.CHLOROPHYTE_HEADGEAR.get())
+                .add(HnSItems.CHLOROPHYTE_CHESTPLATE.get())
+                .add(HnSItems.CHLOROPHYTE_LEGGINGS.get())
+                .add(HnSItems.CHLOROPHYTE_BOOTS.get())
+
                 /*
                 *** Blood
                  */
@@ -1155,6 +1171,14 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.CREAKING_CHESTPLATE.get())
                 .add(HnSItems.CREAKING_LEGGINGS.get())
                 .add(HnSItems.CREAKING_BOOTS.get())
+
+                // Chlorophyte Armor
+                .add(HnSItems.CHLOROPHYTE_HELMET.get())
+                .add(HnSItems.CHLOROPHYTE_MASK.get())
+                .add(HnSItems.CHLOROPHYTE_HEADGEAR.get())
+                .add(HnSItems.CHLOROPHYTE_CHESTPLATE.get())
+                .add(HnSItems.CHLOROPHYTE_LEGGINGS.get())
+                .add(HnSItems.CHLOROPHYTE_BOOTS.get())
 
                 /*
                 *** Blood
@@ -1729,6 +1753,14 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.CREAKING_LEGGINGS.get())
                 .add(HnSItems.CREAKING_BOOTS.get())
 
+                // Chlorophyte Armor
+                .add(HnSItems.CHLOROPHYTE_HELMET.get())
+                .add(HnSItems.CHLOROPHYTE_MASK.get())
+                .add(HnSItems.CHLOROPHYTE_HEADGEAR.get())
+                .add(HnSItems.CHLOROPHYTE_CHESTPLATE.get())
+                .add(HnSItems.CHLOROPHYTE_LEGGINGS.get())
+                .add(HnSItems.CHLOROPHYTE_BOOTS.get())
+
                 /*
                 *** Blood
                  */
@@ -2226,6 +2258,9 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.BISHOP_OF_DECEIT_HELMET.get())
                 .add(HnSItems.NECROMANCER_HELMET.get())
                 .add(HnSItems.NAMELESS_ONE_HELMET.get())
+                .add(HnSItems.CHLOROPHYTE_HELMET.get())
+                .add(HnSItems.CHLOROPHYTE_HEADGEAR.get())
+                .add(HnSItems.CHLOROPHYTE_MASK.get())
         ;
 
         tag(ItemTags.CHEST_ARMOR)
@@ -2306,6 +2341,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.BISHOP_OF_DECEIT_CHESTPLATE.get())
                 .add(HnSItems.NECROMANCER_CHESTPLATE.get())
                 .add(HnSItems.NAMELESS_ONE_CHESTPLATE.get())
+                .add(HnSItems.CHLOROPHYTE_CHESTPLATE.get())
         ;
 
         tag(ItemTags.LEG_ARMOR)
@@ -2379,6 +2415,9 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.GECKOLIB_LEMON_GOD_LEGGINGS.get())
                 .add(HnSItems.GECKOLIB_ASCENDED_LEMON_GOD_LEGGINGS.get())
                 .add(HnSItems.ENDERMAN_LEGGINGS.get())
+                .add(HnSItems.NECROMANCER_LEGGINGS.get())
+                .add(HnSItems.NAMELESS_ONE_LEGGINGS.get())
+                .add(HnSItems.CHLOROPHYTE_LEGGINGS.get())
         ;
 
         tag(ItemTags.FOOT_ARMOR)
@@ -2452,6 +2491,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.GECKOLIB_LEMON_GOD_BOOTS.get())
                 .add(HnSItems.GECKOLIB_ASCENDED_LEMON_GOD_BOOTS.get())
                 .add(HnSItems.ENDERMAN_BOOTS.get())
+                .add(HnSItems.CHLOROPHYTE_BOOTS.get())
         ;
 
         tag(ItemTags.ARMOR_ENCHANTABLE)
@@ -2537,6 +2577,14 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.CREAKING_CHESTPLATE.get())
                 .add(HnSItems.CREAKING_LEGGINGS.get())
                 .add(HnSItems.CREAKING_BOOTS.get())
+
+                // Chlorophyte Armor
+                .add(HnSItems.CHLOROPHYTE_HELMET.get())
+                .add(HnSItems.CHLOROPHYTE_MASK.get())
+                .add(HnSItems.CHLOROPHYTE_HEADGEAR.get())
+                .add(HnSItems.CHLOROPHYTE_CHESTPLATE.get())
+                .add(HnSItems.CHLOROPHYTE_LEGGINGS.get())
+                .add(HnSItems.CHLOROPHYTE_BOOTS.get())
 
                 /*
                 *** Blood
@@ -3028,6 +3076,16 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.ASCENDED_LEMON_GOD_HELMET.get())
                 .add(HnSItems.GECKOLIB_LEMON_GOD_HELMET.get())
                 .add(HnSItems.GECKOLIB_ASCENDED_LEMON_GOD_HELMET.get())
+                .add(HnSItems.CHLOROPHYTE_HELMET.get())
+                .add(HnSItems.CHLOROPHYTE_MASK.get())
+                .add(HnSItems.CHLOROPHYTE_HEADGEAR.get())
+                .add(HnSItems.PYROMANCER_BRUTE_HELMET.get())
+                .add(HnSItems.ENDERMAN_BLINDFOLD.get())
+                .add(HnSItems.ENDERMAN_MASKED.get())
+                .add(HnSItems.ENDERMAN_HOOD.get())
+                .add(HnSItems.BISHOP_OF_DECEIT_HELMET.get())
+                .add(HnSItems.NECROMANCER_HELMET.get())
+                .add(HnSItems.NAMELESS_ONE_HELMET.get())
         ;
 
         tag(ItemTags.CHEST_ARMOR_ENCHANTABLE)
@@ -3103,6 +3161,12 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.ASCENDED_LEMON_GOD_CHESTPLATE.get())
                 .add(HnSItems.GECKOLIB_LEMON_GOD_CHESTPLATE.get())
                 .add(HnSItems.GECKOLIB_ASCENDED_LEMON_GOD_CHESTPLATE.get())
+                .add(HnSItems.CHLOROPHYTE_CHESTPLATE.get())
+                .add(HnSItems.PYROMANCER_BRUTE_CHESTPLATE.get())
+                .add(HnSItems.ENDERMAN_CHESTPLATE.get())
+                .add(HnSItems.BISHOP_OF_DECEIT_CHESTPLATE.get())
+                .add(HnSItems.NECROMANCER_CHESTPLATE.get())
+                .add(HnSItems.NAMELESS_ONE_CHESTPLATE.get())
         ;
 
         tag(ItemTags.LEG_ARMOR_ENCHANTABLE)
@@ -3175,6 +3239,9 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.ASCENDED_LEMON_GOD_LEGGINGS.get())
                 .add(HnSItems.GECKOLIB_LEMON_GOD_LEGGINGS.get())
                 .add(HnSItems.GECKOLIB_ASCENDED_LEMON_GOD_LEGGINGS.get())
+                .add(HnSItems.CHLOROPHYTE_LEGGINGS.get())
+                .add(HnSItems.NECROMANCER_LEGGINGS.get())
+                .add(HnSItems.NAMELESS_ONE_LEGGINGS.get())
         ;
 
         tag(ItemTags.FOOT_ARMOR_ENCHANTABLE)
@@ -3247,6 +3314,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.ASCENDED_LEMON_GOD_BOOTS.get())
                 .add(HnSItems.GECKOLIB_LEMON_GOD_BOOTS.get())
                 .add(HnSItems.GECKOLIB_ASCENDED_LEMON_GOD_BOOTS.get())
+                .add(HnSItems.CHLOROPHYTE_BOOTS.get())
         ;
 
 
@@ -3334,6 +3402,9 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.SKYSCORCHER.get())
                 .add(HnSItems.ANCIENT_WARRIORS_AXE.get())
                 .add(HnSItems.FIREBRAND.get())
+                .add(HnSItems.PICKAXE_AXE.get())
+                .add(HnSItems.PICKAXE_AXE_DIVINE_GOLD.get())
+                .add(HnSItems.RAVENS_BANE.get())
                 .add(HnSItems.LEGIONNAIRE_WARLOCK_AXE.get())
         ;
 
@@ -3342,6 +3413,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.FIREBLOSSOM_RAPIER.get())
                 .add(HnSItems.DRACONIC_SPLITTER.get())
                 .add(HnSItems.FIREBRAND.get())
+                .add(HnSItems.WARFLAMING_LANCE.get())
+                .add(HnSItems.RAVENS_BANE.get())
 
                 //Ice
                 .add(HnSItems.ICE_PIKE.get())
@@ -3414,6 +3487,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.FIREBLOSSOM_RAPIER.get())
                 .add(HnSItems.DRACONIC_SPLITTER.get())
                 .add(HnSItems.FIREBRAND.get())
+                .add(HnSItems.WARFLAMING_LANCE.get())
+                .add(HnSItems.RAVENS_BANE.get())
 
                 //Ice
                 .add(HnSItems.ICE_PIKE.get())

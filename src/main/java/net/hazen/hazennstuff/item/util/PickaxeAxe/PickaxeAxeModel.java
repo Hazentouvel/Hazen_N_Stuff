@@ -13,7 +13,7 @@ public class PickaxeAxeModel extends DefaultedItemGeoModel<PickaxeAxeItem> {
 
     @Override
     public ResourceLocation getModelResource(PickaxeAxeItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/pickaxe_axe.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/item/tools/pickaxe_axe.geo.json");
     }
 
     @Override

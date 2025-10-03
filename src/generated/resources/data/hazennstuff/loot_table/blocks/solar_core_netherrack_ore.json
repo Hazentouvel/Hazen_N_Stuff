@@ -26,7 +26,7 @@
                   }
                 }
               ],
-              "name": "hazennstuff:solar_core_netherack_ore"
+              "name": "hazennstuff:solar_core_netherrack_ore"
             },
             {
               "type": "minecraft:item",
@@ -48,5 +48,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "hazennstuff:blocks/solar_core_netherack_ore"
+  "random_sequence": "hazennstuff:blocks/solar_core_netherrack_ore"
 }

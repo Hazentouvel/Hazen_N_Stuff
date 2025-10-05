@@ -11,6 +11,7 @@
   "item.hazennstuff.spider_fang": "Spider Fang",
   "item.hazennstuff.prismatic_shard": "Prismatic Shard",
   "item.hazennstuff.volt_core": "Volt Core",
+  "item.hazennstuff.solar_core": "Solar Core",
 
   "item.hazennstuff.zenalite_ingot": "Zenalite Ingot",
   "item.hazennstuff.rose_gold_ingot": "Rose Gold Ingot",
@@ -64,8 +65,14 @@
 
   "item.hazennstuff.shattered": "Shattered Spirit Crystal",
   "item.hazennstuff.sacred": "Sacred Spirit Crystal",
-  "item.hazennstuff.strengthed": "Strengthed Spirit Crystal",
+  "item.hazennstuff.strengthened": "Strengthened Spirit Crystal",
   "item.hazennstuff.singularity": "Singularity Spirit Crystal",
+
+  "item.hazennstuff.energized_core_spellbook": "Energized Core Spellbook",
+  "item.hazennstuff.golden_shower_spellbook": "Golden Shower",
+
+
+  "item.hazennstuff.ring_of_effeciency": "Ring of Effeciency",
 
 
 
@@ -79,7 +86,7 @@
   "block.hazennstuff.zenalite_voidstone_ore": "Voidstone Zenalite Ore",
   "block.hazennstuff.zenalite_end_stone_ore": "Endstone Zenalite Ore",
 
-  "block.hazennstuff.solar_core_ore": "Blackstone Solar Core Ore",
+  "block.hazennstuff.solar_core_blackstone_ore": "Blackstone Solar Core Ore",
   "block.hazennstuff.solar_core_netherrack_ore": "Netherrack Solar Core Ore",
 
   "block.hazennstuff.chlorophyte_ore": "Chlorophyte Ore",
@@ -505,15 +512,15 @@
   "item.hazennstuff.soul_legionnaire_commander_leggings": "Soul Legionnaire Commander Leggings",
   "item.hazennstuff.soul_legionnaire_commander_boots": "Soul Legionnaire Commander Boots",
 
-  "item.hazennstuff.garments_of_first_flamebearer_helmet": "Tyros Hood",
-  "item.hazennstuff.garments_of_first_flamebearer_chestplate": "Tyros Chestplate",
-  "item.hazennstuff.garments_of_first_flamebearer_leggings": "Tyros Leggings",
-  "item.hazennstuff.garments_of_first_flamebearer_boots": "Tyros Boots",
+  "item.hazennstuff.garments_of_the_first_flamebearer_helmet": "Tyros Hood",
+  "item.hazennstuff.garments_of_the_first_flamebearer_chestplate": "Tyros Chestplate",
+  "item.hazennstuff.garments_of_the_first_flamebearer_leggings": "Tyros Leggings",
+  "item.hazennstuff.garments_of_the_first_flamebearer_boots": "Tyros Boots",
 
-  "item.hazennstuff.soul_garments_of_first_flamebearer_helmet": "Soul Tyros Hood",
-  "item.hazennstuff.soul_garments_of_first_flamebearer_chestplate": "Soul Tyros Chestplate",
-  "item.hazennstuff.soul_garments_of_first_flamebearer_leggings": "Soul Tyros Leggings",
-  "item.hazennstuff.soul_garments_of_first_flamebearer_boots": "Soul Tyros Boots",
+  "item.hazennstuff.soul_garments_of_the_first_flamebearer_helmet": "Soul Tyros Hood",
+  "item.hazennstuff.soul_garments_of_the_first_flamebearer_chestplate": "Soul Tyros Chestplate",
+  "item.hazennstuff.soul_garments_of_the_first_flamebearer_leggings": "Soul Tyros Leggings",
+  "item.hazennstuff.soul_garments_of_the_first_flamebearer_boots": "Soul Tyros Boots",
 
   "item.hazennstuff.neru_helmet": "Neru's Hair",
   "item.hazennstuff.neru_chestplate": "Neru's Dress",
@@ -635,6 +642,27 @@
 
 
 
+  "entity.hazennstuff.brimstone_hellblast": "Brimstone Hellblast",
+
+  "entity.hazennstuff.ice_arrow": "Ice Arrow",
+  "entity.hazennstuff.crystal_volley": "Crystal Volley",
+
+  "entity.hazennstuff.energy_burst": "Energy Burst",
+
+  "entity.hazennstuff.thorn_chakram": "Thorn Chakram",
+  "entity.hazennstuff.spider_lily": "Spider Lily",
+
+  "entity.hazennstuff.ichor_stream": "Stream of Ichor",
+
+  "entity.hazennstuff.spectral_axe": "Spectral Axe",
+
+  "entity.hazennstuff.syringe": "Syringe",
+
+  "entity.hazennstuff.nights_edge_strike": "Night's Edge Slash",
+
+  "entity.hazennstuff.soul_seekers": "Soul Seekers",
+
+
   "spell.hazennstuff.brimstone_hellblast": "Brimstone Hellblast",
   "spell.hazennstuff.cinderous_step": "Cinderous Step",
 
@@ -644,11 +672,18 @@
   "spell.hazennstuff.energy_burst": "Energy Burst",
 
   "spell.hazennstuff.thorn_chakram": "Thorn Chakram",
+  "spell.hazennstuff.counterspell_spider_lily": "Spider Lily Counterspell",
+
+  "spell.hazennstuff.golden_shower": "Golden Shower",
+
+  "spell.hazennstuff.spectral_axe": "Spectral Axe",
 
   "spell.hazennstuff.syringe_barrage": "Syringe Barrage",
 
   "spell.hazennstuff.chaotic_teleport": "Chaotic Teleport",
   "spell.hazennstuff.nights_edge_strike": "Night's Edge Strike",
+
+  "spell.hazennstuff.soul_seekers": "Soul Seekers",
 
 
 
@@ -661,11 +696,18 @@
   "spell.hazennstuff.energy_burst.guide": "A Calamity Fables Reference ''Fire a burst of electrifying energy balls, leaving your enemies shocked.''",
 
   "spell.hazennstuff.thorn_chakram.guide": "A Terraria Reference ''Throw the Thorn Chakram at your foes and watch as it ricochets from the walls and your enemies.''",
+  "spell.hazennstuff.counterspell_spider_lily.guide": "Return your opponent's spells back to the soil of the earth.",
+
+  "spell.hazennstuff.golden_shower.guide": "A Terraria Reference ''Sprays a shower of ichor. Decreases target's defense''",
+
+  "spell.hazennstuff.spectral_axe.guide": "Throw a spectral axe, imbued with arcane magic, and strike down your foes.",
 
   "spell.hazennstuff.syringe_barrage.guide": "A Calamity Fables Reference ''Landing all 3 shots infects the target. Infected enemies erupt into mana-rich mushrooms on death, spreading the infection to nearby monsters.''",
 
   "spell.hazennstuff.chaotic_teleport.guide": "A Terraria Reference ''Teleports you to the position of the mouse.''",
   "spell.hazennstuff.nights_edge_strike.guide": "A Terraria Reference ''Strike your foes with the strike of the Night's Edge.''",
+
+  "spell.hazennstuff.soul_seekers.guide": "The reapers have come to claim the souls of your foes. Cast upon the 3 heads of the Soul Seekers to nullify your opponent's magic.",
 
 
 
@@ -678,6 +720,7 @@
   "effect.hazennstuff.dryads_blessing": "Dryad's Blessing",
   "effect.hazennstuff.infested": "Infested",
   "effect.hazennstuff.spores": "Spores",
+  "effect.hazennstuff.ichor": "Ichor",
 
   "effect.hazennstuff.tyrants_grace.description": "Recieve the Flamebearer's Tyrannical enhancement, increases your attack and damage by 1, and your cast movement speed by 20% and fire spellpower by 12%.",
   "effect.hazennstuff.fireblossom_ruler.description": "Reign over the lands as your cast movement speed increases by 15% and spell resist increases by 10%.",
@@ -687,6 +730,7 @@
   "effect.hazennstuff.dryads_blessing.description": "Blessed by the Dryad, your defence increases as you recieve more healing and enable overheal.",
   "effect.hazennstuff.infested.description": "The spores grow within your body...",
   "effect.hazennstuff.spores.description": "You wither away as the spores in your body sap away at your health.",
+  "effect.hazennstuff.ichor.description": "''Eww...'' Reduces your defence and spell resistance.",
 
 
   "creativetab.hazennstuff.hazennstuff_materials": "Hazen 'n Stuff Materials",
@@ -694,6 +738,9 @@
   "creativetab.hazennstuff.hazennstuff_utility": "Hazen 'n Stuff Utility",
   "creativetab.hazennstuff.hazennstuff_equipment": "Hazen 'n Stuff Equipment",
 
+
+  "school.hazennstuff.radiance": "Radiance",
+  "school.hazennstuff.shadow": "Shadow",
 
   "attribute.hazennstuff.radiance_spell_power": "Radiance Spell Power",
   "attribute.hazennstuff.radiance_spell_resist": "Radiance Spell Power",
@@ -708,6 +755,8 @@
   "material.hazennstuff.solar_core": "Solar Core",
   "material.hazennstuff.steel": "Steel",
   "material.hazennstuff.zenalite": "Zenalite",
+  "material.hazennstuff.volt_core": "Volt Core",
+  "material.hazennstuff.permafrost_shard": "Permafrost Shard",
   "material.hazennstuff.rune_archery": "Archery Rune",
   "material.hazennstuff.rune_health": "Health Rune",
   "material.hazennstuff.rune_melee": "Melee Rune",

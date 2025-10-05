@@ -1,7 +1,11 @@
-package net.hazen.hazennstuff.registries;
+package net.hazen.hazennstuff.spells;
 
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.spells.eldritch.SoulSeekersSpell;
+import net.hazen.hazennstuff.spells.evocation.SpectralAxeSpell;
+import net.hazen.hazennstuff.spells.holy.GoldenShowerSpell;
+import net.hazen.hazennstuff.spells.nature.CounterspellSpiderLilySpell;
 import net.hazen.hazennstuff.spells.shadow.NightsEdgeStrikeSpell;
 import net.hazen.hazennstuff.spells.shadow.ChaoticTeleportSpell;
 import net.hazen.hazennstuff.spells.fire.BrimstoneHellblastSpell;
@@ -66,8 +70,25 @@ public class HnSSpellRegistries {
     *** Nature
      */
 
-//Energy Burst
+    //Thorn Chakram
     public static final Supplier<AbstractSpell> THORN_CHAKRAM = registerSpell(new ThornChakramSpell());
+
+    //Counter Spell Spider Lily
+    public static final Supplier<AbstractSpell> COUNTERSPELL_SPIDER_LILY = registerSpell(new CounterspellSpiderLilySpell());
+
+    /*
+    *** Evocation
+     */
+
+    //Spectral Axe
+    public static final Supplier<AbstractSpell> SPECTRAL_AXE = registerSpell(new SpectralAxeSpell());
+
+    /*
+     *** Holy
+     */
+
+    // Golden Shower
+    public static final Supplier<AbstractSpell> GOLDEN_SHOWER = registerSpell(new GoldenShowerSpell());
 
 
 
@@ -87,6 +108,15 @@ public class HnSSpellRegistries {
 
     //Chaotic Teleport
     public static final Supplier<AbstractSpell> CHAOTIC_TELEPORT = registerSpell(new ChaoticTeleportSpell());
+
+
+    /*
+     *** Eldritch
+     */
+
+    // Soul Seekers
+    public static final Supplier<AbstractSpell> SOUL_SEEKERS = registerSpell(new SoulSeekersSpell());
+
 
 
     public static void register(IEventBus eventBus)

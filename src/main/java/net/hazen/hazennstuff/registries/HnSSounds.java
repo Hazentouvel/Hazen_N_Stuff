@@ -74,6 +74,14 @@ public class HnSSounds {
 
     public static DeferredHolder<SoundEvent, SoundEvent> VAMPIRE_KNIFE_HIT = registerSoundEvent("vampire_knife_hit");
 
+    // Vampire Knife Throw
+    public static DeferredHolder<SoundEvent, SoundEvent> GOLDEN_SHOWER_CAST = registerSoundEvent("golden_shower_cast");
+
+
+
+    /*
+    *** Melee Sounds
+     */
 
     //Terrablade Slash
     public static DeferredHolder<SoundEvent, SoundEvent> TERRABLADE_SLASH = registerSoundEvent("terrablade_slash");

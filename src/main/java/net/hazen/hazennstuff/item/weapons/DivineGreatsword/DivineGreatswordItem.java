@@ -5,7 +5,7 @@ import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.DivineRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -21,12 +21,12 @@ public class DivineGreatswordItem extends MagicSwordItem implements GeoItem {
 
     public DivineGreatswordItem() {
         super(
-                HNSExtendedWeaponsTiers.DIVINE_GREATSWORD,
+                HnSExtendedWeaponsTiers.DIVINE_GREATSWORD,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(DivineRarity.DIVINE_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.DIVINE_GREATSWORD)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.DIVINE_GREATSWORD)
                         ),
                 SpellDataRegistryHolder.of(
                         new SpellDataRegistryHolder(SpellRegistry.DIVINE_SMITE_SPELL, 8)

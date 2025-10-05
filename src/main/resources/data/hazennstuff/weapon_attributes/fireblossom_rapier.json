@@ -11,7 +11,7 @@
         "upswing": 0.2,
         "animation": "bettercombat:one_handed_stab",
         "swing_sound": {
-          "id": "bettercombat:claymore_stab"
+          "id": "irons_spellbooks:spell.flaming_strike.cast"
         }
       },
       {
@@ -21,7 +21,7 @@
         "upswing": 0.2,
         "animation": "bettercombat:two_handed_stab_left",
         "swing_sound": {
-          "id": "bettercombat:claymore_stab"
+          "id": "irons_spellbooks:spell.flaming_strike.cast"
         }
       },
       {
@@ -31,17 +31,17 @@
         "upswing": 0.2,
         "animation": "bettercombat:one_handed_stab",
         "swing_sound": {
-          "id": "bettercombat:claymore_stab"
+          "id": "irons_spellbooks:spell.flaming_strike.cast"
         }
       },
       {
-        "hitbox": "HORIZONTAL_PLANE",
+        "hitbox": "FORWARD_BOX",
         "damage_multiplier": 1,
-        "angle": 150,
+        "angle": 0,
         "upswing": 0.2,
-        "animation": "bettercombat:one_handed_slash_switch_blade_right",
+        "animation": "bettercombat:one_handed_stab",
         "swing_sound": {
-          "id": "bettercombat:claymore_stab"
+          "id": "irons_spellbooks:spell.flaming_strike.cast"
         }
       }
     ]

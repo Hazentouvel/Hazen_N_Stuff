@@ -38,7 +38,6 @@ import java.util.Map;
 
 public class GarmentsOfTheFirstFlamebearerChestplateArmorItem extends ImbuableGeckolibHnSArmorItem {
     public GarmentsOfTheFirstFlamebearerChestplateArmorItem(Type type, Properties settings) {
-        // Add in your armor tier + additional attributes for your item
         super(HnSArmorMaterials.TYROS_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, .20, AttributeModifier.Operation.ADD_VALUE),
@@ -56,8 +55,6 @@ public class GarmentsOfTheFirstFlamebearerChestplateArmorItem extends ImbuableGe
     }
 
 
-    // Just supply the armor model here; you don't have to worry about making a new renderer
-    // ISS already has a custom renderer used for armor models
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {

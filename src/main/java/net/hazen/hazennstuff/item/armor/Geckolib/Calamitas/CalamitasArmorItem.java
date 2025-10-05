@@ -55,9 +55,6 @@ public class CalamitasArmorItem extends ImbuableGeckolibHnSArmorItem implements 
             player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
         }
     }
-
-    // Just supply the armor model here; you don't have to worry about making a new renderer
-    // ISS already has a custom renderer used for armor models
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
@@ -66,7 +63,7 @@ public class CalamitasArmorItem extends ImbuableGeckolibHnSArmorItem implements 
 
     private boolean isWearingFullSet(Player player) {
         return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof CalamitasArmorItem &&
-                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof CalamitasArmorItem &&
+                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof CalamitasChestplateArmorItem &&
                 player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof CalamitasArmorItem &&
                 player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof CalamitasArmorItem;
     }

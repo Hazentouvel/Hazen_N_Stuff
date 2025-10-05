@@ -11,8 +11,8 @@
   "bonusParameters": {
     "irons_jewelry:attribute": {
       "attribute": "minecraft:generic.armor",
-      "amount": 0.10,
-      "operation": "add_multiplied_total"
+      "amount": 2,
+      "operation": "add_value"
     },
     "irons_jewelry:positive_effect": {
       "effect": "minecraft:resistance"

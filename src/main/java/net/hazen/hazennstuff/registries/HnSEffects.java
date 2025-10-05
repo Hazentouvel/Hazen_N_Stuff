@@ -81,6 +81,23 @@ public class HnSEffects {
                     AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
+    public static final DeferredHolder<MobEffect, MobEffect> ICHOR = MOB_EFFECTS.register("ichor", () -> new IchorEffect(MobEffectCategory.HARMFUL, 3311322)
+            .addAttributeModifier(Attributes.ARMOR,
+                    HazenNStuff.id("ichor"),
+                    IchorEffect.DEFENSE_LOWERED_PER_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+
+            .addAttributeModifier(AttributeRegistry.SPELL_RESIST,
+                    HazenNStuff.id("ichor"),
+                    IchorEffect.SPELL_VULNERABILITY_PER_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+
+            .addAttributeModifier(Attributes.ARMOR_TOUGHNESS,
+                    HazenNStuff.id("ichor"),
+                    IchorEffect.REDUCED_TOUGHNESS_PER_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
     public static final DeferredHolder<MobEffect, MobEffect> DRYADS_BLESSING = MOB_EFFECTS.register("dryads_blessing", () -> new DryadsBlessingEffect(MobEffectCategory.BENEFICIAL, 3311322)
             .addAttributeModifier(Attributes.ARMOR,
                     HazenNStuff.id("dryads_blessing"),
@@ -103,6 +120,9 @@ public class HnSEffects {
 
     public static final DeferredHolder<MobEffect, MobEffect> SPORES = MOB_EFFECTS.register("spores",
             () -> new SporeEffect(MobEffectCategory.HARMFUL, 0x2E2EFF));
+
+    public static final DeferredHolder<MobEffect, MobEffect> ELECTROCUTED = MOB_EFFECTS.register("electrocuted",
+            () -> new ElectrocutedEffect(MobEffectCategory.HARMFUL, 0x2E2EFF));
 
 
     public static void register(IEventBus eventBus) {

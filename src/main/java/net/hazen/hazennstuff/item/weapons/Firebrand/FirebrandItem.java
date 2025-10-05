@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.item.weapons.Firebrand;
 
+import io.redspace.ironsspellbooks.api.events.ModifySpellLevelEvent;
 import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
@@ -8,12 +9,18 @@ import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.item.weapons.Excalibur.HazenStyle.HazensExcaliburItem;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.FlamingRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
@@ -30,12 +37,12 @@ public class FirebrandItem extends MagicSwordItem implements GeoItem {
 
     public FirebrandItem() {
         super(
-                HNSExtendedWeaponsTiers.DRACONIC_SPLITTER,
+                HnSExtendedWeaponsTiers.FIREBRAND,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.DRACONIC_SPLITTER)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.FIREBRAND)
                         ),
                 SpellDataRegistryHolder.of(
                         new SpellDataRegistryHolder(SpellRegistry.FIRE_BREATH_SPELL, 10)
@@ -102,5 +109,29 @@ public class FirebrandItem extends MagicSwordItem implements GeoItem {
         itemStack.set(ComponentRegistry.AFFINITY_COMPONENT, new AffinityData(Map.of(
                 SpellRegistry.FLAMING_STRIKE_SPELL.get().getSpellResource(), 1
         )));
+    }
+
+    @EventBusSubscriber(modid = HazenNStuff.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public class SpellEvents {
+
+        @SubscribeEvent
+        public static void onModifySpellLevel(ModifySpellLevelEvent event) {
+            LivingEntity caster = event.getEntity();
+            if (caster == null) return;
+
+            if (event.getSpell() != SpellRegistry.FLAMING_STRIKE_SPELL.get()) {
+                return;
+            }
+
+            ItemStack mainHand = caster.getMainHandItem();
+            ItemStack offHand = caster.getOffhandItem();
+
+            boolean usingKnives = mainHand.getItem() instanceof FirebrandItem ||
+                    offHand.getItem() instanceof FirebrandItem;
+
+            if (usingKnives) {
+                event.addLevels(1);
+            }
+        }
     }
 }

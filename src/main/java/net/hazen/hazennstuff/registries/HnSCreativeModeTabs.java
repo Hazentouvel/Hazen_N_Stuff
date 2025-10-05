@@ -836,6 +836,10 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.ABOMINATION.get());
                         output.accept(HnSItems.ABSOLUTE.get());
 
+                        //Spellbooks
+                        output.accept(HnSItems.GOLDEN_SHOWER_SPELLBOOK.get());
+                        output.accept(HnSItems.ENERGIZED_CORE_SPELLBOOK.get());
+
                         //Misc
                         output.accept(HnSItems.RING_OF_EFFECIENCY.get());
 

@@ -1,5 +1,5 @@
 {
-  "credit": "Made by Hazen",
+  "credit": "Made with Blockbench",
   "parent": "builtin/entity",
   "texture_size": [
     64,
@@ -9,28 +9,40 @@
     "thirdperson_righthand": {
       "rotation": [
         0,
-        -90,
+        90,
         0
       ],
       "translation": [
         0,
-        -6.75,
+        -8,
         0
       ]
     },
     "thirdperson_lefthand": {
       "rotation": [
         0,
+        -90,
+        0
+      ],
+      "translation": [
+        0,
+        -8,
+        0
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
         90,
         0
       ],
       "translation": [
         0,
-        -6.75,
+        -8,
         0
       ]
     },
-    "firstperson_righthand": {
+    "firstperson_lefthand": {
       "rotation": [
         0,
         -90,
@@ -38,20 +50,15 @@
       ],
       "translation": [
         0,
-        -2,
+        -8,
         0
       ]
     },
-    "firstperson_lefthand": {
-      "rotation": [
-        0,
-        90,
-        0
-      ],
-      "translation": [
-        0,
-        -2,
-        0
+    "ground": {
+      "scale": [
+        0.5,
+        0.5,
+        0.5
       ]
     },
     "gui": {
@@ -61,32 +68,25 @@
         -45
       ],
       "translation": [
-        -3.75,
-        -5.75,
+        -6.25,
+        -4.5,
         0
       ],
       "scale": [
-        0.8,
-        0.8,
-        0.8
-      ]
-    },
-    "head": {
-      "rotation": [
-        0,
-        -90,
-        0
+        0.57,
+        0.57,
+        0.57
       ]
     },
     "fixed": {
       "translation": [
         0,
-        -8,
-        0
+        -13.5,
+        -0.5
       ]
     }
   },
   "textures": {
-    "particle": "item/ancient_warriors_axe"
+    "particle": "item/ancient_warriors_axe_reprised"
   }
 }

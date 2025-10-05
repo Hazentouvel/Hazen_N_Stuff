@@ -1,31 +1,46 @@
 package net.hazen.hazennstuff.entity.spells.fire.brimstone_hellblast;
 
+import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
+import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
+import io.redspace.ironsspellbooks.config.ServerConfigs;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
+import io.redspace.ironsspellbooks.network.particles.FieryExplosionParticlesPacket;
+import io.redspace.ironsspellbooks.registries.EntityRegistry;
+import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.registries.HnSSounds;
-import net.hazen.hazennstuff.registries.HnSSpellRegistries;
+import net.hazen.hazennstuff.spells.HnSSpellRegistries;
 import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.level.Explosion;
+import net.minecraft.world.level.ExplosionDamageCalculator;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.level.ExplosionEvent;
+import net.neoforged.neoforge.network.PacketDistributor;
 import software.bernie.geckolib.animatable.GeoAnimatable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
-
+import java.util.List;
 import java.util.Optional;
+import net.minecraft.world.level.ClipContext.Fluid;
 
 public class BrimstoneHellblast extends AbstractMagicProjectile implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
@@ -35,20 +50,9 @@ public class BrimstoneHellblast extends AbstractMagicProjectile implements GeoEn
         this.setNoGravity(true);
     }
 
-    public BrimstoneHellblast(Level level, LivingEntity shooter)
-    {
-        this(HnSEntityRegistry.BRIMSTONE_HELLBLAST.get(), level);
-        setOwner(shooter);
-    }
-
-    @Override
-    public void travel() {
-        this.setPos(this.position().add(this.getDeltaMovement()));
-        if (!this.isNoGravity())
-        {
-            Vec3 vec3 = this.getDeltaMovement();
-            this.setDeltaMovement(vec3.x, vec3.y - 0.05000000074505806, vec3.z);
-        }
+    public BrimstoneHellblast(Level pLevel, LivingEntity pShooter) {
+        this((EntityType) HnSEntityRegistry.BRIMSTONE_HELLBLAST.get(), pLevel);
+        this.setOwner(pShooter);
     }
 
     public void setRotation(float x, float y) {
@@ -58,41 +62,27 @@ public class BrimstoneHellblast extends AbstractMagicProjectile implements GeoEn
         this.yRotO = y;
     }
 
-    @Override
-    public void tick() {
-        // Save previous rotation for interpolation
-        this.xRotO = this.getXRot();
-        this.yRotO = this.getYRot();
-
-        Vec3 deltaMovement = getDeltaMovement();
-        double distance = deltaMovement.horizontalDistance();
-
-
-
-        float newYRot = (float) (Mth.atan2(deltaMovement.x, deltaMovement.z) * (180F / Math.PI));
-        float newXRot = (float) (Mth.atan2(deltaMovement.y, distance) * (180F / Math.PI));
-
-        float maxDelta = 20f; // max degrees per tick
-        this.setYRot(Mth.approachDegrees(this.yRotO, newYRot, maxDelta));
-        this.setXRot(Mth.approachDegrees(this.xRotO, newXRot, maxDelta));
-
-        super.tick();
-    }
-
-    @Override
     public void trailParticles() {
-        for (int i = 0; i < 1; i++) {
-            double speed = .05;
-            double dx = Utils.random.nextDouble() * 2 * speed - speed;
-            double dy = Utils.random.nextDouble() * 2 * speed - speed;
-            double dz = Utils.random.nextDouble() * 2 * speed - speed;
-            level().addParticle(Utils.random.nextDouble() < .3 ? ParticleTypes.CAMPFIRE_SIGNAL_SMOKE : ParticleTypes.FLAME, this.getX() + dx, this.getY() + dy, this.getZ() + dz, dx, dy, dz);
+        Vec3 vec3 = this.getDeltaMovement();
+        double d0 = this.getX() - vec3.x;
+        double d1 = this.getY() - vec3.y;
+        double d2 = this.getZ() - vec3.z;
+        int count = Mth.clamp((int)(vec3.lengthSqr() * (double)2.0F), 1, 4);
+
+        for(int i = 0; i < count; ++i) {
+            Vec3 random = Utils.getRandomVec3((double)(this.getBbHeight() * 0.2F));
+            float f = (float)i / (float)count;
+            double x = Mth.lerp((double)f, d0, this.getX() + vec3.x);
+            double y = Mth.lerp((double)f, d1, this.getY() + vec3.y);
+            double z = Mth.lerp((double)f, d2, this.getZ() + vec3.z);
+            this.level().addParticle(ParticleHelper.FIERY_SMOKE, true, x - random.x, y + (double)(this.getBbHeight() * 0.5F) - random.y, z - random.z, (double)0.0F, (double)0.0F, (double)0.0F);
         }
+
     }
 
     @Override
     public void impactParticles(double x, double y, double z) {
-        MagicManager.spawnParticles(this.level(), ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, x, y, z, 5, .1, .1, .1, .25, true);
+        MagicManager.spawnParticles(this.level(), ParticleHelper.FIERY_SMOKE, x, y, z, 5, .1, .1, .1, .25, true);
     }
 
     @Override
@@ -100,7 +90,6 @@ public class BrimstoneHellblast extends AbstractMagicProjectile implements GeoEn
         return 1.4f;
     }
 
-    @Override
     public Optional<Holder<SoundEvent>> getImpactSound() {
         return Optional.of(HnSSounds.BRIMSTONE_HELLBLAST_IMPACT);
     }
@@ -110,71 +99,40 @@ public class BrimstoneHellblast extends AbstractMagicProjectile implements GeoEn
         level().playSound(null, getX(), getY(), getZ(), sound, SoundSource.NEUTRAL, 1.5f, 1.0f);
     }
 
-//    @Override
-//    protected void onHit(HitResult hitResult) {
-//        if (!this.level().isClientSide) {
-//            impactParticles(xOld, yOld, zOld);
-//            float explosionRadius = getExplosionRadius();
-//            var explosionRadiusSqr = explosionRadius * explosionRadius;
-//            var entities = level().getEntities(this, this.getBoundingBox().inflate(explosionRadius));
-//            Vec3 losPoint = Utils.raycastForBlock(level(), this.position(), this.position().add(0, 2, 0), ClipContext.Fluid.NONE).getLocation();
-//            for (Entity entity : entities) {
-//                double distanceSqr = entity.distanceToSqr(hitResult.getLocation());
-//                if (distanceSqr < explosionRadiusSqr && canHitEntity(entity) && Utils.hasLineOfSight(level(), losPoint, entity.getBoundingBox().getCenter(), true)) {
-//                    double p = (1 - distanceSqr / explosionRadiusSqr);
-//                    float damage = (float) (this.damage * p);
-//                    DamageSources.applyDamage(entity, damage, HnSSpellRegistries.BRIMSTONE_HELLBLAST.get().getDamageSource(this, getOwner()));
-//                }
-//            }
-//            if (ServerConfigs.SPELL_GREIFING.get()) {
-//                Explosion explosion = new Explosion(
-//                        level(),
-//                        null,
-//                        HnSSpellRegistries.BRIMSTONE_HELLBLAST.get().getDamageSource(this, getOwner()),
-//                        null,
-//                        this.getX(), this.getY(), this.getZ(),
-//                        this.getExplosionRadius() / 2,
-//                        true,
-//                        Explosion.BlockInteraction.DESTROY,
-//                        ParticleTypes.EXPLOSION,
-//                        ParticleTypes.EXPLOSION_EMITTER,
-//                        SoundEvents.GENERIC_EXPLODE);
-//                if (!NeoForge.EVENT_BUS.post(new ExplosionEvent.Start(level(), explosion)).isCanceled()) {
-//                    explosion.explode();
-//                    explosion.finalizeExplosion(false);
-//                }
-//            }
-//            PacketDistributor.sendToPlayersTrackingEntity(this, new FieryExplosionParticlesPacket(hitResult.getLocation().subtract(getDeltaMovement().scale(0.5)), getExplosionRadius()));
-//            playSound(HnSSounds.BRIMSTONE_HELLBLAST_IMPACT.value(), 4.0F, (1.0F + (this.level().random.nextFloat() - this.level().random.nextFloat()) * 0.2F) * 0.7F);
-//            this.discard();
-//        }
-//    }
+    protected void onHit(HitResult hitResult) {
+        if (!this.level().isClientSide) {
+            this.impactParticles(this.xOld, this.yOld, this.zOld);
+            float explosionRadius = this.getExplosionRadius();
+            float explosionRadiusSqr = explosionRadius * explosionRadius;
+            List<Entity> entities = this.level().getEntities(this, this.getBoundingBox().inflate((double)explosionRadius));
+            Vec3 losPoint = Utils.raycastForBlock(this.level(), this.position(), this.position().add((double)0.0F, (double)2.0F, (double)0.0F), Fluid.NONE).getLocation();
 
-    @Override
-    protected void onHitEntity(EntityHitResult pResult) {
-        var target = pResult.getEntity();
+            for(Entity entity : entities) {
+                double distanceSqr = entity.distanceToSqr(hitResult.getLocation());
+                if (distanceSqr < (double)explosionRadiusSqr && this.canHitEntity(entity) && Utils.hasLineOfSight(this.level(), losPoint, entity.getBoundingBox().getCenter(), true)) {
+                    double p = (double)1.0F - distanceSqr / (double)explosionRadiusSqr;
+                    float damage = (float)((double)this.damage * p);
+                    DamageSources.applyDamage(entity, damage, ((AbstractSpell)HnSSpellRegistries.BRIMSTONE_HELLBLAST.get()).getDamageSource(this, this.getOwner()));
+                }
+            }
 
-        DamageSources.applyDamage(target, damage,
-                HnSSpellRegistries.BRIMSTONE_HELLBLAST.get().getDamageSource(this, getOwner()));
+            if ((Boolean)ServerConfigs.SPELL_GREIFING.get()) {
+                Explosion explosion = new Explosion(this.level(), (Entity)null, ((AbstractSpell)HnSSpellRegistries.BRIMSTONE_HELLBLAST.get()).getDamageSource(this, this.getOwner()), (ExplosionDamageCalculator)null, this.getX(), this.getY(), this.getZ(), this.getExplosionRadius() / 2.0F, true,
+                        Explosion.BlockInteraction.DESTROY,
+                        ParticleTypes.EXPLOSION,
+                        ParticleTypes.EXPLOSION_EMITTER,
+                        HnSSounds.BRIMSTONE_HELLBLAST_IMPACT);
+                if (!((ExplosionEvent.Start)NeoForge.EVENT_BUS.post(new ExplosionEvent.Start(this.level(), explosion))).isCanceled()) {
+                    explosion.explode();
+                    explosion.finalizeExplosion(false);
+                }
+            }
 
-        level().playSound(null, getX(), getY(), getZ(),
-                HnSSounds.BRIMSTONE_HELLBLAST_IMPACT.get(), SoundSource.NEUTRAL, 2.0f, 1.0f);
+            PacketDistributor.sendToPlayersTrackingEntity(this, new FieryExplosionParticlesPacket(hitResult.getLocation().subtract(this.getDeltaMovement().scale((double)0.5F)), this.getExplosionRadius()), new CustomPacketPayload[0]);
+            this.playSound((SoundEvent)HnSSounds.BRIMSTONE_HELLBLAST_IMPACT.value(), 4.0F, (1.0F + (this.level().random.nextFloat() - this.level().random.nextFloat()) * 0.2F) * 0.7F);
+            this.discard();
+        }
 
-        level().explode(this, this.getX(), this.getY(), this.getZ(), 4.0f, false, Level.ExplosionInteraction.NONE);
-
-        discard();
-    }
-
-    @Override
-    protected void onHitBlock(BlockHitResult pResult) {
-        super.onHitBlock(pResult);
-
-        level().explode(this, this.getX(), this.getY(), this.getZ(), 4.0f, false, Level.ExplosionInteraction.NONE);
-
-        level().playSound(null, getX(), getY(), getZ(),
-                HnSSounds.BRIMSTONE_HELLBLAST_IMPACT.get(), SoundSource.NEUTRAL, 2.0f, 1.0f);
-
-        discard();
     }
 
     //ANIMATION

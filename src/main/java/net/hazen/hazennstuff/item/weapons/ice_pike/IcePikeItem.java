@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.item.weapons.ice_pike;
 
+import io.redspace.ironsspellbooks.api.events.ModifySpellLevelEvent;
 import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
@@ -7,10 +8,16 @@ import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.item.weapons.Excalibur.HazenStyle.HazensExcaliburItem;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.CryogenicRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -25,12 +32,12 @@ public class IcePikeItem extends MagicSwordItem implements GeoItem {
 
     public IcePikeItem() {
         super(
-                HNSExtendedWeaponsTiers.ICE_PIKE,
+                HnSExtendedWeaponsTiers.ICE_PIKE,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(CryogenicRarity.CRYOGENIC_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.ICE_PIKE)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.ICE_PIKE)
                         ),
                 SpellDataRegistryHolder.of(
                         new SpellDataRegistryHolder(SpellRegistry.ICE_SPIKES_SPELL, 8)
@@ -87,5 +94,29 @@ public class IcePikeItem extends MagicSwordItem implements GeoItem {
         itemStack.set(ComponentRegistry.AFFINITY_COMPONENT, new AffinityData(Map.of(
                 SpellRegistry.ICE_SPIKES_SPELL.get().getSpellResource(), 1
         )));
+    }
+
+    @EventBusSubscriber(modid = HazenNStuff.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public class SpellEvents {
+
+        @SubscribeEvent
+        public static void onModifySpellLevel(ModifySpellLevelEvent event) {
+            LivingEntity caster = event.getEntity();
+            if (caster == null) return;
+
+            if (event.getSpell() != SpellRegistry.ICE_SPIKES_SPELL.get()) {
+                return;
+            }
+
+            ItemStack mainHand = caster.getMainHandItem();
+            ItemStack offHand = caster.getOffhandItem();
+
+            boolean usingKnives = mainHand.getItem() instanceof IcePikeItem ||
+                    offHand.getItem() instanceof IcePikeItem;
+
+            if (usingKnives) {
+                event.addLevels(1);
+            }
+        }
     }
 }

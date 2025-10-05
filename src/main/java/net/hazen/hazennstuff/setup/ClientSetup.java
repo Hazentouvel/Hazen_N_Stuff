@@ -13,6 +13,9 @@ import net.hazen.hazennstuff.entity.mobs.wizards.Evil.PiglinPyromancer.PiglinPyr
 import net.hazen.hazennstuff.entity.mobs.wizards.Evil.ServantsOfEnder.ServantsOfEnderRenderer;
 import net.hazen.hazennstuff.entity.mobs.wizards.Good.TheRecluse.TheRecluseRenderer;
 import net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife.LifestealKnifeRenderer;
+import net.hazen.hazennstuff.entity.spells.eldritch.soul_seeker.SoulSeekerRenderer;
+import net.hazen.hazennstuff.entity.spells.evocation.spectral_axe.SpectralRenderer;
+import net.hazen.hazennstuff.entity.spells.nature.spider_lily.SpiderLilyRenderer;
 import net.hazen.hazennstuff.entity.spells.shadow.nights_edge_strike.NightsEdgeStrikeRenderer;
 import net.hazen.hazennstuff.entity.spells.fire.brimstone_hellblast.BrimstoneHellblastRenderer;
 import net.hazen.hazennstuff.entity.spells.ice.ice_arrow.IceArrowRenderer;
@@ -22,6 +25,7 @@ import net.hazen.hazennstuff.entity.spells.radiance.syringe.SyringeRenderer;
 import net.hazen.hazennstuff.entity.spells.nature.thorn_chakram.ThornChakramRenderer;
 import net.hazen.hazennstuff.registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.registries.HnSParticleRegistry;
+import net.hazen.hazennstuff.registries.particle.LeafParticle.LeafParticle;
 import net.hazen.hazennstuff.registries.particle.MushroomParticle;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.neoforged.api.distmarker.Dist;
@@ -48,6 +52,9 @@ public class ClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.THORN_CHAKRAM.get(), ThornChakramRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.ICE_ARROW.get(), IceArrowRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.CRYSTAL_VOLLEY.get(), CrystalVolleyRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.SPECTRAL_AXE.get(), SpectralRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.SOUL_SEEKER.get(), SoulSeekerRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.SPIDER_LILY.get(), SpiderLilyRenderer::new);
 
 
         /*
@@ -72,12 +79,14 @@ public class ClientSetup {
          */
 
         event.registerEntityRenderer(HnSEntityRegistry.ICE_CLOUD.get(), NoopRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.ICHOR_STREAM.get(), NoopRenderer::new);
     }
 
     @SubscribeEvent
     public static void registerParticles(RegisterParticleProvidersEvent event)
     {
         event.registerSpriteSet(HnSParticleRegistry.MUSHROOM_PARTICLE.get(), MushroomParticle.Provider::new);
+        event.registerSpriteSet(HnSParticleRegistry.LEAF_PARTICLE.get(), LeafParticle.Provider::new);
     }
 
 }

@@ -1,7 +1,7 @@
 {
   "order": 6,
   "size": 1,
-  "icon": "hazennstuff:slot/mana_crystal",
+  "icon": "hazennstuff:slot/crystal",
   "add_cosmetic": false,
   "operation": "SET",
   "render_toggle": true,

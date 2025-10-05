@@ -1,34 +1,45 @@
 package net.hazen.hazennstuff.item.weapons.vampire_knives;
 
 import io.redspace.ironsspellbooks.api.events.ModifySpellLevelEvent;
+import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
+import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife.LifestealKnife;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.item.armor.Geckolib.GarmentsOfTheFirstFlamebearer.GarmentsOfTheFirstFlamebearerChestplateArmorItem;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.item.weapons.ancient_warriors_axe.AncientWarriorsAxeItem;
 import net.hazen.hazennstuff.rarity.BloodRarity;
 import net.hazen.hazennstuff.registries.HnSSounds;
+import net.hazen.hazennstuff.spells.HnSSpellRegistries;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.List;
+import java.util.Map;
 import java.util.function.Consumer;
 
 public class VampireKnivesItem extends MagicSwordItem implements GeoItem {
@@ -36,12 +47,12 @@ public class VampireKnivesItem extends MagicSwordItem implements GeoItem {
 
     public VampireKnivesItem() {
         super(
-                HNSExtendedWeaponsTiers.VAMPIRE_KNIVES,
+                HnSExtendedWeaponsTiers.VAMPIRE_KNIVES,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(BloodRarity.BLOOD_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.VAMPIRE_KNIVES)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.VAMPIRE_KNIVES)
                         ),
                 SpellDataRegistryHolder.of(
                         new SpellDataRegistryHolder(SpellRegistry.BLOOD_NEEDLES_SPELL, 5)
@@ -114,6 +125,28 @@ public class VampireKnivesItem extends MagicSwordItem implements GeoItem {
         return InteractionResultHolder.sidedSuccess(player.getItemInHand(hand), level.isClientSide());
     }
 
+    @Override
+    public void appendHoverText(@NotNull ItemStack itemStack, @NotNull TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
+        super.appendHoverText(itemStack, context, lines, flag);
+        var affinityData = AffinityData.getAffinityData(itemStack);
+        if (!affinityData.affinityData().isEmpty()) {
+            int i = TooltipsUtils.indexOfComponent(lines, "tooltip.hazennstuff.spellbook_spell_count");
+            lines.addAll(i < 0 ? lines.size() : i + 1, affinityData.getDescriptionComponent());
+        }
+    }
+
+    @Override
+    public void initializeSpellContainer(ItemStack itemStack) {
+        if (itemStack == null) {
+            return;
+        }
+
+        super.initializeSpellContainer(itemStack);
+        itemStack.set(ComponentRegistry.AFFINITY_COMPONENT, new AffinityData(Map.of(
+                SpellRegistry.ACUPUNCTURE_SPELL.get().getSpellResource(), 1
+        )));
+    }
+
     @EventBusSubscriber(modid = HazenNStuff.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public class SpellEvents {
 
@@ -122,8 +155,7 @@ public class VampireKnivesItem extends MagicSwordItem implements GeoItem {
             LivingEntity caster = event.getEntity();
             if (caster == null) return;
 
-            // 🔍 Only modify a specific spell (e.g., Magic Missile)
-            if (event.getSpell() != SpellRegistry.BLOOD_NEEDLES_SPELL.get()) {
+            if (event.getSpell() != SpellRegistry.ACUPUNCTURE_SPELL.get()) {
                 return;
             }
 

@@ -13,7 +13,7 @@ public class SyringeModel extends GeoModel<Syringe> {
 
     @Override
     public ResourceLocation getTextureResource(Syringe animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/syringe.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/syringe_alt.png");
     }
 
     @Override

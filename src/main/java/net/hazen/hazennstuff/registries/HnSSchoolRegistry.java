@@ -15,16 +15,16 @@ import java.util.function.Supplier;
 import static io.redspace.ironsspellbooks.api.registry.SchoolRegistry.SCHOOL_REGISTRY_KEY;
 
 public class HnSSchoolRegistry {
-    private static final DeferredRegister<SchoolType> HNS_SCHOOLS = DeferredRegister.create(SCHOOL_REGISTRY_KEY, HazenNStuff.MOD_ID);
+    private static final DeferredRegister<SchoolType> HnS_SCHOOLS = DeferredRegister.create(SCHOOL_REGISTRY_KEY, HazenNStuff.MOD_ID);
 
     public static void register(IEventBus eventBus)
     {
-        HNS_SCHOOLS.register(eventBus);
+        HnS_SCHOOLS.register(eventBus);
     }
 
     private static Supplier<SchoolType> registerSchool(SchoolType type)
     {
-        return HNS_SCHOOLS.register(type.getId().getPath(), () -> type);
+        return HnS_SCHOOLS.register(type.getId().getPath(), () -> type);
     }
 
     public static final ResourceLocation RADIANCE_RESOURCE = HazenNStuff.id("radiance");

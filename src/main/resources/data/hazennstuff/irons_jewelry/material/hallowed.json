@@ -10,7 +10,7 @@
   "quality": 3,
   "bonusParameters": {
     "irons_jewelry:attribute": {
-      "attribute": "minecraft:generic.attack_speed",
+      "attribute": "aces_spell_utils:spell_res_penetration",
       "amount": 0.10,
       "operation": "add_multiplied_total"
     },

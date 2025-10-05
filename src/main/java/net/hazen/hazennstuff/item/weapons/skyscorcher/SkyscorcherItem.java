@@ -1,14 +1,21 @@
 package net.hazen.hazennstuff.item.weapons.skyscorcher;
 
+import io.redspace.ironsspellbooks.api.events.ModifySpellLevelEvent;
+import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
+import io.redspace.ironsspellbooks.registries.ComponentRegistry;
+import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.item.weapons.vampire_knives.VampireKnivesItem;
 import net.hazen.hazennstuff.rarity.ElectricRarity;
+import net.hazen.hazennstuff.registries.HnSExtras.MagicMaceItem;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.sounds.SoundEvents;
@@ -18,71 +25,53 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.MaceItem;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.Map;
 import java.util.function.Consumer;
 
-public class SkyscorcherItem extends MagicSwordItem implements GeoItem {
+public class SkyscorcherItem extends MagicMaceItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public SkyscorcherItem() {
         super(
-                HNSExtendedWeaponsTiers.SKYSCORCHER,
+                HnSExtendedWeaponsTiers.SKYSCORCHER,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(ElectricRarity.ELECTRIC_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.SKYSCORCHER))
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.SKYSCORCHER))
                         .component(DataComponents.TOOL, MaceItem.createToolProperties()),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(SpellRegistry.ASCENSION_SPELL, 10))
+                        new SpellDataRegistryHolder(SpellRegistry.VOLT_STRIKE_SPELL, 5))
         );
     }
 
 
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        if (attacker instanceof Player player) {
-            float fallDistance = player.fallDistance;
-
-            boolean isSmash = fallDistance > 0.0F
-                    && !player.onGround()
-                    && !player.isInWater()
-                    && !player.isInLava();
-
-            if (isSmash) {
-                // Calculate fall-based bonus damage (cap at 12)
-                float bonusDamage = Math.min(12.0F, fallDistance * 1.2F);
-
-                // Deal extra damage on top of base weapon damage
-                target.hurt(target.damageSources().playerAttack(player), bonusDamage);
-
-                // Apply directional knockback based on fall
-                Vec3 direction = target.position().subtract(player.position()).normalize();
-                double knockbackStrength = Math.min(1.5, fallDistance / 10.0);
-                target.push(direction.x * knockbackStrength, 0.4 + (fallDistance / 15.0), direction.z * knockbackStrength);
-
-                // Play smash sound
-                player.level().playSound(null, target.blockPosition(), SoundEvents.TRIDENT_THUNDER.value(), SoundSource.PLAYERS, 1.0F, 1.0F);
-
-                // Spawn impact particles
-                Vec3 pos = target.getBoundingBox().getCenter();
-                MagicManager.spawnParticles(player.level(), ParticleHelper.ELECTRIC_SPARKS, pos.x, pos.y, pos.z, 12, 0.08, 0.08, 0.08, 0.3, false);
-
-                // Don’t consume durability on smash
-                return true;
-            }
+        if (!attacker.level().isClientSide) {
+            attacker.level().playSound(
+                    null,
+                    target.getX(),
+                    target.getY(),
+                    target.getZ(),
+                    SoundRegistry.SPEAR_CHANNELING_STRIKE,
+                    SoundSource.PLAYERS,
+                    1.0f,
+                    1.0f
+            );
         }
 
-        // Normal hit behavior + durability
         return super.hurtEnemy(stack, target, attacker);
     }
-
-
 
 
 
@@ -123,5 +112,41 @@ public class SkyscorcherItem extends MagicSwordItem implements GeoItem {
                 return this.renderer;
             }
         });
+    }
+
+    @Override
+    public void initializeSpellContainer(ItemStack itemStack) {
+        if (itemStack == null) {
+            return;
+        }
+
+        super.initializeSpellContainer(itemStack);
+        itemStack.set(ComponentRegistry.AFFINITY_COMPONENT, new AffinityData(Map.of(
+                SpellRegistry.VOLT_STRIKE_SPELL.get().getSpellResource(), 1
+        )));
+    }
+
+    @EventBusSubscriber(modid = HazenNStuff.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public class SpellEvents {
+
+        @SubscribeEvent
+        public static void onModifySpellLevel(ModifySpellLevelEvent event) {
+            LivingEntity caster = event.getEntity();
+            if (caster == null) return;
+
+            if (event.getSpell() != SpellRegistry.VOLT_STRIKE_SPELL.get()) {
+                return;
+            }
+
+            ItemStack mainHand = caster.getMainHandItem();
+            ItemStack offHand = caster.getOffhandItem();
+
+            boolean usingKnives = mainHand.getItem() instanceof SkyscorcherItem ||
+                    offHand.getItem() instanceof SkyscorcherItem;
+
+            if (usingKnives) {
+                event.addLevels(1);
+            }
+        }
     }
 }

@@ -5,7 +5,7 @@ import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.ElectricRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -21,15 +21,15 @@ public class BeongaeItem extends MagicSwordItem implements GeoItem {
 
     public BeongaeItem() {
         super(
-                HNSExtendedWeaponsTiers.BEONGAE,
+                HnSExtendedWeaponsTiers.BEONGAE,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(ElectricRarity.ELECTRIC_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.BEONGAE)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.BEONGAE)
                         ),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(SpellRegistry.SHOCKWAVE_SPELL, 12)
+                        new SpellDataRegistryHolder(SpellRegistry.SHOCKWAVE_SPELL, 5)
                 )
         );
     }

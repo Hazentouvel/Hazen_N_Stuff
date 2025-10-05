@@ -19,13 +19,13 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.function.Supplier;
 
-public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
+public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     /*
-    *** Ice
-    */
+     *** Ice
+     */
 
-    public static HNSExtendedWeaponsTiers ICE_PIKE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers ICE_PIKE = new HnSExtendedWeaponsTiers(
             8064,
             10,
             -3.0F,
@@ -38,7 +38,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ATTACK_SPEED, -0.3, AttributeModifier.Operation.ADD_VALUE)
     );
 
-    public static HNSExtendedWeaponsTiers FROSTBURN_DAGGER = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers FROSTBURN_DAGGER = new HnSExtendedWeaponsTiers(
             8064,
             7,
             -3.0F,
@@ -51,10 +51,10 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     );
 
     /*
-    *** Fire
+     *** Fire
      */
 
-    public static HNSExtendedWeaponsTiers DRACONIC_SPLITTER = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers DRACONIC_SPLITTER = new HnSExtendedWeaponsTiers(
             8064,
             7,
             -3.0F,
@@ -67,7 +67,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ATTACK_SPEED, -0.3, AttributeModifier.Operation.ADD_VALUE)
     );
 
-    public static HNSExtendedWeaponsTiers FIREBRAND = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers FIREBRAND = new HnSExtendedWeaponsTiers(
             8064,
             7,
             -3.0F,
@@ -80,7 +80,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ATTACK_SPEED, -0.3, AttributeModifier.Operation.ADD_VALUE)
     );
 
-    public static HNSExtendedWeaponsTiers FIREBLOSSOM_RAPIER = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers FIREBLOSSOM_RAPIER = new HnSExtendedWeaponsTiers(
             8064,
             8,
             -3.0F,
@@ -94,7 +94,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 2, AttributeModifier.Operation.ADD_VALUE)
     );
 
-    public static HNSExtendedWeaponsTiers WARFLAMING_LANCE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers WARFLAMING_LANCE = new HnSExtendedWeaponsTiers(
             8064,
             7,
             -3.0F,
@@ -107,7 +107,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ATTACK_SPEED, -0.1, AttributeModifier.Operation.ADD_VALUE)
     );
 
-    public static HNSExtendedWeaponsTiers RAVENS_BANE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers RAVENS_BANE = new HnSExtendedWeaponsTiers(
             8064,
             7,
             -3.0F,
@@ -121,10 +121,10 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     );
 
     /*
-    *** Lightning
+     *** Lightning
      */
 
-    public static HNSExtendedWeaponsTiers BEONGAE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers BEONGAE = new HnSExtendedWeaponsTiers(
             8064,
             7,
             -3.0F,
@@ -136,7 +136,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ATTACK_SPEED, -0.2, AttributeModifier.Operation.ADD_VALUE)
     );
 
-    public static HNSExtendedWeaponsTiers SKYSCORCHER = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers SKYSCORCHER = new HnSExtendedWeaponsTiers(
             8064,
             9,
             -3.0F,
@@ -150,10 +150,10 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     );
 
     /*
-    *** Evocation
+     *** Evocation
      */
 
-    public static HNSExtendedWeaponsTiers ANCIENT_WARRIORS_AXE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers ANCIENT_WARRIORS_AXE = new HnSExtendedWeaponsTiers(
             8064,
             9,
             -3.0F,
@@ -164,7 +164,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(ALObjects.Attributes.CRIT_DAMAGE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
-    public static HNSExtendedWeaponsTiers MALICE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers MALICE = new HnSExtendedWeaponsTiers(
             8064,
             7,
             -3.0F,
@@ -178,10 +178,10 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     );
 
     /*
-    *** Holy
+     *** Holy
      */
 
-    public static HNSExtendedWeaponsTiers HAMMER_OF_JUSTICE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers HAMMER_OF_JUSTICE = new HnSExtendedWeaponsTiers(
             8064,
             9,
             -3.0F,
@@ -195,7 +195,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ATTACK_SPEED, -0.3, AttributeModifier.Operation.ADD_VALUE)
     );
 
-    public static HNSExtendedWeaponsTiers EXCALIBUR = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers EXCALIBUR = new HnSExtendedWeaponsTiers(
             8064,
             7,
             -3.0F,
@@ -209,7 +209,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ATTACK_SPEED, -0.3, AttributeModifier.Operation.ADD_VALUE)
     );
 
-    public static HNSExtendedWeaponsTiers DIVINE_GREATSWORD = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers DIVINE_GREATSWORD = new HnSExtendedWeaponsTiers(
             8064,
             7,
             -3.0F,
@@ -225,10 +225,10 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
 
     /*
-    *** Nature
+     *** Nature
      */
 
-    public static HNSExtendedWeaponsTiers BOUNTIFUL_HARVEST = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers BOUNTIFUL_HARVEST = new HnSExtendedWeaponsTiers(
             8064,
             13,
             -3.0F,
@@ -241,7 +241,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ATTACK_SPEED, -0.3, AttributeModifier.Operation.ADD_VALUE)
     );
 
-    public static HNSExtendedWeaponsTiers THORN_CHAKRAM = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers THORN_CHAKRAM = new HnSExtendedWeaponsTiers(
             8064,
             7,
             1.2F,
@@ -254,10 +254,10 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     );
 
     /*
-    *** Ender
+     *** Ender
      */
 
-    public static HNSExtendedWeaponsTiers OBSIDIAN_CLAYMORE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers OBSIDIAN_CLAYMORE = new HnSExtendedWeaponsTiers(
             8064,
             7,
             -3.0F,
@@ -270,7 +270,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ATTACK_SPEED, -0.3, AttributeModifier.Operation.ADD_VALUE)
     );
 
-    public static HNSExtendedWeaponsTiers STARFURY = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers STARFURY = new HnSExtendedWeaponsTiers(
             8064,
             9,
             -3.0F,
@@ -284,10 +284,10 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     );
 
     /*
-    *** Blood
+     *** Blood
      */
 
-    public static HNSExtendedWeaponsTiers VAMPIRE_KNIVES = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers VAMPIRE_KNIVES = new HnSExtendedWeaponsTiers(
             8064,
             7,
             -3.0F,
@@ -301,10 +301,10 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     );
 
     /*
-    *** Eldritch
+     *** Eldritch
      */
 
-    public static HNSExtendedWeaponsTiers THE_DEVOURER = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers THE_DEVOURER = new HnSExtendedWeaponsTiers(
             8064,
             13,
             -3.0F,
@@ -317,57 +317,57 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(ASAttributeRegistry.MANA_REND, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.ELDRITCH_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 3, AttributeModifier.Operation.ADD_VALUE),
-            new AttributeContainer(Attributes.ATTACK_SPEED, -0.8, AttributeModifier.Operation.ADD_VALUE)
+            new AttributeContainer(Attributes.ATTACK_SPEED, -0.5, AttributeModifier.Operation.ADD_VALUE)
     );
 
     /*
-    *** Radiance
-    */
-
-    public static HNSExtendedWeaponsTiers HAMMUSH = new HNSExtendedWeaponsTiers(
-            8064,
-            7,
-            -3.0F,
-            10,
-            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
-            new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(ALObjects.Attributes.LIFE_STEAL, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(Attributes.ATTACK_SPEED, 1, AttributeModifier.Operation.ADD_VALUE)
-    );
-
-    public static HNSExtendedWeaponsTiers SPECTRUM = new HNSExtendedWeaponsTiers(
-            8064,
-            7,
-            -3.0F,
-            10,
-            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
-            new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(ALObjects.Attributes.LIFE_STEAL, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(Attributes.ATTACK_SPEED, 1, AttributeModifier.Operation.ADD_VALUE)
-    );
-
-    public static HNSExtendedWeaponsTiers MEOWMERE = new HNSExtendedWeaponsTiers(
-            8064,
-            7,
-            -3.0F,
-            10,
-            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
-            new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(ALObjects.Attributes.LIFE_STEAL, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(Attributes.ATTACK_SPEED, 1, AttributeModifier.Operation.ADD_VALUE)
-    );
-
-    /*
-    *** Shadow
+     *** Radiance
      */
 
-    public static HNSExtendedWeaponsTiers LIGHTS_BANE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers HAMMUSH = new HnSExtendedWeaponsTiers(
+            8064,
+            7,
+            -3.0F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ALObjects.Attributes.LIFE_STEAL, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(Attributes.ATTACK_SPEED, -0.1, AttributeModifier.Operation.ADD_VALUE)
+    );
+
+    public static HnSExtendedWeaponsTiers SPECTRUM = new HnSExtendedWeaponsTiers(
+            8064,
+            7,
+            -3.0F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ALObjects.Attributes.LIFE_STEAL, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(Attributes.ATTACK_SPEED, 1, AttributeModifier.Operation.ADD_VALUE)
+    );
+
+    public static HnSExtendedWeaponsTiers MEOWMERE = new HnSExtendedWeaponsTiers(
+            8064,
+            7,
+            -3.0F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ALObjects.Attributes.LIFE_STEAL, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(Attributes.ATTACK_SPEED, 1, AttributeModifier.Operation.ADD_VALUE)
+    );
+
+    /*
+     *** Shadow
+     */
+
+    public static HnSExtendedWeaponsTiers LIGHTS_BANE = new HnSExtendedWeaponsTiers(
             8064,
             9,
             -3.0F,
@@ -378,7 +378,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ATTACK_SPEED, .8 , AttributeModifier.Operation.ADD_VALUE)
     );
 
-    public static HNSExtendedWeaponsTiers NIGHTS_EDGE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers NIGHTS_EDGE = new HnSExtendedWeaponsTiers(
             8064,
             10,
             -3.0F,
@@ -392,7 +392,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ATTACK_SPEED, -0.3, AttributeModifier.Operation.ADD_VALUE)
     );
 
-    public static HNSExtendedWeaponsTiers TRUE_NIGHTS_EDGE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers TRUE_NIGHTS_EDGE = new HnSExtendedWeaponsTiers(
             8064,
             12,
             -3.0F,
@@ -409,10 +409,10 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     );
 
     /*
-    *** Misc
+     *** Misc
      */
 
-    public static HNSExtendedWeaponsTiers MITHRIL = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers MITHRIL = new HnSExtendedWeaponsTiers(
             4032,
             6,
             5.0F,
@@ -422,7 +422,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
-    public static HNSExtendedWeaponsTiers SPECTRAL_PICKAXE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers SPECTRAL_PICKAXE = new HnSExtendedWeaponsTiers(
             4032,
             6,
             5.0F,
@@ -432,7 +432,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(AttributeRegistry.EVOCATION_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
-    public static HNSExtendedWeaponsTiers PICKAXE_AXE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers PICKAXE_AXE = new HnSExtendedWeaponsTiers(
             4032,
             6,
             5.0F,
@@ -442,7 +442,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
-    public static HNSExtendedWeaponsTiers MAGE_BANE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers MAGE_BANE = new HnSExtendedWeaponsTiers(
             8064,
             8,
             -3.0F,
@@ -456,7 +456,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(ASAttributeRegistry.SPELL_RES_PENETRATION, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
-    public static HNSExtendedWeaponsTiers LEGIONNAIRE_WARLOCK_AXE = new HNSExtendedWeaponsTiers(
+    public static HnSExtendedWeaponsTiers LEGIONNAIRE_WARLOCK_AXE = new HnSExtendedWeaponsTiers(
             8064,
             11,
             -3F,
@@ -479,7 +479,7 @@ public class HNSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     private final Supplier<Ingredient> repairIngredient;
     private final AttributeContainer[] attributeContainers;
 
-    private HNSExtendedWeaponsTiers(int uses, float damage, float speed, int enchantmentValue, TagKey<Block> incorrectBlocksForDrops, Supplier<Ingredient> repairIngredient, AttributeContainer... attributes) {
+    private HnSExtendedWeaponsTiers(int uses, float damage, float speed, int enchantmentValue, TagKey<Block> incorrectBlocksForDrops, Supplier<Ingredient> repairIngredient, AttributeContainer... attributes) {
         //this.level = level;
         this.uses = uses;
         this.speed = speed;

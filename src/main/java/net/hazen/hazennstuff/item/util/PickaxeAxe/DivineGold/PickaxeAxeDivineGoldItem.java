@@ -4,8 +4,7 @@ import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.item.util.PickaxeAxe.PickaxeAxeRenderer;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.tags.BlockTags;
@@ -26,12 +25,12 @@ public class PickaxeAxeDivineGoldItem extends MagicSwordItem implements GeoItem 
 
     public PickaxeAxeDivineGoldItem() {
         super(
-                HNSExtendedWeaponsTiers.PICKAXE_AXE,
+                HnSExtendedWeaponsTiers.PICKAXE_AXE,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(Rarity.EPIC)
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.PICKAXE_AXE))
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.PICKAXE_AXE))
                         .component(DataComponents.TOOL, Tiers.NETHERITE.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE)),
                 SpellDataRegistryHolder.of(
                 )
@@ -47,10 +46,10 @@ public class PickaxeAxeDivineGoldItem extends MagicSwordItem implements GeoItem 
     @Override
     public float getDestroySpeed(ItemStack stack, BlockState state) {
         if (state.is(BlockTags.MINEABLE_WITH_PICKAXE)) {
-            return HNSExtendedWeaponsTiers.MITHRIL.getSpeed();
+            return HnSExtendedWeaponsTiers.MITHRIL.getSpeed();
         }
         else if (state.is(BlockTags.MINEABLE_WITH_AXE)) {
-            return HNSExtendedWeaponsTiers.MITHRIL.getSpeed();
+            return HnSExtendedWeaponsTiers.MITHRIL.getSpeed();
         }
         return 1.0F;
     }

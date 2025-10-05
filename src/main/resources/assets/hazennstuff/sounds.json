@@ -223,5 +223,10 @@
     "sounds": [
       "hazennstuff:cat_impact"
     ]
+  },
+  "golden_shower_cast": {
+    "sounds": [
+      "hazennstuff:golden_shower_cast"
+    ]
   }
 }

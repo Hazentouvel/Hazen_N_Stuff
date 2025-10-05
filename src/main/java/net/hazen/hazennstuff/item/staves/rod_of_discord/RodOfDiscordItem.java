@@ -6,7 +6,7 @@ import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.item.staves.HnSStaffTier;
 import net.hazen.hazennstuff.item.staves.ImbuableStaffItem;
 import net.hazen.hazennstuff.rarity.EnderRarity;
-import net.hazen.hazennstuff.registries.HnSSpellRegistries;
+import net.hazen.hazennstuff.spells.HnSSpellRegistries;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;

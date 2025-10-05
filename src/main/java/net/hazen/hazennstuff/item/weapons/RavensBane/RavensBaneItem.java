@@ -9,8 +9,7 @@ import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.item.weapons.WarFlamingLance.WarFlamingLanceRenderer;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.FlamingRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.world.entity.LivingEntity;
@@ -32,15 +31,15 @@ public class RavensBaneItem extends MagicSwordItem implements GeoItem {
 
     public RavensBaneItem() {
         super(
-                HNSExtendedWeaponsTiers.DRACONIC_SPLITTER,
+                HnSExtendedWeaponsTiers.RAVENS_BANE,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.DRACONIC_SPLITTER)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.RAVENS_BANE)
                         ),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(SpellRegistry.BURNING_DASH_SPELL, 5)
+                        new SpellDataRegistryHolder(SpellRegistry.FLAMING_STRIKE_SPELL, 5)
                 )
         );
     }
@@ -104,7 +103,6 @@ public class RavensBaneItem extends MagicSwordItem implements GeoItem {
             LivingEntity caster = event.getEntity();
             if (caster == null) return;
 
-            // 🔍 Only modify a specific spell (e.g., Magic Missile)
             if (event.getSpell() != SpellRegistry.RAISE_HELL_SPELL.get()) {
                 return;
             }

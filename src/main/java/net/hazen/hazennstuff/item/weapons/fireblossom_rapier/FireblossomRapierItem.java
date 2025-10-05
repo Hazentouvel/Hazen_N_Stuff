@@ -5,7 +5,7 @@ import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.FlamingRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -21,12 +21,12 @@ public class FireblossomRapierItem extends MagicSwordItem implements GeoItem {
 
     public FireblossomRapierItem() {
         super(
-                HNSExtendedWeaponsTiers.FIREBLOSSOM_RAPIER,
+                HnSExtendedWeaponsTiers.FIREBLOSSOM_RAPIER,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.FIREBLOSSOM_RAPIER)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.FIREBLOSSOM_RAPIER)
                 ),
                 SpellDataRegistryHolder.of(
                         new SpellDataRegistryHolder(SpellRegistry.FLAMING_STRIKE_SPELL, 6)

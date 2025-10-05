@@ -9,7 +9,7 @@ import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife.LifestealKnife;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.EldritchRarity;
 import net.hazen.hazennstuff.registries.HnSSounds;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
@@ -38,15 +38,14 @@ public class TheDevourerItem extends MagicSwordItem implements GeoItem {
 
     public TheDevourerItem() {
         super(
-                HNSExtendedWeaponsTiers.THE_DEVOURER,
+                HnSExtendedWeaponsTiers.THE_DEVOURER,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(EldritchRarity.ELDRITCH_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.THE_DEVOURER)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.THE_DEVOURER)
                         ),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(SpellRegistry.ELDRITCH_BLAST_SPELL, 5)
                 )
         );
     }

@@ -6,7 +6,7 @@ import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.FlamingRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
@@ -27,12 +27,12 @@ public class LegionnaireWarlockAxeItem extends MagicSwordItem implements GeoItem
 
     public LegionnaireWarlockAxeItem() {
         super(
-                HNSExtendedWeaponsTiers.LEGIONNAIRE_WARLOCK_AXE,
+                HnSExtendedWeaponsTiers.LEGIONNAIRE_WARLOCK_AXE,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.LEGIONNAIRE_WARLOCK_AXE)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.LEGIONNAIRE_WARLOCK_AXE)
                         ),
                 SpellDataRegistryHolder.of(
                 )
@@ -62,7 +62,6 @@ public class LegionnaireWarlockAxeItem extends MagicSwordItem implements GeoItem
         return cache;
     }
 
-    // Your renderer for items
     @Override
     public void createGeoRenderer(Consumer<GeoRenderProvider> consumer) {
         consumer.accept(new GeoRenderProvider() {
@@ -76,15 +75,5 @@ public class LegionnaireWarlockAxeItem extends MagicSwordItem implements GeoItem
                 return this.renderer;
             }
         });
-    }
-
-    @Override
-    public void appendHoverText(@NotNull ItemStack itemStack, @NotNull TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
-        super.appendHoverText(itemStack, context, lines, flag);
-        var affinityData = AffinityData.getAffinityData(itemStack);
-        if (!affinityData.affinityData().isEmpty()) {
-            int i = TooltipsUtils.indexOfComponent(lines, "tooltip.hazennstuff.spellbook_spell_count");
-            lines.addAll(i < 0 ? lines.size() : i + 1, affinityData.getDescriptionComponent());
-        }
     }
 }

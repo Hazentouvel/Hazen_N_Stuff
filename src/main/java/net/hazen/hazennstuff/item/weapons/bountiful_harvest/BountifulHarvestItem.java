@@ -5,7 +5,7 @@ import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.NatureRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -21,15 +21,15 @@ public class BountifulHarvestItem extends MagicSwordItem implements GeoItem {
 
     public BountifulHarvestItem() {
         super(
-                HNSExtendedWeaponsTiers.BOUNTIFUL_HARVEST,
+                HnSExtendedWeaponsTiers.BOUNTIFUL_HARVEST,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(NatureRarity.NATURE_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.BOUNTIFUL_HARVEST)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.BOUNTIFUL_HARVEST)
                         ),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(SpellRegistry.POISON_SPLASH_SPELL, 12)
+                        new SpellDataRegistryHolder(SpellRegistry.POISON_SPLASH_SPELL, 8)
                 )
         );
     }

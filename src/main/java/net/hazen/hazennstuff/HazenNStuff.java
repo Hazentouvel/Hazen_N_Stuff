@@ -20,9 +20,12 @@ import net.hazen.hazennstuff.item.armor.AzureLib.Seraph.SeraphArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SoulFlame.SoulFlameArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SupremeWitch.SupremeWitchArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.TheWither.TheWitherArmorRenderer;
+import net.hazen.hazennstuff.item.curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioItemRenderer;
+import net.hazen.hazennstuff.item.curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioRenderer;
 import net.hazen.hazennstuff.registries.*;
 import net.hazen.hazennstuff.item.weapons.hammer_of_justice.HammerOfJusticeRenderer;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.spells.HnSSpellRegistries;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
@@ -30,8 +33,6 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -44,7 +45,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(HazenNStuff.MOD_ID)
@@ -237,6 +238,12 @@ public class HazenNStuff
             // Item Rendering Registry
             AzItemRendererRegistry.register(HammerOfJusticeRenderer::new, HnSItems.HAMMER_OF_JUSTICE.get());
 
+            //Curios Rendering Registry
+
+            AzArmorRendererRegistry.register(EnergizedCoreSpellbookCurioItemRenderer::new, HnSItems.ENERGIZED_CORE_SPELLBOOK.get());
+            CuriosRendererRegistry.register(
+                    HnSItems.ENERGIZED_CORE_SPELLBOOK.get(), EnergizedCoreSpellbookCurioRenderer::new
+            );
 
             // Animation Registry
             AzIdentityRegistry.register(
@@ -325,7 +332,11 @@ public class HazenNStuff
 
                     // Weapons
 
-                    HnSItems.HAMMER_OF_JUSTICE.get()
+                    HnSItems.HAMMER_OF_JUSTICE.get(),
+
+                    // Curios
+
+                    HnSItems.ENERGIZED_CORE_SPELLBOOK.get()
 
             );
         }

@@ -1,6 +1,7 @@
 package net.hazen.hazennstuff.entity.spells.ice.ice_arrow.IceCloud;
 
 import io.redspace.ironsspellbooks.damage.DamageSources;
+import io.redspace.ironsspellbooks.damage.ISSDamageTypes;
 import io.redspace.ironsspellbooks.entity.spells.AoeEntity;
 import net.hazen.hazennstuff.registries.HnSDamageTypes;
 import net.hazen.hazennstuff.registries.HnSEntityRegistry;
@@ -29,7 +30,7 @@ public class IceCloud extends AoeEntity {
     @Override
     public void applyEffect(LivingEntity target) {
         if (damageSource == null) {
-            damageSource = new DamageSource(DamageSources.getHolderFromResource(target, HnSDamageTypes.ICE_CLOUD), this, getOwner());
+            damageSource = new DamageSource(DamageSources.getHolderFromResource(target, ISSDamageTypes.ICE_MAGIC), this, getOwner());
         }
         DamageSources.ignoreNextKnockback(target);
         target.hurt(damageSource, getDamage());

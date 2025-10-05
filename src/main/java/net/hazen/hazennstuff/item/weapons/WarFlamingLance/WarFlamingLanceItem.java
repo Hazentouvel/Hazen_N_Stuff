@@ -9,8 +9,7 @@ import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.item.weapons.DraconicSplitter.DraconicSplitterRenderer;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.FlamingRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.world.entity.LivingEntity;
@@ -32,12 +31,12 @@ public class WarFlamingLanceItem extends MagicSwordItem implements GeoItem {
 
     public WarFlamingLanceItem() {
         super(
-                HNSExtendedWeaponsTiers.DRACONIC_SPLITTER,
+                HnSExtendedWeaponsTiers.WARFLAMING_LANCE,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.DRACONIC_SPLITTER)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.WARFLAMING_LANCE)
                         ),
                 SpellDataRegistryHolder.of(
                         new SpellDataRegistryHolder(SpellRegistry.BURNING_DASH_SPELL, 5)

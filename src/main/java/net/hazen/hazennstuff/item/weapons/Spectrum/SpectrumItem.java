@@ -4,7 +4,7 @@ import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.RadianceRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -20,14 +20,16 @@ public class SpectrumItem extends MagicSwordItem implements GeoItem {
 
     public SpectrumItem() {
         super(
-                HNSExtendedWeaponsTiers.MEOWMERE,
+                HnSExtendedWeaponsTiers.SPECTRUM,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(RadianceRarity.RADIANCE_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.MEOWMERE)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.SPECTRUM)
                         ),
-                SpellDataRegistryHolder.of()
+                SpellDataRegistryHolder.of(
+
+                )
         );
     }
 

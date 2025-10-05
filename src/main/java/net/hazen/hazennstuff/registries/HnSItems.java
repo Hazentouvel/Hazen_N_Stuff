@@ -35,9 +35,9 @@ import net.hazen.hazennstuff.item.armor.Geckolib.Atlas.AtlasArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.BishopOfDeceitArmor.BishopOfDeceitArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.BountyHunter.BountyHunterArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.Calamitas.CalamitasArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.Calamitas.CalamitasChestplateArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.ChargedScourge.GeckolibChargedScourgeArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.Chlorophyte.ChlorophyteArmorItem;
-import net.hazen.hazennstuff.item.armor.Geckolib.Chlorophyte.ChlorophyteArmorModel;
 import net.hazen.hazennstuff.item.armor.Geckolib.Chlorophyte.Headgear.ChlorophyteHeadgearArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.Chlorophyte.Helmet.ChlorophyteHelmetArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.Chlorophyte.Mask.ChlorophyteMaskArmorItem;
@@ -115,6 +115,8 @@ import net.hazen.hazennstuff.item.curios.Crystals.SpiritCrystals.AbsoluteCurio;
 import net.hazen.hazennstuff.item.curios.Crystals.SpiritCrystals.AbstractCurio;
 import net.hazen.hazennstuff.item.curios.Crystals.SpiritCrystals.AdvancedCurio;
 import net.hazen.hazennstuff.item.curios.Rings.RingOfEffeciencyCurio;
+import net.hazen.hazennstuff.item.curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbook;
+import net.hazen.hazennstuff.item.curios.Spellbooks.GoldenShowerSpellbook;
 import net.hazen.hazennstuff.item.misc.HnSFoodProperties;
 import net.hazen.hazennstuff.item.staves.rod_of_discord.RodOfDiscordItem;
 import net.hazen.hazennstuff.item.staves.wisewood_cane.WisewoodCaneItem;
@@ -265,10 +267,9 @@ public class HnSItems {
     public static final DeferredItem<Item> DIVINE_MOLD = ITEMS.register("divine_mold",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+                    .rarity(Rarity.EPIC)
                     .fireResistant()
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
-
     );
 
     //Flaming Template
@@ -287,45 +288,35 @@ public class HnSItems {
     public static final DeferredItem<Item> SPIDER_FANG = ITEMS.register("spider_fang",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.RARE)
-                    .fireResistant())
-
+                    .rarity(Rarity.RARE))
     );
 
     //Storm Weave
     public static final DeferredItem<Item> STORM_WEAVE = ITEMS.register("storm_weave",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.RARE)
-                    .fireResistant())
-
+                    .rarity(Rarity.RARE))
     );
 
     //Volt Core
     public static final DeferredItem<Item> VOLT_CORE = ITEMS.register("volt_core",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.RARE)
-                    .fireResistant())
-
+                    .rarity(Rarity.RARE))
     );
 
     //Prismatic Shard
     public static final DeferredItem<Item> PRISMATIC_SHARD = ITEMS.register("prismatic_shard",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.RARE)
-                    .fireResistant())
-
+                    .rarity(Rarity.RARE))
     );
 
     //Excalibur
     public static final DeferredItem<Item> EXCALIBUR_FRAGMENT = ITEMS.register("excalibur_fragment",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(DivineRarity.DIVINE_RARITY_PROXY.getValue())
-                    .fireResistant())
-
+                    .rarity(Rarity.EPIC))
     );
 
     //Deus Essence
@@ -335,24 +326,20 @@ public class HnSItems {
                     .rarity(Rarity.EPIC)
                     .fireResistant()
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
-
     );
 
     //Runestone Fragment
     public static final DeferredItem<Item> RUNESTONE_FRAGMENTS = ITEMS.register("runestone_fragments",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.RARE)
-                    .fireResistant())
-
+                    .rarity(Rarity.UNCOMMON))
     );
 
     //Permafrost Fragment
     public static final DeferredItem<Item> PERMAFROST_FRAGMENT = ITEMS.register("permafrost_fragment",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(CryogenicRarity.CRYOGENIC_RARITY_PROXY.getValue())
-                    .fireResistant())
+                    .rarity(Rarity.RARE))
     );
 
     //Charred Bones
@@ -371,17 +358,14 @@ public class HnSItems {
     public static final DeferredItem<Item> GLOWING_MUSHROOM = ITEMS.register("glowing_mushroom",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.RARE)
-                    .fireResistant())
-
+                    .rarity(Rarity.UNCOMMON))
     );
 
     //Shadow Scale
     public static final DeferredItem<Item> SHADOW_SCALE = ITEMS.register("shadow_scale",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.RARE)
-                    .fireResistant())
+                    .rarity(Rarity.RARE))
 
     );
 
@@ -389,7 +373,7 @@ public class HnSItems {
     public static final DeferredItem<Item> CLOTH_OF_THE_FLAMEBEARER = ITEMS.register("cloth_of_the_flamebearer",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.RARE)
+                    .rarity(Rarity.EPIC)
                     .fireResistant())
 
     );
@@ -399,9 +383,7 @@ public class HnSItems {
             () -> new Item(new Item
                     .Properties()
                     .food(HnSFoodProperties.LEMON)
-                    .rarity(Rarity.RARE)
-                    .fireResistant())
-
+                    .rarity(Rarity.UNCOMMON))
     );
 
     //Divine Lemon
@@ -409,8 +391,7 @@ public class HnSItems {
             () -> new Item(new Item
                     .Properties()
                     .food(HnSFoodProperties.DIVINE_LEMON)
-                    .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
-                    .fireResistant()
+                    .rarity(Rarity.EPIC)
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
 
     );
@@ -424,8 +405,7 @@ public class HnSItems {
     public static final DeferredItem<Item> DREADSTONE = ITEMS.register("dreadstone",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(BloodRarity.BLOOD_RARITY_PROXY.getValue())
-                    .fireResistant())
+                    .rarity(Rarity.RARE))
     );
 
     //Dreadsteel Ingot
@@ -465,7 +445,7 @@ public class HnSItems {
     public static final DeferredItem<Item> SOLAR_CORE = ITEMS.register("solar_core",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.EPIC)
+                    .rarity(Rarity.RARE)
                     .fireResistant())
 
     );
@@ -483,26 +463,21 @@ public class HnSItems {
     public static final DeferredItem<Item> CHLOROPHYTE_CHUNK = ITEMS.register("chlorophyte_chunk",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(NatureRarity.NATURE_RARITY_PROXY.getValue())
-                    .fireResistant())
-
+                    .rarity(NatureRarity.NATURE_RARITY_PROXY.getValue()))
     );
 
     // Hallowed Ingot
     public static final DeferredItem<Item> HALLOWED_INGOT = ITEMS.register("hallowed_ingot",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
-                    .fireResistant())
-
+                    .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue()))
     );
 
-    // Chlorophyte Ingot
+    // Demonite Ingot
     public static final DeferredItem<Item> DEMONITE_INGOT = ITEMS.register("demonite_ingot",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue())
-                    .fireResistant())
+                    .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue()))
 
     );
 
@@ -510,35 +485,29 @@ public class HnSItems {
     public static final DeferredItem<Item> SHADESTONE = ITEMS.register("shadestone",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue())
-                    .fireResistant())
-
+                    .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue()))
     );
 
     //Rose Quartz
     public static final DeferredItem<Item> ROSE_QUARTZ = ITEMS.register("rose_quartz",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.RARE)
-                    .fireResistant())
-
+                    .rarity(Rarity.RARE))
     );
 
     //Rose Gold Ingot
     public static final DeferredItem<Item> ROSE_GOLD_INGOT = ITEMS.register("rose_gold_ingot",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.RARE)
-                    .fireResistant())
+                    .rarity(Rarity.RARE))
     );
 
     // Zenalite Ingot
     public static final DeferredItem<Item> ZENALITE_INGOT = ITEMS.register("zenalite_ingot",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+                    .rarity(Rarity.EPIC)
                     .fireResistant())
-
     );
 
     //Raw Zenalite
@@ -547,7 +516,6 @@ public class HnSItems {
                     .Properties()
                     .rarity(Rarity.EPIC)
                     .fireResistant())
-
     );
 
     //Starkissed Zenalite
@@ -555,26 +523,23 @@ public class HnSItems {
             () -> new Item(new Item
                     .Properties()
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
-                    .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+                    .rarity(Rarity.EPIC)
                     .fireResistant())
     );
 
 
     // Pyrium Nugget
     public static final DeferredItem<Item> PYRIUM_NUGGET = ITEMS.register("pyrium_nugget",
-            () -> new Item(new Item
-                    .Properties()
-                    .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
+            () -> new Item(
+                    ItemPropertiesHelper.material()
+                    .rarity((Rarity)CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
                     .fireResistant())
-
     );
 
     // Silver Scrap
     public static final DeferredItem<Item> SILVER_SCRAPS = ITEMS.register("silver_scraps",
             () -> new Item(new Item.Properties()
-                    .rarity(Rarity.EPIC)
-                    .fireResistant())
-
+                    .rarity(Rarity.RARE))
     );
 
 
@@ -827,6 +792,12 @@ public class HnSItems {
     public static final DeferredItem<AbsoluteCurio> ABSOLUTE = ITEMS.register("absolute", AbsoluteCurio::new);
 
 
+    /*
+    *** Spellbooks
+     */
+
+    public static final DeferredItem <GoldenShowerSpellbook> GOLDEN_SHOWER_SPELLBOOK = ITEMS.register("golden_shower_spellbook", GoldenShowerSpellbook::new);
+    public static final DeferredItem <EnergizedCoreSpellbook> ENERGIZED_CORE_SPELLBOOK = ITEMS.register("energized_core_spellbook", EnergizedCoreSpellbook::new);
 
     /*
      *** Misc
@@ -848,7 +819,8 @@ public class HnSItems {
             .equipment(1)
             .rarity(NatureRarity.NATURE_RARITY_PROXY.getValue())
             .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))));
+
+            ));
 
     public static final DeferredHolder<Item, Item> CREAKING_CHESTPLATE = ITEMS.register("creaking_chestplate", () -> new CreakingSorcererArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
@@ -1447,7 +1419,7 @@ public class HnSItems {
             .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))));
-    public static final DeferredHolder<Item, Item> CALAMITAS_CHESTPLATE = ITEMS.register("calamitas_chestplate", () -> new CalamitasArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> CALAMITAS_CHESTPLATE = ITEMS.register("calamitas_chestplate", () -> new CalamitasChestplateArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
             .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
             .fireResistant()
@@ -2396,69 +2368,69 @@ public class HnSItems {
 
     public static final DeferredHolder<Item, Item> SACRED_ROBES_HELMET = ITEMS.register("sacred_robes_helmet", () -> new SacredRobesArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
+            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))));
     public static final DeferredHolder<Item, Item> SACRED_ROBES_CHESTPLATE = ITEMS.register("sacred_robes_chestplate", () -> new SacredRobesArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
+            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
     public static final DeferredHolder<Item, Item> SACRED_ROBES_LEGGINGS = ITEMS.register("sacred_robes_leggings", () -> new SacredRobesArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
             .fireResistant()
-            .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
+            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))));
     public static final DeferredHolder<Item, Item> SACRED_ROBES_BOOTS = ITEMS.register("sacred_robes_boots", () -> new SacredRobesArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
             .fireResistant()
-            .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
+            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))));
 
     //Ascended Sacred Robes Armor
 
     public static final DeferredHolder<Item, Item> ASCENDED_SACRED_ROBES_HELMET = ITEMS.register("ascended_sacred_robes_helmet", () -> new AscendedSacredRobesArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
+            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
             .fireResistant()
     ));
     public static final DeferredHolder<Item, Item> ASCENDED_SACRED_ROBES_CHESTPLATE = ITEMS.register("ascended_sacred_robes_chestplate", () -> new AscendedSacredRobesArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
+            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
             .fireResistant()
     ));
     public static final DeferredHolder<Item, Item> ASCENDED_SACRED_ROBES_LEGGINGS = ITEMS.register("ascended_sacred_robes_leggings", () -> new AscendedSacredRobesArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
             .fireResistant()
-            .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
+            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
     ));
     public static final DeferredHolder<Item, Item> ASCENDED_SACRED_ROBES_BOOTS = ITEMS.register("ascended_sacred_robes_boots", () -> new AscendedSacredRobesArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
             .fireResistant()
-            .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
+            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
             ));
 
     //Geckolib The Wither Armor
 
     public static final DeferredHolder<Item, Item> GECKOLIB_THE_WITHER_HELMET = ITEMS.register("geckolib_the_wither_helmet", () -> new GeckolibTheWitherArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
+            .rarity(BloodRarity.BLOOD_RARITY_PROXY.getValue())
             .fireResistant()
     ));
     public static final DeferredHolder<Item, Item> GECKOLIB_THE_WITHER_CHESTPLATE = ITEMS.register("geckolib_the_wither_chestplate", () -> new GeckolibTheWitherArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
+            .rarity(BloodRarity.BLOOD_RARITY_PROXY.getValue())
             .fireResistant()
     ));
     public static final DeferredHolder<Item, Item> GECKOLIB_THE_WITHER_LEGGINGS = ITEMS.register("geckolib_the_wither_leggings", () -> new GeckolibTheWitherArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
             .fireResistant()
-            .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
+            .rarity(BloodRarity.BLOOD_RARITY_PROXY.getValue())
     ));
     public static final DeferredHolder<Item, Item> GECKOLIB_THE_WITHER_BOOTS = ITEMS.register("geckolib_the_wither_boots", () -> new GeckolibTheWitherArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
             .fireResistant()
-            .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
+            .rarity(BloodRarity.BLOOD_RARITY_PROXY.getValue())
     ));
 
     //Lemon God Armor
@@ -2509,22 +2481,22 @@ public class HnSItems {
 
     public static final DeferredHolder<Item, Item> SHADOW_SCALE_HELMET = ITEMS.register("shadow_scale_helmet", () -> new ShadowScaleArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))));
     public static final DeferredHolder<Item, Item> SHADOW_SCALE_CHESTPLATE = ITEMS.register("shadow_scale_chestplate", () -> new ShadowScaleArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
     public static final DeferredHolder<Item, Item> SHADOW_SCALE_LEGGINGS = ITEMS.register("shadow_scale_leggings", () -> new ShadowScaleArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
-            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))));
     public static final DeferredHolder<Item, Item> SHADOW_SCALE_BOOTS = ITEMS.register("shadow_scale_boots", () -> new ShadowScaleArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
-            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))));
 
@@ -2555,121 +2527,106 @@ public class HnSItems {
 
     public static final DeferredHolder<Item, Item> ENDERMAN_BLINDFOLD = ITEMS.register("shadowwalker_enderman_blindfold", () -> new ShadowwalkerEndermanBlindfoldItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(EnderRarity.ENDER_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.HELMET.getDurability(64))));
+            .durability(ArmorItem.Type.HELMET.getDurability(37))));
 
     public static final DeferredHolder<Item, Item> ENDERMAN_HOOD = ITEMS.register("shadowwalker_enderman_hood", () -> new ShadowwalkerEndermanHoodItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(EnderRarity.ENDER_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.HELMET.getDurability(64))));
+            .durability(ArmorItem.Type.HELMET.getDurability(37))));
 
     public static final DeferredHolder<Item, Item> ENDERMAN_MASKED = ITEMS.register("shadowwalker_enderman_masked", () -> new ShadowwalkerEndermanArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(EnderRarity.ENDER_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.HELMET.getDurability(64))));
+            .durability(ArmorItem.Type.HELMET.getDurability(37))));
 
     public static final DeferredHolder<Item, Item> ENDERMAN_CHESTPLATE = ITEMS.register("shadowwalker_enderman_chestplate", () -> new ShadowwalkerEndermanArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .rarity(EnderRarity.ENDER_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
     public static final DeferredHolder<Item, Item> ENDERMAN_LEGGINGS = ITEMS.register("shadowwalker_enderman_leggings", () -> new ShadowwalkerEndermanArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
-            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))));
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(37))));
     public static final DeferredHolder<Item, Item> ENDERMAN_BOOTS = ITEMS.register("shadowwalker_enderman_boots", () -> new ShadowwalkerEndermanArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
-            .rarity(EnderRarity.ENDER_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))));
+            .durability(ArmorItem.Type.BOOTS.getDurability(37))));
 
     //Pyromancer Brute Armor
 
     public static final DeferredHolder<Item, Item> PYROMANCER_BRUTE_HELMET = ITEMS.register("pyromancer_brute_helmet", () -> new PyromancerBruteArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.HELMET.getDurability(64))));
+            .durability(ArmorItem.Type.HELMET.getDurability(37))));
 
     public static final DeferredHolder<Item, Item> PYROMANCER_BRUTE_CHESTPLATE = ITEMS.register("pyromancer_brute_chestplate", () -> new PyromancerBruteArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
+            .rarity(Rarity.EPIC)
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
 
     //Bishop of Deceit Armor
 
     public static final DeferredHolder<Item, Item> BISHOP_OF_DECEIT_HELMET = ITEMS.register("bishop_of_deceit_helmet", () -> new BishopOfDeceitArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.HELMET.getDurability(64))));
+            .durability(ArmorItem.Type.HELMET.getDurability(37))));
 
     public static final DeferredHolder<Item, Item> BISHOP_OF_DECEIT_CHESTPLATE = ITEMS.register("bishop_of_deceit_chestplate", () -> new BishopOfDeceitArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
 
     //Necromancer Armor
 
     public static final DeferredHolder<Item, Item> NECROMANCER_HELMET = ITEMS.register("necromancer_helmet", () -> new NecromancerArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.HELMET.getDurability(64))));
+            .durability(ArmorItem.Type.HELMET.getDurability(37))));
 
     public static final DeferredHolder<Item, Item> NECROMANCER_CHESTPLATE = ITEMS.register("necromancer_chestplate", () -> new NecromancerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
 
     public static final DeferredHolder<Item, Item> NECROMANCER_LEGGINGS = ITEMS.register("necromancer_leggings", () -> new NecromancerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
 
     //Nameless One Armor
 
     public static final DeferredHolder<Item, Item> NAMELESS_ONE_HELMET = ITEMS.register("nameless_one_helmet", () -> new NamelessOneArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.HELMET.getDurability(64))));
+            .durability(ArmorItem.Type.HELMET.getDurability(37))));
 
     public static final DeferredHolder<Item, Item> NAMELESS_ONE_CHESTPLATE = ITEMS.register("nameless_one_chestplate", () -> new NamelessOneArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
 
     public static final DeferredHolder<Item, Item> NAMELESS_ONE_LEGGINGS = ITEMS.register("nameless_one_leggings", () -> new NamelessOneArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
 
 
     //Chlorophyte Armor
 
     public static final DeferredHolder<Item, Item> CHLOROPHYTE_HELMET = ITEMS.register("chlorophyte_helmet", () -> new ChlorophyteHelmetArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .rarity(NatureRarity.NATURE_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))));
     public static final DeferredHolder<Item, Item> CHLOROPHYTE_MASK = ITEMS.register("chlorophyte_mask", () -> new ChlorophyteMaskArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .rarity(NatureRarity.NATURE_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))));
     public static final DeferredHolder<Item, Item> CHLOROPHYTE_HEADGEAR = ITEMS.register("chlorophyte_headgear", () -> new ChlorophyteHeadgearArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .rarity(NatureRarity.NATURE_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))));
     public static final DeferredHolder<Item, Item> CHLOROPHYTE_CHESTPLATE = ITEMS.register("chlorophyte_chestplate", () -> new ChlorophyteArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .rarity(NatureRarity.NATURE_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))));
     public static final DeferredHolder<Item, Item> CHLOROPHYTE_LEGGINGS = ITEMS.register("chlorophyte_leggings", () -> new ChlorophyteArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
-            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .rarity(NatureRarity.NATURE_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))));
     public static final DeferredHolder<Item, Item> CHLOROPHYTE_BOOTS = ITEMS.register("chlorophyte_boots", () -> new ChlorophyteArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
-            .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue())
+            .rarity(NatureRarity.NATURE_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))));
 

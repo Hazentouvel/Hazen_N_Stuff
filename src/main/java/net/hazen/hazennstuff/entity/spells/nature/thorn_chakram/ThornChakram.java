@@ -1,15 +1,14 @@
 package net.hazen.hazennstuff.entity.spells.nature.thorn_chakram;
 
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
-import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.registries.HnSParticleHelper;
-import net.hazen.hazennstuff.registries.HnSSpellRegistries;
+import net.hazen.hazennstuff.registries.HnSSounds;
+import net.hazen.hazennstuff.spells.HnSSpellRegistries;
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.Entity;
@@ -175,7 +174,7 @@ public class ThornChakram extends AbstractMagicProjectile implements GeoEntity {
 
     @Override
     public Optional<Holder<SoundEvent>> getImpactSound() {
-        return Optional.of(SoundRegistry.CHAIN_LIGHTNING_CHAIN);
+        return Optional.of(HnSSounds.TERRARIA_IMPACT);
     }
 
     //ANIMATION

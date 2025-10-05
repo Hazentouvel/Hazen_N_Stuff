@@ -13,6 +13,10 @@ import net.hazen.hazennstuff.entity.mobs.wizards.Evil.PiglinPyromancer.PiglinPyr
 import net.hazen.hazennstuff.entity.mobs.wizards.Evil.ServantsOfEnder.ServantsOfEnderEntity;
 import net.hazen.hazennstuff.entity.mobs.wizards.Good.TheRecluse.TheRecluseEntity;
 import net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife.LifestealKnife;
+import net.hazen.hazennstuff.entity.spells.eldritch.soul_seeker.SoulSeeker;
+import net.hazen.hazennstuff.entity.spells.evocation.spectral_axe.SpectralAxe;
+import net.hazen.hazennstuff.entity.spells.holy.ichor_stream.IchorStream;
+import net.hazen.hazennstuff.entity.spells.nature.spider_lily.SpiderLily;
 import net.hazen.hazennstuff.entity.spells.shadow.nights_edge_strike.NightsEdgeStrike;
 import net.hazen.hazennstuff.entity.spells.fire.brimstone_hellblast.BrimstoneHellblast;
 import net.hazen.hazennstuff.entity.spells.ice.ice_arrow.IceCloud.IceCloud;
@@ -87,7 +91,7 @@ public class HnSEntityRegistry {
                     .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "thorn_chakram").toString())
             );
 
-    // Thorn Chakram
+    // Ice Arrow
     public static final DeferredHolder<EntityType<?>, EntityType<IceArrow>> ICE_ARROW=
             ENTITIES.register("ice_arrow", () -> EntityType.Builder.<IceArrow>of(IceArrow::new, MobCategory.MISC)
                     .sized(1f, 1f)
@@ -96,12 +100,36 @@ public class HnSEntityRegistry {
             );
 
 
-    // Thorn Chakram
+    // Crystal Volley
     public static final DeferredHolder<EntityType<?>, EntityType<CrystalVolley>> CRYSTAL_VOLLEY =
             ENTITIES.register("crystal_volley", () -> EntityType.Builder.<CrystalVolley>of(CrystalVolley::new, MobCategory.MISC)
                     .sized(1f, 1f)
                     .clientTrackingRange(64)
                     .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crystal_volley").toString())
+            );
+
+    // Spectral Axe
+    public static final DeferredHolder<EntityType<?>, EntityType<SpectralAxe>> SPECTRAL_AXE =
+            ENTITIES.register("spectral_axe", () -> EntityType.Builder.<SpectralAxe>of(SpectralAxe::new, MobCategory.MISC)
+                    .sized(1f, 1f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "spectral_axe").toString())
+            );
+
+    // Soul Seeker
+    public static final DeferredHolder<EntityType<?>, EntityType<SoulSeeker>> SOUL_SEEKER =
+            ENTITIES.register("soul_seeker", () -> EntityType.Builder.<SoulSeeker>of(SoulSeeker::new, MobCategory.MISC)
+                    .sized(1f, 1f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "soul_seeker").toString())
+            );
+
+    // Spider lily
+    public static final DeferredHolder<EntityType<?>, EntityType<SpiderLily>> SPIDER_LILY =
+            ENTITIES.register("spider_lily", () -> EntityType.Builder.<SpiderLily>of(SpiderLily::new, MobCategory.MISC)
+                    .sized(1f, 1f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "spider_lily").toString())
             );
 
 
@@ -209,6 +237,12 @@ public class HnSEntityRegistry {
                     .sized(4f, 1.2f)
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ice_cloud").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<IchorStream>> ICHOR_STREAM =
+            ENTITIES.register("ichor_stream", () -> EntityType.Builder.<IchorStream>of(IchorStream::new, MobCategory.MISC)
+                    .sized(1.2f, 1.2f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ichor_stream").toString()));
 
 
     public static void register(IEventBus eventBus)

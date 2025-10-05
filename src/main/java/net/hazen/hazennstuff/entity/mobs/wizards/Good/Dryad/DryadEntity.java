@@ -16,7 +16,7 @@ import io.redspace.ironsspellbooks.player.AdditionalWanderingTrades;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import io.redspace.ironsspellbooks.util.ModTags;
 import net.hazen.hazennstuff.registries.HnSItems;
-import net.hazen.hazennstuff.registries.HnSSpellRegistries;
+import net.hazen.hazennstuff.spells.HnSSpellRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;

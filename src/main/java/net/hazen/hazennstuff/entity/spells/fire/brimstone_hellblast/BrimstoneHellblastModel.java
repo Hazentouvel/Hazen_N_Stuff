@@ -13,7 +13,7 @@ public class BrimstoneHellblastModel extends GeoModel<BrimstoneHellblast> {
 
     @Override
     public ResourceLocation getTextureResource(BrimstoneHellblast animatable) {
-        int frameCount = 4;
+        int frameCount = 5;
         int frameDuration = 2; // ticks per frame
         int frame = (animatable.tickCount / frameDuration) % frameCount;
         return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/brimstone_hellblast_" + frame + ".png");

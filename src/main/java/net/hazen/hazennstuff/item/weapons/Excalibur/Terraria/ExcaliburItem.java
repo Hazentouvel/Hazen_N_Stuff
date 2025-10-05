@@ -1,19 +1,30 @@
 package net.hazen.hazennstuff.item.weapons.Excalibur.Terraria;
 
+import io.redspace.ironsspellbooks.api.events.ModifySpellLevelEvent;
+import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
+import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.item.weapons.HNSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.item.weapons.Excalibur.HazenStyle.HazensExcaliburItem;
+import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.DivineRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.Map;
 import java.util.function.Consumer;
 
 public class ExcaliburItem extends MagicSwordItem implements GeoItem {
@@ -21,12 +32,12 @@ public class ExcaliburItem extends MagicSwordItem implements GeoItem {
 
     public ExcaliburItem() {
         super(
-                HNSExtendedWeaponsTiers.DIVINE_GREATSWORD,
+                HnSExtendedWeaponsTiers.EXCALIBUR,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(DivineRarity.DIVINE_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HNSExtendedWeaponsTiers.DIVINE_GREATSWORD)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.EXCALIBUR)
                         ),
                 SpellDataRegistryHolder.of(
                         new SpellDataRegistryHolder(SpellRegistry.DIVINE_SMITE_SPELL, 8)
@@ -71,5 +82,41 @@ public class ExcaliburItem extends MagicSwordItem implements GeoItem {
                 return this.renderer;
             }
         });
+    }
+
+    @Override
+    public void initializeSpellContainer(ItemStack itemStack) {
+        if (itemStack == null) {
+            return;
+        }
+
+        super.initializeSpellContainer(itemStack);
+        itemStack.set(ComponentRegistry.AFFINITY_COMPONENT, new AffinityData(Map.of(
+                SpellRegistry.DIVINE_SMITE_SPELL.get().getSpellResource(), 1
+        )));
+    }
+
+    @EventBusSubscriber(modid = HazenNStuff.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public class SpellEvents {
+
+        @SubscribeEvent
+        public static void onModifySpellLevel(ModifySpellLevelEvent event) {
+            LivingEntity caster = event.getEntity();
+            if (caster == null) return;
+
+            if (event.getSpell() != SpellRegistry.DIVINE_SMITE_SPELL.get()) {
+                return;
+            }
+
+            ItemStack mainHand = caster.getMainHandItem();
+            ItemStack offHand = caster.getOffhandItem();
+
+            boolean usingKnives = mainHand.getItem() instanceof ExcaliburItem ||
+                    offHand.getItem() instanceof ExcaliburItem;
+
+            if (usingKnives) {
+                event.addLevels(1);
+            }
+        }
     }
 }

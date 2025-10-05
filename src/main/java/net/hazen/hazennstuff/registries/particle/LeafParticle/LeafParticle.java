@@ -22,11 +22,11 @@ public class LeafParticle extends TextureSheetParticle {
 
     public LeafParticle(LeafParticleOptions options, ClientLevel level, double xCoord, double yCoord, double zCoord, double xd, double yd, double zd) {
         super(level, xCoord, yCoord, zCoord, xd, yd, zd);
-        this.scale(this.random.nextFloat() * 0.65F + 0.4F);
+        this.scale(this.random.nextFloat() * 0.15F + 0.1F);
         this.lifetime = 20 + (int)(Math.random() * (double)45.0F);
         this.gravity = 1.3F;
         this.friction = 0.985F;
-        this.quadSize = 0.0625F;
+        this.quadSize = 0.25F;
         this.targetR = options.color.x() * (0.9F + this.random.nextFloat() * 0.1F);
         this.targetG = options.color.y() * (0.9F + this.random.nextFloat() * 0.1F);
         this.targetB = options.color.z() * (0.9F + this.random.nextFloat() * 0.1F);

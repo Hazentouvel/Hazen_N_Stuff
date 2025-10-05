@@ -4,7 +4,7 @@ import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
 import net.hazen.hazennstuff.registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.registries.HnSSounds;
-import net.hazen.hazennstuff.registries.HnSSpellRegistries;
+import net.hazen.hazennstuff.spells.HnSSpellRegistries;
 import net.hazen.hazennstuff.registries.effects.InfestedEffect;
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;

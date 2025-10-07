@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.item.armor.Geckolib.SacredRobes;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
@@ -26,7 +27,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
 
-public class SacredRobesArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket {
+public class SacredRobesArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     public SacredRobesArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item

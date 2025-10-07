@@ -3,6 +3,8 @@ package net.hazen.hazennstuff.item.armor.Geckolib.PyriumBattlemage;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
+import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.hazen.hazennstuff.compat.MalumCompat;
@@ -23,7 +25,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import java.util.List;
 
-public class PyriumBattlemageArmorItem extends HnSGeckolibArmorItem {
+public class PyriumBattlemageArmorItem extends HnSGeckolibArmorItem implements IDisableJacket, IDisableHat {
     public PyriumBattlemageArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.ADVANCED_BATTLEMAGE_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150, AttributeModifier.Operation.ADD_VALUE),

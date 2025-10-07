@@ -117,11 +117,9 @@ public class VampireKnivesItem extends MagicSwordItem implements GeoItem {
                 projectile.shoot(xPower, yPower, zPower, 1.5f, 0); // velocity and inaccuracy
                 level.addFreshEntity(projectile);
             }
-
             level.playSound(null, player.getX(), player.getY(), player.getZ(), HnSSounds.VAMPIRE_KNIFE_THROW, SoundSource.PLAYERS, 1.0f, 1.0f);
             player.getCooldowns().addCooldown(this, 40);
         }
-
         return InteractionResultHolder.sidedSuccess(player.getItemInHand(hand), level.isClientSide());
     }
 

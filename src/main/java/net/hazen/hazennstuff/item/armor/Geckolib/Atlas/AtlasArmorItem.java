@@ -1,6 +1,7 @@
 package net.hazen.hazennstuff.item.armor.Geckolib.Atlas;
 
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.armor.ImbuableChestplateArmorItem;
 import io.redspace.ironsspellbooks.registries.ArmorMaterialRegistry;
@@ -8,7 +9,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
-public class AtlasArmorItem extends ImbuableChestplateArmorItem implements IDisableJacket {
+public class AtlasArmorItem extends ImbuableChestplateArmorItem implements IDisableJacket, IDisableHat {
     public AtlasArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
         super(ArmorMaterialRegistry.NETHERITE_BATTLEMAGE, type, settings, withManaAndSpellPowerAttribute(125, 0.05));

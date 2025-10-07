@@ -2,6 +2,8 @@ package net.hazen.hazennstuff.item.armor.Geckolib.MothicWitch;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
+import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.compat.MalumCompat;
@@ -22,7 +24,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import java.util.List;
 
-public class NerfedMothicWitchArmorItem extends ImbuableGeckolibHnSArmorItem {
+public class NerfedMothicWitchArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket {
     public NerfedMothicWitchArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
         super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,

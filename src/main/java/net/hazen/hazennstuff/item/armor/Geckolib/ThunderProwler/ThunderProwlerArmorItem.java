@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.item.armor.Geckolib.ThunderProwler;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
@@ -23,7 +24,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import java.util.List;
 
-public class ThunderProwlerArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket {
+public class ThunderProwlerArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public ThunderProwlerArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
         super(HnSArmorMaterials.CHARGED_SCOURGE_MATERIAL, type, settings,

@@ -1,6 +1,7 @@
 package net.hazen.hazennstuff.item.armor.AzureLib.TheWither;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
@@ -24,7 +25,7 @@ import net.minecraft.world.level.Level;
 
 import java.util.List;
 
-public class TheWitherArmorItem extends ImbuableHnSArmorItem implements IDisableJacket {
+public class TheWitherArmorItem extends ImbuableHnSArmorItem implements IDisableJacket, IDisableHat {
     // This is your class where you will setup the AzCommands/Animations you wish to play
     public final HnSArmorDispatcher dispatcher;
 

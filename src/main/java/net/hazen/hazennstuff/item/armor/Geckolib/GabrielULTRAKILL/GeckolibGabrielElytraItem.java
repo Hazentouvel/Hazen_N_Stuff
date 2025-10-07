@@ -3,6 +3,7 @@ package net.hazen.hazennstuff.item.armor.Geckolib.GabrielULTRAKILL;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.armor.ImbuableChestplateArmorItem;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
@@ -26,7 +27,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
 
-public class GeckolibGabrielElytraItem extends ImbuableChestplateArmorItem implements IDisableJacket {
+public class GeckolibGabrielElytraItem extends ImbuableChestplateArmorItem implements IDisableJacket, IDisableHat {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     public GeckolibGabrielElytraItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item

@@ -2,6 +2,8 @@ package net.hazen.hazennstuff.item.armor.Geckolib.Utau;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
+import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.armor.ImbuableChestplateArmorItem;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.MalumCompat;
@@ -15,7 +17,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import java.util.List;
 
-public class UtauArmorItem extends ImbuableChestplateArmorItem {
+public class UtauArmorItem extends ImbuableChestplateArmorItem implements IDisableJacket, IDisableHat {
     public UtauArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),

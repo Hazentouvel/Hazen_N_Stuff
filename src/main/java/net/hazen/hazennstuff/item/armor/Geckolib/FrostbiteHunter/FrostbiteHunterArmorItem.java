@@ -5,6 +5,8 @@ import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
+import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
@@ -23,7 +25,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import java.util.Map;
 
-public class FrostbiteHunterArmorItem extends ImbuableGeckolibHnSArmorItem {
+public class FrostbiteHunterArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public FrostbiteHunterArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
         super(HnSArmorMaterials.HUNTER_MATERIAL, type, settings,

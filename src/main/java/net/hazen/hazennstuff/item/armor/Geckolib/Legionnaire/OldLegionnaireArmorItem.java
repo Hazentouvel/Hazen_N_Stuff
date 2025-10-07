@@ -2,6 +2,8 @@ package net.hazen.hazennstuff.item.armor.Geckolib.Legionnaire;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
+import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.Geckolib.HnSGeckolibArmorItem;
@@ -22,7 +24,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import java.util.List;
 
-public class OldLegionnaireArmorItem extends HnSGeckolibArmorItem {
+public class OldLegionnaireArmorItem extends HnSGeckolibArmorItem implements IDisableJacket, IDisableHat {
     public OldLegionnaireArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.LEGIONNAIRE_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.SPELL_RESIST, .05, AttributeModifier.Operation.ADD_VALUE),

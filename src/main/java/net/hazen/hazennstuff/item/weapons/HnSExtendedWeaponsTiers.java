@@ -490,6 +490,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
         this.attributeContainers = attributes;
     }
 
+
     @Override
     public AttributeContainer[] getAdditionalAttributes() {
         return this.attributeContainers;

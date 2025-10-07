@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-01T12:39:19.3074562	Recipes
+// 1.21.1	2025-10-06T08:17:44.0955654	Recipes
 c79e8a6ee9711cc676cdc63ce52db2c3c02693c6 data/hazennstuff/advancement/recipes/building_blocks/crafting/blocks/frostbite_birch_slab.json
 0936508edfb38527421ae043ebf5413491c5b24c data/hazennstuff/advancement/recipes/building_blocks/crafting/blocks/frostbite_birch_stairs.json
 82db074d56ee8a13b9597e7719451de75cbca393 data/hazennstuff/advancement/recipes/building_blocks/crafting/blocks/mossy_mud_brick_slab.json
@@ -120,7 +120,7 @@ c8bc1c50176e65e0d9ff399ee533ddce1359809a data/hazennstuff/recipe/recipe/crafting
 bdd2b8858f5653fc24ef0743ff6411eec3eff9c7 data/hazennstuff/recipe/recipe/crafting/armor/tyros/tyros_helmet.json
 fd9ebefa0609d0c8dde8362f25948fec1d2491f6 data/hazennstuff/recipe/recipe/crafting/armor/tyros/tyros_leggings.json
 89bb5077d94f17452ca164081eafa8224163e970 data/hazennstuff/recipe/recipe/smithing/armor/calamitas/calamitas_boots.json
-06aefe86b98a65490f2ddba08aa0a4f2011d70f7 data/hazennstuff/recipe/recipe/smithing/armor/calamitas/calamitas_chestplate.json
+485bf71a541fdf70164d80e2e4e8339e1f350d95 data/hazennstuff/recipe/recipe/smithing/armor/calamitas/calamitas_chestplate.json
 e95828da0427d50229e1db59911679b6d0b233d4 data/hazennstuff/recipe/recipe/smithing/armor/calamitas/calamitas_helmet.json
 56113f9674fef60b2178faf414559fe18b647eac data/hazennstuff/recipe/recipe/smithing/armor/calamitas/calamitas_leggings.json
 e787315468ce9fbd78ae1af9d57ec25bdcbeeebc data/hazennstuff/recipe/recipe/smithing/armor/fireblossom_battlemage/convert_fireblossom_battlemage_crown.json

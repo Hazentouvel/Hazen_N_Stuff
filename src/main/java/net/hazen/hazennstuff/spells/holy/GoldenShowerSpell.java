@@ -7,6 +7,7 @@ import java.util.TimerTask;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.Utils;
+import io.redspace.ironsspellbooks.entity.spells.fireball.SmallMagicFireball;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.entity.spells.holy.ichor_stream.IchorStream;
 import net.hazen.hazennstuff.entity.spells.lightning.spark.EnergyBurst;
@@ -16,8 +17,12 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Optional;
@@ -53,62 +58,48 @@ public class GoldenShowerSpell extends AbstractSpell {
         return this.castTime + 5 * spellLevel;
     }
 
-    public Optional<SoundEvent> getCastStartSound() {
-        return Optional.of(HnSSounds.GOLDEN_SHOWER_CAST.get());
+    public CastType getCastType() {
+        return CastType.CONTINUOUS;
+    }
+
+    public DefaultConfig getDefaultConfig() {
+        return this.defaultConfig;
+    }
+
+    public ResourceLocation getSpellResource() {
+        return this.spellId;
     }
 
     public Optional<SoundEvent> getCastFinishSound() {
         return Optional.empty();
     }
 
-
-    @Override
-    public CastType getCastType() {
-        return CastType.CONTINUOUS;
+    public Optional<SoundEvent> getCastStartSound() {
+        return Optional.of(HnSSounds.GOLDEN_SHOWER_CAST.get());
     }
 
-    @Override
-    public DefaultConfig getDefaultConfig() {
-        return defaultConfig;
-    }
-
-    @Override
-    public ResourceLocation getSpellResource() {
-        return spellId;
-    }
-
-    @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
-        Timer timer = new Timer();
-
-        int delayBetweenBolts = 150;
-
-        for (int i = 0; i < 3; i++) {
-            int delay = i * delayBetweenBolts;
-            timer.schedule(new TimerTask() {
-                @Override
-                public void run() {
-                    float spellPower = getSpellPower(spellLevel, entity);
-                    IchorStream spark = new IchorStream(world, entity, spellLevel, spellPower);
-                    spark.setPos(entity.position().add(0, entity.getEyeHeight() - spark.getBoundingBox().getYsize() * 0.5f, 0));
-                    spark.shoot(entity.getLookAngle());
-                    world.addFreshEntity(spark);
-                }
-            }, delay);
-        }
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                timer.cancel();
-            }
-        }, 3 * delayBetweenBolts);
-
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
 
+    public void onServerCastTick(Level level, int spellLevel, LivingEntity entity, @Nullable MagicData playerMagicData) {
+        if (playerMagicData != null && (playerMagicData.getCastDurationRemaining() + 1) % 5 == 0) {
+            this.shootIchorStream(level, spellLevel, entity);
+        }
+
+    }
+
+    public void shootIchorStream(Level world, int spellLevel, LivingEntity entity) {
+        Vec3 origin = entity.getEyePosition().add(entity.getForward().normalize().scale(0.2));
+
+        IchorStream ichorStream = new IchorStream(world, entity, spellLevel, getSpellPower(spellLevel, entity));
+        ichorStream.setPos(origin.subtract(0.0, ichorStream.getBbHeight(), 0.0));
+        world.addFreshEntity(ichorStream);
+    }
+
+
 
     private float getDamage ( int spellLevel, LivingEntity entity){
-        return getSpellPower(spellLevel, entity) * 0.3f;
+        return getSpellPower(spellLevel, entity) * 0.4f;
     }
 }

@@ -2,6 +2,8 @@ package net.hazen.hazennstuff.item.armor.Geckolib.SupremeWitch;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
+import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
@@ -21,7 +23,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import java.util.List;
 
-public class GeckolibSupremeWitchArmorItem extends ImbuableGeckolibHnSArmorItem {
+public class GeckolibSupremeWitchArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public GeckolibSupremeWitchArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
         super(HnSArmorMaterials.SUPREME_WITCH_MATERIAL, type, settings,

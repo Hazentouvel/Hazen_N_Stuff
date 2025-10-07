@@ -6,7 +6,7 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.entity.spells.fireball.MagicFireball;
+import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.entity.spells.fire.brimstone_hellblast.BrimstoneHellblast;
 import net.hazen.hazennstuff.registries.HnSSounds;
@@ -47,10 +47,6 @@ public class BrimstoneHellblastSpell extends AbstractSpell {
         this.castTime = 30;
         this.baseManaCost = 60;
     }
-    @Override
-    public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of(HnSSounds.BRIMSTONE_HELLBLAST_CAST.get());
-    }
 
     @Override
     public CastType getCastType() {
@@ -72,19 +68,27 @@ public class BrimstoneHellblastSpell extends AbstractSpell {
         return Optional.of(HnSSounds.BRIMSTONE_CAST.get());
     }
 
+    @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         Vec3 origin = entity.getEyePosition();
-        BrimstoneHellblast fireball = new BrimstoneHellblast(world, entity);
-        fireball.setDamage(this.getDamage(spellLevel, entity));
-        fireball.setExplosionRadius((float)this.getRadius(spellLevel, entity));
-        fireball.setPos(origin.add(entity.getForward()).subtract((double)0.0F, (double)(fireball.getBbHeight() / 2.0F), (double)0.0F));
-        fireball.shoot(entity.getLookAngle());
-        world.addFreshEntity(fireball);
+
+        BrimstoneHellblast brimstoneHellblast = new BrimstoneHellblast(world, entity);
+
+        brimstoneHellblast.setDamage(getDamage(spellLevel, entity));
+        brimstoneHellblast.setExplosionRadius((float)this.getRadius(spellLevel, entity));
+
+        brimstoneHellblast.setPos(origin.add(entity.getForward()).subtract(0, brimstoneHellblast.getBbHeight() / 2, 0));
+        brimstoneHellblast.shoot(entity.getLookAngle());
+
+        world.addFreshEntity(brimstoneHellblast);
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
 
 
     public float getDamage(int spellLevel, LivingEntity caster) {
+        if (caster == null) {
+            return (float) getSpellPower(spellLevel, null) * 7;
+        }
         double firePower = caster.getAttributeValue(AttributeRegistry.FIRE_SPELL_POWER);
         double bloodPower = caster.getAttributeValue(AttributeRegistry.BLOOD_SPELL_POWER);
         return (float)(5.0 + 5.0 * getSpellPower(spellLevel, caster) * (0.5 * firePower + 0.5 * bloodPower));

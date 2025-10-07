@@ -6,6 +6,7 @@ import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.entity.spells.ball_lightning.BallLightning;
+import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.entity.spells.nature.spider_lily.SpiderLily;
 import net.hazen.hazennstuff.entity.spells.nature.thorn_chakram.ThornChakram;
@@ -31,8 +32,8 @@ public class CounterspellSpiderLilySpell extends AbstractSpell {
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.COMMON)
             .setSchoolResource(SchoolRegistry.NATURE_RESOURCE)
-            .setMaxLevel(10)
-            .setCooldownSeconds(1)
+            .setMaxLevel(5)
+            .setCooldownSeconds(4)
             .build();
 
     public CounterspellSpiderLilySpell() {
@@ -45,7 +46,7 @@ public class CounterspellSpiderLilySpell extends AbstractSpell {
 
     @Override
     public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of(HnSSounds.TERRARIA_SWING.get());
+        return Optional.of(SoundRegistry.ACID_ORB_CAST.get());
     }
 
     @Override

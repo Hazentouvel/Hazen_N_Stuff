@@ -5,6 +5,8 @@ import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
+import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
@@ -36,7 +38,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 import java.util.List;
 import java.util.Map;
 
-public class GarmentsOfTheFirstFlamebearerChestplateArmorItem extends ImbuableGeckolibHnSArmorItem {
+public class GarmentsOfTheFirstFlamebearerChestplateArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public GarmentsOfTheFirstFlamebearerChestplateArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.TYROS_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),

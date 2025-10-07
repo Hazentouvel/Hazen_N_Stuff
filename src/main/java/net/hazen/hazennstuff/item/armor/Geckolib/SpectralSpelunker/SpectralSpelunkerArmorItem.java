@@ -2,6 +2,8 @@ package net.hazen.hazennstuff.item.armor.Geckolib.SpectralSpelunker;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
+import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.registries.ArmorMaterialRegistry;
 import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
@@ -17,7 +19,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
-public class SpectralSpelunkerArmorItem extends ImbuableGeckolibHnSArmorItem {
+public class SpectralSpelunkerArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public SpectralSpelunkerArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
         super(ArmorMaterialRegistry.NETHERITE_BATTLEMAGE, type, settings,

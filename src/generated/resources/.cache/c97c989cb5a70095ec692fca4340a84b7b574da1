@@ -1,7 +1,7 @@
-// 1.21.1	2025-10-02T11:52:18.5684502	Tags for minecraft:item mod id hazennstuff
+// 1.21.1	2025-10-06T08:17:44.0865775	Tags for minecraft:item mod id hazennstuff
 57ddc60e6a975db6eabd32e18d2d456dc3dfce34 data/c/tags/item/armors.json
 740053467c0e6401606132b0ce14777e5339d91f data/c/tags/item/bones.json
-57ddc60e6a975db6eabd32e18d2d456dc3dfce34 data/c/tags/item/enchantables.json
+9a7fdf9ffe464b9a7f566ab91e6dadb51a2be9b1 data/c/tags/item/enchantables.json
 b8b267e340593959ba088ed02a1727a3c39d5606 data/c/tags/item/gems.json
 7aa24cfa00593b4dbd92d0e19b403da85cb4cda6 data/c/tags/item/gems/quartz.json
 689293c1724f58bcc49e08e20b600fab23258396 data/c/tags/item/hidden_from_recipe_viewers.json
@@ -17,6 +17,7 @@ b9954a780f37e2d30b2edd1085646f77332ff93c data/hazennstuff/tags/item/armor/nether
 0fd9b110e434eb6e16384c3d1604c526e49c8648 data/hazennstuff/tags/item/armor/netherite_battlemage/netherite_battlemage_leggings.json
 86c15ace5244ad42780ca494c5f364c751d069ba data/hazennstuff/tags/item/armor/school_armor/school_helmet.json
 3a65407953f7484e090e8898b4658df2a5eff741 data/hazennstuff/tags/item/ores/zenalite.json
+49cd9126194e1e0c4fd582b85d1dd79c53c07e0c data/irons_spellbooks/tags/item/imbue_whitelist.json
 f551afd2077ca15213570bee683ca4bd6e1179c0 data/minecraft/tags/item/axes.json
 e5f476767d238880ecf6f705e2e7665bd5f980cd data/minecraft/tags/item/chest_armor.json
 a823f3237a2a08d8f4f5d6c9d92a8252a8b6b487 data/minecraft/tags/item/doors.json
@@ -28,6 +29,7 @@ fce008deec6e8cfd0d0806b6f18990846a01dcb1 data/minecraft/tags/item/enchantable/fo
 dc4791298c16fdd6d8e1465349a459b787142803 data/minecraft/tags/item/enchantable/head_armor.json
 44da74bc1e1bbe7a54a3bc76120413011c15177a data/minecraft/tags/item/enchantable/leg_armor.json
 68f33931873211ee1de5bcb19f7714e2082852f4 data/minecraft/tags/item/enchantable/mace.json
+eb246ec29a19a160da18d2e464bfb9abcf33cc72 data/minecraft/tags/item/enchantable/mining.json
 01f90197271dd4c5869e0f01adbf2ca5705b9752 data/minecraft/tags/item/enchantable/sharp_weapon.json
 8997331671aa7cba8a9cb970be783438fe63873e data/minecraft/tags/item/fences.json
 7747a657bf35c413736b2132fc993249218293e2 data/minecraft/tags/item/fence_gates.json

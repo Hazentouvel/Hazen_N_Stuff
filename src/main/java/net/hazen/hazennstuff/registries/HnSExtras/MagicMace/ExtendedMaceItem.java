@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.registries.HnSExtras;
+package net.hazen.hazennstuff.registries.HnSExtras.MagicMace;
 
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.item.weapons.IronsWeaponTier;
@@ -9,8 +9,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.MaceItem;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 
 public class ExtendedMaceItem extends MaceItem {

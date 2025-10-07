@@ -3,6 +3,7 @@ package net.hazen.hazennstuff.item.armor.Geckolib.Chlorophyte.Helmet;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
@@ -26,7 +27,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import java.util.List;
 
-public class ChlorophyteHelmetArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket {
+public class ChlorophyteHelmetArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public ChlorophyteHelmetArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
         super(HnSArmorMaterials.CREAKING_SORCERER_MATERIAL, type, settings,

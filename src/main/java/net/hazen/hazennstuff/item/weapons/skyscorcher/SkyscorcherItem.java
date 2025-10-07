@@ -3,37 +3,35 @@ package net.hazen.hazennstuff.item.weapons.skyscorcher;
 import io.redspace.ironsspellbooks.api.events.ModifySpellLevelEvent;
 import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
-import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
-import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import io.redspace.ironsspellbooks.util.ParticleHelper;
+import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.item.weapons.vampire_knives.VampireKnivesItem;
 import net.hazen.hazennstuff.rarity.ElectricRarity;
-import net.hazen.hazennstuff.registries.HnSExtras.MagicMaceItem;
+import net.hazen.hazennstuff.registries.HnSExtras.MagicMace.MagicMaceItem;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.sounds.SoundEvents;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.MaceItem;
-import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
@@ -112,6 +110,16 @@ public class SkyscorcherItem extends MagicMaceItem implements GeoItem {
                 return this.renderer;
             }
         });
+    }
+
+    @Override
+    public void appendHoverText(@NotNull ItemStack itemStack, @NotNull TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
+        super.appendHoverText(itemStack, context, lines, flag);
+        var affinityData = AffinityData.getAffinityData(itemStack);
+        if (!affinityData.affinityData().isEmpty()) {
+            int i = TooltipsUtils.indexOfComponent(lines, "tooltip.hazennstuff.spellbook_spell_count");
+            lines.addAll(i < 0 ? lines.size() : i + 1, affinityData.getDescriptionComponent());
+        }
     }
 
     @Override

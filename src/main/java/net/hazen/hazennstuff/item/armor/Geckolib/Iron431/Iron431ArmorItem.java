@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.item.armor.Geckolib.Iron431;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
@@ -26,7 +27,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
 
-public class Iron431ArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket {
+public class Iron431ArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     public Iron431ArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item

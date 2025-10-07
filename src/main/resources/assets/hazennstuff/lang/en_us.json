@@ -58,15 +58,16 @@
   "item.hazennstuff.reinforced": "Reinforced Mana Crystal",
   "item.hazennstuff.radiance": "Radiance Mana Crystal",
 
-  "item.hazennstuff.abstract": "Abstract Life Crystal",
-  "item.hazennstuff.advanced": "Advanced Life Crystal",
-  "item.hazennstuff.abomination": "Abomination Life Crystal",
-  "item.hazennstuff.absolute": "Absolute Life Crystal",
+  "item.hazennstuff.abstract": "Abstract Spirit Crystal",
+  "item.hazennstuff.advanced": "Advanced Spirit Crystal",
+  "item.hazennstuff.abomination": "Abomination Spirit Crystal",
+  "item.hazennstuff.absolute": "Absolute Spirit Crystal",
 
-  "item.hazennstuff.shattered": "Shattered Spirit Crystal",
-  "item.hazennstuff.sacred": "Sacred Spirit Crystal",
-  "item.hazennstuff.strengthened": "Strengthened Spirit Crystal",
-  "item.hazennstuff.singularity": "Singularity Spirit Crystal",
+  "item.hazennstuff.shattered": "Shattered Life Crystal",
+  "item.hazennstuff.sacred": "Sacred Life Crystal",
+  "item.hazennstuff.strengthened": "Strengthened Life Crystal",
+  "item.hazennstuff.singularity": "Singularity Life Crystal",
+
 
   "item.hazennstuff.energized_core_spellbook": "Energized Core Spellbook",
   "item.hazennstuff.golden_shower_spellbook": "Golden Shower",
@@ -517,10 +518,10 @@
   "item.hazennstuff.garments_of_the_first_flamebearer_leggings": "Tyros Leggings",
   "item.hazennstuff.garments_of_the_first_flamebearer_boots": "Tyros Boots",
 
-  "item.hazennstuff.soul_garments_of_the_first_flamebearer_helmet": "Soul Tyros Hood",
-  "item.hazennstuff.soul_garments_of_the_first_flamebearer_chestplate": "Soul Tyros Chestplate",
-  "item.hazennstuff.soul_garments_of_the_first_flamebearer_leggings": "Soul Tyros Leggings",
-  "item.hazennstuff.soul_garments_of_the_first_flamebearer_boots": "Soul Tyros Boots",
+  "item.hazennstuff.garments_of_the_first_flamebearer_soul_helmet": "Soul Tyros Hood",
+  "item.hazennstuff.garments_of_the_first_flamebearer_soul_chestplate": "Soul Tyros Chestplate",
+  "item.hazennstuff.garments_of_the_first_flamebearer_soul_leggings": "Soul Tyros Leggings",
+  "item.hazennstuff.garments_of_the_first_flamebearer_soul_boots": "Soul Tyros Boots",
 
   "item.hazennstuff.neru_helmet": "Neru's Hair",
   "item.hazennstuff.neru_chestplate": "Neru's Dress",
@@ -660,7 +661,7 @@
 
   "entity.hazennstuff.nights_edge_strike": "Night's Edge Slash",
 
-  "entity.hazennstuff.soul_seekers": "Soul Seekers",
+  "entity.hazennstuff.soul_seeker": "Soul Seeker",
 
 
   "spell.hazennstuff.brimstone_hellblast": "Brimstone Hellblast",
@@ -749,6 +750,7 @@
   "attribute.hazennstuff.shadow_spell_resist": "Shadow Spell Power",
 
   "material.hazennstuff.chlorophyte": "Chlorophyte",
+  "material.hazennstuff.demonite": "Demonite",
   "material.hazennstuff.dreadsteel": "Dreadsteel",
   "material.hazennstuff.hallowed": "Hallowed",
   "material.hazennstuff.rose_gold": "Rose Gold",

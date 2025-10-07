@@ -8,6 +8,11 @@
   },
   "result": {
     "components": {
+      "irons_spellbooks:affinity_data": {
+        "bonuses": {
+          "hazennstuff:brimstone_hellblast": 1
+        }
+      },
       "irons_spellbooks:spell_container": {
         "data": [],
         "maxSpells": 1,

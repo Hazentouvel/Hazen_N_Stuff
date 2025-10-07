@@ -68,46 +68,36 @@ public class SyringeBarrageSpell extends AbstractSpell {
     }
 
 
-    @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
-        // Create a Timer for scheduling tasks
         Timer timer = new Timer();
-
-        // Define the delay between bolts (in milliseconds)
         int delayBetweenBolts = 100;
-
-        // Schedule three tasks, one for each bolt
-        for (int i = 0; i < 3; i++) {
+        int totalBolts = 3;
+        for (int i = 0; i < totalBolts; i++) {
             int delay = i * delayBetweenBolts;
             timer.schedule(new TimerTask() {
-                @Override
                 public void run() {
                     Syringe syringe = new Syringe(world, entity);
-                    // Set the starting position to the caster's eye position (adjust as needed)
-                    syringe.setPos(entity.position().add(0, entity.getEyeHeight() - syringe.getBoundingBox().getYsize() * 0.5f, 0));
-                    // Set the direction of the bolt to match the caster's look angle
+                    syringe.setPos(
+                            entity.position().add(
+                                    0.0D,
+                                    entity.getEyeHeight() - syringe.getBoundingBox().getYsize() * 0.5D,
+                                    0.0D
+                            )
+                    );
                     syringe.shoot(entity.getLookAngle());
-                    // Set the damage based on the spell level and caster
                     syringe.setDamage(getDamage(spellLevel, entity));
-                    // Add the bolt entity to the world
                     world.addFreshEntity(syringe);
                 }
             }, delay);
         }
-
-        // Optionally, cancel the timer after the last task has executed (if no longer needed)
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 timer.cancel();
             }
-        }, 3 * delayBetweenBolts);
-
-        // Call the base spell onCast behavior
+        }, totalBolts * delayBetweenBolts);
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
-
-
 
     private float getDamage(int spellLevel, LivingEntity entity) {
         return getSpellPower(spellLevel, entity) * .3f;

@@ -39,9 +39,4 @@ public class SpiderLilyRenderer extends GeoEntityRenderer<SpiderLily> {
 
         super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, colour);
     }
-
-    @Override
-    public RenderType getRenderType(SpiderLily animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick) {
-        return RenderType.energySwirl(texture, 0, 0);
-    }
 }

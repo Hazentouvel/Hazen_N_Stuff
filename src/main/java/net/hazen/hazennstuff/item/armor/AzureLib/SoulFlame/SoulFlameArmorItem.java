@@ -1,6 +1,7 @@
 package net.hazen.hazennstuff.item.armor.AzureLib.SoulFlame;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
@@ -23,7 +24,7 @@ import net.minecraft.world.level.Level;
 
 import java.util.List;
 
-public class SoulFlameArmorItem extends ImbuableHnSArmorItem implements IDisableJacket {
+public class SoulFlameArmorItem extends ImbuableHnSArmorItem implements IDisableHat {
     // This is your class where you will setup the AzCommands/Animations you wish to play
     public final HnSArmorDispatcher dispatcher;
 

@@ -226,8 +226,7 @@
 					"parent": "bipedRightArm",
 					"pivot": [-5, 22, 0],
 					"cubes": [
-						{"origin": [-8, 12, -2], "size": [4, 12, 4], "inflate": 0.25, "uv": [80, 65]},
-						{"origin": [4, 12, -2], "size": [4, 12, 4], "inflate": 0.25, "uv": [80, 81]}
+						{"origin": [-8, 12, -2], "size": [4, 12, 4], "inflate": 0.25, "uv": [80, 65]}
 					]
 				},
 				{
@@ -258,7 +257,10 @@
 				{
 					"name": "armorLeftArm",
 					"parent": "bipedLeftArm",
-					"pivot": [5, 22, 0]
+					"pivot": [5, 22, 0],
+					"cubes": [
+						{"origin": [4, 12, -2], "size": [4, 12, 4], "inflate": 0.25, "uv": [80, 81]}
+					]
 				},
 				{
 					"name": "pauldron2",

@@ -2580,7 +2580,7 @@ public class HnSItems {
 
     public static final DeferredHolder<Item, Item> NECROMANCER_LEGGINGS = ITEMS.register("necromancer_leggings", () -> new NecromancerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(37))));
 
     //Nameless One Armor
 
@@ -2594,7 +2594,7 @@ public class HnSItems {
 
     public static final DeferredHolder<Item, Item> NAMELESS_ONE_LEGGINGS = ITEMS.register("nameless_one_leggings", () -> new NamelessOneArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(37))));
 
 
     //Chlorophyte Armor

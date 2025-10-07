@@ -3,6 +3,8 @@ package net.hazen.hazennstuff.item.armor.Geckolib.DreadsteelKnight;
 import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
+import io.redspace.ironsspellbooks.item.armor.IDisableHat;
+import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import net.hazen.hazennstuff.compat.EndersSpellsAndStuffCompat;
@@ -26,7 +28,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 import java.util.List;
 import java.util.Map;
 
-public class DreadsteelKnightArmorItem extends ImbuableGeckolibHnSArmorItem {
+public class DreadsteelKnightArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public DreadsteelKnightArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
         super(HnSArmorMaterials.CRYOGENIC_RULER_MATERIAL, type, settings,

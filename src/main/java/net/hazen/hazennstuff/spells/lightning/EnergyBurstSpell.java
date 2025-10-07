@@ -68,33 +68,34 @@ public class EnergyBurstSpell extends AbstractSpell {
     }
 
 
-    @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         Timer timer = new Timer();
-
-        int delayBetweenBolts = 150;
-
-        for (int i = 0; i < 3; i++) {
+        int delayBetweenBolts = 100;
+        int totalBolts = 3;
+        for (int i = 0; i < totalBolts; i++) {
             int delay = i * delayBetweenBolts;
             timer.schedule(new TimerTask() {
-                @Override
                 public void run() {
-                    EnergyBurst spark = new EnergyBurst(world, entity);
-                    spark.setPos(entity.position().add(0, entity.getEyeHeight() - spark.getBoundingBox().getYsize() * 0.5f, 0));
-                    spark.shoot(entity.getLookAngle());
-                    spark.setDamage(getDamage(spellLevel, entity));
-                    world.addFreshEntity(spark);
+                    EnergyBurst energyBurst = new EnergyBurst(world, entity);
+                    energyBurst.setPos(
+                            entity.position().add(
+                                    0.0D,
+                                    entity.getEyeHeight() - energyBurst.getBoundingBox().getYsize() * 0.5D,
+                                    0.0D
+                            )
+                    );
+                    energyBurst.shoot(entity.getLookAngle());
+                    energyBurst.setDamage(getDamage(spellLevel, entity));
+                    world.addFreshEntity(energyBurst);
                 }
             }, delay);
         }
-
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 timer.cancel();
             }
-        }, 3 * delayBetweenBolts);
-
+        }, totalBolts * delayBetweenBolts);
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
 

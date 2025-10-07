@@ -44,20 +44,4 @@ public class ThornChakramRenderer extends GeoEntityRenderer<ThornChakram> {
         super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, colour);
     }
 
-    @Override
-    public RenderType getRenderType(ThornChakram animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick) {
-        return RenderType.energySwirl(texture, 0, 0);
-    }
-
-    @Override
-    public void render(ThornChakram entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
-        poseStack.pushPose();
-
-        poseStack.scale(1F, 1F, 1F); // Example: 1.5x size
-
-        super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
-
-        poseStack.popPose();
-    }
-
 }

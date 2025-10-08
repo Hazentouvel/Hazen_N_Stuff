@@ -2,31 +2,23 @@ package net.hazen.hazennstuff.spells.holy;
 
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
-import java.util.Timer;
-import java.util.TimerTask;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.entity.spells.fireball.SmallMagicFireball;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.entity.spells.holy.ichor_stream.IchorStream;
-import net.hazen.hazennstuff.entity.spells.lightning.spark.EnergyBurst;
 import net.hazen.hazennstuff.registries.HnSSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.TimerTask;
 
 @AutoSpellConfig
 public class GoldenShowerSpell extends AbstractSpell {

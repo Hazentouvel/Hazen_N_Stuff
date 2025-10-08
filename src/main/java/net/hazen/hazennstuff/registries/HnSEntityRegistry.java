@@ -16,6 +16,7 @@ import net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife.LifestealKnife;
 import net.hazen.hazennstuff.entity.spells.eldritch.soul_seeker.SoulSeeker;
 import net.hazen.hazennstuff.entity.spells.evocation.spectral_axe.SpectralAxe;
 import net.hazen.hazennstuff.entity.spells.holy.ichor_stream.IchorStream;
+import net.hazen.hazennstuff.entity.spells.lightning.InstantLightningStrike.LightningStrike;
 import net.hazen.hazennstuff.entity.spells.nature.spider_lily.SpiderLily;
 import net.hazen.hazennstuff.entity.spells.shadow.nights_edge_strike.NightsEdgeStrike;
 import net.hazen.hazennstuff.entity.spells.fire.brimstone_hellblast.BrimstoneHellblast;
@@ -243,6 +244,12 @@ public class HnSEntityRegistry {
                     .sized(1.2f, 1.2f)
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ichor_stream").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<LightningStrike>> LIGHTNING_STRIKE =
+            ENTITIES.register("lightning_strike", () -> EntityType.Builder.<LightningStrike>of(LightningStrike::new, MobCategory.MISC)
+                    .sized(1.2f, 1.2f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "lightning_strike").toString()));
 
 
     public static void register(IEventBus eventBus)

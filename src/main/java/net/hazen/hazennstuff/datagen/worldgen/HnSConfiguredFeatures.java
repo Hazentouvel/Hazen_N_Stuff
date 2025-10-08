@@ -69,10 +69,10 @@ public class HnSConfiguredFeatures {
                 OreConfiguration.target(deepslateReplaceables, HnSBlocks.DREADSTONE_ORE.get().defaultBlockState())
         );
 
-        register(context, SOLAR_CORE_ORE_KEY, Feature.ORE, new OreConfiguration(netherSolarCoreOres, 8));
+        register(context, SOLAR_CORE_ORE_KEY, Feature.ORE, new OreConfiguration(netherSolarCoreOres, 6));
         register(context, RUNESTONE_SLAG_KEY, Feature.ORE, new OreConfiguration(overworldRunestoneSlag, 16));
         register(context, ZENALITE_ORE_KEY, Feature.ORE, new OreConfiguration(endZenaliteOres, 6));
-        register(context, CHLOROPHYTE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldChlorophyteOres, 8));
+        register(context, CHLOROPHYTE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldChlorophyteOres, 6));
         register(context, DREADSTONE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldDreadstoneOres, 6));
 
 

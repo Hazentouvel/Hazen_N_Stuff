@@ -86,6 +86,7 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.HEALTH_RUNE.get());
                         output.accept(HnSItems.SHADOW_RUNE.get());
                         output.accept(HnSItems.RADIANCE_RUNE.get());
+                        output.accept(HnSItems.ELDRITCH_RUNE.get());
 
 
 
@@ -840,8 +841,12 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.GOLDEN_SHOWER_SPELLBOOK.get());
                         output.accept(HnSItems.ENERGIZED_CORE_SPELLBOOK.get());
 
+                        //Sheath
+                        output.accept(HnSItems.GALVANIZED_SHEATH.get());
+                        output.accept(HnSItems.SCROLL_SHEATH.get());
+
                         //Misc
-                        output.accept(HnSItems.RING_OF_EFFECIENCY.get());
+                        output.accept(HnSItems.RING_OF_EFFICIENCY.get());
 
 
 

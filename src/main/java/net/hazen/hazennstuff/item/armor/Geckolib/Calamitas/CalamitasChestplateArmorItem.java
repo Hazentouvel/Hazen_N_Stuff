@@ -21,6 +21,7 @@ import net.hazen.hazennstuff.spells.HnSSpellRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -87,7 +88,7 @@ public class CalamitasChestplateArmorItem extends ImbuableGeckolibHnSArmorItem i
         )));
     }
 
-    @EventBusSubscriber(modid = HazenNStuff.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = HazenNStuff.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
     public class SpellEvents {
 
         @SubscribeEvent
@@ -95,17 +96,11 @@ public class CalamitasChestplateArmorItem extends ImbuableGeckolibHnSArmorItem i
             LivingEntity caster = event.getEntity();
             if (caster == null) return;
 
-            if (event.getSpell() != HnSSpellRegistries.BRIMSTONE_HELLBLAST.get()) {
-                return;
-            }
+            if (event.getSpell() != HnSSpellRegistries.BRIMSTONE_HELLBLAST.get()) return;
 
-            ItemStack mainHand = caster.getMainHandItem();
-            ItemStack offHand = caster.getOffhandItem();
+            ItemStack chestItem = caster.getItemBySlot(EquipmentSlot.CHEST);
 
-            boolean wearingCalamitasChestplate = mainHand.getItem() instanceof CalamitasChestplateArmorItem ||
-                    offHand.getItem() instanceof CalamitasChestplateArmorItem;
-
-            if (wearingCalamitasChestplate) {
+            if (chestItem.getItem() instanceof CalamitasChestplateArmorItem) {
                 event.addLevels(1);
             }
         }

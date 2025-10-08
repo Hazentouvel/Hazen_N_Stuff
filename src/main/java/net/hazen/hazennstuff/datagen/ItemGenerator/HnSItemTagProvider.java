@@ -3850,5 +3850,90 @@ public class HnSItemTagProvider extends ItemTagsProvider {
 
         ;
 
+        tag(ModTags.CAN_BE_UPGRADED)
+
+                //Fire
+                .add(HnSItems.FIREBLOSSOM_RAPIER.get())
+                .add(HnSItems.DRACONIC_SPLITTER.get())
+                .add(HnSItems.FIREBRAND.get())
+                .add(HnSItems.WARFLAMING_LANCE.get())
+                .add(HnSItems.RAVENS_BANE.get())
+
+                //Ice
+                .add(HnSItems.ICE_PIKE.get())
+                .add(HnSItems.FROSTBURN_DAGGER.get())
+
+                //Lightning
+                .add(HnSItems.BEONGAE.get())
+                .add(HnSItems.SKYSCORCHER.get())
+
+                //Nature
+                .add(HnSItems.BOUNTIFUL_HARVEST.get())
+                .add(HnSItems.THORN_CHAKRAM.get())
+
+                //Blood
+                .add(HnSItems.VAMPIRE_KNIVES.get())
+
+                //Ender
+                .add(HnSItems.OBSIDIAN_CLAYMORE.get())
+                .add(HnSItems.STARFURY.get())
+
+                //Radiance
+                .add(HnSItems.SPECTRUM.get())
+                .add(HnSItems.MEOWMERE.get())
+                .add(HnSItems.HAMMUSH.get())
+
+                //Shadow
+                .add(HnSItems.LIGHTS_BANE.get())
+                .add(HnSItems.NIGHTS_EDGE.get())
+                .add(HnSItems.TRUE_NIGHTS_EDGE.get())
+
+                //Holy
+                .add(HnSItems.HAMMER_OF_JUSTICE.get())
+                .add(HnSItems.DIVINE_GREATSWORD.get())
+                .add(HnSItems.EXCALIBUR.get())
+                .add(HnSItems.HAZENS_EXCALIBUR.get())
+                .add(HnSItems.ISS_EXCALIBUR.get())
+
+                //Evocation
+                .add(HnSItems.MALICE.get())
+                .add(HnSItems.ANCIENT_WARRIORS_AXE.get())
+
+                //Eldritch
+                .add(HnSItems.THE_DEVOURER.get())
+
+                //Misc
+                .add(HnSItems.MAGE_BANE.get())
+                .add(HnSItems.LEGIONNAIRE_WARLOCK_AXE.get())
+
+
+                /*
+                 *** Tools
+                 */
+
+                .add(HnSItems.SPECTRAL_PICKAXE.get())
+                .add(HnSItems.PICKAXE_AXE.get())
+                .add(HnSItems.PICKAXE_AXE_DIVINE_GOLD.get())
+
+                /*
+                 ***
+                 */
+
+                .add(HnSItems.WISEWOOD_CANE.get())
+                .add(HnSItems.FRIEREN_STAFF.get())
+                .add(HnSItems.ROD_OF_DISCORD.get())
+
+
+        ;
+
+        tag(ModTags.INSCRIBED_RUNES)
+                .add(HnSItems.MELEE_RUNE.get())
+                .add(HnSItems.ARCHERY_RUNE.get())
+                .add(HnSItems.HEALTH_RUNE.get())
+                .add(HnSItems.ELDRITCH_RUNE.get())
+                .add(HnSItems.SHADOW_RUNE.get())
+                .add(HnSItems.RADIANCE_RUNE.get())
+        ;
+
     }
 }

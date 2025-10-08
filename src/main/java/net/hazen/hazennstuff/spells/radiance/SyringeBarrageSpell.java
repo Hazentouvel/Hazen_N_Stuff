@@ -4,7 +4,9 @@ import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.Utils;
+import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.entity.spells.lightning.spark.EnergyBurst;
 import net.hazen.hazennstuff.entity.spells.radiance.syringe.Syringe;
 import net.hazen.hazennstuff.registries.HnSSchoolRegistry;
 import net.hazen.hazennstuff.registries.HnSSounds;
@@ -12,8 +14,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Optional;
@@ -68,35 +72,37 @@ public class SyringeBarrageSpell extends AbstractSpell {
     }
 
 
+    @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         Timer timer = new Timer();
-        int delayBetweenBolts = 100;
-        int totalBolts = 3;
-        for (int i = 0; i < totalBolts; i++) {
+
+        int delayBetweenBolts = 150;
+
+        for (int i = 0; i < 3; i++) {
             int delay = i * delayBetweenBolts;
             timer.schedule(new TimerTask() {
                 public void run() {
                     Syringe syringe = new Syringe(world, entity);
-                    syringe.setPos(
-                            entity.position().add(
-                                    0.0D,
-                                    entity.getEyeHeight() - syringe.getBoundingBox().getYsize() * 0.5D,
-                                    0.0D
-                            )
-                    );
+                    syringe.setPos(entity.position().add(0, entity.getEyeHeight() - syringe.getBoundingBox().getYsize() * 0.5f, 0));
                     syringe.shoot(entity.getLookAngle());
                     syringe.setDamage(getDamage(spellLevel, entity));
                     world.addFreshEntity(syringe);
                 }
             }, delay);
         }
+
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 timer.cancel();
             }
-        }, totalBolts * delayBetweenBolts);
+        }, 3 * delayBetweenBolts);
+
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
+    }
+
+    public SpellDamageSource getDamageSource(@Nullable Entity projectile, Entity attacker) {
+        return super.getDamageSource(projectile, attacker).setIFrames(0);
     }
 
     private float getDamage(int spellLevel, LivingEntity entity) {

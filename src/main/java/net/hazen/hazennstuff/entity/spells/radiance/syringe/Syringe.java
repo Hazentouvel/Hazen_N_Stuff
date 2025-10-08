@@ -42,13 +42,6 @@ public class Syringe extends AbstractMagicProjectile implements GeoEntity {
         return Optional.empty();
     }
 
-    public void setRotation(float x, float y) {
-        this.setXRot(x);
-        this.xRotO = x;
-        this.setYRot(y);
-        this.yRotO = y;
-    }
-
     @Override
     public void travel() {
         this.setPos(this.position().add(this.getDeltaMovement()));
@@ -89,7 +82,6 @@ public class Syringe extends AbstractMagicProjectile implements GeoEntity {
         discard();
     }
 
-
     @Override
     protected void onHitEntity(EntityHitResult pResult) {
         var target = pResult.getEntity();
@@ -101,7 +93,6 @@ public class Syringe extends AbstractMagicProjectile implements GeoEntity {
             InfestedEffect.addInfestedStack(livingTarget, getOwner());
         }
 
-        // Play sound
         level().playSound(null, getX(), getY(), getZ(),
                 HnSSounds.SYRINGE_BARRAGE_HIT, SoundSource.NEUTRAL, 2.0f, 1.0f);
 

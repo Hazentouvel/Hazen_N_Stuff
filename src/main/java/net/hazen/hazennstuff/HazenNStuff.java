@@ -20,6 +20,10 @@ import net.hazen.hazennstuff.item.armor.AzureLib.Seraph.SeraphArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SoulFlame.SoulFlameArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.SupremeWitch.SupremeWitchArmorRenderer;
 import net.hazen.hazennstuff.item.armor.AzureLib.TheWither.TheWitherArmorRenderer;
+import net.hazen.hazennstuff.item.curios.Sheaths.GalvanizedSheath.GalvanizedCurioRenderer;
+import net.hazen.hazennstuff.item.curios.Sheaths.GalvanizedSheath.GalvanizedSheathItemRenderer;
+import net.hazen.hazennstuff.item.curios.Sheaths.ScrollSheath.ScrollCurioRenderer;
+import net.hazen.hazennstuff.item.curios.Sheaths.ScrollSheath.ScrollSheathItemRenderer;
 import net.hazen.hazennstuff.item.curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioItemRenderer;
 import net.hazen.hazennstuff.item.curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioRenderer;
 import net.hazen.hazennstuff.registries.*;
@@ -52,7 +56,7 @@ import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 public class HazenNStuff
 {
     public static final String MOD_ID = "hazennstuff";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
     public HazenNStuff(IEventBus modEventBus, ModContainer modContainer)
     {
         NeoForge.EVENT_BUS.register(this);
@@ -83,20 +87,11 @@ public class HazenNStuff
         HnSAttributeRegistry.register(modEventBus);
         HnSSchoolRegistry.register(modEventBus);
 
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        modContainer.registerConfig(ModConfig.Type.COMMON, HnSConfig.SPEC);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
+    public void commonSetup(final FMLCommonSetupEvent event)
     {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
-
-        if (Config.logDirtBlock)
-            LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
-
-        LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
-
-        Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
 
@@ -240,9 +235,22 @@ public class HazenNStuff
 
             //Curios Rendering Registry
 
+            //Energized Core Spellbook
             AzArmorRendererRegistry.register(EnergizedCoreSpellbookCurioItemRenderer::new, HnSItems.ENERGIZED_CORE_SPELLBOOK.get());
             CuriosRendererRegistry.register(
                     HnSItems.ENERGIZED_CORE_SPELLBOOK.get(), EnergizedCoreSpellbookCurioRenderer::new
+            );
+
+            // Galvanized Sheath
+            AzArmorRendererRegistry.register(GalvanizedSheathItemRenderer::new, HnSItems.GALVANIZED_SHEATH.get());
+            CuriosRendererRegistry.register(
+                    HnSItems.GALVANIZED_SHEATH.get(), GalvanizedCurioRenderer::new
+            );
+
+            // Galvanized Sheath
+            AzArmorRendererRegistry.register(ScrollSheathItemRenderer::new, HnSItems.SCROLL_SHEATH.get());
+            CuriosRendererRegistry.register(
+                    HnSItems.SCROLL_SHEATH.get(), ScrollCurioRenderer::new
             );
 
             // Animation Registry
@@ -336,7 +344,9 @@ public class HazenNStuff
 
                     // Curios
 
-                    HnSItems.ENERGIZED_CORE_SPELLBOOK.get()
+                    HnSItems.ENERGIZED_CORE_SPELLBOOK.get(),
+                    HnSItems.GALVANIZED_SHEATH.get(),
+                    HnSItems.SCROLL_SHEATH.get()
 
             );
         }

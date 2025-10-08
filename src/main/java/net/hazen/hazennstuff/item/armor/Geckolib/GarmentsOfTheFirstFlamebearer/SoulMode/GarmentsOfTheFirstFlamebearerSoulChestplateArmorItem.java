@@ -13,6 +13,7 @@ import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.compat.MalumCompat;
+import net.hazen.hazennstuff.item.armor.Geckolib.GarmentsOfTheFirstFlamebearer.GarmentsOfTheFirstFlamebearerChestplateArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.registries.HnSEffects;
@@ -20,6 +21,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -111,7 +113,7 @@ public class GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem extends Imbuab
         )));
     }
 
-    @EventBusSubscriber(modid = HazenNStuff.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = HazenNStuff.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
     public class SpellEvents {
 
         @SubscribeEvent
@@ -119,17 +121,11 @@ public class GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem extends Imbuab
             LivingEntity caster = event.getEntity();
             if (caster == null) return;
 
-            if (event.getSpell() != SpellRegistry.RAISE_HELL_SPELL.get()) {
-                return;
-            }
+            if (event.getSpell() != SpellRegistry.RAISE_HELL_SPELL.get()) return;
 
-            ItemStack mainHand = caster.getMainHandItem();
-            ItemStack offHand = caster.getOffhandItem();
+            ItemStack chestItem = caster.getItemBySlot(EquipmentSlot.CHEST);
 
-            boolean wearingSoulArmor = mainHand.getItem() instanceof GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem ||
-                    offHand.getItem() instanceof GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem;
-
-            if (wearingSoulArmor) {
+            if (chestItem.getItem() instanceof GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem) {
                 event.addLevels(2);
             }
         }

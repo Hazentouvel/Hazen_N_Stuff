@@ -97,14 +97,11 @@ public class EnergyBurst extends AbstractMagicProjectile implements GeoEntity {
     @Override
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
-        try {
-
-            DamageSources.applyDamage(
+        DamageSources.applyDamage(
                     entityHitResult.getEntity(),
                     damage,
                     HnSSpellRegistries.ENERGY_BURST.get().getDamageSource(this, getOwner())
-            );
-        } catch (Exception e) {}
+        );
 
         discard();
     }

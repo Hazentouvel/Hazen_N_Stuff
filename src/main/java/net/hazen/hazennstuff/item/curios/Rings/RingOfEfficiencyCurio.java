@@ -13,8 +13,8 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
 import top.theillusivec4.curios.api.SlotContext;
 
-public class RingOfEffeciencyCurio extends CurioBaseItem {
-    public RingOfEffeciencyCurio() {
+public class RingOfEfficiencyCurio extends CurioBaseItem {
+    public RingOfEfficiencyCurio() {
         super(ItemPropertiesHelper.equipment().stacksTo(1).fireResistant().rarity(DivineRarity.DIVINE_RARITY_PROXY.getValue()));
     }
 

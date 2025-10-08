@@ -114,7 +114,9 @@ import net.hazen.hazennstuff.item.curios.Crystals.SpiritCrystals.AbominationCuri
 import net.hazen.hazennstuff.item.curios.Crystals.SpiritCrystals.AbsoluteCurio;
 import net.hazen.hazennstuff.item.curios.Crystals.SpiritCrystals.AbstractCurio;
 import net.hazen.hazennstuff.item.curios.Crystals.SpiritCrystals.AdvancedCurio;
-import net.hazen.hazennstuff.item.curios.Rings.RingOfEffeciencyCurio;
+import net.hazen.hazennstuff.item.curios.Rings.RingOfEfficiencyCurio;
+import net.hazen.hazennstuff.item.curios.Sheaths.GalvanizedSheath.GalvanizedSheath;
+import net.hazen.hazennstuff.item.curios.Sheaths.ScrollSheath.ScrollSheath;
 import net.hazen.hazennstuff.item.curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbook;
 import net.hazen.hazennstuff.item.curios.Spellbooks.GoldenShowerSpellbook;
 import net.hazen.hazennstuff.item.misc.HnSFoodProperties;
@@ -167,10 +169,6 @@ import net.hazen.hazennstuff.item.staves.frieren.FrierenStaffItem;
 import java.util.Collection;
 
 public class HnSItems {
-    // Ace comment here, but as a tip for organization, leave some comments for whatever section of
-    // Items you want to be organized
-    // In DTE, I use comment blocks to organize between different types of items I have (armor, weapons, staves, etc.)
-    // Just a little info for you!
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(HazenNStuff.MOD_ID);
 
     /*
@@ -800,11 +798,18 @@ public class HnSItems {
     public static final DeferredItem <EnergizedCoreSpellbook> ENERGIZED_CORE_SPELLBOOK = ITEMS.register("energized_core_spellbook", EnergizedCoreSpellbook::new);
 
     /*
+    *** Sheaths
+     */
+
+    public static final DeferredItem <GalvanizedSheath> GALVANIZED_SHEATH = ITEMS.register("galvanized_sheath", GalvanizedSheath::new);
+    public static final DeferredItem <ScrollSheath> SCROLL_SHEATH = ITEMS.register("scroll_sheath", ScrollSheath::new);
+
+    /*
      *** Misc
      */
 
     //Ring of Efficiency
-    public static final DeferredItem<RingOfEffeciencyCurio> RING_OF_EFFECIENCY = ITEMS.register("ring_of_effeciency", RingOfEffeciencyCurio::new);
+    public static final DeferredItem<RingOfEfficiencyCurio> RING_OF_EFFICIENCY = ITEMS.register("ring_of_efficiency", RingOfEfficiencyCurio::new);
 
 
 
@@ -2578,7 +2583,7 @@ public class HnSItems {
             .equipment(1)
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
 
-    public static final DeferredHolder<Item, Item> NECROMANCER_LEGGINGS = ITEMS.register("necromancer_leggings", () -> new NecromancerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> NECROMANCER_LEGGINGS = ITEMS.register("necromancer_leggings", () -> new NecromancerArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
             .durability(ArmorItem.Type.LEGGINGS.getDurability(37))));
 
@@ -2592,7 +2597,7 @@ public class HnSItems {
             .equipment(1)
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
 
-    public static final DeferredHolder<Item, Item> NAMELESS_ONE_LEGGINGS = ITEMS.register("nameless_one_leggings", () -> new NamelessOneArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> NAMELESS_ONE_LEGGINGS = ITEMS.register("nameless_one_leggings", () -> new NamelessOneArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
             .durability(ArmorItem.Type.LEGGINGS.getDurability(37))));
 

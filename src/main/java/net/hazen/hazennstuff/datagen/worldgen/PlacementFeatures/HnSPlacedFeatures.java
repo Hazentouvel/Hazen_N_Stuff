@@ -29,14 +29,14 @@ public class HnSPlacedFeatures {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, ZENALITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.ZENALITE_ORE_KEY),
-                HnSOrePlacement.commonOrePlacement(30,
+                HnSOrePlacement.commonOrePlacement(24,
                         HeightRangePlacement
                                 .uniform(VerticalAnchor.absolute(-64),
                                 VerticalAnchor.absolute(80))
                 ));
 
         register(context, SOLAR_CORE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.SOLAR_CORE_ORE_KEY),
-                HnSOrePlacement.commonOrePlacement(30,
+                HnSOrePlacement.commonOrePlacement(20,
                         HeightRangePlacement
                                 .uniform(VerticalAnchor.absolute(-64),
                                         VerticalAnchor.absolute(80))
@@ -51,7 +51,7 @@ public class HnSPlacedFeatures {
 
         register(context, CHLOROPHYTE_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.CHLOROPHYTE_ORE_KEY),
                 HnSOrePlacement
-                        .commonOrePlacement(30, HeightRangePlacement
+                        .commonOrePlacement(16, HeightRangePlacement
                                 .uniform(VerticalAnchor
                                         .absolute(0),
                                         VerticalAnchor.top()))
@@ -59,7 +59,7 @@ public class HnSPlacedFeatures {
 
         register(context, DREADSTONE_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.DREADSTONE_ORE_KEY),
                 HnSOrePlacement
-                        .commonOrePlacement(30, HeightRangePlacement
+                        .commonOrePlacement(12, HeightRangePlacement
                                 .uniform(VerticalAnchor
                                         .absolute(-64), VerticalAnchor
                                         .absolute(0)))

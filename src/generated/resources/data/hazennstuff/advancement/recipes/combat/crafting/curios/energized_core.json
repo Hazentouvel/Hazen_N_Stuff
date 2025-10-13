@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_energized_core": {
+      "conditions": {
+        "items": [
+          {
+            "items": "irons_spellbooks:energized_core"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hazennstuff:crafting/curios/energized_core"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_energized_core"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hazennstuff:crafting/curios/energized_core"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "hazennstuff:dreadstone"
+    },
+    "S": {
+      "item": "hazennstuff:steel_ingot"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SDS",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:dreadsteel_ingot"
+  }
+}

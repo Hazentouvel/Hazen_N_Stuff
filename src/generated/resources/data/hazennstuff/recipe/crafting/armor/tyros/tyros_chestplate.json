@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "item": "hazennstuff:flaming_template"
+    },
+    "P": {
+      "item": "hazennstuff:blazeborne_chestplate"
+    },
+    "R": {
+      "item": "irons_spellbooks:fire_rune"
+    },
+    "T": {
+      "item": "hazennstuff:cloth_of_the_flamebearer"
+    }
+  },
+  "pattern": [
+    "TPT",
+    "RMR",
+    "TTT"
+  ],
+  "result": {
+    "components": {
+      "irons_spellbooks:affinity_data": {
+        "bonuses": {
+          "irons_spellbooks:raise_hell": 2
+        }
+      },
+      "irons_spellbooks:spell_container": {
+        "data": [],
+        "maxSpells": 1,
+        "mustEquip": true,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:garments_of_the_first_flamebearer_chestplate"
+  }
+}

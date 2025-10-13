@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_archery_rune": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hazennstuff:archery_rune"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hazennstuff:smithing/armor/bounty_hunter/bounty_hunter_boots"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_archery_rune"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hazennstuff:smithing/armor/bounty_hunter/bounty_hunter_boots"
+    ]
+  }
+}

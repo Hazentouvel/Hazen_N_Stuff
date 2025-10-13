@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:bloody_vellum"
+  },
+  "base": {
+    "item": "hazennstuff:flesh_mass_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:the_wither_boots"
+  },
+  "template": {
+    "item": "minecraft:wither_skeleton_skull"
+  }
+}

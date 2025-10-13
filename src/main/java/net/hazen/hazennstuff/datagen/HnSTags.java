@@ -47,13 +47,13 @@ public class HnSTags {
 
     //Armor
     public static final TagKey<Item> SCHOOL_HELMET = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/school_armor/school_helmet").toString()));
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/school/school_helmet").toString()));
     public static final TagKey<Item> SCHOOL_CHESTPLATE = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/school_armor/school_helmet").toString()));
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/school/school_chestplate").toString()));
     public static final TagKey<Item> SCHOOL_LEGGINGS = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/school_armor/school_helmet").toString()));
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/school/school_leggings").toString()));
     public static final TagKey<Item> SCHOOL_BOOTS = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/school_armor/school_helmet").toString()));
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/school/school_boots").toString()));
 
 
     public static final TagKey<Item> NETHERITE_BATTLEMAGE_HELMET = ItemTags
@@ -68,13 +68,13 @@ public class HnSTags {
 
 
     public static final TagKey<Item> PURE_HELMET = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure_armor/pure_helmet").toString()));
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure/pure_helmet").toString()));
     public static final TagKey<Item> PURE_CHESTPLATE = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure_armor/pure_chestplate").toString()));
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure/pure_chestplate").toString()));
     public static final TagKey<Item> PURE_LEGGINGS = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure_armor/pure_leggings").toString()));
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure/pure_leggings").toString()));
     public static final TagKey<Item> PURE_BOOTS = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure_armor/pure_boots").toString()));
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure/pure_boots").toString()));
 
 
 

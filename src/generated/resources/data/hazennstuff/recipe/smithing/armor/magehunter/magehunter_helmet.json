@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:silver_scraps"
+  },
+  "base": {
+    "item": "irons_spellbooks:wizard_helmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:magehunter_helmet"
+  },
+  "template": {
+    "item": "irons_spellbooks:mithril_ingot"
+  }
+}

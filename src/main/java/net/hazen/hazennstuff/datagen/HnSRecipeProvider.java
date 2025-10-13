@@ -2584,6 +2584,8 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/lemon_god/lemon_god_boots"));
 
 
+
+
         //Shapeless recipes -------------------------------------------------------------------------------------------------------------------------------------------+
 
 //        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItems.ZENALITE_INGOT.get(), 9)
@@ -2593,16 +2595,20 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //Smelting Recipes -----------------------------------------------------------------------------------------------------------------------------------------------
 
-        List<ItemLike> DREADSTONE_SMELTABLES = List.of(
-                HnSItems.DREADSTONE,
-                HnSBlocks.DREADSTONE_ORE);
         List<ItemLike> CHLOROPHYTE_SMELTABLES = List.of(
-                HnSItems.CHLOROPHYTE_CHUNK,
-                HnSBlocks.CHLOROPHYTE_ORE);
+                HnSItems.CHLOROPHYTE_CHUNK);
         List<ItemLike> STEEL_SMELTABLES = List.of(
                 HnSItems.CRUDE_METAL);
         List<ItemLike> DEMONITE_SMELTABLES = List.of(
                 HnSItems.SHADESTONE);
+        List<ItemLike> DREADSTONE_ORE_SMELTABLES = List.of(
+                HnSBlocks.DREADSTONE_ORE);
+        List<ItemLike> CHLOROPHYTE_ORE_SMELTABLES = List.of(
+                HnSBlocks.CHLOROPHYTE_ORE);
+        List<ItemLike> SOLAR_CORE_ORE_SMELTABLES = List.of(
+                HnSBlocks.SOLAR_CORE_NETHERACK_ORE,
+                HnSBlocks.SOLAR_CORE_BLACKSTONE_ORE
+                );
 
         oreSmelting(recipeOutput,
                 CHLOROPHYTE_SMELTABLES,
@@ -2651,6 +2657,54 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 0.25f,
                 100,
                 "steel_ingot");
+
+        oreSmelting(recipeOutput,
+                DREADSTONE_ORE_SMELTABLES,
+                RecipeCategory.MISC,
+                HnSItems.DREADSTONE.get(),
+                0.25f,
+                200,
+                "dreadstone");
+
+        oreBlasting(recipeOutput,
+                DREADSTONE_ORE_SMELTABLES,
+                RecipeCategory.MISC,
+                HnSItems.DREADSTONE.get(),
+                0.25f,
+                100,
+                "dreadstone");
+
+        oreSmelting(recipeOutput,
+                CHLOROPHYTE_ORE_SMELTABLES,
+                RecipeCategory.MISC,
+                HnSItems.CHLOROPHYTE_CHUNK.get(),
+                0.25f,
+                200,
+                "chlorophyte_chunk");
+
+        oreBlasting(recipeOutput,
+                CHLOROPHYTE_ORE_SMELTABLES,
+                RecipeCategory.MISC,
+                HnSItems.CHLOROPHYTE_CHUNK.get(),
+                0.25f,
+                100,
+                "chlorophyte_chunk");
+
+        oreSmelting(recipeOutput,
+                SOLAR_CORE_ORE_SMELTABLES,
+                RecipeCategory.MISC,
+                HnSItems.SOLAR_CORE.get(),
+                0.25f,
+                200,
+                "solar_core");
+
+        oreBlasting(recipeOutput,
+                SOLAR_CORE_ORE_SMELTABLES,
+                RecipeCategory.MISC,
+                HnSItems.SOLAR_CORE.get(),
+                0.25f,
+                100,
+                "solar_core");
 
 
     }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:gold_ingot"
+  },
+  "base": {
+    "item": "hazennstuff:pickaxe_axe_divine_gold"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:pickaxe_axe"
+  },
+  "template": {
+    "item": "irons_spellbooks:divine_pearl"
+  }
+}

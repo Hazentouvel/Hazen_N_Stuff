@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "item": "hazennstuff:volt_core"
+    },
+    "E": {
+      "item": "irons_spellbooks:energized_core"
+    },
+    "I": {
+      "item": "irons_spellbooks:iron_spell_book"
+    },
+    "R": {
+      "item": "irons_spellbooks:lightning_rune"
+    },
+    "S": {
+      "item": "hazennstuff:storm_weave"
+    }
+  },
+  "pattern": [
+    "SRS",
+    "DED",
+    "SIS"
+  ],
+  "result": {
+    "components": {
+      "irons_spellbooks:affinity_data": {
+        "bonuses": {
+          "irons_spellbooks:shockwave": 1,
+          "irons_spellbooks:thunderstorm": 1,
+          "irons_spellbooks:volt_strike": 1
+        }
+      },
+      "irons_spellbooks:spell_container": {
+        "data": [],
+        "maxSpells": 10,
+        "mustEquip": true,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:energized_core_spellbook"
+  }
+}

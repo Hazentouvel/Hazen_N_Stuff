@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "hazennstuff:chlorophyte_ingot"
+    },
+    "M": {
+      "item": "hazennstuff:divine_mold"
+    },
+    "P": {
+      "item": "minecraft:netherite_helmet"
+    },
+    "R": {
+      "item": "hazennstuff:melee_rune"
+    }
+  },
+  "pattern": [
+    "RCR",
+    "CPC",
+    " M "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:chlorophyte_mask"
+  }
+}

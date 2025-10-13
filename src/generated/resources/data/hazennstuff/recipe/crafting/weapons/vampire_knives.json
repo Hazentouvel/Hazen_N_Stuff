@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "irons_spellbooks:blood_vial"
+    },
+    "D": {
+      "item": "hazennstuff:dreadsteel_ingot"
+    },
+    "P": {
+      "item": "minecraft:netherite_sword"
+    },
+    "R": {
+      "item": "irons_spellbooks:blood_rune"
+    },
+    "W": {
+      "item": "irons_spellbooks:weapon_parts"
+    }
+  },
+  "pattern": [
+    "DDB",
+    "RPD",
+    "WRD"
+  ],
+  "result": {
+    "components": {
+      "irons_spellbooks:affinity_data": {
+        "bonuses": {
+          "irons_spellbooks:blood_needles": 1
+        }
+      },
+      "irons_spellbooks:spell_container": {
+        "data": [
+          {
+            "id": "irons_spellbooks:blood_needles",
+            "index": 0,
+            "level": 5,
+            "locked": true
+          }
+        ],
+        "maxSpells": 1,
+        "mustEquip": false,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:vampire_knives"
+  }
+}

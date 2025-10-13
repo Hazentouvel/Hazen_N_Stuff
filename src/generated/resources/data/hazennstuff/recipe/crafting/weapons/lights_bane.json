@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "item": "hazennstuff:demonite_ingot"
+    },
+    "W": {
+      "item": "irons_spellbooks:weapon_parts"
+    }
+  },
+  "pattern": [
+    " D ",
+    " D ",
+    " W "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:lights_bane"
+  }
+}

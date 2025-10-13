@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "hazennstuff:zenalite_ingot"
+    },
+    "C": {
+      "item": "irons_spellbooks:chained_book"
+    },
+    "D": {
+      "item": "irons_spellbooks:divine_pearl"
+    },
+    "M": {
+      "item": "irons_spellbooks:mithril_weave"
+    },
+    "R": {
+      "item": "irons_spellbooks:holy_rune"
+    }
+  },
+  "pattern": [
+    "MRM",
+    "DCD",
+    "MAM"
+  ],
+  "result": {
+    "components": {
+      "irons_spellbooks:affinity_data": {
+        "bonuses": {
+          "hazennstuff:golden_shower": 1
+        }
+      },
+      "irons_spellbooks:spell_container": {
+        "data": [
+          {
+            "id": "hazennstuff:golden_shower",
+            "index": 0,
+            "level": 3,
+            "locked": true
+          }
+        ],
+        "maxSpells": 8,
+        "mustEquip": true,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:golden_shower_spellbook"
+  }
+}

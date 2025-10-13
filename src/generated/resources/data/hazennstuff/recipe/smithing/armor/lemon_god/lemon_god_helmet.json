@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:divine_lemon"
+  },
+  "base": {
+    "tag": "hazennstuff:armors/pure/pure_helmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:lemon_god_helmet"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

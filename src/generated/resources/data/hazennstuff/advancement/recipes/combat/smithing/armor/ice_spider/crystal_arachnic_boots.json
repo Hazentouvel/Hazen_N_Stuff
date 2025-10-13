@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ice_venom_vial": {
+      "conditions": {
+        "items": [
+          {
+            "items": "irons_spellbooks:ice_venom_vial"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hazennstuff:smithing/armor/ice_spider/crystal_arachnic_boots"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ice_venom_vial"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hazennstuff:smithing/armor/ice_spider/crystal_arachnic_boots"
+    ]
+  }
+}

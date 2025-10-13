@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "irons_spellbooks:arcane_essence"
+    },
+    "D": {
+      "item": "hazennstuff:deus_essence"
+    },
+    "E": {
+      "item": "minecraft:elytra"
+    },
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "W": {
+      "item": "hazennstuff:wisewood_log"
+    }
+  },
+  "pattern": [
+    "FWD",
+    "AFW",
+    " EA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:arbitrium_wings"
+  }
+}

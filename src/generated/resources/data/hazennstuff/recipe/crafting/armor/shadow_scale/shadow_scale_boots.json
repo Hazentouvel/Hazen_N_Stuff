@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "P": {
+      "item": "irons_spellbooks:netherite_mage_boots"
+    },
+    "R": {
+      "item": "hazennstuff:shadow_rune"
+    },
+    "T": {
+      "item": "hazennstuff:demonite_ingot"
+    }
+  },
+  "pattern": [
+    "R R",
+    "TPT",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:shadow_scale_boots"
+  }
+}

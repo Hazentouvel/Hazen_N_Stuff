@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "irons_spellbooks:lightning_bottle"
+    },
+    "M": {
+      "item": "hazennstuff:dreadstone"
+    }
+  },
+  "pattern": [
+    "LLL",
+    "LML",
+    "LLL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:volt_core"
+  }
+}

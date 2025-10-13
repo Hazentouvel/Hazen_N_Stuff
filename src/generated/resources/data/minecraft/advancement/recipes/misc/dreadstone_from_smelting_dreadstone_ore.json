@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dreadstone_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hazennstuff:dreadstone_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:dreadstone_from_smelting_dreadstone_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dreadstone_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:dreadstone_from_smelting_dreadstone_ore"
+    ]
+  }
+}

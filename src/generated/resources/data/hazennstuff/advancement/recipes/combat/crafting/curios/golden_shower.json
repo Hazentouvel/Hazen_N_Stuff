@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chained_book": {
+      "conditions": {
+        "items": [
+          {
+            "items": "irons_spellbooks:chained_book"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hazennstuff:crafting/curios/golden_shower"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chained_book"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hazennstuff:crafting/curios/golden_shower"
+    ]
+  }
+}

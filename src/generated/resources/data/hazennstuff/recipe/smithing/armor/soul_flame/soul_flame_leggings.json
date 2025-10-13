@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:soul_sand"
+  },
+  "base": {
+    "item": "hazennstuff:blazeborne_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:soul_flame_leggings"
+  },
+  "template": {
+    "item": "hazennstuff:flaming_template"
+  }
+}

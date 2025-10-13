@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "irons_spellbooks:mithril_ingot"
+    },
+    "M": {
+      "item": "irons_spellbooks:magehunter"
+    },
+    "S": {
+      "item": "hazennstuff:steel_ingot"
+    },
+    "W": {
+      "item": "irons_spellbooks:weapon_parts"
+    }
+  },
+  "pattern": [
+    " IS",
+    " MI",
+    "W  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:mage_bane"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "hazennstuff:shadow_scale"
+    },
+    "S": {
+      "item": "hazennstuff:dreadstone"
+    }
+  },
+  "pattern": [
+    " C ",
+    "CSC",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:shadestone"
+  }
+}

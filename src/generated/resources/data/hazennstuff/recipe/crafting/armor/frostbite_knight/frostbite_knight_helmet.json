@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "item": "hazennstuff:divine_mold"
+    },
+    "P": {
+      "item": "hazennstuff:dreadsteel_knight_helmet"
+    },
+    "R": {
+      "item": "irons_spellbooks:permafrost_shard"
+    },
+    "T": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "RTR",
+    "TPT",
+    " M "
+  ],
+  "result": {
+    "components": {
+      "irons_spellbooks:affinity_data": {
+        "bonuses": {
+          "irons_spellbooks:frostbite": 1
+        }
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:frostbite_knight_helmet"
+  }
+}

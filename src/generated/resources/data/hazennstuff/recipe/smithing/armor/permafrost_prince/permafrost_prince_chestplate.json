@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:permafrost_shard"
+  },
+  "base": {
+    "item": "hazennstuff:frostbite_hunter_chestplate"
+  },
+  "result": {
+    "components": {
+      "irons_spellbooks:affinity_data": {
+        "bonuses": {
+          "irons_spellbooks:frostbite": 1
+        }
+      },
+      "irons_spellbooks:spell_container": {
+        "data": [],
+        "maxSpells": 1,
+        "mustEquip": true,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:permafrost_prince_chestplate"
+  },
+  "template": {
+    "item": "irons_spellbooks:ice_rune"
+  }
+}

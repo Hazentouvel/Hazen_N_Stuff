@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:mithril_weave"
+  },
+  "base": {
+    "item": "hazennstuff:seraph_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:mothic_witch_boots"
+  },
+  "template": {
+    "item": "irons_spellbooks:holy_rune"
+  }
+}

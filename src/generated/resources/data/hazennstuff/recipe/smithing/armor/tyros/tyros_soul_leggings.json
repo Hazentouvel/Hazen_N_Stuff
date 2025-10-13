@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:cinder_essence"
+  },
+  "base": {
+    "item": "hazennstuff:garments_of_the_first_flamebearer_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:garments_of_the_first_flamebearer_soul_leggings"
+  },
+  "template": {
+    "item": "irons_spellbooks:timeless_slurry"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:netherite_pickaxe"
+    },
+    "H": {
+      "item": "hazennstuff:hallowed_ingot"
+    },
+    "P": {
+      "item": "minecraft:netherite_axe"
+    },
+    "R": {
+      "item": "irons_spellbooks:holy_rune"
+    }
+  },
+  "pattern": [
+    "HPH",
+    "HR ",
+    " A "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:pickaxe_axe"
+  }
+}

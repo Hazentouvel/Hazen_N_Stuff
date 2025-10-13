@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "P": {
+      "item": "hazennstuff:seraph_helmet"
+    },
+    "R": {
+      "item": "irons_spellbooks:holy_rune"
+    },
+    "T": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "RTR",
+    "TPT",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:gabriel_ultrakill_helmet"
+  }
+}

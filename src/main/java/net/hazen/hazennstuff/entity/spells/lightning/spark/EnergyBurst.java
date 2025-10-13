@@ -29,6 +29,20 @@ import java.util.Optional;
 
 public class EnergyBurst extends AbstractMagicProjectile implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+    private int delay = 0;
+    private int age = 0;
+    private Vec3 spawnPos;
+
+    public void setSpawnPos(Vec3 pos) {
+        this.spawnPos = pos;
+        if (pos != null) {
+            this.setPos(pos);
+        }
+    }
+
+    public void setDelay(int delay) {
+        this.delay = delay;
+    }
 
     public EnergyBurst(EntityType<? extends Projectile> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
@@ -41,36 +55,28 @@ public class EnergyBurst extends AbstractMagicProjectile implements GeoEntity {
         setOwner(shooter);
     }
 
+
     @Override
-    public void travel() {
-        this.setPos(this.position().add(this.getDeltaMovement()));
-        if (!this.isNoGravity())
-        {
-            Vec3 vec3 = this.getDeltaMovement();
-            this.setDeltaMovement(vec3.x, vec3.y - 0.05000000074505806, vec3.z);
+    public void tick() {
+        this.age++;
+
+        if (this.age < this.delay) {
+            if (this.spawnPos != null) {
+                setPos(this.spawnPos);
+            }
+
+            if (level().isClientSide) {
+                level().addParticle(ParticleHelper.ELECTRIC_SPARKS,
+                        getX(), getY() + getBbHeight() * 0.5, getZ(),
+                        (random.nextDouble() - 0.5) * 0.1,
+                        (random.nextDouble() - 0.5) * 0.1,
+                        (random.nextDouble() - 0.5) * 0.1);
+            }
+            return;
         }
-    }
 
-    public void setRotation(float x, float y) {
-        this.setXRot(x);
-        this.xRotO = x;
-        this.setYRot(y);
-        this.yRotO = y;
+        super.tick();
     }
-
-    @Override
-    public void trailParticles() {
-        Vec3 pos = this.getBoundingBox().getCenter().add(getDeltaMovement());
-        Vec3 random = Utils.getRandomVec3(0.25f).add(pos);
-        pos = pos.add(getDeltaMovement());
-        level().addParticle(new ZapParticleOption(random), pos.x, pos.y, pos.z, 0, 0, 0);
-    }
-
-    @Override
-    public void impactParticles(double x, double y, double z) {
-        MagicManager.spawnParticles(level(), ParticleHelper.ELECTRIC_SPARKS, x, y, z, 12, .08, .08, .08, 0.3, false);
-    }
-
 
     @Override
     public float getSpeed() {
@@ -88,6 +94,19 @@ public class EnergyBurst extends AbstractMagicProjectile implements GeoEntity {
     }
 
     @Override
+    public void trailParticles() {
+        Vec3 pos = this.getBoundingBox().getCenter().add(getDeltaMovement());
+        Vec3 random = Utils.getRandomVec3(0.25f).add(pos);
+        pos = pos.add(getDeltaMovement());
+        level().addParticle(new ZapParticleOption(random), pos.x, pos.y, pos.z, 0, 0, 0);
+    }
+
+    @Override
+    public void impactParticles(double x, double y, double z) {
+        MagicManager.spawnParticles(level(), ParticleHelper.ELECTRIC_SPARKS, x, y, z, 12, .08, .08, .08, 0.3, false);
+    }
+
+    @Override
     protected void onHitBlock(BlockHitResult blockHitResult) {
         super.onHitBlock(blockHitResult);
         discard();
@@ -102,7 +121,6 @@ public class EnergyBurst extends AbstractMagicProjectile implements GeoEntity {
                     damage,
                     HnSSpellRegistries.ENERGY_BURST.get().getDamageSource(this, getOwner())
         );
-
         discard();
     }
 

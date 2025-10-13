@@ -5,13 +5,13 @@ import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.FlamingRarity;
+import net.hazen.hazennstuff.spells.HnSSpellRegistries;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
@@ -44,7 +44,7 @@ public class RavensBaneItem extends MagicSwordItem implements GeoItem {
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.RAVENS_BANE)
                         ),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(SpellRegistry.FLAMING_STRIKE_SPELL, 5)
+                        new SpellDataRegistryHolder(HnSSpellRegistries.SCORCHING_SLASH, 5)
                 )
         );
     }
@@ -106,7 +106,7 @@ public class RavensBaneItem extends MagicSwordItem implements GeoItem {
 
         super.initializeSpellContainer(itemStack);
         itemStack.set(ComponentRegistry.AFFINITY_COMPONENT, new AffinityData(Map.of(
-                SpellRegistry.RAISE_HELL_SPELL.get().getSpellResource(), 1
+                HnSSpellRegistries.SCORCHING_SLASH.get().getSpellResource(), 1
         )));
     }
 
@@ -118,17 +118,17 @@ public class RavensBaneItem extends MagicSwordItem implements GeoItem {
             LivingEntity caster = event.getEntity();
             if (caster == null) return;
 
-            if (event.getSpell() != SpellRegistry.RAISE_HELL_SPELL.get()) {
+            if (event.getSpell() != HnSSpellRegistries.SCORCHING_SLASH.get()) {
                 return;
             }
 
             ItemStack mainHand = caster.getMainHandItem();
             ItemStack offHand = caster.getOffhandItem();
 
-            boolean usingWarFlamingLance = mainHand.getItem() instanceof RavensBaneItem ||
+            boolean usingRavensBane = mainHand.getItem() instanceof RavensBaneItem ||
                     offHand.getItem() instanceof RavensBaneItem;
 
-            if (usingWarFlamingLance) {
+            if (usingRavensBane) {
                 event.addLevels(1);
             }
         }

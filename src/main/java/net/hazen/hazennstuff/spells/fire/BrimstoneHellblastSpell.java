@@ -10,6 +10,7 @@ import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.entity.spells.fire.brimstone_hellblast.BrimstoneHellblast;
 import net.hazen.hazennstuff.registries.HnSSounds;
+import net.hazen.hazennstuff.spells.AbstractCalamitasSpell;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -22,7 +23,7 @@ import java.util.List;
 import java.util.Optional;
 
 @AutoSpellConfig
-public class BrimstoneHellblastSpell extends AbstractSpell {
+public class BrimstoneHellblastSpell extends AbstractCalamitasSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "brimstone_hellblast");
 
     @Override

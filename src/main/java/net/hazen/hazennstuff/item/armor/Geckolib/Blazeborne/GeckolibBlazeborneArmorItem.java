@@ -11,7 +11,6 @@ import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.registries.HnSEffects;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -62,11 +61,8 @@ public class GeckolibBlazeborneArmorItem extends ImbuableGeckolibHnSArmorItem im
     }
 
     private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
-        }
-        if (!player.hasEffect(MobEffects.FIRE_RESISTANCE)) {
-            player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0, false, false, true));
+        if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 320, 0, false, false, false));
         }
     }
 

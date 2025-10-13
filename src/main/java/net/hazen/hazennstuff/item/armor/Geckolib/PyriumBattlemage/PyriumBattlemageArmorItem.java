@@ -9,6 +9,7 @@ import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.hazen.hazennstuff.compat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.Geckolib.HnSGeckolibArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.registries.HnSEffects;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -25,7 +26,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import java.util.List;
 
-public class PyriumBattlemageArmorItem extends HnSGeckolibArmorItem implements IDisableJacket, IDisableHat {
+public class PyriumBattlemageArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public PyriumBattlemageArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.ADVANCED_BATTLEMAGE_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150, AttributeModifier.Operation.ADD_VALUE),

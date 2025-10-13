@@ -17,7 +17,7 @@ public class FrierenStaffModel extends DefaultedItemGeoModel<FrierenStaffItem> {
 
     @Override
     public ResourceLocation getTextureResource(FrierenStaffItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/staves/frieren_staff/frieren_staff.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/staves/frieren_staff.png");
     }
     @Override
     public ResourceLocation getAnimationResource(FrierenStaffItem animatable) {

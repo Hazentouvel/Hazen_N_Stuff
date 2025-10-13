@@ -21,12 +21,12 @@ public class ObsidianClaymoreItem extends MagicSwordItem implements GeoItem {
 
     public ObsidianClaymoreItem() {
         super(
-                HnSExtendedWeaponsTiers.LIGHTS_BANE,
+                HnSExtendedWeaponsTiers.OBSIDIAN_CLAYMORE,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.LIGHTS_BANE)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.OBSIDIAN_CLAYMORE)
                         ),
                 SpellDataRegistryHolder.of(
                         new SpellDataRegistryHolder(SpellRegistry.ECHOING_STRIKES_SPELL, 6)

@@ -63,8 +63,8 @@ public class ShadowScaleArmorItem extends ImbuableGeckolibHnSArmorItem implement
     }
 
     private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 40, 0, false, false, false));
+        if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 40, 0, false, false, false));
         }
         if (!player.hasEffect(MobEffects.MOVEMENT_SPEED)) {
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0, false, false, false));

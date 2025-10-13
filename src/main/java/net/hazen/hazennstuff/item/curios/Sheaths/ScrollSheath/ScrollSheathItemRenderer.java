@@ -22,7 +22,6 @@ public class ScrollSheathItemRenderer extends AzArmorRenderer {
         super(
                 AzArmorRendererConfig.builder(GEO, TEX)
                         .setAnimatorProvider(ScrollSheathAnimator::new)
-                        .addRenderLayer(new AzAutoGlowingLayer<>())
                         .build()
         );
     }

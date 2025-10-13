@@ -42,9 +42,6 @@ public class CrystalVolleyRenderer extends EntityRenderer<AbstractMagicProjectil
     public static void renderModel(PoseStack poseStack, MultiBufferSource bufferSource) {
         poseStack.scale(0.13f, 0.13f, 0.13f);
 
-        //poseStack.mulPose(entityRenderDispatcher.cameraOrientation());
-        //poseStack.mulPose(Vector3f.YP.rotationDegrees(180f));
-
         Pose pose = poseStack.last();
         Matrix4f poseMatrix = pose.pose();
         Matrix3f normalMatrix = pose.normal();

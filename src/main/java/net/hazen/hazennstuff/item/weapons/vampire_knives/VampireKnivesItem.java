@@ -141,7 +141,7 @@ public class VampireKnivesItem extends MagicSwordItem implements GeoItem {
 
         super.initializeSpellContainer(itemStack);
         itemStack.set(ComponentRegistry.AFFINITY_COMPONENT, new AffinityData(Map.of(
-                SpellRegistry.ACUPUNCTURE_SPELL.get().getSpellResource(), 1
+                SpellRegistry.BLOOD_NEEDLES_SPELL.get().getSpellResource(), 1
         )));
     }
 
@@ -153,7 +153,7 @@ public class VampireKnivesItem extends MagicSwordItem implements GeoItem {
             LivingEntity caster = event.getEntity();
             if (caster == null) return;
 
-            if (event.getSpell() != SpellRegistry.ACUPUNCTURE_SPELL.get()) {
+            if (event.getSpell() != SpellRegistry.BLOOD_NEEDLES_SPELL.get()) {
                 return;
             }
 

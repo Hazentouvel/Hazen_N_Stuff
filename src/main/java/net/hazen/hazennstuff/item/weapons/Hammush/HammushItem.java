@@ -15,7 +15,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
 
-public class HammushItem extends MagicSwordItem implements GeoItem {
+public class HammushItem extends ExtendedSwordItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public HammushItem() {
@@ -26,8 +26,7 @@ public class HammushItem extends MagicSwordItem implements GeoItem {
                         .fireResistant()
                         .rarity(RadianceRarity.RADIANCE_RARITY_PROXY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.HAMMUSH)
-                        ),
-                SpellDataRegistryHolder.of()
+                        )
         );
     }
 

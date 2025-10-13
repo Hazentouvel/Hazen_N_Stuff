@@ -20,7 +20,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
 
-public class PickaxeAxeDivineGoldItem extends MagicSwordItem implements GeoItem {
+public class PickaxeAxeDivineGoldItem extends ExtendedSwordItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public PickaxeAxeDivineGoldItem() {
@@ -31,9 +31,7 @@ public class PickaxeAxeDivineGoldItem extends MagicSwordItem implements GeoItem 
                         .fireResistant()
                         .rarity(Rarity.EPIC)
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.PICKAXE_AXE))
-                        .component(DataComponents.TOOL, Tiers.NETHERITE.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE)),
-                SpellDataRegistryHolder.of(
-                )
+                        .component(DataComponents.TOOL, Tiers.NETHERITE.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE))
 
         );
     }

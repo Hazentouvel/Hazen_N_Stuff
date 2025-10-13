@@ -20,7 +20,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.Map;
 import java.util.function.Consumer;
 
-public class FrostburnDaggerItem extends MagicSwordItem implements GeoItem {
+public class FrostburnDaggerItem extends ExtendedSwordItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public FrostburnDaggerItem() {
@@ -31,10 +31,7 @@ public class FrostburnDaggerItem extends MagicSwordItem implements GeoItem {
                         .fireResistant()
                         .rarity(CryogenicRarity.CRYOGENIC_RARITY_PROXY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.FROSTBURN_DAGGER)
-                        ),
-                SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(SpellRegistry.ICE_SPIKES_SPELL, 8)
-                )
+                        )
         );
     }
 

@@ -1,20 +1,24 @@
-// 1.21.1	2025-10-07T22:53:16.0239012	Tags for minecraft:item mod id hazennstuff
+// 1.21.1	2025-10-13T00:35:31.1737573	Tags for minecraft:item mod id hazennstuff
 57ddc60e6a975db6eabd32e18d2d456dc3dfce34 data/c/tags/item/armors.json
 740053467c0e6401606132b0ce14777e5339d91f data/c/tags/item/bones.json
 9a7fdf9ffe464b9a7f566ab91e6dadb51a2be9b1 data/c/tags/item/enchantables.json
-b8b267e340593959ba088ed02a1727a3c39d5606 data/c/tags/item/gems.json
-7aa24cfa00593b4dbd92d0e19b403da85cb4cda6 data/c/tags/item/gems/quartz.json
+7aa24cfa00593b4dbd92d0e19b403da85cb4cda6 data/c/tags/item/gems.json
+c9b72b0f8fc707a84546851029c3a9cef2cb6b32 data/c/tags/item/gems/quartz.json
 689293c1724f58bcc49e08e20b600fab23258396 data/c/tags/item/hidden_from_recipe_viewers.json
-1c59387e25d498f111596ffa28340ac7f07c0689 data/c/tags/item/ingots.json
+812bad28b65980e59cb3b4f118cf1d13c2eb5bb4 data/c/tags/item/ingots.json
 7ed8f9f4762dd472736bcb50536975105d7c4be2 data/c/tags/item/nuggets.json
-f5b3ec6dc0cd34406a672dc9145005a81aa3081f data/c/tags/item/ores.json
-4d80119b8eb69fcb4f6b02bc4325f98c3d716d0b data/c/tags/item/raw_materials.json
+12b419c133477a0ca92e1ebf742537aa34dac07a data/c/tags/item/ores.json
+b7b1064eb4a3f14aed6cb5e487059a9c124cae9c data/c/tags/item/raw_materials.json
 68f33931873211ee1de5bcb19f7714e2082852f4 data/c/tags/item/tools/mace.json
 3a2d4c6a0dd25402a29b8a43537bf84ed084654c data/c/tags/item/tools/spear.json
 56260625434a5e352a576c56c962db6d6d899e48 data/hazennstuff/tags/item/armor/netherite_battlemage/netherite_battlemage_boots.json
 2f17fea1836e9ddcf4b05485a366313a9b1d218c data/hazennstuff/tags/item/armor/netherite_battlemage/netherite_battlemage_chestplate.json
 b9954a780f37e2d30b2edd1085646f77332ff93c data/hazennstuff/tags/item/armor/netherite_battlemage/netherite_battlemage_helmet.json
 0fd9b110e434eb6e16384c3d1604c526e49c8648 data/hazennstuff/tags/item/armor/netherite_battlemage/netherite_battlemage_leggings.json
+0a981425127b35129ffff8c43cb3c712a8bfd458 data/hazennstuff/tags/item/armor/pure_armor/pure_boots.json
+22d17617add30befa2deb2c1a2b5496b6fe33ec3 data/hazennstuff/tags/item/armor/pure_armor/pure_chestplate.json
+7fc06293fee20201a87262cadb0e9311d7972c95 data/hazennstuff/tags/item/armor/pure_armor/pure_helmet.json
+a9036cb045e5bd20df96592f615084f3727473fb data/hazennstuff/tags/item/armor/pure_armor/pure_leggings.json
 86c15ace5244ad42780ca494c5f364c751d069ba data/hazennstuff/tags/item/armor/school_armor/school_helmet.json
 3a65407953f7484e090e8898b4658df2a5eff741 data/hazennstuff/tags/item/ores/zenalite.json
 49cd9126194e1e0c4fd582b85d1dd79c53c07e0c data/irons_spellbooks/tags/item/imbue_whitelist.json
@@ -29,13 +33,13 @@ afcc90102a0ca483f90405400ee1d3729e985398 data/minecraft/tags/item/enchantable/ch
 dcec72b169f3ac43f8f9309679196fe9581fc6ff data/minecraft/tags/item/enchantable/equippable.json
 fce008deec6e8cfd0d0806b6f18990846a01dcb1 data/minecraft/tags/item/enchantable/foot_armor.json
 dc4791298c16fdd6d8e1465349a459b787142803 data/minecraft/tags/item/enchantable/head_armor.json
-44da74bc1e1bbe7a54a3bc76120413011c15177a data/minecraft/tags/item/enchantable/leg_armor.json
+1811236d81ec92786527a76c38f33c44658705e3 data/minecraft/tags/item/enchantable/leg_armor.json
 68f33931873211ee1de5bcb19f7714e2082852f4 data/minecraft/tags/item/enchantable/mace.json
 eb246ec29a19a160da18d2e464bfb9abcf33cc72 data/minecraft/tags/item/enchantable/mining.json
 01f90197271dd4c5869e0f01adbf2ca5705b9752 data/minecraft/tags/item/enchantable/sharp_weapon.json
 8997331671aa7cba8a9cb970be783438fe63873e data/minecraft/tags/item/fences.json
 7747a657bf35c413736b2132fc993249218293e2 data/minecraft/tags/item/fence_gates.json
-35a2b1238e88fa88f1b6f1448c6164c31452f683 data/minecraft/tags/item/foot_armor.json
+85069661f715458ffeb4780aa7677881da4a14f5 data/minecraft/tags/item/foot_armor.json
 ec0bb40be5f157b6274dad08b4741d5d8ee9add3 data/minecraft/tags/item/head_armor.json
 6edcba37d2555de390d6e7cf4fae15b3ce573dc6 data/minecraft/tags/item/leaves.json
 c91279b051eddcfb27eab8acde4124d01f7c8dc9 data/minecraft/tags/item/leg_armor.json

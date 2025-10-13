@@ -33,8 +33,6 @@ public class IceArrowRenderer extends EntityRenderer<AbstractMagicProjectile> {
         float yRot = -((float) (Mth.atan2(motion.z, motion.x) * (double) (180F / (float) Math.PI)) + 90.0F);
         poseStack.mulPose(Axis.YP.rotationDegrees(yRot));
         poseStack.mulPose(Axis.XP.rotationDegrees(xRot));
-//        poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entity.yRotO, entity.getYRot())));
-//        poseStack.mulPose(Axis.XP.rotationDegrees(Mth.lerp(partialTicks, entity.xRotO, entity.getXRot())));
         renderModel(poseStack, bufferSource);
         poseStack.popPose();
 
@@ -43,9 +41,6 @@ public class IceArrowRenderer extends EntityRenderer<AbstractMagicProjectile> {
 
     public static void renderModel(PoseStack poseStack, MultiBufferSource bufferSource) {
         poseStack.scale(0.13f, 0.13f, 0.13f);
-
-        //poseStack.mulPose(entityRenderDispatcher.cameraOrientation());
-        //poseStack.mulPose(Vector3f.YP.rotationDegrees(180f));
 
         Pose pose = poseStack.last();
         Matrix4f poseMatrix = pose.pose();

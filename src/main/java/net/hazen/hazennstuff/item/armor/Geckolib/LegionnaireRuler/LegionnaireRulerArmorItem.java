@@ -5,6 +5,7 @@ import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.Geckolib.HnSGeckolibArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.registries.HnSEffects;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -22,7 +23,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import java.util.List;
 
-public class LegionnaireRulerArmorItem extends HnSGeckolibArmorItem {
+public class LegionnaireRulerArmorItem extends ImbuableGeckolibHnSArmorItem {
     public LegionnaireRulerArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.LEGIONNAIRE_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.SUMMON_DAMAGE, .1, AttributeModifier.Operation.ADD_VALUE),

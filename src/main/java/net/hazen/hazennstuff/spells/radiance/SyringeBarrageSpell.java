@@ -17,6 +17,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -73,33 +74,28 @@ public class SyringeBarrageSpell extends AbstractSpell {
 
 
     @Override
-    public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
-        Timer timer = new Timer();
+    public void onCast(Level world, int spellLevel, LivingEntity caster,
+                       CastSource castSource, MagicData playerMagicData) {
+        if (world.isClientSide) return;
 
-        int delayBetweenBolts = 150;
+        int count = 3;
+        int delayBetween = 3;
 
-        for (int i = 0; i < 3; i++) {
-            int delay = i * delayBetweenBolts;
-            timer.schedule(new TimerTask() {
-                public void run() {
-                    Syringe syringe = new Syringe(world, entity);
-                    syringe.setPos(entity.position().add(0, entity.getEyeHeight() - syringe.getBoundingBox().getYsize() * 0.5f, 0));
-                    syringe.shoot(entity.getLookAngle());
-                    syringe.setDamage(getDamage(spellLevel, entity));
-                    world.addFreshEntity(syringe);
-                }
-            }, delay);
+        Vec3 look = caster.getLookAngle();
+        Vec3 castPos = caster.position().add(0, caster.getEyeHeight() - 0.8, 0);
+
+        for (int i = 0; i < count; i++) {
+            Syringe syringe = new Syringe(world, caster);
+            syringe.setDelay(i * delayBetween);
+            syringe.setDamage(getDamage(spellLevel, caster));
+            syringe.setSpawnPos(castPos);
+            syringe.shoot(look);
+            world.addFreshEntity(syringe);
         }
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                timer.cancel();
-            }
-        }, 3 * delayBetweenBolts);
-
-        super.onCast(world, spellLevel, entity, castSource, playerMagicData);
+        super.onCast(world, spellLevel, caster, castSource, playerMagicData);
     }
+
 
     public SpellDamageSource getDamageSource(@Nullable Entity projectile, Entity attacker) {
         return super.getDamageSource(projectile, attacker).setIFrames(0);

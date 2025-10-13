@@ -13,7 +13,7 @@ public class LifestealKnifeModel extends GeoModel<LifestealKnife> {
 
     @Override
     public ResourceLocation getTextureResource(LifestealKnife animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/vampire_knife_projectile/vampire_knife_projectile.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/vampire_knife_projectile.png");
     }
 
     @Override

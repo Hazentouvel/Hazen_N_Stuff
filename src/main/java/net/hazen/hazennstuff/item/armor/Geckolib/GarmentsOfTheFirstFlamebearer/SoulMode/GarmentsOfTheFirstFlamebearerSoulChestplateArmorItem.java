@@ -13,7 +13,6 @@ import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.compat.MalumCompat;
-import net.hazen.hazennstuff.item.armor.Geckolib.GarmentsOfTheFirstFlamebearer.GarmentsOfTheFirstFlamebearerChestplateArmorItem;
 import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.registries.HnSEffects;
@@ -76,8 +75,8 @@ public class GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem extends Imbuab
     }
 
     private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
+        if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 200, 0, false, false, false));
         }
         if (!player.hasEffect(MobEffects.FIRE_RESISTANCE)) {
             player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0, false, false, true));

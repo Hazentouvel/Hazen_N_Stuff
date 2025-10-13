@@ -8,6 +8,6 @@ import net.neoforged.neoforge.common.SimpleTier;
 
 public class HnSToolTiers {
     public static final Tier MITHRIL = new SimpleTier(HnSTags.Blocks.INCORRECT_FOR_MITHRIL_TOOl,
-            1400, 4f, 3f, 28, () -> Ingredient.of(ItemRegistry.MITHRIL_SCRAP.get()));
+            1400, 6f, 3f, 28, () -> Ingredient.of(ItemRegistry.MITHRIL_SCRAP.get()));
 }
 

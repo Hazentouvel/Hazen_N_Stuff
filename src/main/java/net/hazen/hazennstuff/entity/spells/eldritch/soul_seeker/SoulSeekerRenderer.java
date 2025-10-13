@@ -25,12 +25,6 @@ public class SoulSeekerRenderer extends GeoEntityRenderer<SoulSeeker> {
     }
 
     @Override
-    public ResourceLocation getTextureLocation(SoulSeeker animatable) {
-        int frame = (animatable.tickCount / 2) % 4;
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/soul_seeker_" + frame + ".png");
-    }
-
-    @Override
     public void preRender(PoseStack poseStack, SoulSeeker animatable, BakedGeoModel model,
                           @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer,
                           boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {

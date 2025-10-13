@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:yellow_dye"
+  },
+  "base": {
+    "tag": "hazennstuff:armors/netherite_battlemage/netherite_battlemage_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:neru_leggings"
+  },
+  "template": {
+    "item": "minecraft:leather"
+  }
+}

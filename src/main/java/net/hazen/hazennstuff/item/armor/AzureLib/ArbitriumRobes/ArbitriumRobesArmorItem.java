@@ -58,16 +58,14 @@ public class ArbitriumRobesArmorItem extends ImbuableHnSArmorItem implements IDi
                 }
             }
         });
-        if (isWearingFullSet(player) && !player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
+        if (isWearingFullSet(player) && !player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 200, 0, false, false, false));
         }
     }
 
-
-
     private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
+        if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 200, 0, false, false, false));
         }
     }
 

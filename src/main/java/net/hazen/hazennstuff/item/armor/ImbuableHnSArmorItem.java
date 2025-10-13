@@ -21,6 +21,9 @@ public class ImbuableHnSArmorItem extends HnSArmorItem implements IPresetSpellCo
         {
             return;
         }
+
+        // This makes it so that helmets and chestplates can be imbued
+        // If you only want chestplates to be imbued, remove the || section of the if statement
         if (itemStack.getItem() instanceof ArmorItem armorItem)
         {
             if (armorItem.getType() == Type.CHESTPLATE)

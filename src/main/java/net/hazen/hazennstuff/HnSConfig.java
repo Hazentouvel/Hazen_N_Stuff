@@ -23,20 +23,19 @@ public class HnSConfig
     // Galvanized Sheath
     private static final ModConfigSpec.ConfigValue<Integer> GALVANIZED_SHEATH_COOLDOWN = BUILDER
             .comment("Defines the cooldown in seconds value for the Galvanized Sheath's ability")
-            .comment("Default is [5]")
+            .comment("Default is 8]")
             .define("Galvanized Sheath CD", 8);
 
     // Scroll Sheath
     private static final ModConfigSpec.ConfigValue<Integer> SCROLL_SHEATH_COOLDOWN = BUILDER
             .comment("Defines the cooldown in seconds value for the Scroll Sheath's ability")
-            .comment("Default is [5]")
-            .define("Scroll Sheath CD", 5);
+            .comment("Default is [60]")
+            .define("Scroll Sheath CD", 60);
 
 
     static final ModConfigSpec SPEC = BUILDER.build();
 
     public static int galvanizedSheathCooldown;
-    public static int galvanizedSheathLightningCooldown;
     public static int scrollSheathCooldown;
 
 

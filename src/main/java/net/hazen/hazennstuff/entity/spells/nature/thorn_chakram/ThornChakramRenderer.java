@@ -24,11 +24,6 @@ public class ThornChakramRenderer extends GeoEntityRenderer<ThornChakram> {
     }
 
     @Override
-    public ResourceLocation getTextureLocation(ThornChakram animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/thorn_chakram_spell.png");
-    }
-
-    @Override
     public void preRender(PoseStack poseStack, ThornChakram animatable, BakedGeoModel model,
                           @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer,
                           boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {

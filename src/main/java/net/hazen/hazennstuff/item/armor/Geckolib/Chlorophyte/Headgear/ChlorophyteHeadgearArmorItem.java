@@ -7,7 +7,6 @@ import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.compat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.Geckolib.Chlorophyte.ChlorophyteArmorItem;
-import net.hazen.hazennstuff.item.armor.Geckolib.Chlorophyte.ChlorophyteArmorModel;
 import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.registries.HnSEffects;
@@ -60,8 +59,8 @@ public class ChlorophyteHeadgearArmorItem extends ImbuableGeckolibHnSArmorItem i
     }
 
     private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
+        if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 200, 0, false, false, false));
         }
     }
 

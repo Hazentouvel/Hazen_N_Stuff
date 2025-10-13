@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "hazennstuff:health_rune"
+    },
+    {
+      "item": "hazennstuff:rose_quartz"
+    },
+    {
+      "item": "minecraft:glistering_melon_slice"
+    }
+  ],
+  "result": {
+    "id": "hazennstuff:shattered",
+    "count": 1
+  }
+}

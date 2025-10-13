@@ -6,13 +6,14 @@ import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.network.particles.TeleportParticlesPacket;
 import io.redspace.ironsspellbooks.util.Log;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.registries.HnSParticleHelper;
 import net.hazen.hazennstuff.registries.HnSSounds;
+import net.hazen.hazennstuff.registries.particle.General.HnSRodOfDiscordParticlesPacket;
+import net.hazen.hazennstuff.spells.AbstractRodOfDiscordSpell;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -31,7 +32,7 @@ import java.util.Optional;
 import static net.hazen.hazennstuff.registries.HnSSchoolRegistry.SHADOW_RESOURCE;
 
 @AutoSpellConfig
-public class ChaoticTeleportSpell extends AbstractSpell {
+public class ChaoticTeleportSpell extends AbstractRodOfDiscordSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "chaotic_teleport");
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
@@ -93,7 +94,7 @@ public class ChaoticTeleportSpell extends AbstractSpell {
             dest = findTeleportLocation(level, entity, getDistance(spellLevel, entity));
         }
 
-        PacketDistributor.sendToPlayersTrackingEntityAndSelf(entity, new TeleportParticlesPacket(entity.position(), dest));
+        PacketDistributor.sendToPlayersTrackingEntityAndSelf(entity, new HnSRodOfDiscordParticlesPacket(entity.position(), dest));
 
         if (entity.isPassenger()) {
             entity.stopRiding();
@@ -103,7 +104,6 @@ public class ChaoticTeleportSpell extends AbstractSpell {
 
         playerMagicData.resetAdditionalCastData();
 
-//        level.playSound(null, dest.x, dest.y, dest.z, getCastFinishSound().get(), SoundSource.NEUTRAL, 1f, 1f);
         entity.playSound(getCastFinishSound().get(), 2.0f, 1.0f);
 
         super.onCast(level, spellLevel, entity, castSource, playerMagicData);
@@ -144,7 +144,7 @@ public class ChaoticTeleportSpell extends AbstractSpell {
                 double dx = Utils.random.nextDouble() * .1 * (Utils.random.nextBoolean() ? 1 : -1);
                 double dy = Utils.random.nextDouble() * .1 * (Utils.random.nextBoolean() ? 1 : -1);
                 double dz = Utils.random.nextDouble() * .1 * (Utils.random.nextBoolean() ? 1 : -1);
-                level.addParticle(ParticleTypes.PORTAL, true, x, y, z, dx, dy, dz);
+                level.addParticle(HnSParticleHelper.ROD_OF_DISCORD_PARTICLE, true, x, y, z, dx, dy, dz);
             }
         }
     }

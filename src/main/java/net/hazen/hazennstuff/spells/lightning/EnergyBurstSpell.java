@@ -6,20 +6,15 @@ import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
-import io.redspace.ironsspellbooks.entity.spells.fireball.SmallMagicFireball;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.entity.spells.holy.ichor_stream.IchorStream;
 import net.hazen.hazennstuff.entity.spells.lightning.spark.EnergyBurst;
 import net.hazen.hazennstuff.registries.HnSSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
@@ -42,7 +37,7 @@ public class EnergyBurstSpell extends AbstractSpell {
             .setMinRarity(SpellRarity.RARE)
             .setSchoolResource(SchoolRegistry.LIGHTNING_RESOURCE)
             .setMaxLevel(5)
-            .setCooldownSeconds(3)
+            .setCooldownSeconds(6)
             .build();
 
     public EnergyBurstSpell() {
@@ -74,21 +69,25 @@ public class EnergyBurstSpell extends AbstractSpell {
         return spellId;
     }
 
-    public void onServerCastTick(Level level, int spellLevel, LivingEntity entity, @Nullable MagicData playerMagicData) {
-        if (playerMagicData != null && (playerMagicData.getCastDurationRemaining() + 1) % 5 == 0) {
-            this.shootEnergyBurst(level, spellLevel, entity);
+    @Override
+    public void onCast(Level world, int spellLevel, LivingEntity caster,
+                       CastSource castSource, MagicData playerMagicData) {
+        if (world.isClientSide) return;
+        int count = 3;
+        int delayBetween = 3;
+        Vec3 look = caster.getLookAngle();
+        Vec3 castPos = caster.position().add(0, caster.getEyeHeight() - 0.8, 0);
+
+
+        for (int i = 0; i < count; i++) {
+            EnergyBurst burst = new EnergyBurst(world, caster);
+            burst.setDelay(i * delayBetween);
+            burst.setDamage(getDamage(spellLevel, caster));
+            burst.setSpawnPos(castPos);
+            burst.shoot(look);
+            world.addFreshEntity(burst);
         }
-
-    }
-
-    public void shootEnergyBurst(Level world, int spellLevel, LivingEntity entity) {
-        Vec3 origin = entity.getEyePosition().add(entity.getForward().normalize().scale((double)0.2F));
-        EnergyBurst energyBurst = new EnergyBurst(world, entity);
-        energyBurst.setPos(origin.subtract((double)0.0F, (double)energyBurst.getBbHeight(), (double)0.0F));
-        energyBurst.setDamage(this.getDamage(spellLevel, entity));
-
-        world.playSound((Player)null, origin.x, origin.y, origin.z, HnSSounds.SPARK_CAST, SoundSource.PLAYERS, 2.0F, 1.0F);
-        world.addFreshEntity(energyBurst);
+        super.onCast(world, spellLevel, caster, castSource, playerMagicData);
     }
 
     public SpellDamageSource getDamageSource(@Nullable Entity projectile, Entity attacker) {

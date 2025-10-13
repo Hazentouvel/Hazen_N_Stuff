@@ -12,7 +12,7 @@
   "bonusParameters": {
     "irons_jewelry:attribute": {
       "attribute": "minecraft:generic.max_health",
-      "amount": 0.25,
+      "amount": 6,
       "operation": "add_multiplied_total"
     },
     "irons_jewelry:positive_effect": {

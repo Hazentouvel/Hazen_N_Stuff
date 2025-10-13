@@ -16,7 +16,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
 
-public class MageBaneItem extends MagicSwordItem implements GeoItem {
+public class MageBaneItem extends ExtendedSwordItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public MageBaneItem() {
@@ -27,10 +27,7 @@ public class MageBaneItem extends MagicSwordItem implements GeoItem {
                         .fireResistant()
                         .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.MAGE_BANE)
-                        ),
-                SpellDataRegistryHolder.of(
-
-                )
+                        )
         );
     }
 

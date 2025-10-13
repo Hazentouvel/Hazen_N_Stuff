@@ -17,7 +17,7 @@ public class WisewoodCaneModel extends DefaultedItemGeoModel<WisewoodCaneItem> {
 
     @Override
     public ResourceLocation getTextureResource(WisewoodCaneItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/staves/wisewood_cane/wisewood_cane.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/staves/wisewood_cane.png");
     }
 
     @Override

@@ -6,12 +6,18 @@ import io.redspace.ironsspellbooks.api.magic.SpellSelectionManager;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
+import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.entity.spells.shadow.nights_edge_strike.NightsEdgeStrike;
+import net.hazen.hazennstuff.entity.spells.shadow.nights_edge_after_slash.NightsEdgeAfterSlash;
+import net.hazen.hazennstuff.registries.HnSEntityRegistry;
+import net.hazen.hazennstuff.registries.HnSParticleHelper;
 import net.hazen.hazennstuff.registries.HnSSchoolRegistry;
+import net.hazen.hazennstuff.registries.HnSSounds;
+import net.hazen.hazennstuff.registries.particle.NightsEdgeStrike.NightsEdgeStrikeOptions;
+import net.hazen.hazennstuff.spells.AbstractNightsEdgeSpell;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -21,8 +27,10 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
@@ -32,7 +40,7 @@ import java.util.List;
 import java.util.Optional;
 
 @AutoSpellConfig
-public class NightsEdgeStrikeSpell extends AbstractSpell {
+public class NightsEdgeStrikeSpell extends AbstractNightsEdgeSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "nights_edge_strike");
 
 
@@ -56,120 +64,104 @@ public class NightsEdgeStrikeSpell extends AbstractSpell {
         this.baseManaCost = 30;
     }
 
-    @Override
     public Optional<SoundEvent> getCastStartSound() {
-        return Optional.of(SoundRegistry.FLAMING_STRIKE_UPSWING.get());
+        return Optional.of((SoundEvent)SoundRegistry.FLAMING_STRIKE_UPSWING.get());
     }
 
-    @Override
     public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of(SoundRegistry.FLAMING_STRIKE_SWING.get());
+        return Optional.of((SoundEvent) HnSSounds.TERRABLADE_SLASH.get());
     }
 
-    @Override
     public CastType getCastType() {
         return CastType.LONG;
     }
 
-    @Override
     public DefaultConfig getDefaultConfig() {
-        return defaultConfig;
+        return this.defaultConfig;
     }
 
-    @Override
     public ResourceLocation getSpellResource() {
-        return spellId;
+        return this.spellId;
     }
 
-    @Override
     public boolean canBeInterrupted(@Nullable Player player) {
         return false;
     }
 
-    @Override
-    public int getEffectiveCastTime(int spellLevel, @Nullable LivingEntity entity) {
-        //due to animation timing, we do not want cast time attribute to affect this spell
-        return getCastTime(spellLevel);
+    public AnimationHolder getCastStartAnimation() {
+        return SpellAnimations.ONE_HANDED_HORIZONTAL_SWING_ANIMATION;
     }
 
-    @Override
-    public void onCast(Level level, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
-        float radius = 3.25f;
-        float distance = 1.9f;
-        Vec3 forward = entity.getForward();
-        Vec3 hitLocation = entity.position().add(0, entity.getBbHeight() * .3f, 0).add(forward.scale(distance));
-        var entities = level.getEntities(entity, AABB.ofSize(hitLocation, radius * 2, radius, radius * 2));
-        var damageSource = this.getDamageSource(entity);
-        for (
-                Entity targetEntity : entities) {
-            if (targetEntity instanceof LivingEntity && targetEntity.isAlive() && entity.isPickable() && targetEntity.position().subtract(entity.getEyePosition()).dot(forward) >= 0 && entity.distanceToSqr(targetEntity) < radius * radius && Utils.hasLineOfSight(level, entity.getEyePosition(), targetEntity.getBoundingBox().getCenter(), true)) {
-                Vec3 offsetVector = targetEntity.getBoundingBox().getCenter().subtract(entity.getEyePosition());
-                if (offsetVector.dot(forward) >= 0) {
-                    if (DamageSources.applyDamage(targetEntity, getDamage(spellLevel, entity), damageSource)) {
+    public AnimationHolder getCastFinishAnimation() {
+        return AnimationHolder.pass();
+    }
 
-                        EnchantmentHelper.doPostAttackEffects((ServerLevel) level, targetEntity, damageSource);
-                    }
+    public int getEffectiveCastTime(int spellLevel, @Nullable LivingEntity entity) {
+        return this.getCastTime(spellLevel);
+    }
+
+    public void onCast(Level level, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
+        float radius = 3.25F;
+        float distance = 1.9F;
+        Vec3 forward = entity.getForward();
+        Vec3 hitLocation = entity.position().add((double)0.0F, (double)(entity.getBbHeight() * 0.3F), (double)0.0F).add(forward.scale((double)distance));
+        List<Entity> entities = level.getEntities(entity, AABB.ofSize(hitLocation, (double)(radius * 2.0F), (double)radius, (double)(radius * 2.0F)));
+        SpellDamageSource damageSource = this.getDamageSource(entity);
+        for(Entity targetEntity : entities) {
+            if (targetEntity instanceof LivingEntity && targetEntity.isAlive() && entity.isPickable() && targetEntity.position().subtract(entity.getEyePosition()).dot(forward) >= (double)0.0F && entity.distanceToSqr(targetEntity) < (double)(radius * radius) && Utils.hasLineOfSight(level, entity.getEyePosition(), targetEntity.getBoundingBox().getCenter(), true)) {
+                Vec3 offsetVector = targetEntity.getBoundingBox().getCenter().subtract(entity.getEyePosition());
+                if (offsetVector.dot(forward) >= (double)0.0F && DamageSources.applyDamage(targetEntity, this.getDamage(spellLevel, entity), damageSource)) {
+                    MagicManager.spawnParticles(level, HnSParticleHelper.NIGHTS_EDGE_PARTICLE, targetEntity.getX(), targetEntity.getY() + (double)(targetEntity.getBbHeight() * 0.5F), targetEntity.getZ(), 30, (double)(targetEntity.getBbWidth() * 0.5F), (double)(targetEntity.getBbHeight() * 0.5F), (double)(targetEntity.getBbWidth() * 0.5F), 0.03, false);
+                    EnchantmentHelper.doPostAttackEffects((ServerLevel)level, targetEntity, damageSource);
                 }
             }
         }
+        if (!level.isClientSide) {
+            NightsEdgeAfterSlash projectile = new NightsEdgeAfterSlash(HnSEntityRegistry.NIGHTS_EDGE_AFTER_SLASH.get(), level);
+            projectile.setOwner(entity);
+            projectile.setPos(entity.getX(), entity.getEyeY() - 0.2, entity.getZ());
+            projectile.shoot(entity.getLookAngle().x, entity.getLookAngle().y, entity.getLookAngle().z, 1.6f, 0.05f);
+            projectile.setDamage(this.getDamage(spellLevel, entity));
+            level.addFreshEntity(projectile);
+        }
         boolean mirrored = playerMagicData.getCastingEquipmentSlot().equals(SpellSelectionManager.OFFHAND);
-        NightsEdgeStrike over = new NightsEdgeStrike(level, mirrored);
-        over.moveTo(hitLocation);
-        over.setYRot(entity.getYRot());
-        over.setXRot(entity.getXRot());
-        level.addFreshEntity(over);
-        level.getEntities(entity, entity.getBoundingBox().inflate(radius, 4, radius), (target) -> !DamageSources.isFriendlyFireBetween(target, entity) && Utils.hasLineOfSight(level, entity, target, true)).forEach(target -> {
-
-            super.onCast(level, spellLevel, entity, castSource, playerMagicData);
-
-        });
-
-
-    }
-
-    @Override
-    public SpellDamageSource getDamageSource(Entity projectile, Entity attacker) {
-        return super.getDamageSource(projectile, attacker);
-    }
-
-
-    private float getDamage(int spellLevel, LivingEntity entity) {
-        return getSpellPower(spellLevel, entity) + getAdditionalDamage(entity);
+        MagicManager.spawnParticles(level, new NightsEdgeStrikeOptions((float)forward.x, (float)forward.y, (float)forward.z, mirrored, false, 1.0F), hitLocation.x, hitLocation.y + 0.3, hitLocation.z, 1, (double)0.0F, (double)0.0F, (double)0.0F, (double)0.0F, true);
+        super.onCast(level, spellLevel, entity, castSource, playerMagicData);
     }
 
     private float getAdditionalDamage(LivingEntity entity) {
         if (entity == null) {
-            return 0;
+            return 0.0F;
+        } else {
+            float weaponDamage = Utils.getWeaponDamage(entity);
+            ItemStack weaponItem = entity.getWeaponItem();
+            if (!weaponItem.isEmpty() && weaponItem.has(DataComponents.ENCHANTMENTS)) {
+                weaponDamage += (float)Utils.getEnchantmentLevel(entity.level(), Enchantments.SHARPNESS, (ItemEnchantments)weaponItem.get(DataComponents.ENCHANTMENTS));
+            }
+            return weaponDamage;
         }
-        float weaponDamage = Utils.getWeaponDamage(entity);
-        var weaponItem = entity.getWeaponItem();
-        if (!weaponItem.isEmpty() && weaponItem.has(DataComponents.ENCHANTMENTS)) {
-            weaponDamage += Utils.getEnchantmentLevel(entity.level(), Enchantments.SHARPNESS, weaponItem.get(DataComponents.ENCHANTMENTS));
-        }
-        return weaponDamage;
     }
-
 
     private String getDamageText(int spellLevel, LivingEntity entity) {
         if (entity != null) {
             float weaponDamage = Utils.getWeaponDamage(entity);
             String plus = "";
-            if (weaponDamage > 0) {
-                plus = String.format(" (+%s)", Utils.stringTruncation(weaponDamage, 1));
+            if (weaponDamage > 0.0F) {
+                plus = String.format(" (+%s)", Utils.stringTruncation((double)weaponDamage, 1));
             }
-            String damage = Utils.stringTruncation(getDamage(spellLevel, entity), 1);
+            String damage = Utils.stringTruncation((double)this.getDamage(spellLevel, entity), 1);
             return damage + plus;
+        } else {
+            float var10000 = this.getSpellPower(spellLevel, entity);
+            return "" + var10000;
         }
-        return "" + getSpellPower(spellLevel, entity);
     }
 
-    @Override
-    public AnimationHolder getCastStartAnimation() {
-        return SpellAnimations.ONE_HANDED_HORIZONTAL_SWING_ANIMATION;
+    public float getDamage(int spellLevel, LivingEntity caster) {
+        return 5.0F + getSpellPower(spellLevel, caster) * 0.6F + this.getAdditionalDamage(caster);
     }
 
-    @Override
-    public AnimationHolder getCastFinishAnimation() {
-        return AnimationHolder.pass();
+    public SpellDamageSource getDamageSource(Entity projectile, Entity attacker) {
+        return super.getDamageSource(projectile, attacker);
     }
 }

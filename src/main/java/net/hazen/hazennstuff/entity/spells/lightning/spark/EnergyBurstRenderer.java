@@ -24,12 +24,6 @@ public class EnergyBurstRenderer extends GeoEntityRenderer<EnergyBurst> {
     }
 
     @Override
-    public ResourceLocation getTextureLocation(EnergyBurst animatable) {
-        int frame = (animatable.tickCount / 1) % 4;
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/spark_" + frame + ".png");
-    }
-
-    @Override
     public void preRender(PoseStack poseStack, EnergyBurst animatable, BakedGeoModel model,
                           @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer,
                           boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {

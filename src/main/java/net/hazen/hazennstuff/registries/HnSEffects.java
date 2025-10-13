@@ -1,11 +1,11 @@
 package net.hazen.hazennstuff.registries;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
+import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.registries.effects.*;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -36,6 +36,9 @@ public class HnSEffects {
                     .addAttributeModifier(Attributes.ATTACK_SPEED,
                             ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "tyrants_grace"), 1.0f,
                             AttributeModifier.Operation.ADD_VALUE)
+                    .addAttributeModifier(ALObjects.Attributes.ARROW_DAMAGE,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "tyrants_grace"), 1.0f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
     public static final Holder<MobEffect> FIREBLOSSOM_RULER_EFFECT = MOB_EFFECTS.register("fireblossom_ruler",
@@ -59,13 +62,46 @@ public class HnSEffects {
                             ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "fireblossom_warrior"), 0.15f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
-    public static final Holder<MobEffect> PURE_ARMOR_SET_BONUS = MOB_EFFECTS.register("pure_armor_set_bonus",
+    public static final Holder<MobEffect> MAGE_SET_BONUS = MOB_EFFECTS.register("mage_set_bonus",
             () -> new HazensEffect(MobEffectCategory.BENEFICIAL, 0xfbb741)
                     .addAttributeModifier(AttributeRegistry.CASTING_MOVESPEED,
-                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "pure_armor_set_bonus"), 0.15f,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "mage_set_bonus"), 0.15f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
                     .addAttributeModifier(AttributeRegistry.SPELL_RESIST,
-                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "pure_armor_set_bonus"), 0.1f,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "mage_set_bonus"), 0.1f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static final Holder<MobEffect> SWORDMASTER_SET_BONUS = MOB_EFFECTS.register("swordmaster_set_bonus",
+            () -> new HazensEffect(MobEffectCategory.BENEFICIAL, 0xfbb741)
+                    .addAttributeModifier(Attributes.ATTACK_SPEED,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "swordmaster_set_bonus"), 0.15f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                    .addAttributeModifier(ALObjects.Attributes.PROT_SHRED,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "swordmaster_set_bonus"), 0.1f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static final Holder<MobEffect> ARCHER_SET_BONUS = MOB_EFFECTS.register("archer_set_bonus",
+            () -> new HazensEffect(MobEffectCategory.BENEFICIAL, 0xfbb741)
+                    .addAttributeModifier(Attributes.MOVEMENT_SPEED,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "archer_set_bonus"), 0.15f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                    .addAttributeModifier(ALObjects.Attributes.ARROW_DAMAGE,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "archer_set_bonus"), 0.1f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                    .addAttributeModifier(ALObjects.Attributes.ARROW_VELOCITY,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "archer_set_bonus"), 0.1f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static final Holder<MobEffect> SUMMONER_SET_BONUS = MOB_EFFECTS.register("summoner_set_bonus",
+            () -> new HazensEffect(MobEffectCategory.BENEFICIAL, 0xfbb741)
+                    .addAttributeModifier(AttributeRegistry.SUMMON_DAMAGE,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "summoner_set_bonus"), 0.15f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                    .addAttributeModifier(ASAttributeRegistry.MANA_STEAL,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "summoner_set_bonus"), 0.1f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
@@ -113,6 +149,26 @@ public class HnSEffects {
                     HazenNStuff.id("dryads_blessing"),
                     DryadsBlessingEffect.HEALING_RECIEVED_PER_LEVEL,
                     AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
+    public static final Holder<MobEffect> MANA_SICKNESS = MOB_EFFECTS.register("mana_sickness",
+            () -> new HazensEffect(MobEffectCategory.BENEFICIAL, 0xfbb741)
+                    .addAttributeModifier(AttributeRegistry.MAX_MANA,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "mana_sickness"), -0.25f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                    .addAttributeModifier(AttributeRegistry.MANA_REGEN,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "mana_sickness"), -0.15f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                    .addAttributeModifier(AttributeRegistry.SPELL_RESIST,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "mana_sickness"), -0.15f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static final Holder<MobEffect> COOLDOWN_RESET = MOB_EFFECTS.register("cooldown_reset",
+            () -> new HazensEffect(MobEffectCategory.BENEFICIAL, 0xfbb741)
+                    .addAttributeModifier(AttributeRegistry.COOLDOWN_REDUCTION,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "cooldown_reset"), 90000f,
+                            AttributeModifier.Operation.ADD_VALUE)
     );
 
     public static final DeferredHolder<MobEffect, MobEffect> INFESTED = MOB_EFFECTS.register("infested",

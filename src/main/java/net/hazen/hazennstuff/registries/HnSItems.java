@@ -119,23 +119,28 @@ import net.hazen.hazennstuff.item.curios.Sheaths.GalvanizedSheath.GalvanizedShea
 import net.hazen.hazennstuff.item.curios.Sheaths.ScrollSheath.ScrollSheath;
 import net.hazen.hazennstuff.item.curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbook;
 import net.hazen.hazennstuff.item.curios.Spellbooks.GoldenShowerSpellbook;
+import net.hazen.hazennstuff.item.curios.Wings.ArbitriumWings.ArbitriumWings;
 import net.hazen.hazennstuff.item.misc.HnSFoodProperties;
+import net.hazen.hazennstuff.item.staves.WhiteLilyStaff.WhiteLilyStaffItem;
 import net.hazen.hazennstuff.item.staves.rod_of_discord.RodOfDiscordItem;
 import net.hazen.hazennstuff.item.staves.wisewood_cane.WisewoodCaneItem;
 import net.hazen.hazennstuff.item.util.PickaxeAxe.DivineGold.PickaxeAxeDivineGoldItem;
 import net.hazen.hazennstuff.item.util.PickaxeAxe.PickaxeAxeItem;
 import net.hazen.hazennstuff.item.util.spectral_pickaxe.SpectralPickaxeItem;
+import net.hazen.hazennstuff.item.weapons.BladeOfGrass.BladeOfGrassItem;
 import net.hazen.hazennstuff.item.weapons.DivineGreatsword.DivineGreatswordItem;
 import net.hazen.hazennstuff.item.weapons.DraconicSplitter.DraconicSplitterItem;
 import net.hazen.hazennstuff.item.weapons.Excalibur.HazenStyle.HazensExcaliburItem;
 import net.hazen.hazennstuff.item.weapons.Excalibur.ISSxTerraria.ISSExcaliburItem;
 import net.hazen.hazennstuff.item.weapons.Excalibur.Terraria.ExcaliburItem;
 import net.hazen.hazennstuff.item.weapons.Firebrand.FirebrandItem;
+import net.hazen.hazennstuff.item.weapons.Dawnmaker.DawnmakerItem;
 import net.hazen.hazennstuff.item.weapons.FrostburnDagger.FrostburnDaggerItem;
 import net.hazen.hazennstuff.item.weapons.Hammush.HammushItem;
 import net.hazen.hazennstuff.item.weapons.MageBane.MageBaneItem;
 import net.hazen.hazennstuff.item.weapons.Malice.MaliceItem;
 import net.hazen.hazennstuff.item.weapons.Meowmere.MeowmereItem;
+import net.hazen.hazennstuff.item.weapons.Muramasa.MuramasaItem;
 import net.hazen.hazennstuff.item.weapons.NightsEdge.NightsEdgeItem;
 import net.hazen.hazennstuff.item.weapons.ObsidianClaymore.ObsidianClaymoreItem;
 import net.hazen.hazennstuff.item.weapons.RavensBane.RavensBaneItem;
@@ -144,6 +149,7 @@ import net.hazen.hazennstuff.item.weapons.Starfury.StarfuryItem;
 import net.hazen.hazennstuff.item.weapons.TheDevourer.TheDevourerItem;
 import net.hazen.hazennstuff.item.weapons.ThornChakram.ThornChakramItem;
 import net.hazen.hazennstuff.item.weapons.TrueNightsEdge.TrueNightsEdgeItem;
+import net.hazen.hazennstuff.item.weapons.Volcano.VolcanoItem;
 import net.hazen.hazennstuff.item.weapons.WarFlamingLance.WarFlamingLanceItem;
 import net.hazen.hazennstuff.item.weapons.ancient_warriors_axe.AncientWarriorsAxeItem;
 import net.hazen.hazennstuff.item.weapons.beongae.BeongaeItem;
@@ -573,6 +579,10 @@ public class HnSItems {
     public static final DeferredHolder<Item, Item> WARFLAMING_LANCE = ITEMS.register
             ("war_flaming_lance", WarFlamingLanceItem::new);
 
+    // War-Flaming Lance
+    public static final DeferredHolder<Item, Item> VOLCANO = ITEMS.register
+            ("volcano", VolcanoItem::new);
+
     /*
     *** Ice
      */
@@ -608,6 +618,10 @@ public class HnSItems {
     //Thorn Chakram
     public static final DeferredHolder<Item, Item> THORN_CHAKRAM = ITEMS.register
             ("thorn_chakram", ThornChakramItem::new);
+
+    //Thorn Chakram
+    public static final DeferredHolder<Item, Item> BLADE_OF_GRASS = ITEMS.register
+            ("blade_of_grass", BladeOfGrassItem::new);
 
     /*
     *** Blood
@@ -714,6 +728,14 @@ public class HnSItems {
     public static final DeferredHolder<Item, Item> MAGE_BANE = ITEMS.register
             ("mage_bane", MageBaneItem::new);
 
+    //Dawn Maker
+    public static final DeferredHolder<Item, Item> DAWNMAKER = ITEMS.register
+            ("dawnmaker", DawnmakerItem::new);
+
+    //Muramasa
+    public static final DeferredHolder<Item, Item> MURAMASA = ITEMS.register
+            ("muramasa", MuramasaItem::new);
+
     //Legionnaire Warlock Axe
     public static final DeferredHolder<Item, Item> LEGIONNAIRE_WARLOCK_AXE = ITEMS.register
             ("legionnaire_warlock_axe", LegionnaireWarlockAxeItem::new);
@@ -732,6 +754,8 @@ public class HnSItems {
     public static final DeferredHolder<Item, Item> WISEWOOD_CANE = ITEMS.register("wisewood_cane", WisewoodCaneItem::new);
     //Rod of Discord
     public static final DeferredHolder<Item, Item> ROD_OF_DISCORD = ITEMS.register("rod_of_discord", RodOfDiscordItem::new);
+    //White Lily Staff
+    public static final DeferredHolder<Item, Item> WHITE_LILY_STAFF = ITEMS.register("white_lily_staff", WhiteLilyStaffItem::new);
 
     /***
      * Tools
@@ -803,6 +827,13 @@ public class HnSItems {
 
     public static final DeferredItem <GalvanizedSheath> GALVANIZED_SHEATH = ITEMS.register("galvanized_sheath", GalvanizedSheath::new);
     public static final DeferredItem <ScrollSheath> SCROLL_SHEATH = ITEMS.register("scroll_sheath", ScrollSheath::new);
+
+    /*
+    *** Wings
+     */
+
+    //Radiance
+    public static final DeferredItem<ArbitriumWings> ARBITRIUM_WINGS = ITEMS.register("arbitrium_wings", ArbitriumWings::new);
 
     /*
      *** Misc

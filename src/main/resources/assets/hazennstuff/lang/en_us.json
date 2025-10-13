@@ -4,11 +4,14 @@
   "item.hazennstuff.runestone_fragments": "Runestone Fragments",
   "item.hazennstuff.permafrost_fragment": "Permafrost Fragment",
   "item.hazennstuff.charred_bones": "Charred Bones",
+  "item.hazennstuff.charred_bones.guide": "Kill Wither Skeletons to obtain Charred Bones.",
   "item.hazennstuff.overgrown_bone": "Overgrown Bone",
+  "item.hazennstuff.overgrown_bone.guide": "Kill Boggeds to obtain Overgrown Bones.",
   "item.hazennstuff.flaming_template": "Flaming Template",
   "item.hazennstuff.divine_mold": "Divine Mold",
   "item.hazennstuff.storm_weave": "Storm Weave",
   "item.hazennstuff.spider_fang": "Spider Fang",
+  "item.hazennstuff.spider_fang.guide": "Spider Fang",
   "item.hazennstuff.prismatic_shard": "Prismatic Shard",
   "item.hazennstuff.volt_core": "Volt Core",
   "item.hazennstuff.solar_core": "Solar Core",
@@ -21,6 +24,7 @@
   "item.hazennstuff.demonite_ingot": "Demonite Ingot",
 
   "item.hazennstuff.raw_zenalite": "Raw Zenalite",
+  "item.hazennstuff.raw_zenalite.guide": "It lies dormant... the touch of a god or the warmth of a star may awaken this mineral...",
   "item.hazennstuff.dreadstone": "Dreadstone",
   "item.hazennstuff.crude_metal": "Crude Metal",
   "item.hazennstuff.chlorophyte_chunk": "Chlorophyte Chunk",
@@ -33,11 +37,16 @@
   "item.hazennstuff.silver_scraps": "Silver Scraps",
 
   "item.hazennstuff.glowing_mushroom": "Glowing Mushroom",
+  "item.hazennstuff.glowing_mushroom.guide": "Combine glow ink sacs with mushrooms to make glowing mushrooms.",
   "item.hazennstuff.shadow_scale": "Shadow Scale",
+  "item.hazennstuff.shadow_scale.guide": "Kill Phantoms to obtain Shadow Scales.",
 
   "item.hazennstuff.cloth_of_the_flamebearer": "Cloth of the Flamebearer",
+  "item.hazennstuff.cloth_of_the_flamebearer.guide": "Some echos still hold some remains of the flamebearer...",
   "item.hazennstuff.lemon": "Lemon",
+  "item.hazennstuff.lemon.guide": "When life gives you lemons...",
   "item.hazennstuff.divine_lemon": "Divine Lemon",
+  "item.hazennstuff.divine_lemon.guide": "Delectable!",
 
 
   "item.hazennstuff.radiance_upgrade_orb": "Radiance Upgrade Orb",
@@ -69,8 +78,24 @@
   "item.hazennstuff.singularity": "Singularity Life Crystal",
 
 
+  "item.irons_spellbooks.chained_book.guide": "The Flamebearer keeps their secrets to the other schools in here...",
+
   "item.hazennstuff.energized_core_spellbook": "Energized Core Spellbook",
+  "item.hazennstuff.energized_core_spellbook.guide": "This core resonates more than just electricity...",
   "item.hazennstuff.golden_shower_spellbook": "Golden Shower",
+  "item.hazennstuff.golden_shower_spellbook.guide": "Eww...",
+
+
+  "item.hazennstuff.galvanized_sheath": "Galvanized Sheath",
+  "item.hazennstuff.galvanized_sheath.desc": "Upon hit, strike down your foes with a line of lightning.",
+  "item.hazennstuff.galvanized_sheath.guide": "Smite your foes with a line of lightning.",
+  "item.hazennstuff.scroll_sheath": "Scroll Sheath",
+  "item.hazennstuff.scroll_sheath.desc": "Upon hit, inflict mana sickness on your foes and reset your cooldown.",
+  "item.hazennstuff.scroll_sheath.guide": "WIP.",
+
+
+  "item.hazennstuff.arbitrium_wings": "Arbitrium Wings",
+  "item.hazennstuff.arbitrium_wings.guide": "Bear the wings of arcana.",
 
 
   "item.hazennstuff.ring_of_efficiency": "Ring of Efficiency",
@@ -154,7 +179,7 @@
   "item.hazennstuff.firebrand": "Firebrand",
   "item.hazennstuff.draconic_splitter": "Draconic Splitter",
   "item.hazennstuff.ravens_bane": "Raven's Bane",
-  "item.hazennstuff.war_flaming_lance": "War-Flaming Lance",
+  "item.hazennstuff.volcano": "Volcano",
 
   "item.hazennstuff.ice_pike": "Ice Pike",
   "item.hazennstuff.frostburn_dagger": "Frostburn Dagger",
@@ -164,6 +189,7 @@
 
   "item.hazennstuff.bountiful_harvest": "Bountiful Harvest",
   "item.hazennstuff.thorn_chakram": "Thorn Chakram",
+  "item.hazennstuff.blade_of_grass": "Thorn Chakram",
 
   "item.hazennstuff.vampire_knives": "Vampire Knives",
 
@@ -191,6 +217,8 @@
 
   "item.hazennstuff.mage_bane": "Magebane",
   "item.hazennstuff.legionnaire_warlock_axe": "Legionnaire Warlock Axe",
+  "item.hazennstuff.dawnmaker": "Dawnmaker",
+  "item.hazennstuff.muramasa": "Muramasa",
 
 
 
@@ -203,6 +231,7 @@
 
 
   "item.hazennstuff.frieren_staff": "Frieren's Staff",
+  "item.hazennstuff.white_lily_staff": "White Lily's Staff",
   "item.hazennstuff.wisewood_cane": "Wisewood Cane",
   "item.hazennstuff.rod_of_discord": "Rod of Discord",
 
@@ -635,15 +664,18 @@
   "item.hazennstuff.nameless_one_leggings": "Nameless One Leggings",
 
 
-  "curios.modifiers.crystal": "When slotted in:",
+  "curios.modifiers.crystal": "When slotted in: ",
+  "curios.modifiers.wing": "When bearing these wings: ",
 
 
 
   "curios.identifier.crystal": "Crystal",
+  "curios.identifier.wing": "Wings",
 
 
 
   "entity.hazennstuff.brimstone_hellblast": "Brimstone Hellblast",
+  "entity.hazennstuff.scorching_slash": "Scorching Slash",
 
   "entity.hazennstuff.ice_arrow": "Ice Arrow",
   "entity.hazennstuff.crystal_volley": "Crystal Volley",
@@ -659,13 +691,14 @@
 
   "entity.hazennstuff.syringe": "Syringe",
 
-  "entity.hazennstuff.nights_edge_strike": "Night's Edge Slash",
+  "entity.hazennstuff.nights_edge_after_slash": "Night's Edge Slash",
 
   "entity.hazennstuff.soul_seeker": "Soul Seeker",
 
 
   "spell.hazennstuff.brimstone_hellblast": "Brimstone Hellblast",
   "spell.hazennstuff.cinderous_step": "Cinderous Step",
+  "spell.hazennstuff.scorching_slash": "Scorching Slash",
 
   "spell.hazennstuff.ice_arrow": "Ice Arrow",
   "spell.hazennstuff.crystal_volley": "Crystal Volley",
@@ -674,6 +707,8 @@
 
   "spell.hazennstuff.thorn_chakram": "Thorn Chakram",
   "spell.hazennstuff.counterspell_spider_lily": "Spider Lily Counterspell",
+  "spell.hazennstuff.shard_sword": "Shard Sword",
+  "spell.hazennstuff.death_sentence": "Death Sentence",
 
   "spell.hazennstuff.golden_shower": "Golden Shower",
 
@@ -690,6 +725,7 @@
 
   "spell.hazennstuff.brimstone_hellblast.guide": "A Calamity Mod Reference ''The Brimstone Witch's signiture spell. Cast upon your foes a skull engulfed in brimstone flames, scaling off of the power of fire and blood, and leave your foes in ashes.''",
   "spell.hazennstuff.cinderous_step.guide": "Step into your destination in a flaring way. The souls of the many flamebearers engulf your body in flames, making you flame-kissed, your hands burning everything you touch, and your flames that you cast burning hotter than the stars.",
+  "spell.hazennstuff.scorching_slash.guide": "The eternal flames burn brightly. Weild the blade ingulfed in flames and reduce your foes to nothing but ashes. This flame burns brighter than 10 stars to sever the threads of mana and arcana.",
 
   "spell.hazennstuff.ice_arrow.guide": "Draw an arrow upon your foe and leave them pierced with an arrow of permafrost.",
   "spell.hazennstuff.crystal_volley.guide": "An avalanche of arrows, piercing your enemies and leaving nothing but the hail and fallen foes.",
@@ -698,6 +734,8 @@
 
   "spell.hazennstuff.thorn_chakram.guide": "A Terraria Reference ''Throw the Thorn Chakram at your foes and watch as it ricochets from the walls and your enemies.''",
   "spell.hazennstuff.counterspell_spider_lily.guide": "Return your opponent's spells back to the soil of the earth.",
+  "spell.hazennstuff.shard_sword.guide": "A Honkai Star-Rail Reference. May your blade pierce through your foes...",
+  "spell.hazennstuff.death_sentence.guide": "A Honkai Star-Rail Reference ''That paradise may be unreachable for me... Savor it in my place''",
 
   "spell.hazennstuff.golden_shower.guide": "A Terraria Reference ''Sprays a shower of ichor. Decreases target's defense''",
 
@@ -716,22 +754,32 @@
   "effect.hazennstuff.tyrants_grace": "Tyrant's Grace",
   "effect.hazennstuff.fireblossom_ruler": "Fireblossom Ruler",
   "effect.hazennstuff.fireblossom_warrior": "Fireblossom Warrior",
-  "effect.hazennstuff.pure_armor_set_bonus": "Pure Armor Set Bonus",
+  "effect.hazennstuff.mage_set_bonus": "Mage Set Bonus",
+  "effect.hazennstuff.swordmaster_set_bonus": "Swordmaster Set Bonus",
+  "effect.hazennstuff.archer_set_bonus": "Archer Set Bonus",
+  "effect.hazennstuff.summoner_set_bonus": "Summoner Set Bonus",
   "effect.hazennstuff.flame_kissed": "Flame Kissed",
   "effect.hazennstuff.dryads_blessing": "Dryad's Blessing",
   "effect.hazennstuff.infested": "Infested",
   "effect.hazennstuff.spores": "Spores",
   "effect.hazennstuff.ichor": "Ichor",
+  "effect.hazennstuff.cooldown_reset": "Cooldown Reset",
+  "effect.hazennstuff.mana_sickness": "Mana Sickness",
 
-  "effect.hazennstuff.tyrants_grace.description": "Recieve the Flamebearer's Tyrannical enhancement, increases your attack and damage by 1, and your cast movement speed by 20% and fire spellpower by 12%.",
+  "effect.hazennstuff.tyrants_grace.description": "Recieve the Flamebearer's Tyrannical enhancement, increases your attack speed and damage by 1, and your cast movement speed by 20% and fire spellpower by 12%.",
   "effect.hazennstuff.fireblossom_ruler.description": "Reign over the lands as your cast movement speed increases by 15% and spell resist increases by 10%.",
   "effect.hazennstuff.fireblossom_warrior.description": "Blaze through your foes as your defence and armor toughness increases by 2 and shred through protection by 15%.",
-  "effect.hazennstuff.pure_armor_set_bonus.description": "By wearing the full set of the pure armor, the gods have bestowed onto you an increase of cast movement speed by 15% and increase of spell resistance by 10%.",
+  "effect.hazennstuff.mage_set_bonus.description": "By wearing the full set of the mage armor, you gain an increase of cast movement speed by 15% and increase of spell resistance by 10%.",
+  "effect.hazennstuff.swordmaster_set_bonus.description": "By wearing the full set of the swordmaster armor, you gain an increase of attack speed by 15% and increase protection shred by 10%.",
+  "effect.hazennstuff.archer_set_bonus.description": "By wearing the full set of the archer armor, you gain an increase of movement speed by 15% and increase of arrow draw speed and velocity by 10%.",
+  "effect.hazennstuff.summoner_set_bonus.description": "By wearing the full set of the summoner armor, you gain an increase of summon damage by 15% and increase mana steal by 10%.",
   "effect.hazennstuff.flame_kissed.description": "Your body has been flame-kissed by the flamebearers. Your fire spell power and damage increases.",
   "effect.hazennstuff.dryads_blessing.description": "Blessed by the Dryad, your defence increases as you recieve more healing and enable overheal.",
   "effect.hazennstuff.infested.description": "The spores grow within your body...",
   "effect.hazennstuff.spores.description": "You wither away as the spores in your body sap away at your health.",
   "effect.hazennstuff.ichor.description": "''Eww...'' Reduces your defence and spell resistance.",
+  "effect.hazennstuff.cooldown_reset.description": "Resets the cooldown of all of your spells.",
+  "effect.hazennstuff.mana_sickness.description": "You feel the disconnect with the link with your arcana and soul...",
 
 
   "creativetab.hazennstuff.hazennstuff_materials": "Hazen 'n Stuff Materials",

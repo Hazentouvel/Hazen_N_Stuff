@@ -17,7 +17,7 @@ public class RodOfDiscordModel extends DefaultedItemGeoModel<RodOfDiscordItem> {
 
     @Override
     public ResourceLocation getTextureResource(RodOfDiscordItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/staves/rod_of_discord/rod_of_discord.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/staves/rod_of_discord.png");
     }
 
     @Override

@@ -1,14 +1,10 @@
 package net.hazen.hazennstuff.item.armor;
 
 import com.google.common.base.Suppliers;
-import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
-import mod.azure.azurelib.common.api.common.animatable.GeoItem;
-import mod.azure.azurelib.common.internal.common.util.AzureLibUtil;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlotGroup;
-import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.ArmorItem;
@@ -17,7 +13,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class HnSArmorItem extends ArmorItem {
@@ -27,7 +22,24 @@ public class HnSArmorItem extends ArmorItem {
         super(material, type, properties);
         this.defaultModifiers = Suppliers.memoize(() ->
         {
+            // Looking at how ISS does this because it is 1 AM and I am tired
+            int i = material.value().getDefense(type);
+            float f = material.value().toughness();
             ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder();
+            EquipmentSlotGroup equipmentSlotGroup = EquipmentSlotGroup.bySlot(type.getSlot());
+            ResourceLocation resourceLocation = ResourceLocation.withDefaultNamespace("armor." + type.getName());
+            builder.add(Attributes.ARMOR, new AttributeModifier(resourceLocation, i, AttributeModifier.Operation.ADD_VALUE), equipmentSlotGroup);
+            builder.add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(resourceLocation, f, AttributeModifier.Operation.ADD_VALUE), equipmentSlotGroup);
+
+            float resistance = material.value().knockbackResistance();
+            if (resistance > 0.0F)
+            {
+                builder.add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(resourceLocation, resistance, AttributeModifier.Operation.ADD_VALUE), equipmentSlotGroup);
+            }
+            for (AttributeContainer holder : attributeContainers)
+            {
+                builder.add(holder.attribute(), holder.createModifier(type.getSlot().getName()), equipmentSlotGroup);
+            }
 
             return builder.build();
         });
@@ -57,6 +69,6 @@ public class HnSArmorItem extends ArmorItem {
     }
 
     public List<ItemAttributeModifiers.Entry> createExtraAttributes() {
-        return List.of();
+        return List.of(); // or Collections.emptyList();
     }
 }

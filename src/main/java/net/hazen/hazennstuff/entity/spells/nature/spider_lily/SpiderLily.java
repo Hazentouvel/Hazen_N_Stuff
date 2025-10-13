@@ -75,6 +75,11 @@ public class SpiderLily extends AbstractMagicProjectile implements GeoEntity {
     }
 
     @Override
+    public Optional<Holder<SoundEvent>> getImpactSound() {
+        return Optional.of(SoundRegistry.ACID_ORB_IMPACT);
+    }
+
+    @Override
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
 
@@ -157,12 +162,6 @@ public class SpiderLily extends AbstractMagicProjectile implements GeoEntity {
         }
 
         this.discard();
-    }
-
-
-    @Override
-    public Optional<Holder<SoundEvent>> getImpactSound() {
-        return Optional.of(SoundRegistry.ACID_ORB_IMPACT);
     }
 
     //ANIMATION

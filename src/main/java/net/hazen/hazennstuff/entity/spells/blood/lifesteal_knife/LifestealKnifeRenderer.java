@@ -24,11 +24,6 @@ public class LifestealKnifeRenderer extends GeoEntityRenderer<LifestealKnife> {
     }
 
     @Override
-    public ResourceLocation getTextureLocation(LifestealKnife animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/vampire_knife_projectile.png");
-    }
-
-    @Override
     public void preRender(PoseStack poseStack, LifestealKnife animatable, BakedGeoModel model, @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
         Vec3 motion = animatable.getDeltaMovement();
         float xRot = -((float) (Mth.atan2(motion.horizontalDistance(), motion.y) * (double) (180F / (float) Math.PI)) - 90.0F);
@@ -41,17 +36,6 @@ public class LifestealKnifeRenderer extends GeoEntityRenderer<LifestealKnife> {
     @Override
     public RenderType getRenderType(LifestealKnife animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick) {
         return RenderType.energySwirl(texture, 0, 0);
-    }
-
-    @Override
-    public void render(LifestealKnife entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
-        poseStack.pushPose();
-
-        poseStack.scale(1F, 1F, 1F);
-
-        super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
-
-        poseStack.popPose();
     }
 
 }

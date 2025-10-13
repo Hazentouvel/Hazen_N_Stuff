@@ -15,7 +15,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
 
-public class MeowmereItem extends MagicSwordItem implements GeoItem {
+public class MeowmereItem extends ExtendedSwordItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public MeowmereItem() {
@@ -26,10 +26,7 @@ public class MeowmereItem extends MagicSwordItem implements GeoItem {
                         .fireResistant()
                         .rarity(RadianceRarity.RADIANCE_RARITY_PROXY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.MEOWMERE)
-                        ),
-                SpellDataRegistryHolder.of(
-
-                )
+                        )
         );
     }
 

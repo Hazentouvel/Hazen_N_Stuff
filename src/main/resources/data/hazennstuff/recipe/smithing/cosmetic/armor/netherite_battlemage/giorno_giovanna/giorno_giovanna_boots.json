@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:spectral_arrow"
+  },
+  "base": {
+    "tag": "hazennstuff:armors/netherite_battlemage/netherite_battlemage_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:giorno_giovanna_boots"
+  },
+  "template": {
+    "item": "minecraft:leather"
+  }
+}

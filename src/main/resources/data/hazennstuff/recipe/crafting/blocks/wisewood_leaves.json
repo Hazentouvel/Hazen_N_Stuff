@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "key": {
+    "S": {
+      "item": "irons_spellbooks:arcane_essence"
+    },
+    "#": {
+      "tag": "minecraft:leaves"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:wisewood_leaves",
+    "count": 8
+  }
+}

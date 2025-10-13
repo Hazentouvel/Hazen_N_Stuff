@@ -3,6 +3,8 @@ package net.hazen.hazennstuff.registries;
 import com.mojang.serialization.MapCodec;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.registries.particle.LeafParticle.LeafParticleOptions;
+import net.hazen.hazennstuff.registries.particle.NatureSlash.NatureSlashOptions;
+import net.hazen.hazennstuff.registries.particle.NightsEdgeStrike.NightsEdgeStrikeOptions;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.Registries;
@@ -20,6 +22,14 @@ public class HnSParticleRegistry {
     public static final Supplier<SimpleParticleType> MUSHROOM_PARTICLE = PARTICLE_TYPES.register("mushroom_particle",
             () -> new SimpleParticleType(false));
 
+    // Ball Particles
+    public static final Supplier<SimpleParticleType> NIGHTS_EDGE_PARTICLE = PARTICLE_TYPES.register("nights_edge_particle",
+            () -> new SimpleParticleType(false));
+
+    // Ball Particles
+    public static final Supplier<SimpleParticleType> ROD_OF_DISCORD_PARTICLE = PARTICLE_TYPES.register("rod_of_discord_particle",
+            () -> new SimpleParticleType(false));
+
     // Leaf Particle
     public static final Supplier<ParticleType<LeafParticleOptions>> LEAF_PARTICLE =
             PARTICLE_TYPES.register("leaf_particle", () -> new ParticleType<LeafParticleOptions>(true) {
@@ -33,6 +43,30 @@ public class HnSParticleRegistry {
                     return LeafParticleOptions.STREAM_CODEC;
                 }
             });
+
+    public static final Supplier<ParticleType<NightsEdgeStrikeOptions>> NIGHTS_EDGE_STRIKE_PARTICLE =
+            PARTICLE_TYPES.register("nights_edge_strike_particle", () -> new ParticleType<NightsEdgeStrikeOptions>(true) {
+        public MapCodec<NightsEdgeStrikeOptions> codec() {
+            return NightsEdgeStrikeOptions.MAP_CODEC;
+        }
+
+        public StreamCodec<? super RegistryFriendlyByteBuf, NightsEdgeStrikeOptions> streamCodec() {
+            return NightsEdgeStrikeOptions.STREAM_CODEC;
+        }
+    });
+
+    public static final Supplier<ParticleType<NatureSlashOptions>> NATURE_SLASH_PARTICLE =
+            PARTICLE_TYPES.register("nature_slash_particle", () -> new ParticleType<NatureSlashOptions>(true) {
+                public MapCodec<NatureSlashOptions> codec() {
+                    return NatureSlashOptions.MAP_CODEC;
+                }
+
+                public StreamCodec<? super RegistryFriendlyByteBuf, NatureSlashOptions> streamCodec() {
+                    return NatureSlashOptions.STREAM_CODEC;
+                }
+            });
+
+    public static final Supplier<SimpleParticleType> BLADE_PARTICLES = PARTICLE_TYPES.register("blade_particle", () -> new SimpleParticleType(false));
 
 
     public static void register(IEventBus eventBus)

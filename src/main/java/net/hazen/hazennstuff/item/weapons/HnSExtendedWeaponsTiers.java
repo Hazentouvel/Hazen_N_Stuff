@@ -31,8 +31,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers ICE_PIKE = new HnSExtendedWeaponsTiers(
             8064,
-            10,
-            0.7F,
+            11,
+            -2.9F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -44,7 +44,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HnSExtendedWeaponsTiers FROSTBURN_DAGGER = new HnSExtendedWeaponsTiers(
             8064,
             7,
-            1.4F,
+            -1.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -58,8 +58,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers DRACONIC_SPLITTER = new HnSExtendedWeaponsTiers(
             8064,
-            7,
-            0.7F,
+            12,
+            -2.6F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -70,8 +70,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers FIREBRAND = new HnSExtendedWeaponsTiers(
             8064,
-            7,
-            0.7F,
+            9,
+            -3F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -83,7 +83,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HnSExtendedWeaponsTiers FIREBLOSSOM_RAPIER = new HnSExtendedWeaponsTiers(
             8064,
             8,
-            1.4F,
+            -1.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -95,8 +95,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers WARFLAMING_LANCE = new HnSExtendedWeaponsTiers(
             8064,
-            7,
-            0.7F,
+            10,
+            -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -107,8 +107,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers RAVENS_BANE = new HnSExtendedWeaponsTiers(
             8064,
-            7,
-            0.7F,
+            13,
+            -2.6F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -124,8 +124,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers BEONGAE = new HnSExtendedWeaponsTiers(
             8064,
-            7,
-            0.7F,
+            9,
+            -3F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -135,8 +135,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers SKYSCORCHER = new HnSExtendedWeaponsTiers(
             8064,
-            9,
-            0.7F,
+            12,
+            -3.4F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -152,7 +152,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HnSExtendedWeaponsTiers ANCIENT_WARRIORS_AXE = new HnSExtendedWeaponsTiers(
             8064,
             9,
-            0.7F,
+            -3F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -162,8 +162,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers MALICE = new HnSExtendedWeaponsTiers(
             8064,
-            7,
-            1F,
+            8,
+            -2.4F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -180,7 +180,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HnSExtendedWeaponsTiers HAMMER_OF_JUSTICE = new HnSExtendedWeaponsTiers(
             8064,
             9,
-            0.7F,
+            -3.1F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -192,8 +192,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers EXCALIBUR = new HnSExtendedWeaponsTiers(
             8064,
-            7,
-            1F,
+            9,
+            -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -205,8 +205,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers DIVINE_GREATSWORD = new HnSExtendedWeaponsTiers(
             8064,
-            7,
-            1F,
+            9,
+            -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -224,7 +224,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HnSExtendedWeaponsTiers BOUNTIFUL_HARVEST = new HnSExtendedWeaponsTiers(
             8064,
             13,
-            0.7F,
+            -2.6F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -235,8 +235,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers THORN_CHAKRAM = new HnSExtendedWeaponsTiers(
             8064,
-            7,
-            1.4F,
+            8,
+            -1.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -251,8 +251,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers OBSIDIAN_CLAYMORE = new HnSExtendedWeaponsTiers(
             8064,
-            7,
-            0.7F,
+            9,
+            -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -263,8 +263,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers STARFURY = new HnSExtendedWeaponsTiers(
             8064,
-            9,
-            1.2F,
+            8,
+            -2.4F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -279,8 +279,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers VAMPIRE_KNIVES = new HnSExtendedWeaponsTiers(
             8064,
-            7,
-            1.4F,
+            8,
+            -1.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -296,7 +296,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HnSExtendedWeaponsTiers THE_DEVOURER = new HnSExtendedWeaponsTiers(
             8064,
             13,
-            0.7F,
+            -3.1F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -314,38 +314,40 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers HAMMUSH = new HnSExtendedWeaponsTiers(
             8064,
-            7,
-            0.7F,
+            12,
+            -2.6F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(ALObjects.Attributes.LIFE_STEAL, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            new AttributeContainer(HnSAttributeRegistry.RADIANCE_MAGIC_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
     public static HnSExtendedWeaponsTiers SPECTRUM = new HnSExtendedWeaponsTiers(
             8064,
-            7,
-            1F,
+            11,
+            -2.6F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(ALObjects.Attributes.LIFE_STEAL, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            new AttributeContainer(HnSAttributeRegistry.RADIANCE_MAGIC_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
     public static HnSExtendedWeaponsTiers MEOWMERE = new HnSExtendedWeaponsTiers(
             8064,
-            7,
-            1.1F,
+            11,
+            -2.6F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(ALObjects.Attributes.LIFE_STEAL, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(HnSAttributeRegistry.RADIANCE_MAGIC_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
     /*
@@ -354,8 +356,8 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers LIGHTS_BANE = new HnSExtendedWeaponsTiers(
             8064,
-            9,
-            1.2F,
+            8,
+            -1.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -365,29 +367,25 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HnSExtendedWeaponsTiers NIGHTS_EDGE = new HnSExtendedWeaponsTiers(
             8064,
             10,
-            0.7F,
+            -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(HnSAttributeRegistry.SHADOW_MAGIC_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
     public static HnSExtendedWeaponsTiers TRUE_NIGHTS_EDGE = new HnSExtendedWeaponsTiers(
             8064,
             12,
-            0.7F,
+            -2.8F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.CRIT_CHANCE, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(HnSAttributeRegistry.SHADOW_MAGIC_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            new AttributeContainer(AttributeRegistry.SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
     /*
@@ -397,7 +395,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HnSExtendedWeaponsTiers MITHRIL = new HnSExtendedWeaponsTiers(
             4032,
             6,
-            1F,
+            -3F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(ItemRegistry.MITHRIL_SCRAP.get()),
@@ -407,7 +405,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HnSExtendedWeaponsTiers SPECTRAL_PICKAXE = new HnSExtendedWeaponsTiers(
             4032,
             6,
-            1F,
+            -3F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(ItemRegistry.MITHRIL_SCRAP.get()),
@@ -417,7 +415,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HnSExtendedWeaponsTiers PICKAXE_AXE = new HnSExtendedWeaponsTiers(
             4032,
             6,
-            1F,
+            -3F,
             10,
             HnSTags.Blocks.INCORRECT_FOR_MITHRIL_TOOl,
             () -> Ingredient.of(ItemRegistry.MITHRIL_SCRAP.get()),
@@ -427,7 +425,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HnSExtendedWeaponsTiers MAGE_BANE = new HnSExtendedWeaponsTiers(
             8064,
             8,
-            0.7F,
+            -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
@@ -440,7 +438,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HnSExtendedWeaponsTiers LEGIONNAIRE_WARLOCK_AXE = new HnSExtendedWeaponsTiers(
             8064,
             11,
-            0.7F,
+            -3F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),

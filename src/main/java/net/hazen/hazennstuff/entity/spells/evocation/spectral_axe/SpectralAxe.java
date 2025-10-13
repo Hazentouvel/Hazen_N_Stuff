@@ -97,15 +97,11 @@ public class SpectralAxe extends AbstractMagicProjectile implements GeoEntity {
     @Override
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
-        try {
-
-            DamageSources.applyDamage(
-                    entityHitResult.getEntity(),
-                    damage,
-                    HnSSpellRegistries.SPECTRAL_AXE.get().getDamageSource(this, getOwner())
-            );
-        } catch (Exception e) {}
-
+        DamageSources.applyDamage(
+                entityHitResult.getEntity(),
+                damage,
+                HnSSpellRegistries.SPECTRAL_AXE.get().getDamageSource(this, getOwner())
+        );
         discard();
     }
 

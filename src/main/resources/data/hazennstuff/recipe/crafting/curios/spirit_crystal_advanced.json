@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": [
+        {
+          "type": "neoforge:or",
+          "value": [
+            {
+              "type": "neoforge:mod_loaded",
+              "modid": "malum"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cEc",
+    "NYN",
+    "cEc"
+  ],
+  "key": {
+    "c": {
+      "item": "hazennstuff:steel_ingot"
+    },
+    "E": {
+      "item": "hazennstuff:melee_upgrade_orb"
+    },
+    "N": {
+      "item": "hazennstuff:silver_scraps"
+    },
+    "Y": {
+      "item": "hazennstuff:abstract"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:advanced",
+    "count": 1
+  }
+}

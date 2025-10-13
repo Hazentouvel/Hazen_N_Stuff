@@ -22,7 +22,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class LegionnaireWarlockAxeItem extends MagicSwordItem implements GeoItem {
+public class LegionnaireWarlockAxeItem extends ExtendedSwordItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public LegionnaireWarlockAxeItem() {
@@ -33,9 +33,7 @@ public class LegionnaireWarlockAxeItem extends MagicSwordItem implements GeoItem
                         .fireResistant()
                         .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.LEGIONNAIRE_WARLOCK_AXE)
-                        ),
-                SpellDataRegistryHolder.of(
-                )
+                        )
         );
     }
 

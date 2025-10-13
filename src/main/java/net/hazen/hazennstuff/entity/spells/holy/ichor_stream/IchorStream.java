@@ -40,6 +40,17 @@ public class IchorStream extends AbstractMagicProjectile {
         this.setPos(shooter.getEyePosition());
     }
 
+
+    @Override
+    public void trailParticles() {
+        level().addParticle(HnSParticleHelper.ICHOR_TRAIL, getX(), getY(), getZ(), 0, 0, 0);
+    }
+
+    @Override
+    public void impactParticles(double x, double y, double z) {
+        MagicManager.spawnParticles(level(), HnSParticleHelper.ICHOR_TRAIL, x, y, z, 10, 0.1, 0.1, 0.1, 0.2, false);
+    }
+
     @Override
     public Optional<Holder<SoundEvent>> getImpactSound() {
         return Optional.empty();
@@ -50,7 +61,6 @@ public class IchorStream extends AbstractMagicProjectile {
         this.setYRot(y);
         this.yRotO = y;
     }
-
 
     @Override
     public void tick() {
@@ -91,17 +101,6 @@ public class IchorStream extends AbstractMagicProjectile {
         }
 
         this.discard();
-    }
-
-
-    @Override
-    public void trailParticles() {
-        level().addParticle(HnSParticleHelper.ICHOR_TRAIL, getX(), getY(), getZ(), 0, 0, 0);
-    }
-
-    @Override
-    public void impactParticles(double x, double y, double z) {
-        MagicManager.spawnParticles(level(), HnSParticleHelper.ICHOR_TRAIL, x, y, z, 10, 0.1, 0.1, 0.1, 0.2, false);
     }
 
     @Override

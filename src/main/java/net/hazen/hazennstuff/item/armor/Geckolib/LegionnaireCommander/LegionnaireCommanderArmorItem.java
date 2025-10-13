@@ -1,14 +1,11 @@
 package net.hazen.hazennstuff.item.armor.Geckolib.LegionnaireCommander;
 
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
-import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
-import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.registries.HnSEffects;
@@ -22,8 +19,6 @@ import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
-
-import java.util.Map;
 
 public class LegionnaireCommanderArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public LegionnaireCommanderArmorItem(Type type, Properties settings) {
@@ -54,8 +49,8 @@ public class LegionnaireCommanderArmorItem extends ImbuableGeckolibHnSArmorItem 
     }
 
     private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 400, 0, false, false, false));
+        if (!player.hasEffect(HnSEffects.TYRANTS_GRACE_EFFECT)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.TYRANTS_GRACE_EFFECT, 320, 0, false, false, false));
         }
     }
 
@@ -64,17 +59,5 @@ public class LegionnaireCommanderArmorItem extends ImbuableGeckolibHnSArmorItem 
                 player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof LegionnaireCommanderArmorItem &&
                 player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof LegionnaireCommanderArmorItem &&
                 player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof LegionnaireCommanderArmorItem;
-    }
-
-    @Override
-    public void initializeSpellContainer(ItemStack itemStack) {
-        if (itemStack == null) {
-            return;
-        }
-
-        super.initializeSpellContainer(itemStack);
-        itemStack.set(ComponentRegistry.AFFINITY_COMPONENT, new AffinityData(Map.of(
-                SpellRegistry.FLAMING_STRIKE_SPELL.get().getSpellResource(), 1
-        )));
     }
 }

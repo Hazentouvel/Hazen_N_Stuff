@@ -15,7 +15,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
 
-public class SpectrumItem extends MagicSwordItem implements GeoItem {
+public class SpectrumItem extends ExtendedSwordItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public SpectrumItem() {
@@ -26,10 +26,7 @@ public class SpectrumItem extends MagicSwordItem implements GeoItem {
                         .fireResistant()
                         .rarity(RadianceRarity.RADIANCE_RARITY_PROXY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.SPECTRUM)
-                        ),
-                SpellDataRegistryHolder.of(
-
-                )
+                        )
         );
     }
 

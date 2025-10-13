@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.item.staves.wisewood_cane;
 
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
+import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.item.staves.HnSStaffTier;
 import net.hazen.hazennstuff.item.staves.ImbuableStaffItem;
@@ -15,7 +16,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
 
-public class WisewoodCaneItem extends ImbuableStaffItem implements GeoItem {
+public class WisewoodCaneItem extends StaffItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public WisewoodCaneItem() {
@@ -26,8 +27,7 @@ public class WisewoodCaneItem extends ImbuableStaffItem implements GeoItem {
                         .rarity(Rarity.EPIC)
                         .attributes(ExtendedSwordItem
                                 .createAttributes(HnSStaffTier.ARTIFICER)
-                        ),
-                SpellDataRegistryHolder.of()
+                        )
         );
     }
 

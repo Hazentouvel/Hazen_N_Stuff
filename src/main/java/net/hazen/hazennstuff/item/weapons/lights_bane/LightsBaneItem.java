@@ -16,7 +16,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
 
-public class LightsBaneItem extends MagicSwordItem implements GeoItem {
+public class LightsBaneItem extends ExtendedSwordItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public LightsBaneItem() {
@@ -27,9 +27,7 @@ public class LightsBaneItem extends MagicSwordItem implements GeoItem {
                         .fireResistant()
                         .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.LIGHTS_BANE)
-                        ),
-                SpellDataRegistryHolder.of(
-                )
+                        )
         );
     }
 

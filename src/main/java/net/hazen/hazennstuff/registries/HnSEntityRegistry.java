@@ -15,10 +15,11 @@ import net.hazen.hazennstuff.entity.mobs.wizards.Good.TheRecluse.TheRecluseEntit
 import net.hazen.hazennstuff.entity.spells.blood.lifesteal_knife.LifestealKnife;
 import net.hazen.hazennstuff.entity.spells.eldritch.soul_seeker.SoulSeeker;
 import net.hazen.hazennstuff.entity.spells.evocation.spectral_axe.SpectralAxe;
+import net.hazen.hazennstuff.entity.spells.fire.immolating_obliterator.ScorchingSlash;
 import net.hazen.hazennstuff.entity.spells.holy.ichor_stream.IchorStream;
 import net.hazen.hazennstuff.entity.spells.lightning.InstantLightningStrike.LightningStrike;
+import net.hazen.hazennstuff.entity.spells.nature.death_sentence.DeathSentence;
 import net.hazen.hazennstuff.entity.spells.nature.spider_lily.SpiderLily;
-import net.hazen.hazennstuff.entity.spells.shadow.nights_edge_strike.NightsEdgeStrike;
 import net.hazen.hazennstuff.entity.spells.fire.brimstone_hellblast.BrimstoneHellblast;
 import net.hazen.hazennstuff.entity.spells.ice.ice_arrow.IceCloud.IceCloud;
 import net.hazen.hazennstuff.entity.spells.ice.ice_arrow.IceArrow;
@@ -26,6 +27,7 @@ import net.hazen.hazennstuff.entity.spells.ice.ice_arrow.crystal_volley.CrystalV
 import net.hazen.hazennstuff.entity.spells.lightning.spark.EnergyBurst;
 import net.hazen.hazennstuff.entity.spells.radiance.syringe.Syringe;
 import net.hazen.hazennstuff.entity.spells.nature.thorn_chakram.ThornChakram;
+import net.hazen.hazennstuff.entity.spells.shadow.nights_edge_after_slash.NightsEdgeAfterSlash;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -76,14 +78,6 @@ public class HnSEntityRegistry {
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "lifesteal_knife").toString())
             );
 
-    //Nights Edge Strike
-    public static final DeferredHolder<EntityType<?>, EntityType<NightsEdgeStrike>> NIGHTS_EDGE_STRIKE=
-            ENTITIES.register("nights_edge_strike", () -> EntityType.Builder.<NightsEdgeStrike>of(NightsEdgeStrike::new, MobCategory.MISC)
-                    .sized(8f, 1f)
-                    .clientTrackingRange(64)
-                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "nights_edge_strike").toString())
-            );
-
     // Thorn Chakram
     public static final DeferredHolder<EntityType<?>, EntityType<ThornChakram>> THORN_CHAKRAM=
             ENTITIES.register("thorn_chakram", () -> EntityType.Builder.<ThornChakram>of(ThornChakram::new, MobCategory.MISC)
@@ -131,6 +125,30 @@ public class HnSEntityRegistry {
                     .sized(1f, 1f)
                     .clientTrackingRange(64)
                     .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "spider_lily").toString())
+            );
+
+    // Death Sentence
+    public static final DeferredHolder<EntityType<?>, EntityType<DeathSentence>> DEATH_SENTENCE =
+            ENTITIES.register("death_sentence", () -> EntityType.Builder.<DeathSentence>of(DeathSentence::new, MobCategory.MISC)
+                    .sized(1.5f, 3f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "death_sentence").toString())
+            );
+
+    // Night's Edge After Slash
+    public static final DeferredHolder<EntityType<?>, EntityType<NightsEdgeAfterSlash>> NIGHTS_EDGE_AFTER_SLASH =
+            ENTITIES.register("nights_edge_after_slash", () -> EntityType.Builder.<NightsEdgeAfterSlash>of(NightsEdgeAfterSlash::new, MobCategory.MISC)
+                    .sized(4f, 1f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "nights_edge_after_slash").toString())
+            );
+
+    // Scorching Slash
+    public static final DeferredHolder<EntityType<?>, EntityType<ScorchingSlash>> SCORCHING_SLASH =
+            ENTITIES.register("scorching_slash", () -> EntityType.Builder.<ScorchingSlash>of(net.hazen.hazennstuff.entity.spells.fire.immolating_obliterator.ScorchingSlash::new, MobCategory.MISC)
+                    .sized(4f, 1f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "scorching_slash").toString())
             );
 
 

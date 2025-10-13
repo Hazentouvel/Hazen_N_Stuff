@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "malum"
+    }
+  ],
+  "type": "malum:spirit_infusion",
+  "carryOverComponentData": true,
+  "extraIngredients": [
+    {
+      "count": 1,
+      "item": "hazennstuff:divine_mold"
+    },
+    {
+      "count": 3,
+      "item": "hazennstuff:deus_essence"
+    }
+  ],
+  "ingredient": {
+    "count": 1,
+    "item": "hazennstuff:strengthened"
+  },
+  "output": {
+    "count": 1,
+    "id": "hazennstuff:singularity"
+  },
+  "spirits": [
+    {
+      "type": "eldritch",
+      "count": 8
+    },
+    {
+      "type": "sacred",
+      "count": 16
+    }
+  ]
+}

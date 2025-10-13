@@ -1,8 +1,12 @@
 package net.hazen.hazennstuff;
 
+import io.redspace.ironsspellbooks.item.SpellBook;
+import io.redspace.ironsspellbooks.render.SpellBookCurioRenderer;
 import mod.azure.azurelib.rewrite.animation.cache.AzIdentityRegistry;
 import mod.azure.azurelib.rewrite.render.armor.AzArmorRendererRegistry;
 import mod.azure.azurelib.rewrite.render.item.AzItemRendererRegistry;
+import net.acetheeldritchking.aces_spell_utils.entity.render.items.SheathCurioRenderer;
+import net.acetheeldritchking.aces_spell_utils.items.curios.SheathCurioItem;
 import net.hazen.hazennstuff.block.HnSBlocks;
 import net.hazen.hazennstuff.compat.*;
 import net.hazen.hazennstuff.item.armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorRenderer;
@@ -26,6 +30,9 @@ import net.hazen.hazennstuff.item.curios.Sheaths.ScrollSheath.ScrollCurioRendere
 import net.hazen.hazennstuff.item.curios.Sheaths.ScrollSheath.ScrollSheathItemRenderer;
 import net.hazen.hazennstuff.item.curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioItemRenderer;
 import net.hazen.hazennstuff.item.curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioRenderer;
+import net.hazen.hazennstuff.item.curios.Wings.ArbitriumWings.ArbitriumWingsCurioItemRenderer;
+import net.hazen.hazennstuff.item.curios.Wings.ArbitriumWings.ArbitriumWingsCurioRenderer;
+import net.hazen.hazennstuff.item.weapons.Volcano.VolcanoRenderer;
 import net.hazen.hazennstuff.registries.*;
 import net.hazen.hazennstuff.item.weapons.hammer_of_justice.HammerOfJusticeRenderer;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
@@ -36,8 +43,6 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -109,6 +114,9 @@ public class HazenNStuff
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+
+            HnSItems.getHnSItems().stream().filter(item -> item.get() instanceof SpellBook).forEach((item) -> CuriosRendererRegistry.register(item.get(), SpellBookCurioRenderer::new));
+            HnSItems.getHnSItems().stream().filter(item -> item.get() instanceof SheathCurioItem).forEach((item) -> CuriosRendererRegistry.register(item.get(), SheathCurioRenderer::new));
 
 
             // Armor Rendering Registry
@@ -232,8 +240,13 @@ public class HazenNStuff
 
             // Item Rendering Registry
             AzItemRendererRegistry.register(HammerOfJusticeRenderer::new, HnSItems.HAMMER_OF_JUSTICE.get());
+            AzItemRendererRegistry.register(VolcanoRenderer::new, HnSItems.VOLCANO.get());
 
             //Curios Rendering Registry
+
+            /*
+            *** Spellbooks
+             */
 
             //Energized Core Spellbook
             AzArmorRendererRegistry.register(EnergizedCoreSpellbookCurioItemRenderer::new, HnSItems.ENERGIZED_CORE_SPELLBOOK.get());
@@ -241,17 +254,33 @@ public class HazenNStuff
                     HnSItems.ENERGIZED_CORE_SPELLBOOK.get(), EnergizedCoreSpellbookCurioRenderer::new
             );
 
+            /*
+            *** Sheaths
+             */
+
             // Galvanized Sheath
             AzArmorRendererRegistry.register(GalvanizedSheathItemRenderer::new, HnSItems.GALVANIZED_SHEATH.get());
             CuriosRendererRegistry.register(
                     HnSItems.GALVANIZED_SHEATH.get(), GalvanizedCurioRenderer::new
             );
 
-            // Galvanized Sheath
+            // Scroll Sheath
             AzArmorRendererRegistry.register(ScrollSheathItemRenderer::new, HnSItems.SCROLL_SHEATH.get());
             CuriosRendererRegistry.register(
                     HnSItems.SCROLL_SHEATH.get(), ScrollCurioRenderer::new
             );
+
+            /*
+            *** Wings
+             */
+
+            // Arbitrium Wings
+            AzArmorRendererRegistry.register(ArbitriumWingsCurioItemRenderer::new, HnSItems.ARBITRIUM_WINGS.get());
+            CuriosRendererRegistry.register(
+                    HnSItems.ARBITRIUM_WINGS.get(), ArbitriumWingsCurioRenderer::new
+            );
+
+
 
             // Animation Registry
             AzIdentityRegistry.register(
@@ -341,10 +370,14 @@ public class HazenNStuff
                     // Weapons
 
                     HnSItems.HAMMER_OF_JUSTICE.get(),
+                    HnSItems.VOLCANO.get(),
 
                     // Curios
 
                     HnSItems.ENERGIZED_CORE_SPELLBOOK.get(),
+
+                    HnSItems.ARBITRIUM_WINGS.get(),
+
                     HnSItems.GALVANIZED_SHEATH.get(),
                     HnSItems.SCROLL_SHEATH.get()
 

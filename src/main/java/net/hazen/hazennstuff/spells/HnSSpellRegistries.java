@@ -4,8 +4,11 @@ import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.spells.eldritch.SoulSeekersSpell;
 import net.hazen.hazennstuff.spells.evocation.SpectralAxeSpell;
+import net.hazen.hazennstuff.spells.fire.ScorchingSlashSpell;
 import net.hazen.hazennstuff.spells.holy.GoldenShowerSpell;
 import net.hazen.hazennstuff.spells.nature.CounterspellSpiderLilySpell;
+import net.hazen.hazennstuff.spells.nature.DeathSentenceSpell;
+import net.hazen.hazennstuff.spells.nature.ShardSwordSpell;
 import net.hazen.hazennstuff.spells.shadow.NightsEdgeStrikeSpell;
 import net.hazen.hazennstuff.spells.shadow.ChaoticTeleportSpell;
 import net.hazen.hazennstuff.spells.fire.BrimstoneHellblastSpell;
@@ -48,6 +51,9 @@ public class HnSSpellRegistries {
     //Cinderous Step
     public static final Supplier<AbstractSpell> CINDEROUS_STEP = registerSpell(new CinderousStepSpell());
 
+    //Scorching Slash
+    public static final Supplier<AbstractSpell> SCORCHING_SLASH = registerSpell(new ScorchingSlashSpell());
+
     /*
     *** Ice
      */
@@ -75,6 +81,13 @@ public class HnSSpellRegistries {
 
     //Counter Spell Spider Lily
     public static final Supplier<AbstractSpell> COUNTERSPELL_SPIDER_LILY = registerSpell(new CounterspellSpiderLilySpell());
+
+    //Shard Sword
+    public static final Supplier<AbstractSpell> SHARD_SWORD = registerSpell(new ShardSwordSpell());
+
+    //Death Sentence
+    public static final Supplier<AbstractSpell> DEATH_SENTENCE = registerSpell(new DeathSentenceSpell());
+
 
     /*
     *** Evocation

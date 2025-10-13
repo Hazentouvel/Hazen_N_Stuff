@@ -1,0 +1,58 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
+  "texture_size": [
+    64,
+    64
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "translation": [
+        0,
+        -5.5,
+        0
+      ]
+    },
+    "thirdperson_lefthand": {
+      "translation": [
+        0,
+        -5.5,
+        0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        25,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        -4,
+        0
+      ],
+      "scale": [
+        1.35,
+        1.35,
+        1.35
+      ]
+    },
+    "head": {
+      "translation": [
+        0,
+        7,
+        0
+      ]
+    },
+    "fixed": {
+      "translation": [
+        0,
+        -3.5,
+        0
+      ]
+    }
+  },
+  "textures": {
+    "particle": "item/energized_core_spellbook"
+  }
+}

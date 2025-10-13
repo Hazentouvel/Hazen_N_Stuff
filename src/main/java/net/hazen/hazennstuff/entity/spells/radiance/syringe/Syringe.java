@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.entity.spells.radiance.syringe;
 
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
+import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.registries.HnSSounds;
 import net.hazen.hazennstuff.spells.HnSSpellRegistries;
@@ -26,6 +27,20 @@ import java.util.Optional;
 
 public class Syringe extends AbstractMagicProjectile implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+    private int delay = 0;
+    private int age = 0;
+    private Vec3 spawnPos;
+
+    public void setSpawnPos(Vec3 pos) {
+        this.spawnPos = pos;
+        if (pos != null) {
+            this.setPos(pos);
+        }
+    }
+
+    public void setDelay(int delay) {
+        this.delay = delay;
+    }
 
     public Syringe(EntityType<? extends Projectile> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
@@ -43,13 +58,15 @@ public class Syringe extends AbstractMagicProjectile implements GeoEntity {
     }
 
     @Override
-    public void travel() {
-        this.setPos(this.position().add(this.getDeltaMovement()));
-        if (!this.isNoGravity())
-        {
-            Vec3 vec3 = this.getDeltaMovement();
-            this.setDeltaMovement(vec3.x, vec3.y - 0.05000000074505806, vec3.z);
+    public void tick() {
+        this.age++;
+        if (this.age < this.delay) {
+            if (this.spawnPos != null) {
+                setPos(this.spawnPos);
+            }
+            return;
         }
+        super.tick();
     }
 
     @Override
@@ -70,7 +87,6 @@ public class Syringe extends AbstractMagicProjectile implements GeoEntity {
     protected void doImpactSound(Holder<SoundEvent> sound) {
         level().playSound(null, getX(), getY(), getZ(), sound, SoundSource.NEUTRAL, 1.5f, 1.0f);
     }
-
 
     @Override
     protected void onHitBlock(BlockHitResult pResult) {
@@ -98,7 +114,6 @@ public class Syringe extends AbstractMagicProjectile implements GeoEntity {
 
         discard();
     }
-
 
 
     //ANIMATION

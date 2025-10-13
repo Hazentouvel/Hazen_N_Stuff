@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "hazennstuff:blocks/frostbite_birch_logs"
+    }
+  ],
+  "result": {
+    "id": "hazennstuff:frostbite_birch_planks",
+    "count": 4
+  }
+}

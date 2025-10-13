@@ -2,12 +2,12 @@ package net.hazen.hazennstuff.item.curios.Sheaths.ScrollSheath;
 
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
+import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import net.acetheeldritchking.aces_spell_utils.items.curios.SheathCurioItem;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.HnSConfig;
 import net.hazen.hazennstuff.item.dispatcher.HnSItemDispatcher;
-import net.hazen.hazennstuff.rarity.ElectricRarity;
 import net.hazen.hazennstuff.registries.HnSEffects;
 import net.hazen.hazennstuff.registries.HnSItems;
 import net.minecraft.core.Holder;
@@ -21,7 +21,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
@@ -33,7 +33,11 @@ public class ScrollSheath extends SheathCurioItem {
     public static int COOLDOWN = HnSConfig.scrollSheathCooldown * 20;
 
     public ScrollSheath() {
-        super(new Properties().stacksTo(1).rarity(ElectricRarity.ELECTRIC_RARITY_PROXY.getValue()).fireResistant(), null);
+        super(new Properties()
+                        .stacksTo(1)
+                        .rarity(Rarity.EPIC)
+                .fireResistant(),
+                null);
 
 
         this.dispatcher = new HnSItemDispatcher();
@@ -63,13 +67,21 @@ public class ScrollSheath extends SheathCurioItem {
 
                     if (victim instanceof LivingEntity livingVictim && victim != attacker)
                     {
-                        if (livingVictim.hasEffect(HnSEffects.ELECTROCUTED) || livingVictim.getTicksFrozen() > 20)
+                        if (livingVictim.hasEffect(HnSEffects.MANA_SICKNESS))
                         {
                             event.setAmount(getBaseDamage * 1.5F);
                             HazenNStuff.LOGGER.debug("Damage: " + event.getAmount());
                         }
+                        livingVictim.addEffect(new MobEffectInstance(HnSEffects.MANA_SICKNESS, 300, 0));
 
-                        livingVictim.addEffect(new MobEffectInstance(HnSEffects.ELECTROCUTED, 100, 1));
+                        var magicData = io.redspace.ironsspellbooks.api.magic.MagicData.getPlayerMagicData(player);
+                        magicData.getPlayerCooldowns().clearCooldowns();
+
+                        magicData.getPlayerCooldowns().syncToPlayer(player);
+
+                        player.displayClientMessage(
+                                net.minecraft.network.chat.Component.literal("§bAll spell cooldowns have been refreshed!"), true
+                        );
                     }
                 }
             }
@@ -85,10 +97,26 @@ public class ScrollSheath extends SheathCurioItem {
         return attr;
     }
 
+    private static final int GLIDE_ANIMATION = 0;
+
+    private void handleFlightState(Player player, ItemStack stack) {
+        if (GLIDE_ANIMATION == 0) {
+            dispatcher.flight(player, stack);
+        }
+    }
+
     @Override
-    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
-        if (!level.isClientSide && entity instanceof Player player )
-        {
+    public void curioTick(SlotContext slotContext, ItemStack stack) {
+        LivingEntity entity = slotContext.entity();
+        if (!(entity instanceof Player player) || player.level().isClientSide) return;
+
+        if (!player.level().isClientSide && player.isFallFlying()) {
+            elytraFlightTick(stack, player, 0);
+        }
+        if (player.isFallFlying()) {
+            handleFlightState(player, stack);
+            player.fallDistance = 0.0f;
+        } else {
             dispatcher.idle(player, stack);
         }
     }

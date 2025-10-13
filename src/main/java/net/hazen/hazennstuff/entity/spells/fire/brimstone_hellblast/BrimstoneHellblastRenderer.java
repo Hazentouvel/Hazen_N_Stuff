@@ -23,12 +23,6 @@ public class BrimstoneHellblastRenderer extends GeoEntityRenderer<BrimstoneHellb
     }
 
     @Override
-    public ResourceLocation getTextureLocation(BrimstoneHellblast animatable) {
-        int frame = (animatable.tickCount / 2) % 5;
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/brimstone_hellblast_" + frame + ".png");
-    }
-
-    @Override
     public void preRender(PoseStack poseStack, BrimstoneHellblast animatable, BakedGeoModel model,
                           @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer,
                           boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {

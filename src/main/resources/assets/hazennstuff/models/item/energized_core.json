@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "hazennstuff:item/energized_core_spellbook_model"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "hazennstuff:item/energized_core_spellbook_gui"
+    }
+  }
+}

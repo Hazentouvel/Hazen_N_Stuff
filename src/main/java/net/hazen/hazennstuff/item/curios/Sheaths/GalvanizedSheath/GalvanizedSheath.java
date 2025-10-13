@@ -9,6 +9,7 @@ import net.hazen.hazennstuff.item.dispatcher.HnSItemDispatcher;
 import net.hazen.hazennstuff.rarity.ElectricRarity;
 import net.hazen.hazennstuff.registries.HnSEffects;
 import net.hazen.hazennstuff.registries.HnSItems;
+import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;

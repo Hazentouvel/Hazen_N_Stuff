@@ -30,6 +30,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.ZENALITE_INGOT.get())
                 .add(HnSItems.STEEL_INGOT.get())
                 .add(HnSItems.ROSE_GOLD_INGOT.get())
+                .add(HnSItems.DREADSTEEL_INGOT.get())
+                .add(HnSItems.CHLOROPHYTE_INGOT.get())
+                .add(HnSItems.HALLOWED_INGOT.get())
+                .add(HnSItems.DEMONITE_INGOT.get())
         ;
 
         tag(Tags.Items.NUGGETS)
@@ -40,6 +44,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         tag(Tags.Items.ORES)
 
                 .add(HnSItems.RAW_ZENALITE.get())
+                .add(HnSItems.CHLOROPHYTE_CHUNK.get())
                 .add(HnSItems.DREADSTONE.get())
                 .add(HnSItems.SOLAR_CORE.get())
                 .add(HnSItems.ROSE_QUARTZ.get())
@@ -49,6 +54,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         tag(Tags.Items.RAW_MATERIALS)
 
                 .add(HnSItems.RAW_ZENALITE.get())
+                .add(HnSItems.CHLOROPHYTE_CHUNK.get())
                 .add(HnSItems.DREADSTONE.get())
                 .add(HnSItems.CRUDE_METAL.get())
 
@@ -57,12 +63,12 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         tag(Tags.Items.GEMS)
 
                 .add(HnSItems.SOLAR_CORE.get())
+                .add(HnSItems.ROSE_QUARTZ.get())
 
         ;
 
         tag(Tags.Items.GEMS_QUARTZ)
 
-                .add(HnSItems.SOLAR_CORE.get())
                 .add(HnSItems.ROSE_QUARTZ.get())
 
         ;
@@ -603,6 +609,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.FIREBRAND.get())
                 .add(HnSItems.WARFLAMING_LANCE.get())
                 .add(HnSItems.RAVENS_BANE.get())
+                .add(HnSItems.VOLCANO.get())
 
                 //Ice
                 .add(HnSItems.ICE_PIKE.get())
@@ -615,6 +622,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 //Nature
                 .add(HnSItems.BOUNTIFUL_HARVEST.get())
                 .add(HnSItems.THORN_CHAKRAM.get())
+                 .add(HnSItems.BLADE_OF_GRASS.get())
 
                 //Blood
                 .add(HnSItems.VAMPIRE_KNIVES.get())
@@ -650,6 +658,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 //Misc
                 .add(HnSItems.MAGE_BANE.get())
                 .add(HnSItems.LEGIONNAIRE_WARLOCK_AXE.get())
+                .add(HnSItems.MURAMASA.get())
+                .add(HnSItems.DAWNMAKER.get())
 
 
                 /*
@@ -1672,6 +1682,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.FIREBRAND.get())
                 .add(HnSItems.WARFLAMING_LANCE.get())
                 .add(HnSItems.RAVENS_BANE.get())
+                .add(HnSItems.VOLCANO.get())
 
                 //Ice
                 .add(HnSItems.ICE_PIKE.get())
@@ -1684,6 +1695,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 //Nature
                 .add(HnSItems.BOUNTIFUL_HARVEST.get())
                 .add(HnSItems.THORN_CHAKRAM.get())
+                 .add(HnSItems.BLADE_OF_GRASS.get())
 
                 //Blood
                 .add(HnSItems.VAMPIRE_KNIVES.get())
@@ -1719,6 +1731,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 //Misc
                 .add(HnSItems.MAGE_BANE.get())
                 .add(HnSItems.LEGIONNAIRE_WARLOCK_AXE.get())
+                .add(HnSItems.MURAMASA.get())
+                .add(HnSItems.DAWNMAKER.get())
 
                 /*
                 *** Tools
@@ -2544,7 +2558,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.ATLAS_BOOTS.get())
                 .add(HnSItems.MAVERICK_BOOTS.get())
                 .add(HnSItems.SLC_CAT_BOOTS.get())
-                .add(HnSItems.ABBERANT_PREDATOR_LEGGINGS.get())
                 .add(HnSItems.ABBERANT_PREDATOR_BOOTS.get())
                 .add(HnSItems.IRON431_BOOTS.get())
                 .add(HnSItems.ASCENDED_IRON431_BOOTS.get())
@@ -3251,7 +3264,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.ENDER_DRAGON_LEGGINGS.get())
                 .add(HnSItems.GECKOLIB_ENDER_DRAGON_LEGGINGS.get())
                 .add(HnSItems.SERAPH_LEGGINGS.get())
-                .add(HnSItems.SERAPH_LEGGINGS.get())
                 .add(HnSItems.GABRIEL_ULTRAKILL_LEGGINGS.get())
                 .add(HnSItems.GECKOLIB_GABRIEL_ULTRAKILL_LEGGINGS.get())
                 .add(HnSItems.MOTHIC_WITCH_LEGGINGS.get())
@@ -3457,6 +3469,196 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.GIORNO_GIOVANNA_BOOTS.get())
         ;
 
+
+        tag(HnSTags.PURE_HELMET)
+                .add(HnSItems.CALAMITAS_HELMET.get())
+                .add(HnSItems.BLAZEBORNE_HELMET.get())
+                .add(HnSItems.SOUL_FLAME_HELMET.get())
+                .add(HnSItems.GECKOLIB_SOUL_FLAME_HELMET.get())
+                .add(HnSItems.HAZEL_HELMET.get())
+                .add(HnSItems.CRYOGENIC_RULER_HELMET.get())
+                .add(HnSItems.CRYSTAL_ARACHNID_HELMET.get())
+                .add(HnSItems.HERTA_PUPPET_HELMET.get())
+                .add(HnSItems.CHARGED_SCOURGE_HELMET.get())
+                .add(HnSItems.THUNDER_PROWLER_HELMET.get())
+                .add(HnSItems.CREAKING_HELMET.get())
+                .add(HnSItems.FLESH_MASS_HELMET.get())
+                .add(HnSItems.THE_WITHER_HELMET.get())
+                .add(HnSItems.GECKOLIB_THE_WITHER_HELMET.get())
+                .add(HnSItems.ENDER_DRAGON_HELMET.get())
+                .add(HnSItems.GECKOLIB_ENDER_DRAGON_HELMET.get())
+                .add(HnSItems.SERAPH_HELMET.get())
+                .add(HnSItems.SERAPH_HELMET.get())
+                .add(HnSItems.GABRIEL_ULTRAKILL_HELMET.get())
+                .add(HnSItems.GECKOLIB_GABRIEL_ULTRAKILL_HELMET.get())
+                .add(HnSItems.MOTHIC_WITCH_HELMET.get())
+                .add(HnSItems.SUPREME_WITCH_HELMET.get())
+                .add(HnSItems.ALCHEMIST_SUPREME_HELMET.get())
+                .add(HnSItems.MYCELIUM_GUARDIAN_HELMET.get())
+                .add(HnSItems.SHADOW_SCALE_HELMET.get())
+                .add(HnSItems.INFESTATION_HELMET.get())
+                .add(HnSItems.GECKOLIB_INFESTATION_HELMET.get())
+                .add(HnSItems.LEGIONNAIRE_HELMET.get())
+                .add(HnSItems.LEGIONNAIRE_RULER_HELMET.get())
+                .add(HnSItems.LEGIONNAIRE_COMMANDER_HELMET.get())
+                .add(HnSItems.TYROS_HELMET.get())
+                .add(HnSItems.TYROS_SOUL_HELMET.get())
+                .add(HnSItems.FROSTBITE_HUNTER_HELMET.get())
+                .add(HnSItems.FROSTBITE_KNIGHT_HELMET.get())
+                .add(HnSItems.DREADSTEEL_KNIGHT_HELMET.get())
+                .add(HnSItems.DARK_RITUAL_TEMPLAR_HELMET.get())
+                .add(HnSItems.GECKOLIB_DARK_RITUAL_TEMPLAR_HELMET.get())
+                .add(HnSItems.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                .add(HnSItems.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                .add(HnSItems.ATLAS_HELMET.get())
+                .add(HnSItems.MAVERICK_HELMET.get())
+                .add(HnSItems.SLC_CAT_HELMET.get())
+                .add(HnSItems.ABBERANT_PREDATOR_HELMET.get())
+                .add(HnSItems.CHLOROPHYTE_HELMET.get())
+                .add(HnSItems.CHLOROPHYTE_HEADGEAR.get())
+                .add(HnSItems.CHLOROPHYTE_MASK.get())
+        ;
+
+        tag(HnSTags.PURE_CHESTPLATE)
+                .add(HnSItems.CALAMITAS_CHESTPLATE.get())
+                .add(HnSItems.BLAZEBORNE_CHESTPLATE.get())
+                .add(HnSItems.SOUL_FLAME_CHESTPLATE.get())
+                .add(HnSItems.GECKOLIB_SOUL_FLAME_CHESTPLATE.get())
+                .add(HnSItems.HAZEL_CHESTPLATE.get())
+                .add(HnSItems.HAZEL_HOLY_MOLLY_CHESTPLATE.get())
+                .add(HnSItems.CRYOGENIC_RULER_CHESTPLATE.get())
+                .add(HnSItems.CRYSTAL_ARACHNID_CHESTPLATE.get())
+                .add(HnSItems.HERTA_PUPPET_CHESTPLATE.get())
+                .add(HnSItems.CHARGED_SCOURGE_CHESTPLATE.get())
+                .add(HnSItems.THUNDER_PROWLER_CHESTPLATE.get())
+                .add(HnSItems.CREAKING_CHESTPLATE.get())
+                .add(HnSItems.FLESH_MASS_CHESTPLATE.get())
+                .add(HnSItems.FLESH_MASS_LEGGINGS.get())
+                .add(HnSItems.THE_WITHER_CHESTPLATE.get())
+                .add(HnSItems.GECKOLIB_THE_WITHER_CHESTPLATE.get())
+                .add(HnSItems.ENDER_DRAGON_CHESTPLATE.get())
+                .add(HnSItems.GECKOLIB_ENDER_DRAGON_CHESTPLATE.get())
+                .add(HnSItems.SERAPH_CHESTPLATE.get())
+                .add(HnSItems.SERAPH_CHESTPLATE.get())
+                .add(HnSItems.GABRIEL_ULTRAKILL_CHESTPLATE.get())
+                .add(HnSItems.GECKOLIB_GABRIEL_ULTRAKILL_CHESTPLATE.get())
+                .add(HnSItems.GECKOLIB_GABRIEL_ULTRAKILL_LEGGINGS.get())
+                .add(HnSItems.MOTHIC_WITCH_CHESTPLATE.get())
+                .add(HnSItems.MOTHIC_WITCH_SECRET_CHESTPLATE.get())
+                .add(HnSItems.ALCHEMIST_SUPREME_CHESTPLATE.get())
+                .add(HnSItems.MYCELIUM_GUARDIAN_CHESTPLATE.get())
+                .add(HnSItems.SHADOW_SCALE_CHESTPLATE.get())
+                .add(HnSItems.INFESTATION_CHESTPLATE.get())
+                .add(HnSItems.GECKOLIB_INFESTATION_CHESTPLATE.get())
+                .add(HnSItems.LEGIONNAIRE_CHESTPLATE.get())
+                .add(HnSItems.LEGIONNAIRE_RULER_CHESTPLATE.get())
+                .add(HnSItems.LEGIONNAIRE_COMMANDER_CHESTPLATE.get())
+                .add(HnSItems.TYROS_CHESTPLATE.get())
+                .add(HnSItems.TYROS_SOUL_CHESTPLATE.get())
+                .add(HnSItems.FROSTBITE_HUNTER_CHESTPLATE.get())
+                .add(HnSItems.FROSTBITE_KNIGHT_CHESTPLATE.get())
+                .add(HnSItems.DREADSTEEL_KNIGHT_CHESTPLATE.get())
+                .add(HnSItems.DARK_RITUAL_TEMPLAR_CHESTPLATE.get())
+                .add(HnSItems.GECKOLIB_DARK_RITUAL_TEMPLAR_CHESTPLATE.get())
+                .add(HnSItems.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItems.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItems.MAVERICK_CHESTPLATE.get())
+                .add(HnSItems.SLC_CAT_CHESTPLATE.get())
+                .add(HnSItems.ABBERANT_PREDATOR_CHESTPLATE.get())
+                .add(HnSItems.CHLOROPHYTE_CHESTPLATE.get())
+        ;
+
+        tag(HnSTags.PURE_LEGGINGS)
+                .add(HnSItems.CALAMITAS_LEGGINGS.get())
+                .add(HnSItems.BLAZEBORNE_LEGGINGS.get())
+                .add(HnSItems.SOUL_FLAME_LEGGINGS.get())
+                .add(HnSItems.GECKOLIB_SOUL_FLAME_LEGGINGS.get())
+                .add(HnSItems.HAZEL_LEGGINGS.get())
+                .add(HnSItems.CRYOGENIC_RULER_LEGGINGS.get())
+                .add(HnSItems.CRYSTAL_ARACHNID_LEGGINGS.get())
+                .add(HnSItems.HERTA_PUPPET_LEGGINGS.get())
+                .add(HnSItems.CHARGED_SCOURGE_LEGGINGS.get())
+                .add(HnSItems.THUNDER_PROWLER_LEGGINGS.get())
+                .add(HnSItems.CREAKING_LEGGINGS.get())
+                .add(HnSItems.FLESH_MASS_LEGGINGS.get())
+                .add(HnSItems.THE_WITHER_LEGGINGS.get())
+                .add(HnSItems.GECKOLIB_THE_WITHER_LEGGINGS.get())
+                .add(HnSItems.ENDER_DRAGON_LEGGINGS.get())
+                .add(HnSItems.GECKOLIB_ENDER_DRAGON_LEGGINGS.get())
+                .add(HnSItems.SERAPH_LEGGINGS.get())
+                .add(HnSItems.GABRIEL_ULTRAKILL_LEGGINGS.get())
+                .add(HnSItems.GECKOLIB_GABRIEL_ULTRAKILL_LEGGINGS.get())
+                .add(HnSItems.MOTHIC_WITCH_LEGGINGS.get())
+                .add(HnSItems.SUPREME_WITCH_LEGGINGS.get())
+                .add(HnSItems.ALCHEMIST_SUPREME_LEGGINGS.get())
+                .add(HnSItems.MYCELIUM_GUARDIAN_LEGGINGS.get())
+                .add(HnSItems.SHADOW_SCALE_LEGGINGS.get())
+                .add(HnSItems.INFESTATION_LEGGINGS.get())
+                .add(HnSItems.GECKOLIB_INFESTATION_LEGGINGS.get())
+                .add(HnSItems.LEGIONNAIRE_LEGGINGS.get())
+                .add(HnSItems.LEGIONNAIRE_RULER_LEGGINGS.get())
+                .add(HnSItems.LEGIONNAIRE_COMMANDER_LEGGINGS.get())
+                .add(HnSItems.TYROS_LEGGINGS.get())
+                .add(HnSItems.TYROS_SOUL_LEGGINGS.get())
+                .add(HnSItems.FROSTBITE_HUNTER_LEGGINGS.get())
+                .add(HnSItems.FROSTBITE_KNIGHT_LEGGINGS.get())
+                .add(HnSItems.DREADSTEEL_KNIGHT_LEGGINGS.get())
+                .add(HnSItems.DARK_RITUAL_TEMPLAR_LEGGINGS.get())
+                .add(HnSItems.GECKOLIB_DARK_RITUAL_TEMPLAR_LEGGINGS.get())
+                .add(HnSItems.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItems.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItems.MAVERICK_LEGGINGS.get())
+                .add(HnSItems.SLC_CAT_LEGGINGS.get())
+                .add(HnSItems.ABBERANT_PREDATOR_LEGGINGS.get())
+                .add(HnSItems.CHLOROPHYTE_LEGGINGS.get())
+        ;
+
+        tag(HnSTags.PURE_BOOTS)
+                .add(HnSItems.CALAMITAS_BOOTS.get())
+                .add(HnSItems.BLAZEBORNE_BOOTS.get())
+                .add(HnSItems.SOUL_FLAME_BOOTS.get())
+                .add(HnSItems.GECKOLIB_SOUL_FLAME_BOOTS.get())
+                .add(HnSItems.HAZEL_BOOTS.get())
+                .add(HnSItems.CRYOGENIC_RULER_BOOTS.get())
+                .add(HnSItems.CRYSTAL_ARACHNID_BOOTS.get())
+                .add(HnSItems.HERTA_PUPPET_BOOTS.get())
+                .add(HnSItems.CHARGED_SCOURGE_BOOTS.get())
+                .add(HnSItems.THUNDER_PROWLER_BOOTS.get())
+                .add(HnSItems.CREAKING_BOOTS.get())
+                .add(HnSItems.FLESH_MASS_BOOTS.get())
+                .add(HnSItems.THE_WITHER_BOOTS.get())
+                .add(HnSItems.GECKOLIB_THE_WITHER_BOOTS.get())
+                .add(HnSItems.ENDER_DRAGON_BOOTS.get())
+                .add(HnSItems.GECKOLIB_ENDER_DRAGON_BOOTS.get())
+                .add(HnSItems.SERAPH_BOOTS.get())
+                .add(HnSItems.SERAPH_BOOTS.get())
+                .add(HnSItems.GABRIEL_ULTRAKILL_BOOTS.get())
+                .add(HnSItems.GECKOLIB_GABRIEL_ULTRAKILL_BOOTS.get())
+                .add(HnSItems.MOTHIC_WITCH_BOOTS.get())
+                .add(HnSItems.SUPREME_WITCH_BOOTS.get())
+                .add(HnSItems.ALCHEMIST_SUPREME_BOOTS.get())
+                .add(HnSItems.MYCELIUM_GUARDIAN_BOOTS.get())
+                .add(HnSItems.SHADOW_SCALE_BOOTS.get())
+                .add(HnSItems.INFESTATION_BOOTS.get())
+                .add(HnSItems.GECKOLIB_INFESTATION_BOOTS.get())
+                .add(HnSItems.LEGIONNAIRE_RULER_BOOTS.get())
+                .add(HnSItems.LEGIONNAIRE_COMMANDER_BOOTS.get())
+                .add(HnSItems.TYROS_BOOTS.get())
+                .add(HnSItems.TYROS_SOUL_BOOTS.get())
+                .add(HnSItems.SYNTHESIZER_V_BOOTS.get())
+                .add(HnSItems.FROSTBITE_HUNTER_BOOTS.get())
+                .add(HnSItems.FROSTBITE_KNIGHT_BOOTS.get())
+                .add(HnSItems.DREADSTEEL_KNIGHT_BOOTS.get())
+                .add(HnSItems.DARK_RITUAL_TEMPLAR_BOOTS.get())
+                .add(HnSItems.GECKOLIB_DARK_RITUAL_TEMPLAR_BOOTS.get())
+                .add(HnSItems.FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
+                .add(HnSItems.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
+                .add(HnSItems.MAVERICK_BOOTS.get())
+                .add(HnSItems.SLC_CAT_BOOTS.get())
+                .add(HnSItems.CHLOROPHYTE_BOOTS.get())
+        ;
+
+
         /*
         *** Tools and Weapons Tags
          */
@@ -3479,6 +3681,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.FIREBRAND.get())
                 .add(HnSItems.WARFLAMING_LANCE.get())
                 .add(HnSItems.RAVENS_BANE.get())
+                .add(HnSItems.VOLCANO.get())
 
                 //Ice
                 .add(HnSItems.ICE_PIKE.get())
@@ -3491,6 +3694,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 //Nature
                 .add(HnSItems.BOUNTIFUL_HARVEST.get())
                 .add(HnSItems.THORN_CHAKRAM.get())
+                .add(HnSItems.BLADE_OF_GRASS.get())
 
                 //Blood
                 .add(HnSItems.VAMPIRE_KNIVES.get())
@@ -3526,6 +3730,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 //Misc
                 .add(HnSItems.MAGE_BANE.get())
                 .add(HnSItems.LEGIONNAIRE_WARLOCK_AXE.get())
+                .add(HnSItems.MURAMASA.get())
+                .add(HnSItems.DAWNMAKER.get())
         ;
 
         tag(ItemTags.PICKAXES)
@@ -3559,6 +3765,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.FIREBRAND.get())
                 .add(HnSItems.WARFLAMING_LANCE.get())
                 .add(HnSItems.RAVENS_BANE.get())
+                .add(HnSItems.BLADE_OF_GRASS.get())
+                .add(HnSItems.VOLCANO.get())
 
                 //Ice
                 .add(HnSItems.ICE_PIKE.get())
@@ -3606,6 +3814,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 //Misc
                 .add(HnSItems.MAGE_BANE.get())
                 .add(HnSItems.LEGIONNAIRE_WARLOCK_AXE.get())
+                .add(HnSItems.MURAMASA.get())
+                .add(HnSItems.DAWNMAKER.get())
         ;
 
         /*
@@ -3782,6 +3992,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.FIREBRAND.get())
                 .add(HnSItems.WARFLAMING_LANCE.get())
                 .add(HnSItems.RAVENS_BANE.get())
+                .add(HnSItems.VOLCANO.get())
 
                 //Ice
                 .add(HnSItems.ICE_PIKE.get())
@@ -3794,6 +4005,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 //Nature
                 .add(HnSItems.BOUNTIFUL_HARVEST.get())
                 .add(HnSItems.THORN_CHAKRAM.get())
+                .add(HnSItems.BLADE_OF_GRASS.get())
+
 
                 //Blood
                 .add(HnSItems.VAMPIRE_KNIVES.get())
@@ -3829,6 +4042,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 //Misc
                 .add(HnSItems.MAGE_BANE.get())
                 .add(HnSItems.LEGIONNAIRE_WARLOCK_AXE.get())
+                .add(HnSItems.MURAMASA.get())
+                .add(HnSItems.DAWNMAKER.get())
 
 
                 /*
@@ -3858,6 +4073,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItems.FIREBRAND.get())
                 .add(HnSItems.WARFLAMING_LANCE.get())
                 .add(HnSItems.RAVENS_BANE.get())
+                .add(HnSItems.VOLCANO.get())
 
                 //Ice
                 .add(HnSItems.ICE_PIKE.get())
@@ -3870,6 +4086,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 //Nature
                 .add(HnSItems.BOUNTIFUL_HARVEST.get())
                 .add(HnSItems.THORN_CHAKRAM.get())
+                .add(HnSItems.BLADE_OF_GRASS.get())
 
                 //Blood
                 .add(HnSItems.VAMPIRE_KNIVES.get())
@@ -3905,6 +4122,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 //Misc
                 .add(HnSItems.MAGE_BANE.get())
                 .add(HnSItems.LEGIONNAIRE_WARLOCK_AXE.get())
+                .add(HnSItems.MURAMASA.get())
+                .add(HnSItems.DAWNMAKER.get())
 
 
                 /*

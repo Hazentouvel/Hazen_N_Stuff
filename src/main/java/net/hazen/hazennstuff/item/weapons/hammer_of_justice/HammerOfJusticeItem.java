@@ -39,7 +39,7 @@ public class HammerOfJusticeItem extends MagicSwordItem {
                         .equipment(1)
                         .fireResistant()
                         .rarity(DivineRarity.DIVINE_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.ICE_PIKE)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.HAMMER_OF_JUSTICE)
                         ),
                 SpellDataRegistryHolder.of(
                         new SpellDataRegistryHolder(SpellRegistry.DIVINE_SMITE_SPELL, 10)

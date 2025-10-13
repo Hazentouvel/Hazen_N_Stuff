@@ -6,13 +6,14 @@ import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.item.armor.Geckolib.HnSGeckolibArmorItem;
+import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
-public class MageHunterArmorItem extends HnSGeckolibArmorItem implements IDisableJacket, IDisableHat {
+public class MageHunterArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public MageHunterArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.MAGEHUNTER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.SPELL_RESIST, .125, AttributeModifier.Operation.ADD_VALUE),

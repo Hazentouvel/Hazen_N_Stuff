@@ -45,8 +45,6 @@ public class AbberantPredatorArmorItem extends ImbuableGeckolibHnSArmorItem impl
         return attributes.build().modifiers();
     }
 
-    // Just supply the armor model here; you don't have to worry about making a new renderer
-    // ISS already has a custom renderer used for armor models
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
@@ -61,8 +59,8 @@ public class AbberantPredatorArmorItem extends ImbuableGeckolibHnSArmorItem impl
     }
 
     private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.PURE_ARMOR_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.PURE_ARMOR_SET_BONUS, 200, 0, false, false, false));
+        if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 320, 0, false, false, false));
         }
     }
 

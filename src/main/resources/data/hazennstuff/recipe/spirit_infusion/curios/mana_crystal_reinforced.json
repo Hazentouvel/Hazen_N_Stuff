@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "malum"
+    }
+  ],
+  "type": "malum:spirit_infusion",
+  "carryOverComponentData": true,
+  "extraIngredients": [
+    {
+      "count": 4,
+      "item": "hazennstuff:zenalite_ingot"
+    },
+    {
+      "count": 1,
+      "item": "irons_spellbooks:mana_upgrade_orb"
+    },
+    {
+      "count": 2,
+      "item": "irons_spellbooks:mithril_ingot"
+    },
+    {
+      "count": 1,
+      "item": "hazennstuff:pyrium_nugget"
+    }
+  ],
+  "ingredient": {
+    "count": 1,
+    "item": "hazennstuff:refined"
+  },
+  "output": {
+    "count": 1,
+    "id": "hazennstuff:reinforced"
+  },
+  "spirits": [
+    {
+      "type": "arcane",
+      "count": 12
+    },
+    {
+      "type": "sacred",
+      "count": 4
+    }
+  ]
+}

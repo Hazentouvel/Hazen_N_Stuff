@@ -33,7 +33,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
-public class TheDevourerItem extends MagicSwordItem implements GeoItem {
+public class TheDevourerItem extends ExtendedSwordItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public TheDevourerItem() {
@@ -44,9 +44,7 @@ public class TheDevourerItem extends MagicSwordItem implements GeoItem {
                         .fireResistant()
                         .rarity(EldritchRarity.ELDRITCH_RARITY_PROXY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.THE_DEVOURER)
-                        ),
-                SpellDataRegistryHolder.of(
-                )
+                        )
         );
     }
 

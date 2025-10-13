@@ -9,6 +9,7 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.spells.ender.TeleportSpell;
+import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.registries.HnSEffects;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
@@ -87,7 +88,7 @@ public class CinderousStepSpell extends AbstractSpell {
         Vec3 forward = entity.getForward().normalize();
         for (int i = 0; i < 35; i++) {
             Vec3 motion = forward.scale(Utils.random.nextDouble() * .25f);
-            level.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, entity.getRandomX(.4f), entity.getRandomY(), entity.getRandomZ(.4f), motion.x, motion.y, motion.z);
+            level.addParticle(ParticleHelper.FIERY_SMOKE, entity.getRandomX(.4f), entity.getRandomY(), entity.getRandomZ(.4f), motion.x, motion.y, motion.z);
         }
     }
 

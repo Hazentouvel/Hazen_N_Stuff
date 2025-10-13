@@ -11,7 +11,7 @@
   "bonusParameters": {
     "irons_jewelry:attribute": {
       "attribute": "minecraft:generic.attack_damage",
-      "amount": 0.025,
+      "amount": 0.5,
       "operation": "add_value"
     }
   }

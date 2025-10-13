@@ -7,8 +7,8 @@
 				"texture_width": 256,
 				"texture_height": 256,
 				"visible_bounds_width": 7,
-				"visible_bounds_height": 4.5,
-				"visible_bounds_offset": [0, 1.75, 0]
+				"visible_bounds_height": 6,
+				"visible_bounds_offset": [0, 2, 0]
 			},
 			"bones": [
 				{
@@ -46,6 +46,15 @@
 						{"origin": [-16.5, 27.5, 0], "size": [33, 37, 0], "pivot": [0, 43.5, 0], "rotation": [0, -12.5, 0], "uv": [66, 0]},
 						{"origin": [-1, 50, -1], "size": [2, 2, 2], "uv": [74, 78]},
 						{"origin": [-1.5, 52, -1.5], "size": [3, 2, 3], "pivot": [0, 53, 0], "rotation": [0, 45, 0], "uv": [74, 59]}
+					]
+				},
+				{
+					"name": "feathers",
+					"parent": "blade",
+					"pivot": [-1, -11, 0],
+					"cubes": [
+						{"origin": [-9, 51, -1.5], "size": [8, 12, 0], "pivot": [-1, 51, -1.5], "rotation": [0, -17.5, -40], "uv": [20, 37]},
+						{"origin": [-9.25, 50, -1.5], "size": [10, 16, 0], "pivot": [-3.25, 50, -1.5], "rotation": [0, 0, -12.5], "uv": [0, 37]}
 					]
 				}
 			]

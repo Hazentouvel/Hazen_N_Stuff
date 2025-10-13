@@ -99,9 +99,6 @@ public class CrystalVolley extends AbstractMagicProjectile {
         if (!level().isClientSide && !hasEmittedPoison) {
             createIceCloud(pResult.getLocation());
         }
-
-        //IronsSpellbooks.LOGGER.debug("Poison Arrow onHitBlock: {}", inGround);
-
     }
 
     @Override

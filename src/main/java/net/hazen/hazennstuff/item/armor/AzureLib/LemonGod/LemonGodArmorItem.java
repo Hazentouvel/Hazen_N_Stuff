@@ -28,8 +28,8 @@ public class LemonGodArmorItem extends ImbuableHnSArmorItem implements IDisableJ
     public LemonGodArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .2, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE)
+                new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
         // Create the instance of the class here to use later.
         this.dispatcher = new HnSArmorDispatcher();

@@ -33,7 +33,7 @@ public class GeckolibArbitriumRobesElytraItem extends ImbuableChestplateArmorIte
         super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 500.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(ALObjects.Attributes.ELYTRA_FLIGHT, 1, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, .25, AttributeModifier.Operation.ADD_VALUE)
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, .25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
     }
 

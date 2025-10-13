@@ -30,10 +30,10 @@ public class FrostbiteHunterArmorItem extends ImbuableGeckolibHnSArmorItem imple
         // Add in your armor tier + additional attributes for your item
         super(HnSArmorMaterials.HUNTER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 100.0, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.ICE_SPELL_POWER, .1, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(ALObjects.Attributes.ARROW_DAMAGE, .1, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(ALObjects.Attributes.ARROW_VELOCITY, .1, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.ICE_SPELL_POWER, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(ALObjects.Attributes.ARROW_DAMAGE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(ALObjects.Attributes.ARROW_VELOCITY, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(Attributes.MOVEMENT_SPEED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
         );
     }

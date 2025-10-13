@@ -16,9 +16,9 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 public class MageHunterArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public MageHunterArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.MAGEHUNTER_MATERIAL, type, settings,
-                new AttributeContainer(AttributeRegistry.SPELL_RESIST, .125, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, -.2, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.COOLDOWN_REDUCTION, -.1, AttributeModifier.Operation.ADD_VALUE)
+                new AttributeContainer(AttributeRegistry.SPELL_RESIST, .125, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, -.2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.COOLDOWN_REDUCTION, -.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
     }
 

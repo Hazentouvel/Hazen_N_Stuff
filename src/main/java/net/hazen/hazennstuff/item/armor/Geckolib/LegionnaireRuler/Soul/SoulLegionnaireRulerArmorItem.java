@@ -26,9 +26,9 @@ import java.util.List;
 public class SoulLegionnaireRulerArmorItem extends ImbuableGeckolibHnSArmorItem {
     public SoulLegionnaireRulerArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.LEGIONNAIRE_MATERIAL, type, settings,
-                new AttributeContainer(AttributeRegistry.SUMMON_DAMAGE, .1, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, .1, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, .1, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.SUMMON_DAMAGE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(Attributes.MAX_HEALTH, 1.25, AttributeModifier.Operation.ADD_VALUE)
         );
     }

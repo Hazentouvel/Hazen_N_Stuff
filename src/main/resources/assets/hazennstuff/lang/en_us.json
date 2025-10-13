@@ -792,10 +792,10 @@
   "school.hazennstuff.shadow": "Shadow",
 
   "attribute.hazennstuff.radiance_spell_power": "Radiance Spell Power",
-  "attribute.hazennstuff.radiance_spell_resist": "Radiance Spell Power",
+  "attribute.hazennstuff.radiance_magic_resist": "Radiance Magic Resistance",
 
   "attribute.hazennstuff.shadow_spell_power": "Shadow Spell Power",
-  "attribute.hazennstuff.shadow_spell_resist": "Shadow Spell Power",
+  "attribute.hazennstuff.shadow_magic_resist": "Shadow Magic Resistance",
 
   "material.hazennstuff.chlorophyte": "Chlorophyte",
   "material.hazennstuff.demonite": "Demonite",

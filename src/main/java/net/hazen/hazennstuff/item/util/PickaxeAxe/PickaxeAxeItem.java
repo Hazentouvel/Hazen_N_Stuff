@@ -44,10 +44,10 @@ public class PickaxeAxeItem extends ExtendedSwordItem implements GeoItem {
     @Override
     public float getDestroySpeed(ItemStack stack, BlockState state) {
         if (state.is(BlockTags.MINEABLE_WITH_PICKAXE)) {
-            return HnSExtendedWeaponsTiers.MITHRIL.getSpeed();
+            return HnSToolTiers.MITHRIL.getSpeed();
         }
         else if (state.is(BlockTags.MINEABLE_WITH_AXE)) {
-            return HnSExtendedWeaponsTiers.MITHRIL.getSpeed();
+            return HnSToolTiers.MITHRIL.getSpeed();
         }
         return 1.0F;
     }

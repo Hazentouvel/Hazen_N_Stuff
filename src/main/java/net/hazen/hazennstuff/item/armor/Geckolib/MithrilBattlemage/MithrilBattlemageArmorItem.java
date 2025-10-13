@@ -49,24 +49,4 @@ public class MithrilBattlemageArmorItem extends ImbuableGeckolibHnSArmorItem imp
     public GeoArmorRenderer<?> supplyRenderer() {
         return new GenericCustomArmorRenderer<>(new MithrilBattlemageArmorModel());
     }
-
-    @Override
-    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
-        if (entity instanceof Player player && !level.isClientSide() && isWearingFullSet(player)) {
-            evaluateArmorEffects(player);
-        }
-    }
-
-    private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.TYRANTS_GRACE_EFFECT)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.TYRANTS_GRACE_EFFECT, 200, 0, false, false, true));
-        }
-    }
-
-    private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof MithrilBattlemageArmorItem &&
-                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof MithrilBattlemageArmorItem &&
-                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof MithrilBattlemageArmorItem &&
-                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof MithrilBattlemageArmorItem;
-    }
 }

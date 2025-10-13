@@ -38,7 +38,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("RRR")
                 .pattern("ROR")
                 .pattern("RRR")
-                .define('R', HnSTags.RADIANCE_FOCUS)
+                .define('R', HnSItems.RADIANCE_RUNE.get())
                 .define('O', ItemRegistry.UPGRADE_ORB.get())
                 .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/radiance_upgrade_orb"));
@@ -47,7 +47,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("RRR")
                 .pattern("ROR")
                 .pattern("RRR")
-                .define('R', HnSTags.SHADOW_FOCUS)
+                .define('R', HnSItems.SHADOW_RUNE.get())
                 .define('O', ItemRegistry.UPGRADE_ORB.get())
                 .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/shadow_upgrade_orb"));
@@ -56,7 +56,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("RRR")
                 .pattern("ROR")
                 .pattern("RRR")
-                .define('R', HnSTags.MELEE_FOCUS)
+                .define('R', HnSItems.MELEE_RUNE.get())
                 .define('O', ItemRegistry.UPGRADE_ORB.get())
                 .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/melee_upgrade_orb"));
@@ -65,7 +65,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("RRR")
                 .pattern("ROR")
                 .pattern("RRR")
-                .define('R', HnSTags.HEALTH_FOCUS)
+                .define('R', HnSItems.HEALTH_RUNE.get())
                 .define('O', ItemRegistry.UPGRADE_ORB.get())
                 .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/health_upgrade_orb"));
@@ -74,7 +74,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("RRR")
                 .pattern("ROR")
                 .pattern("RRR")
-                .define('R', HnSTags.ARCHERY_FOCUS)
+                .define('R', HnSItems.ARCHERY_RUNE.get())
                 .define('O', ItemRegistry.UPGRADE_ORB.get())
                 .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/archery_upgrade_orb"));
@@ -126,11 +126,31 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_blank_rune", has(ItemRegistry.BLANK_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/runes/archery_rune"));
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItems.ELDRITCH_RUNE.get())
+                .pattern("RRR")
+                .pattern("ROR")
+                .pattern("RRR")
+                .define('R', ModTags.ELDRITCH_FOCUS)
+                .define('O', ItemRegistry.BLANK_RUNE.get())
+                .unlockedBy("has_blank_rune", has(ItemRegistry.BLANK_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/runes/eldritch_rune"));
+
 
 
         /*
          *** Materials
          */
+
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemRegistry.BLANK_RUNE.get())
+                .pattern("FBF")
+                .pattern("FAF")
+                .pattern("FFF")
+                .define('F', HnSItems.RUNESTONE_FRAGMENTS.get())
+                .define('A', ItemRegistry.ARCANE_INGOT.get())
+                .define('B', ItemRegistry.BLANK_RUNE.get())
+                .unlockedBy("has_runestone_fragments", has(HnSItems.RUNESTONE_FRAGMENTS.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/blank_rune"));
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItems.DREADSTEEL_INGOT.get())
@@ -179,7 +199,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_rose_quartz", has(HnSItems.ROSE_QUARTZ.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/rose_gold_ingot"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItems.STEEL_NUGGET.get(), 18)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItems.STEEL_NUGGET.get(), 9)
                 .requires(HnSItems.STEEL_INGOT)
                 .unlockedBy("has_steel",
                         has(HnSItems.STEEL_INGOT))
@@ -190,7 +210,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
-                .define('S', HnSItems.STEEL_INGOT.get())
+                .define('S', HnSItems.STEEL_NUGGET.get())
                 .unlockedBy("has_steel", has(HnSItems.STEEL_NUGGET.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/steel_ingot"));
 
@@ -203,7 +223,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_mithril_weave", has(ItemRegistry.MITHRIL_WEAVE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/storm_weave"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItems.STORM_WEAVE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItems.VOLT_CORE.get())
                 .pattern("LLL")
                 .pattern("LML")
                 .pattern("LLL")
@@ -213,7 +233,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/volt_core"));
 
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItems.GLOWING_MUSHROOM.get(), 18)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItems.GLOWING_MUSHROOM.get(), 2)
                 .requires(Tags.Items.MUSHROOMS)
                 .requires(HnSItems.PRISMATIC_SHARD)
                 .unlockedBy("has_mushrooms",
@@ -221,7 +241,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/glowing_mushroom")
                 );
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItems.PRISMATIC_SHARD.get(), 18)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItems.PRISMATIC_SHARD.get(), 2)
                 .requires(Tags.Items.GLASS_BLOCKS)
                 .requires(Items.GLOW_INK_SAC)
                 .unlockedBy("has_glass",
@@ -229,7 +249,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/prismatic_shard")
                 );
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItems.PRISMATIC_SHARD.get(), 18)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItems.DIVINE_LEMON.get(), 1)
                 .requires(HnSItems.LEMON)
                 .requires(HnSItems.DEUS_ESSENCE)
                 .unlockedBy("has_lemon",
@@ -237,7 +257,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/divine_lemon")
                 );
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItems.PRISMATIC_SHARD.get(), 18)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItems.LEMON.get(), 1)
                 .requires(Tags.Items.FOODS_FRUIT)
                 .requires(ModTags.NATURE_FOCUS)
                 .unlockedBy("has_fruit",
@@ -245,7 +265,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/lemon")
                 );
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItems.ROSE_QUARTZ.get(), 18)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItems.ROSE_QUARTZ.get(), 2)
                 .requires(Tags.Items.GEMS_QUARTZ)
                 .requires(ItemRegistry.DIVINE_PEARL.get())
                 .unlockedBy("has_quartz",
@@ -463,7 +483,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_excalibur_fragment", has(HnSItems.EXCALIBUR_FRAGMENT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/weapons/the_devourer"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItems.THE_DEVOURER.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItems.DAWNMAKER.get(), 1)
                 .pattern(" HE")
                 .pattern(" FH")
                 .pattern("W  ")
@@ -489,7 +509,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
          *** Staves
          */
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItems.MAGE_BANE.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItems.WHITE_LILY_STAFF.get(), 1)
                 .pattern(" L ")
                 .pattern("RGR")
                 .pattern(" C ")
@@ -563,7 +583,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Wings
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItems.SCROLL_SHEATH.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItems.ARBITRIUM_WINGS.get(), 1)
                 .pattern("FWD")
                 .pattern("AFW")
                 .pattern(" EA")

@@ -1,25 +1,31 @@
 package net.hazen.hazennstuff.item.armor.Geckolib.Calamitas;
 
+import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
+import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.compat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.registries.HnSEffects;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import java.util.List;
@@ -53,9 +59,10 @@ public class CalamitasArmorItem extends ImbuableGeckolibHnSArmorItem implements 
 
     private void evaluateArmorEffects(Player player) {
         if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 200, 0, false, false, false));
+            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 320, 0, false, false, false));
         }
     }
+
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {

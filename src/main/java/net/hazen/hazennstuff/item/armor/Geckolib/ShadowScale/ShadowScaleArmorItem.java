@@ -30,7 +30,7 @@ import java.util.List;
 public class ShadowScaleArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public ShadowScaleArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
-        super(HnSArmorMaterials.BATTLEMAGE_MATERIAL, type, settings,
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(HnSAttributeRegistry.SHADOW_MAGIC_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(ALObjects.Attributes.CRIT_CHANCE, .05, AttributeModifier.Operation.ADD_VALUE),
@@ -64,10 +64,10 @@ public class ShadowScaleArmorItem extends ImbuableGeckolibHnSArmorItem implement
 
     private void evaluateArmorEffects(Player player) {
         if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 40, 0, false, false, false));
+            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 320, 0, false, false, false));
         }
         if (!player.hasEffect(MobEffects.MOVEMENT_SPEED)) {
-            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0, false, false, false));
+            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 320, 0, false, false, false));
         }
     }
 

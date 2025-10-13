@@ -80,6 +80,16 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 2, AttributeModifier.Operation.ADD_VALUE)
     );
 
+    public static HnSExtendedWeaponsTiers VOLCANO = new HnSExtendedWeaponsTiers(
+            8064,
+            9,
+            -3F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
     public static HnSExtendedWeaponsTiers FIREBLOSSOM_RAPIER = new HnSExtendedWeaponsTiers(
             8064,
             8,
@@ -243,6 +253,16 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
+    public static HnSExtendedWeaponsTiers BLADE_OF_GRASS = new HnSExtendedWeaponsTiers(
+            8064,
+            8,
+            -1.7F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
     /*
@@ -446,6 +466,27 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(AttributeRegistry.SPELL_RESIST, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ASAttributeRegistry.MANA_REND, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ASAttributeRegistry.SPELL_RES_PENETRATION, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
+    public static HnSExtendedWeaponsTiers DAWNMAKER = new HnSExtendedWeaponsTiers(
+            8064,
+            7,
+            -2.4F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.SPELL_RESIST, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ASAttributeRegistry.MANA_REND, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
+    public static HnSExtendedWeaponsTiers MURAMASA = new HnSExtendedWeaponsTiers(
+            8064,
+            6,
+            -3F,
+            10,
+            BlockTags.INCORRECT_FOR_DIAMOND_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .05, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
     //private final int level;

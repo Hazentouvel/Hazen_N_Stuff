@@ -208,7 +208,7 @@ public class HnSArmorMaterials {
             0.1F);
 
     /*
-     *** Melee Armor Sets
+     *** Archer Armor Sets
      */
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> ARCHER_MATERIAL = register("archer",

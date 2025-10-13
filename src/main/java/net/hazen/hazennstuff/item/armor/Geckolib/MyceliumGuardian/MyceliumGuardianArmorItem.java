@@ -30,9 +30,9 @@ public class MyceliumGuardianArmorItem extends ImbuableGeckolibHnSArmorItem impl
         // Add in your armor tier + additional attributes for your item
         super(HnSArmorMaterials.DARK_RITUAL_TEMPLAR_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(HnSAttributeRegistry.RADIANCE_MAGIC_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(HnSAttributeRegistry.RADIANCE_MAGIC_POWER, .15, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE)
         );
     }
 
@@ -62,7 +62,7 @@ public class MyceliumGuardianArmorItem extends ImbuableGeckolibHnSArmorItem impl
 
     private void evaluateArmorEffects(Player player) {
         if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 200, 0, false, false, false));
+            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 320, 0, false, false, false));
         }
     }
 

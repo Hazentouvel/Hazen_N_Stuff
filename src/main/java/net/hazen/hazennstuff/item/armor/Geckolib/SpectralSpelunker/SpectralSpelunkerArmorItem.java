@@ -48,7 +48,7 @@ public class SpectralSpelunkerArmorItem extends ImbuableGeckolibHnSArmorItem imp
 
     private void evaluateArmorEffects(Player player) {
         if (!player.hasEffect(MobEffects.NIGHT_VISION)) {
-            player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 200, 0, false, false, false));
+            player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 320, 0, false, false, false));
         }
     }
 

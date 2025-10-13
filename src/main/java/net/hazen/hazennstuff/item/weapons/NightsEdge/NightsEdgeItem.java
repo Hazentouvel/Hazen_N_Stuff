@@ -8,23 +8,29 @@ import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.item.weapons.vampire_knives.VampireKnivesItem;
 import net.hazen.hazennstuff.rarity.ShadowRarity;
 import net.hazen.hazennstuff.spells.HnSSpellRegistries;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
@@ -83,6 +89,25 @@ public class NightsEdgeItem extends MagicSwordItem implements GeoItem {
                 return this.renderer;
             }
         });
+    }
+
+    @Override
+    public void appendHoverText(@NotNull ItemStack stack,
+                                @NotNull TooltipContext context,
+                                @NotNull List<Component> lines,
+                                @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, lines, flag);
+
+        // --- Affinity tooltip section ---
+        var affinityData = AffinityData.getAffinityData(stack);
+        if (!affinityData.affinityData().isEmpty()) {
+            int i = TooltipsUtils.indexOfComponent(lines, "tooltip.hazennstuff.spellbook_spell_count");
+            lines.addAll(i < 0 ? lines.size() : i + 1, affinityData.getDescriptionComponent());
+        }
+
+        // --- Custom item description section ---
+        lines.add(Component.translatable("item.hazennstuff.nights_edge.description")
+                .withStyle(ChatFormatting.DARK_PURPLE, ChatFormatting.ITALIC));
     }
 
     @Override

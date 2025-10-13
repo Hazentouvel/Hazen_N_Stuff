@@ -55,7 +55,10 @@ public class PermafrostPrinceArmorItem extends ImbuableGeckolibHnSArmorItem impl
 
     private void evaluateArmorEffects(Player player) {
         if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 400, 0, false, false, false));
+            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 320, 0, false, false, false));
+        }
+        if (!player.hasEffect(HnSEffects.ARCHER_SET_BONUS)) {
+            player.addEffect(new MobEffectInstance(HnSEffects.ARCHER_SET_BONUS, 320, 0, false, false, false));
         }
     }
 

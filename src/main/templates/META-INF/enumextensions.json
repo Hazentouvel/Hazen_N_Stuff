@@ -118,16 +118,6 @@
         "class": "net/hazen/hazennstuff/rarity/RadianceRarity",
         "field": "RADIANCE_RARITY_PROXY"
       }
-    },
-
-    {
-      "enum": "net/minecraft/world/item/Rarity",
-      "name": "HAZENNSTUFF_RARITY_TECHNOLOGICAL",
-      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
-      "parameters": {
-        "class": "net/hazen/hazennstuff/rarity/TechnologicalRarity",
-        "field": "TECHNOLOGICAL_RARITY_PROXY"
-      }
     }
 
   ]

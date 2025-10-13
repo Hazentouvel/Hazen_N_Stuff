@@ -18,12 +18,12 @@ public class DawnmakerItem extends ExtendedSwordItem implements GeoItem {
 
     public DawnmakerItem() {
         super(
-                HnSExtendedWeaponsTiers.MEOWMERE,
+                HnSExtendedWeaponsTiers.DAWNMAKER,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(RadianceRarity.RADIANCE_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.MEOWMERE)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.DAWNMAKER)
                         )
         );
     }

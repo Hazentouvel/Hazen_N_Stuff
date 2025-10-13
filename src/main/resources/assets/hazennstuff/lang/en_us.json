@@ -22,6 +22,7 @@
   "item.hazennstuff.dreadsteel_ingot": "Dreadsteel Ingot",
   "item.hazennstuff.hallowed_ingot": "Hallowed Ingot",
   "item.hazennstuff.demonite_ingot": "Demonite Ingot",
+  "item.hazennstuff.steel_ingot": "Steel Ingot",
 
   "item.hazennstuff.raw_zenalite": "Raw Zenalite",
   "item.hazennstuff.raw_zenalite.guide": "It lies dormant... the touch of a god or the warmth of a star may awaken this mineral...",
@@ -56,6 +57,7 @@
   "item.hazennstuff.health_upgrade_orb": "Health Upgrade Orb",
 
   "item.hazennstuff.radiance_rune": "Radiance Rune",
+  "item.hazennstuff.eldritch_rune": "Eldritch Rune",
   "item.hazennstuff.shadow_rune": "Shadow Rune",
   "item.hazennstuff.melee_rune": "Melee Rune",
   "item.hazennstuff.archery_rune": "Archery Rune",
@@ -179,7 +181,9 @@
   "item.hazennstuff.firebrand": "Firebrand",
   "item.hazennstuff.draconic_splitter": "Draconic Splitter",
   "item.hazennstuff.ravens_bane": "Raven's Bane",
+  "item.hazennstuff.ravens_bane.description": "Bare the weapon of a great infernal mage. This weapon resonates well with the scroll-forge...",
   "item.hazennstuff.volcano": "Volcano",
+  "item.hazennstuff.war_flaming_lance": "Volcano",
 
   "item.hazennstuff.ice_pike": "Ice Pike",
   "item.hazennstuff.frostburn_dagger": "Frostburn Dagger",
@@ -189,9 +193,10 @@
 
   "item.hazennstuff.bountiful_harvest": "Bountiful Harvest",
   "item.hazennstuff.thorn_chakram": "Thorn Chakram",
-  "item.hazennstuff.blade_of_grass": "Thorn Chakram",
+  "item.hazennstuff.blade_of_grass": "Blade of Grass",
 
   "item.hazennstuff.vampire_knives": "Vampire Knives",
+  "item.hazennstuff.vampire_knives.description": "Right-Click to throw knives.",
 
   "item.hazennstuff.starfury": "Starfury",
   "item.hazennstuff.obsidian_claymore": "Obsidian Claymore",
@@ -211,7 +216,9 @@
 
   "item.hazennstuff.lights_bane": "Light's Bane",
   "item.hazennstuff.nights_edge": "Night's Edge",
+  "item.hazennstuff.nights_edge.description": "Dawn the power of the Night's Edge. This weapon resonates well with the scroll-forge...",
   "item.hazennstuff.true_nights_edge": "True Night's Edge",
+  "item.hazennstuff.true_nights_edge.description": "Unleash the power of the True Night's Edge. This weapon resonates well with the scroll-forge...",
 
   "item.hazennstuff.the_devourer": "The Devourer",
 
@@ -408,9 +415,13 @@
   "item.hazennstuff.spectral_spelunker_boots": "Spectral Spelunker Boots",
 
   "item.hazennstuff.calamitas_helmet": "Calamitas Hair",
+  "item.hazennstuff.calamitas_helmet.description": "This gear resonates well with the scroll-forge...",
   "item.hazennstuff.calamitas_chestplate": "Calamitas Robes",
+  "item.hazennstuff.calamitas_chestplate.description": "This gear resonates well with the scroll-forge...",
   "item.hazennstuff.calamitas_leggings": "Calamitas Leggings",
+  "item.hazennstuff.calamitas_leggings.description": "This gear resonates well with the scroll-forge...",
   "item.hazennstuff.calamitas_boots": "Calamitas Boots",
+  "item.hazennstuff.calamitas_boots.description": "This gear resonates well with the scroll-forge...",
 
 
   "item.hazennstuff.maverick_helmet": "Maverick Hair",
@@ -711,6 +722,7 @@
   "spell.hazennstuff.death_sentence": "Death Sentence",
 
   "spell.hazennstuff.golden_shower": "Golden Shower",
+  "spell.hazennstuff.golden_shower.description": "This spellbook resonates well with the scroll-forge...",
 
   "spell.hazennstuff.spectral_axe": "Spectral Axe",
 

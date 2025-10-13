@@ -4,7 +4,7 @@
     "item": "minecraft:echo_shard"
   },
   "base": {
-    "tag": "hazennstuff:armors/tiers/pure/pure_boots"
+    "tag": "hazennstuff:armors/pure_armor/pure_boots"
   },
   "result": {
     "count": 1,

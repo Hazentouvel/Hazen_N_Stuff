@@ -23,7 +23,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 public class LegionnaireCommanderArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public LegionnaireCommanderArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
-        super(HnSArmorMaterials.HUNTER_MATERIAL, type, settings,
+        super(HnSArmorMaterials.LEGIONNAIRE_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 100.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, .1, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(ALObjects.Attributes.FIRE_DAMAGE, 2, AttributeModifier.Operation.ADD_VALUE),

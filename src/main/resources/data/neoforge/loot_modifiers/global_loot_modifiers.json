@@ -9,6 +9,9 @@
     "hazennstuff:entity_drops/endermen_modifiers",
     "hazennstuff:entity_drops/phantom_modifiers",
     "hazennstuff:entity_drops/tyros_modifiers",
-    "hazennstuff:entity_drops/dead_king_modifiers"
+    "hazennstuff:entity_drops/dead_king_modifiers",
+
+
+    "hazennstuff:chests/catacombs_modifiers"
   ]
 }

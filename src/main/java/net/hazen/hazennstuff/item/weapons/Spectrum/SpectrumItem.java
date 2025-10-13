@@ -6,7 +6,12 @@ import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.RadianceRarity;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.TextColor;
+import net.minecraft.world.item.ItemStack;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -28,6 +33,32 @@ public class SpectrumItem extends ExtendedSwordItem implements GeoItem {
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.SPECTRUM)
                         )
         );
+    }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        String baseName = super.getName(stack).getString();
+
+        MutableComponent rainbowName = Component.literal("");
+
+        Minecraft mc = Minecraft.getInstance();
+        long ticks = (mc.level != null) ? mc.level.getGameTime() : 0;
+
+        for (int i = 0; i < baseName.length(); i++) {
+            float hue = ((i * 40) + (ticks * 2.25f)) % 360 / 360f;
+
+            int rgb = java.awt.Color.HSBtoRGB(hue, 1f, 1f);
+            String hex = String.format("#%06X", (0xFFFFFF & rgb));
+
+            TextColor color = TextColor.parseColor(hex).getOrThrow();
+
+            rainbowName = rainbowName.append(
+                    Component.literal(String.valueOf(baseName.charAt(i)))
+                            .withStyle(style -> style.withColor(color))
+            );
+        }
+
+        return rainbowName;
     }
 
     @Override

@@ -75,7 +75,7 @@ public class HnSBlockStateProvider extends BlockStateProvider {
 
         logBlock(((RotatedPillarBlock) HnSBlocks.STRIPPED_FROSTBITE_BIRCH_LOG.get()));
         axisBlock(((RotatedPillarBlock) HnSBlocks.STRIPPED_FROSTBITE_BIRCH_WOOD.get()),
-                blockTexture(HnSBlocks.FROSTBITE_BIRCH_LOG.get()), blockTexture(HnSBlocks.FROSTBITE_BIRCH_LOG.get()
+                blockTexture(HnSBlocks.STRIPPED_FROSTBITE_BIRCH_LOG.get()), blockTexture(HnSBlocks.STRIPPED_FROSTBITE_BIRCH_LOG.get()
                 ));
 
         blockItem(HnSBlocks.FROSTBITE_BIRCH_LOG);

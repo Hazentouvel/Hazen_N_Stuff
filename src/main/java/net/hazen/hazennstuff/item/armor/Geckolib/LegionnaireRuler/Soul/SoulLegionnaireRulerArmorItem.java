@@ -57,7 +57,7 @@ public class SoulLegionnaireRulerArmorItem extends ImbuableGeckolibHnSArmorItem 
 
     private void evaluateArmorEffects(Player player) {
         if (!player.hasEffect(HnSEffects.TYRANTS_GRACE_EFFECT)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.TYRANTS_GRACE_EFFECT, 200, 0, false, false, true));
+            player.addEffect(new MobEffectInstance(HnSEffects.TYRANTS_GRACE_EFFECT, 320, 0, false, false, true));
         }
     }
 

@@ -27,7 +27,7 @@ public class BlazeborneArmorItem extends ImbuableHnSArmorItem implements IDisabl
     public final HnSArmorDispatcher dispatcher;
 
     public BlazeborneArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.SERAPH_MATERIAL, type, settings,
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.ELDRITCH_SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
@@ -69,7 +69,7 @@ public class BlazeborneArmorItem extends ImbuableHnSArmorItem implements IDisabl
 
     private void evaluateArmorEffects(Player player) {
         if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 200, 0, false, false, false));
+            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 320, 0, false, false, false));
         }
     }
 

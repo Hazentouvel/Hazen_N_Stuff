@@ -10,6 +10,7 @@ import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.item.util.HnSToolTiers;
 import net.hazen.hazennstuff.item.weapons.Excalibur.HazenStyle.HazensExcaliburItem;
 import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
@@ -47,7 +48,7 @@ public class SpectralPickaxeItem extends MagicSwordItem implements GeoItem {
                         .fireResistant()
                         .rarity(Rarity.EPIC)
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.DIVINE_GREATSWORD))
-                        .component(DataComponents.TOOL, Tiers.NETHERITE.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE)),
+                        .component(DataComponents.TOOL, HnSToolTiers.MITHRIL.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE)),
                 SpellDataRegistryHolder.of(
                         new SpellDataRegistryHolder(SpellRegistry.SPECTRAL_HAMMER_SPELL, 3))
 
@@ -62,7 +63,7 @@ public class SpectralPickaxeItem extends MagicSwordItem implements GeoItem {
     @Override
     public float getDestroySpeed(ItemStack stack, BlockState state) {
         if (state.is(BlockTags.MINEABLE_WITH_PICKAXE)) {
-            return HnSExtendedWeaponsTiers.MITHRIL.getSpeed();
+            return HnSToolTiers.MITHRIL.getSpeed();
         }
         return 1.0F;
     }

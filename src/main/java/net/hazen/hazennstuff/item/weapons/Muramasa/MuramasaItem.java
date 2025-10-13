@@ -18,12 +18,12 @@ public class MuramasaItem extends ExtendedSwordItem implements GeoItem {
 
     public MuramasaItem() {
         super(
-                HnSExtendedWeaponsTiers.MEOWMERE,
+                HnSExtendedWeaponsTiers.MURAMASA,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(Rarity.EPIC)
-                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.MEOWMERE)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.MURAMASA)
                         )
         );
     }

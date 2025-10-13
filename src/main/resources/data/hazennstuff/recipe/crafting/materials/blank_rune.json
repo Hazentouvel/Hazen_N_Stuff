@@ -9,13 +9,11 @@
     "#": {
       "item": "hazennstuff:runestone_fragments"
     },
-    "key": {
-      "S": {
-        "item": "irons_spellbooks:blank_rune"
-      },
-      "D": {
-        "item": "irons_spellbooks:arcane_ingot"
-      }
+    "S": {
+      "item": "irons_spellbooks:blank_rune"
+    },
+    "D": {
+      "item": "irons_spellbooks:arcane_ingot"
     },
     "result": {
       "id": "irons_spellbooks:blank_rune",

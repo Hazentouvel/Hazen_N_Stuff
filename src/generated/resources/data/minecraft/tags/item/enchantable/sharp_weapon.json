@@ -5,6 +5,8 @@
     "hazennstuff:firebrand",
     "hazennstuff:war_flaming_lance",
     "hazennstuff:ravens_bane",
+    "hazennstuff:blade_of_grass",
+    "hazennstuff:volcano",
     "hazennstuff:ice_pike",
     "hazennstuff:frostburn_dagger",
     "hazennstuff:beongae",
@@ -29,6 +31,8 @@
     "hazennstuff:ancient_warriors_axe",
     "hazennstuff:the_devourer",
     "hazennstuff:mage_bane",
-    "hazennstuff:legionnaire_warlock_axe"
+    "hazennstuff:legionnaire_warlock_axe",
+    "hazennstuff:muramasa",
+    "hazennstuff:dawnmaker"
   ]
 }

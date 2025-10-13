@@ -10,6 +10,7 @@ import io.redspace.ironsspellbooks.item.UniqueSpellBook;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.spells.HnSSpellRegistries;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.Item;
@@ -33,14 +34,23 @@ public class GoldenShowerSpellbook extends UniqueSpellBook {
         });
     }
 
-    public void appendHoverText(@NotNull ItemStack itemStack, Item.TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
-        super.appendHoverText(itemStack, context, lines, flag);
-        AffinityData affinityData = AffinityData.getAffinityData(itemStack);
+    @Override
+    public void appendHoverText(@NotNull ItemStack stack,
+                                @NotNull TooltipContext context,
+                                @NotNull List<Component> lines,
+                                @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, lines, flag);
+
+        // --- Affinity tooltip section ---
+        var affinityData = AffinityData.getAffinityData(stack);
         if (!affinityData.affinityData().isEmpty()) {
-            int i = TooltipsUtils.indexOfComponent(lines, "tooltip.irons_spellbooks.spellbook_spell_count");
+            int i = TooltipsUtils.indexOfComponent(lines, "tooltip.hazennstuff.spellbook_spell_count");
             lines.addAll(i < 0 ? lines.size() : i + 1, affinityData.getDescriptionComponent());
         }
 
+        // --- Custom item description section ---
+        lines.add(Component.translatable("item.hazennstuff.vampire_knives.description")
+                .withStyle(ChatFormatting.GOLD, ChatFormatting.ITALIC));
     }
 
     public void initializeSpellContainer(ItemStack itemStack) {

@@ -69,10 +69,7 @@ public class AscendedLemonGodArmorItem extends ImbuableHnSArmorItem implements I
 
     private void evaluateArmorEffects(Player player) {
         if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 200, 0, false, false, false));
-        }
-        if (!player.hasEffect(MobEffectRegistry.ANGEL_WINGS)) {
-            player.addEffect(new MobEffectInstance(MobEffectRegistry.ANGEL_WINGS, 200, 0, false, false, false));
+            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 320, 0, false, false, false));
         }
     }
 

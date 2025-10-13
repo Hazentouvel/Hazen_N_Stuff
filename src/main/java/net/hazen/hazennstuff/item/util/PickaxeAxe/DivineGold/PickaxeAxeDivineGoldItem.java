@@ -4,6 +4,7 @@ import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import net.hazen.hazennstuff.item.util.HnSToolTiers;
 import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.component.DataComponents;
@@ -31,7 +32,7 @@ public class PickaxeAxeDivineGoldItem extends ExtendedSwordItem implements GeoIt
                         .fireResistant()
                         .rarity(Rarity.EPIC)
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.PICKAXE_AXE))
-                        .component(DataComponents.TOOL, Tiers.NETHERITE.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE))
+                        .component(DataComponents.TOOL, HnSToolTiers.MITHRIL.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE))
 
         );
     }
@@ -44,10 +45,10 @@ public class PickaxeAxeDivineGoldItem extends ExtendedSwordItem implements GeoIt
     @Override
     public float getDestroySpeed(ItemStack stack, BlockState state) {
         if (state.is(BlockTags.MINEABLE_WITH_PICKAXE)) {
-            return HnSExtendedWeaponsTiers.MITHRIL.getSpeed();
+            return HnSToolTiers.MITHRIL.getSpeed();
         }
         else if (state.is(BlockTags.MINEABLE_WITH_AXE)) {
-            return HnSExtendedWeaponsTiers.MITHRIL.getSpeed();
+            return HnSToolTiers.MITHRIL.getSpeed();
         }
         return 1.0F;
     }

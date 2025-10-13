@@ -5,8 +5,8 @@
       "condition":
       "neoforge:loot_table_id",
       "loot_table_id":
-      "minecraft:entities/endermen"
+      "minecraft:entities/enderman"
     }
   ],
-  "key": "hazennstuff:entities/additional_endermen"
+  "key": "hazennstuff:entities/additional_endermen_loot"
 }

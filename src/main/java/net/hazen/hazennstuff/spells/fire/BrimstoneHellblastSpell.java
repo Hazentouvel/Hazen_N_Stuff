@@ -34,6 +34,10 @@ public class BrimstoneHellblastSpell extends AbstractCalamitasSpell {
         );
     }
 
+    public boolean allowLooting() {
+        return false;
+    }
+
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.LEGENDARY)
             .setSchoolResource(SchoolRegistry.FIRE_RESOURCE)

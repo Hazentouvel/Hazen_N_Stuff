@@ -36,24 +36,4 @@ public class BountyHunterArmorItem extends ImbuableGeckolibHnSArmorItem implemen
     public GeoArmorRenderer<?> supplyRenderer() {
         return new GenericCustomArmorRenderer<>(new BountyHunterArmorModel());
     }
-
-    @Override
-    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
-        if (entity instanceof Player player && !level.isClientSide() && isWearingFullSet(player)) {
-            evaluateArmorEffects(player);
-        }
-    }
-
-    private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 400, 0, false, false, false));
-        }
-    }
-
-    private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof BountyHunterArmorItem &&
-                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof BountyHunterArmorItem &&
-                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof BountyHunterArmorItem &&
-                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof BountyHunterArmorItem;
-    }
 }

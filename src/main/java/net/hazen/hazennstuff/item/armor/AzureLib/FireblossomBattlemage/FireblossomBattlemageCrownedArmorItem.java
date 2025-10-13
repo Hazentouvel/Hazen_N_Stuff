@@ -73,7 +73,7 @@ public class FireblossomBattlemageCrownedArmorItem extends ImbuableHnSArmorItem 
 
     private void evaluateArmorEffects(Player player) {
         if (!player.hasEffect(HnSEffects.FIREBLOSSOM_RULER_EFFECT)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.FIREBLOSSOM_RULER_EFFECT, 200, 0, false, false, false));
+            player.addEffect(new MobEffectInstance(HnSEffects.FIREBLOSSOM_RULER_EFFECT, 320, 0, false, false, false));
         }
     }
 

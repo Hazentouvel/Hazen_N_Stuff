@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-02T13:49:05.7927904	Block States: hazennstuff
+// 1.21.1	2025-10-13T10:56:29.4947588	Block States: hazennstuff
 3d873303fcffa9579d972efc402e237f9cb8a836 assets/hazennstuff/blockstates/chlorophyte_ore.json
 80854f8d54e196cb0df19cc84341f10f7487ba76 assets/hazennstuff/blockstates/dreadstone_ore.json
 42d3e5a124cc4b4d69f40f2399a3feb65cd611d8 assets/hazennstuff/blockstates/frostbite_birch_button.json
@@ -65,8 +65,8 @@ dfd954863123e00d78bb513f9b14accad46c2971 assets/hazennstuff/models/block/permafr
 ee2440301077d84c7fa145f588c6f7a66afaf06d assets/hazennstuff/models/block/solar_core_netherrack_ore.json
 9d82ef909f9e68e18bb47b9d0e8b5c5272a5145b assets/hazennstuff/models/block/stripped_frostbite_birch_log.json
 7920f080b3a859cd8efb37b359d2527334e5dc00 assets/hazennstuff/models/block/stripped_frostbite_birch_log_horizontal.json
-c1f1a434a09075867adfea0568d39f8c02f938e6 assets/hazennstuff/models/block/stripped_frostbite_birch_wood.json
-9ddc8449806a45e264e2594385b446307fecf362 assets/hazennstuff/models/block/stripped_frostbite_birch_wood_horizontal.json
+50e2b56f97709556542eea39971e189076ca2832 assets/hazennstuff/models/block/stripped_frostbite_birch_wood.json
+9f70d02daeb34ff35a9fb1d882f8e3da8349fa97 assets/hazennstuff/models/block/stripped_frostbite_birch_wood_horizontal.json
 a58bbb69600b544d1fa4a5c75dbb3da4ecae0e44 assets/hazennstuff/models/block/wisewood_sapling.json
 219e92641afc6745cb206e713df8c89c7fd80680 assets/hazennstuff/models/block/zenalite_bricks.json
 b6f9d5db511576c6bfb18d5d5cacb5485b539d5b assets/hazennstuff/models/block/zenalite_brick_slab.json

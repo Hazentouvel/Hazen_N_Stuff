@@ -5,12 +5,11 @@
       "value": [
         {
         "type": "neoforge:or",
-        "value": [
+        "value":
           {
             "type": "neoforge:mod_loaded",
             "modid": "malum"
           }
-        ]
         }
       ]
     }

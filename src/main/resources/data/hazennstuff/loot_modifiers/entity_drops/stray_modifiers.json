@@ -5,7 +5,7 @@
       "condition":
       "neoforge:loot_table_id",
       "loot_table_id":
-      "minecraft:entities/wither_skeleton"
+      "minecraft:entities/stray"
     }
   ],
   "key": "hazennstuff:entities/additional_stray_loot"

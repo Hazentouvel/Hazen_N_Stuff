@@ -18,12 +18,12 @@ public class BladeOfGrassItem extends ExtendedSwordItem implements GeoItem {
 
     public BladeOfGrassItem() {
         super(
-                HnSExtendedWeaponsTiers.MEOWMERE,
+                HnSExtendedWeaponsTiers.BLADE_OF_GRASS,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(NatureRarity.NATURE_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.MEOWMERE)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.BLADE_OF_GRASS)
                         )
         );
     }

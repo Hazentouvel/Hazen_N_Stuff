@@ -33,15 +33,15 @@ public class VolcanoItem extends MagicSwordItem {
 
     public VolcanoItem() {
         super(
-                HnSExtendedWeaponsTiers.HAMMER_OF_JUSTICE,
+                HnSExtendedWeaponsTiers.VOLCANO,
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
                         .rarity(DivineRarity.DIVINE_RARITY_PROXY.getValue())
-                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.HAMMER_OF_JUSTICE)
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.VOLCANO)
                         ),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(SpellRegistry.DIVINE_SMITE_SPELL, 10)
+                        new SpellDataRegistryHolder(SpellRegistry.FLAMING_STRIKE_SPELL, 4)
                 )
         );
         this.dispatcher = new HnSItemDispatcher();

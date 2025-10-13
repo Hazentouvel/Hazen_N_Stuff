@@ -62,10 +62,7 @@ public class HazelHOLYMOLYArmorItem extends ImbuableGeckolibHnSArmorItem impleme
 
     private void evaluateArmorEffects(Player player) {
         if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 200, 0, false, false, false));
-        }
-        if (!player.hasEffect(MobEffects.FIRE_RESISTANCE)) {
-            player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0, false, false, true));
+            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 320, 0, false, false, false));
         }
     }
 

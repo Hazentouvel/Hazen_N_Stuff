@@ -17,6 +17,7 @@ import net.hazen.hazennstuff.item.weapons.ancient_warriors_axe.AncientWarriorsAx
 import net.hazen.hazennstuff.rarity.BloodRarity;
 import net.hazen.hazennstuff.registries.HnSSounds;
 import net.hazen.hazennstuff.spells.HnSSpellRegistries;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
@@ -124,14 +125,24 @@ public class VampireKnivesItem extends MagicSwordItem implements GeoItem {
     }
 
     @Override
-    public void appendHoverText(@NotNull ItemStack itemStack, @NotNull TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
-        super.appendHoverText(itemStack, context, lines, flag);
-        var affinityData = AffinityData.getAffinityData(itemStack);
+    public void appendHoverText(@NotNull ItemStack stack,
+                                @NotNull TooltipContext context,
+                                @NotNull List<Component> lines,
+                                @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, lines, flag);
+
+        // --- Affinity tooltip section ---
+        var affinityData = AffinityData.getAffinityData(stack);
         if (!affinityData.affinityData().isEmpty()) {
             int i = TooltipsUtils.indexOfComponent(lines, "tooltip.hazennstuff.spellbook_spell_count");
             lines.addAll(i < 0 ? lines.size() : i + 1, affinityData.getDescriptionComponent());
         }
+
+        // --- Custom item description section ---
+        lines.add(Component.translatable("item.hazennstuff.vampire_knives.description")
+                .withStyle(ChatFormatting.DARK_RED, ChatFormatting.ITALIC));
     }
+
 
     @Override
     public void initializeSpellContainer(ItemStack itemStack) {

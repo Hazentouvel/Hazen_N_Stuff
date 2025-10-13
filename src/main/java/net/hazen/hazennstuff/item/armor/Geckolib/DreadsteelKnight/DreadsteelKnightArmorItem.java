@@ -31,7 +31,7 @@ import java.util.Map;
 public class DreadsteelKnightArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public DreadsteelKnightArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
-        super(HnSArmorMaterials.CRYOGENIC_RULER_MATERIAL, type, settings,
+        super(HnSArmorMaterials.CHAMPION_MATERIAL, type, settings,
                 new AttributeContainer(Attributes.ATTACK_SPEED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
                 new AttributeContainer(Attributes.ATTACK_DAMAGE, 1.5, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(Attributes.MAX_HEALTH, 2.5, AttributeModifier.Operation.ADD_VALUE)
@@ -63,7 +63,7 @@ public class DreadsteelKnightArmorItem extends ImbuableGeckolibHnSArmorItem impl
 
     private void evaluateArmorEffects(Player player) {
         if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
-            player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 400, 0, false, false, false));
+            player.addEffect(new MobEffectInstance(HnSEffects.SWORDMASTER_SET_BONUS, 320, 0, false, false, false));
         }
     }
 

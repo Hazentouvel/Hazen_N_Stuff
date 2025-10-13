@@ -49,6 +49,10 @@ public class NightsEdgeStrikeSpell extends AbstractNightsEdgeSpell {
         return List.of(Component.translatable("ui.irons_spellbooks.damage", getDamageText(spellLevel, caster)));
     }
 
+    public boolean allowLooting() {
+        return false;
+    }
+
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.COMMON)
             .setSchoolResource(HnSSchoolRegistry.SHADOW_RESOURCE)

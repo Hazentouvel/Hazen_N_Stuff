@@ -29,7 +29,7 @@ public class CreakingSorcererArmorItem extends ImbuableHnSArmorItem implements I
     public CreakingSorcererArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.CREAKING_SORCERER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 500.0, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, .25, AttributeModifier.Operation.ADD_VALUE)
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, .25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
         // Create the instance of the class here to use later.
         this.dispatcher = new HnSArmorDispatcher();

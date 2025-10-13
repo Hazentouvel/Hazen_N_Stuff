@@ -23,8 +23,8 @@ public class BountyHunterArmorItem extends ImbuableGeckolibHnSArmorItem implemen
     public BountyHunterArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
         super(HnSArmorMaterials.ARCHER_MATERIAL, type, settings,
-                new AttributeContainer(ALObjects.Attributes.ARROW_DAMAGE, .1, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(ALObjects.Attributes.ARROW_VELOCITY, .1, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(ALObjects.Attributes.ARROW_DAMAGE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(ALObjects.Attributes.ARROW_VELOCITY, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(Attributes.MOVEMENT_SPEED, .25, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
         );
     }

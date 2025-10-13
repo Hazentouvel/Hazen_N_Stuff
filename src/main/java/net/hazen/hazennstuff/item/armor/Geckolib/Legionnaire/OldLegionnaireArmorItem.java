@@ -28,7 +28,7 @@ import java.util.List;
 public class OldLegionnaireArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public OldLegionnaireArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.LEGIONNAIRE_MATERIAL, type, settings,
-                new AttributeContainer(AttributeRegistry.SPELL_RESIST, .05, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.SPELL_RESIST, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(Attributes.MAX_HEALTH, 1.25, AttributeModifier.Operation.ADD_VALUE)
         );
     }

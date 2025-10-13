@@ -31,7 +31,7 @@ public class ChlorophyteMaskArmorItem extends ImbuableGeckolibHnSArmorItem imple
         super(HnSArmorMaterials.CREAKING_SORCERER_MATERIAL, type, settings,
                 new AttributeContainer(Attributes.ATTACK_DAMAGE, 3.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(Attributes.ATTACK_SPEED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE)
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
     }
 

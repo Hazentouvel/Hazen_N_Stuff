@@ -109,7 +109,7 @@ public class GarmentsOfTheFirstFlamebearerChestplateArmorItem extends ImbuableGe
         )));
     }
 
-    @EventBusSubscriber(modid = HazenNStuff.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+    @EventBusSubscriber(value = Dist.CLIENT)
     public class SpellEvents {
 
         @SubscribeEvent

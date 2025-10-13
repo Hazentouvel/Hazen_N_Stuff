@@ -98,7 +98,7 @@ public class CalamitasChestplateArmorItem extends ImbuableGeckolibHnSArmorItem i
         )));
     }
 
-    @EventBusSubscriber(modid = HazenNStuff.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+    @EventBusSubscriber(value = Dist.CLIENT)
     public class SpellEvents {
 
         @SubscribeEvent

@@ -111,7 +111,7 @@ public class HazensExcaliburItem extends MagicSwordItem implements GeoItem {
         )));
     }
 
-    @EventBusSubscriber(modid = HazenNStuff.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(value = Dist.CLIENT)
     public class SpellEvents {
 
         @SubscribeEvent

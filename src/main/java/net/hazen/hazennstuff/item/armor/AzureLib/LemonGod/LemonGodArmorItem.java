@@ -10,14 +10,18 @@ import net.hazen.hazennstuff.item.armor.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.item.dispatcher.HnSArmorDispatcher;
 import net.hazen.hazennstuff.registries.HnSEffects;
 import net.hazen.hazennstuff.registries.HnSItems;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -42,6 +46,18 @@ public class LemonGodArmorItem extends ImbuableHnSArmorItem implements IDisableJ
         ArsNoveauCompat.addMaxMana(attributes, group);
         ArsNoveauCompat.addManaRegen(attributes, group);
         return attributes.build().modifiers();
+    }
+
+    @Override
+    public void appendHoverText(@NotNull ItemStack stack,
+                                @NotNull TooltipContext context,
+                                @NotNull List<Component> lines,
+                                @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, lines, flag);
+
+        // --- Custom item description section ---
+        lines.add(Component.translatable("item.hazennstuff.lemon_god.description")
+                .withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
     }
 
     @Override

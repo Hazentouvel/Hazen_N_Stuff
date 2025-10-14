@@ -1,16 +1,20 @@
 package net.hazen.hazennstuff.item.armor.Geckolib.GabrielULTRAKILL;
 
+import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
+import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.compat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.registries.HnSEffects;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -19,10 +23,12 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ElytraItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
@@ -48,6 +54,18 @@ public class GeckolibGabrielArmorItem extends ImbuableGeckolibHnSArmorItem imple
         ArsNoveauCompat.addManaRegen(attributes, group);
         ArsNoveauCompat.addMaxMana(attributes, group);
         return attributes.build().modifiers();
+    }
+
+    @Override
+    public void appendHoverText(@NotNull ItemStack stack,
+                                @NotNull TooltipContext context,
+                                @NotNull List<Component> lines,
+                                @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, lines, flag);
+
+        // --- Custom item description section ---
+        lines.add(Component.translatable("item.hazennstuff.ultrakill.description")
+                .withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
     }
 
     // Just supply the armor model here; you don't have to worry about making a new renderer

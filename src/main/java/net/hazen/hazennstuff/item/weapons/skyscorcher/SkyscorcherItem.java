@@ -13,6 +13,7 @@ import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.ElectricRarity;
 import net.hazen.hazennstuff.registries.HnSExtras.MagicMace.MagicMaceItem;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
@@ -113,13 +114,22 @@ public class SkyscorcherItem extends MagicMaceItem implements GeoItem {
     }
 
     @Override
-    public void appendHoverText(@NotNull ItemStack itemStack, @NotNull TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
-        super.appendHoverText(itemStack, context, lines, flag);
-        var affinityData = AffinityData.getAffinityData(itemStack);
+    public void appendHoverText(@NotNull ItemStack stack,
+                                @NotNull TooltipContext context,
+                                @NotNull List<Component> lines,
+                                @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, lines, flag);
+
+        // Affinity tooltip section
+        var affinityData = AffinityData.getAffinityData(stack);
         if (!affinityData.affinityData().isEmpty()) {
             int i = TooltipsUtils.indexOfComponent(lines, "tooltip.hazennstuff.spellbook_spell_count");
             lines.addAll(i < 0 ? lines.size() : i + 1, affinityData.getDescriptionComponent());
         }
+
+        // Custom item description section
+        lines.add(Component.translatable("item.hazennstuff.skyscorcher.description")
+                .withStyle(ChatFormatting.AQUA, ChatFormatting.ITALIC));
     }
 
     @Override

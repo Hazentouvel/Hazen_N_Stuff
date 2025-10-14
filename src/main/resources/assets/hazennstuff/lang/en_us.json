@@ -1,4 +1,32 @@
 {
+
+  "item.hazennstuff.calamity_fables.description": "A Calamity Fables reference.",
+  "item.hazennstuff.calamity.description": "A Calamity mod reference.",
+  "item.hazennstuff.tyros.description": "Bear the garments of the first flambearer...",
+  "item.hazennstuff.jojo.description": "A Jojo's Bizarre Adventure Reference.",
+  "item.hazennstuff.neru.description": "A reference to Neru Akita.",
+  "item.hazennstuff.ultrakill.description": "An Ultrakill Reference.",
+  "item.hazennstuff.terraria.description": "A Terraria reference.",
+  "item.hazennstuff.crk.description": "A Cookie Run Kingdom reference.",
+  "item.hazennstuff.honkai_star_rail.description": "A Honkai Star Rail Reference.",
+  "item.hazennstuff.mothic_witch.description": "This armor set is dedicated to Moth.",
+  "item.hazennstuff.abberant_predator.description": "This armor set is dedicated to Ill9ustratedSky.",
+  "item.hazennstuff.hazel.description": "Hazen's own armor set.",
+  "item.hazennstuff.cat.description": "This armor set is dedicated to my good from of mine, Maverick___",
+  "item.hazennstuff.frieren.description": "A reference to the anime 'Frieren: Beyond Journey's End'.",
+  "item.hazennstuff.miku.description": "This is a reference to Hatsune Miku.",
+  "item.hazennstuff.teto.description": "This is a reference to Kasane Teto.",
+  "item.hazennstuff.atlas.description": "This is a dedicated armor set for FoxeLocklear.",
+  "item.hazennstuff.calamitas.description": "A Calamity Mod Reference. This armor set resonates well with the scroll-forge...",
+  "item.hazennstuff.lemon_god.description": "An armor set dedicated to My401k.",
+  "item.hazennstuff.iron431.description": "An armor set dedicated to Iron431, a creator of Iron's Spells 'n Spellbooks.",
+  "item.hazennstuff.fireblossom_armor.description": "This armor set is dedicated to MtheNinja.",
+  "item.hazennstuff.arbitrium_robes.description": "This is dedicated for Amadhe.",
+  "item.hazennstuff.dark_ritual_templar.description": "Discern the Eldritch... This armor set is dedicated for Ace_The_Eldritch_King",
+  "item.hazennstuff.sacred_robes.description": "An armor set dedicated to Smalls, a creator of Iron's Spells 'n Spellbooks.",
+
+
+
   "item.hazennstuff.excalibur_fragment": "Excalibur Fragment",
   "item.hazennstuff.deus_essence": "Deus Essence",
   "item.hazennstuff.runestone_fragments": "Runestone Fragments",
@@ -189,6 +217,7 @@
   "item.hazennstuff.frostburn_dagger": "Frostburn Dagger",
 
   "item.hazennstuff.skyscorcher": "Skyscorcher",
+  "item.hazennstuff.skyscorcher.description": "The sky scorching axe, forged from the mace from the Trial Chambers. Works the same as a mace.",
   "item.hazennstuff.beongae": "Beongae",
 
   "item.hazennstuff.bountiful_harvest": "Bountiful Harvest",
@@ -196,7 +225,7 @@
   "item.hazennstuff.blade_of_grass": "Blade of Grass",
 
   "item.hazennstuff.vampire_knives": "Vampire Knives",
-  "item.hazennstuff.vampire_knives.description": "Right-Click to throw knives.",
+  "item.hazennstuff.vampire_knives.description": "A Terraria Reference. Right-Click to throw knives.",
 
   "item.hazennstuff.starfury": "Starfury",
   "item.hazennstuff.obsidian_claymore": "Obsidian Claymore",
@@ -216,9 +245,9 @@
 
   "item.hazennstuff.lights_bane": "Light's Bane",
   "item.hazennstuff.nights_edge": "Night's Edge",
-  "item.hazennstuff.nights_edge.description": "Dawn the power of the Night's Edge. This weapon resonates well with the scroll-forge...",
+  "item.hazennstuff.nights_edge.description": "A Terraria Reference. Dawn the power of the Night's Edge. This weapon resonates well with the scroll-forge...",
   "item.hazennstuff.true_nights_edge": "True Night's Edge",
-  "item.hazennstuff.true_nights_edge.description": "Unleash the power of the True Night's Edge. This weapon resonates well with the scroll-forge...",
+  "item.hazennstuff.true_nights_edge.description": "A Terraria Reference. Unleash the power of the True Night's Edge. This weapon resonates well with the scroll-forge...",
 
   "item.hazennstuff.the_devourer": "The Devourer",
 
@@ -241,6 +270,7 @@
   "item.hazennstuff.white_lily_staff": "White Lily's Staff",
   "item.hazennstuff.wisewood_cane": "Wisewood Cane",
   "item.hazennstuff.rod_of_discord": "Rod of Discord",
+  "item.hazennstuff.rod_of_discord.description": "A Terraria Reference. This wand resonates well with the scroll-forge...",
 
 
 
@@ -365,8 +395,10 @@
   "item.hazennstuff.ascended_arbitrium_robes_leggings": "Ascended Arbitrium Leggings",
   "item.hazennstuff.ascended_arbitrium_robes_boots": "Ascended Arbitrium Tracers",
 
-  "item.hazennstuff.fireblossom_crown": "Fireblossom Battlemage Crown",
+  "item.hazennstuff.fireblossom_crown": "Fireblossom Crown",
+  "item.hazennstuff.fireblossom_crown.description": "Dawning the Fireblossom Crown improves your affinity with magic. This armor set is dedicated to MtheNinja.",
   "item.hazennstuff.fireblossom_helmet": "Fireblossom Battlemage Helmet",
+  "item.hazennstuff.fireblossom_helmet.description": "Dawning the Battlemage Helmet improves your sword mastery. This armor set is dedicated to MtheNinja.",
   "item.hazennstuff.fireblossom_chestplate": "Fireblossom Battlemage Chestplate",
   "item.hazennstuff.fireblossom_leggings": "Fireblossom Battlemage Leggings",
   "item.hazennstuff.fireblossom_boots": "Fireblossom Battlemage Boots",
@@ -380,7 +412,6 @@
   "item.hazennstuff.project_sekai_chestplate": "Miku's Uniform",
   "item.hazennstuff.project_sekai_leggings": "Miku's Leggings",
   "item.hazennstuff.project_sekai_boots": "Miku's Boots",
-
 
   "item.hazennstuff.rotten_girl_helmet": "''Miku's'' Hair",
   "item.hazennstuff.rotten_girl_chestplate": "''Miku's'' Uniform",
@@ -415,14 +446,9 @@
   "item.hazennstuff.spectral_spelunker_boots": "Spectral Spelunker Boots",
 
   "item.hazennstuff.calamitas_helmet": "Calamitas Hair",
-  "item.hazennstuff.calamitas_helmet.description": "This gear resonates well with the scroll-forge...",
   "item.hazennstuff.calamitas_chestplate": "Calamitas Robes",
-  "item.hazennstuff.calamitas_chestplate.description": "This gear resonates well with the scroll-forge...",
   "item.hazennstuff.calamitas_leggings": "Calamitas Leggings",
-  "item.hazennstuff.calamitas_leggings.description": "This gear resonates well with the scroll-forge...",
   "item.hazennstuff.calamitas_boots": "Calamitas Boots",
-  "item.hazennstuff.calamitas_boots.description": "This gear resonates well with the scroll-forge...",
-
 
   "item.hazennstuff.maverick_helmet": "Maverick Hair",
   "item.hazennstuff.maverick_chestplate": "Maverick Poncho",
@@ -472,8 +498,11 @@
   "item.hazennstuff.thunder_prowler_boots": "Thunder Prowler Boots",
 
   "item.hazennstuff.chlorophyte_helmet": "Chlorophyte Helmet",
+  "item.hazennstuff.chlorophyte_helmet.description": "A Terraria reference. Bear this helmet to increase your accuracy with your archery",
   "item.hazennstuff.chlorophyte_headgear": "Chlorophyte Headgear",
+  "item.hazennstuff.chlorophyte_headgear.description": "A Terraria reference. Bear this helmet to increase your affinity with magic.",
   "item.hazennstuff.chlorophyte_mask": "Chlorophyte Mask",
+  "item.hazennstuff.chlorophyte_mask.description": "A Terraria reference. Bear this mask to increase your sword mastery.",
   "item.hazennstuff.chlorophyte_chestplate": "Chlorophyte Chestplate",
   "item.hazennstuff.chlorophyte_leggings": "Chlorophyte Leggings",
   "item.hazennstuff.chlorophyte_boots": "Chlorophyte Boots",
@@ -722,7 +751,7 @@
   "spell.hazennstuff.death_sentence": "Death Sentence",
 
   "spell.hazennstuff.golden_shower": "Golden Shower",
-  "spell.hazennstuff.golden_shower.description": "This spellbook resonates well with the scroll-forge...",
+  "spell.hazennstuff.golden_shower.description": "A Terraria Reference. This spellbook resonates well with the scroll-forge...",
 
   "spell.hazennstuff.spectral_axe": "Spectral Axe",
 

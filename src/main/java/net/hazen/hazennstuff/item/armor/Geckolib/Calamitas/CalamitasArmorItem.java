@@ -51,6 +51,18 @@ public class CalamitasArmorItem extends ImbuableGeckolibHnSArmorItem implements 
     }
 
     @Override
+    public void appendHoverText(@NotNull ItemStack stack,
+                                @NotNull TooltipContext context,
+                                @NotNull List<Component> lines,
+                                @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, lines, flag);
+
+        // --- Custom item description section ---
+        lines.add(Component.translatable("item.hazennstuff.calamitas.description")
+                .withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
+    }
+
+    @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
         if (entity instanceof Player player && !level.isClientSide() && isWearingFullSet(player)) {
             evaluateArmorEffects(player);

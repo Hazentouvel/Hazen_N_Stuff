@@ -16,7 +16,9 @@ import net.hazen.hazennstuff.compat.MalumCompat;
 import net.hazen.hazennstuff.item.armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.registries.HnSEffects;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Style;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -91,13 +93,22 @@ public class GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem extends Imbuab
     }
 
     @Override
-    public void appendHoverText(@NotNull ItemStack itemStack, @NotNull TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
-        super.appendHoverText(itemStack, context, lines, flag);
-        var affinityData = AffinityData.getAffinityData(itemStack);
+    public void appendHoverText(@NotNull ItemStack stack,
+                                @NotNull TooltipContext context,
+                                @NotNull List<Component> lines,
+                                @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, lines, flag);
+
+        // --- Affinity tooltip section ---
+        var affinityData = AffinityData.getAffinityData(stack);
         if (!affinityData.affinityData().isEmpty()) {
             int i = TooltipsUtils.indexOfComponent(lines, "tooltip.hazennstuff.spellbook_spell_count");
             lines.addAll(i < 0 ? lines.size() : i + 1, affinityData.getDescriptionComponent());
         }
+
+        // --- Custom item description section ---
+        lines.add(Component.translatable("item.hazennstuff.tyros.description")
+                .withStyle(Style.EMPTY.withColor(15881518).withItalic(true)));
     }
 
     @Override

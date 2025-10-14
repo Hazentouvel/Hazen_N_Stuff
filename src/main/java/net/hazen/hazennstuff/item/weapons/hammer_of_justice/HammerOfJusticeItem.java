@@ -14,6 +14,7 @@ import net.hazen.hazennstuff.item.dispatcher.HnSItemDispatcher;
 import net.hazen.hazennstuff.item.weapons.Excalibur.HazenStyle.HazensExcaliburItem;
 import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.DivineRarity;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -57,13 +58,22 @@ public class HammerOfJusticeItem extends MagicSwordItem {
     }
 
     @Override
-    public void appendHoverText(@NotNull ItemStack itemStack, @NotNull TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
-        super.appendHoverText(itemStack, context, lines, flag);
-        var affinityData = AffinityData.getAffinityData(itemStack);
+    public void appendHoverText(@NotNull ItemStack stack,
+                                @NotNull TooltipContext context,
+                                @NotNull List<Component> lines,
+                                @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, lines, flag);
+
+        // Affinity tooltip section
+        var affinityData = AffinityData.getAffinityData(stack);
         if (!affinityData.affinityData().isEmpty()) {
             int i = TooltipsUtils.indexOfComponent(lines, "tooltip.hazennstuff.spellbook_spell_count");
             lines.addAll(i < 0 ? lines.size() : i + 1, affinityData.getDescriptionComponent());
         }
+
+        // Custom item description section
+        lines.add(Component.translatable("item.hazennstuff.cat.description")
+                .withStyle(ChatFormatting.GOLD, ChatFormatting.ITALIC));
     }
 
     @Override

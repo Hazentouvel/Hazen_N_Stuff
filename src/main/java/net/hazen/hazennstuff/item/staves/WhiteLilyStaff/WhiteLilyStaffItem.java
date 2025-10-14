@@ -1,19 +1,27 @@
 package net.hazen.hazennstuff.item.staves.WhiteLilyStaff;
 
+import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.item.staves.HnSStaffTier;
 import net.hazen.hazennstuff.item.staves.wisewood_cane.WisewoodCaneRenderer;
 import net.hazen.hazennstuff.rarity.NatureRarity;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.TooltipFlag;
+import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 public class WhiteLilyStaffItem extends StaffItem implements GeoItem {
@@ -29,6 +37,18 @@ public class WhiteLilyStaffItem extends StaffItem implements GeoItem {
                                 .createAttributes(HnSStaffTier.WHITE_LILY_STAFF)
                         )
         );
+    }
+
+    @Override
+    public void appendHoverText(@NotNull ItemStack stack,
+                                @NotNull TooltipContext context,
+                                @NotNull List<Component> lines,
+                                @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, lines, flag);
+
+        // Custom item description section
+        lines.add(Component.translatable("item.hazennstuff.crk.description")
+                .withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
     }
 
     @Override

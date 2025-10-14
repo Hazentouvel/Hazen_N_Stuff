@@ -7,14 +7,20 @@ import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.item.dispatcher.HnSItemDispatcher;
 import net.hazen.hazennstuff.rarity.DivineRarity;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import org.jetbrains.annotations.NotNull;
 import top.theillusivec4.curios.api.SlotContext;
+
+import java.util.List;
 
 public class ArbitriumWings extends CurioBaseItem {
     public final HnSItemDispatcher dispatcher;
@@ -29,6 +35,18 @@ public class ArbitriumWings extends CurioBaseItem {
         );
 
         this.dispatcher = new HnSItemDispatcher();
+    }
+
+    @Override
+    public void appendHoverText(@NotNull ItemStack stack,
+                                @NotNull TooltipContext context,
+                                @NotNull List<Component> lines,
+                                @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, lines, flag);
+
+        // Custom item description section
+        lines.add(Component.translatable("item.hazennstuff.arbitrium_robes.description")
+                .withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
     }
 
 

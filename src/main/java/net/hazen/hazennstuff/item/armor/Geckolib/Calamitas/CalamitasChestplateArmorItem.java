@@ -82,8 +82,8 @@ public class CalamitasChestplateArmorItem extends ImbuableGeckolibHnSArmorItem i
         }
 
         // --- Custom item description section ---
-        lines.add(Component.translatable("item.hazennstuff.calamitas_chestplate.description")
-                .withStyle(ChatFormatting.RED, ChatFormatting.ITALIC));
+        lines.add(Component.translatable("item.hazennstuff.calamitas.description")
+                .withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
     }
 
     @Override

@@ -13,6 +13,8 @@ import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.item.dispatcher.HnSItemDispatcher;
 import net.hazen.hazennstuff.item.weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.rarity.DivineRarity;
+import net.hazen.hazennstuff.rarity.FlamingRarity;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -37,7 +39,7 @@ public class VolcanoItem extends MagicSwordItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(DivineRarity.DIVINE_RARITY_PROXY.getValue())
+                        .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.VOLCANO)
                         ),
                 SpellDataRegistryHolder.of(
@@ -45,6 +47,18 @@ public class VolcanoItem extends MagicSwordItem {
                 )
         );
         this.dispatcher = new HnSItemDispatcher();
+    }
+
+    @Override
+    public void appendHoverText(@NotNull ItemStack stack,
+                                @NotNull TooltipContext context,
+                                @NotNull List<Component> lines,
+                                @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, lines, flag);
+
+        // Custom item description section
+        lines.add(Component.translatable("item.hazennstuff.terraria.description")
+                .withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
     }
 
     @Override

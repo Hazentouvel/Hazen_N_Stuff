@@ -32,7 +32,7 @@ public class SingularityCurio extends CurioBaseItem {
         attr.put(Attributes.MAX_HEALTH, new AttributeModifier(id, 20.0, AttributeModifier.Operation.ADD_VALUE));
         attr.put(ALObjects.Attributes.HEALING_RECEIVED, new AttributeModifier(id, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
         attr.put(ALObjects.Attributes.OVERHEAL, new AttributeModifier(id, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
-        attr.put(Attributes.ARMOR, new AttributeModifier(id, 3, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+        attr.put(Attributes.ARMOR, new AttributeModifier(id, 3, AttributeModifier.Operation.ADD_VALUE));
         return attr;
     }
 }

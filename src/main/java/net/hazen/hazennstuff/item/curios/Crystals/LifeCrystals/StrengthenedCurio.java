@@ -30,7 +30,7 @@ public class StrengthenedCurio extends CurioBaseItem {
         //The attributes of the curio
         attr.put(Attributes.MAX_HEALTH, new AttributeModifier(id, 15.0, AttributeModifier.Operation.ADD_VALUE));
         attr.put(ALObjects.Attributes.HEALING_RECEIVED, new AttributeModifier(id, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
-        attr.put(Attributes.ARMOR, new AttributeModifier(id, 1.5, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+        attr.put(Attributes.ARMOR, new AttributeModifier(id, 1.5, AttributeModifier.Operation.ADD_VALUE));
         return attr;
     }
 }

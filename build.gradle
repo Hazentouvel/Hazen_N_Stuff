@@ -159,7 +159,7 @@ dependencies {
     compileOnly "curse.maven:apotheosis-${apotheosis_version}"
 
     //Ace Utils
-    implementation "curse.maven:ace_utils-1299492:7093024"
+    implementation "curse.maven:ace_utils-1299492:7104992"
 
     //AzureLib
     implementation "mod.azure.azurelib:azurelib-neo-${minecraft_version}:${azurelib_version}"

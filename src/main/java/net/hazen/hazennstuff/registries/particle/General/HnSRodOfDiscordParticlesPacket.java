@@ -33,7 +33,7 @@ public class HnSRodOfDiscordParticlesPacket implements CustomPacketPayload {
 
     public static void handle(HnSRodOfDiscordParticlesPacket packet, IPayloadContext context) {
         context.enqueueWork(() -> {
-            Level level = net.minecraft.client.Minecraft.getInstance().level;
+            Level level = context.player().level();
             if (level != null) {
                 ChaoticTeleportSpell.particleCloud(level, packet.pos1);
                 ChaoticTeleportSpell.particleCloud(level, packet.pos2);

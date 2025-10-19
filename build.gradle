@@ -185,8 +185,8 @@ dependencies {
      compileOnly "curse.maven:lodestone-616457:6630047"
 
     //Cataclysm Spellbooks
-    localRuntime "curse.maven:cataclysm_spellbooks-1099461:6925079"
-    compileOnly "curse.maven:cataclysm_spellbooks-1099461:6925079"
+    //localRuntime "curse.maven:cataclysm_spellbooks-1099461:6925079"
+    //compileOnly "curse.maven:cataclysm_spellbooks-1099461:6925079"
     localRuntime "curse.maven:l_enders_cataclysm-551586:6906997"
     compileOnly "curse.maven:l_enders_cataclysm-551586:6906997"
     localRuntime "curse.maven:lionfish-1001614:6168249"

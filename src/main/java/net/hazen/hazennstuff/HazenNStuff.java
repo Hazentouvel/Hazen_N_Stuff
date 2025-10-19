@@ -2,41 +2,41 @@ package net.hazen.hazennstuff;
 
 import io.redspace.ironsspellbooks.item.SpellBook;
 import io.redspace.ironsspellbooks.render.SpellBookCurioRenderer;
-import mod.azure.azurelib.rewrite.animation.cache.AzIdentityRegistry;
-import mod.azure.azurelib.rewrite.render.armor.AzArmorRendererRegistry;
-import mod.azure.azurelib.rewrite.render.item.AzItemRendererRegistry;
+import mod.azure.azurelib.common.animation.cache.AzIdentityRegistry;
+import mod.azure.azurelib.common.render.armor.AzArmorRendererRegistry;
+import mod.azure.azurelib.common.render.item.AzItemRendererRegistry;
 import net.acetheeldritchking.aces_spell_utils.entity.render.items.SheathCurioRenderer;
 import net.acetheeldritchking.aces_spell_utils.items.curios.SheathCurioItem;
-import net.hazen.hazennstuff.block.HnSBlocks;
-import net.hazen.hazennstuff.compat.*;
-import net.hazen.hazennstuff.item.armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.Blazeborne.BlazeborneArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.CreakingSorcerer.CreakingSorcererArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.DarkRitualTemplar.DarkRitualTemplarArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.EnderDragon.EnderDragonArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageCrownedArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageHelmetArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.GabrielULTRAKILL.GabrielArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.Infestation.InfestationArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.LemonGod.LemonGodArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.SLCCat.SLCCatArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.Seraph.SeraphArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.SoulFlame.SoulFlameArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.SupremeWitch.SupremeWitchArmorRenderer;
-import net.hazen.hazennstuff.item.armor.AzureLib.TheWither.TheWitherArmorRenderer;
-import net.hazen.hazennstuff.item.curios.Sheaths.GalvanizedSheath.GalvanizedCurioRenderer;
-import net.hazen.hazennstuff.item.curios.Sheaths.GalvanizedSheath.GalvanizedSheathItemRenderer;
-import net.hazen.hazennstuff.item.curios.Sheaths.ScrollSheath.ScrollCurioRenderer;
-import net.hazen.hazennstuff.item.curios.Sheaths.ScrollSheath.ScrollSheathItemRenderer;
-import net.hazen.hazennstuff.item.curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioItemRenderer;
-import net.hazen.hazennstuff.item.curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioRenderer;
-import net.hazen.hazennstuff.item.curios.Wings.ArbitriumWings.ArbitriumWingsCurioItemRenderer;
-import net.hazen.hazennstuff.item.curios.Wings.ArbitriumWings.ArbitriumWingsCurioRenderer;
-import net.hazen.hazennstuff.item.weapons.Volcano.VolcanoRenderer;
-import net.hazen.hazennstuff.registries.*;
-import net.hazen.hazennstuff.item.weapons.hammer_of_justice.HammerOfJusticeRenderer;
-import net.hazen.hazennstuff.item.armor.HnSArmorMaterials;
-import net.hazen.hazennstuff.spells.HnSSpellRegistries;
+import net.hazen.hazennstuff.Block.HnSBlocks;
+import net.hazen.hazennstuff.Compat.*;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.Blazeborne.BlazeborneArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.CreakingSorcerer.CreakingSorcererArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.DarkRitualTemplar.DarkRitualTemplarArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.EnderDragon.EnderDragonArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageCrownedArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageHelmetArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.GabrielULTRAKILL.GabrielArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.Infestation.InfestationArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.LemonGod.LemonGodArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.SLCCat.SLCCatArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.Seraph.SeraphArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.SoulFlame.SoulFlameArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.SupremeWitch.SupremeWitchArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.TheWither.TheWitherArmorRenderer;
+import net.hazen.hazennstuff.Item.Curios.Sheaths.GalvanizedSheath.GalvanizedCurioRenderer;
+import net.hazen.hazennstuff.Item.Curios.Sheaths.GalvanizedSheath.GalvanizedSheathItemRenderer;
+import net.hazen.hazennstuff.Item.Curios.Sheaths.ScrollSheath.ScrollCurioRenderer;
+import net.hazen.hazennstuff.Item.Curios.Sheaths.ScrollSheath.ScrollSheathItemRenderer;
+import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioItemRenderer;
+import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioRenderer;
+import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioItemRenderer;
+import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioRenderer;
+import net.hazen.hazennstuff.Item.Weapons.Volcano.VolcanoRenderer;
+import net.hazen.hazennstuff.Registries.*;
+import net.hazen.hazennstuff.Item.Weapons.HammerOfJustice.HammerOfJusticeRenderer;
+import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
@@ -72,7 +72,7 @@ public class HazenNStuff
 
         //ISS Addons Compat
         AeromancyAdditionsCompat.init();
-        CataclysmSpellbooksCompat.init();
+        //CataclysmSpellbooksCompat.init();
         EndersSpellsAndStuffCompat.init();
         FamiliarsLibCompat.init();
         MFTECompat.init();
@@ -341,6 +341,7 @@ public class HazenNStuff
                     HnSItems.INFESTATION_CHESTPLATE.get(),
                     HnSItems.INFESTATION_LEGGINGS.get(),
                     HnSItems.INFESTATION_BOOTS.get(),
+
 
                     HnSItems.BLAZEBORNE_HELMET.get(),
                     HnSItems.BLAZEBORNE_CHESTPLATE.get(),

@@ -12,7 +12,7 @@
   "item.hazennstuff.mothic_witch.description": "This armor set is dedicated to Moth.",
   "item.hazennstuff.abberant_predator.description": "This armor set is dedicated to Ill9ustratedSky.",
   "item.hazennstuff.hazel.description": "Hazen's own armor set.",
-  "item.hazennstuff.cat.description": "This armor set is dedicated to my good from of mine, Maverick___",
+  "item.hazennstuff.cat.description": "This is dedicated to my good from of mine, Catherine",
   "item.hazennstuff.frieren.description": "A reference to the anime 'Frieren: Beyond Journey's End'.",
   "item.hazennstuff.miku.description": "This is a reference to Hatsune Miku.",
   "item.hazennstuff.teto.description": "This is a reference to Kasane Teto.",
@@ -20,7 +20,7 @@
   "item.hazennstuff.calamitas.description": "A Calamity Mod Reference. This armor set resonates well with the scroll-forge...",
   "item.hazennstuff.lemon_god.description": "An armor set dedicated to My401k.",
   "item.hazennstuff.iron431.description": "An armor set dedicated to Iron431, a creator of Iron's Spells 'n Spellbooks.",
-  "item.hazennstuff.fireblossom_armor.description": "This armor set is dedicated to MtheNinja.",
+  "item.hazennstuff.fireblossom_armor.description": "This is dedicated to MtheNinja.",
   "item.hazennstuff.arbitrium_robes.description": "This is dedicated for Amadhe.",
   "item.hazennstuff.dark_ritual_templar.description": "Discern the Eldritch... This armor set is dedicated for Ace_The_Eldritch_King",
   "item.hazennstuff.sacred_robes.description": "An armor set dedicated to Smalls, a creator of Iron's Spells 'n Spellbooks.",
@@ -113,6 +113,8 @@
   "item.hazennstuff.energized_core_spellbook": "Energized Core Spellbook",
   "item.hazennstuff.energized_core_spellbook.guide": "This core resonates more than just electricity...",
   "item.hazennstuff.golden_shower_spellbook": "Golden Shower",
+  "item.hazennstuff.golden_shower_spellbook.description": "A Terraria Reference. This spellbook resonates well with the scroll-forge...",
+
   "item.hazennstuff.golden_shower_spellbook.guide": "Eww...",
 
 
@@ -395,7 +397,7 @@
   "item.hazennstuff.ascended_arbitrium_robes_leggings": "Ascended Arbitrium Leggings",
   "item.hazennstuff.ascended_arbitrium_robes_boots": "Ascended Arbitrium Tracers",
 
-  "item.hazennstuff.fireblossom_crown": "Fireblossom Crown",
+  "item.hazennstuff.fireblossom_crown": "Fireblossom Battlemage Crown",
   "item.hazennstuff.fireblossom_crown.description": "Dawning the Fireblossom Crown improves your affinity with magic. This armor set is dedicated to MtheNinja.",
   "item.hazennstuff.fireblossom_helmet": "Fireblossom Battlemage Helmet",
   "item.hazennstuff.fireblossom_helmet.description": "Dawning the Battlemage Helmet improves your sword mastery. This armor set is dedicated to MtheNinja.",
@@ -751,7 +753,6 @@
   "spell.hazennstuff.death_sentence": "Death Sentence",
 
   "spell.hazennstuff.golden_shower": "Golden Shower",
-  "spell.hazennstuff.golden_shower.description": "A Terraria Reference. This spellbook resonates well with the scroll-forge...",
 
   "spell.hazennstuff.spectral_axe": "Spectral Axe",
 
@@ -805,6 +806,7 @@
   "effect.hazennstuff.spores": "Spores",
   "effect.hazennstuff.ichor": "Ichor",
   "effect.hazennstuff.cooldown_reset": "Cooldown Reset",
+  "effect.hazennstuff.electrocuted": "Cooldown Reset",
   "effect.hazennstuff.mana_sickness": "Mana Sickness",
 
   "effect.hazennstuff.tyrants_grace.description": "Recieve the Flamebearer's Tyrannical enhancement, increases your attack speed and damage by 1, and your cast movement speed by 20% and fire spellpower by 12%.",
@@ -818,6 +820,7 @@
   "effect.hazennstuff.dryads_blessing.description": "Blessed by the Dryad, your defence increases as you recieve more healing and enable overheal.",
   "effect.hazennstuff.infested.description": "The spores grow within your body...",
   "effect.hazennstuff.spores.description": "You wither away as the spores in your body sap away at your health.",
+  "effect.hazennstuff.electrocuted.description": "Your life zaps away at your health.",
   "effect.hazennstuff.ichor.description": "''Eww...'' Reduces your defence and spell resistance.",
   "effect.hazennstuff.cooldown_reset.description": "Resets the cooldown of all of your spells.",
   "effect.hazennstuff.mana_sickness.description": "You feel the disconnect with the link with your arcana and soul...",

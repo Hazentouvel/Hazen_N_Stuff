@@ -1,5 +1,10 @@
 package net.hazen.hazennstuff.Registries;
 
+import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprismaEntity;
+import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.FallingStars.FallingStar;
+import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.ShootingStar;
+import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.Terraprisma;
+import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.TerraprismaModel;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.BishopOfDeciet.BishopOfDeceitEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Necromancers.NamelessOne.NamelessOneEntity;
@@ -12,7 +17,7 @@ import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Electromancer.Electromance
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.PiglinPyromancer.PiglinPyromancerEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ServantsOfEnder.ServantsOfEnderEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.TheRecluse.TheRecluseEntity;
-import net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife.LifestealKnife;
+import net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife.VampireKnife;
 import net.hazen.hazennstuff.Entity.Spells.Eldritch.SoulSeeker.SoulSeeker;
 import net.hazen.hazennstuff.Entity.Spells.Evocation.SpectralAxe.SpectralAxe;
 import net.hazen.hazennstuff.Entity.Spells.Fire.ImmolatingObliterator.ScorchingSlash;
@@ -71,8 +76,8 @@ public class HnSEntityRegistry {
             );
 
     // Lifesteal Knife
-    public static final DeferredHolder<EntityType<?>, EntityType<LifestealKnife>> LIFESTEAL_KNIFE =
-            ENTITIES.register("lifesteal_knife", () -> EntityType.Builder.<LifestealKnife>of(LifestealKnife::new, MobCategory.MISC)
+    public static final DeferredHolder<EntityType<?>, EntityType<VampireKnife>> LIFESTEAL_KNIFE =
+            ENTITIES.register("lifesteal_knife", () -> EntityType.Builder.<VampireKnife>of(VampireKnife::new, MobCategory.MISC)
                     .sized(1f, 1f)
                     .clientTrackingRange(4)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "lifesteal_knife").toString())
@@ -145,10 +150,34 @@ public class HnSEntityRegistry {
 
     // Scorching Slash
     public static final DeferredHolder<EntityType<?>, EntityType<ScorchingSlash>> SCORCHING_SLASH =
-            ENTITIES.register("scorching_slash", () -> EntityType.Builder.<ScorchingSlash>of(net.hazen.hazennstuff.Entity.Spells.Fire.ImmolatingObliterator.ScorchingSlash::new, MobCategory.MISC)
+            ENTITIES.register("scorching_slash", () -> EntityType.Builder.<ScorchingSlash>of(ScorchingSlash::new, MobCategory.MISC)
                     .sized(4f, 1f)
                     .clientTrackingRange(64)
                     .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "scorching_slash").toString())
+            );
+
+    // Shooting Star
+    public static final DeferredHolder<EntityType<?>, EntityType<ShootingStar>> SHOOTING_STAR =
+            ENTITIES.register("shooting_star", () -> EntityType.Builder.<ShootingStar>of(ShootingStar::new, MobCategory.MISC)
+                    .sized(1f, 1f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "shooting_star").toString())
+            );
+
+    // Falling Star
+    public static final DeferredHolder<EntityType<?>, EntityType<FallingStar>> FALLING_STAR =
+            ENTITIES.register("falling_star", () -> EntityType.Builder.<FallingStar>of(FallingStar::new, MobCategory.MISC)
+                    .sized(1f, 1f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "falling_star").toString())
+            );
+
+    // Terraprisma
+    public static final DeferredHolder<EntityType<?>, EntityType<Terraprisma>> TERRAPRISMA_PROJECTILE =
+            ENTITIES.register("terraprisma_projectile", () -> EntityType.Builder.<Terraprisma>of(Terraprisma::new, MobCategory.MISC)
+                    .sized(1f, 1f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "terraprisma_projectile").toString())
             );
 
 
@@ -245,6 +274,15 @@ public class HnSEntityRegistry {
                     .eyeHeight(3f)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "necromancer").toString()));
 
+    // Terraprisma
+    public static final DeferredHolder<EntityType<?>, EntityType<SummonedTerraprismaEntity>> TERRAPRISMA =
+            ENTITIES.register("terraprisma", () -> EntityType.Builder.<SummonedTerraprismaEntity>of(SummonedTerraprismaEntity::new, MobCategory.MONSTER)
+                    .sized(.6f, 1.8f)
+                    .clientTrackingRange(64)
+                    .eyeHeight(3f)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "terraprisma").toString()));
+
+
 
 
     /*
@@ -268,7 +306,6 @@ public class HnSEntityRegistry {
                     .sized(1.2f, 1.2f)
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "lightning_strike").toString()));
-
 
     public static void register(IEventBus eventBus)
     {

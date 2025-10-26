@@ -10,7 +10,7 @@ import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Rarity.DivineRarity;
+import net.hazen.hazennstuff.Rarity.HolyRarity;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
@@ -40,7 +40,7 @@ public class ISSExcaliburItem extends MagicSwordItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(DivineRarity.DIVINE_RARITY_PROXY.getValue())
+                        .rarity(HolyRarity.HOLY_RARITY_PROXY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.EXCALIBUR)
                         ),
                 SpellDataRegistryHolder.of(
@@ -95,51 +95,8 @@ public class ISSExcaliburItem extends MagicSwordItem implements GeoItem {
                                 @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, context, lines, flag);
 
-        // Affinity tooltip section
-        var affinityData = AffinityData.getAffinityData(stack);
-        if (!affinityData.affinityData().isEmpty()) {
-            int i = TooltipsUtils.indexOfComponent(lines, "tooltip.hazennstuff.spellbook_spell_count");
-            lines.addAll(i < 0 ? lines.size() : i + 1, affinityData.getDescriptionComponent());
-        }
-
         // Custom item description section
         lines.add(Component.translatable("item.hazennstuff.terraria.description")
                 .withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
-    }
-
-    @Override
-    public void initializeSpellContainer(ItemStack itemStack) {
-        if (itemStack == null) {
-            return;
-        }
-
-        super.initializeSpellContainer(itemStack);
-        itemStack.set(ComponentRegistry.AFFINITY_COMPONENT, new AffinityData(Map.of(
-                SpellRegistry.DIVINE_SMITE_SPELL.get().getSpellResource(), 1
-        )));
-    }
-
-    @EventBusSubscriber(value = Dist.CLIENT)
-    public class SpellEvents {
-
-        @SubscribeEvent
-        public static void onModifySpellLevel(ModifySpellLevelEvent event) {
-            LivingEntity caster = event.getEntity();
-            if (caster == null) return;
-
-            if (event.getSpell() != SpellRegistry.DIVINE_SMITE_SPELL.get()) {
-                return;
-            }
-
-            ItemStack mainHand = caster.getMainHandItem();
-            ItemStack offHand = caster.getOffhandItem();
-
-            boolean usingKnives = mainHand.getItem() instanceof ISSExcaliburItem ||
-                    offHand.getItem() instanceof ISSExcaliburItem;
-
-            if (usingKnives) {
-                event.addLevels(1);
-            }
-        }
     }
 }

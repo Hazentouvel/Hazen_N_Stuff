@@ -6,7 +6,7 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import net.acetheeldritchking.aces_spell_utils.items.curios.SheathCurioItem;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.HnSConfig;
-import net.hazen.hazennstuff.Item.Dispatcher.HnSDispatcher;
+import net.hazen.hazennstuff.Dispatcher.HnSDispatcher;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.hazen.hazennstuff.Registries.HnSItems;
 import net.minecraft.core.Holder;

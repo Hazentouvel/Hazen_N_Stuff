@@ -11,6 +11,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.function.Supplier;
@@ -46,7 +47,7 @@ public class HnSArmorItem extends ArmorItem {
     }
 
     @Override
-    public ItemAttributeModifiers getDefaultAttributeModifiers(ItemStack stack) {
+    public @NotNull ItemAttributeModifiers getDefaultAttributeModifiers(ItemStack stack) {
         ItemAttributeModifiers modifiers = super.getDefaultAttributeModifiers(stack);
         ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder();
 
@@ -64,7 +65,7 @@ public class HnSArmorItem extends ArmorItem {
     }
 
     @Override
-    public ItemAttributeModifiers getDefaultAttributeModifiers() {
+    public @NotNull ItemAttributeModifiers getDefaultAttributeModifiers() {
         return this.defaultModifiers.get();
     }
 

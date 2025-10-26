@@ -111,6 +111,6 @@ public class GeckolibArbitriumRobesElytraItem extends ImbuableChestplateArmorIte
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "ignis_armor_winged", 10, this::wings));
+        controllers.add(new AnimationController<>(this, "arbitrium_robes", 10, this::wings));
     }
 }

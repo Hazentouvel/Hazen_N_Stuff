@@ -76,10 +76,6 @@ public class NightsEdgeStrikeSpell extends AbstractNightsEdgeSpell {
         return Optional.of((SoundEvent) HnSSounds.TERRABLADE_SLASH.get());
     }
 
-    public CastType getCastType() {
-        return CastType.LONG;
-    }
-
     public DefaultConfig getDefaultConfig() {
         return this.defaultConfig;
     }
@@ -90,6 +86,10 @@ public class NightsEdgeStrikeSpell extends AbstractNightsEdgeSpell {
 
     public boolean canBeInterrupted(@Nullable Player player) {
         return false;
+    }
+
+    public CastType getCastType() {
+        return CastType.LONG;
     }
 
     public AnimationHolder getCastStartAnimation() {

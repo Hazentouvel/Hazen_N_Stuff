@@ -2,6 +2,10 @@ package net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings;
 
 import mod.azure.azurelib.common.animation.controller.AzAnimationController;
 import mod.azure.azurelib.common.animation.controller.AzAnimationControllerContainer;
+import mod.azure.azurelib.common.animation.dispatch.AzDispatchSide;
+import mod.azure.azurelib.common.animation.dispatch.command.sequence.AzAnimationSequence;
+import mod.azure.azurelib.common.animation.easing.AzEasingType;
+import mod.azure.azurelib.common.animation.easing.AzEasingTypeRegistry;
 import mod.azure.azurelib.common.animation.impl.AzItemAnimator;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.resources.ResourceLocation;
@@ -18,9 +22,13 @@ public class ArbitriumWingsAnimator extends AzItemAnimator {
     public void registerControllers(AzAnimationControllerContainer<ItemStack> animationControllerContainer) {
         animationControllerContainer.add(
                 AzAnimationController.builder(this, "base_controller")
+                        .setEasingType(AzEasingTypeRegistry.getOrNull("linear"))
+                        .setTransitionLength(6)
                         .build()
         );
     }
+
+
 
     @Override
     public @NotNull ResourceLocation getAnimationLocation(ItemStack animatable) {

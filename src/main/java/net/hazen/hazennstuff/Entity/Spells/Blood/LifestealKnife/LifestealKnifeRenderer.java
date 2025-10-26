@@ -14,14 +14,14 @@ import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-public class LifestealKnifeRenderer extends GeoEntityRenderer<LifestealKnife> {
+public class LifestealKnifeRenderer extends GeoEntityRenderer<VampireKnife> {
     public LifestealKnifeRenderer(EntityRendererProvider.Context context) {
         super(context, new LifestealKnifeModel());
         this.shadowRadius = 0f;
     }
 
     @Override
-    public void preRender(PoseStack poseStack, LifestealKnife animatable, BakedGeoModel model, @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
+    public void preRender(PoseStack poseStack, VampireKnife animatable, BakedGeoModel model, @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
         Vec3 motion = animatable.getDeltaMovement();
         float xRot = -((float) (Mth.atan2(motion.horizontalDistance(), motion.y) * (double) (180F / (float) Math.PI)) - 90.0F);
         float yRot = -((float) (Mth.atan2(motion.z, motion.x) * (180F / (float) Math.PI)) + 90.0F) + 180.0F;
@@ -31,7 +31,7 @@ public class LifestealKnifeRenderer extends GeoEntityRenderer<LifestealKnife> {
     }
 
     @Override
-    public RenderType getRenderType(LifestealKnife animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick) {
+    public RenderType getRenderType(VampireKnife animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick) {
         return RenderType.energySwirl(texture, 0, 0);
     }
 

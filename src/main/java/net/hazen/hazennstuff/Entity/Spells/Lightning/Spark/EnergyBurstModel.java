@@ -8,7 +8,7 @@ public class EnergyBurstModel extends GeoModel<EnergyBurst> {
 
     @Override
     public ResourceLocation getModelResource(EnergyBurst animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/entities/spells/spark.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/entities/spells/energy_burst.geo.json");
     }
 
     @Override

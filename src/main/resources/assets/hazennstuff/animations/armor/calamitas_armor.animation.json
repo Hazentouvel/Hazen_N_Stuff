@@ -226,7 +226,7 @@
 				}
 			}
 		},
-		"long_cast": {
+		"spell": {
 			"loop": true,
 			"animation_length": 5,
 			"bones": {

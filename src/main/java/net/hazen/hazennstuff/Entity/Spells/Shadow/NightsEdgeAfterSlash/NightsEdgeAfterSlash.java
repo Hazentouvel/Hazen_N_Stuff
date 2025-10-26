@@ -77,7 +77,7 @@ public class NightsEdgeAfterSlash extends AbstractMagicProjectile implements Geo
 
     @Override
     public Optional<Holder<SoundEvent>> getImpactSound() {
-        return Optional.of(HnSSounds.ELECTRIC_IMPACT);
+        return Optional.empty();
     }
 
     @Override

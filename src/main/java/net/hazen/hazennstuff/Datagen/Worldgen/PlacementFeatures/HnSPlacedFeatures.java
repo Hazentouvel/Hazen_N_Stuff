@@ -29,14 +29,14 @@ public class HnSPlacedFeatures {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, ZENALITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.ZENALITE_ORE_KEY),
-                HnSOrePlacement.commonOrePlacement(24,
+                HnSOrePlacement.commonOrePlacement(2,
                         HeightRangePlacement
                                 .uniform(VerticalAnchor.absolute(-64),
-                                VerticalAnchor.absolute(80))
+                                        VerticalAnchor.absolute(80))
                 ));
 
         register(context, SOLAR_CORE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.SOLAR_CORE_ORE_KEY),
-                HnSOrePlacement.commonOrePlacement(20,
+                HnSOrePlacement.commonOrePlacement(5,
                         HeightRangePlacement
                                 .uniform(VerticalAnchor.absolute(-64),
                                         VerticalAnchor.absolute(80))
@@ -44,16 +44,16 @@ public class HnSPlacedFeatures {
 
         register(context, RUNESTONE_SLAG_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.RUNESTONE_SLAG_KEY),
                 HnSOrePlacement
-                        .commonOrePlacement(30, HeightRangePlacement
-                                        .uniform(VerticalAnchor.absolute(0),
-                                                VerticalAnchor.top()))
+                        .commonOrePlacement(16, HeightRangePlacement
+                                .uniform(VerticalAnchor.absolute(0),
+                                        VerticalAnchor.top()))
         );
 
         register(context, CHLOROPHYTE_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.CHLOROPHYTE_ORE_KEY),
                 HnSOrePlacement
-                        .commonOrePlacement(16, HeightRangePlacement
+                        .commonOrePlacement(5, HeightRangePlacement
                                 .uniform(VerticalAnchor
-                                        .absolute(0),
+                                                .absolute(0),
                                         VerticalAnchor.top()))
         );
 
@@ -67,7 +67,6 @@ public class HnSPlacedFeatures {
 
 
     }
-
 
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

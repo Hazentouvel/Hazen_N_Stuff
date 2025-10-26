@@ -88,7 +88,14 @@ public class AptosEntity extends AbstractSpellCastingMob implements GeoEntity, I
     }
 
     public static AttributeSupplier.Builder prepareAttributes() {
-        return Monster.createMonsterAttributes().add(Attributes.MAX_HEALTH, (double)50.0F).add(Attributes.ATTACK_DAMAGE, (double)10.0F).add(Attributes.ENTITY_INTERACTION_RANGE, (double)3.5F).add(Attributes.STEP_HEIGHT, (double)1.0F).add(Attributes.ARMOR, (double)8.0F).add(Attributes.KNOCKBACK_RESISTANCE, 0.8).add(Attributes.MOVEMENT_SPEED, 0.21).add(Attributes.FOLLOW_RANGE, (double)24.0F).add(Attributes.ATTACK_KNOCKBACK, 1.6);
+        return Monster.createMonsterAttributes()
+                .add(Attributes.MAX_HEALTH, (double)50.0F)
+                .add(Attributes.ATTACK_DAMAGE, (double)10.0F)
+                .add(Attributes.ENTITY_INTERACTION_RANGE, (double)3.5F)
+                .add(Attributes.STEP_HEIGHT, (double)1.0F).add(Attributes.ARMOR, (double)8.0F)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 0.8).add(Attributes.MOVEMENT_SPEED, 0.21)
+                .add(Attributes.FOLLOW_RANGE, (double)24.0F).add(Attributes.ATTACK_KNOCKBACK, 1.6)
+                ;
     }
 
     public void setSummoner(@Nullable LivingEntity owner) {

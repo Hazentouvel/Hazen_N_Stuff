@@ -9,6 +9,7 @@ import net.hazen.hazennstuff.Spells.Holy.GoldenShowerSpell;
 import net.hazen.hazennstuff.Spells.Nature.CounterspellSpiderLilySpell;
 import net.hazen.hazennstuff.Spells.Nature.DeathSentenceSpell;
 import net.hazen.hazennstuff.Spells.Nature.ShardSwordSpell;
+import net.hazen.hazennstuff.Spells.Radiance.*;
 import net.hazen.hazennstuff.Spells.Shadow.NightsEdgeStrikeSpell;
 import net.hazen.hazennstuff.Spells.Shadow.ChaoticTeleportSpell;
 import net.hazen.hazennstuff.Spells.Fire.BrimstoneHellblastSpell;
@@ -16,7 +17,6 @@ import net.hazen.hazennstuff.Spells.Fire.CinderousStepSpell;
 import net.hazen.hazennstuff.Spells.Ice.CrystalVolleySpell;
 import net.hazen.hazennstuff.Spells.Ice.IceArrowSpell;
 import net.hazen.hazennstuff.Spells.Lightning.EnergyBurstSpell;
-import net.hazen.hazennstuff.Spells.Radiance.SyringeBarrageSpell;
 import net.hazen.hazennstuff.Spells.Nature.ThornChakramSpell;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -32,17 +32,17 @@ public class HnSSpellRegistries {
         return SPELLS.register(spell.getSpellName(), () -> spell);
     }
 
-    /***
-     * Ender
+    /*
+     *** Ender
      */
 
-    /***
-     * Blood
+    /*
+     *** Blood
      */
 
 
-    /***
-     * Fire
+    /*
+     *** Fire
      */
 
     //Brimstone Hellblast
@@ -64,8 +64,8 @@ public class HnSSpellRegistries {
     //Crystal Volley
     public static final Supplier<AbstractSpell> CRYSTAL_VOLLEY = registerSpell(new CrystalVolleySpell());
 
-    /***
-     * Lightning
+    /*
+     *** Lightning
      */
 
     //Energy Burst
@@ -103,17 +103,28 @@ public class HnSSpellRegistries {
     // Golden Shower
     public static final Supplier<AbstractSpell> GOLDEN_SHOWER = registerSpell(new GoldenShowerSpell());
 
-
-
-    /***
-     * Luminescent
+    /*
+     *** Radiance
      */
 
     //Syringe Barrage
     public static final Supplier<AbstractSpell> SYRINGE_BARRAGE = registerSpell(new SyringeBarrageSpell());
 
-    /***
-     * Dark
+    // Shooting Star
+    public static final Supplier<AbstractSpell> SHOOTING_STAR = registerSpell(new ShootingStarSpell());
+
+    // Falling Stars
+    public static final Supplier<AbstractSpell> FALLING_STARS = registerSpell(new FallingStarsSpell());
+
+    // Terraprisma
+    public static final Supplier<AbstractSpell> TERRAPRISMIC_BARRAGE = registerSpell(new TerraprismicBarrageSpell());
+
+
+    // Call Forth Terraprisma
+    public static final Supplier<AbstractSpell> CALL_FORTH_TERRAPRISMA = registerSpell(new CallForthTerraprismaSpell());
+
+    /*
+     *** Dark
      */
 
     //Night's Edge Strike

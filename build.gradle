@@ -148,19 +148,19 @@ configurations {
 dependencies {
 
     //Iron's Spells 'n Spellbooks
-    implementation "curse.maven:iss-855414:6932556"
+    implementation "curse.maven:iss-855414:7114204"
     implementation "curse.maven:geckolib-388172:6304958"
     implementation "curse.maven:player_animator-658587:6024462"
     implementation "curse.maven:curios-309927:6342656"
-
     //Apothic Attributes
     implementation "curse.maven:apothic-attributes-898963:6302334"
     implementation "curse.maven:placebo-283644:6337156"
     compileOnly "curse.maven:apotheosis-${apotheosis_version}"
-
     //Ace Utils
-    implementation "curse.maven:ace_utils-1299492:7104992"
-
+    implementation "curse.maven:ace_utils-1299492:7119308"
+    // Photon
+    //implementation "curse.maven:photon-871522:6911487"
+    //implementation "curse.maven:ldlib-626676:6911394"
     //AzureLib
     implementation "mod.azure.azurelib:azurelib-neo-${minecraft_version}:${azurelib_version}"
 
@@ -168,6 +168,9 @@ dependencies {
     compileOnly "mezz.jei:jei-${jei_mc_version}-common-api:${jei_version}"
     compileOnly "mezz.jei:jei-${jei_mc_version}-neoforge-api:${jei_version}"
     runtimeOnly "mezz.jei:jei-${jei_mc_version}-neoforge:${jei_version}"
+
+    // Embeddium
+    localRuntime "curse.maven:embeddium-908741:6118392"
 
     //Better Combat
     localRuntime "curse.maven:better-combat-by-daedelus-639842:5723092"
@@ -183,6 +186,10 @@ dependencies {
 
      localRuntime "curse.maven:lodestone-616457:6630047"
      compileOnly "curse.maven:lodestone-616457:6630047"
+
+    // Iron's Gems 'n Jewelry
+    localRuntime "curse.maven:irons_gems_n_jewelry-1101111:7084345"
+    localRuntime "curse.maven:atlas_api-1145462:6880789"
 
     //Cataclysm Spellbooks
     //localRuntime "curse.maven:cataclysm_spellbooks-1099461:6925079"

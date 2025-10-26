@@ -22,7 +22,6 @@ public class HammerOfJusticeRenderer extends AzItemRenderer {
         super(
                 AzItemRendererConfig.builder(GEO, TEX)
                         .setAnimatorProvider(HammerOfJusticeAnimator::new)
-                        .setPipelineContext(AzArmorLeggingTorsoLayerPipeline::new)
                         .addRenderLayer(new AzAutoGlowingLayer<>())
                         .build()
         );

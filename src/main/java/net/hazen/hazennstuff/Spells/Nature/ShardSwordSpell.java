@@ -61,11 +61,11 @@ public class ShardSwordSpell extends AbstractSpell {
     }
 
     public Optional<SoundEvent> getCastStartSound() {
-        return Optional.of((SoundEvent)SoundRegistry.FLAMING_STRIKE_UPSWING.get());
+        return Optional.of(SoundRegistry.FLAMING_STRIKE_UPSWING.get());
     }
 
     public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of((SoundEvent)SoundRegistry.FLAMING_STRIKE_SWING.get());
+        return Optional.of(SoundRegistry.FLAMING_STRIKE_SWING.get());
     }
 
     public CastType getCastType() {
@@ -92,21 +92,21 @@ public class ShardSwordSpell extends AbstractSpell {
         float radius = 3.25F;
         float distance = 1.9F;
         Vec3 forward = entity.getForward();
-        Vec3 hitLocation = entity.position().add((double)0.0F, (double)(entity.getBbHeight() * 0.3F), (double)0.0F).add(forward.scale((double)distance));
-        List<Entity> entities = level.getEntities(entity, AABB.ofSize(hitLocation, (double)(radius * 2.0F), (double)radius, (double)(radius * 2.0F)));
+        Vec3 hitLocation = entity.position().add(0.0F, (entity.getBbHeight() * 0.3F), 0.0F).add(forward.scale(distance));
+        List<Entity> entities = level.getEntities(entity, AABB.ofSize(hitLocation, (radius * 2.0F), radius, (radius * 2.0F)));
         SpellDamageSource damageSource = this.getDamageSource(entity);
 
         for(Entity targetEntity : entities) {
             if (targetEntity instanceof LivingEntity && targetEntity.isAlive() && entity.isPickable() && targetEntity.position().subtract(entity.getEyePosition()).dot(forward) >= (double)0.0F && entity.distanceToSqr(targetEntity) < (double)(radius * radius) && Utils.hasLineOfSight(level, entity.getEyePosition(), targetEntity.getBoundingBox().getCenter(), true)) {
                 Vec3 offsetVector = targetEntity.getBoundingBox().getCenter().subtract(entity.getEyePosition());
                 if (offsetVector.dot(forward) >= (double)0.0F && DamageSources.applyDamage(targetEntity, this.getDamage(spellLevel, entity), damageSource)) {
-                    MagicManager.spawnParticles(level, HnSParticleHelper.BLADE_PARTICLE, targetEntity.getX(), targetEntity.getY() + (double)(targetEntity.getBbHeight() * 0.5F), targetEntity.getZ(), 30, (double)(targetEntity.getBbWidth() * 0.5F), (double)(targetEntity.getBbHeight() * 0.5F), (double)(targetEntity.getBbWidth() * 0.5F), 0.03, false);
+                    MagicManager.spawnParticles(level, HnSParticleHelper.BLADE_PARTICLE, targetEntity.getX(), targetEntity.getY() + (double)(targetEntity.getBbHeight() * 0.5F), targetEntity.getZ(), 30, (targetEntity.getBbWidth() * 0.5F), (targetEntity.getBbHeight() * 0.5F), (targetEntity.getBbWidth() * 0.5F), 0.03, false);
                     EnchantmentHelper.doPostAttackEffects((ServerLevel)level, targetEntity, damageSource);
                 }
             }
         }
         boolean mirrored = playerMagicData.getCastingEquipmentSlot().equals(SpellSelectionManager.OFFHAND);
-        MagicManager.spawnParticles(level, new NatureSlashOptions((float)forward.x, (float)forward.y, (float)forward.z, mirrored, false, 1.0F), hitLocation.x, hitLocation.y + 0.3, hitLocation.z, 1, (double)0.0F, (double)0.0F, (double)0.0F, (double)0.0F, true);
+        MagicManager.spawnParticles(level, new NatureSlashOptions((float)forward.x, (float)forward.y, (float)forward.z, mirrored, false, 1.0F), hitLocation.x, hitLocation.y + 0.3, hitLocation.z, 1, 0.0F, 0.0F, 0.0F, 0.0F, true);
         super.onCast(level, spellLevel, entity, castSource, playerMagicData);
     }
 

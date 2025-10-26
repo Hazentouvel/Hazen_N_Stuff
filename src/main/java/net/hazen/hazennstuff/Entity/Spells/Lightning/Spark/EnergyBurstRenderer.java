@@ -4,6 +4,7 @@ package net.hazen.hazennstuff.Entity.Spells.Lightning.Spark;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
+import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.TerraprismaEmissiveLayer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -18,6 +19,8 @@ public class EnergyBurstRenderer extends GeoEntityRenderer<EnergyBurst> {
     public EnergyBurstRenderer(EntityRendererProvider.Context context) {
         super(context, new EnergyBurstModel());
         this.shadowRadius = 0f;
+
+        this.addRenderLayer(new EnergyBurstEmissiveLayer(this));
     }
 
     @Override
@@ -38,6 +41,6 @@ public class EnergyBurstRenderer extends GeoEntityRenderer<EnergyBurst> {
 
     @Override
     public RenderType getRenderType(EnergyBurst animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick) {
-        return RenderType.energySwirl(texture, 0, 0);
+        return RenderType.entityCutout(texture);
     }
 }

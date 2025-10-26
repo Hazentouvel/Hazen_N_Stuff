@@ -756,6 +756,8 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.MEOWMERE.get());
                         //Spectrum
                         output.accept(HnSItems.SPECTRUM.get());
+                        //Terraprisma
+                        output.accept(HnSItems.TERRAPRISMA.get());
 
 
                         //Evocation

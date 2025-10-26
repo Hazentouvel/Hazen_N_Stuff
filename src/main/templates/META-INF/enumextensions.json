@@ -2,11 +2,11 @@
   "entries": [
     {
       "enum": "net/minecraft/world/item/Rarity",
-      "name": "HAZENNSTUFF_RARITY_FLAMING",
+      "name": "HAZENNSTUFF_RARITY_FIRE",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/Rarity/FlamingRarity",
-        "field": "FLAMING_RARITY_PROXY"
+        "class": "net/hazen/hazennstuff/Rarity/FireRarity",
+        "field": "FIRE_RARITY_PROXY"
       }
     },
 
@@ -22,11 +22,11 @@
 
     {
       "enum": "net/minecraft/world/item/Rarity",
-      "name": "HAZENNSTUFF_RARITY_DIVINE",
+      "name": "HAZENNSTUFF_RARITY_HOLY",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/Rarity/DivineRarity",
-        "field": "DIVINE_RARITY_PROXY"
+        "class": "net/hazen/hazennstuff/Rarity/HolyRarity",
+        "field": "HOLY_RARITY_PROXY"
       }
     },
 
@@ -82,21 +82,21 @@
 
     {
       "enum": "net/minecraft/world/item/Rarity",
-      "name": "HAZENNSTUFF_RARITY_ELECTRIC",
+      "name": "HAZENNSTUFF_RARITY_LIGHTNING",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/Rarity/ElectricRarity",
-        "field": "ELECTRIC_RARITY_PROXY"
+        "class": "net/hazen/hazennstuff/Rarity/LightningRarity",
+        "field": "LIGHTNING_RARITY_PROXY"
       }
     },
 
     {
       "enum": "net/minecraft/world/item/Rarity",
-      "name": "HAZENNSTUFF_RARITY_CRYOGENIC",
+      "name": "HAZENNSTUFF_RARITY_ICE",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "net/hazen/hazennstuff/Rarity/CryogenicRarity",
-        "field": "CRYOGENIC_RARITY_PROXY"
+        "class": "net/hazen/hazennstuff/Rarity/IceRarity",
+        "field": "ICE_RARITY_PROXY"
       }
     },
 

@@ -134,6 +134,6 @@ public class GeckolibAscendedArbitriumRobesArmorItem extends ImbuableGeckolibHnS
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "ignis_armor_winged", 10, this::wings));
+        controllers.add(new AnimationController<>(this, "ascended_arbtrium_robes", 10, this::wings));
     }
 }

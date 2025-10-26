@@ -10,7 +10,7 @@ import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Rarity.ElectricRarity;
+import net.hazen.hazennstuff.Rarity.LightningRarity;
 import net.hazen.hazennstuff.Registries.HnSExtras.MagicMace.MagicMaceItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
@@ -44,7 +44,7 @@ public class SkyscorcherItem extends MagicMaceItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(ElectricRarity.ELECTRIC_RARITY_PROXY.getValue())
+                        .rarity(LightningRarity.LIGHTNING_RARITY_PROXY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.SKYSCORCHER))
                         .component(DataComponents.TOOL, MaceItem.createToolProperties()),
                 SpellDataRegistryHolder.of(

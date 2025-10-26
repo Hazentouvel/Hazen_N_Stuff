@@ -366,6 +366,19 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(HnSAttributeRegistry.RADIANCE_MAGIC_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
+    public static HnSExtendedWeaponsTiers TERRAPRISMA = new HnSExtendedWeaponsTiers(
+            8064,
+            10,
+            -2.7F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(HnSAttributeRegistry.RADIANCE_MAGIC_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
     /*
      *** Shadow
      */

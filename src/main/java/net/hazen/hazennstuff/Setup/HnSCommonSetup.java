@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Setup;
 
+import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprismaEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.BishopOfDeciet.BishopOfDeceitEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Electromancer.ElectromancerEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Necromancers.NamelessOne.NamelessOneEntity;
@@ -33,6 +34,7 @@ public class HnSCommonSetup {
         event.put(HnSEntityRegistry.DRYAD.get(), DryadEntity.prepareAttributes().build());
         event.put(HnSEntityRegistry.NAMELESS_ONE.get(), NamelessOneEntity.prepareAttributes().build());
         event.put(HnSEntityRegistry.NECROMANCER.get(), NecromancerEntity.prepareAttributes().build());
+        event.put(HnSEntityRegistry.TERRAPRISMA.get(), SummonedTerraprismaEntity.prepareAttributes().build());
     }
 }
 

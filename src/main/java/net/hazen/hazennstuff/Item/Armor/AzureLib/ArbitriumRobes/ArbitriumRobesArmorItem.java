@@ -7,7 +7,7 @@ import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.Armor.ImbuableHnSArmorItem;
-import net.hazen.hazennstuff.Item.Dispatcher.HnSDispatcher;
+import net.hazen.hazennstuff.Dispatcher.HnSDispatcher;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;

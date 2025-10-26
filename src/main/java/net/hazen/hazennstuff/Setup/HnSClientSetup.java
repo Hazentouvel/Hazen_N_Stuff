@@ -1,5 +1,11 @@
 package net.hazen.hazennstuff.Setup;
 
+import io.redspace.ironsspellbooks.entity.spells.summoned_weapons.SummonedSwordModel;
+import io.redspace.ironsspellbooks.entity.spells.summoned_weapons.SummonedSwordRenderer;
+import io.redspace.ironsspellbooks.registries.EntityRegistry;
+import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprismaModel;
+import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprismaRenderer;
+import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprismicEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.BishopOfDeciet.BishopOfDeceitRenderer;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Necromancers.NamelessOne.NamelessOneRenderer;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Necromancers.Necromancer.NecromancerRenderer;
@@ -21,8 +27,11 @@ import net.hazen.hazennstuff.Entity.Spells.Fire.BrimstoneHellblast.BrimstoneHell
 import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.IceArrowRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.CrystalVolley.CrystalVolleyRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.Spark.EnergyBurstRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.FallingStars.FallingStarRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.ShootingStarRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Syringe.SyringeRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Nature.ThornChakram.ThornChakramRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.TerraprismaRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.NightsEdgeAfterSlash.NightsEdgeAfterSlashRenderer;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
@@ -31,6 +40,7 @@ import net.hazen.hazennstuff.Registries.Particle.General.HnSGenericParticle;
 import net.hazen.hazennstuff.Registries.Particle.NatureSlash.NatureSlash;
 import net.hazen.hazennstuff.Registries.Particle.NightsEdgeStrike.NightsEdgeStrike;
 import net.minecraft.client.renderer.entity.NoopRenderer;
+import net.minecraft.world.entity.EntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -60,6 +70,9 @@ public class HnSClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.DEATH_SENTENCE.get(), DeathSentenceRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.NIGHTS_EDGE_AFTER_SLASH.get(), NightsEdgeAfterSlashRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.SCORCHING_SLASH.get(), ScorchingSlashRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.SHOOTING_STAR.get(), ShootingStarRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.FALLING_STAR.get(), FallingStarRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.TERRAPRISMA_PROJECTILE.get(), TerraprismaRenderer::new);
 
 
         /*
@@ -77,6 +90,7 @@ public class HnSClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.DRYAD.get(), DryadRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.NECROMANCER.get(), NecromancerRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.NAMELESS_ONE.get(), NamelessOneRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.TERRAPRISMA.get(), (e) -> new SummonedTerraprismaRenderer(e, SummonedTerraprismaModel::new));
 
 
         /*

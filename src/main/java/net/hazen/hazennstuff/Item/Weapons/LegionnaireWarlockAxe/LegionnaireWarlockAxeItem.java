@@ -3,7 +3,7 @@ package net.hazen.hazennstuff.Item.Weapons.LegionnaireWarlockAxe;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Rarity.FlamingRarity;
+import net.hazen.hazennstuff.Rarity.FireRarity;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
@@ -22,7 +22,7 @@ public class LegionnaireWarlockAxeItem extends ExtendedSwordItem implements GeoI
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(FlamingRarity.FLAMING_RARITY_PROXY.getValue())
+                        .rarity(FireRarity.FIRE_RARITY_PROXY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.LEGIONNAIRE_WARLOCK_AXE)
                         )
         );

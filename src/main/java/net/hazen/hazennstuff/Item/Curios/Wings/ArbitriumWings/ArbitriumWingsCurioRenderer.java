@@ -46,7 +46,7 @@ public class ArbitriumWingsCurioRenderer implements ICurioRenderer {
         matrixStack.translate(0.0D, -0.4D, 0.0D); // x = sideways, y = up/down, z = forward/back
 
         AzBakedModel model = curioRenderer.provider().provideBakedModel(entity, stack);
-        ResourceLocation textureLocation = EnergizedCoreSpellbookCurioItemRenderer.TEX;
+        ResourceLocation textureLocation = ArbitriumWingsCurioItemRenderer.TEX;
         RenderType renderType = RenderType.entityCutout(textureLocation);
         VertexConsumer buffer = renderTypeBuffer.getBuffer(renderType);
 

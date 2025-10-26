@@ -46,11 +46,8 @@ public class HnSBlockStateProvider extends BlockStateProvider {
          *** Ores
          */
 
-        blockWithItem(HnSBlocks.SOLAR_CORE_BLACKSTONE_ORE);
-        blockWithItem(HnSBlocks.SOLAR_CORE_NETHERACK_ORE);
         blockWithItem(HnSBlocks.CHLOROPHYTE_ORE);
         blockWithItem(HnSBlocks.DREADSTONE_ORE);
-        blockWithItem(HnSBlocks.ZENALITE_END_STONE_ORE);
 
         /*
         *** Wood

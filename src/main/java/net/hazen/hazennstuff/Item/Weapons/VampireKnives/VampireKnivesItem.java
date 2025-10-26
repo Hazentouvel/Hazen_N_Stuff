@@ -9,7 +9,7 @@ import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
-import net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife.LifestealKnife;
+import net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife.VampireKnife;
 import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.Rarity.BloodRarity;
 import net.hazen.hazennstuff.Registries.HnSSounds;
@@ -109,7 +109,7 @@ public class VampireKnivesItem extends MagicSwordItem implements GeoItem {
                 double yPower = look.y + (level.random.nextGaussian() * spread);
                 double zPower = look.z + (level.random.nextGaussian() * spread);
 
-                LifestealKnife projectile = new LifestealKnife(level, player);
+                VampireKnife projectile = new VampireKnife(level, player);
                 projectile.setPos(player.getX(), player.getEyeY() - 0.1, player.getZ());
                 projectile.shoot(xPower, yPower, zPower, 1.5f, 0); // velocity and inaccuracy
                 level.addFreshEntity(projectile);

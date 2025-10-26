@@ -32,6 +32,7 @@ import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.Energ
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioRenderer;
+import net.hazen.hazennstuff.Item.Weapons.Terraprisma.TerraprismaRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Volcano.VolcanoRenderer;
 import net.hazen.hazennstuff.Registries.*;
 import net.hazen.hazennstuff.Item.Weapons.HammerOfJustice.HammerOfJusticeRenderer;
@@ -51,7 +52,6 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
@@ -95,20 +95,14 @@ public class HazenNStuff
         modContainer.registerConfig(ModConfig.Type.COMMON, HnSConfig.SPEC);
     }
 
-    public void commonSetup(final FMLCommonSetupEvent event)
-    {
-    }
-
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
-        // Do something when the server starts
-        LOGGER.info("HELP!");
     }
 
-    @EventBusSubscriber(modid = MOD_ID, value = Dist.CLIENT)
+    @EventBusSubscriber(value = Dist.CLIENT)
     public static class ClientModEvents
     {
         @SubscribeEvent
@@ -241,6 +235,7 @@ public class HazenNStuff
             // Item Rendering Registry
             AzItemRendererRegistry.register(HammerOfJusticeRenderer::new, HnSItems.HAMMER_OF_JUSTICE.get());
             AzItemRendererRegistry.register(VolcanoRenderer::new, HnSItems.VOLCANO.get());
+            AzItemRendererRegistry.register(TerraprismaRenderer::new, HnSItems.TERRAPRISMA.get());
 
             //Curios Rendering Registry
 
@@ -372,6 +367,7 @@ public class HazenNStuff
 
                     HnSItems.HAMMER_OF_JUSTICE.get(),
                     HnSItems.VOLCANO.get(),
+                    HnSItems.TERRAPRISMA.get(),
 
                     // Curios
 

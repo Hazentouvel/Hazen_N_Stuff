@@ -20,7 +20,9 @@ import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
+import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
 
@@ -34,6 +36,8 @@ public class GeckolibBlazeborneArmorItem extends ImbuableGeckolibHnSArmorItem im
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
     }
+    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+
 
     public List<ItemAttributeModifiers.Entry> createExtraAttributes() {
         var group = EquipmentSlotGroup.bySlot(getEquipmentSlot());
@@ -50,7 +54,7 @@ public class GeckolibBlazeborneArmorItem extends ImbuableGeckolibHnSArmorItem im
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new GeckolibBlazeborneArmorModel());
+        return new GeckolibBlazeborneArmorRenderer(new GeckolibBlazeborneArmorModel());
     }
 
     @Override

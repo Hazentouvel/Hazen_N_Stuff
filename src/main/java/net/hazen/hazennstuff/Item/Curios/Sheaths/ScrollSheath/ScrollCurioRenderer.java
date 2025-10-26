@@ -46,7 +46,7 @@ public class ScrollCurioRenderer implements ICurioRenderer {
         matrixStack.translate(-0.3D, -0.7D, 0.0D); // x = sideways, y = up/down, z = forward/back
 
         AzBakedModel model = curioRenderer.provider().provideBakedModel(entity, stack);
-        ResourceLocation textureLocation = EnergizedCoreSpellbookCurioItemRenderer.TEX;
+        ResourceLocation textureLocation = ScrollSheathItemRenderer.TEX;
         RenderType renderType = RenderType.entityCutout(textureLocation);
         VertexConsumer buffer = renderTypeBuffer.getBuffer(renderType);
 

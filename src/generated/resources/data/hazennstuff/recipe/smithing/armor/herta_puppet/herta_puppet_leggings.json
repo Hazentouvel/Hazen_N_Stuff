@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:magic_cloth"
+  },
+  "base": {
+    "item": "irons_spellbooks:cryomancer_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:herta_puppet_leggings"
+  },
+  "template": {
+    "item": "irons_spellbooks:ice_rune"
+  }
+}

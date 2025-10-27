@@ -86,35 +86,35 @@ public class FieryDaggerSpell extends AbstractSpell {
 
                 world.addFreshEntity(dagger);
             }
-        }
-        else {
+        } else {
             // LEVELS 1–5: overhead arc of daggers above the player
             int count = 8; // number of daggers
-            double arcAngle = Math.toRadians(120); // total curvature angle (e.g. 120°)
+            double arcAngle = Math.toRadians(120); // total curvature angle (e.g. 100°)
             double radius = 1.6; // distance from the player's center
             double height = 1.2; // how far above the player’s head
-            float shootSpeed = 1.2F; // forward velocity
-            float inaccuracy = 0.0F; // how straight they fly
+            int baseDelay = 10;
+            int delayBetween = 2;
 
-            // Local orientation relative to where the player is facing
+            // Proper local orientation
             Vec3 forward = entity.getLookAngle().normalize();
             Vec3 up = new Vec3(0, 1, 0);
             Vec3 right = forward.cross(up).normalize();
-            up = right.cross(forward).normalize(); // ensure orthogonal (prevents drift)
+            up = right.cross(forward).normalize(); // ensure orthogonal
 
             // Center of the arc — above the player’s head and slightly forward
             Vec3 arcCenter = entity.position()
                     .add(0, entity.getEyeHeight() + height, 0)
                     .add(forward.scale(0.5));
 
+            // Build a vertical arc that curves *overhead*
             for (int i = 0; i < count; i++) {
                 double t = (double) i / (count - 1);
                 double angle = -arcAngle / 2 + t * arcAngle; // spans from left to right
 
-                // Arc
+                // Use sine/cosine to create a "rainbow" arc overhead
                 Vec3 offset =
-                        right.scale(Math.sin(angle) * radius)   // left-right spread
-                                .add(up.scale(Math.cos(angle) * radius * 0.7)); // curve height
+                        right.scale(Math.sin(angle) * radius)   // left/right
+                                .add(up.scale(Math.cos(angle) * radius * 0.7)); // vertical curve
 
                 Vec3 spawnPos = arcCenter.add(offset);
 
@@ -124,12 +124,11 @@ public class FieryDaggerSpell extends AbstractSpell {
                 dagger.setExplosionRadius(0f);
                 dagger.setPos(spawnPos);
 
-                // Make the dagger face the player’s direction
-                dagger.setYRot(entity.getYRot());
-                dagger.setXRot(entity.getXRot());
-
-                // FIRE FORWARD (this is what makes them actually move)
-                dagger.shoot(forward.x, forward.y, forward.z, shootSpeed, inaccuracy);
+                // all daggers shoot forward
+                dagger.launchDir = forward;
+                dagger.ownerTrack = spawnPos.subtract(entity.position());
+                dagger.setDeltaMovement(0, 0, 0);
+                dagger.delay = baseDelay + i * delayBetween;
 
                 world.addFreshEntity(dagger);
             }

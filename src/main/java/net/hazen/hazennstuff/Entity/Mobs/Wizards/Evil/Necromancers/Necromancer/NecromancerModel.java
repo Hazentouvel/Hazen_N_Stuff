@@ -9,7 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 public class NecromancerModel extends AbstractSpellCastingMobModel {
     @Override
     public ResourceLocation getTextureResource(AbstractSpellCastingMob mob) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/mobs/necromancer.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/mobs/necromancer_skeleton.png");
     }
 
     @Override

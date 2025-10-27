@@ -1,11 +1,8 @@
 package net.hazen.hazennstuff.Setup;
 
-import io.redspace.ironsspellbooks.entity.spells.summoned_weapons.SummonedSwordModel;
-import io.redspace.ironsspellbooks.entity.spells.summoned_weapons.SummonedSwordRenderer;
 import io.redspace.ironsspellbooks.registries.EntityRegistry;
 import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprismaModel;
 import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprismaRenderer;
-import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprismicEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.BishopOfDeciet.BishopOfDeceitRenderer;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Necromancers.NamelessOne.NamelessOneRenderer;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Necromancers.Necromancer.NecromancerRenderer;
@@ -20,6 +17,7 @@ import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.TheRecluse.TheRecluseRende
 import net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife.LifestealKnifeRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Eldritch.SoulSeeker.SoulSeekerRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Evocation.SpectralAxe.SpectralRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectileRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Fire.ImmolatingObliterator.ScorchingSlashRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Nature.DeathSentence.DeathSentenceRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Nature.SpiderLily.SpiderLilyRenderer;
@@ -73,6 +71,7 @@ public class HnSClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.SHOOTING_STAR.get(), ShootingStarRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.FALLING_STAR.get(), FallingStarRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.TERRAPRISMA_PROJECTILE.get(), TerraprismaRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.FIERY_DAGGER_MAGIC_PROJECTILE.get(), FieryDaggerMagicProjectileRenderer::new);
 
 
         /*
@@ -90,7 +89,7 @@ public class HnSClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.DRYAD.get(), DryadRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.NECROMANCER.get(), NecromancerRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.NAMELESS_ONE.get(), NamelessOneRenderer::new);
-        event.registerEntityRenderer(HnSEntityRegistry.TERRAPRISMA.get(), (e) -> new SummonedTerraprismaRenderer(e, SummonedTerraprismaModel::new));
+        event.registerEntityRenderer(HnSEntityRegistry.TERRAPRISMA.get(), SummonedTerraprismaRenderer::new);
 
 
         /*

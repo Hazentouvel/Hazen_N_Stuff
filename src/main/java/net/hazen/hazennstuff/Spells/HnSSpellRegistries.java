@@ -4,6 +4,7 @@ import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Spells.Eldritch.SoulSeekersSpell;
 import net.hazen.hazennstuff.Spells.Evocation.SpectralAxeSpell;
+import net.hazen.hazennstuff.Spells.Fire.FieryDaggerSpell;
 import net.hazen.hazennstuff.Spells.Fire.ScorchingSlashSpell;
 import net.hazen.hazennstuff.Spells.Holy.GoldenShowerSpell;
 import net.hazen.hazennstuff.Spells.Nature.CounterspellSpiderLilySpell;
@@ -53,6 +54,9 @@ public class HnSSpellRegistries {
 
     //Scorching Slash
     public static final Supplier<AbstractSpell> SCORCHING_SLASH = registerSpell(new ScorchingSlashSpell());
+
+    //Scorching Slash
+    public static final Supplier<AbstractSpell> FIERY_DAGGER = registerSpell(new FieryDaggerSpell());
 
     /*
     *** Ice

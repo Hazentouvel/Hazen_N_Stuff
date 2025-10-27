@@ -11,6 +11,8 @@ import org.jetbrains.annotations.Nullable;
 public class NecromancerRenderer extends AbstractSpellCastingMobRenderer {
     public NecromancerRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new NecromancerModel());
+
+        this.addRenderLayer(new NecromancerEmissiveLayer(this));
     }
 
     public RenderType getRenderType(AbstractSpellCastingMob animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick) {

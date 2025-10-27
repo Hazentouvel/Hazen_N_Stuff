@@ -1,7 +1,8 @@
-package net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma;
+package net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Necromancers.Necromancer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.AbstractSpellCastingMob;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.texture.OverlayTexture;
@@ -10,9 +11,9 @@ import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 import software.bernie.geckolib.renderer.layer.GeoRenderLayer;
 
-public class SummonedTerraprismaEmissiveLayer extends GeoRenderLayer<SummonedTerraprisma> {
+public class NecromancerEmissiveLayer extends GeoRenderLayer<AbstractSpellCastingMob> {
 
-    public SummonedTerraprismaEmissiveLayer(GeoEntityRenderer<SummonedTerraprisma> renderer) {
+    public NecromancerEmissiveLayer(GeoEntityRenderer<AbstractSpellCastingMob> renderer) {
         super(renderer);
     }
 
@@ -24,7 +25,7 @@ public class SummonedTerraprismaEmissiveLayer extends GeoRenderLayer<SummonedTer
     @Override
     public void render(
             PoseStack poseStack,
-            SummonedTerraprisma animatable,
+            AbstractSpellCastingMob animatable,
             BakedGeoModel bakedModel,
             RenderType renderType,
             MultiBufferSource bufferSource,
@@ -35,12 +36,9 @@ public class SummonedTerraprismaEmissiveLayer extends GeoRenderLayer<SummonedTer
     ) {
         if (animatable.isInvisible()) return;
 
-        // Animate glow texture
-        int frameCount = 20;
-        int frame = animatable.tickCount % frameCount;
         ResourceLocation frameTexture = ResourceLocation.fromNamespaceAndPath(
                 "hazennstuff",
-                "textures/spells/terraprisma/terraprisma_glowmask_" + frame + ".png"
+                "textures/mobs/necromancer_skeleton_glowmask.png"
         );
 
         RenderType emissiveType = glowRenderType(frameTexture);

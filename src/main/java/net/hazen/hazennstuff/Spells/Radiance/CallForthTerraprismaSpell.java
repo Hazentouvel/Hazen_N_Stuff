@@ -16,12 +16,11 @@ import io.redspace.ironsspellbooks.capabilities.magic.RecastInstance;
 import io.redspace.ironsspellbooks.capabilities.magic.RecastResult;
 import io.redspace.ironsspellbooks.capabilities.magic.SummonManager;
 import io.redspace.ironsspellbooks.capabilities.magic.SummonedEntitiesCastData;
-import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprismicEntity;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import java.util.List;
 import java.util.Optional;
 
-import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprismaEntity;
+import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprisma;
 import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -122,10 +121,10 @@ public class CallForthTerraprismaSpell extends AbstractSpell {
 
 
 
-            int summonCount = Math.min(spellLevel, 5);
+            int summonCount = Math.min(spellLevel, 7);
 
             for (int i = 0; i < summonCount; i++) {
-                SummonedTerraprismicEntity terraprisma = new SummonedTerraprismaEntity(world, entity);
+                SummonedTerraprisma terraprisma = new SummonedTerraprisma(world, entity);
 
                 terraprisma.moveTo(entity.position()
                         .add(0.0F, 1.2, 0.0F)
@@ -135,8 +134,8 @@ public class CallForthTerraprismaSpell extends AbstractSpell {
                 terraprisma.getAttribute(Attributes.MAX_HEALTH).addPermanentModifier(healthModifier);
                 terraprisma.setHealth(terraprisma.getMaxHealth());
 
-                SummonedTerraprismicEntity creature =
-                        (SummonedTerraprismicEntity)(NeoForge.EVENT_BUS.post(
+                SummonedTerraprisma creature =
+                        (SummonedTerraprisma)(NeoForge.EVENT_BUS.post(
                                 new SpellSummonEvent(entity, terraprisma, this.spellId, spellLevel))
                         ).getCreature();
 

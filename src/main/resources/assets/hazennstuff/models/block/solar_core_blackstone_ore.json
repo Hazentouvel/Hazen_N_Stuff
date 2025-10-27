@@ -3,7 +3,7 @@
   "render_type": "cutout",
   "textures": {
     "particle": "hazennstuff:block/solar_core_blackstone_ore",
-    "base": "minecraft:block/deepslate",
+    "base": "minecraft:block/blackstone",
     "lit": "hazennstuff:block/solar_core_blackstone_ore_layer"
   },
   "elements": [

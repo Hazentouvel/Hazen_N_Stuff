@@ -62,16 +62,14 @@ public class TerraprismaItem extends MagicSwordItem {
                                 @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, context, lines, flag);
 
-        // --- Affinity tooltip section ---
         var affinityData = AffinityData.getAffinityData(stack);
         if (!affinityData.affinityData().isEmpty()) {
             int i = TooltipsUtils.indexOfComponent(lines, "tooltip.hazennstuff.spellbook_spell_count");
             lines.addAll(i < 0 ? lines.size() : i + 1, affinityData.getDescriptionComponent());
         }
 
-        // --- Custom item description section ---
         lines.add(Component.translatable("item.hazennstuff.terraria.description")
-                .withStyle(ChatFormatting.DARK_RED, ChatFormatting.ITALIC));
+                .withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
     }
 
     @Override
@@ -88,27 +86,30 @@ public class TerraprismaItem extends MagicSwordItem {
     }
 
     @EventBusSubscriber(value = Dist.CLIENT)
-    public class SpellEvents {
+    public static class SpellEvents {
 
         @SubscribeEvent
         public static void onModifySpellLevel(ModifySpellLevelEvent event) {
             LivingEntity caster = event.getEntity();
             if (caster == null) return;
 
-            if (event.getSpell() != HnSSpellRegistries.TERRAPRISMIC_BARRAGE.get()) {
+            var spell = event.getSpell();
+
+            boolean isTerraprismaSpell =
+                    spell == HnSSpellRegistries.TERRAPRISMIC_BARRAGE.get() ||
+                            spell == HnSSpellRegistries.CALL_FORTH_TERRAPRISMA.get();
+
+            if (!isTerraprismaSpell)
                 return;
-            }
-            if (event.getSpell() != HnSSpellRegistries.CALL_FORTH_TERRAPRISMA.get()) {
-                return;
-            }
 
             ItemStack mainHand = caster.getMainHandItem();
             ItemStack offHand = caster.getOffhandItem();
 
-            boolean usingKnives = mainHand.getItem() instanceof TerraprismaItem ||
-                    offHand.getItem() instanceof TerraprismaItem;
+            boolean usingTerraprisma =
+                    mainHand.getItem() instanceof TerraprismaItem ||
+                            offHand.getItem() instanceof TerraprismaItem;
 
-            if (usingKnives) {
+            if (usingTerraprisma) {
                 event.addLevels(1);
             }
         }

@@ -9,4 +9,5 @@ public class HnSSpellAnimations {
 
     public static final AnimationHolder COMMAND_CHARGE = new AnimationHolder(HazenNStuff.MOD_ID + ":command_charging", true);
     public static final AnimationHolder COMMAND_CAST = new AnimationHolder(HazenNStuff.MOD_ID + ":command_cast", true);
+    public static final AnimationHolder FIERY_DAGGER_CAST = new AnimationHolder(HazenNStuff.MOD_ID + ":fiery_dagger_cast", true);
 }

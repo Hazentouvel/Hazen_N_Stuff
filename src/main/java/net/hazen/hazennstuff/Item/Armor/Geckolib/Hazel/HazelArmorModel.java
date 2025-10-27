@@ -18,7 +18,7 @@ public class HazelArmorModel extends DefaultedEntityGeoModel<HazelArmorItem> {
 
     @Override
     public ResourceLocation getTextureResource(HazelArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/hazel_armor.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/hazel.png");
     }
 
     @Override

@@ -87,7 +87,14 @@ public class NecromancerEntity extends AbstractSpellCastingMob implements Enemy 
         this.setDropChance(EquipmentSlot.LEGS, 0.0f);
     }
     public static AttributeSupplier.Builder prepareAttributes() {
-        return LivingEntity.createLivingAttributes().add(Attributes.ATTACK_DAMAGE, (double)3.0F).add(Attributes.ATTACK_KNOCKBACK, (double)0.0F).add(Attributes.MAX_HEALTH, (double)25.0F).add(Attributes.FOLLOW_RANGE, (double)25.0F).add(AttributeRegistry.SPELL_POWER, (double)0.75F).add(Attributes.MOVEMENT_SPEED, (double)0.25F);
+        return LivingEntity.createLivingAttributes()
+                .add(Attributes.ATTACK_DAMAGE, (double)3.0F)
+                .add(Attributes.ATTACK_KNOCKBACK, (double)0.0F)
+                .add(Attributes.MAX_HEALTH, (double)25.0F)
+                .add(Attributes.FOLLOW_RANGE, (double)25.0F)
+                .add(AttributeRegistry.SPELL_POWER, (double)0.75F)
+                .add(Attributes.MOVEMENT_SPEED, (double)0.25F)
+                ;
     }
 
     protected boolean shouldDespawnInPeaceful() {

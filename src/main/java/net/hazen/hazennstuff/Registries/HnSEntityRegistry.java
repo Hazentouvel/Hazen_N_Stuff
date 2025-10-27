@@ -1,10 +1,10 @@
 package net.hazen.hazennstuff.Registries;
 
-import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprismaEntity;
+import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprisma;
+import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.FallingStars.FallingStar;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.ShootingStar;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.Terraprisma;
-import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.TerraprismaModel;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.BishopOfDeciet.BishopOfDeceitEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Necromancers.NamelessOne.NamelessOneEntity;
@@ -180,6 +180,14 @@ public class HnSEntityRegistry {
                     .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "terraprisma_projectile").toString())
             );
 
+    // Fiery Dagger Magic Projectile
+    public static final DeferredHolder<EntityType<?>, EntityType<FieryDaggerMagicProjectile>> FIERY_DAGGER_MAGIC_PROJECTILE =
+            ENTITIES.register("fiery_dagger_magic_projectile", () -> EntityType.Builder.<FieryDaggerMagicProjectile>of(FieryDaggerMagicProjectile::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "fiery_dagger_magic_projectile").toString())
+            );
+
 
 
 
@@ -275,8 +283,8 @@ public class HnSEntityRegistry {
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "necromancer").toString()));
 
     // Terraprisma
-    public static final DeferredHolder<EntityType<?>, EntityType<SummonedTerraprismaEntity>> TERRAPRISMA =
-            ENTITIES.register("terraprisma", () -> EntityType.Builder.<SummonedTerraprismaEntity>of(SummonedTerraprismaEntity::new, MobCategory.MONSTER)
+    public static final DeferredHolder<EntityType<?>, EntityType<SummonedTerraprisma>> TERRAPRISMA =
+            ENTITIES.register("terraprisma", () -> EntityType.Builder.<SummonedTerraprisma>of(SummonedTerraprisma::new, MobCategory.MONSTER)
                     .sized(.6f, 1.8f)
                     .clientTrackingRange(64)
                     .eyeHeight(3f)

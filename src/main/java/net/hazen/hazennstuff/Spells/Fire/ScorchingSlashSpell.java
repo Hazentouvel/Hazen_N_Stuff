@@ -68,11 +68,11 @@ public class ScorchingSlashSpell extends AbstractRavensBaneSpell {
     }
 
     public Optional<SoundEvent> getCastStartSound() {
-        return Optional.of((SoundEvent)SoundRegistry.FLAMING_STRIKE_UPSWING.get());
+        return Optional.of(SoundRegistry.FLAMING_STRIKE_UPSWING.get());
     }
 
     public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of((SoundEvent) SoundRegistry.FLAMING_STRIKE_SWING.get());
+        return Optional.of(SoundRegistry.FLAMING_STRIKE_SWING.get());
     }
 
     public CastType getCastType() {

@@ -48,7 +48,7 @@ public class TerraprismicBarrageSpell extends AbstractSpell {
     }
 
     public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of((SoundEvent) HnSSounds.TERRABLADE_SLASH.get());
+        return Optional.of(HnSSounds.TERRABLADE_SLASH.get());
     }
 
     public CastType getCastType() {
@@ -70,9 +70,6 @@ public class TerraprismicBarrageSpell extends AbstractSpell {
         return spellId;
     }
 
-
-
-    @Override
     public void onCast(Level world, int spellLevel, LivingEntity caster,
                        CastSource castSource, MagicData playerMagicData) {
         if (world.isClientSide) return;
@@ -95,6 +92,8 @@ public class TerraprismicBarrageSpell extends AbstractSpell {
 
         super.onCast(world, spellLevel, caster, castSource, playerMagicData);
     }
+
+
     public SpellDamageSource getDamageSource(@Nullable Entity projectile, Entity attacker) {
         return super.getDamageSource(projectile, attacker).setIFrames(0);
     }

@@ -17,7 +17,6 @@ public class SummonedTerraprismaEmissiveLayer extends GeoRenderLayer<SummonedTer
     }
 
     private static RenderType glowRenderType(ResourceLocation texture) {
-        // energySwirl gives additive glow blending
         return RenderType.entityCutout(texture);
     }
 

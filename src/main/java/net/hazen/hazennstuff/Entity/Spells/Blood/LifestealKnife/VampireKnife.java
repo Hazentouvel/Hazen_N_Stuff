@@ -122,9 +122,6 @@ public class VampireKnife extends AbstractMagicProjectile implements GeoEntity {
 
     }
 
-
-
-
     //ANIMATION
     private final RawAnimation idle = RawAnimation.begin().thenLoop("animation.vampire_knife_projectile.idle");
 

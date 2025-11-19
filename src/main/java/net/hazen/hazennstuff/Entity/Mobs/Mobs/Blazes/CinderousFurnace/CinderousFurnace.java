@@ -31,12 +31,17 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.phys.Vec3;
+import software.bernie.geckolib.animatable.GeoAnimatable;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.*;
+import software.bernie.geckolib.util.GeckoLibUtil;
 
 import javax.annotation.Nullable;
 import java.util.EnumSet;
 import java.util.List;
 
 public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
+    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private float allowedHeightOffset = 0.5F;
     private int nextHeightOffsetChangeTick;
     private static final EntityDataAccessor<Byte> DATA_FLAGS_ID;
@@ -270,5 +275,24 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
         private double getFollowDistance() {
             return this.cinderousFurnace.getAttributeValue(Attributes.FOLLOW_RANGE);
         }
+    }
+
+
+    //ANIMATION
+    private final RawAnimation idle = RawAnimation.begin().thenLoop("animation.cinderous_furnace.idle");
+
+    private PlayState predicate(AnimationState event) {
+        event.getController().setAnimation(idle);
+        return PlayState.CONTINUE;
+    }
+
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
+        controllerRegistrar.add(new AnimationController<GeoAnimatable>(this, "controller", 0, this::predicate));
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return this.cache;
     }
 }

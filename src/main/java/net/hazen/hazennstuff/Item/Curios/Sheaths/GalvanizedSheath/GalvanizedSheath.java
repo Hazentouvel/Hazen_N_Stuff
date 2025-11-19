@@ -6,7 +6,7 @@ import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.HnSConfig;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.InstantLightningStrike.LightningStrike;
 import net.hazen.hazennstuff.Dispatcher.HnSDispatcher;
-import net.hazen.hazennstuff.Rarity.LightningRarity;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.hazen.hazennstuff.Registries.HnSItems;
 import net.minecraft.core.Direction;
@@ -36,7 +36,7 @@ public class GalvanizedSheath extends SheathCurioItem {
     public static int COOLDOWN = HnSConfig.galvanizedSheathCooldown * 20;
 
     public GalvanizedSheath() {
-        super(new Properties().stacksTo(1).rarity(LightningRarity.LIGHTNING_RARITY_PROXY.getValue()).fireResistant(), null);
+        super(new Properties().stacksTo(1).rarity(HnSRarities.LIGHTNING_RARITY.getValue()).fireResistant(), null);
 
 
         this.dispatcher = new HnSDispatcher();

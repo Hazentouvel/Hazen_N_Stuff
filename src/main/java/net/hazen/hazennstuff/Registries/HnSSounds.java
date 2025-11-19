@@ -77,6 +77,14 @@ public class HnSSounds {
     // Vampire Knife Throw
     public static DeferredHolder<SoundEvent, SoundEvent> GOLDEN_SHOWER_CAST = registerSoundEvent("golden_shower_cast");
 
+    /*
+     ***Terraprisma Sounds
+     */
+    // Cast
+    public static DeferredHolder<SoundEvent, SoundEvent> TERRAPRISMA_CASTING = registerSoundEvent("terraprisma_casting");
+    public static DeferredHolder<SoundEvent, SoundEvent> TERRAPRISMA_SUMMON = registerSoundEvent("terraprisma_summon");
+    public static DeferredHolder<SoundEvent, SoundEvent> TERRARIA_SUMMON = registerSoundEvent("terraria_summon");
+
 
 
     /*

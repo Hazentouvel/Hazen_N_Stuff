@@ -69,6 +69,9 @@ public class HnSTags {
     public static final TagKey<Item> PURE_BOOTS = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure/pure_boots").toString()));
 
+    // Ores
+    public static final TagKey<Item> CINDEROUS_EQUIPMENT = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "cinderous_equipment").toString()));
 
 
     public static class Blocks {

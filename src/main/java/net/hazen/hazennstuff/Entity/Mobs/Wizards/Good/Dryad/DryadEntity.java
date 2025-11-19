@@ -155,23 +155,6 @@ public class DryadEntity extends NeutralWizard implements VillagerDataHolder, Su
         return false;
     }
 
-    @javax.annotation.Nullable
-    protected SoundEvent getAmbientSound() {
-        if (this.isSleeping()) {
-            return null;
-        } else {
-            return this.isTrading() ? SoundEvents.ENDERMAN_AMBIENT : SoundEvents.ENDERMAN_AMBIENT;
-        }
-    }
-
-    protected SoundEvent getDeathSound() {
-        return SoundEvents.ENDERMAN_DEATH;
-    }
-
-    protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return SoundEvents.ENDERMAN_HURT;
-    }
-
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder pBuilder) {
         super.defineSynchedData(pBuilder);

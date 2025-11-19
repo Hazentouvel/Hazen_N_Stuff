@@ -4,8 +4,7 @@ import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Spells.Eldritch.SoulSeekersSpell;
 import net.hazen.hazennstuff.Spells.Evocation.SpectralAxeSpell;
-import net.hazen.hazennstuff.Spells.Fire.FieryDaggerSpell;
-import net.hazen.hazennstuff.Spells.Fire.ScorchingSlashSpell;
+import net.hazen.hazennstuff.Spells.Fire.*;
 import net.hazen.hazennstuff.Spells.Holy.GoldenShowerSpell;
 import net.hazen.hazennstuff.Spells.Nature.CounterspellSpiderLilySpell;
 import net.hazen.hazennstuff.Spells.Nature.DeathSentenceSpell;
@@ -13,8 +12,6 @@ import net.hazen.hazennstuff.Spells.Nature.ShardSwordSpell;
 import net.hazen.hazennstuff.Spells.Radiance.*;
 import net.hazen.hazennstuff.Spells.Shadow.NightsEdgeStrikeSpell;
 import net.hazen.hazennstuff.Spells.Shadow.ChaoticTeleportSpell;
-import net.hazen.hazennstuff.Spells.Fire.BrimstoneHellblastSpell;
-import net.hazen.hazennstuff.Spells.Fire.CinderousStepSpell;
 import net.hazen.hazennstuff.Spells.Ice.CrystalVolleySpell;
 import net.hazen.hazennstuff.Spells.Ice.IceArrowSpell;
 import net.hazen.hazennstuff.Spells.Lightning.EnergyBurstSpell;
@@ -55,8 +52,11 @@ public class HnSSpellRegistries {
     //Scorching Slash
     public static final Supplier<AbstractSpell> SCORCHING_SLASH = registerSpell(new ScorchingSlashSpell());
 
-    //Scorching Slash
+    //Fiery Dagger
     public static final Supplier<AbstractSpell> FIERY_DAGGER = registerSpell(new FieryDaggerSpell());
+
+    //Scorching Slash
+    //public static final Supplier<AbstractSpell> REIGN_OF_TYROS = registerSpell(new ReignOfTyrosSpell());
 
     /*
     *** Ice
@@ -118,11 +118,10 @@ public class HnSSpellRegistries {
     public static final Supplier<AbstractSpell> SHOOTING_STAR = registerSpell(new ShootingStarSpell());
 
     // Falling Stars
-    public static final Supplier<AbstractSpell> FALLING_STARS = registerSpell(new FallingStarsSpell());
+    public static final Supplier<AbstractSpell> STELLAR_COLLAPSE = registerSpell(new StellarCollapseSpell());
 
     // Terraprisma
     public static final Supplier<AbstractSpell> TERRAPRISMIC_BARRAGE = registerSpell(new TerraprismicBarrageSpell());
-
 
     // Call Forth Terraprisma
     public static final Supplier<AbstractSpell> CALL_FORTH_TERRAPRISMA = registerSpell(new CallForthTerraprismaSpell());

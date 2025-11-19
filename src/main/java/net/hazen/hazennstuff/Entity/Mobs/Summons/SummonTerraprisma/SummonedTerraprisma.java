@@ -166,16 +166,12 @@ public class SummonedTerraprisma extends AbstractSpellCastingMob implements IMag
         };
     }
 
-    protected SoundEvent getAmbientSound() {
-        return (SoundEvent)SoundRegistry.KEEPER_IDLE.get();
-    }
-
-    public void playAmbientSound() {
-        this.playSound(this.getAmbientSound(), 1.0F, (float)Mth.randomBetweenInclusive(this.getRandom(), 5, 10) * 0.1F);
-    }
-
     protected SoundEvent getDeathSound() {
         return SoundRegistry.KEEPER_DEATH.get();
+    }
+
+    protected SoundEvent getHurtSound(DamageSource pDamageSource) {
+        return SoundRegistry.KEEPER_HURT.get();
     }
 
     public @org.jetbrains.annotations.Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pSpawnType, @Nullable SpawnGroupData pSpawnGroupData) {

@@ -33,7 +33,7 @@ public class HnSSchoolRegistry {
             (
                     RADIANCE_RESOURCE,
                     HnSTags.RADIANCE_FOCUS,
-                    Component.translatable("school.hazennstuff.radiance").withStyle(Style.EMPTY.withColor(0x2c2fb0)),
+                    Component.translatable("school.hazennstuff.radiance").withStyle(Style.EMPTY.withColor(0xe4a6ea)),
                     HnSAttributeRegistry.RADIANCE_MAGIC_POWER,
                     HnSAttributeRegistry.RADIANCE_MAGIC_RESIST,
                     SoundRegistry.EVOCATION_CAST,

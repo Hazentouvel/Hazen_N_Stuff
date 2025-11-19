@@ -10,7 +10,7 @@ import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Rarity.EvocationRarity;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
@@ -39,7 +39,7 @@ public class MaliceItem extends MagicSwordItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(EvocationRarity.EVOCATION_RARITY_PROXY.getValue())
+                        .rarity(HnSRarities.EVOCATION_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.MALICE)
                         ),
                 SpellDataRegistryHolder.of(

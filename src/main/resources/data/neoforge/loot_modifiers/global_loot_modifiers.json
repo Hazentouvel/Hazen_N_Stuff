@@ -16,6 +16,7 @@
     "hazennstuff:entity_drops/cave_spider_modifiers",
 
 
-    "hazennstuff:chests/catacombs_modifiers"
+    "hazennstuff:chests/catacombs_modifiers",
+    "hazennstuff:chests/citadel_vault_modifiers"
   ]
 }

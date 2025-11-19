@@ -818,6 +818,8 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItems.ROD_OF_DISCORD.get());
                         //White Lily Staff
                         output.accept(HnSItems.WHITE_LILY_STAFF.get());
+                        //Soulcalling Scepter
+                        output.accept(HnSItems.SOULCALLING_SCEPTER.get());
 
                         /*
                         *** Tools
@@ -862,6 +864,11 @@ public class HnSCreativeModeTabs {
 
                         //Wings
                         output.accept(HnSItems.ARBITRIUM_WINGS.get());
+
+                        // Cinderous Curios
+                        output.accept(HnSItems.BLADE_OF_THE_LEGATE.get());
+                        output.accept(HnSItems.THE_PREFECTS_RING.get());
+                        output.accept(HnSItems.THE_TRIBUNES_MEDALLION.get());
 
                         //Misc
                         output.accept(HnSItems.RING_OF_EFFICIENCY.get());

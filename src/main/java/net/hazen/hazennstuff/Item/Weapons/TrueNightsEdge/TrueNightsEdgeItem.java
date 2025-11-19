@@ -9,7 +9,7 @@ import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Rarity.ShadowRarity;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
@@ -40,7 +40,7 @@ public class TrueNightsEdgeItem extends MagicSwordItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue())
+                        .rarity(HnSRarities.SHADOW_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.TRUE_NIGHTS_EDGE)
                         ),
                 SpellDataRegistryHolder.of(

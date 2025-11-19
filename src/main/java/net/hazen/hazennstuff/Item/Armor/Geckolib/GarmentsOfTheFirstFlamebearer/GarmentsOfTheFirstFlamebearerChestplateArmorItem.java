@@ -15,6 +15,8 @@ import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.Item.Armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.hazen.hazennstuff.Registries.HnSSounds;
+import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -114,7 +116,8 @@ public class GarmentsOfTheFirstFlamebearerChestplateArmorItem extends ImbuableGe
 
         super.initializeSpellContainer(itemStack);
         itemStack.set(ComponentRegistry.AFFINITY_COMPONENT, new AffinityData(Map.of(
-                SpellRegistry.RAISE_HELL_SPELL.get().getSpellResource(), 2
+                SpellRegistry.RAISE_HELL_SPELL.get().getSpellResource(), 1,
+                HnSSpellRegistries.FIERY_DAGGER.get().getSpellResource(), 1
         )));
     }
 
@@ -126,12 +129,19 @@ public class GarmentsOfTheFirstFlamebearerChestplateArmorItem extends ImbuableGe
             LivingEntity caster = event.getEntity();
             if (caster == null) return;
 
-            if (event.getSpell() != SpellRegistry.RAISE_HELL_SPELL.get()) return;
+            var spell = event.getSpell();
+
+            boolean isCinderousSpell =
+                    spell == SpellRegistry.RAISE_HELL_SPELL.get() ||
+                            spell == HnSSpellRegistries.FIERY_DAGGER.get();
+
+            if (!isCinderousSpell)
+                return;
 
             ItemStack chestItem = caster.getItemBySlot(EquipmentSlot.CHEST);
 
             if (chestItem.getItem() instanceof GarmentsOfTheFirstFlamebearerChestplateArmorItem) {
-                event.addLevels(2);
+                event.addLevels(1);
             }
         }
     }

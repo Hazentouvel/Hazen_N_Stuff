@@ -1,6 +1,5 @@
 package net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar;
 
-import net.hazen.hazennstuff.Entity.Spells.Lightning.Spark.EnergyBurst;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.GeoModel;

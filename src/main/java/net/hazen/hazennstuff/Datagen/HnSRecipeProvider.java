@@ -505,6 +505,18 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_magehunter", has(ItemRegistry.MAGEHUNTER.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/weapons/mage_bane"));
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItems.TERRAPRISMA.get(), 1)
+                .pattern(" PD")
+                .pattern("RWP")
+                .pattern("ER ")
+                .define('P', HnSItems.PRISMATIC_SHARD.get())
+                .define('R', HnSItems.RADIANCE_RUNE.get())
+                .define('E', HnSItems.EXCALIBUR_FRAGMENT.get())
+                .define('D', ItemRegistry.DIVINE_SOULSHARD.get())
+                .define('W', ItemRegistry.WEAPON_PARTS.get())
+                .unlockedBy("has_excalibur_fragment", has(HnSItems.EXCALIBUR_FRAGMENT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/weapons/terraprisma"));
+
         /*
          *** Staves
          */
@@ -519,6 +531,18 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('G', ItemRegistry.GRAYBEARD_STAFF.get())
                 .unlockedBy("has_graybeard_staff", has(ItemRegistry.GRAYBEARD_STAFF.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/staves/white_lily_staff"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItems.SOULCALLING_SCEPTER.get(), 1)
+                .pattern("NFC")
+                .pattern(" SF")
+                .pattern("P N")
+                .define('C', ItemRegistry.CINDEROUS_SOULCALLER.get())
+                .define('P', ItemRegistry.PYRIUM_STAFF.get())
+                .define('F', HnSItems.CLOTH_OF_THE_FLAMEBEARER.get())
+                .define('N', HnSItems.PYRIUM_NUGGET.get())
+                .define('S', ItemRegistry.PYRIUM_STAFF.get())
+                .unlockedBy("has_pyrium_staff", has(ItemRegistry.PYRIUM_STAFF.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/staves/soulcalling_scepter"));
 
 
 

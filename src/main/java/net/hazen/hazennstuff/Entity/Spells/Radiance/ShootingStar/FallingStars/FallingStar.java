@@ -1,13 +1,10 @@
 package net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.FallingStars;
 
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
-import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
 import io.redspace.ironsspellbooks.particle.BlastwaveParticleOptions;
-import io.redspace.ironsspellbooks.registries.EntityRegistry;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
 import java.util.Optional;
 
@@ -20,7 +17,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
@@ -63,7 +59,7 @@ public class FallingStar extends AbstractMagicProjectile implements GeoEntity {
     }
 
     public void impactParticles(double x, double y, double z) {
-        MagicManager.spawnParticles(this.level(), new BlastwaveParticleOptions((HnSSpellRegistries.FALLING_STARS.get()).getSchoolType().getTargetingColor(), 1.25F), x, y, z, 1, 0.0F, 0.0F, 0.0F, 0.0F, true);
+        MagicManager.spawnParticles(this.level(), new BlastwaveParticleOptions((HnSSpellRegistries.STELLAR_COLLAPSE.get()).getSchoolType().getTargetingColor(), 1.25F), x, y, z, 1, 0.0F, 0.0F, 0.0F, 0.0F, true);
     }
 
     public float getSpeed() {
@@ -87,7 +83,7 @@ public class FallingStar extends AbstractMagicProjectile implements GeoEntity {
             for(Entity entity : this.level().getEntities(this, this.getBoundingBox().inflate(explosionRadius))) {
                 double distance = entity.distanceToSqr(hitResult.getLocation());
                 if (distance < (double)(explosionRadius * explosionRadius) && this.canHitEntity(entity)) {
-                    DamageSources.applyDamage(entity, this.damage, (HnSSpellRegistries.FALLING_STARS.get()).getDamageSource(this, this.getOwner()));
+                    DamageSources.applyDamage(entity, this.damage, (HnSSpellRegistries.STELLAR_COLLAPSE.get()).getDamageSource(this, this.getOwner()));
                 }
             }
 

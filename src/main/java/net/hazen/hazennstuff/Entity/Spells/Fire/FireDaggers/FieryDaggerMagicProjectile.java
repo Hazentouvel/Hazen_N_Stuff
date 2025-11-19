@@ -8,6 +8,7 @@ import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.damage.ISSDamageTypes;
 import io.redspace.ironsspellbooks.entity.mobs.wizards.fire_boss.FireBossEntity;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
+import io.redspace.ironsspellbooks.entity.spells.fiery_dagger.FieryDaggerEntity;
 import io.redspace.ironsspellbooks.entity.spells.magma_ball.FireField;
 import io.redspace.ironsspellbooks.particle.BlastwaveParticleOptions;
 import io.redspace.ironsspellbooks.registries.EntityRegistry;
@@ -46,8 +47,7 @@ import software.bernie.geckolib.animation.AnimatableManager;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 
-// Copied the Fiery Dagger since I don't know how to make it scale off of Fire Spell Power for the spell.
-public class FieryDaggerMagicProjectile extends AbstractMagicProjectile implements IEntityWithComplexSpawn, GeoAnimatable {
+public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
     public int delay;
     public @Nullable Vec3 ownerTrack;
     private @Nullable UUID targetEntity;
@@ -130,7 +130,7 @@ public class FieryDaggerMagicProjectile extends AbstractMagicProjectile implemen
         this.discardHelper(hitresult);
     }
 
-    private void createDaggerZone(Vec3 center) {
+    public void createDaggerZone(Vec3 center) {
         MagicManager.spawnParticles(this.level(), new BlastwaveParticleOptions(new Vector3f(1.0F, 0.6F, 0.3F), this.explosionRadius + 1.0F), center.x, center.y + 0.15, center.z, 1, (double)0.0F, (double)0.0F, (double)0.0F, (double)0.0F, false);
         this.playSound(SoundRegistry.FIRE_CAST.get(), 2.0F, (float)Utils.random.nextIntBetweenInclusive(80, 110) * 0.01F);
         float spawnRadius = this.explosionRadius;
@@ -206,7 +206,8 @@ public class FieryDaggerMagicProjectile extends AbstractMagicProjectile implemen
                         this.deltaMovementOld = this.getDeltaMovement();
                     }
                     this.ownerTrack = null;
-                    this.launchDir = null;
+                    // Keep launchDir for consistent movement direction
+
 
                     if (Utils.random.nextFloat() < 0.25F) {
                         this.playSound(SoundRegistry.FIERY_DAGGER_THROW.get(), 0.75F, (float)Utils.random.nextIntBetweenInclusive(90, 110) * 0.01F);
@@ -218,7 +219,7 @@ public class FieryDaggerMagicProjectile extends AbstractMagicProjectile implemen
                         if (!this.level().isClientSide) {
                             this.isGrounded = false;
                             this.setNoGravity(true);
-                            this.setDeltaMovement(0.0D, (double)this.getSpeed(), 0.0D);
+                            this.setDeltaMovement(0.0D, this.getSpeed(), 0.0D);
                             this.deltaMovementOld = this.getDeltaMovement();
                         }
                         if (Utils.random.nextFloat() < 0.25F) {

@@ -10,7 +10,7 @@ import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Rarity.ShadowRarity;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
@@ -40,7 +40,7 @@ public class StarfuryItem extends MagicSwordItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue())
+                        .rarity(HnSRarities.SHADOW_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.STARFURY)
                         ),
                 SpellDataRegistryHolder.of(

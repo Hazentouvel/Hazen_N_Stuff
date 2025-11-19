@@ -3,7 +3,7 @@ package net.hazen.hazennstuff.Item.Weapons.TheDevourer;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Rarity.EldritchRarity;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
@@ -22,7 +22,7 @@ public class TheDevourerItem extends ExtendedSwordItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(EldritchRarity.ELDRITCH_RARITY_PROXY.getValue())
+                        .rarity(HnSRarities.ELDRITCH_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.THE_DEVOURER)
                         )
         );

@@ -3,7 +3,7 @@ package net.hazen.hazennstuff.Item.Weapons.MageBane;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Rarity.ShadowRarity;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
@@ -22,7 +22,7 @@ public class MageBaneItem extends ExtendedSwordItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(ShadowRarity.SHADOW_RARITY_PROXY.getValue())
+                        .rarity(HnSRarities.SHADOW_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.MAGE_BANE)
                         )
         );

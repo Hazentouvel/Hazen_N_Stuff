@@ -80,6 +80,26 @@ public class HnSItemTagProvider extends ItemTagsProvider {
 
         ;
 
+        tag(HnSTags.CINDEROUS_EQUIPMENT)
+
+                .add(HnSItems.TYROS_HELMET.get())
+                .add(HnSItems.TYROS_CHESTPLATE.get())
+                .add(HnSItems.TYROS_LEGGINGS.get())
+                .add(HnSItems.TYROS_BOOTS.get())
+
+                .add(HnSItems.TYROS_SOUL_HELMET.get())
+                .add(HnSItems.TYROS_SOUL_CHESTPLATE.get())
+                .add(HnSItems.TYROS_SOUL_LEGGINGS.get())
+                .add(HnSItems.TYROS_SOUL_BOOTS.get())
+
+                .add(HnSItems.SOULCALLING_SCEPTER.get())
+
+                .add(HnSItems.BLADE_OF_THE_LEGATE.get())
+                .add(HnSItems.THE_PREFECTS_RING.get())
+                .add(HnSItems.THE_TRIBUNES_MEDALLION.get())
+
+        ;
+
 
         /*
         *** Enchantable Tags

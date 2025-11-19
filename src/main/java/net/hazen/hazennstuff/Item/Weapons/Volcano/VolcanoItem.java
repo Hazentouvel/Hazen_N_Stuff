@@ -7,7 +7,7 @@ import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Dispatcher.HnSDispatcher;
 import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Rarity.FireRarity;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
@@ -28,7 +28,7 @@ public class VolcanoItem extends MagicSwordItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(FireRarity.FIRE_RARITY_PROXY.getValue())
+                        .rarity(HnSRarities.FIRE_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.VOLCANO)
                         ),
                 SpellDataRegistryHolder.of(

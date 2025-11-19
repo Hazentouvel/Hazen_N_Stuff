@@ -167,7 +167,7 @@ public class AptosEntity extends AbstractSpellCastingMob implements GeoEntity, I
     }
 
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return (SoundEvent)SoundRegistry.KEEPER_HURT.get();
+        return SoundRegistry.KEEPER_HURT.get();
     }
 
     protected SoundEvent getDeathSound() {

@@ -16,7 +16,11 @@ import top.theillusivec4.curios.api.SlotContext;
 //Class Setup
 public class RupturedCurio extends CurioBaseItem {
     public RupturedCurio() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1).fireResistant().rarity(Rarity.EPIC));
+        super(ItemPropertiesHelper
+                .equipment()
+                .stacksTo(1)
+                .fireResistant()
+                .rarity(Rarity.EPIC));
     }
 
     //naur

@@ -8,11 +8,6 @@
   },
   "result": {
     "components": {
-      "irons_spellbooks:affinity_data": {
-        "bonuses": {
-          "irons_spellbooks:divine_smite": 1
-        }
-      },
       "irons_spellbooks:spell_container": {
         "data": [
           {

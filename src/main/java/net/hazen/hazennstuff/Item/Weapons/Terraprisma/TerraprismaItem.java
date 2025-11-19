@@ -5,19 +5,14 @@ import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.Dispatcher.HnSDispatcher;
-import net.hazen.hazennstuff.Item.Weapons.Excalibur.HazenStyle.HazensExcaliburItem;
-import net.hazen.hazennstuff.Item.Weapons.Excalibur.HazenStyle.HazensExcaliburRenderer;
 import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Rarity.FireRarity;
-import net.hazen.hazennstuff.Rarity.RadianceRarity;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -29,11 +24,9 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import org.jetbrains.annotations.NotNull;
-import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 
 import java.util.List;
 import java.util.Map;
-import java.util.function.Consumer;
 
 public class TerraprismaItem extends MagicSwordItem {
     public final HnSDispatcher dispatcher;
@@ -44,7 +37,7 @@ public class TerraprismaItem extends MagicSwordItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(RadianceRarity.RADIANCE_RARITY_PROXY.getValue())
+                        .rarity(HnSRarities.RADIANCE_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.TERRAPRISMA)
                         ),
                 SpellDataRegistryHolder.of(

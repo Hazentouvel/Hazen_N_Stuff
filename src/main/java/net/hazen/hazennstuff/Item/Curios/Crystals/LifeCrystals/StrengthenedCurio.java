@@ -5,7 +5,7 @@ import com.google.common.collect.Multimap;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.Rarity.DeusRarity;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -20,7 +20,7 @@ public class StrengthenedCurio extends CurioBaseItem {
                 .equipment()
                 .stacksTo(1)
                 .fireResistant()
-                .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue()));
+                .rarity(HnSRarities.DEUS_RARITY.getValue()));
     }
 
     //naur

@@ -228,5 +228,20 @@
     "sounds": [
       "hazennstuff:golden_shower_cast"
     ]
+  },
+  "terraprisma_casting": {
+    "sounds": [
+      "hazennstuff:terraprisma_casting"
+    ]
+  },
+  "terraprisma_summon": {
+    "sounds": [
+      "hazennstuff:terraprisma_summon"
+    ]
+  },
+  "terraria_summon": {
+    "sounds": [
+      "hazennstuff:terraria_summon"
+    ]
   }
 }

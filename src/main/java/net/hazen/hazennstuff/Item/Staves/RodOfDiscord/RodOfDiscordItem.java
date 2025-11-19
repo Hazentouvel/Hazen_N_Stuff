@@ -5,7 +5,7 @@ import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Item.Staves.HnSStaffTier;
 import net.hazen.hazennstuff.Item.Staves.ImbuableStaffItem;
-import net.hazen.hazennstuff.Rarity.EnderRarity;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
@@ -30,7 +30,7 @@ public class RodOfDiscordItem extends ImbuableStaffItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(EnderRarity.ENDER_RARITY_PROXY.getValue())
+                        .rarity(HnSRarities.ENDER_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSStaffTier.ROD_OF_DISCORD)),
                 SpellDataRegistryHolder.of(
                         new SpellDataRegistryHolder(HnSSpellRegistries.CHAOTIC_TELEPORT, 6)

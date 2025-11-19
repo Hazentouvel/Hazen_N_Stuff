@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Registries;
 
+import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnace;
 import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprisma;
 import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.FallingStars.FallingStar;
@@ -29,7 +30,7 @@ import net.hazen.hazennstuff.Entity.Spells.Fire.BrimstoneHellblast.BrimstoneHell
 import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.IceCloud.IceCloud;
 import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.IceArrow;
 import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.CrystalVolley.CrystalVolley;
-import net.hazen.hazennstuff.Entity.Spells.Lightning.Spark.EnergyBurst;
+import net.hazen.hazennstuff.Entity.Spells.Lightning.EnergyBurst.EnergyBurst;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Syringe.Syringe;
 import net.hazen.hazennstuff.Entity.Spells.Nature.ThornChakram.ThornChakram;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.NightsEdgeAfterSlash.NightsEdgeAfterSlash;
@@ -287,8 +288,18 @@ public class HnSEntityRegistry {
             ENTITIES.register("terraprisma", () -> EntityType.Builder.<SummonedTerraprisma>of(SummonedTerraprisma::new, MobCategory.MONSTER)
                     .sized(.6f, 1.8f)
                     .clientTrackingRange(64)
-                    .eyeHeight(3f)
+                    .eyeHeight(1.6f)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "terraprisma").toString()));
+
+    // Cinderous Furnace
+    public static final DeferredHolder<EntityType<?>, EntityType<CinderousFurnace>> CINDEROUS_FURNACE =
+            ENTITIES.register("cinderous_furnace", () -> EntityType.Builder.<CinderousFurnace>of(CinderousFurnace::new, MobCategory.MONSTER)
+                    .fireImmune()
+                    .sized(0.6F, 1.8F)
+                    .clientTrackingRange(8)
+                    .eyeHeight(1.6f)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "cinderous_furnace").toString()));
+
 
 
 

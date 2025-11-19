@@ -11,7 +11,7 @@ import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.Dispatcher.HnSDispatcher;
 import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Rarity.HolyRarity;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
@@ -37,7 +37,7 @@ public class HammerOfJusticeItem extends MagicSwordItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(HolyRarity.HOLY_RARITY_PROXY.getValue())
+                        .rarity(HnSRarities.HOLY_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.HAMMER_OF_JUSTICE)
                         ),
                 SpellDataRegistryHolder.of(

@@ -7,7 +7,7 @@ import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.Entity.Spells.Lightning.Spark.EnergyBurst;
+import net.hazen.hazennstuff.Entity.Spells.Lightning.EnergyBurst.EnergyBurst;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

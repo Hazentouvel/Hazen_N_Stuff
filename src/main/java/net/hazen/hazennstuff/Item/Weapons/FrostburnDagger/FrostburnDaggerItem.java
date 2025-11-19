@@ -3,7 +3,7 @@ package net.hazen.hazennstuff.Item.Weapons.FrostburnDagger;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Rarity.IceRarity;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
@@ -22,7 +22,7 @@ public class FrostburnDaggerItem extends ExtendedSwordItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(IceRarity.ICE_RARITY_PROXY.getValue())
+                        .rarity(HnSRarities.ICE_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.FROSTBURN_DAGGER)
                         )
         );

@@ -15,7 +15,11 @@ import top.theillusivec4.curios.api.SlotContext;
 
 public class ReinforcedCurio extends CurioBaseItem {
     public ReinforcedCurio() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1).fireResistant().rarity(Rarity.EPIC));
+        super(ItemPropertiesHelper
+                .equipment()
+                .stacksTo(1)
+                .fireResistant()
+                .rarity(Rarity.EPIC));
     }
 
     //naur

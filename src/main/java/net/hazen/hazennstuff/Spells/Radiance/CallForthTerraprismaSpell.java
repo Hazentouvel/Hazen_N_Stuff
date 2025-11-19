@@ -22,6 +22,7 @@ import java.util.Optional;
 
 import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprisma;
 import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
+import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -70,12 +71,12 @@ public class CallForthTerraprismaSpell extends AbstractSpell {
         return this.spellId;
     }
 
-    public Optional<SoundEvent> getCastStartSound() {
-        return Optional.of(SoundRegistry.SUMMONED_SWORDS_CHARGE.get());
+    public Optional<SoundEvent> getCastFinishSound() {
+        return Optional.of(HnSSounds.TERRAPRISMA_SUMMON.get());
     }
 
-    public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of(SoundRegistry.SUMMONED_SWORDS_CAST.get());
+    public Optional<SoundEvent> getCastStartSound() {
+        return Optional.of(HnSSounds.TERRAPRISMA_CASTING.get());
     }
 
     public double getHealthBonus(int spellLevel, LivingEntity caster) {

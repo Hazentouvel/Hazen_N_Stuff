@@ -10,7 +10,7 @@ import net.neoforged.fml.ModList;
 public class AeromancyAdditionsCompat {
     public static boolean LOADED;
     public static void init() {
-        LOADED = ModList.get().isLoaded("aeromancy_additions");
+        LOADED = ModList.get().isLoaded("aero_additions");
     }
 
     public static void addWindSpellPower(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {

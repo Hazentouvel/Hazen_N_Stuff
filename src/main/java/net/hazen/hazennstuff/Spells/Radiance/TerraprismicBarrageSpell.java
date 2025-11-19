@@ -6,6 +6,7 @@ import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
+import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.Terraprisma;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
@@ -48,7 +49,11 @@ public class TerraprismicBarrageSpell extends AbstractSpell {
     }
 
     public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of(HnSSounds.TERRABLADE_SLASH.get());
+        return Optional.of(HnSSounds.TERRAPRISMA_SUMMON.get());
+    }
+
+    public Optional<SoundEvent> getCastStartSound() {
+        return Optional.of(HnSSounds.TERRAPRISMA_CASTING.get());
     }
 
     public CastType getCastType() {

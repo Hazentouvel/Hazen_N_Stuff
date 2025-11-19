@@ -5,13 +5,14 @@ import com.google.common.collect.Multimap;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.Rarity.DeusRarity;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import top.theillusivec4.curios.api.SlotContext;
 
 public class AbstractCurio extends CurioBaseItem {
@@ -20,7 +21,7 @@ public class AbstractCurio extends CurioBaseItem {
                 .equipment()
                 .stacksTo(1)
                 .fireResistant()
-                .rarity(DeusRarity.DEUS_RARITY_PROXY.getValue()));
+                .rarity(Rarity.EPIC));
     }
 
     //naur

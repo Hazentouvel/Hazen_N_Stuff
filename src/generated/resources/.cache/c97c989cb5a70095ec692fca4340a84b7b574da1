@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-13T18:37:33.0072217	Tags for minecraft:item mod id hazennstuff
+// 1.21.1	2025-10-28T16:09:21.5999652	Tags for minecraft:item mod id hazennstuff
 57ddc60e6a975db6eabd32e18d2d456dc3dfce34 data/c/tags/item/armors.json
 740053467c0e6401606132b0ce14777e5339d91f data/c/tags/item/bones.json
 46ffca0dd69af0b49d0efb348d94e409e2d4c9ed data/c/tags/item/enchantables.json
@@ -23,6 +23,7 @@ a9036cb045e5bd20df96592f615084f3727473fb data/hazennstuff/tags/item/armors/pure/
 7e1e6281df5bb02ed088837508fbbed2e598ae42 data/hazennstuff/tags/item/armors/school/school_chestplate.json
 e49c83cf4b911a7304cda0831b3e0ab3af93805f data/hazennstuff/tags/item/armors/school/school_helmet.json
 211446df18033dced90eb51b0e44756cc1310908 data/hazennstuff/tags/item/armors/school/school_leggings.json
+cd8367c2634f001ba8713679900b76621a498cf6 data/hazennstuff/tags/item/cinderous_equipment.json
 3a65407953f7484e090e8898b4658df2a5eff741 data/hazennstuff/tags/item/ores/zenalite.json
 05d638c654a728c24450eadca4dee57481cc0610 data/irons_spellbooks/tags/item/imbue_whitelist.json
 f8c3ec5560a2b88a23e8885e1a9559c75cdf8613 data/irons_spellbooks/tags/item/inscribed_rune.json

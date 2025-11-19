@@ -32,6 +32,7 @@ import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.Energ
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioRenderer;
+import net.hazen.hazennstuff.Item.Staves.SoulcallingScepter.SoulcallingScepterRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Terraprisma.TerraprismaRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Volcano.VolcanoRenderer;
 import net.hazen.hazennstuff.Registries.*;
@@ -237,6 +238,9 @@ public class HazenNStuff
             AzItemRendererRegistry.register(VolcanoRenderer::new, HnSItems.VOLCANO.get());
             AzItemRendererRegistry.register(TerraprismaRenderer::new, HnSItems.TERRAPRISMA.get());
 
+
+            AzItemRendererRegistry.register(SoulcallingScepterRenderer::new, HnSItems.SOULCALLING_SCEPTER.get());
+
             //Curios Rendering Registry
 
             /*
@@ -368,6 +372,9 @@ public class HazenNStuff
                     HnSItems.HAMMER_OF_JUSTICE.get(),
                     HnSItems.VOLCANO.get(),
                     HnSItems.TERRAPRISMA.get(),
+
+                    // Staves
+                    HnSItems.SOULCALLING_SCEPTER.get(),
 
                     // Curios
 

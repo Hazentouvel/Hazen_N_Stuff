@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-29T09:07:32.6189251	Recipes
+// 1.21.1	2025-11-19T18:38:25.5268317	Recipes
 c79e8a6ee9711cc676cdc63ce52db2c3c02693c6 data/hazennstuff/advancement/recipes/building_blocks/crafting/blocks/frostbite_birch_slab.json
 0936508edfb38527421ae043ebf5413491c5b24c data/hazennstuff/advancement/recipes/building_blocks/crafting/blocks/frostbite_birch_stairs.json
 82db074d56ee8a13b9597e7719451de75cbca393 data/hazennstuff/advancement/recipes/building_blocks/crafting/blocks/mossy_mud_brick_slab.json
@@ -310,7 +310,7 @@ c0e4e4a26ee9e84a10fd55adc417e05ca70f01a0 data/hazennstuff/recipe/crafting/armor/
 baaab4b21914444d7197dc26c3412790794f1a52 data/hazennstuff/recipe/crafting/armor/thunder_prowler/thunder_prowler_helmet.json
 421ff1e0aa17cfbaa08b0fd21c33ed9c244ac591 data/hazennstuff/recipe/crafting/armor/thunder_prowler/thunder_prowler_leggings.json
 9fca43cb31f5b773282d70172fd636c485ff4f56 data/hazennstuff/recipe/crafting/armor/tyros/tyros_boots.json
-c8bc1c50176e65e0d9ff399ee533ddce1359809a data/hazennstuff/recipe/crafting/armor/tyros/tyros_chestplate.json
+41cee8b13b14195099145e73af6f928c63773444 data/hazennstuff/recipe/crafting/armor/tyros/tyros_chestplate.json
 bdd2b8858f5653fc24ef0743ff6411eec3eff9c7 data/hazennstuff/recipe/crafting/armor/tyros/tyros_helmet.json
 fd9ebefa0609d0c8dde8362f25948fec1d2491f6 data/hazennstuff/recipe/crafting/armor/tyros/tyros_leggings.json
 5633b63c9ec30b57116bc89242923c882fcfb4c1 data/hazennstuff/recipe/crafting/blocks/frostbite_birch_button.json
@@ -483,7 +483,7 @@ e693c24fc6f72dc0d58d75200e2102cc8b6c3db9 data/hazennstuff/recipe/smithing/armor/
 cc9a46b6de5f89c1f45d2ff2e61bfe67b2c0b828 data/hazennstuff/recipe/smithing/armor/the_wither/the_wither_helmet.json
 e04d99188e6cc1a2d8a131d392028b99cfea2063 data/hazennstuff/recipe/smithing/armor/the_wither/the_wither_leggings.json
 76303e90f6fd095b311d494a01fac16327205feb data/hazennstuff/recipe/smithing/armor/tyros/tyros_soul_boots.json
-5676e0fa0eac513d47c4ec08b3b4f7f0499e773c data/hazennstuff/recipe/smithing/armor/tyros/tyros_soul_chestplate.json
+5240ce8eb320f7c7ab07b576562a9f0e4fc6884a data/hazennstuff/recipe/smithing/armor/tyros/tyros_soul_chestplate.json
 2f00fd284c350f05503068965864fa17c2fbb88f data/hazennstuff/recipe/smithing/armor/tyros/tyros_soul_helmet.json
 49ddc8f166204761f5eb52a18bf3f56db5407cdc data/hazennstuff/recipe/smithing/armor/tyros/tyros_soul_leggings.json
 98dd24f61a0fbeeb27866f99002f14f1445219a0 data/hazennstuff/recipe/smithing/tools/iss_to_terraria.json

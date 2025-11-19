@@ -1,6 +1,7 @@
 package net.hazen.hazennstuff.Setup;
 
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnace;
+import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.TheInferno.TheInferno;
 import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprisma;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.BishopOfDeciet.BishopOfDeceitEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Electromancer.ElectromancerEntity;
@@ -37,6 +38,7 @@ public class HnSCommonSetup {
         event.put(HnSEntityRegistry.NECROMANCER.get(), NecromancerEntity.prepareAttributes().build());
         event.put(HnSEntityRegistry.TERRAPRISMA.get(), SummonedTerraprisma.prepareAttributes().build());
         event.put(HnSEntityRegistry.CINDEROUS_FURNACE.get(), CinderousFurnace.prepareAttributes().build());
+        event.put(HnSEntityRegistry.THE_INFERNO.get(), TheInferno.prepareAttributes().build());
     }
 }
 

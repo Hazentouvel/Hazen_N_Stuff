@@ -10,7 +10,8 @@
     "components": {
       "irons_spellbooks:affinity_data": {
         "bonuses": {
-          "irons_spellbooks:raise_hell": 2
+          "hazennstuff:fiery_dagger": 1,
+          "irons_spellbooks:raise_hell": 1
         }
       },
       "irons_spellbooks:spell_container": {

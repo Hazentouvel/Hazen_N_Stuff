@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace;
+package net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.Restored;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -12,24 +12,24 @@ import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.util.Color;
 
-public class CinderousFurnaceRenderer extends AbstractSpellCastingMobRenderer {
+public class RestoredCinderousFurnaceRenderer extends AbstractSpellCastingMobRenderer {
 
-    public CinderousFurnaceRenderer(EntityRendererProvider.Context context) {
-        super(context, new CinderousFurnaceModel());
+    public RestoredCinderousFurnaceRenderer(EntityRendererProvider.Context context) {
+        super(context, new RestoredCinderousFurnaceModel());
 
-        this.addRenderLayer(new CinderousFurnaceEmissiveLayer(this));
+        this.addRenderLayer(new RestoredCinderousFurnaceEmissiveLayer(this));
     }
 
-    public void preRender(PoseStack poseStack, CinderousFurnace entity, BakedGeoModel model, @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer, boolean isReRender, float partialTicks, int packedLight, int packedOverlay, int colour) {
+    public void preRender(PoseStack poseStack, RestoredCinderousFurnace entity, BakedGeoModel model, @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer, boolean isReRender, float partialTicks, int packedLight, int packedOverlay, int colour) {
         super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTicks, packedLight, packedOverlay, colour);
         poseStack.translate(0.0F, entity.getBbHeight() * 0.5F, 0.0F);
     }
 
-    public @Nullable RenderType getRenderType(CinderousFurnace animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick) {
+    public @Nullable RenderType getRenderType(RestoredCinderousFurnace animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick) {
         return RenderHelper.CustomerRenderType.magic(texture);
     }
 
-    public Color getRenderColor(CinderousFurnace animatable, float partialTick, int packedLight) {
+    public Color getRenderColor(RestoredCinderousFurnace animatable, float partialTick, int packedLight) {
         return Color.LIGHT_GRAY;
     }
 }

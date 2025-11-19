@@ -1,6 +1,7 @@
 package net.hazen.hazennstuff.Registries;
 
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnace;
+import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.TheInferno.TheInferno;
 import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprisma;
 import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.FallingStars.FallingStar;
@@ -299,6 +300,15 @@ public class HnSEntityRegistry {
                     .clientTrackingRange(8)
                     .eyeHeight(1.6f)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "cinderous_furnace").toString()));
+
+    // The Inferno
+    public static final DeferredHolder<EntityType<?>, EntityType<TheInferno>> THE_INFERNO =
+            ENTITIES.register("the_inferno", () -> EntityType.Builder.<TheInferno>of(TheInferno::new, MobCategory.MONSTER)
+                    .fireImmune()
+                    .sized(0.6F, 1.8F)
+                    .clientTrackingRange(8)
+                    .eyeHeight(1.6f)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "the_inferno").toString()));
 
 
 

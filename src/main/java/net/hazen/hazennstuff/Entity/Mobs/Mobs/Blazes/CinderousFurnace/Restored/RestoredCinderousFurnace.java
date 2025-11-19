@@ -1,18 +1,11 @@
-package net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace;
+package net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.Restored;
 
-import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.AbstractSpellCastingMob;
 import io.redspace.ironsspellbooks.entity.mobs.goals.PatrolNearLocationGoal;
-import io.redspace.ironsspellbooks.entity.mobs.goals.WizardAttackGoal;
-import io.redspace.ironsspellbooks.entity.mobs.keeper.KeeperEntity;
 import io.redspace.ironsspellbooks.entity.spells.fireball.SmallMagicFireball;
-import io.redspace.ironsspellbooks.util.ModTags;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -21,7 +14,10 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -29,28 +25,24 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.SmallFireball;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.phys.Vec3;
-import software.bernie.geckolib.animatable.GeoAnimatable;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
-import software.bernie.geckolib.animation.AnimationState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import javax.annotation.Nullable;
 import java.util.EnumSet;
-import java.util.List;
 
-public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
+public class RestoredCinderousFurnace extends AbstractSpellCastingMob implements Enemy {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private float allowedHeightOffset = 0.5F;
     private int nextHeightOffsetChangeTick;
     private static final EntityDataAccessor<Byte> DATA_FLAGS_ID;
 
-    public CinderousFurnace(EntityType<? extends AbstractSpellCastingMob> pEntityType, Level pLevel) {
+    public RestoredCinderousFurnace(EntityType<? extends AbstractSpellCastingMob> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
         this.setPathfindingMalus(PathType.WATER, -1.0F);
         this.setPathfindingMalus(PathType.LAVA, 8.0F);
@@ -179,16 +171,16 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
     }
 
     static {
-        DATA_FLAGS_ID = SynchedEntityData.defineId(CinderousFurnace.class, EntityDataSerializers.BYTE);
+        DATA_FLAGS_ID = SynchedEntityData.defineId(RestoredCinderousFurnace.class, EntityDataSerializers.BYTE);
     }
 
     static class SpellcastingBlazeAttackGoal extends Goal {
-        private final CinderousFurnace cinderousFurnace;
+        private final RestoredCinderousFurnace cinderousFurnace;
         private int attackStep;
         private int attackTime;
         private int lastSeen;
 
-        public SpellcastingBlazeAttackGoal(CinderousFurnace cinderousFurnace) {
+        public SpellcastingBlazeAttackGoal(RestoredCinderousFurnace cinderousFurnace) {
             this.cinderousFurnace = cinderousFurnace;
             this.setFlags(EnumSet.of(Flag.MOVE, Flag.LOOK));
         }
@@ -253,18 +245,20 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
                         }
 
                         if (this.attackStep > 1) {
-                            double d4 = Math.sqrt(Math.sqrt(d0)) * (double)0.5F;
                             if (!this.cinderousFurnace.isSilent()) {
-                                this.cinderousFurnace.level().levelEvent((Player)null, 1018, this.cinderousFurnace.blockPosition(), 0);
+                                this.cinderousFurnace.level().levelEvent(null, 1018, this.cinderousFurnace.blockPosition(), 0);
                             }
 
-                            for(int i = 0; i < 1; ++i) {
-                                Vec3 vec3 = new Vec3(this.cinderousFurnace.getRandom().triangle(d1, 2.297 * d4), d2, this.cinderousFurnace.getRandom().triangle(d3, 2.297 * d4));
-                                SmallFireball smallfireball = new SmallFireball(this.cinderousFurnace.level(), this.cinderousFurnace, vec3.normalize());
-                                smallfireball.setPos(smallfireball.getX(), this.cinderousFurnace.getY((double)0.5F) + (double)0.5F, smallfireball.getZ());
-                                this.cinderousFurnace.level().addFreshEntity(smallfireball);
-                            }
+                            SmallMagicFireball smallMagicFireball = new SmallMagicFireball(this.cinderousFurnace.level(), this.cinderousFurnace);
+                            smallMagicFireball.setDamage((float)this.cinderousFurnace.getAttributeValue(Attributes.ATTACK_DAMAGE));
+                            smallMagicFireball.setPos(this.cinderousFurnace.getX(), this.cinderousFurnace.getY(0.5) + 0.5, this.cinderousFurnace.getZ());
+
+                            Vec3 vec3 = new Vec3(d1, d2, d3).normalize(); // Straight trajectory
+                            smallMagicFireball.shoot(vec3, smallMagicFireball.getSpeed());
+
+                            this.cinderousFurnace.level().addFreshEntity(smallMagicFireball);
                         }
+
                     }
 
                     this.cinderousFurnace.getLookControl().setLookAt(livingentity, 10.0F, 10.0F);
@@ -282,15 +276,9 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
         }
     }
 
-    @Override
-    public boolean causeFallDamage(float fallDistance, float damageMultiplier, DamageSource source) {
-        return false;
-    }
-
-
 
     // Geckolib & Animations
-    private final AnimationController<CinderousFurnace> animationController =
+    private final AnimationController<RestoredCinderousFurnace> animationController =
             new AnimationController<>(this, "controller", 0, this::idlePredicate);
 
     @Override
@@ -298,7 +286,7 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
         controllers.add(animationController);
     }
 
-    private PlayState idlePredicate(AnimationState<CinderousFurnace> event) {
+    private PlayState idlePredicate(AnimationState<RestoredCinderousFurnace> event) {
         event.getController().setAnimation(RawAnimation.begin().then("animation.cinderous_furnace.idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }

@@ -1,18 +1,11 @@
-package net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace;
+package net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.TheInferno;
 
-import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.AbstractSpellCastingMob;
 import io.redspace.ironsspellbooks.entity.mobs.goals.PatrolNearLocationGoal;
-import io.redspace.ironsspellbooks.entity.mobs.goals.WizardAttackGoal;
-import io.redspace.ironsspellbooks.entity.mobs.keeper.KeeperEntity;
 import io.redspace.ironsspellbooks.entity.spells.fireball.SmallMagicFireball;
-import io.redspace.ironsspellbooks.util.ModTags;
-import io.redspace.ironsspellbooks.util.ParticleHelper;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.nbt.CompoundTag;
+import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnace;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -21,36 +14,33 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.SmallFireball;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.phys.Vec3;
-import software.bernie.geckolib.animatable.GeoAnimatable;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
-import software.bernie.geckolib.animation.AnimationState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import javax.annotation.Nullable;
 import java.util.EnumSet;
-import java.util.List;
 
-public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
+public class TheInferno extends CinderousFurnace {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    private float allowedHeightOffset = 0.5F;
-    private int nextHeightOffsetChangeTick;
     private static final EntityDataAccessor<Byte> DATA_FLAGS_ID;
 
-    public CinderousFurnace(EntityType<? extends AbstractSpellCastingMob> pEntityType, Level pLevel) {
+    public TheInferno(EntityType<? extends AbstractSpellCastingMob> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
         this.setPathfindingMalus(PathType.WATER, -1.0F);
         this.setPathfindingMalus(PathType.LAVA, 8.0F);
@@ -72,7 +62,7 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
 //                        List.of()
 //                )
 //        );
-        this.goalSelector.addGoal(4, new SpellcastingBlazeAttackGoal(this));
+        this.goalSelector.addGoal(4, new TheInfernoAttackGoal(this));
         this.goalSelector.addGoal(5, new MoveTowardsRestrictionGoal(this, (double) 1.0F));
         this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, (double) 1.0F, 0.0F));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
@@ -91,17 +81,12 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
 
     public static AttributeSupplier.Builder prepareAttributes() {
         return LivingEntity.createLivingAttributes()
-                .add(Attributes.ATTACK_DAMAGE, 6.0)
+                .add(Attributes.ATTACK_DAMAGE, 10.0)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.0)
-                .add(Attributes.MAX_HEALTH, 120.0)
-                .add(AttributeRegistry.SPELL_RESIST, 20.0)
+                .add(Attributes.MAX_HEALTH, 360.0)
+                .add(AttributeRegistry.SPELL_RESIST, 30.0)
                 .add(Attributes.FOLLOW_RANGE, 24.0)
                 .add(Attributes.MOVEMENT_SPEED, .25);
-    }
-
-    protected void defineSynchedData(SynchedEntityData.Builder builder) {
-        super.defineSynchedData(builder);
-        builder.define(DATA_FLAGS_ID, (byte) 0);
     }
 
     protected SoundEvent getAmbientSound() {
@@ -120,44 +105,7 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
         return 1.0F;
     }
 
-    public void aiStep() {
-        if (!this.onGround() && this.getDeltaMovement().y < (double) 0.0F) {
-            this.setDeltaMovement(this.getDeltaMovement().multiply((double) 1.0F, 0.6, (double) 1.0F));
-        }
 
-        if (this.level().isClientSide) {
-            if (this.random.nextInt(24) == 0 && !this.isSilent()) {
-                this.level().playLocalSound(this.getX() + (double) 0.5F, this.getY() + (double) 0.5F, this.getZ() + (double) 0.5F, SoundEvents.BLAZE_BURN, this.getSoundSource(), 1.0F + this.random.nextFloat(), this.random.nextFloat() * 0.7F + 0.3F, false);
-            }
-
-            for (int i = 0; i < 2; ++i) {
-                this.level().addParticle(ParticleHelper.FIRE, this.getRandomX((double) 0.5F), this.getRandomY(), this.getRandomZ((double) 0.5F), (double) 0.0F, (double) 0.0F, (double) 0.0F);
-            }
-        }
-
-        super.aiStep();
-    }
-
-    public boolean isSensitiveToWater() {
-        return true;
-    }
-
-    protected void customServerAiStep() {
-        --this.nextHeightOffsetChangeTick;
-        if (this.nextHeightOffsetChangeTick <= 0) {
-            this.nextHeightOffsetChangeTick = 100;
-            this.allowedHeightOffset = (float) this.random.triangle((double) 0.5F, 6.891);
-        }
-
-        LivingEntity livingentity = this.getTarget();
-        if (livingentity != null && livingentity.getEyeY() > this.getEyeY() + (double) this.allowedHeightOffset && this.canAttack(livingentity)) {
-            Vec3 vec3 = this.getDeltaMovement();
-            this.setDeltaMovement(this.getDeltaMovement().add((double) 0.0F, ((double) 0.3F - vec3.y) * (double) 0.3F, (double) 0.0F));
-            this.hasImpulse = true;
-        }
-
-        super.customServerAiStep();
-    }
 
     public boolean isOnFire() {
         return this.isCharged();
@@ -178,24 +126,29 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
         this.entityData.set(DATA_FLAGS_ID, b0);
     }
 
-    static {
-        DATA_FLAGS_ID = SynchedEntityData.defineId(CinderousFurnace.class, EntityDataSerializers.BYTE);
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+        super.defineSynchedData(builder);
+        builder.define(DATA_FLAGS_ID, (byte) 0);
     }
 
-    static class SpellcastingBlazeAttackGoal extends Goal {
-        private final CinderousFurnace cinderousFurnace;
+    static {
+        DATA_FLAGS_ID = SynchedEntityData.defineId(TheInferno.class, EntityDataSerializers.BYTE);
+    }
+
+    static class TheInfernoAttackGoal extends Goal {
+        private final TheInferno theInferno;
         private int attackStep;
         private int attackTime;
         private int lastSeen;
 
-        public SpellcastingBlazeAttackGoal(CinderousFurnace cinderousFurnace) {
-            this.cinderousFurnace = cinderousFurnace;
+        public TheInfernoAttackGoal(TheInferno theInferno) {
+            this.theInferno = theInferno;
             this.setFlags(EnumSet.of(Flag.MOVE, Flag.LOOK));
         }
 
         public boolean canUse() {
-            LivingEntity livingentity = this.cinderousFurnace.getTarget();
-            return livingentity != null && livingentity.isAlive() && this.cinderousFurnace.canAttack(livingentity);
+            LivingEntity livingentity = this.theInferno.getTarget();
+            return livingentity != null && livingentity.isAlive() && this.theInferno.canAttack(livingentity);
         }
 
         public void start() {
@@ -203,7 +156,7 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
         }
 
         public void stop() {
-            this.cinderousFurnace.setCharged(false);
+            this.theInferno.setCharged(false);
             this.lastSeen = 0;
         }
 
@@ -213,16 +166,16 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
 
         public void tick() {
             --this.attackTime;
-            LivingEntity livingentity = this.cinderousFurnace.getTarget();
+            LivingEntity livingentity = this.theInferno.getTarget();
             if (livingentity != null) {
-                boolean flag = this.cinderousFurnace.getSensing().hasLineOfSight(livingentity);
+                boolean flag = this.theInferno.getSensing().hasLineOfSight(livingentity);
                 if (flag) {
                     this.lastSeen = 0;
                 } else {
                     ++this.lastSeen;
                 }
 
-                double d0 = this.cinderousFurnace.distanceToSqr(livingentity);
+                double d0 = this.theInferno.distanceToSqr(livingentity);
                 if (d0 < (double) 4.0F) {
                     if (!flag) {
                         return;
@@ -230,46 +183,47 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
 
                     if (this.attackTime <= 0) {
                         this.attackTime = 20;
-                        this.cinderousFurnace.doHurtTarget(livingentity);
+                        this.theInferno.doHurtTarget(livingentity);
                     }
 
-                    this.cinderousFurnace.getMoveControl().setWantedPosition(livingentity.getX(), livingentity.getY(), livingentity.getZ(), (double) 1.0F);
+                    this.theInferno.getMoveControl().setWantedPosition(livingentity.getX(), livingentity.getY(), livingentity.getZ(), (double) 1.0F);
                 } else if (d0 < this.getFollowDistance() * this.getFollowDistance() && flag) {
-                    double d1 = livingentity.getX() - this.cinderousFurnace.getX();
-                    double d2 = livingentity.getY((double) 0.5F) - this.cinderousFurnace.getY((double) 0.5F);
-                    double d3 = livingentity.getZ() - this.cinderousFurnace.getZ();
+                    double d1 = livingentity.getX() - this.theInferno.getX();
+                    double d2 = livingentity.getY((double) 0.5F) - this.theInferno.getY((double) 0.5F);
+                    double d3 = livingentity.getZ() - this.theInferno.getZ();
                     if (this.attackTime <= 0) {
 
                         ++this.attackStep;
                         if (this.attackStep == 1) {
-                            this.attackTime = 60; // charge-up before first fireball
-                            this.cinderousFurnace.setCharged(true);
-                        } else if (this.attackStep <= 4) {
-                            this.attackTime = 6; // delay between fireballs
+                            this.attackTime = 75; // charge-up before first fireball
+                            this.theInferno.setCharged(true);
+                        } else if (this.attackStep <= 10) {
+                            this.attackTime = 2; // delay between fireballs
                         } else {
-                            this.attackTime = 100; // cooldown after volley
+                            this.attackTime = 125; // cooldown after volley
                             this.attackStep = 0;
-                            this.cinderousFurnace.setCharged(false);
+                            this.theInferno.setCharged(false);
                         }
 
                         if (this.attackStep > 1) {
                             double d4 = Math.sqrt(Math.sqrt(d0)) * (double)0.5F;
-                            if (!this.cinderousFurnace.isSilent()) {
-                                this.cinderousFurnace.level().levelEvent((Player)null, 1018, this.cinderousFurnace.blockPosition(), 0);
+                            if (!this.theInferno.isSilent()) {
+                                this.theInferno.level().levelEvent((Player)null, 1018, this.theInferno.blockPosition(), 0);
                             }
 
                             for(int i = 0; i < 1; ++i) {
-                                Vec3 vec3 = new Vec3(this.cinderousFurnace.getRandom().triangle(d1, 2.297 * d4), d2, this.cinderousFurnace.getRandom().triangle(d3, 2.297 * d4));
-                                SmallFireball smallfireball = new SmallFireball(this.cinderousFurnace.level(), this.cinderousFurnace, vec3.normalize());
-                                smallfireball.setPos(smallfireball.getX(), this.cinderousFurnace.getY((double)0.5F) + (double)0.5F, smallfireball.getZ());
-                                this.cinderousFurnace.level().addFreshEntity(smallfireball);
+                                Vec3 vec3 = new Vec3(this.theInferno.getRandom().triangle(d1, 1.0 * d4), d2, this.theInferno.getRandom().triangle(d3, 1.0 * d4));
+                                SmallFireball smallfireball = new SmallFireball(this.theInferno.level(), this.theInferno, vec3.normalize());
+                                smallfireball.setPos(smallfireball.getX(), this.theInferno.getY((double)0.5F) + (double)0.5F, smallfireball.getZ());
+                                this.theInferno.level().addFreshEntity(smallfireball);
                             }
                         }
+
                     }
 
-                    this.cinderousFurnace.getLookControl().setLookAt(livingentity, 10.0F, 10.0F);
+                    this.theInferno.getLookControl().setLookAt(livingentity, 10.0F, 10.0F);
                 } else if (this.lastSeen < 5) {
-                    this.cinderousFurnace.getMoveControl().setWantedPosition(livingentity.getX(), livingentity.getY(), livingentity.getZ(), (double) 1.0F);
+                    this.theInferno.getMoveControl().setWantedPosition(livingentity.getX(), livingentity.getY(), livingentity.getZ(), (double) 1.0F);
                 }
 
                 super.tick();
@@ -278,19 +232,13 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
         }
 
         private double getFollowDistance() {
-            return this.cinderousFurnace.getAttributeValue(Attributes.FOLLOW_RANGE);
+            return this.theInferno.getAttributeValue(Attributes.FOLLOW_RANGE);
         }
     }
 
-    @Override
-    public boolean causeFallDamage(float fallDistance, float damageMultiplier, DamageSource source) {
-        return false;
-    }
-
-
 
     // Geckolib & Animations
-    private final AnimationController<CinderousFurnace> animationController =
+    private final AnimationController<TheInferno> animationController =
             new AnimationController<>(this, "controller", 0, this::idlePredicate);
 
     @Override
@@ -298,8 +246,8 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
         controllers.add(animationController);
     }
 
-    private PlayState idlePredicate(AnimationState<CinderousFurnace> event) {
-        event.getController().setAnimation(RawAnimation.begin().then("animation.cinderous_furnace.idle", Animation.LoopType.LOOP));
+    private PlayState idlePredicate(AnimationState<TheInferno> event) {
+        event.getController().setAnimation(RawAnimation.begin().then("animation.the_inferno.idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
 

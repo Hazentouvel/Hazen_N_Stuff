@@ -32,7 +32,7 @@ public class LegionnaireCurios extends SimpleDescriptiveCurio {
     @Override
     public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {
         Multimap<Holder<Attribute>, AttributeModifier> attr = LinkedHashMultimap.create();
-        attr.put(AttributeRegistry.FIRE_SPELL_POWER, new AttributeModifier(id, 0.5, AttributeModifier.Operation.ADD_VALUE));
+        attr.put(AttributeRegistry.FIRE_SPELL_POWER, new AttributeModifier(id, 0.15, AttributeModifier.Operation.ADD_VALUE));
         attr.put(AttributeRegistry.FIRE_MAGIC_RESIST, new AttributeModifier(id, 0.5, AttributeModifier.Operation.ADD_VALUE));
         return attr;
     }

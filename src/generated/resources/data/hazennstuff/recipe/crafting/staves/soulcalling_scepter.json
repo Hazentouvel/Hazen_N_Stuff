@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "irons_spellbooks:cinderous_soulcaller"
+    },
+    "F": {
+      "item": "hazennstuff:cloth_of_the_flamebearer"
+    },
+    "N": {
+      "item": "hazennstuff:pyrium_nugget"
+    },
+    "P": {
+      "item": "irons_spellbooks:pyrium_staff"
+    },
+    "S": {
+      "item": "irons_spellbooks:pyrium_staff"
+    }
+  },
+  "pattern": [
+    "NFC",
+    " SF",
+    "P N"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:soulcalling_scepter"
+  }
+}

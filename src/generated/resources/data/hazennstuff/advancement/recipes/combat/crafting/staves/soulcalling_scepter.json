@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pyrium_staff": {
+      "conditions": {
+        "items": [
+          {
+            "items": "irons_spellbooks:pyrium_staff"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hazennstuff:crafting/staves/soulcalling_scepter"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pyrium_staff"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hazennstuff:crafting/staves/soulcalling_scepter"
+    ]
+  }
+}

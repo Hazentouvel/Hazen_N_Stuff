@@ -1,7 +1,9 @@
 package net.hazen.hazennstuff.Registries;
 
+import io.redspace.ironsspellbooks.entity.mobs.keeper.KeeperEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnace;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.TheInferno.TheInferno;
+import net.hazen.hazennstuff.Entity.Mobs.Summons.ReignOfTyros.Keeper.SummonKeeper;
 import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprisma;
 import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.FallingStars.FallingStar;
@@ -303,12 +305,21 @@ public class HnSEntityRegistry {
 
     // The Inferno
     public static final DeferredHolder<EntityType<?>, EntityType<TheInferno>> THE_INFERNO =
-            ENTITIES.register("the_inferno", () -> EntityType.Builder.<TheInferno>of(TheInferno::new, MobCategory.MONSTER)
+            ENTITIES.register("the_inferno", () -> EntityType.Builder.of(TheInferno::new, MobCategory.MONSTER)
                     .fireImmune()
                     .sized(0.6F, 1.8F)
                     .clientTrackingRange(8)
                     .eyeHeight(1.6f)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "the_inferno").toString()));
+
+    // The Inferno
+    public static final DeferredHolder<EntityType<?>, EntityType<SummonKeeper>> SUMMON_KEEPER =
+            ENTITIES.register("summon_keeper",  () -> EntityType.Builder.<SummonKeeper>of(SummonKeeper::new, MobCategory.MONSTER)
+                    .sized(0.85F, 2.3F)
+                    .clientTrackingRange(64)
+                    .eyeHeight(2.3F)
+                    .build(ResourceLocation.fromNamespaceAndPath("summoned_keeper", "summon_keeper").toString())
+            );
 
 
 

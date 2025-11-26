@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Setup;
 
+import io.redspace.ironsspellbooks.entity.mobs.keeper.KeeperRenderer;
 import io.redspace.ironsspellbooks.entity.spells.fiery_dagger.FieryDaggerRenderer;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnaceRenderer;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.TheInferno.TheInfernoRenderer;
@@ -91,6 +92,7 @@ public class HnSClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.TERRAPRISMA.get(), SummonedTerraprismaRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.CINDEROUS_FURNACE.get(), CinderousFurnaceRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.THE_INFERNO.get(), TheInfernoRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.SUMMON_KEEPER.get(), KeeperRenderer::new);
 
 
         /*

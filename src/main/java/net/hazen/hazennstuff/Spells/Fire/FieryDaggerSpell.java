@@ -62,9 +62,14 @@ public class FieryDaggerSpell extends AbstractSpell {
         return CastType.INSTANT;
     }
 
-    public AnimationHolder getCastFinishAnimation() {
-        return HnSSpellAnimations.FIERY_DAGGER_CAST;
+    @Override
+    public AnimationHolder getCastStartAnimation() {
+        if (hasCinderous)
+            return HnSSpellAnimations.FIERY_DAGGER_CAST;
+        else
+            return HnSSpellAnimations.FIERY_DAGGER_SUMMON;
     }
+
 
     public DefaultConfig getDefaultConfig() {
         return this.defaultConfig;
@@ -74,79 +79,7 @@ public class FieryDaggerSpell extends AbstractSpell {
         return this.spellId;
     }
 
-//    public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
-//        if (world.isClientSide) return;
-//
-//        Vec3 look = entity.getLookAngle();
-//        float explosionRadius = spellLevel >= 6 ? 1.0F + spellLevel * 0.5F : 0f;
-//
-//        if (spellLevel >= 6) {
-//            // LEVEL 6+: 3 daggers front + diagonals, with zone
-//            int[] angles = {0, -15, 15};
-//            for (int angle : angles) {
-//                FieryDaggerMagicProjectile dagger = new FieryDaggerMagicProjectile(world);
-//                dagger.setOwner(entity);
-//                dagger.setDamage(this.getDamage(spellLevel, entity));
-//                dagger.setExplosionRadius(explosionRadius); // zone active
-//                dagger.setPos(entity.position().add(0.0, entity.getEyeHeight() - dagger.getBbHeight() * 0.5, 0.0));
-//
-//                Vec3 dir = look.yRot((float) Math.toRadians(angle));
-//                dagger.shoot(dir.x, dir.y, dir.z, 1.25F, 0.0F);
-//
-//                dagger.setNoGravity(false);
-//
-//                world.addFreshEntity(dagger);
-//            }
-//        } else {
-//            // LEVELS 1–5: overhead arc of daggers above the player
-//            int count = 8; // number of daggers
-//            double arcAngle = Math.toRadians(120); // total curvature angle (e.g. 100°)
-//            double radius = 1.6; // distance from the player's center
-//            double height = 1.2; // how far above the player’s head
-//            int baseDelay = 10;
-//            int delayBetween = 2;
-//
-//            // Proper local orientation
-//            Vec3 forward = entity.getLookAngle().normalize();
-//            Vec3 up = new Vec3(0, 1, 0);
-//            Vec3 right = forward.cross(up).normalize();
-//            up = right.cross(forward).normalize(); // ensure orthogonal
-//
-//            // Center of the arc — above the player’s head and slightly forward
-//            Vec3 arcCenter = entity.position()
-//                    .add(0, entity.getEyeHeight() + height, 0)
-//                    .add(forward.scale(0.5));
-//
-//            // Build a vertical arc that curves *overhead*
-//            for (int i = 0; i < count; i++) {
-//                double t = (double) i / (count - 1);
-//                double angle = -arcAngle / 2 + t * arcAngle; // spans from left to right
-//
-//                // Use sine/cosine to create a "rainbow" arc overhead
-//                Vec3 offset =
-//                        right.scale(Math.sin(angle) * radius)   // left/right
-//                                .add(up.scale(Math.cos(angle) * radius * 0.7)); // vertical curve
-//
-//                Vec3 spawnPos = arcCenter.add(offset);
-//
-//                FieryDaggerMagicProjectile dagger = new FieryDaggerMagicProjectile(world);
-//                dagger.setOwner(entity);
-//                dagger.setDamage(this.getDamage(spellLevel, entity));
-//                dagger.setExplosionRadius(0f);
-//                dagger.setPos(spawnPos);
-//
-//                // all daggers shoot forward
-//                dagger.launchDir = forward;
-//                dagger.ownerTrack = spawnPos.subtract(entity.position());
-//                dagger.setDeltaMovement(0, 0, 0);
-//                dagger.delay = baseDelay + i * delayBetween;
-//
-//                world.addFreshEntity(dagger);
-//            }
-//        }
-//
-//        super.onCast(world, spellLevel, entity, castSource, playerMagicData);
-//    }
+    private boolean hasCinderous;
 
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         if (world.isClientSide) return;
@@ -154,6 +87,8 @@ public class FieryDaggerSpell extends AbstractSpell {
         Vec3 look = entity.getLookAngle();
 
         boolean hasCinderousEquipment = hasTaggedItem(entity, HnSTags.CINDEROUS_EQUIPMENT);
+        hasCinderous = hasTaggedItem(entity, HnSTags.CINDEROUS_EQUIPMENT);
+
 
         if (hasCinderousEquipment) {
             // Fiery Zone with Cinderous Equipment
@@ -205,7 +140,15 @@ public class FieryDaggerSpell extends AbstractSpell {
                 dagger.setExplosionRadius(0f);
                 dagger.setPos(spawnPos);
 
-                dagger.launchDir = forward;
+                // Make dagger visually face the caster's current direction
+                dagger.setYRot(entity.getYRot());
+                dagger.setXRot(entity.getXRot());
+                dagger.yRotO = entity.getYRot();
+                dagger.xRotO = entity.getXRot();
+
+                // Do not lock a fixed launchDir here so the dagger can use the owner's look when it actually fires.
+                // (The projectile needs to sample owner.getLookAngle() at release time for this to take effect.)
+                dagger.launchDir = null;
                 dagger.ownerTrack = spawnPos.subtract(entity.position());
                 dagger.setDeltaMovement(0, 0, 0);
                 dagger.delay = baseDelay + i * delayBetween;
@@ -216,6 +159,7 @@ public class FieryDaggerSpell extends AbstractSpell {
 
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
+
 
     private boolean hasTaggedItem(LivingEntity entity, net.minecraft.tags.TagKey<net.minecraft.world.item.Item> tag) {
         if (entity.getMainHandItem().is(tag) || entity.getOffhandItem().is(tag))

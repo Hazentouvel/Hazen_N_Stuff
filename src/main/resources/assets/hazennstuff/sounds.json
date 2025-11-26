@@ -243,5 +243,15 @@
     "sounds": [
       "hazennstuff:terraria_summon"
     ]
+  },
+  "punch": {
+    "sounds": [
+      "hazennstuff:punch"
+    ]
+  },
+  "parry": {
+    "sounds": [
+      "hazennstuff:parry"
+    ]
   }
 }

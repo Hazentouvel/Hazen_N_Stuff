@@ -3,6 +3,7 @@ package net.hazen.hazennstuff.Spells;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Spells.Eldritch.SoulSeekersSpell;
+import net.hazen.hazennstuff.Spells.Evocation.ParrySpell;
 import net.hazen.hazennstuff.Spells.Evocation.SpectralAxeSpell;
 import net.hazen.hazennstuff.Spells.Fire.*;
 import net.hazen.hazennstuff.Spells.Holy.GoldenShowerSpell;
@@ -56,7 +57,7 @@ public class HnSSpellRegistries {
     public static final Supplier<AbstractSpell> FIERY_DAGGER = registerSpell(new FieryDaggerSpell());
 
     //Scorching Slash
-    //public static final Supplier<AbstractSpell> REIGN_OF_TYROS = registerSpell(new ReignOfTyrosSpell());
+    public static final Supplier<AbstractSpell> REIGN_OF_TYROS = registerSpell(new ReignOfTyrosSpell());
 
     /*
     *** Ice
@@ -99,6 +100,9 @@ public class HnSSpellRegistries {
 
     //Spectral Axe
     public static final Supplier<AbstractSpell> SPECTRAL_AXE = registerSpell(new SpectralAxeSpell());
+
+    //Parry
+    public static final Supplier<AbstractSpell> PARRY = registerSpell(new ParrySpell());
 
     /*
      *** Holy

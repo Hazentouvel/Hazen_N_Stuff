@@ -109,6 +109,10 @@ public class HnSSounds {
     public static DeferredHolder<SoundEvent, SoundEvent> CAT_CAST = registerSoundEvent("cat_cast");
     public static DeferredHolder<SoundEvent, SoundEvent> CAT_IMPACT = registerSoundEvent("cat_impact");
 
+    //Parry
+    public static DeferredHolder<SoundEvent, SoundEvent> PARRY = registerSoundEvent("parry");
+    public static DeferredHolder<SoundEvent, SoundEvent> PUNCH = registerSoundEvent("punch");
+
     /***
      * Equip Sounds
      */

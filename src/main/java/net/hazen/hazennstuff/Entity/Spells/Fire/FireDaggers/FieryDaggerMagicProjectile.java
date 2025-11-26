@@ -162,6 +162,9 @@ public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
                 int extra = Utils.random.nextIntBetweenInclusive(SPAWN_LAUNCH_EXTRA_MIN, SPAWN_LAUNCH_EXTRA_MAX);
                 dagger.delay = this.delay + extra;
 
+                // Ensure spawn-zone daggers have a default upward launch direction so they fire upwards when their delay expires.
+                dagger.launchDir = new Vec3(0.0D, 1.0D, 0.0D);
+
                 this.level().addFreshEntity(dagger);
             }
         }
@@ -169,18 +172,36 @@ public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
         this.createFireField();
     }
 
+    // java
     @Override
     public void tick() {
-        // Spawn-zone dagger handling unchanged...
+        /*
+         * Unified waiting/launch handling:
+         * - While age < delay we update owner-tracking position and always update visual rotation to face
+         *   the owner's current yaw/pitch (so the dagger points pommel->tip toward the player).
+         * - When age == delay we sample an owner look if needed and launch using `launchDir` if present.
+         * - After delay we fall back to super.tick() for normal projectile movement/cleanup.
+         */
 
-        // Non-spawn daggers: original tracking/wait behavior + launch when grounded or launchDir present
-        if (!this.isSpawnDagger() && this.age++ < this.delay) {
+        if (this.age++ < this.delay) {
             Entity owner = this.getOwner();
             float strength = 0.5F;
+
             if (owner != null && this.isTrackingOwner()) {
                 // follow owner movement
                 Vec3 ownerMotion = owner.position().subtract(owner.xOld, owner.yOld, owner.zOld);
                 this.setPos(this.position().add(ownerMotion));
+            }
+
+            // Always update visual rotation each tick so dagger faces the owner's current yaw/pitch
+            if (owner != null) {
+                // Use owner's yaw/pitch directly to ensure model orientation matches the player
+                float yRot = owner.getYRot();
+                float xRot = owner.getXRot();
+                this.setYRot(yRot);
+                this.setXRot(xRot);
+                this.yRotO = yRot;
+                this.xRotO = xRot;
             }
 
             Entity target = this.getTargetEntity();
@@ -196,7 +217,16 @@ public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
             }
 
             if (this.age == this.delay) {
-                // If this projectile was following an owner and has a stored launchDir, launch forward now
+                // If this projectile was following an owner and no fixed launchDir was stored,
+                // sample the owner's current look direction now so it fires where the player is facing at launch time.
+                if (this.launchDir == null && owner != null) {
+                    Vec3 ownerLook = owner.getLookAngle();
+                    if (ownerLook != null) {
+                        this.launchDir = ownerLook;
+                    }
+                }
+
+                // If we have a launchDir, launch now (applies to both spawn and non-spawn daggers)
                 if (this.launchDir != null) {
                     if (!this.level().isClientSide) {
                         this.isGrounded = false;
@@ -208,13 +238,13 @@ public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
                     this.ownerTrack = null;
                     // Keep launchDir for consistent movement direction
 
-
                     if (Utils.random.nextFloat() < 0.25F) {
                         this.playSound(SoundRegistry.FIERY_DAGGER_THROW.get(), 0.75F, (float)Utils.random.nextIntBetweenInclusive(90, 110) * 0.01F);
                     } else {
                         this.playSound(SoundRegistry.FIERY_DAGGER_THROW.get(), 2.0F, (float)Utils.random.nextIntBetweenInclusive(90, 110) * 0.01F);
                     }
                 } else {
+                    // Fallback launch behavior when no launchDir present (preserve prior behavior)
                     if (this.isGrounded) {
                         if (!this.level().isClientSide) {
                             this.isGrounded = false;
@@ -244,6 +274,7 @@ public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
             super.tick();
         }
     }
+
 
     protected boolean canHitEntity(Entity pTarget) {
         return !this.isSpawnDagger() && super.canHitEntity(pTarget);

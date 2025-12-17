@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:magic_cloth"
+  },
+  "base": {
+    "tag": "hazennstuff:armors/school/school_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "irons_spellbooks:priest_leggings"
+  },
+  "template": {
+    "item": "irons_spellbooks:holy_rune"
+  }
+}

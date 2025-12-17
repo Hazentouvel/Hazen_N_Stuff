@@ -1,8 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.126'
-    id 'idea'
+    id 'net.neoforged.moddev' version '1.0.21'
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -18,14 +17,48 @@ version = mod_version
 group = mod_group_id
 
 repositories {
-    // Add here additional repositories if required by some of the dependencies below.
+    flatDir {
+        dir 'libs'
+    }
+
+    maven {
+        name = "Iron's Maven - Release"
+        url = "https://code.redspace.io/releases"
+    }
+
+    maven {
+        name = "Iron's Maven - Snapshots"
+        url = "https://code.redspace.io/snapshots"
+    }
+
+    maven { url = "https://maven.enginehub.org/repo/" }
+    maven {
+        url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
+        content {
+            includeGroup("software.bernie.geckolib")
+        }
+    }
+    maven { url = "https://maven.theillusivec4.top" }
+    maven { url = "https://cursemaven.com" }
+    maven { url = "https://maven.blamejared.com" }
+    maven { url = "https://maven.kosmx.dev/" }
+    maven { url = 'https://maven.azuredoom.com/mods'}
+
+    maven {
+        // Shadows (Attribute Lib)
+        url "https://maven.shadowsoffire.dev/releases"
+        content {
+            includeGroup "dev.shadowsoffire"
+        }
+    }
 }
+
 
 base {
     archivesName = mod_id
 }
 
-// Mojang ships Java 21 to end users in 1.21, so mods should target Java 21.
+// Mojang ships Java 21 to end users starting in 1.20.5, so mods should target Java 21.
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
@@ -38,10 +71,11 @@ neoForge {
     }
 
     // This line is optional. Access Transformers are automatically detected
-    // accessTransformers = project.files('src/main/resources/META-INF/accesstransformer.cfg')
+    accessTransformers = project.files('src/main/templates/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
+
     runs {
         client {
             client()
@@ -93,7 +127,8 @@ neoForge {
     mods {
         // define mod <-> source bindings
         // these are used to tell the game which sources are for which mod
-        // multi mod projects should define one per mod
+        // mostly optional in a single mod project
+        // but multi mod projects should define one per mod
         "${mod_id}" {
             sourceSet(sourceSets.main)
         }
@@ -112,27 +147,90 @@ configurations {
 }
 
 dependencies {
-    // Example optional mod dependency with JEI
-    // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
-    // compileOnly "mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}"
-    // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
-    // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
 
-    // Example mod dependency using a mod jar from ./libs with a flat dir repository
-    // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
-    // The group id is ignored when searching -- in this case, it is "blank"
-    // implementation "blank:coolmod-${mc_version}:${coolmod_version}"
+    //Iron's Spells 'n Spellbooks
+    implementation "curse.maven:iss-855414:7262331"
+    implementation "curse.maven:geckolib-388172:6304958"
+    implementation "curse.maven:player_animator-658587:6024462"
+    implementation "curse.maven:curios-309927:6342656"
+    //Apothic Attributes
+    implementation "curse.maven:apothic-attributes-898963:6302334"
+    implementation "curse.maven:placebo-283644:6337156"
+    compileOnly "curse.maven:apotheosis-${apotheosis_version}"
+    //Ace Utils
+    implementation "curse.maven:ace_utils-1299492:7119308"
+    // Photon
+    //implementation "curse.maven:photon-871522:6911487"
+    //implementation "curse.maven:ldlib-626676:6911394"
+    //AzureLib
+    implementation "mod.azure.azurelib:azurelib-neo-${minecraft_version}:${azurelib_version}"
 
-    // Example mod dependency using a file as dependency
-    // implementation files("libs/coolmod-${mc_version}-${coolmod_version}.jar")
+    //JEI
+    compileOnly "mezz.jei:jei-${jei_mc_version}-common-api:${jei_version}"
+    compileOnly "mezz.jei:jei-${jei_mc_version}-neoforge-api:${jei_version}"
+    runtimeOnly "mezz.jei:jei-${jei_mc_version}-neoforge:${jei_version}"
 
-    // Example project dependency using a sister or child project:
-    // implementation project(":myproject")
+    // Embeddium
+    localRuntime "curse.maven:embeddium-908741:6118392"
 
-    // For more info:
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    // Obscuria's Tooltips
+    localRuntime "curse.maven:obscurias_tooltips-715660:7315944"
+    localRuntime "curse.maven:fragmentum-1123977:7315935"
+
+    //Better Combat
+    localRuntime "curse.maven:better-combat-by-daedelus-639842:5723092"
+    localRuntime "curse.maven:cloth-config-348521:5623420"
+
+    //Jade
+    localRuntime "curse.maven:jade-324717:6853386"
+
+    // MmmMmmMmm
+    localRuntime "curse.maven:mmm-225738:6826533"
+    localRuntime "curse.maven:moonlight_lib-499980:6814741"
+
+    //Ars Nouveau
+    localRuntime "curse.maven:ars_nouveau-401955:6827634"
+    compileOnly "curse.maven:ars_nouveau-401955:6827634"
+
+    //Malum
+    localRuntime "curse.maven:malum-484064:6655805"
+    compileOnly "curse.maven:malum-484064:6655805"
+
+    localRuntime "curse.maven:lodestone-616457:6630047"
+    compileOnly "curse.maven:lodestone-616457:6630047"
+
+    // Iron's Gems 'n Jewelry
+    localRuntime "curse.maven:irons_gems_n_jewelry-1101111:7084345"
+    localRuntime "curse.maven:atlas_api-1145462:6880789"
+
+    //Cataclysm Spellbooks
+    //localRuntime "curse.maven:cataclysm_spellbooks-1099461:6925079"
+    //compileOnly "curse.maven:cataclysm_spellbooks-1099461:6925079"
+    localRuntime "curse.maven:l_enders_cataclysm-551586:6906997"
+    compileOnly "curse.maven:l_enders_cataclysm-551586:6906997"
+    localRuntime "curse.maven:lionfish-1001614:6168249"
+    compileOnly "curse.maven:lionfish-1001614:6168249"
+
+    //SnackPirate's Aeromancy Additions
+    localRuntime "curse.maven:snackpirates_aeromancy_additions-1160104:6781033"
+    compileOnly "curse.maven:snackpirates_aeromancy_additions-1160104:6781033"
+    localRuntime "curse.maven:expandability-465066:5428824"
+    compileOnly "curse.maven:expandability-465066:5428824"
+
+    //Magic From The East
+    localRuntime "curse.maven:magic_from_the_east-1224162:6864551"
+    compileOnly "curse.maven:magic_from_the_east-1224162:6864551"
+
+    //Familiar Lib
+    localRuntime "curse.maven:familiar_lib-1316458:6824093"
+    compileOnly "curse.maven:familiar_lib-1316458:6824093"
+
+    //Ender's Spells and Stuff
+    localRuntime "curse.maven:enders_spells_and_stuff-1140215:6903947"
+    compileOnly "curse.maven:enders_spells_and_stuff-1140215:6903947"
+    localRuntime "curse.maven:gtbcs-spelllib-1194714:6164512"
+    compileOnly "curse.maven:gtbcs-spelllib-1194714:6164512"
+
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -142,6 +240,7 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             minecraft_version      : minecraft_version,
             minecraft_version_range: minecraft_version_range,
             neo_version            : neo_version,
+            neo_version_range      : neo_version_range,
             loader_version_range   : loader_version_range,
             mod_id                 : mod_id,
             mod_name               : mod_name,
@@ -185,4 +284,6 @@ idea {
         downloadSources = true
         downloadJavadoc = true
     }
+    // In build.gradle:
+// This block is where your mappings version is also specified
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hazennstuff:item/armors/soul_legionnaire_ruler_boots"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "irons_spellbooks:arcane_rune"
+  },
+  "base": {
+    "item": "hazennstuff:miner_leggings"
+  },
+  "addition": {
+    "item": "irons_spellbooks:archevoker_leggings"
+  },
+  "result": {
+    "id": "hazennstuff:spectral_spelunker_leggings"
+  }
+}

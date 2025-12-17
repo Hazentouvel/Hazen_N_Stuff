@@ -1,0 +1,49 @@
+{
+  "attributes": {
+    "attack_range": 4,
+    "two_handed": false,
+    "category": "rapier",
+    "attacks": [
+      {
+        "hitbox": "FORWARD_BOX",
+        "damage_multiplier": 1,
+        "angle": 0,
+        "upswing": 0.2,
+        "animation": "bettercombat:one_handed_stab",
+        "swing_sound": {
+          "id": "irons_spellbooks:spell.flaming_strike.cast"
+        }
+      },
+      {
+        "hitbox": "FORWARD_BOX",
+        "damage_multiplier": 1,
+        "angle": 0,
+        "upswing": 0.2,
+        "animation": "bettercombat:two_handed_stab_left",
+        "swing_sound": {
+          "id": "irons_spellbooks:spell.flaming_strike.cast"
+        }
+      },
+      {
+        "hitbox": "FORWARD_BOX",
+        "damage_multiplier": 1,
+        "angle": 0,
+        "upswing": 0.2,
+        "animation": "bettercombat:one_handed_stab",
+        "swing_sound": {
+          "id": "irons_spellbooks:spell.flaming_strike.cast"
+        }
+      },
+      {
+        "hitbox": "FORWARD_BOX",
+        "damage_multiplier": 1,
+        "angle": 0,
+        "upswing": 0.2,
+        "animation": "bettercombat:one_handed_stab",
+        "swing_sound": {
+          "id": "irons_spellbooks:spell.flaming_strike.cast"
+        }
+      }
+    ]
+  }
+}

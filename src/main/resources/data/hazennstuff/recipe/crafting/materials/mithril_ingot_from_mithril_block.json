@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "hazennstuff:mithril_block"
+    }
+  ],
+  "result": {
+    "id": "irons_spellbooks:mithril_ingot",
+    "count": 9
+  }
+}

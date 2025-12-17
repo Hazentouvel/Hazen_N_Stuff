@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:echo_shard"
+  },
+  "base": {
+    "tag": "hazennstuff:armors/pure_armor/pure_helmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:dark_ritual_templar_helmet"
+  },
+  "template": {
+    "item": "hazennstuff:runestone_fragments"
+  }
+}

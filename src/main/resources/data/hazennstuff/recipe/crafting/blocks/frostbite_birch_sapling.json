@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I#I",
+    "#S#",
+    "I#I"
+  ],
+  "key": {
+    "S": {
+      "item": "hazennstuff:permafrost_fragment"
+    },
+    "T": {
+      "item": "minecraft:ice"
+    },
+    "#": {
+      "tag": "minecraft:saplings"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:frostbite_birch_sapling",
+    "count": 4
+  }
+}

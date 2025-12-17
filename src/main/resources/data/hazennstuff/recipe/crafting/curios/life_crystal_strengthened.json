@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "malum"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "nEn",
+    "iNi",
+    "ngn"
+  ],
+  "key": {
+    "n": {
+      "item": "hazennstuff:zenalite_ingot"
+    },
+    "E": {
+      "item": "hazennstuff:health_upgrade_orb"
+    },
+    "i": {
+      "item": "hazennstuff:hallowed_ingot"
+    },
+    "N": {
+      "item": "hazennstuff:sacred"
+    },
+    "g": {
+      "item": "hazennstuff:pyrium_nugget"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:strengthened",
+    "count": 1
+  }
+}

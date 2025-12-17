@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "irons_spellbooks:divine_soulshard",
+    "minecraft:heart_of_the_sea",
+    "minecraft:nether_star",
+    "minecraft:echo_shard"
+  ]
+}

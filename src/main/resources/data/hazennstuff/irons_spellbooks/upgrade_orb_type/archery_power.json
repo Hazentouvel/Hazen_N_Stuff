@@ -1,0 +1,9 @@
+{
+  "amount": 0.05,
+  "attribute": "apothic_attributes:draw_speed",
+  "containerItem": {
+    "count": 1,
+    "id": "hazennstuff:archery_upgrade_orb"
+  },
+  "operation": "add_multiplied_base"
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hazennstuff:item/armors/charged_scourge_leggings"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:gold_ingot"
+  },
+  "base": {
+    "tag": "hazennstuff:staves/artificer_cane"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:frieren_staff"
+  },
+  "template": {
+    "item": "minecraft:leather"
+  }
+}

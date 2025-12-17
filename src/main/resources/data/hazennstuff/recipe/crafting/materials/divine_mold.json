@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#D#",
+    "#S#",
+    "AgA"
+  ],
+  "key": {
+    "#": {
+      "item": "hazennstuff:raw_zenalite"
+    },
+    "D": {
+      "item": "irons_spellbooks:divine_soulshard"
+    },
+    "S": {
+      "item": "irons_spellbooks:blank_rune"
+    },
+    "A": {
+      "item": "irons_spellbooks:dragonskin"
+    },
+    "g": {
+      "item": "irons_spellbooks:pyrium_ingot"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:divine_mold",
+    "count": 4
+  }
+}

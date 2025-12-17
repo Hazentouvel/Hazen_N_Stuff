@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#Nn",
+    "#S ",
+    " H "
+  ],
+  "key": {
+    "#": {
+      "item": "irons_spellbooks:lightning_bottle"
+    },
+    "N": {
+      "item": "hazennstuff:beongae"
+    },
+    "n": {
+      "item": "minecraft:mace"
+    },
+    "S": {
+      "item": "hazennstuff:excalibur_fragment"
+    },
+    "H": {
+      "item": "irons_spellbooks:energized_core"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:skyscorcher",
+    "count": 1
+  }
+}

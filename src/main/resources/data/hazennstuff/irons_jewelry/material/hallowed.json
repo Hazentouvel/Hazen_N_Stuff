@@ -1,0 +1,35 @@
+{
+  "descriptionId": "material.hazennstuff.hallowed",
+  "ingredient": {
+    "tag": "c:ingots/hallowed"
+  },
+  "materialType": [
+    "metal"
+  ],
+  "paletteLocation": "hazennstuff:palettes/hallowed",
+  "quality": 3,
+  "bonusParameters": {
+    "irons_jewelry:attribute": {
+      "attribute": "aces_spell_utils:spell_res_penetration",
+      "amount": 0.4,
+      "operation": "add_multiplied_total"
+    },
+    "irons_jewelry:positive_effect": {
+      "effect": "irons_spellbooks:fortify"
+    },
+    "irons_jewelry:negative_effect": {
+      "effect": "irons_spellbooks:guided"
+    },
+    "irons_jewelry:action": {
+      "targetSelf": false,
+      "action": {
+        "type": "irons_jewelry:apply_damage",
+        "damageType": "minecraft:magic",
+        "amount": {
+          "base": 2.0,
+          "scalar": 1
+        }
+      }
+    }
+  }
+}

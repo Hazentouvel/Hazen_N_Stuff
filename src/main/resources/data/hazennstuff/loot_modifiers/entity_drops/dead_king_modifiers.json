@@ -1,0 +1,12 @@
+{
+  "type": "irons_spellbooks:append_loot",
+  "conditions": [
+    {
+      "condition":
+      "neoforge:loot_table_id",
+      "loot_table_id":
+      "irons_spellbooks:entities/dead_king"
+    }
+  ],
+  "key": "hazennstuff:entities/additional_dead_king_loot"
+}

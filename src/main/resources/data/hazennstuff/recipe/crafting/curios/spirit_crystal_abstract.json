@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "hazennstuff:melee_rune"
+    },
+    {
+      "item": "hazennstuff:dreadstone"
+    },
+    {
+      "item": "minecraft:diamond_sword"
+    }
+  ],
+  "result": {
+    "id": "hazennstuff:abstract",
+    "count": 1
+  }
+}

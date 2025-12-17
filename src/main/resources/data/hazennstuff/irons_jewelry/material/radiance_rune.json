@@ -1,0 +1,18 @@
+{
+  "descriptionId": "material.hazennstuff.rune_radiance",
+  "ingredient": {
+    "item": "hazennstuff:radiance_rune"
+  },
+  "materialType": [
+    "spellbooks_rune"
+  ],
+  "paletteLocation": "hazennstuff:palettes/rune_radiance",
+  "quality": 1.5,
+  "bonusParameters": {
+    "irons_jewelry:attribute": {
+      "attribute": "hazennstuff:radiance_spell_power",
+      "amount": 0.025,
+      "operation": "add_multiplied_total"
+    }
+  }
+}

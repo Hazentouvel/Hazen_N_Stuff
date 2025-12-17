@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cEc",
+    "NYN",
+    "cEc"
+  ],
+  "key": {
+    "c": {
+      "item": "irons_spellbooks:arcane_ingot"
+    },
+    "E": {
+      "item": "irons_spellbooks:mana_upgrade_orb"
+    },
+    "N": {
+      "item": "irons_spellbooks:mithril_scrap"
+    },
+    "Y": {
+      "item": "hazennstuff:ruptured"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:refined",
+    "count": 1
+  }
+}

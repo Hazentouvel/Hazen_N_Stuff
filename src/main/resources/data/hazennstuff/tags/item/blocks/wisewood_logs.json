@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "hazennstuff:stripped_wisewood_log",
+    "hazennstuff:stripped_wisewood_wood",
+    "hazennstuff:wisewood_log",
+    "hazennstuff:wisewood_wood"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#E#",
+    "#S#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "hazennstuff:divine_mold"
+    },
+    "E": {
+      "item": "irons_spellbooks:arcane_essence"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:divine_mold",
+    "count": 2
+  }
+}

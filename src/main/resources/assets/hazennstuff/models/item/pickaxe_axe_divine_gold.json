@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "hazennstuff:item/pickaxe_axe_model"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "hazennstuff:item/pickaxe_axe_divine_gold_gui"
+    }
+  }
+}

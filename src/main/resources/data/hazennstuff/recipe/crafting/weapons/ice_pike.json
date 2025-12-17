@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #M",
+    " N#",
+    "B  "
+  ],
+  "key": {
+    "#": {
+      "item": "hazennstuff:permafrost_fragment"
+    },
+    "M": {
+      "item": "irons_spellbooks:permafrost_shard"
+    },
+    "N": {
+      "item": "hazennstuff:excalibur_fragment"
+    },
+    "B": {
+      "item": "irons_spellbooks:frosted_helve"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:ice_pike",
+    "count": 1
+  }
+}

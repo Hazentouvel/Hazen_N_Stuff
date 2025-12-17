@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "hazennstuff:item/fireblossom_rapier_model"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "hazennstuff:item/fireblossom_rapier_gui"
+    }
+  }
+}

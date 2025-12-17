@@ -1,0 +1,35 @@
+{
+  "descriptionId": "material.hazennstuff.rose_gold",
+  "ingredient": {
+    "tag": "c:ingots/rose_gold"
+  },
+  "materialType": [
+    "metal",
+    "gold"
+  ],
+  "paletteLocation": "hazennstuff:palettes/rose_gold",
+  "quality": 3,
+  "bonusParameters": {
+    "irons_jewelry:attribute": {
+      "attribute": "minecraft:generic.max_health",
+      "amount": 5,
+      "operation": "add_value"
+    },
+    "irons_jewelry:positive_effect": {
+      "effect": "minecraft:regeneration"
+    },
+    "irons_jewelry:negative_effect": {
+      "effect": "minecraft:weakness"
+    },
+    "irons_jewelry:action": {
+      "targetSelf": true,
+      "action": {
+        "type": "irons_jewelry:heal",
+        "amount": {
+          "base": 3.0,
+          "scalar": 2.0
+        }
+      }
+    }
+  }
+}

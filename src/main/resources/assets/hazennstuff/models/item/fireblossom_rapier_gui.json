@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hazennstuff:item/gui/fireblossom_rapier_gui"
+  }
+}

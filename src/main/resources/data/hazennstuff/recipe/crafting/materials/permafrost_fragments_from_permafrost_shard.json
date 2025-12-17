@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "irons_spellbooks:permafrost_shard"
+    }
+  ],
+  "result": {
+    "id": "hazennstuff:permafrost_fragment",
+    "count": 8
+  }
+}

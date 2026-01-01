@@ -6,7 +6,7 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.AbstractSpellCastingMob;
 import io.redspace.ironsspellbooks.entity.mobs.goals.WizardAttackGoal;
 import io.redspace.ironsspellbooks.entity.mobs.goals.WizardRecoverGoal;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -87,9 +87,9 @@ public class PiglinPyromancerEntity extends AbstractSpellCastingMob implements E
 
     @Override
     protected void populateDefaultEquipmentSlots(RandomSource pRandom, DifficultyInstance pDifficulty) {
-        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(HnSItems.PYROMANCER_BRUTE_HELMET.get()));
+        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(HnSItemRegistry.PYROMANCER_BRUTE_HELMET.get()));
         this.setDropChance(EquipmentSlot.HEAD, 0.0f);
-        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(HnSItems.PYROMANCER_BRUTE_CHESTPLATE.get()));
+        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(HnSItemRegistry.PYROMANCER_BRUTE_CHESTPLATE.get()));
         this.setDropChance(EquipmentSlot.CHEST, 0.0F);
     }
 

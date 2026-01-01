@@ -1,7 +1,7 @@
 package net.hazen.hazennstuff.Spells.AbstractSpells;
 
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -23,8 +23,8 @@ public abstract class AbstractNightsEdgeSpell extends AbstractSpell {
     @Override
     public boolean canBeCraftedBy(Player player) {
         Item[] validItems = {
-                HnSItems.NIGHTS_EDGE.get(),
-                HnSItems.TRUE_NIGHTS_EDGE.get()
+                HnSItemRegistry.NIGHTS_EDGE.get(),
+                HnSItemRegistry.TRUE_NIGHTS_EDGE.get()
         };
         for (Item item : validItems) {
             if (isValidUnlockItemInInventory(item, player)) {

@@ -7,7 +7,7 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.AbstractSpellCastingMob;
 import io.redspace.ironsspellbooks.entity.mobs.goals.WizardAttackGoal;
 import io.redspace.ironsspellbooks.entity.mobs.goals.WizardRecoverGoal;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
@@ -74,11 +74,11 @@ public class NamelessOneEntity extends AbstractSpellCastingMob implements Enemy 
 
     @Override
     protected void populateDefaultEquipmentSlots(RandomSource pRandom, DifficultyInstance pDifficulty) {
-        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(HnSItems.NAMELESS_ONE_HELMET.get()));
+        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(HnSItemRegistry.NAMELESS_ONE_HELMET.get()));
         this.setDropChance(EquipmentSlot.HEAD, 0.0f);
-        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(HnSItems.NAMELESS_ONE_CHESTPLATE.get()));
+        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(HnSItemRegistry.NAMELESS_ONE_CHESTPLATE.get()));
         this.setDropChance(EquipmentSlot.CHEST, 0.0F);
-        this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(HnSItems.NAMELESS_ONE_LEGGINGS.get()));
+        this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(HnSItemRegistry.NAMELESS_ONE_LEGGINGS.get()));
         this.setDropChance(EquipmentSlot.LEGS, 0.0f);
     }
 

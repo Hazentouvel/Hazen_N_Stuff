@@ -16,7 +16,7 @@ import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleHelper;
 import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
-import net.hazen.hazennstuff.Registries.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrikeOptions;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrikeOptions;
 import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractNightsEdgeSpell;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;

@@ -2,10 +2,10 @@ package net.hazen.hazennstuff.Registries;
 
 import com.mojang.serialization.MapCodec;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.Registries.Particle.LeafParticle.LeafParticleOptions;
-import net.hazen.hazennstuff.Registries.Particle.SlashParticles.Spells.IonicSLash.IonicSlashOptions;
-import net.hazen.hazennstuff.Registries.Particle.SlashParticles.Spells.NatureSlash.NatureSlashOptions;
-import net.hazen.hazennstuff.Registries.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrikeOptions;
+import net.hazen.hazennstuff.Particle.LeafParticle.LeafParticleOptions;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSLash.IonicSlashOptions;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NatureSlash.NatureSlashOptions;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrikeOptions;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.Registries;
@@ -68,8 +68,8 @@ public class HnSParticleRegistry {
             });
 
 
-    public static final Supplier<ParticleType<IonicSlashOptions>> IONIC_STRIKE =
-            PARTICLE_TYPES.register("ionic_strike_particle", () -> new ParticleType<IonicSlashOptions>(true) {
+    public static final Supplier<ParticleType<IonicSlashOptions>> IONIC_SLASH =
+            PARTICLE_TYPES.register("ionic_slash_particle", () -> new ParticleType<IonicSlashOptions>(true) {
                 public MapCodec<IonicSlashOptions> codec() {
                     return IonicSlashOptions.MAP_CODEC;
                 }

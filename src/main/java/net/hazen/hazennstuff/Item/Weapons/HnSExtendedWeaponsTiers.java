@@ -8,7 +8,7 @@ import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -31,7 +31,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.9F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.ICE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.COLD_DAMAGE, 5, AttributeModifier.Operation.ADD_VALUE),
             new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 2, AttributeModifier.Operation.ADD_VALUE)
@@ -43,7 +43,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -1.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.ICE_SPELL_POWER, 0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.COLD_DAMAGE, 3, AttributeModifier.Operation.ADD_VALUE)
     );
@@ -58,7 +58,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.6F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.FIRE_DAMAGE, 5, AttributeModifier.Operation.ADD_VALUE),
             new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 2, AttributeModifier.Operation.ADD_VALUE)
@@ -70,7 +70,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -3F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.FIRE_DAMAGE, 5, AttributeModifier.Operation.ADD_VALUE),
             new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 2, AttributeModifier.Operation.ADD_VALUE)
@@ -82,7 +82,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
@@ -92,7 +92,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -1.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.FIRE_DAMAGE, 3, AttributeModifier.Operation.ADD_VALUE),
@@ -105,7 +105,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.FIRE_DAMAGE, 5, AttributeModifier.Operation.ADD_VALUE),
             new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 3, AttributeModifier.Operation.ADD_VALUE)
@@ -117,7 +117,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.6F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.FIRE_DAMAGE, 5, AttributeModifier.Operation.ADD_VALUE),
             new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 3, AttributeModifier.Operation.ADD_VALUE),
@@ -134,7 +134,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -3F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.LIGHTNING_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.CRIT_DAMAGE, .05, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
@@ -145,7 +145,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -3.4F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.LIGHTNING_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.CRIT_DAMAGE, .25, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.CRIT_CHANCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
@@ -157,7 +157,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.VOLT_CORE.get()),
+            () -> Ingredient.of(HnSItemRegistry.VOLT_CORE.get()),
             new AttributeContainer(AttributeRegistry.LIGHTNING_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
@@ -167,7 +167,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.VOLT_CORE.get()),
+            () -> Ingredient.of(HnSItemRegistry.VOLT_CORE.get()),
             new AttributeContainer(AttributeRegistry.LIGHTNING_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
@@ -177,7 +177,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -1.9F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.VOLT_CORE.get()),
+            () -> Ingredient.of(HnSItemRegistry.VOLT_CORE.get()),
             new AttributeContainer(AttributeRegistry.LIGHTNING_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
@@ -187,7 +187,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -1.8F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.VOLT_CORE.get()),
+            () -> Ingredient.of(HnSItemRegistry.VOLT_CORE.get()),
             new AttributeContainer(AttributeRegistry.LIGHTNING_SPELL_POWER, 0.25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
@@ -201,7 +201,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -3F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.EVOCATION_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.CRIT_DAMAGE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
@@ -212,7 +212,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.4F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.CRIT_CHANCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
@@ -229,7 +229,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -3.1F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ASAttributeRegistry.SPELL_RES_PENETRATION, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
@@ -242,7 +242,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ASAttributeRegistry.SPELL_RES_PENETRATION, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
@@ -255,7 +255,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
@@ -273,7 +273,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.6F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
@@ -285,7 +285,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -1.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
@@ -297,7 +297,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
@@ -311,7 +311,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ASAttributeRegistry.MANA_REND, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
@@ -323,7 +323,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.4F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
@@ -339,7 +339,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -1.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.LIFE_STEAL, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
@@ -355,7 +355,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -3.1F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ASAttributeRegistry.GOLIATH_SLAYER, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
@@ -374,7 +374,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.6F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(HnSAttributeRegistry.RADIANCE_MAGIC_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
@@ -386,7 +386,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.6F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(HnSAttributeRegistry.RADIANCE_MAGIC_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
@@ -399,7 +399,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.6F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
@@ -412,7 +412,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
@@ -429,7 +429,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -1.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(HnSAttributeRegistry.SHADOW_MAGIC_POWER, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
@@ -439,7 +439,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
@@ -450,7 +450,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.8F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.CRIT_CHANCE, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
@@ -497,7 +497,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.7F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.SPELL_RESIST, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ASAttributeRegistry.MANA_REND, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
@@ -510,7 +510,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -3F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.SPELL_RESIST, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ASAttributeRegistry.MANA_REND, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
@@ -523,7 +523,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.4F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.SPELL_RESIST, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ASAttributeRegistry.MANA_REND, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
@@ -534,7 +534,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2.4F,
             10,
             BlockTags.INCORRECT_FOR_DIAMOND_TOOL,
-            () -> Ingredient.of(HnSItems.ZENALITE_INGOT.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .05, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 

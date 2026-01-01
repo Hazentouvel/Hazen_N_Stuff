@@ -9,7 +9,7 @@ import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.Animations.HnSDispatcher;
 import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.Armor.ImbuableHnSArmorItem;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
@@ -64,16 +64,16 @@ public class GabrielElytraArmorItem extends ImbuableHnSArmorItem implements IDis
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
         if (!level.isClientSide && entity instanceof Player player ) {
             player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.is(HnSItems.GABRIEL_ULTRAKILL_HELMET)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.GABRIEL_ULTRAKILL_HELMET)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.GABRIEL_ULTRAKILL_CHESTPLATE)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.GABRIEL_ULTRAKILL_CHESTPLATE)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.GABRIEL_ULTRAKILL_LEGGINGS)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.GABRIEL_ULTRAKILL_LEGGINGS)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.GABRIEL_ULTRAKILL_BOOTS)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.GABRIEL_ULTRAKILL_BOOTS)) {
                     dispatcher.idle(player, wornArmor);
                 }
             });

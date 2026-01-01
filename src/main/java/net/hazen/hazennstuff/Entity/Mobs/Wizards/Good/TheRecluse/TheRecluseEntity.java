@@ -15,7 +15,7 @@ import io.redspace.ironsspellbooks.loot.SpellFilter;
 import io.redspace.ironsspellbooks.player.AdditionalWanderingTrades;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import io.redspace.ironsspellbooks.util.ModTags;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -124,10 +124,10 @@ public class TheRecluseEntity extends NeutralWizard implements VillagerDataHolde
 
     @Override
     protected void populateDefaultEquipmentSlots(RandomSource pRandom, DifficultyInstance pDifficulty) {
-        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(HnSItems.ENDERMAN_BLINDFOLD.get()));
-        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(HnSItems.ENDERMAN_CHESTPLATE.get()));
-        this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(HnSItems.ENDERMAN_LEGGINGS.get()));
-        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(HnSItems.ENDERMAN_BOOTS.get()));
+        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(HnSItemRegistry.ENDERMAN_BLINDFOLD.get()));
+        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(HnSItemRegistry.ENDERMAN_CHESTPLATE.get()));
+        this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(HnSItemRegistry.ENDERMAN_LEGGINGS.get()));
+        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(HnSItemRegistry.ENDERMAN_BOOTS.get()));
         this.setDropChance(EquipmentSlot.HEAD, 0.0F);
         this.setDropChance(EquipmentSlot.CHEST, 0.0F);
         this.setDropChance(EquipmentSlot.LEGS, 0.0F);
@@ -456,8 +456,8 @@ public class TheRecluseEntity extends NeutralWizard implements VillagerDataHolde
         private ObsidianClaymoreTrade() {
             super((trader, random) -> {
                 if (!trader.level().isClientSide) {
-                    ItemStack cost = new ItemStack(HnSItems.STARFURY.get());
-                    ItemStack forSale = new ItemStack(HnSItems.OBSIDIAN_CLAYMORE.get());
+                    ItemStack cost = new ItemStack(HnSItemRegistry.STARFURY.get());
+                    ItemStack forSale = new ItemStack(HnSItemRegistry.OBSIDIAN_CLAYMORE.get());
                     return new MerchantOffer(new ItemCost(cost.getItem(), cost.getCount()), forSale, 1, 5, 0.5f);
                 }
                 return null;

@@ -8,7 +8,7 @@ import io.redspace.ironsspellbooks.entity.mobs.goals.PatrolNearLocationGoal;
 import io.redspace.ironsspellbooks.entity.mobs.goals.SpellBarrageGoal;
 import io.redspace.ironsspellbooks.entity.mobs.goals.WizardAttackGoal;
 import io.redspace.ironsspellbooks.entity.mobs.goals.WizardRecoverGoal;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.entity.*;
@@ -64,8 +64,8 @@ public class BishopOfDeceitEntity extends AbstractSpellCastingMob implements Ene
 
     @Override
     protected void populateDefaultEquipmentSlots(RandomSource pRandom, DifficultyInstance pDifficulty) {
-        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(HnSItems.BISHOP_OF_DECEIT_HELMET.get()));
-        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(HnSItems.BISHOP_OF_DECEIT_CHESTPLATE.get()));
+        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(HnSItemRegistry.BISHOP_OF_DECEIT_HELMET.get()));
+        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(HnSItemRegistry.BISHOP_OF_DECEIT_CHESTPLATE.get()));
         this.setDropChance(EquipmentSlot.HEAD, 0.0F);
         this.setDropChance(EquipmentSlot.CHEST, 0.0F);
     }

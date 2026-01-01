@@ -5,7 +5,7 @@ import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.AbstractSpellCastingMob;
 import io.redspace.ironsspellbooks.entity.mobs.goals.*;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
@@ -85,13 +85,13 @@ public class ServantsOfEnderEntity extends AbstractSpellCastingMob implements En
 
     @Override
     protected void populateDefaultEquipmentSlots(RandomSource pRandom, DifficultyInstance pDifficulty) {
-        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(HnSItems.ENDERMAN_MASKED.get()));
+        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(HnSItemRegistry.ENDERMAN_MASKED.get()));
         this.setDropChance(EquipmentSlot.HEAD, 0.0f);
-        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(HnSItems.ENDERMAN_CHESTPLATE.get()));
+        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(HnSItemRegistry.ENDERMAN_CHESTPLATE.get()));
         this.setDropChance(EquipmentSlot.CHEST, 0.0F);
-        this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(HnSItems.ENDERMAN_LEGGINGS.get()));
+        this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(HnSItemRegistry.ENDERMAN_LEGGINGS.get()));
         this.setDropChance(EquipmentSlot.LEGS, 0.0F);
-        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(HnSItems.ENDERMAN_BOOTS.get()));
+        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(HnSItemRegistry.ENDERMAN_BOOTS.get()));
         this.setDropChance(EquipmentSlot.FEET, 0.0F);
     }
 

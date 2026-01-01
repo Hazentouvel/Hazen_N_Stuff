@@ -9,7 +9,7 @@ import net.hazen.hazennstuff.Animations.HnSDispatcher;
 import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.Armor.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -65,16 +65,16 @@ public class SLCCatArmorItem extends ImbuableHnSArmorItem implements IDisableJac
         }
         if (!level.isClientSide && entity instanceof Player player ) {
             player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.is(HnSItems.SLC_CAT_HELMET)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.SLC_CAT_HELMET)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.SLC_CAT_CHESTPLATE)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.SLC_CAT_CHESTPLATE)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.SLC_CAT_LEGGINGS)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.SLC_CAT_LEGGINGS)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.SLC_CAT_BOOTS)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.SLC_CAT_BOOTS)) {
                     dispatcher.idle(player, wornArmor);
                 }
             });

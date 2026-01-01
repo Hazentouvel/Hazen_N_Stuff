@@ -8,7 +8,7 @@ import net.hazen.hazennstuff.Animations.HnSDispatcher;
 import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.Armor.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -49,16 +49,16 @@ public class SeraphArmorItem extends ImbuableHnSArmorItem implements IDisableJac
         }
         if (!level.isClientSide && entity instanceof Player player ) {
             player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.is(HnSItems.SERAPH_HELMET)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.SERAPH_HELMET)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.SERAPH_CHESTPLATE)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.SERAPH_CHESTPLATE)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.SERAPH_LEGGINGS)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.SERAPH_LEGGINGS)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.SERAPH_BOOTS)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.SERAPH_BOOTS)) {
                     dispatcher.idle(player, wornArmor);
                 }
             });

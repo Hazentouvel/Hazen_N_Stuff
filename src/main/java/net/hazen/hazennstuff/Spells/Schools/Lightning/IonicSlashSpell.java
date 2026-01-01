@@ -20,7 +20,7 @@ import io.redspace.ironsspellbooks.util.ParticleHelper;
 import java.util.List;
 import java.util.Optional;
 
-import net.hazen.hazennstuff.Registries.Particle.SlashParticles.Spells.IonicSLash.IonicSlashOptions;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSLash.IonicSlashOptions;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;

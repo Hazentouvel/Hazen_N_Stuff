@@ -8,7 +8,7 @@ import net.hazen.hazennstuff.Animations.HnSDispatcher;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.HnSConfig;
 import net.hazen.hazennstuff.Registries.HnSEffects;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
@@ -51,7 +51,7 @@ public class ScrollSheath extends SheathCurioItem {
     @SubscribeEvent
     public static void handleAbility(LivingIncomingDamageEvent event)
     {
-        var sheath = ((ScrollSheath) HnSItems.SCROLL_SHEATH.get());
+        var sheath = ((ScrollSheath) HnSItemRegistry.SCROLL_SHEATH.get());
         Entity attacker = event.getSource().getEntity();
 
         if (attacker instanceof ServerPlayer player)

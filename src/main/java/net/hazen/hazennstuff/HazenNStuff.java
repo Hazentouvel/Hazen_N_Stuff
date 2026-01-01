@@ -8,8 +8,8 @@ import mod.azure.azurelib.common.render.armor.AzArmorRendererRegistry;
 import mod.azure.azurelib.common.render.item.AzItemRendererRegistry;
 import net.acetheeldritchking.aces_spell_utils.entity.render.items.SheathCurioRenderer;
 import net.acetheeldritchking.aces_spell_utils.items.curios.SheathCurioItem;
-import net.hazen.hazennstuff.Block.HnSBlockEntities;
-import net.hazen.hazennstuff.Block.HnSBlocks;
+import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
+import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.Compat.*;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.Blazeborne.BlazeborneArmorRenderer;
@@ -40,6 +40,7 @@ import net.hazen.hazennstuff.Item.Weapons.HammerOfJustice.HammerOfJusticeRendere
 import net.hazen.hazennstuff.Item.Weapons.Terraprisma.TerraprismaRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Volcano.VolcanoRenderer;
 import net.hazen.hazennstuff.Registries.*;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
@@ -79,7 +80,7 @@ public class HazenNStuff
 
         HnSCreativeModeTabs.register(modEventBus);
 
-        HnSItems.register(modEventBus);
+        HnSItemRegistry.register(modEventBus);
         HnSBlocks.register(modEventBus);
         HnSBlockEntities.register(modEventBus);
         HnSArmorMaterials.register(modEventBus);
@@ -110,136 +111,136 @@ public class HazenNStuff
         public static void onClientSetup(FMLClientSetupEvent event)
         {
 
-            HnSItems.getHnSItems().stream().filter(item -> item.get() instanceof SpellBook).forEach((item) -> CuriosRendererRegistry.register(item.get(), SpellBookCurioRenderer::new));
-            HnSItems.getHnSItems().stream().filter(item -> item.get() instanceof SheathCurioItem).forEach((item) -> CuriosRendererRegistry.register(item.get(), SheathCurioRenderer::new));
+            HnSItemRegistry.getHnSItems().stream().filter(item -> item.get() instanceof SpellBook).forEach((item) -> CuriosRendererRegistry.register(item.get(), SpellBookCurioRenderer::new));
+            HnSItemRegistry.getHnSItems().stream().filter(item -> item.get() instanceof SheathCurioItem).forEach((item) -> CuriosRendererRegistry.register(item.get(), SheathCurioRenderer::new));
 
 
             // Armor Rendering Registry
 
             //Arbitrium Robes
             AzArmorRendererRegistry.register(ArbitriumRobesArmorRenderer::new,
-                    HnSItems.ARBITRIUM_ROBES_HELMET.get(),
-                    HnSItems.ARBITRIUM_ROBES_CHESTPLATE.get(),
-                    HnSItems.ARBITRIUM_ROBES_LEGGINGS.get(),
-                    HnSItems.ARBITRIUM_ROBES_BOOTS.get());
+                    HnSItemRegistry.ARBITRIUM_ROBES_HELMET.get(),
+                    HnSItemRegistry.ARBITRIUM_ROBES_CHESTPLATE.get(),
+                    HnSItemRegistry.ARBITRIUM_ROBES_LEGGINGS.get(),
+                    HnSItemRegistry.ARBITRIUM_ROBES_BOOTS.get());
 
             //Creaking
             AzArmorRendererRegistry.register(CreakingSorcererArmorRenderer::new,
-                    HnSItems.CREAKING_HELMET.get(),
-                    HnSItems.CREAKING_CHESTPLATE.get(),
-                    HnSItems.CREAKING_LEGGINGS.get(),
-                    HnSItems.CREAKING_BOOTS.get());
+                    HnSItemRegistry.CREAKING_HELMET.get(),
+                    HnSItemRegistry.CREAKING_CHESTPLATE.get(),
+                    HnSItemRegistry.CREAKING_LEGGINGS.get(),
+                    HnSItemRegistry.CREAKING_BOOTS.get());
 
             //Dark Ritual Templar
             AzArmorRendererRegistry.register(DarkRitualTemplarArmorRenderer::new,
-                    HnSItems.DARK_RITUAL_TEMPLAR_HELMET.get(),
-                    HnSItems.DARK_RITUAL_TEMPLAR_CHESTPLATE.get(),
-                    HnSItems.DARK_RITUAL_TEMPLAR_LEGGINGS.get(),
-                    HnSItems.DARK_RITUAL_TEMPLAR_BOOTS.get());
+                    HnSItemRegistry.DARK_RITUAL_TEMPLAR_HELMET.get(),
+                    HnSItemRegistry.DARK_RITUAL_TEMPLAR_CHESTPLATE.get(),
+                    HnSItemRegistry.DARK_RITUAL_TEMPLAR_LEGGINGS.get(),
+                    HnSItemRegistry.DARK_RITUAL_TEMPLAR_BOOTS.get());
 
             // Ender Dragon
             AzArmorRendererRegistry.register(EnderDragonArmorRenderer::new,
-                    HnSItems.ENDER_DRAGON_HELMET.get(),
-                    HnSItems.ENDER_DRAGON_CHESTPLATE.get(),
-                    HnSItems.ENDER_DRAGON_LEGGINGS.get(),
-                    HnSItems.ENDER_DRAGON_BOOTS.get());
+                    HnSItemRegistry.ENDER_DRAGON_HELMET.get(),
+                    HnSItemRegistry.ENDER_DRAGON_CHESTPLATE.get(),
+                    HnSItemRegistry.ENDER_DRAGON_LEGGINGS.get(),
+                    HnSItemRegistry.ENDER_DRAGON_BOOTS.get());
 
             // Fireblossom Helmet
             AzArmorRendererRegistry.register(FireblossomBattlemageHelmetArmorRenderer::new,
-                    HnSItems.FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
-                    HnSItems.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
-                    HnSItems.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
-                    HnSItems.FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
             // Fireblossom Crown
             AzArmorRendererRegistry.register(FireblossomBattlemageCrownedArmorRenderer::new,
-                    HnSItems.FIREBLOSSOM_BATTLEMAGE_CROWN.get());
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get());
 
             // Seraph
             AzArmorRendererRegistry.register(SeraphArmorRenderer::new,
-                    HnSItems.SERAPH_HELMET.get(),
-                    HnSItems.SERAPH_CHESTPLATE.get(),
-                    HnSItems.SERAPH_LEGGINGS.get(),
-                    HnSItems.SERAPH_BOOTS.get());
+                    HnSItemRegistry.SERAPH_HELMET.get(),
+                    HnSItemRegistry.SERAPH_CHESTPLATE.get(),
+                    HnSItemRegistry.SERAPH_LEGGINGS.get(),
+                    HnSItemRegistry.SERAPH_BOOTS.get());
 
             // Soul Flame
             AzArmorRendererRegistry.register(SoulFlameArmorRenderer::new,
-                    HnSItems.SOUL_FLAME_HELMET.get(),
-                    HnSItems.SOUL_FLAME_CHESTPLATE.get(),
-                    HnSItems.SOUL_FLAME_LEGGINGS.get(),
-                    HnSItems.SOUL_FLAME_BOOTS.get());
+                    HnSItemRegistry.SOUL_FLAME_HELMET.get(),
+                    HnSItemRegistry.SOUL_FLAME_CHESTPLATE.get(),
+                    HnSItemRegistry.SOUL_FLAME_LEGGINGS.get(),
+                    HnSItemRegistry.SOUL_FLAME_BOOTS.get());
 
             // Supreme Witch
             AzArmorRendererRegistry.register(SupremeWitchArmorRenderer::new,
-                    HnSItems.SUPREME_WITCH_HELMET.get(),
-                    HnSItems.SUPREME_WITCH_CHESTPLATE.get(),
-                    HnSItems.SUPREME_WITCH_LEGGINGS.get(),
-                    HnSItems.SUPREME_WITCH_BOOTS.get());
+                    HnSItemRegistry.SUPREME_WITCH_HELMET.get(),
+                    HnSItemRegistry.SUPREME_WITCH_CHESTPLATE.get(),
+                    HnSItemRegistry.SUPREME_WITCH_LEGGINGS.get(),
+                    HnSItemRegistry.SUPREME_WITCH_BOOTS.get());
 
             // SLC!Cat
             AzArmorRendererRegistry.register(SLCCatArmorRenderer::new,
-                    HnSItems.SLC_CAT_HELMET.get(),
-                    HnSItems.SLC_CAT_CHESTPLATE.get(),
-                    HnSItems.SLC_CAT_LEGGINGS.get(),
-                    HnSItems.SLC_CAT_BOOTS.get());
+                    HnSItemRegistry.SLC_CAT_HELMET.get(),
+                    HnSItemRegistry.SLC_CAT_CHESTPLATE.get(),
+                    HnSItemRegistry.SLC_CAT_LEGGINGS.get(),
+                    HnSItemRegistry.SLC_CAT_BOOTS.get());
 
             // Infestation
             AzArmorRendererRegistry.register(InfestationArmorRenderer::new,
-                    HnSItems.INFESTATION_HELMET.get(),
-                    HnSItems.INFESTATION_CHESTPLATE.get(),
-                    HnSItems.INFESTATION_LEGGINGS.get(),
-                    HnSItems.INFESTATION_BOOTS.get());
+                    HnSItemRegistry.INFESTATION_HELMET.get(),
+                    HnSItemRegistry.INFESTATION_CHESTPLATE.get(),
+                    HnSItemRegistry.INFESTATION_LEGGINGS.get(),
+                    HnSItemRegistry.INFESTATION_BOOTS.get());
 
             // Blazeborne
             AzArmorRendererRegistry.register(BlazeborneArmorRenderer::new,
-                    HnSItems.BLAZEBORNE_HELMET.get(),
-                    HnSItems.BLAZEBORNE_CHESTPLATE.get(),
-                    HnSItems.BLAZEBORNE_LEGGINGS.get(),
-                    HnSItems.BLAZEBORNE_BOOTS.get());
+                    HnSItemRegistry.BLAZEBORNE_HELMET.get(),
+                    HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get(),
+                    HnSItemRegistry.BLAZEBORNE_LEGGINGS.get(),
+                    HnSItemRegistry.BLAZEBORNE_BOOTS.get());
 
             //
             AzArmorRendererRegistry.register(LemonGodArmorRenderer::new,
-                    HnSItems.LEMON_GOD_HELMET.get(),
-                    HnSItems.LEMON_GOD_CHESTPLATE.get(),
-                    HnSItems.LEMON_GOD_LEGGINGS.get(),
-                    HnSItems.LEMON_GOD_BOOTS.get());
+                    HnSItemRegistry.LEMON_GOD_HELMET.get(),
+                    HnSItemRegistry.LEMON_GOD_CHESTPLATE.get(),
+                    HnSItemRegistry.LEMON_GOD_LEGGINGS.get(),
+                    HnSItemRegistry.LEMON_GOD_BOOTS.get());
 
             // Ascended Lemon God
             AzArmorRendererRegistry.register(LemonGodArmorRenderer::new,
-                    HnSItems.ASCENDED_LEMON_GOD_HELMET.get(),
-                    HnSItems.ASCENDED_LEMON_GOD_CHESTPLATE.get(),
-                    HnSItems.ASCENDED_LEMON_GOD_LEGGINGS.get(),
-                    HnSItems.ASCENDED_LEMON_GOD_BOOTS.get());
+                    HnSItemRegistry.ASCENDED_LEMON_GOD_HELMET.get(),
+                    HnSItemRegistry.ASCENDED_LEMON_GOD_CHESTPLATE.get(),
+                    HnSItemRegistry.ASCENDED_LEMON_GOD_LEGGINGS.get(),
+                    HnSItemRegistry.ASCENDED_LEMON_GOD_BOOTS.get());
 
             // The Wither
             AzArmorRendererRegistry.register(TheWitherArmorRenderer::new,
-                    HnSItems.THE_WITHER_HELMET.get(),
-                    HnSItems.THE_WITHER_CHESTPLATE.get(),
-                    HnSItems.THE_WITHER_LEGGINGS.get(),
-                    HnSItems.THE_WITHER_BOOTS.get());
+                    HnSItemRegistry.THE_WITHER_HELMET.get(),
+                    HnSItemRegistry.THE_WITHER_CHESTPLATE.get(),
+                    HnSItemRegistry.THE_WITHER_LEGGINGS.get(),
+                    HnSItemRegistry.THE_WITHER_BOOTS.get());
 
             // Ascended Arbitrium Robes
             AzArmorRendererRegistry.register(ArbitriumRobesArmorRenderer::new,
-                    HnSItems.ASCENDED_ARBITRIUM_ROBES_HELMET.get(),
-                    HnSItems.ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get(),
-                    HnSItems.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get(),
-                    HnSItems.ASCENDED_ARBITRIUM_ROBES_BOOTS.get());
+                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_HELMET.get(),
+                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get(),
+                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get(),
+                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_BOOTS.get());
 
             // Gabriel Ultrakill
             AzArmorRendererRegistry.register(GabrielArmorRenderer::new,
-                    HnSItems.GABRIEL_ULTRAKILL_HELMET.get(),
-                    HnSItems.GABRIEL_ULTRAKILL_CHESTPLATE.get(),
-                    HnSItems.GABRIEL_ULTRAKILL_LEGGINGS.get(),
-                    HnSItems.GABRIEL_ULTRAKILL_BOOTS.get());
+                    HnSItemRegistry.GABRIEL_ULTRAKILL_HELMET.get(),
+                    HnSItemRegistry.GABRIEL_ULTRAKILL_CHESTPLATE.get(),
+                    HnSItemRegistry.GABRIEL_ULTRAKILL_LEGGINGS.get(),
+                    HnSItemRegistry.GABRIEL_ULTRAKILL_BOOTS.get());
 
 
 
             // Item Rendering Registry
-            AzItemRendererRegistry.register(HammerOfJusticeRenderer::new, HnSItems.HAMMER_OF_JUSTICE.get());
-            AzItemRendererRegistry.register(VolcanoRenderer::new, HnSItems.VOLCANO.get());
-            AzItemRendererRegistry.register(TerraprismaRenderer::new, HnSItems.TERRAPRISMA.get());
+            AzItemRendererRegistry.register(HammerOfJusticeRenderer::new, HnSItemRegistry.HAMMER_OF_JUSTICE.get());
+            AzItemRendererRegistry.register(VolcanoRenderer::new, HnSItemRegistry.VOLCANO.get());
+            AzItemRendererRegistry.register(TerraprismaRenderer::new, HnSItemRegistry.TERRAPRISMA.get());
 
 
-            AzItemRendererRegistry.register(SoulcallingScepterRenderer::new, HnSItems.SOULCALLING_SCEPTER.get());
+            AzItemRendererRegistry.register(SoulcallingScepterRenderer::new, HnSItemRegistry.SOULCALLING_SCEPTER.get());
 
             //Curios Rendering Registry
 
@@ -248,9 +249,9 @@ public class HazenNStuff
              */
 
             //Energized Core Spellbook
-            AzArmorRendererRegistry.register(EnergizedCoreSpellbookCurioItemRenderer::new, HnSItems.ENERGIZED_CORE_SPELLBOOK.get());
+            AzArmorRendererRegistry.register(EnergizedCoreSpellbookCurioItemRenderer::new, HnSItemRegistry.ENERGIZED_CORE_SPELLBOOK.get());
             CuriosRendererRegistry.register(
-                    HnSItems.ENERGIZED_CORE_SPELLBOOK.get(), EnergizedCoreSpellbookCurioRenderer::new
+                    HnSItemRegistry.ENERGIZED_CORE_SPELLBOOK.get(), EnergizedCoreSpellbookCurioRenderer::new
             );
 
             /*
@@ -258,15 +259,15 @@ public class HazenNStuff
              */
 
             // Galvanized Sheath
-            AzArmorRendererRegistry.register(GalvanizedSheathItemRenderer::new, HnSItems.GALVANIZED_SHEATH.get());
+            AzArmorRendererRegistry.register(GalvanizedSheathItemRenderer::new, HnSItemRegistry.GALVANIZED_SHEATH.get());
             CuriosRendererRegistry.register(
-                    HnSItems.GALVANIZED_SHEATH.get(), GalvanizedCurioRenderer::new
+                    HnSItemRegistry.GALVANIZED_SHEATH.get(), GalvanizedCurioRenderer::new
             );
 
             // Scroll Sheath
-            AzArmorRendererRegistry.register(ScrollSheathItemRenderer::new, HnSItems.SCROLL_SHEATH.get());
+            AzArmorRendererRegistry.register(ScrollSheathItemRenderer::new, HnSItemRegistry.SCROLL_SHEATH.get());
             CuriosRendererRegistry.register(
-                    HnSItems.SCROLL_SHEATH.get(), ScrollCurioRenderer::new
+                    HnSItemRegistry.SCROLL_SHEATH.get(), ScrollCurioRenderer::new
             );
 
             /*
@@ -274,9 +275,9 @@ public class HazenNStuff
              */
 
             // Arbitrium Wings
-            AzArmorRendererRegistry.register(ArbitriumWingsCurioItemRenderer::new, HnSItems.ARBITRIUM_WINGS.get());
+            AzArmorRendererRegistry.register(ArbitriumWingsCurioItemRenderer::new, HnSItemRegistry.ARBITRIUM_WINGS.get());
             CuriosRendererRegistry.register(
-                    HnSItems.ARBITRIUM_WINGS.get(), ArbitriumWingsCurioRenderer::new
+                    HnSItemRegistry.ARBITRIUM_WINGS.get(), ArbitriumWingsCurioRenderer::new
             );
 
 
@@ -286,104 +287,104 @@ public class HazenNStuff
 
                     //Armor
 
-                    HnSItems.ARBITRIUM_ROBES_HELMET.get(),
-                    HnSItems.ARBITRIUM_ROBES_CHESTPLATE.get(),
-                    HnSItems.ARBITRIUM_ROBES_LEGGINGS.get(),
-                    HnSItems.ARBITRIUM_ROBES_BOOTS.get(),
-                    HnSItems.ASCENDED_ARBITRIUM_ROBES_HELMET.get(),
-                    HnSItems.ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get(),
-                    HnSItems.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get(),
-                    HnSItems.ASCENDED_ARBITRIUM_ROBES_BOOTS.get(),
+                    HnSItemRegistry.ARBITRIUM_ROBES_HELMET.get(),
+                    HnSItemRegistry.ARBITRIUM_ROBES_CHESTPLATE.get(),
+                    HnSItemRegistry.ARBITRIUM_ROBES_LEGGINGS.get(),
+                    HnSItemRegistry.ARBITRIUM_ROBES_BOOTS.get(),
+                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_HELMET.get(),
+                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get(),
+                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get(),
+                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_BOOTS.get(),
 
-                    HnSItems.CREAKING_HELMET.get(),
-                    HnSItems.CREAKING_CHESTPLATE.get(),
-                    HnSItems.CREAKING_LEGGINGS.get(),
-                    HnSItems.CREAKING_BOOTS.get(),
+                    HnSItemRegistry.CREAKING_HELMET.get(),
+                    HnSItemRegistry.CREAKING_CHESTPLATE.get(),
+                    HnSItemRegistry.CREAKING_LEGGINGS.get(),
+                    HnSItemRegistry.CREAKING_BOOTS.get(),
 
-                    HnSItems.DARK_RITUAL_TEMPLAR_HELMET.get(),
-                    HnSItems.DARK_RITUAL_TEMPLAR_CHESTPLATE.get(),
-                    HnSItems.DARK_RITUAL_TEMPLAR_LEGGINGS.get(),
-                    HnSItems.DARK_RITUAL_TEMPLAR_BOOTS.get(),
+                    HnSItemRegistry.DARK_RITUAL_TEMPLAR_HELMET.get(),
+                    HnSItemRegistry.DARK_RITUAL_TEMPLAR_CHESTPLATE.get(),
+                    HnSItemRegistry.DARK_RITUAL_TEMPLAR_LEGGINGS.get(),
+                    HnSItemRegistry.DARK_RITUAL_TEMPLAR_BOOTS.get(),
 
-                    HnSItems.ENDER_DRAGON_HELMET.get(),
-                    HnSItems.ENDER_DRAGON_CHESTPLATE.get(),
-                    HnSItems.ENDER_DRAGON_LEGGINGS.get(),
-                    HnSItems.ENDER_DRAGON_BOOTS.get(),
+                    HnSItemRegistry.ENDER_DRAGON_HELMET.get(),
+                    HnSItemRegistry.ENDER_DRAGON_CHESTPLATE.get(),
+                    HnSItemRegistry.ENDER_DRAGON_LEGGINGS.get(),
+                    HnSItemRegistry.ENDER_DRAGON_BOOTS.get(),
 
-                    HnSItems.FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
-                    HnSItems.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
-                    HnSItems.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
-                    HnSItems.FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
-                    HnSItems.FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
 
-                    HnSItems.SERAPH_HELMET.get(),
-                    HnSItems.SERAPH_CHESTPLATE.get(),
-                    HnSItems.SERAPH_LEGGINGS.get(),
-                    HnSItems.SERAPH_BOOTS.get(),
+                    HnSItemRegistry.SERAPH_HELMET.get(),
+                    HnSItemRegistry.SERAPH_CHESTPLATE.get(),
+                    HnSItemRegistry.SERAPH_LEGGINGS.get(),
+                    HnSItemRegistry.SERAPH_BOOTS.get(),
 
-                    HnSItems.SOUL_FLAME_HELMET.get(),
-                    HnSItems.SOUL_FLAME_CHESTPLATE.get(),
-                    HnSItems.SOUL_FLAME_LEGGINGS.get(),
-                    HnSItems.SOUL_FLAME_BOOTS.get(),
+                    HnSItemRegistry.SOUL_FLAME_HELMET.get(),
+                    HnSItemRegistry.SOUL_FLAME_CHESTPLATE.get(),
+                    HnSItemRegistry.SOUL_FLAME_LEGGINGS.get(),
+                    HnSItemRegistry.SOUL_FLAME_BOOTS.get(),
 
-                    HnSItems.SUPREME_WITCH_HELMET.get(),
-                    HnSItems.SUPREME_WITCH_CHESTPLATE.get(),
-                    HnSItems.SUPREME_WITCH_LEGGINGS.get(),
-                    HnSItems.SUPREME_WITCH_BOOTS.get(),
+                    HnSItemRegistry.SUPREME_WITCH_HELMET.get(),
+                    HnSItemRegistry.SUPREME_WITCH_CHESTPLATE.get(),
+                    HnSItemRegistry.SUPREME_WITCH_LEGGINGS.get(),
+                    HnSItemRegistry.SUPREME_WITCH_BOOTS.get(),
 
-                    HnSItems.SLC_CAT_HELMET.get(),
-                    HnSItems.SLC_CAT_CHESTPLATE.get(),
-                    HnSItems.SLC_CAT_LEGGINGS.get(),
-                    HnSItems.SLC_CAT_BOOTS.get(),
+                    HnSItemRegistry.SLC_CAT_HELMET.get(),
+                    HnSItemRegistry.SLC_CAT_CHESTPLATE.get(),
+                    HnSItemRegistry.SLC_CAT_LEGGINGS.get(),
+                    HnSItemRegistry.SLC_CAT_BOOTS.get(),
 
-                    HnSItems.INFESTATION_HELMET.get(),
-                    HnSItems.INFESTATION_CHESTPLATE.get(),
-                    HnSItems.INFESTATION_LEGGINGS.get(),
-                    HnSItems.INFESTATION_BOOTS.get(),
+                    HnSItemRegistry.INFESTATION_HELMET.get(),
+                    HnSItemRegistry.INFESTATION_CHESTPLATE.get(),
+                    HnSItemRegistry.INFESTATION_LEGGINGS.get(),
+                    HnSItemRegistry.INFESTATION_BOOTS.get(),
 
 
-                    HnSItems.BLAZEBORNE_HELMET.get(),
-                    HnSItems.BLAZEBORNE_CHESTPLATE.get(),
-                    HnSItems.BLAZEBORNE_LEGGINGS.get(),
-                    HnSItems.BLAZEBORNE_BOOTS.get(),
+                    HnSItemRegistry.BLAZEBORNE_HELMET.get(),
+                    HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get(),
+                    HnSItemRegistry.BLAZEBORNE_LEGGINGS.get(),
+                    HnSItemRegistry.BLAZEBORNE_BOOTS.get(),
 
-                    HnSItems.LEMON_GOD_HELMET.get(),
-                    HnSItems.LEMON_GOD_CHESTPLATE.get(),
-                    HnSItems.LEMON_GOD_LEGGINGS.get(),
-                    HnSItems.LEMON_GOD_BOOTS.get(),
+                    HnSItemRegistry.LEMON_GOD_HELMET.get(),
+                    HnSItemRegistry.LEMON_GOD_CHESTPLATE.get(),
+                    HnSItemRegistry.LEMON_GOD_LEGGINGS.get(),
+                    HnSItemRegistry.LEMON_GOD_BOOTS.get(),
 
-                    HnSItems.ASCENDED_LEMON_GOD_HELMET.get(),
-                    HnSItems.ASCENDED_LEMON_GOD_CHESTPLATE.get(),
-                    HnSItems.ASCENDED_LEMON_GOD_LEGGINGS.get(),
-                    HnSItems.ASCENDED_LEMON_GOD_BOOTS.get(),
+                    HnSItemRegistry.ASCENDED_LEMON_GOD_HELMET.get(),
+                    HnSItemRegistry.ASCENDED_LEMON_GOD_CHESTPLATE.get(),
+                    HnSItemRegistry.ASCENDED_LEMON_GOD_LEGGINGS.get(),
+                    HnSItemRegistry.ASCENDED_LEMON_GOD_BOOTS.get(),
 
-                    HnSItems.THE_WITHER_HELMET.get(),
-                    HnSItems.THE_WITHER_CHESTPLATE.get(),
-                    HnSItems.THE_WITHER_LEGGINGS.get(),
-                    HnSItems.THE_WITHER_BOOTS.get(),
+                    HnSItemRegistry.THE_WITHER_HELMET.get(),
+                    HnSItemRegistry.THE_WITHER_CHESTPLATE.get(),
+                    HnSItemRegistry.THE_WITHER_LEGGINGS.get(),
+                    HnSItemRegistry.THE_WITHER_BOOTS.get(),
 
-                    HnSItems.GABRIEL_ULTRAKILL_HELMET.get(),
-                    HnSItems.GABRIEL_ULTRAKILL_CHESTPLATE.get(),
-                    HnSItems.GABRIEL_ULTRAKILL_LEGGINGS.get(),
-                    HnSItems.GABRIEL_ULTRAKILL_BOOTS.get(),
+                    HnSItemRegistry.GABRIEL_ULTRAKILL_HELMET.get(),
+                    HnSItemRegistry.GABRIEL_ULTRAKILL_CHESTPLATE.get(),
+                    HnSItemRegistry.GABRIEL_ULTRAKILL_LEGGINGS.get(),
+                    HnSItemRegistry.GABRIEL_ULTRAKILL_BOOTS.get(),
 
                     // Weapons
 
-                    HnSItems.HAMMER_OF_JUSTICE.get(),
-                    HnSItems.VOLCANO.get(),
-                    HnSItems.TERRAPRISMA.get(),
+                    HnSItemRegistry.HAMMER_OF_JUSTICE.get(),
+                    HnSItemRegistry.VOLCANO.get(),
+                    HnSItemRegistry.TERRAPRISMA.get(),
 
                     // Staves
-                    HnSItems.SOULCALLING_SCEPTER.get(),
+                    HnSItemRegistry.SOULCALLING_SCEPTER.get(),
 
                     // Curios
 
-                    HnSItems.ENERGIZED_CORE_SPELLBOOK.get(),
+                    HnSItemRegistry.ENERGIZED_CORE_SPELLBOOK.get(),
 
-                    HnSItems.ARBITRIUM_WINGS.get(),
+                    HnSItemRegistry.ARBITRIUM_WINGS.get(),
 
-                    HnSItems.GALVANIZED_SHEATH.get(),
-                    HnSItems.SCROLL_SHEATH.get()
+                    HnSItemRegistry.GALVANIZED_SHEATH.get(),
+                    HnSItemRegistry.SCROLL_SHEATH.get()
 
             );
         }

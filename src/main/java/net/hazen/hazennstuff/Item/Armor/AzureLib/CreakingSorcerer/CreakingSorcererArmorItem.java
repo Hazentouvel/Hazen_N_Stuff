@@ -9,7 +9,7 @@ import net.hazen.hazennstuff.Animations.HnSDispatcher;
 import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.Armor.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -50,16 +50,16 @@ public class CreakingSorcererArmorItem extends ImbuableHnSArmorItem implements I
         }
         if (!level.isClientSide && entity instanceof Player player ) {
             player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.is(HnSItems.CREAKING_HELMET)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.CREAKING_HELMET)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.CREAKING_CHESTPLATE)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.CREAKING_CHESTPLATE)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.CREAKING_LEGGINGS)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.CREAKING_LEGGINGS)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.CREAKING_BOOTS)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.CREAKING_BOOTS)) {
                     dispatcher.idle(player, wornArmor);
                 }
             });

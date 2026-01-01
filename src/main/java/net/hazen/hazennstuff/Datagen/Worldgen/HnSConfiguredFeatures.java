@@ -1,6 +1,6 @@
 package net.hazen.hazennstuff.Datagen.Worldgen;
 
-import net.hazen.hazennstuff.Block.HnSBlocks;
+import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;

@@ -1,7 +1,7 @@
 package net.hazen.hazennstuff.Spells.AbstractSpells;
 
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -22,7 +22,7 @@ public abstract class AbstractRodOfDiscordSpell extends AbstractSpell {
 
     @Override
     public boolean canBeCraftedBy(Player player) {
-        Item item = HnSItems.ROD_OF_DISCORD.get();
+        Item item = HnSItemRegistry.ROD_OF_DISCORD.get();
         return isValidUnlockItemInInventory(item, player);
     }
 }

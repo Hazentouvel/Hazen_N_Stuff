@@ -2,8 +2,8 @@ package net.hazen.hazennstuff.Setup;
 
 import io.redspace.ironsspellbooks.entity.mobs.keeper.KeeperRenderer;
 import io.redspace.ironsspellbooks.entity.spells.fiery_dagger.FieryDaggerRenderer;
-import net.hazen.hazennstuff.Block.Statues.HazelStatue.HazelStatueRenderer;
-import net.hazen.hazennstuff.Block.HnSBlockEntities;
+import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.HazelStatueRenderer;
+import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnaceRenderer;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.TheInferno.TheInfernoRenderer;
 import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprismaRenderer;
@@ -37,11 +37,11 @@ import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.TerraprismaRende
 import net.hazen.hazennstuff.Entity.Spells.Shadow.NightsEdgeAfterSlash.NightsEdgeAfterSlashRenderer;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
-import net.hazen.hazennstuff.Registries.Particle.General.HnSGenericParticle;
-import net.hazen.hazennstuff.Registries.Particle.LeafParticle.LeafParticle;
-import net.hazen.hazennstuff.Registries.Particle.SlashParticles.Spells.IonicSLash.IonicSlash;
-import net.hazen.hazennstuff.Registries.Particle.SlashParticles.Spells.NatureSlash.NatureSlash;
-import net.hazen.hazennstuff.Registries.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrike;
+import net.hazen.hazennstuff.Particle.General.HnSGenericParticle;
+import net.hazen.hazennstuff.Particle.LeafParticle.LeafParticle;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSLash.IonicSlash;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NatureSlash.NatureSlash;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrike;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -126,7 +126,7 @@ public class HnSClientSetup {
 
         event.registerSpriteSet(HnSParticleRegistry.NIGHTS_EDGE_STRIKE_PARTICLE.get(), NightsEdgeStrike.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.NATURE_SLASH_PARTICLE.get(), NatureSlash.Provider::new);
-        event.registerSpriteSet(HnSParticleRegistry.IONIC_STRIKE.get(), IonicSlash.Provider::new);
+        event.registerSpriteSet(HnSParticleRegistry.IONIC_SLASH.get(), IonicSlash.Provider::new);
     }
 
 }

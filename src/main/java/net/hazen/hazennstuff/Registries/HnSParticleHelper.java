@@ -3,7 +3,7 @@ package net.hazen.hazennstuff.Registries;
 import io.redspace.ironsspellbooks.particle.BlastwaveParticleOptions;
 import io.redspace.ironsspellbooks.particle.FogParticleOptions;
 import io.redspace.ironsspellbooks.particle.SparkParticleOptions;
-import net.hazen.hazennstuff.Registries.Particle.LeafParticle.LeafParticleOptions;
+import net.hazen.hazennstuff.Particle.LeafParticle.LeafParticleOptions;
 import net.minecraft.core.particles.ParticleOptions;
 import org.joml.Vector3f;
 

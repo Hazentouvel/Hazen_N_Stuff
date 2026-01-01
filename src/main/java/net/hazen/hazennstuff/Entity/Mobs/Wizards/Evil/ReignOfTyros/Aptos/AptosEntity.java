@@ -10,7 +10,7 @@ import io.redspace.ironsspellbooks.entity.mobs.goals.melee.AttackAnimationData;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.util.ModTags;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -127,7 +127,7 @@ public class AptosEntity extends AbstractSpellCastingMob implements GeoEntity, I
     }
 
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pReason, @Nullable SpawnGroupData pSpawnData) {
-        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(HnSItems.LEGIONNAIRE_WARLOCK_AXE));
+        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(HnSItemRegistry.LEGIONNAIRE_WARLOCK_AXE));
         this.setDropChance(EquipmentSlot.MAINHAND, 0.0F);
         return pSpawnData;
     }

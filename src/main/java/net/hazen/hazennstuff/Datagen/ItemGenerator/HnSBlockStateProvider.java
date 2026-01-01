@@ -1,6 +1,6 @@
 package net.hazen.hazennstuff.Datagen.ItemGenerator;
 
-import net.hazen.hazennstuff.Block.HnSBlocks;
+import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;

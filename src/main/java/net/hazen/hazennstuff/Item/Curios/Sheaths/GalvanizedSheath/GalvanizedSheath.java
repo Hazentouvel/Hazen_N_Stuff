@@ -10,7 +10,7 @@ import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.HnSConfig;
 import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.hazen.hazennstuff.Registries.HnSEffects;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
@@ -50,7 +50,7 @@ public class GalvanizedSheath extends SheathCurioItem {
 
     @SubscribeEvent
     public static void handleAbility(LivingIncomingDamageEvent event) {
-        var sheath = ((GalvanizedSheath) HnSItems.GALVANIZED_SHEATH.get());
+        var sheath = ((GalvanizedSheath) HnSItemRegistry.GALVANIZED_SHEATH.get());
         Entity attacker = event.getSource().getEntity();
 
         if (attacker instanceof ServerPlayer player) {

@@ -15,7 +15,7 @@ import io.redspace.ironsspellbooks.loot.SpellFilter;
 import io.redspace.ironsspellbooks.player.AdditionalWanderingTrades;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import io.redspace.ironsspellbooks.util.ModTags;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -326,8 +326,8 @@ public class DryadEntity extends NeutralWizard implements VillagerDataHolder, Su
             this.offers = new MerchantOffers();
             this.offers.add(new MerchantOffer(
                     new ItemCost(Items.EMERALD, 32),
-                    Optional.of(new ItemCost(HnSItems.EXCALIBUR_FRAGMENT, 1)),
-                    new ItemStack(HnSItems.THORN_CHAKRAM.get()),
+                    Optional.of(new ItemCost(HnSItemRegistry.EXCALIBUR_FRAGMENT, 1)),
+                    new ItemStack(HnSItemRegistry.THORN_CHAKRAM.get()),
                     3,
                     0,
                     0.2F
@@ -335,7 +335,7 @@ public class DryadEntity extends NeutralWizard implements VillagerDataHolder, Su
 
             this.offers.add(new MerchantOffer(
                     new ItemCost(Items.EMERALD, 32),
-                    new ItemStack(HnSItems.LEMON.get()),
+                    new ItemStack(HnSItemRegistry.LEMON.get()),
                     3,
                     0,
                     0.2F

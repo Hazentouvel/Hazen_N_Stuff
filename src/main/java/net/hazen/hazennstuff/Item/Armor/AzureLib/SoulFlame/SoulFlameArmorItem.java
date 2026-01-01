@@ -10,7 +10,7 @@ import net.hazen.hazennstuff.Animations.HnSDispatcher;
 import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.Armor.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -54,16 +54,16 @@ public class SoulFlameArmorItem extends ImbuableHnSArmorItem implements IDisable
         }
         if (!level.isClientSide && entity instanceof Player player ) {
             player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.is(HnSItems.SOUL_FLAME_HELMET)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.SOUL_FLAME_HELMET)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.SOUL_FLAME_CHESTPLATE)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.SOUL_FLAME_CHESTPLATE)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.SOUL_FLAME_LEGGINGS)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.SOUL_FLAME_LEGGINGS)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.SOUL_FLAME_BOOTS)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.SOUL_FLAME_BOOTS)) {
                     dispatcher.idle(player, wornArmor);
                 }
             });

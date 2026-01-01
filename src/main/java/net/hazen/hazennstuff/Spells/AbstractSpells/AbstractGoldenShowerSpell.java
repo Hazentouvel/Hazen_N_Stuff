@@ -1,7 +1,7 @@
 package net.hazen.hazennstuff.Spells.AbstractSpells;
 
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -22,7 +22,7 @@ public abstract class AbstractGoldenShowerSpell extends AbstractSpell {
 
     @Override
     public boolean canBeCraftedBy(Player player) {
-        Item goldenShowerSpellbook = HnSItems.GOLDEN_SHOWER_SPELLBOOK.get();
+        Item goldenShowerSpellbook = HnSItemRegistry.GOLDEN_SHOWER_SPELLBOOK.get();
         return isValidUnlockItemInInventory(goldenShowerSpellbook, player);
     }
 }

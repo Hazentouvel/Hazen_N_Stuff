@@ -1,7 +1,7 @@
 package net.hazen.hazennstuff.Datagen.LootTables;
 
-import net.hazen.hazennstuff.Block.HnSBlocks;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Item.Block.HnSBlocks;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -88,11 +88,11 @@ public class HnSBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(HnSBlocks.STRIPPED_FROSTBITE_BIRCH_LOG.get());
         dropSelf(HnSBlocks.STRIPPED_FROSTBITE_BIRCH_WOOD.get());
 
-        //dropSelf(HnSItems.HnSBlocks.FROSTBITE_BIRCH_TRAPDOOR.get());
+        //dropSelf(HnSItemRegistry.HnSBlocks.FROSTBITE_BIRCH_TRAPDOOR.get());
         dropSelf(HnSBlocks.FROSTBITE_BIRCH_FENCE_GATE.get());
         dropSelf(HnSBlocks.FROSTBITE_BIRCH_FENCE.get());
-        //add(HnSItems.HnSBlocks.FROSTBITE_BIRCH_DOOR.get(),
-        //        block -> createDoorTable(HnSItems.HnSBlocks.WISEWOOD_DOOR.get()));
+        //add(HnSItemRegistry.HnSBlocks.FROSTBITE_BIRCH_DOOR.get(),
+        //        block -> createDoorTable(HnSItemRegistry.HnSBlocks.WISEWOOD_DOOR.get()));
         this.dropSelf(HnSBlocks.FROSTBITE_BIRCH_SAPLING.get());
         this.dropSelf(HnSBlocks.FROSTBITE_BIRCH_BUTTON.get());
         this.dropSelf(HnSBlocks.FROSTBITE_BIRCH_PRESSURE_PLATE.get());
@@ -110,33 +110,33 @@ public class HnSBlockLootTableProvider extends BlockLootSubProvider {
 
         //Zenalite
         add(HnSBlocks.ZENALITE_STONE_ORE.get(),
-                block -> createOreDrop(HnSBlocks.ZENALITE_STONE_ORE.get(), HnSItems.RAW_ZENALITE.get()));
+                block -> createOreDrop(HnSBlocks.ZENALITE_STONE_ORE.get(), HnSItemRegistry.RAW_ZENALITE.get()));
         add(HnSBlocks.ZENALITE_DEEPSLATE_ORE.get(),
-                block -> createOreDrop(HnSBlocks.ZENALITE_DEEPSLATE_ORE.get(), HnSItems.RAW_ZENALITE.get()));
+                block -> createOreDrop(HnSBlocks.ZENALITE_DEEPSLATE_ORE.get(), HnSItemRegistry.RAW_ZENALITE.get()));
         add(HnSBlocks.ZENALITE_END_STONE_ORE.get(),
-                block -> createOreDrop(HnSBlocks.ZENALITE_END_STONE_ORE.get(), HnSItems.RAW_ZENALITE.get()));
+                block -> createOreDrop(HnSBlocks.ZENALITE_END_STONE_ORE.get(), HnSItemRegistry.RAW_ZENALITE.get()));
         add(HnSBlocks.ZENALITE_ABYSSLATE_ORE.get(),
-                block -> createOreDrop(HnSBlocks.ZENALITE_ABYSSLATE_ORE.get(), HnSItems.RAW_ZENALITE.get()));
+                block -> createOreDrop(HnSBlocks.ZENALITE_ABYSSLATE_ORE.get(), HnSItemRegistry.RAW_ZENALITE.get()));
         add(HnSBlocks.ZENALITE_VOIDSTONE_ORE.get(),
-                block -> createOreDrop(HnSBlocks.ZENALITE_DEEPSLATE_ORE.get(), HnSItems.RAW_ZENALITE.get()));
+                block -> createOreDrop(HnSBlocks.ZENALITE_DEEPSLATE_ORE.get(), HnSItemRegistry.RAW_ZENALITE.get()));
 
         // Solar Core
         add(HnSBlocks.SOLAR_CORE_NETHERACK_ORE.get(),
-                block -> createOreDrop(HnSBlocks.SOLAR_CORE_NETHERACK_ORE.get(), HnSItems.SOLAR_CORE.get()));
+                block -> createOreDrop(HnSBlocks.SOLAR_CORE_NETHERACK_ORE.get(), HnSItemRegistry.SOLAR_CORE.get()));
         add(HnSBlocks.SOLAR_CORE_BLACKSTONE_ORE.get(),
-                block -> createOreDrop(HnSBlocks.SOLAR_CORE_BLACKSTONE_ORE.get(), HnSItems.SOLAR_CORE.get()));
+                block -> createOreDrop(HnSBlocks.SOLAR_CORE_BLACKSTONE_ORE.get(), HnSItemRegistry.SOLAR_CORE.get()));
 
         // Dreadstone
         add(HnSBlocks.DREADSTONE_ORE.get(),
-                block -> createOreDrop(HnSBlocks.DREADSTONE_ORE.get(), HnSItems.DREADSTONE.get()));
+                block -> createOreDrop(HnSBlocks.DREADSTONE_ORE.get(), HnSItemRegistry.DREADSTONE.get()));
 
         // Dreadstone
         add(HnSBlocks.CHLOROPHYTE_ORE.get(),
-                block -> createOreDrop(HnSBlocks.CHLOROPHYTE_ORE.get(), HnSItems.CHLOROPHYTE_CHUNK.get()));
+                block -> createOreDrop(HnSBlocks.CHLOROPHYTE_ORE.get(), HnSItemRegistry.CHLOROPHYTE_CHUNK.get()));
 
         // Runestone
         add(HnSBlocks.RUNESTONE_SLAG.get(),
-                block -> createMultipleOreDrops(HnSBlocks.RUNESTONE_SLAG.get(), HnSItems.RUNESTONE_FRAGMENTS.get(), 2, 5));
+                block -> createMultipleOreDrops(HnSBlocks.RUNESTONE_SLAG.get(), HnSItemRegistry.RUNESTONE_FRAGMENTS.get(), 2, 5));
 
 
         // Leaves

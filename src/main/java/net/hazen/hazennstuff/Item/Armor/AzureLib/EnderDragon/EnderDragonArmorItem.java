@@ -9,7 +9,7 @@ import net.hazen.hazennstuff.Animations.HnSDispatcher;
 import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.Armor.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -50,16 +50,16 @@ public class EnderDragonArmorItem extends ImbuableHnSArmorItem implements IDisab
         }
         if (!level.isClientSide && entity instanceof Player player ) {
             player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.is(HnSItems.ENDER_DRAGON_HELMET)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.ENDER_DRAGON_HELMET)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.ENDER_DRAGON_CHESTPLATE)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.ENDER_DRAGON_CHESTPLATE)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.ENDER_DRAGON_LEGGINGS)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.ENDER_DRAGON_LEGGINGS)) {
                     dispatcher.idle(player, wornArmor);
                 }
-                if (wornArmor != null && wornArmor.is(HnSItems.ENDER_DRAGON_BOOTS)) {
+                if (wornArmor != null && wornArmor.is(HnSItemRegistry.ENDER_DRAGON_BOOTS)) {
                     dispatcher.idle(player, wornArmor);
                 }
             });

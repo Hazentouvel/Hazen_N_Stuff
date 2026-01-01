@@ -1,7 +1,7 @@
 package net.hazen.hazennstuff.Spells.AbstractSpells;
 
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
-import net.hazen.hazennstuff.Registries.HnSItems;
+import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -23,10 +23,10 @@ public abstract class AbstractCalamitasSpell extends AbstractSpell {
     @Override
     public boolean canBeCraftedBy(Player player) {
         Item[] validItems = {
-                HnSItems.CALAMITAS_HELMET.get(),
-                HnSItems.CALAMITAS_CHESTPLATE.get(),
-                HnSItems.CALAMITAS_LEGGINGS.get(),
-                HnSItems.CALAMITAS_BOOTS.get()
+                HnSItemRegistry.CALAMITAS_HELMET.get(),
+                HnSItemRegistry.CALAMITAS_CHESTPLATE.get(),
+                HnSItemRegistry.CALAMITAS_LEGGINGS.get(),
+                HnSItemRegistry.CALAMITAS_BOOTS.get()
         };
         for (Item item : validItems) {
             if (isValidUnlockItemInInventory(item, player)) {

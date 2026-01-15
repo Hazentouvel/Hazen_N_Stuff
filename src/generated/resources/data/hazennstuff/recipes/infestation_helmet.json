@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "tag": "hazennstuff:eldritch_rune"
+    },
+    "S": {
+      "item": "irons_spellbooks:netherite_mage_helmet"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "ZRZ",
+    "ZSZ",
+    "   "
+  ],
+  "result": {
+    "item": "hazennstuff:infestation_helmet"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "irons_spellbooks:lightning_rune"
+    },
+    "S": {
+      "item": "irons_spellbooks:electromancer_boots"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "Z Z",
+    "ZSZ",
+    " R "
+  ],
+  "result": {
+    "item": "hazennstuff:thunder_prowler_boots"
+  },
+  "show_notification": true
+}

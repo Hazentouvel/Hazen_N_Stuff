@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/armors/hazel_chestplate"
+    "layer0": "hazennstuff:item/armor_icons/hazel_chestplate"
   }
 }

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:melon"
+  },
+  "base": {
+    "item": "hazennstuff:hazel_chestplate"
+  },
+  "result": {
+    "item": "hazennstuff:how_did_you_find_the_hazel_chestplate"
+  },
+  "template": {
+    "item": "minecraft:leather"
+  }
+}

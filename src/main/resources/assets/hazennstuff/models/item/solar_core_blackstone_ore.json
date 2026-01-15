@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "hazennstuff:block/solar_core_blackstone_ore"
-  }
-}

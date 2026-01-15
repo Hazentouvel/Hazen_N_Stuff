@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "irons_spellbooks:blood_rune"
+    },
+    "S": {
+      "item": "irons_spellbooks:cultist_helmet"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "ZRZ",
+    "ZSZ",
+    "   "
+  ],
+  "result": {
+    "item": "hazennstuff:flesh_mass_helmet"
+  },
+  "show_notification": true
+}

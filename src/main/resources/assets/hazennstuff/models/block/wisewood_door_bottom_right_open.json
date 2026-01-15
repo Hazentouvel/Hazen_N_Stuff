@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/door_bottom_right_open",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "bottom": "hazennstuff:block/wisewood_door_bottom",
-    "top": "hazennstuff:block/wisewood_door_top"
-  }
-}

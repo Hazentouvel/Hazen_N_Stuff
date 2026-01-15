@@ -1,0 +1,4 @@
+// 1.20.1	2025-10-15T12:36:51.8315882	Registries
+6a618c081309af79237f35409f3ec6f93a34d988 data/hazennstuff/forge/biome_modifier/add_end_zenalite_ore.json
+6287afc1e866c45144f5a3bfc29f6702156badd2 data/hazennstuff/worldgen/configured_feature/end_zenalite_ore.json
+2ff57eb4002279f59fd6a544329fff80bec1c596 data/hazennstuff/worldgen/placed_feature/end_zenalite_ore_placed.json

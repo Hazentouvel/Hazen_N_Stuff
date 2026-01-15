@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:blaze_powder"
+  },
+  "base": {
+    "item": "hazennstuff:blazeborne_chestplate"
+  },
+  "result": {
+    "item": "hazennstuff:hazel_chestplate"
+  },
+  "template": {
+    "item": "minecraft:leather"
+  }
+}

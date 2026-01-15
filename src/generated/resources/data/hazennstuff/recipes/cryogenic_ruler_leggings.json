@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "irons_spellbooks:ice_rune"
+    },
+    "S": {
+      "item": "irons_spellbooks:cryomancer_leggings"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "ZRZ",
+    "ZSZ",
+    "Z Z"
+  ],
+  "result": {
+    "item": "hazennstuff:cryogenic_ruler_leggings"
+  },
+  "show_notification": true
+}

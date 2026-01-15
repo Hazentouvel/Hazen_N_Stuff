@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_creaking_sorcerer_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hazennstuff:creaking_sorcerer_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:fireblossom_battlemage_crown"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_creaking_sorcerer_helmet",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:fireblossom_battlemage_crown"
+    ]
+  },
+  "sends_telemetry_event": false
+}

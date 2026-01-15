@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "irons_spellbooks:ice_rune"
+    },
+    "S": {
+      "item": "irons_spellbooks:cryomancer_chestplate"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "ZSZ",
+    "ZRZ",
+    "ZZZ"
+  ],
+  "result": {
+    "item": "hazennstuff:cryogenic_ruler_chestplate"
+  },
+  "show_notification": true
+}

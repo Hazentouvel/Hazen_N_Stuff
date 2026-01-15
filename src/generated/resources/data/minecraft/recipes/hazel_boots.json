@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:blaze_powder"
+  },
+  "base": {
+    "item": "hazennstuff:blazeborne_boots"
+  },
+  "result": {
+    "item": "hazennstuff:hazel_boots"
+  },
+  "template": {
+    "item": "minecraft:leather"
+  }
+}

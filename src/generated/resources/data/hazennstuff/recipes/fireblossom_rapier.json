@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_rod"
+    },
+    "F": {
+      "item": "irons_spellbooks:fire_rune"
+    },
+    "N": {
+      "item": "irons_spellbooks:nature_rune"
+    },
+    "W": {
+      "item": "irons_spellbooks:weapon_parts"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    " NB",
+    "ZBF",
+    "WZ "
+  ],
+  "result": {
+    "count": 2,
+    "item": "hazennstuff:fireblossom_rapier"
+  },
+  "show_notification": true
+}

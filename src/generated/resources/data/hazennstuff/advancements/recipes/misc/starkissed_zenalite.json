@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hazennstuff:starkissed_zenalite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_zenalite_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hazennstuff:zenalite_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_zenalite_block",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hazennstuff:starkissed_zenalite"
+    ]
+  },
+  "sends_telemetry_event": false
+}

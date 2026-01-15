@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/armors/ender_dragon_helmet"
+    "layer0": "hazennstuff:item/armor_icons/ender_dragon_helmet"
   }
 }

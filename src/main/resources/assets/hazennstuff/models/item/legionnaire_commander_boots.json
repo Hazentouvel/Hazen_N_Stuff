@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "hazennstuff:item/armors/legionnaire_commander_boots"
-  }
-}

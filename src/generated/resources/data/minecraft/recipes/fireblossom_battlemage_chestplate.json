@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:blank_rune"
+  },
+  "base": {
+    "item": "hazennstuff:blazeborne_chestplate"
+  },
+  "result": {
+    "item": "hazennstuff:fireblossom_battlemage_chestplate"
+  },
+  "template": {
+    "item": "hazennstuff:creaking_sorcerer_chestplate"
+  }
+}

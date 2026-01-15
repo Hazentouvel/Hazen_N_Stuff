@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/armors/flesh_mass_leggings"
+    "layer0": "hazennstuff:item/armor_icons/flesh_mass_leggings"
   }
 }

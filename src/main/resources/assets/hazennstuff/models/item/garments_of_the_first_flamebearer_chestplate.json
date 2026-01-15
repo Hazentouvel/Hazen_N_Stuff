@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "hazennstuff:item/armors/garments_of_the_first_flamebearer_chestplate"
-  }
-}

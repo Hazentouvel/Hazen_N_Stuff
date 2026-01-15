@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "irons_spellbooks:ender_rune"
+    },
+    "S": {
+      "item": "irons_spellbooks:shadowwalker_helmet"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "ZRZ",
+    "ZSZ",
+    "   "
+  ],
+  "result": {
+    "item": "hazennstuff:ender_dragon_helmet"
+  },
+  "show_notification": true
+}

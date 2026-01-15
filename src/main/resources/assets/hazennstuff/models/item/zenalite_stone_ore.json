@@ -1,6 +1,0 @@
-{
-  "parent": "hazennstuff:block/zenalite_stone_ore",
-  "textures": {
-    "all": "hazennstuff:block/zenalite_stone_ore"
-  }
-}

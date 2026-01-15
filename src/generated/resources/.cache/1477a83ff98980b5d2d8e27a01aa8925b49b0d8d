@@ -1,0 +1,6 @@
+// 1.20.1	2026-01-15T07:46:54.2308541	Tags for minecraft:block mod id hazennstuff
+2569b62dd34ff2c236ede870d49dbb634d94dbb0 data/forge/tags/blocks/needs_netherite_tool.json
+59f5268191929c6ad882d8378afb7c8d23b105ca data/minecraft/tags/blocks/mineable/pickaxe.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_diamond_tool.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_iron_tool.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_stone_tool.json

@@ -1,0 +1,15 @@
+{
+  "type": "irons_spellbooks:append_loot",
+  "conditions": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "irons_spellbooks:chests/citadel/citadel_vault"
+        }
+      ]
+    }
+  ],
+  "key": "hazennstuff:chests/citadel_vault_addition"
+}

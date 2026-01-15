@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "entries": [
+    "hazennstuff:entity_drops/vindicator_modifiers",
+    "hazennstuff:entity_drops/pillager_modifiers",
+    "hazennstuff:entity_drops/evoker_modifiers",
+    "hazennstuff:entity_drops/bogged_modifiers",
+    "hazennstuff:entity_drops/cryomancer_modifiers",
+    "hazennstuff:entity_drops/stray_modifiers",
+    "hazennstuff:entity_drops/wither_skeleton_modifiers",
+    "hazennstuff:entity_drops/endermen_modifiers",
+    "hazennstuff:entity_drops/phantom_modifiers",
+    "hazennstuff:entity_drops/tyros_modifiers",
+    "hazennstuff:entity_drops/dead_king_modifiers",
+    "hazennstuff:entity_drops/spider_modifiers",
+    "hazennstuff:entity_drops/cave_spider_modifiers",
+
+
+    "hazennstuff:chests/catacombs_modifiers",
+    "hazennstuff:chests/citadel_vault_modifiers"
+  ]
+}

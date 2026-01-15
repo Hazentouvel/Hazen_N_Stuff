@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:wisewood_planks"
+  },
+  "base": {
+    "tag": "hazennstuff:staves/artificer_cane"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:wisewood_cane"
+  },
+  "template": {
+    "item": "minecraft:leather"
+  }
+}

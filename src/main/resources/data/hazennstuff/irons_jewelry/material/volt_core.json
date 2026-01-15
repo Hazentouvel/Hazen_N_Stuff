@@ -1,0 +1,35 @@
+{
+  "descriptionId": "material.hazennstuff.volt_core",
+  "ingredient": {
+    "item": "hazennstuff:volt_core"
+  },
+  "materialType": [
+    "gem"
+  ],
+  "paletteLocation": "hazennstuff:palettes/volt_core",
+  "quality": 1,
+  "bonusParameters": {
+    "irons_jewelry:attribute": {
+      "attribute": "aces_spell_utils:mana_rend",
+      "amount": 0.25,
+      "operation": "add_multiplied_total"
+    },
+    "irons_jewelry:negative_effect": {
+      "effect": "hazennstuff:electrocuted"
+    },
+    "irons_jewelry:positive_effect": {
+      "effect": "irons_spellbooks:thunderstorm"
+    },
+    "irons_jewelry:action": {
+      "targetSelf": false,
+      "action": {
+        "type": "irons_jewelry:apply_damage",
+        "damageType": "minecraft:lightning_bolt",
+        "amount": {
+          "base": 3.0,
+          "scalar": 2
+        }
+      }
+    }
+  }
+}

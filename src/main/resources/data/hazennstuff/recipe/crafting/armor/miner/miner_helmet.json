@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "LIL"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:candle"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "I": {
+      "item": "minecraft:iron_helmet"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:miner_helmet",
+    "count": 1
+  }
+}

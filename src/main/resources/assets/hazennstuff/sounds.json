@@ -1,0 +1,257 @@
+{
+  "soul_flame_equip": {
+    "sounds": [
+      "hazennstuff:soul_flame_equip_1",
+      "hazennstuff:soul_flame_equip_2",
+      "hazennstuff:soul_flame_equip_3",
+      "hazennstuff:soul_flame_equip_4"
+    ]
+  },
+
+  "supreme_witch_equip": {
+    "sounds": [
+      "hazennstuff:supreme_witch_equip_1",
+      "hazennstuff:supreme_witch_equip_2",
+      "hazennstuff:supreme_witch_equip_3",
+      "hazennstuff:supreme_witch_equip_4"
+    ]
+  },
+
+  "seraph_equip": {
+    "sounds": [
+      "hazennstuff:seraph_equip_1",
+      "hazennstuff:seraph_equip_2",
+      "hazennstuff:seraph_equip_3",
+      "hazennstuff:seraph_equip_4"
+    ]
+  },
+
+  "creaking_sorcerer_equip": {
+    "sounds": [
+      "hazennstuff:creaking_sorcerer_equip_1",
+      "hazennstuff:creaking_sorcerer_equip_2",
+      "hazennstuff:creaking_sorcerer_equip_3",
+      "hazennstuff:creaking_sorcerer_equip_4"
+    ]
+  },
+
+  "flesh_mass_equip": {
+    "sounds": [
+      "hazennstuff:flesh_mass_equip_1",
+      "hazennstuff:flesh_mass_equip_2",
+      "hazennstuff:flesh_mass_equip_3",
+      "hazennstuff:flesh_mass_equip_4",
+      "hazennstuff:flesh_mass_equip_5",
+      "hazennstuff:flesh_mass_equip_6",
+      "hazennstuff:flesh_mass_equip_7"
+    ]
+  },
+
+  "cryogenic_ruler_equip": {
+  "sounds": [
+    "hazennstuff:cryogenic_ruler_equip_1",
+    "hazennstuff:cryogenic_ruler_equip_2",
+    "hazennstuff:cryogenic_ruler_equip_3",
+    "hazennstuff:cryogenic_ruler_equip_4"
+  ]
+},"ender_dragon_equip": {
+  "sounds": [
+    "hazennstuff:ender_dragon_equip_1",
+    "hazennstuff:ender_dragon_equip_2",
+    "hazennstuff:ender_dragon_equip_3",
+    "hazennstuff:ender_dragon_equip_4"
+  ]
+},
+
+  "charged_scourge_equip": {
+  "sounds": [
+    "hazennstuff:charged_scourge_equip_1",
+    "hazennstuff:charged_scourge_equip_2",
+    "hazennstuff:charged_scourge_equip_3",
+    "hazennstuff:charged_scourge_equip_4"
+  ]
+},
+  "calamitas_equip": {
+    "sounds": [
+      "hazennstuff:calamitas_equip_1",
+      "hazennstuff:calamitas_equip_2",
+      "hazennstuff:calamitas_equip_3",
+      "hazennstuff:calamitas_equip_4"
+    ]
+  },
+  "brimstone_cast": {
+    "sounds": [
+      "hazennstuff:brimstone_cast"
+    ]
+  },
+  "brimstone_hellblast_cast": {
+    "sounds": [
+      "hazennstuff:brimstone_hellblast_cast"
+    ]
+  },
+  "brimstone_hellblast_impact": {
+    "sounds": [
+      "hazennstuff:brimstone_hellblast_impact"
+    ]
+  },
+  "electric_impact": {
+    "sounds": [
+      "hazennstuff:electric_impact_1",
+      "hazennstuff:electric_impact_2"
+    ]
+  },
+  "electric_cast": {
+    "sounds": [
+      "hazennstuff:electric_cast"
+    ]
+  },
+  "charged": {
+    "sounds": [
+      "hazennstuff:charged"
+    ]
+  },
+  "special_ore_break": {
+    "sounds": [
+      "hazennstuff:special_ore_1",
+      "hazennstuff:special_ore_2",
+      "hazennstuff:special_ore_3"
+    ]
+  },
+  "special_ore_step": {
+    "sounds": [
+      "hazennstuff:special_ore_1",
+      "hazennstuff:special_ore_2",
+      "hazennstuff:special_ore_3"
+    ]
+  },
+  "special_ore_place": {
+    "sounds": [
+      "hazennstuff:special_ore_1",
+      "hazennstuff:special_ore_2",
+      "hazennstuff:special_ore_3"
+    ]
+  },
+  "special_ore_hit": {
+    "sounds": [
+      "hazennstuff:special_ore_1",
+      "hazennstuff:special_ore_2",
+      "hazennstuff:special_ore_3"
+    ]
+  },
+  "special_ore_fall": {
+    "sounds": [
+      "hazennstuff:special_ore_1",
+      "hazennstuff:special_ore_2",
+      "hazennstuff:special_ore_3"
+    ]
+  },
+  "spark_cast": {
+    "sounds": [
+      "hazennstuff:spark_cast_1",
+      "hazennstuff:spark_cast_2",
+      "hazennstuff:spark_cast_3"
+    ]
+  },
+  "syringe_barrage_hit": {
+    "sounds": [
+      "hazennstuff:syringe_barrage_hit_1",
+      "hazennstuff:syringe_barrage_hit_2",
+      "hazennstuff:syringe_barrage_hit_3"
+    ]
+  },
+  "syringe_barrage_miss": {
+    "sounds": [
+      "hazennstuff:syringe_barrage_miss"
+    ]
+  },
+  "syringe_barrage_cast": {
+    "sounds": [
+      "hazennstuff:syringe_barrage_cast"
+    ]
+  },
+  "vampire_knife_throw": {
+    "sounds": [
+      "hazennstuff:vampire_knife_throw"
+    ]
+  },
+  "vampire_knife_hit": {
+    "sounds": [
+      "hazennstuff:vampire_knife_hit"
+    ]
+  },
+  "chaotic_teleport": {
+    "sounds": [
+      "hazennstuff:chaotic_teleport"
+    ]
+  },
+  "terrablade_slash": {
+    "sounds": [
+      "hazennstuff:terrablade_slash"
+    ]
+  },
+  "terraria_impact": {
+    "sounds": [
+      "hazennstuff:terraria_impact"
+    ]
+  },
+  "terraria_swing": {
+    "sounds": [
+      "hazennstuff:terraria_swing"
+    ]
+  },
+  "star_cast_1": {
+    "sounds": [
+      "hazennstuff:star_cast_1"
+    ]
+  },
+  "star_cast_2": {
+    "sounds": [
+      "hazennstuff:star_cast_2"
+    ]
+  },
+  "cat_swing": {
+    "sounds": [
+      "hazennstuff:cat_swing"
+    ]
+  },
+  "cat_cast": {
+    "sounds": [
+      "hazennstuff:cat_cast"
+    ]
+  },
+  "cat_impact": {
+    "sounds": [
+      "hazennstuff:cat_impact"
+    ]
+  },
+  "golden_shower_cast": {
+    "sounds": [
+      "hazennstuff:golden_shower_cast"
+    ]
+  },
+  "terraprisma_casting": {
+    "sounds": [
+      "hazennstuff:terraprisma_casting"
+    ]
+  },
+  "terraprisma_summon": {
+    "sounds": [
+      "hazennstuff:terraprisma_summon"
+    ]
+  },
+  "terraria_summon": {
+    "sounds": [
+      "hazennstuff:terraria_summon"
+    ]
+  },
+  "punch": {
+    "sounds": [
+      "hazennstuff:punch"
+    ]
+  },
+  "parry": {
+    "sounds": [
+      "hazennstuff:parry"
+    ]
+  }
+}

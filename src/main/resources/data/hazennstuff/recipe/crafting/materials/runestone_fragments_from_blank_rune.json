@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "irons_spellbooks:blank_rune"
+    }
+  ],
+  "result": {
+    "id": "hazennstuff:runestone_fragments",
+    "count": 8
+  }
+}

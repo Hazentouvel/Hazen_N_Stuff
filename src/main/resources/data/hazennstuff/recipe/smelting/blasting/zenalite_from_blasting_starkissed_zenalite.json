@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "group": "zenalite",
+  "ingredient": {
+    "item": "hazennstuff:starkissed_zenalite"
+  },
+  "result": {
+    "id": "hazennstuff:zenalite_ingot"
+  }
+}

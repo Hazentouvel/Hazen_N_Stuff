@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cEc",
+    "NYN",
+    "cEc"
+  ],
+  "key": {
+    "c": {
+      "item": "irons_spellbooks:divine_pearl"
+    },
+    "E": {
+      "item": "hazennstuff:health_upgrade_orb"
+    },
+    "N": {
+      "item": "hazennstuff:rose_gold_ingot"
+    },
+    "Y": {
+      "item": "hazennstuff:shattered"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:sacred",
+    "count": 1
+  }
+}

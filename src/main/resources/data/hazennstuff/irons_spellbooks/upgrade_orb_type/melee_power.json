@@ -1,0 +1,9 @@
+{
+  "amount": 0.5,
+  "attribute": "minecraft:generic.attack_damage",
+  "containerItem": {
+    "count": 1,
+    "id": "hazennstuff:melee_upgrade_orb"
+  },
+  "operation": "add_value"
+}

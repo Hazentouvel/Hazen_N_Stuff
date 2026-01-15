@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#N#",
+    "#S ",
+    " H "
+  ],
+  "key": {
+    "#": {
+      "item": "hazennstuff:zenalite_ingot"
+    },
+    "N": {
+      "item": "minecraft:netherite_axe"
+    },
+    "S": {
+      "item": "hazennstuff:wisewood_planks"
+    },
+    "H": {
+      "item": "irons_spellbooks:lightning_bottle"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:beongae",
+    "count": 1
+  }
+}

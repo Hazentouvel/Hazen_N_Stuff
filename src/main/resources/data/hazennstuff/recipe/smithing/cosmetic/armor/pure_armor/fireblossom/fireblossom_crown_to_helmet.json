@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:shears"
+  },
+  "base": {
+    "item": "hazennstuff:fireblossom_helmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:fireblossom_crown"
+  },
+  "template": {
+    "item": "hazennstuff:flaming_template"
+  }
+}

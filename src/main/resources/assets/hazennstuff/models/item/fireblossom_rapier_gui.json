@@ -1,6 +1,6 @@
 {
-  "parent": "item/generated",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/weapon_icons/fireblossom_rapier_gui"
+    "layer0": "hazennstuff:item/gui/fireblossom_rapier_gui"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "hazennstuff:stripped_frostbite_birch_log",
+    "hazennstuff:stripped_frostbite_birch_wood",
+    "hazennstuff:frostbite_birch_log",
+    "hazennstuff:frostbite_birch_wood"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "malum"
+    }
+  ],
+  "type": "malum:spirit_infusion",
+  "carryOverComponentData": true,
+  "extraIngredients": [
+    {
+      "count": 1,
+      "item": "hazennstuff:divine_mold"
+    },
+    {
+      "count": 3,
+      "item": "hazennstuff:deus_essence"
+    }
+  ],
+  "ingredient": {
+    "count": 1,
+    "item": "hazennstuff:abomination"
+  },
+  "output": {
+    "count": 1,
+    "id": "hazennstuff:absolute"
+  },
+  "spirits": [
+    {
+      "type": "wicked",
+      "count": 16
+    },
+    {
+      "type": "eldritch",
+      "count": 8
+    },
+    {
+      "type": "sacred",
+      "count": 8
+    }
+  ]
+}

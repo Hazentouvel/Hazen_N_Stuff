@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 1.0,
+  "group": "zenalite",
+  "ingredient": {
+    "tag": "hazennstuff:blocks/zenalite_ores"
+  },
+  "result": {
+    "id": "hazennstuff:raw_zenalite"
+  }
+}

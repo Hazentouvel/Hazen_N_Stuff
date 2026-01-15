@@ -1,0 +1,26 @@
+{
+"type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cEc",
+    "NYN",
+    "cEc"
+  ],
+  "key": {
+    "c": {
+      "item": "hazennstuff:steel_ingot"
+    },
+    "E": {
+      "item": "hazennstuff:melee_upgrade_orb"
+    },
+    "N": {
+      "item": "hazennstuff:silver_scraps"
+    },
+    "Y": {
+      "item": "hazennstuff:abstract"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:advanced",
+    "count": 1
+  }
+}

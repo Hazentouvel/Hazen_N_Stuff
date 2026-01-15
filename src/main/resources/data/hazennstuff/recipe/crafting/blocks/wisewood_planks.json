@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "hazennstuff:blocks/wisewood_logs"
+    }
+  ],
+  "result": {
+    "id": "hazennstuff:wisewood_planks",
+    "count": 4
+  }
+}

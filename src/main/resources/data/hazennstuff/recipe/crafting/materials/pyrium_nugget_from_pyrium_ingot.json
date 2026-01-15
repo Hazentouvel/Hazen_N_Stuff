@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "irons_spellbooks:pyrium_ingot"
+    }
+  ],
+  "result": {
+    "id": "hazennstuff:pyrium_nugget",
+    "count": 9
+  }
+}

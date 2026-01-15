@@ -1,0 +1,32 @@
+{
+  "descriptionId": "material.hazennstuff.permafrost_shard",
+  "ingredient": {
+    "item": "irons_spellbooks:permafrost_shard"
+  },
+  "materialType": [
+    "gem"
+  ],
+  "paletteLocation": "hazennstuff:palettes/permafrost_shard",
+  "quality": 1,
+  "bonusParameters": {
+    "irons_jewelry:attribute": {
+      "attribute": "apothic_attributes:cold_damage",
+      "amount": 5,
+      "operation": "add_value"
+    },
+    "irons_jewelry:negative_effect": {
+      "effect": "irons_spellbooks:chilled"
+    },
+    "irons_jewelry:positive_effect": {
+      "effect": "irons_spellbooks:frostbite"
+    },
+    "irons_jewelry:action": {
+      "targetSelf": false,
+      "action": {
+        "type": "irons_jewelry:apply_freeze",
+        "amount": 50.0,
+        "instaFreeze": true
+      }
+    }
+  }
+}

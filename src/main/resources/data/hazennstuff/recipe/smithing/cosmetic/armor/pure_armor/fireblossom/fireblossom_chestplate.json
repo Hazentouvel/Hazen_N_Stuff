@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:fireblossom"
+  },
+  "base": {
+    "tag": "hazennstuff:armors/tiers/pure/pure_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:fireblossom_chestplate"
+  },
+  "template": {
+    "item": "hazennstuff:flaming_template"
+  }
+}

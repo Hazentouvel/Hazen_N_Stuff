@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:white_dye"
+  },
+  "base": {
+    "tag": "hazennstuff:armors/netherite_battlemage/netherite_battlemage_helmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:frieren_helmet"
+  },
+  "template": {
+    "item": "minecraft:leather"
+  }
+}

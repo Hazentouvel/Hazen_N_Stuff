@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "nE",
+    "iD",
+    " /"
+  ],
+  "key": {
+    "n": {
+      "item": "hazennstuff:zenalite_ingot"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "i": {
+      "item": "hazennstuff:silver_scraps"
+    },
+    "D": {
+      "item": "hazennstuff:excalibur_fragment"
+    },
+    "/": {
+      "item": "irons_spellbooks:graybeard_staff"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:ancient_warriors_axe",
+    "count": 1
+  }
+}

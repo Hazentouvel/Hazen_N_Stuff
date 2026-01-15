@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PPP",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "irons_spellbooks:mithril_ingot"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:mithril_block",
+    "count": 1
+  }
+}

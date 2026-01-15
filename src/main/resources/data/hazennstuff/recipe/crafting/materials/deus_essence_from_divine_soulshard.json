@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "irons_spellbooks:divine_soulshard"
+    }
+  ],
+  "result": {
+    "id": "hazennstuff:deus_essence",
+    "count": 4
+  }
+}

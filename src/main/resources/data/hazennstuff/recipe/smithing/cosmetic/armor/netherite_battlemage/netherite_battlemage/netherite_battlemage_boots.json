@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:magic_cloth"
+  },
+  "base": {
+    "tag": "hazennstuff:armors/school/school_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "irons_spellbooks:netherite_mage_boots"
+  },
+  "template": {
+    "item": "irons_spellbooks:blank_rune"
+  }
+}

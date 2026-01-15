@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:black_dye"
+  },
+  "base": {
+    "tag": "hazennstuff:armors/netherite_battlemage/netherite_battlemage_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:atlas_boots"
+  },
+  "template": {
+    "item": "minecraft:leather"
+  }
+}

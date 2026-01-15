@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  /",
+    "Tn ",
+    "S  "
+  ],
+  "key": {
+    "/": {
+      "item": "minecraft:blaze_rod"
+    },
+    "T": {
+      "item": "hazennstuff:fireblossom"
+    },
+    "n": {
+      "item": "hazennstuff:zenalite_ingot"
+    },
+    "S": {
+      "item": "hazennstuff:excalibur_fragment"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:fireblossom_rapier",
+    "count": 1
+  }
+}

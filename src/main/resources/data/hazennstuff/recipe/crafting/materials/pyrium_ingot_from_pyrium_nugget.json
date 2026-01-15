@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PPP",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "hazennstuff:pyrium_nugget"
+    }
+  },
+  "result": {
+    "id": "irons_spellbooks:pyrium_ingot",
+    "count": 1
+  }
+}

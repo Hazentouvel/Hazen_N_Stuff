@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "hazennstuff:arcane_steel_block"
+    }
+  ],
+  "result": {
+    "id": "irons_spellbooks:arcane_ingot",
+    "count": 9
+  }
+}

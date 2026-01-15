@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#hazennstuff:focus/shadow_focus",
+    "#hazennstuff:focus/radiance_focus"
+  ]
+}

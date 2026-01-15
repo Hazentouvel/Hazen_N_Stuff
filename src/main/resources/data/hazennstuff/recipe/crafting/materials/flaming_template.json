@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#D#",
+    "#S#",
+    "AgA"
+  ],
+  "key": {
+    "#": {
+      "item": "hazennstuff:runestone_fragments"
+    },
+    "D": {
+      "item": "minecraft:blaze_rod"
+    },
+    "S": {
+      "item": "hazennstuff:charred_bones"
+    },
+    "A": {
+      "item": "hazennstuff:wisewood_log"
+    },
+    "g": {
+      "item": "hazennstuff:pyrium_nugget"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:flaming_template",
+    "count": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "hazennstuff:block/phantasmium",
+  "textures": {
+    "all": "hazennstuff:block/phantasmium"
+  }
+}

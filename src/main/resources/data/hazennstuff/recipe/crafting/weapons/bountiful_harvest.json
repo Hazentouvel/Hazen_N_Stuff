@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "nBN",
+    "  S",
+    " W "
+  ],
+  "key": {
+    "n": {
+      "item": "hazennstuff:zenalite_ingot"
+    },
+    "B": {
+      "item": "hazennstuff:overgrown_bone"
+    },
+    "N": {
+      "item": "hazennstuff:deus_essence"
+    },
+    "S": {
+      "item": "hazennstuff:excalibur_fragment"
+    },
+    "W": {
+      "item": "hazennstuff:wisewood_planks"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:bountiful_harvest",
+    "count": 1
+  }
+}

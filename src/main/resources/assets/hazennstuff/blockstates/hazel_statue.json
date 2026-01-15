@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "hazennstuff:block/hazel_statue" },
+    "facing=south": { "model": "hazennstuff:block/hazel_statue" },
+    "facing=west":  { "model": "hazennstuff:block/hazel_statue" },
+    "facing=east":  { "model": "hazennstuff:block/hazel_statue" }
+  }
+}

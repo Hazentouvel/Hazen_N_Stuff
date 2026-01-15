@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#D#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "hazennstuff:permafrost_fragment"
+    },
+    "D": {
+      "item": "irons_spellbooks:arcane_ingot"
+    }
+  },
+  "result": {
+    "id": "irons_spellbooks:permafrost_shard",
+    "count": 1
+  }
+}

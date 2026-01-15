@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "hazennstuff:item/ice_pike_model"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "hazennstuff:item/ice_pike_gui"
+    }
+  }
+}

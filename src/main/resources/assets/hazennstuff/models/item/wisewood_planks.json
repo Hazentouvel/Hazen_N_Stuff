@@ -1,0 +1,6 @@
+{
+  "parent": "hazennstuff:block/wisewood_planks",
+  "textures": {
+    "all": "irons_spellbooks:block/wisewood_planks"
+  }
+}

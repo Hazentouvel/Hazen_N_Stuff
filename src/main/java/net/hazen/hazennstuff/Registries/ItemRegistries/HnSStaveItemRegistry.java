@@ -29,8 +29,8 @@ public class HnSStaveItemRegistry {
             ("grimoire_staff", GrimoireStaff::new);
 
     // Insania Aeternum
-    public static final RegistryObject<Item> INSANIA_AETERNUM = ITEMS.register
-            ("insania_aeternum", InsaniaAeternus::new);
+    public static final RegistryObject<Item> INSANIA_AETERNUS = ITEMS.register
+            ("insania_aeternus", InsaniaAeternus::new);
 
     // Blossom of the Enchantress
     public static final RegistryObject<Item> BLOSSOM_OF_THE_ENCHANTRESS = ITEMS.register

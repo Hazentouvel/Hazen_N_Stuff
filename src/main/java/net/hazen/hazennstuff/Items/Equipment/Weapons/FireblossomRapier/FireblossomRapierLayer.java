@@ -14,7 +14,7 @@ import software.bernie.geckolib.renderer.layer.GeoRenderLayer;
 public class FireblossomRapierLayer extends GeoRenderLayer<FireblossomRapierItem> {
     private static final ResourceLocation LAYER = ResourceLocation.fromNamespaceAndPath(
             "hazennstuff",
-            "textures/weapons/fireblossom_rapier_layer.png");
+            "textures/weapons/fireblossom_rapier_glowmask.png");
 
     public FireblossomRapierLayer(GeoRenderer<FireblossomRapierItem> entityRenderer) {
         super(entityRenderer);

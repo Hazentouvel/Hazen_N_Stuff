@@ -182,7 +182,7 @@ public class HnSCreativeModeTabs {
                         pOutput.accept(HnSStaveItemRegistry.GRIMOIRE_STAFF.get());
                         pOutput.accept(HnSStaveItemRegistry.DIVINE_SCEPTER.get());
                         pOutput.accept(HnSStaveItemRegistry.BLOSSOM_OF_THE_ENCHANTRESS.get());
-                        pOutput.accept(HnSStaveItemRegistry.INSANIA_AETERNUM.get());
+                        pOutput.accept(HnSStaveItemRegistry.INSANIA_AETERNUS.get());
 
                     })
                     .build()

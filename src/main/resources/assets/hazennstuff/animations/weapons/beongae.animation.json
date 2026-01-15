@@ -1,0 +1,42 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.beongae.idle": {
+			"loop": true,
+			"animation_length": 5,
+			"bones": {
+				"balls": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"5.0": {
+							"vector": [0, 5310, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, -0.35, 0]
+						},
+						"0.0833": {
+							"vector": [0, -0.35, 0]
+						},
+						"2.4167": {
+							"vector": [0, 0.35, 0]
+						},
+						"2.5833": {
+							"vector": [0, 0.35, 0]
+						},
+						"4.9167": {
+							"vector": [0, -0.35, 0]
+						},
+						"5.0": {
+							"vector": [0, -0.35, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

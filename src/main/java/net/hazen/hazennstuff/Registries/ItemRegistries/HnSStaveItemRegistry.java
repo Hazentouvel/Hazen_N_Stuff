@@ -3,9 +3,9 @@ package net.hazen.hazennstuff.Registries.ItemRegistries;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Items.Equipment.Staves.BlossomOfTheEnchantress.BlossomOfTheEnchantress;
 import net.hazen.hazennstuff.Items.Equipment.Staves.DivineScepter.DivineScepter;
-import net.hazen.hazennstuff.Items.Equipment.Staves.EnderconicScepter.EnderconicStaff;
+import net.hazen.hazennstuff.Items.Equipment.Staves.EnderconicScepter.EnderconicScepter;
 import net.hazen.hazennstuff.Items.Equipment.Staves.GrimoireStaff.GrimoireStaff;
-import net.hazen.hazennstuff.Items.Equipment.Staves.InsaniaAeternum.InsaniaAeternum;
+import net.hazen.hazennstuff.Items.Equipment.Staves.InsaniaAeternum.InsaniaAeternus;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,7 +18,7 @@ public class HnSStaveItemRegistry {
 
     // Enderconic Scepter
     public static final RegistryObject<Item> ENDERCONIC_SCEPTER = ITEMS.register
-            ("enderconic_scepter", EnderconicStaff::new);
+            ("enderconic_scepter", EnderconicScepter::new);
 
     // Divine Scepter
     public static final RegistryObject<Item> DIVINE_SCEPTER = ITEMS.register
@@ -30,7 +30,7 @@ public class HnSStaveItemRegistry {
 
     // Insania Aeternum
     public static final RegistryObject<Item> INSANIA_AETERNUM = ITEMS.register
-            ("insania_aeternum", InsaniaAeternum::new);
+            ("insania_aeternum", InsaniaAeternus::new);
 
     // Blossom of the Enchantress
     public static final RegistryObject<Item> BLOSSOM_OF_THE_ENCHANTRESS = ITEMS.register

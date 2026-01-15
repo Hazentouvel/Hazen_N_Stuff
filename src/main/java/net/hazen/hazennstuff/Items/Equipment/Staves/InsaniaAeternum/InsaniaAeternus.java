@@ -4,8 +4,6 @@ import com.gametechbc.spelllib.init.GSLAttributeRegistry;
 import com.gametechbc.spelllib.item.GeoStaffItem;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.Items.Equipment.Weapons.FireblossomRapier.FireblossomRapierModel;
-import net.hazen.hazennstuff.Items.Equipment.Weapons.FireblossomRapier.FireblossomRapierRenderer;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.Rarity;
@@ -17,10 +15,10 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.Map;
 import java.util.UUID;
 
-public class InsaniaAeternum extends GeoStaffItem {
+public class InsaniaAeternus extends GeoStaffItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    public InsaniaAeternum() {
+    public InsaniaAeternus() {
         super(ItemPropertiesHelper.equipment()
                         .stacksTo(1)
                         .rarity(Rarity.EPIC), 3, -3,
@@ -40,6 +38,6 @@ public class InsaniaAeternum extends GeoStaffItem {
     @Override
     @OnlyIn(Dist.CLIENT)
     public BlockEntityWithoutLevelRenderer getRenderer() {
-        return new InsaniaAeternumRenderer(new InsaniaAeternumModel());
+        return new InsaniaAeternusRenderer(new InsaniaAeternusModel());
     }
 }

@@ -15,10 +15,10 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.Map;
 import java.util.UUID;
 
-public class EnderconicStaff extends GeoStaffItem {
+public class EnderconicScepter extends GeoStaffItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    public EnderconicStaff() {
+    public EnderconicScepter() {
         super(ItemPropertiesHelper.equipment()
                         .stacksTo(1)
                         .rarity(Rarity.EPIC), 3, -3,
@@ -35,6 +35,6 @@ public class EnderconicStaff extends GeoStaffItem {
     @Override
     @OnlyIn(Dist.CLIENT)
     public BlockEntityWithoutLevelRenderer getRenderer() {
-        return new EnderconicStaffRenderer(new EnderconicStaffModel());
+        return new EnderconicScepterRenderer(new EnderconicScepterModel());
     }
 }

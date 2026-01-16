@@ -148,6 +148,10 @@ configurations {
 
 dependencies {
 
+    /*
+    *** Main Dependencies **********************************************************************************************
+     */
+
     //Iron's Spells 'n Spellbooks
     implementation "curse.maven:iss-855414:7262331"
     implementation "curse.maven:geckolib-388172:6304958"
@@ -164,6 +168,10 @@ dependencies {
     //implementation "curse.maven:ldlib-626676:6911394"
     //AzureLib
     implementation "mod.azure.azurelib:azurelib-neo-${minecraft_version}:${azurelib_version}"
+
+    /*
+    *** Runtime Only ***************************************************************************************************
+     */
 
     //JEI
     compileOnly "mezz.jei:jei-${jei_mc_version}-common-api:${jei_version}"
@@ -187,6 +195,10 @@ dependencies {
     // MmmMmmMmm
     localRuntime "curse.maven:mmm-225738:6826533"
     localRuntime "curse.maven:moonlight_lib-499980:6814741"
+
+    /*
+    *** Optional Dependencies ******************************************************************************************
+     */
 
     //Ars Nouveau
     localRuntime "curse.maven:ars_nouveau-401955:6827634"
@@ -229,7 +241,15 @@ dependencies {
     localRuntime "curse.maven:enders_spells_and_stuff-1336977:7466777"
     compileOnly "curse.maven:enders_spells_and_stuff-1336977:7466777"
     localRuntime "curse.maven:gtbcs-spelllib-1194714:7385455"
-    compileOnly "curse.maven:gtbcs-spelllib-1194714:7385455"
+    compileOnly "curse.maven:gtbcs-spelllib-1194714:738545"
+
+    //Discerning the Eldritch
+    localRuntime "curse.maven:discerning_the_eldritch-1143065:7469786"
+    compileOnly "curse.maven:discerning_the_eldritch-1336977:7469786"
+    localRuntime "curse.maven:soul_fire_d-662413:7364962"
+    compileOnly "curse.maven:soul_fire_d-662413:7364962"
+    localRuntime "curse.maven:prometheus-1365195:7364871"
+    compileOnly "curse.maven:prometheus-1365195:7364871"
 
 }
 

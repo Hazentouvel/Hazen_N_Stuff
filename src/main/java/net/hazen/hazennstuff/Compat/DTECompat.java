@@ -1,6 +1,6 @@
 package net.hazen.hazennstuff.Compat;
 
-import com.snackpirate.aeromancy.spells.AASpells;
+import net.acetheeldritchking.discerning_the_eldritch.registries.DTEAttributeRegistry;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -13,29 +13,29 @@ public class DTECompat {
         LOADED = ModList.get().isLoaded("aero_additions");
     }
 
-    public static void addWindSpellPowerPure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
+    public static void addRitualSpellPowerPure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
         if (LOADED) {
-            LoadedOnly.addWindSpellPower(attributes, group);
+            LoadedOnly.addRitualSpellPowerPure(attributes, group);
         }
     }
 
-    public static void addWindSpellPowerParagon (ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
+    public static void addRitualSpellPowerParagon(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
         if (LOADED) {
-            LoadedOnly.addWindSpellPowerParagon(attributes, group);
+            LoadedOnly.addRitualSpellPowerParagon(attributes, group);
         }
     }
 
     public static class LoadedOnly {
 
-        public static void addWindSpellPower(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
-            attributes.add(AASpells.Attributes.WIND_SPELL_POWER,
-                    new AttributeModifier(HazenNStuff.id("add_occult_spell_power"), 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+        public static void addRitualSpellPowerPure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
+            attributes.add(DTEAttributeRegistry.RITUAL_MAGIC_POWER,
+                    new AttributeModifier(HazenNStuff.id("add_ritual_spell_power_pure"), 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                     group);
         }
 
-        public static void addWindSpellPowerParagon(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
-            attributes.add(AASpells.Attributes.WIND_SPELL_POWER,
-                    new AttributeModifier(HazenNStuff.id("add_wind_spell_power"), 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+        public static void addRitualSpellPowerParagon(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
+            attributes.add(DTEAttributeRegistry.RITUAL_MAGIC_POWER,
+                    new AttributeModifier(HazenNStuff.id("add_ritual_spell_power_paragon"), 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                     group);
         }
 

@@ -29,13 +29,13 @@ public class FLCompat {
 
         public static void addSoundSpellPowerPure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
             attributes.add(AttributeRegistry.SOUND_SPELL_POWER,
-                    new AttributeModifier(HazenNStuff.id("add_sound_spell_power"), 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                    new AttributeModifier(HazenNStuff.id("add_sound_spell_power_pure"), 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                     group);
         }
 
         public static void addSoundSpellPowerParagon(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
             attributes.add(AttributeRegistry.SOUND_SPELL_POWER,
-                    new AttributeModifier(HazenNStuff.id("add_sound_spell_power"), 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                    new AttributeModifier(HazenNStuff.id("add_sound_spell_power_paragon"), 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                     group);
         }
     }

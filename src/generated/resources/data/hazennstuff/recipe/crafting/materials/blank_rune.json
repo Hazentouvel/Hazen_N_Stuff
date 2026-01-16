@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "irons_spellbooks:arcane_ingot"
+    },
+    "B": {
+      "item": "irons_spellbooks:blank_rune"
+    },
+    "F": {
+      "item": "hazennstuff:runestone_fragments"
+    }
+  },
+  "pattern": [
+    "FBF",
+    "FAF",
+    "FFF"
+  ],
+  "result": {
+    "count": 2,
+    "id": "irons_spellbooks:blank_rune"
+  }
+}

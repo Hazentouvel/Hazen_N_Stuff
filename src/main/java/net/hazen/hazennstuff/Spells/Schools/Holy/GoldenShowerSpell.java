@@ -21,7 +21,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Optional;
 
-@AutoSpellConfig
 public class GoldenShowerSpell extends AbstractGoldenShowerSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "golden_shower");
 

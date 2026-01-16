@@ -29,13 +29,13 @@ public class ESSRCompat {
 
         public static void addSpellbladeSpellPowerPure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
             attributes.add(GGAttributeRegistry.BLADE_SPELL_POWER,
-                    new AttributeModifier(HazenNStuff.id("add_spellblade_spell_power"), 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                    new AttributeModifier(HazenNStuff.id("add_spellblade_spell_power_pure"), 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                     group);
         }
 
         public static void addSpellbladeSpellPowerParagon(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
             attributes.add(GGAttributeRegistry.BLADE_SPELL_POWER,
-                    new AttributeModifier(HazenNStuff.id("add_spellblade_spell_power"), 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                    new AttributeModifier(HazenNStuff.id("add_spellblade_spell_power_paragon"), 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                     group);
         }
 

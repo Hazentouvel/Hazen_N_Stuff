@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_shadow_rune": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hazennstuff:shadow_rune"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hazennstuff:smithing/armor/abberant_predator/abberant_predator_chestplate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_shadow_rune"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hazennstuff:smithing/armor/abberant_predator/abberant_predator_chestplate"
+    ]
+  }
+}

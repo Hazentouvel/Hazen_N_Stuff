@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "hazennstuff:block/mossy_mud_bricks"
+  }
+}

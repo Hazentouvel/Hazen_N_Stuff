@@ -23,7 +23,6 @@ import top.theillusivec4.curios.api.CuriosApi;
 
 import java.util.List;
 
-@AutoSpellConfig
 public class FieryDaggerSpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "fiery_dagger");
     private final DefaultConfig defaultConfig;

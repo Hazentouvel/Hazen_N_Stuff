@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "hazennstuff:blade_of_grass"
+    },
+    "D": {
+      "item": "irons_spellbooks:divine_soulshard"
+    },
+    "L": {
+      "item": "hazennstuff:lights_bane"
+    },
+    "M": {
+      "item": "hazennstuff:muramasa"
+    },
+    "V": {
+      "item": "hazennstuff:volcano"
+    },
+    "W": {
+      "item": "irons_spellbooks:weapon_parts"
+    }
+  },
+  "pattern": [
+    "WV ",
+    "BDM",
+    " LW"
+  ],
+  "result": {
+    "components": {
+      "irons_spellbooks:affinity_data": {
+        "bonuses": {
+          "hazennstuff:nights_edge_strike": 1
+        }
+      },
+      "irons_spellbooks:spell_container": {
+        "data": [
+          {
+            "id": "hazennstuff:nights_edge_strike",
+            "index": 0,
+            "level": 6,
+            "locked": true
+          }
+        ],
+        "maxSpells": 1,
+        "mustEquip": false,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:nights_edge"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "P": {
+      "item": "hazennstuff:permafrost_fragment"
+    },
+    "R": {
+      "item": "irons_spellbooks:ice_rune"
+    },
+    "S": {
+      "item": "irons_spellbooks:frosted_helve"
+    }
+  },
+  "pattern": [
+    " R ",
+    " P ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:frostburn_dagger"
+  }
+}

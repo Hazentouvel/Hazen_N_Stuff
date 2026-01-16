@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "P": {
+      "item": "hazennstuff:prismatic_shard"
+    },
+    "R": {
+      "item": "hazennstuff:radiance_rune"
+    },
+    "W": {
+      "item": "irons_spellbooks:weapon_parts"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    " PR",
+    "PRZ",
+    "WZ "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:spectrum"
+  }
+}

@@ -29,13 +29,13 @@ public class CSCompat {
 
         public static void addAbyssalSpellPowerPure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
             attributes.add(CSAttributeRegistry.ABYSSAL_MAGIC_POWER,
-                    new AttributeModifier(HazenNStuff.id("add_abyssal_spell_power"), 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                    new AttributeModifier(HazenNStuff.id("add_abyssal_spell_power_pure"), 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                     group);
         }
 
         public static void addAbyssalSpellPowerParagon(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
             attributes.add(CSAttributeRegistry.ABYSSAL_MAGIC_POWER,
-                    new AttributeModifier(HazenNStuff.id("add_abyssal_spell_power"), 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                    new AttributeModifier(HazenNStuff.id("add_abyssal_spell_power_paragon"), 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                     group);
         }
 

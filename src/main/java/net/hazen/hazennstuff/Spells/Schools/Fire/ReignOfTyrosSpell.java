@@ -26,7 +26,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Optional;
 
-@AutoSpellConfig
 public class ReignOfTyrosSpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "reign_of_tyros");
     private final DefaultConfig defaultConfig;

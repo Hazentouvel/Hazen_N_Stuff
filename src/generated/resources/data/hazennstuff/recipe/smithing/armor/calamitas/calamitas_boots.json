@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:flesh_mass_boots"
+  },
+  "base": {
+    "item": "hazennstuff:blazeborne_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:calamitas_boots"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

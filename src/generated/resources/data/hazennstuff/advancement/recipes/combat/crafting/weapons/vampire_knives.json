@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deadsteel_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hazennstuff:dreadsteel_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hazennstuff:crafting/weapons/vampire_knives"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deadsteel_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hazennstuff:crafting/weapons/vampire_knives"
+    ]
+  }
+}

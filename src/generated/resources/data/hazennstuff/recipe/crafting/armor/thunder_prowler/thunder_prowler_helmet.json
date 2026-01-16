@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "item": "hazennstuff:divine_mold"
+    },
+    "P": {
+      "item": "irons_spellbooks:electromancer_helmet"
+    },
+    "R": {
+      "item": "irons_spellbooks:lightning_rune"
+    },
+    "T": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "TPT",
+    "RMR",
+    "TTT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:thunder_prowler_helmet"
+  }
+}

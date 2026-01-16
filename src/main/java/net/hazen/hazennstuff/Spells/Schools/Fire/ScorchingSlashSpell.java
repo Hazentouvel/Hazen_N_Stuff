@@ -38,7 +38,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Optional;
 
-@AutoSpellConfig
 public class ScorchingSlashSpell extends AbstractRavensBaneSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "scorching_slash");
 

@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_rod"
+    },
+    "R": {
+      "item": "irons_spellbooks:fire_rune"
+    },
+    "S": {
+      "item": "hazennstuff:solar_core"
+    },
+    "W": {
+      "item": "irons_spellbooks:weapon_parts"
+    }
+  },
+  "pattern": [
+    "  B",
+    "RS ",
+    "WR "
+  ],
+  "result": {
+    "components": {
+      "irons_spellbooks:spell_container": {
+        "data": [
+          {
+            "id": "irons_spellbooks:flaming_strike",
+            "index": 0,
+            "level": 4,
+            "locked": true
+          }
+        ],
+        "maxSpells": 1,
+        "mustEquip": false,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:volcano"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "irons_spellbooks:upgrade_orb"
+    },
+    "R": {
+      "item": "hazennstuff:archery_rune"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "ROR",
+    "RRR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:archery_upgrade_orb"
+  }
+}

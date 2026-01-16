@@ -30,7 +30,16 @@
   "item.hazennstuff.dark_ritual_templar.description": "Discern the Eldritch... This armor set is dedicated for Ace_The_Eldritch_King.",
   "item.hazennstuff.sacred_robes.description": "An armor set dedicated to Smalls, a creator of Iron's Spells 'n Spellbooks.",
 
-
+  "rarity.hazennstuff_rarity_fire.name": "Flame-Kissed",
+  "rarity.hazennstuff_rarity_ice.name": "Frostbitten",
+  "rarity.hazennstuff_rarity_nature.name": "Blossomed",
+  "rarity.hazennstuff_rarity_lightning.name": "Ionized",
+  "rarity.hazennstuff_rarity_blood.name": "Sanguine",
+  "rarity.hazennstuff_rarity_ender.name": "Enderconic",
+  "rarity.hazennstuff_rarity_shadow.name": "Shadowed",
+  "rarity.hazennstuff_rarity_radiance.name": "Radiant",
+  "rarity.hazennstuff_rarity_eldritch.name": "Esoteric",
+  "rarity.hazennstuff_rarity_deus.name": "Enlightened",
 
   "item.hazennstuff.excalibur_fragment": "Excalibur Fragment",
   "item.hazennstuff.deus_essence": "Deus Essence",
@@ -227,22 +236,52 @@
   "item.hazennstuff.volcano": "Volcano",
   "item.hazennstuff.war_flaming_lance": "War-Flaming Lance",
 
+  "item.hazennstuff.infernal_immolater_dormant": "Infernal Immolater",
+  "item.hazennstuff.infernal_immolater_t1": "Infernal Immolater",
+  "item.hazennstuff.infernal_immolater_t2": "Infernal Immolater",
+  "item.hazennstuff.infernal_immolater_t3": "Infernal Immolater",
+
   "item.hazennstuff.ice_pike": "Ice Pike",
   "item.hazennstuff.frostburn_dagger": "Frostburn Dagger",
+
+  "item.hazennstuff.glacial_reaver_dormant": "Glacial Reaver",
+  "item.hazennstuff.glacial_reaver_t1": "Glacial Reaver",
+  "item.hazennstuff.glacial_reaver_t2": "Glacial Reaver",
+  "item.hazennstuff.glacial_reaver_t3": "Glacial Reaver",
 
   "item.hazennstuff.skyscorcher": "Skyscorcher",
   "item.hazennstuff.skyscorcher.description": "The sky scorching axe, forged from the mace from the Trial Chambers. Works the same as a mace.",
   "item.hazennstuff.beongae": "Beongae",
 
+  "item.hazennstuff.ionic_splitter_dormant": "Ionic Splitter",
+  "item.hazennstuff.ionic_splitter_t1": "Ionic Splitter",
+  "item.hazennstuff.ionic_splitter_t2": "Ionic Splitter",
+  "item.hazennstuff.ionic_splitter_t3": "Ionic Splitter",
+
   "item.hazennstuff.bountiful_harvest": "Bountiful Harvest",
   "item.hazennstuff.thorn_chakram": "Thorn Chakram",
   "item.hazennstuff.blade_of_grass": "Blade of Grass",
 
+  "item.hazennstuff.o_fortuna_dormant": "O' Fortuna",
+  "item.hazennstuff.o_fortuna_t1": "O' Fortuna",
+  "item.hazennstuff.o_fortuna_t2": "O' Fortuna",
+  "item.hazennstuff.o_fortuna_t3": "O' Fortuna",
+
   "item.hazennstuff.vampire_knives": "Vampire Knives",
   "item.hazennstuff.vampire_knives.description": "A Terraria Reference. Right-Click to throw knives.",
 
+  "item.hazennstuff.devastator_dormant": "Devastator",
+  "item.hazennstuff.devastator_t1": "Devastator",
+  "item.hazennstuff.devastator_t2": "Devastator",
+  "item.hazennstuff.devastator_t3": "Devastator",
+
   "item.hazennstuff.starfury": "Starfury",
   "item.hazennstuff.obsidian_claymore": "Obsidian Claymore",
+
+  "item.hazennstuff.umbranova_dormant": "Umbranova",
+  "item.hazennstuff.umbranova_t1": "Umbranova",
+  "item.hazennstuff.umbranova_2": "Umbranova",
+  "item.hazennstuff.umbranova_t3": "Umbranova",
 
   "item.hazennstuff.hammer_of_justice": "Hammer of Justce",
   "item.hazennstuff.excalibur": "Excalibur",
@@ -250,10 +289,19 @@
   "item.hazennstuff.excalibur_divine_gold": "Excalibur",
   "item.hazennstuff.divine_greatsword": "Divine Greatsword",
 
+  "item.hazennstuff.justice_dormant": "Justice",
+  "item.hazennstuff.justice_t1": "Justice",
+  "item.hazennstuff.justice_t2": "Justice",
+  "item.hazennstuff.justice_t3": "Justice",
+
   "item.hazennstuff.spectrum": "Spectrum",
   "item.hazennstuff.hammush": "Hammush",
   "item.hazennstuff.meowmere": "Meowmere",
   "item.hazennstuff.terraprisma": "Terraprisma",
+
+  "item.hazennstuff.shimmer_dormant": "Shimmer",
+  "item.hazennstuff.shimmer_t1": "Shimmer",
+  "item.hazennstuff.shimmer_t2": "Shimmer",
 
   "item.hazennstuff.ancient_warriors_axe": "Ancient Warrior's Axe",
   "item.hazennstuff.malice": "Malice",
@@ -263,6 +311,12 @@
   "item.hazennstuff.nights_edge.description": "A Terraria Reference. Dawn the power of the Night's Edge. This weapon resonates well with the scroll-forge...",
   "item.hazennstuff.true_nights_edge": "True Night's Edge",
   "item.hazennstuff.true_nights_edge.description": "A Terraria Reference. Unleash the power of the True Night's Edge. This weapon resonates well with the scroll-forge...",
+
+  "item.hazennstuff.twilight_dormant": "Twilight",
+  "item.hazennstuff.twilight_t1": "Twilight",
+  "item.hazennstuff.twilight_t2": "Twilight",
+
+  "item.hazennstuff.eclipse": "Eclipse",
 
   "item.hazennstuff.the_devourer": "The Devourer",
 
@@ -280,14 +334,29 @@
 
 
 
-
-  "item.hazennstuff.frieren_staff": "Frieren's Staff",
-  "item.hazennstuff.white_lily_staff": "White Lily's Staff",
-  "item.hazennstuff.wisewood_cane": "Wisewood Cane",
-  "item.hazennstuff.rod_of_discord": "Rod of Discord",
-  "item.hazennstuff.rod_of_discord.description": "A Terraria Reference. This wand resonates well with the scroll-forge...",
   "item.hazennstuff.soulcalling_scepter": "Soulcalling Scepter",
   "item.hazennstuff.soulcalling_scepter.description": "This staff holds immense power granted from the flambearer onto their subjects... this scepter resonates well with a certain flaming spell...",
+
+  "item.hazennstuff.blossom_of_the_enchantress": "Blossom of the Enchantress",
+  "item.hazennstuff.white_lily_staff": "White Lily's Staff",
+
+  "item.hazennstuff.enderconic_scepter": "Enderconic Scepter",
+
+  "item.hazennstuff.grimoire_staff": "Grimoire Staff",
+
+  "item.hazennstuff.divine_scepter": "Divine Scepter",
+
+  "item.hazennstuff.dawn": "Dawn",
+
+  "item.hazennstuff.dusk": "Dusk",
+
+  "item.hazennstuff.rod_of_discord": "Rod of Discord",
+  "item.hazennstuff.rod_of_discord.description": "A Terraria Reference. This wand resonates well with the scroll-forge...",
+
+  "item.hazennstuff.insania_aeternus": "Insania Aeternus",
+
+  "item.hazennstuff.frieren_staff": "Frieren's Staff",
+  "item.hazennstuff.wisewood_cane": "Wisewood Cane",
 
 
   "item.hazennstuff.geckolib_creaking_helmet": "Creaking Mask",

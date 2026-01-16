@@ -1,0 +1,47 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_rod"
+    },
+    "D": {
+      "item": "irons_spellbooks:legionnaire_flamberge"
+    },
+    "S": {
+      "item": "hazennstuff:solar_core"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "Z B",
+    "SD ",
+    "BSZ"
+  ],
+  "result": {
+    "components": {
+      "irons_spellbooks:affinity_data": {
+        "bonuses": {
+          "irons_spellbooks:burning_dash": 1
+        }
+      },
+      "irons_spellbooks:spell_container": {
+        "data": [
+          {
+            "id": "irons_spellbooks:burning_dash",
+            "index": 0,
+            "level": 5,
+            "locked": true
+          }
+        ],
+        "maxSpells": 1,
+        "mustEquip": false,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:war_flaming_lance"
+  }
+}

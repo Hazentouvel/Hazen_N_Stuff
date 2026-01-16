@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": {
+      "item": "hazennstuff:glowing_mushroom"
+    },
+    "R": {
+      "item": "hazennstuff:radiance_rune"
+    },
+    "S": {
+      "item": "hazennstuff:prismatic_shard"
+    },
+    "W": {
+      "item": "irons_spellbooks:weapon_parts"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "HRH",
+    "SWS",
+    " Z "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:hammush"
+  }
+}

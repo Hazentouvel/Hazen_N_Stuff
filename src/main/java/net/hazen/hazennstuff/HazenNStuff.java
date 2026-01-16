@@ -73,6 +73,7 @@ public class HazenNStuff
         //ISS Addons Compat
         AACompat.init();
         CSCompat.init();
+        DTECompat.init();
         ESSRCompat.init();
         FLCompat.init();
         MFTECompat.init();

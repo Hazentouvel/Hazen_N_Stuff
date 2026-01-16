@@ -10,6 +10,7 @@ import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
+import net.hazen.hazennstuff.Compat.DTECompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.Item.Armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
@@ -50,6 +51,7 @@ public class CalamitasChestplateArmorItem extends ImbuableGeckolibHnSArmorItem i
         MalumCompat.addArcaneResonance(attributes, group);
         ArsNoveauCompat.addMaxMana(attributes, group);
         ArsNoveauCompat.addManaRegen(attributes, group);
+        DTECompat.addRitualSpellPowerPure(attributes, group);
         return attributes.build().modifiers();
     }
 

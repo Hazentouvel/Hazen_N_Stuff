@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "demonite_ingot",
+  "ingredient": {
+    "item": "hazennstuff:shadestone"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:demonite_ingot"
+  }
+}

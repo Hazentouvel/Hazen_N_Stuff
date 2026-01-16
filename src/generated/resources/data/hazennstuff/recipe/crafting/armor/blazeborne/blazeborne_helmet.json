@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "item": "hazennstuff:divine_mold"
+    },
+    "P": {
+      "item": "irons_spellbooks:pyromancer_helmet"
+    },
+    "R": {
+      "item": "irons_spellbooks:fire_rune"
+    },
+    "T": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "RTR",
+    "TPT",
+    " M "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:blazeborne_helmet"
+  }
+}

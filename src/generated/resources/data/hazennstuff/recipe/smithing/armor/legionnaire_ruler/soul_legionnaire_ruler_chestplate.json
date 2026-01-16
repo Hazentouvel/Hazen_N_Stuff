@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:cinder_essence"
+  },
+  "base": {
+    "item": "hazennstuff:legionnaire_commander_chestplate"
+  },
+  "result": {
+    "components": {
+      "irons_spellbooks:spell_container": {
+        "data": [],
+        "maxSpells": 1,
+        "mustEquip": true,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:soul_legionnaire_ruler_chestplate"
+  },
+  "template": {
+    "item": "irons_spellbooks:timeless_slurry"
+  }
+}

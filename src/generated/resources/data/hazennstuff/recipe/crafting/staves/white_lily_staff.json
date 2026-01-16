@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "hazennstuff:chlorophyte_ingot"
+    },
+    "G": {
+      "item": "irons_spellbooks:graybeard_staff"
+    },
+    "L": {
+      "item": "minecraft:lily_of_the_valley"
+    },
+    "R": {
+      "item": "irons_spellbooks:nature_rune"
+    }
+  },
+  "pattern": [
+    " L ",
+    "RGR",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:white_lily_staff"
+  }
+}

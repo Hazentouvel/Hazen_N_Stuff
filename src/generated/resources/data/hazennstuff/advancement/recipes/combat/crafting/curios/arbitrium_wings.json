@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deus_essence": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hazennstuff:deus_essence"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hazennstuff:crafting/curios/arbitrium_wings"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deus_essence"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hazennstuff:crafting/curios/arbitrium_wings"
+    ]
+  }
+}

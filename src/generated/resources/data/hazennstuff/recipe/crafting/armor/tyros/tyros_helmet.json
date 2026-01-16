@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "item": "hazennstuff:flaming_template"
+    },
+    "P": {
+      "item": "hazennstuff:blazeborne_helmet"
+    },
+    "R": {
+      "item": "irons_spellbooks:fire_rune"
+    },
+    "T": {
+      "item": "hazennstuff:cloth_of_the_flamebearer"
+    }
+  },
+  "pattern": [
+    "RTR",
+    "TPT",
+    " M "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:garments_of_the_first_flamebearer_helmet"
+  }
+}

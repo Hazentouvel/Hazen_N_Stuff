@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "item": "hazennstuff:divine_mold"
+    },
+    "P": {
+      "item": "hazennstuff:bounty_hunter_leggings"
+    },
+    "R": {
+      "item": "hazennstuff:permafrost_fragment"
+    },
+    "T": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "RMR",
+    "TPT",
+    "T T"
+  ],
+  "result": {
+    "components": {
+      "irons_spellbooks:affinity_data": {
+        "bonuses": {
+          "irons_spellbooks:frostbite": 1
+        }
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:frostbite_hunter_leggings"
+  }
+}

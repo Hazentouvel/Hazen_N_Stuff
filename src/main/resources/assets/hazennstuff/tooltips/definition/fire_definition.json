@@ -1,0 +1,8 @@
+{
+  "priority": 50,
+  "style": "hazennstuff:fire_style",
+  "filter": {
+    "type": "obscure_tooltips:rarity",
+    "rarity": "fire"
+  }
+}

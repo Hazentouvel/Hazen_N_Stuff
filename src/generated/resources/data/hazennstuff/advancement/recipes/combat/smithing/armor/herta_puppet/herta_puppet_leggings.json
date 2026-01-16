@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cryomancer_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "irons_spellbooks:cryomancer_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hazennstuff:smithing/armor/herta_puppet/herta_puppet_leggings"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cryomancer_armor"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hazennstuff:smithing/armor/herta_puppet/herta_puppet_leggings"
+    ]
+  }
+}

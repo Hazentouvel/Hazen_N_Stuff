@@ -15,7 +15,7 @@ public class AACompat {
 
     public static void addWindSpellPowerPure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
         if (LOADED) {
-            LoadedOnly.addWindSpellPower(attributes, group);
+            LoadedOnly.addWindSpellPowerPure(attributes, group);
         }
     }
 
@@ -27,15 +27,15 @@ public class AACompat {
 
     public static class LoadedOnly {
 
-        public static void addWindSpellPower(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
+        public static void addWindSpellPowerPure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
             attributes.add(AASpells.Attributes.WIND_SPELL_POWER,
-                    new AttributeModifier(HazenNStuff.id("add_wind_spell_power"), 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                    new AttributeModifier(HazenNStuff.id("add_wind_spell_power_pure"), 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                     group);
         }
 
         public static void addWindSpellPowerParagon(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
             attributes.add(AASpells.Attributes.WIND_SPELL_POWER,
-                    new AttributeModifier(HazenNStuff.id("add_wind_spell_power"), 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                    new AttributeModifier(HazenNStuff.id("add_wind_spell_power_paragon"), 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                     group);
         }
 

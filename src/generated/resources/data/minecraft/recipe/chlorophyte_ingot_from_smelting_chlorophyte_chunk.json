@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "chlorophyte_ingot",
+  "ingredient": {
+    "item": "hazennstuff:chlorophyte_chunk"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:chlorophyte_ingot"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_demonite_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hazennstuff:demonite_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hazennstuff:crafting/weapons/lights_bane"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_demonite_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hazennstuff:crafting/weapons/lights_bane"
+    ]
+  }
+}

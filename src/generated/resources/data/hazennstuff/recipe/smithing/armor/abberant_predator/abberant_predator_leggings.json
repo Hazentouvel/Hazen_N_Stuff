@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:mithril_weave"
+  },
+  "base": {
+    "item": "hazennstuff:infestation_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:abberant_predator_leggings"
+  },
+  "template": {
+    "item": "hazennstuff:shadow_rune"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:mithril_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_pickaxe"
+  },
+  "result": {
+    "components": {
+      "irons_spellbooks:affinity_data": {
+        "bonuses": {
+          "irons_spellbooks:spectral_hammer": 1
+        }
+      },
+      "irons_spellbooks:spell_container": {
+        "data": [
+          {
+            "id": "irons_spellbooks:spectral_hammer",
+            "index": 0,
+            "level": 3,
+            "locked": true
+          }
+        ],
+        "maxSpells": 1,
+        "mustEquip": false,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:spectral_pickaxe"
+  },
+  "template": {
+    "item": "irons_spellbooks:evocation_rune"
+  }
+}

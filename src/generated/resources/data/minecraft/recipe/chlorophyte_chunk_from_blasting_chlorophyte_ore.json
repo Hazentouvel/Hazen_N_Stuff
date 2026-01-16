@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "chlorophyte_chunk",
+  "ingredient": {
+    "item": "hazennstuff:chlorophyte_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:chlorophyte_chunk"
+  }
+}

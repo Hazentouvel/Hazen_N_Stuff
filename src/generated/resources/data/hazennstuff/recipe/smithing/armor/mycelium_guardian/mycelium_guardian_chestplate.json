@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:glowing_mushroom"
+  },
+  "base": {
+    "item": "irons_spellbooks:netherite_mage_chestplate"
+  },
+  "result": {
+    "components": {
+      "irons_spellbooks:spell_container": {
+        "data": [],
+        "maxSpells": 1,
+        "mustEquip": true,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:mycelium_guardian_chestplate"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

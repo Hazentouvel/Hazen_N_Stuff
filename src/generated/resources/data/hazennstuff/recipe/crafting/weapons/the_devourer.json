@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "minecraft:echo_shard"
+    },
+    "F": {
+      "item": "hazennstuff:excalibur_fragment"
+    },
+    "N": {
+      "item": "minecraft:netherite_sword"
+    },
+    "W": {
+      "item": "irons_spellbooks:weapon_parts"
+    }
+  },
+  "pattern": [
+    " EE",
+    "WFE",
+    "NW "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:the_devourer"
+  }
+}

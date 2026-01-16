@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:gold_ingot"
+  },
+  "base": {
+    "item": "hazennstuff:fireblossom_crown"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:fireblossom_helmet"
+  },
+  "template": {
+    "item": "hazennstuff:flaming_template"
+  }
+}

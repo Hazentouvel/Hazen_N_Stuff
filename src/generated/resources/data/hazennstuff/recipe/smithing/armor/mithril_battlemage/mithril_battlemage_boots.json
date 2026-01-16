@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:mithril_ingot"
+  },
+  "base": {
+    "item": "irons_spellbooks:netherite_mage_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:mithril_battlemage_boots"
+  },
+  "template": {
+    "item": "irons_spellbooks:arcane_rune"
+  }
+}

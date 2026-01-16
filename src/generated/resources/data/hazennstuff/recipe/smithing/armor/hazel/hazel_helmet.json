@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:leather"
+  },
+  "base": {
+    "item": "hazennstuff:blazeborne_helmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:hazel_helmet"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

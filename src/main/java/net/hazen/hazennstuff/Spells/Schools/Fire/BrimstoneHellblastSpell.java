@@ -21,7 +21,6 @@ import net.minecraft.world.phys.Vec3;
 import java.util.List;
 import java.util.Optional;
 
-@AutoSpellConfig
 public class BrimstoneHellblastSpell extends AbstractCalamitasSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "brimstone_hellblast");
 

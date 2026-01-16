@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:cast_time_ring"
+  },
+  "base": {
+    "item": "irons_spellbooks:cooldown_ring"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:ring_of_efficiency"
+  },
+  "template": {
+    "item": "irons_spellbooks:mithril_ingot"
+  }
+}

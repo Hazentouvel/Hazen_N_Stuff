@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "frostbite_birch",
+  "key": {
+    "#": {
+      "item": "hazennstuff:frostbite_birch_planks"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "hazennstuff:frostbite_birch_slab"
+  }
+}

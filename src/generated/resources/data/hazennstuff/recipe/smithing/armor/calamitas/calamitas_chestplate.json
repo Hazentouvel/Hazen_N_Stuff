@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:flesh_mass_chestplate"
+  },
+  "base": {
+    "item": "hazennstuff:blazeborne_chestplate"
+  },
+  "result": {
+    "components": {
+      "irons_spellbooks:affinity_data": {
+        "bonuses": {
+          "hazennstuff:brimstone_hellblast": 1
+        }
+      },
+      "irons_spellbooks:spell_container": {
+        "data": [],
+        "maxSpells": 1,
+        "mustEquip": true,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:calamitas_chestplate"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_shadestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hazennstuff:shadestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:demonite_ingot_from_blasting_shadestone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_shadestone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:demonite_ingot_from_blasting_shadestone"
+    ]
+  }
+}

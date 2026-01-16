@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:soul_sand"
+  },
+  "base": {
+    "item": "hazennstuff:blazeborne_chestplate"
+  },
+  "result": {
+    "components": {
+      "irons_spellbooks:spell_container": {
+        "data": [],
+        "maxSpells": 1,
+        "mustEquip": true,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:soul_flame_chestplate"
+  },
+  "template": {
+    "item": "hazennstuff:flaming_template"
+  }
+}

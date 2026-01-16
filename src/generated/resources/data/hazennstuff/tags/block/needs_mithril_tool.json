@@ -1,0 +1,10 @@
+{
+  "values": [
+    "hazennstuff:chlorophyte_ore",
+    "hazennstuff:zenalite_abysslate_ore",
+    "hazennstuff:zenalite_deepslate_ore",
+    "hazennstuff:zenalite_stone_ore",
+    "hazennstuff:zenalite_end_stone_ore",
+    "#neoforge:needs_netherite_tool"
+  ]
+}

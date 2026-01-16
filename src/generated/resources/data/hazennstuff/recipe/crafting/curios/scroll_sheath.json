@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "irons_spellbooks:arcane_ingot"
+    },
+    "D": {
+      "item": "irons_spellbooks:divine_soulshard"
+    },
+    "M": {
+      "item": "irons_spellbooks:mithril_weave"
+    },
+    "R": {
+      "item": "irons_spellbooks:arcane_rune"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    " MZ",
+    "ADM",
+    "ZR "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:scroll_sheath"
+  }
+}

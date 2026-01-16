@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chlorophyte_chunk": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hazennstuff:chlorophyte_chunk"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:chlorophyte_ingot_from_blasting_chlorophyte_chunk"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chlorophyte_chunk"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:chlorophyte_ingot_from_blasting_chlorophyte_chunk"
+    ]
+  }
+}

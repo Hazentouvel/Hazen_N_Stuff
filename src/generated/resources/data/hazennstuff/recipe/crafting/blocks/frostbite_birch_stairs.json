@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "bismuth",
+  "key": {
+    "#": {
+      "item": "hazennstuff:frostbite_birch_planks"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "hazennstuff:frostbite_birch_stairs"
+  }
+}

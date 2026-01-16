@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "irons_spellbooks:blank_rune"
+    },
+    "R": {
+      "tag": "hazennstuff:focus/health_focus"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "ROR",
+    "RRR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:health_rune"
+  }
+}

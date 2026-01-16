@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:flesh_mass_helmet"
+  },
+  "base": {
+    "item": "hazennstuff:blazeborne_helmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:calamitas_helmet"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

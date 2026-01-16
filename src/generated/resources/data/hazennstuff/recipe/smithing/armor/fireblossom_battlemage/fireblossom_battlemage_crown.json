@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:fireblossom"
+  },
+  "base": {
+    "item": "hazennstuff:blazeborne_helmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:fireblossom_helmet"
+  },
+  "template": {
+    "item": "hazennstuff:flaming_template"
+  }
+}

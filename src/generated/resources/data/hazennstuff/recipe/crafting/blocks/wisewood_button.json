@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "hazennstuff:wisewood_planks"
+    }
+  ],
+  "result": {
+    "count": 18,
+    "id": "hazennstuff:wisewood_button"
+  }
+}

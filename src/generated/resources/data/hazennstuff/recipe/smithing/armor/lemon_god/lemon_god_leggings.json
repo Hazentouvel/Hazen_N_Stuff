@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:divine_lemon"
+  },
+  "base": {
+    "tag": "hazennstuff:armors/pure/pure_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:lemon_god_leggings"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

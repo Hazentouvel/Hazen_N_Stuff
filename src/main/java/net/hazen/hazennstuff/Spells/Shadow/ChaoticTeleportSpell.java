@@ -30,7 +30,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Optional;
 
-@AutoSpellConfig
 public class ChaoticTeleportSpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "chaotic_teleport");
     private final DefaultConfig defaultConfig;

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glowing_mushroom": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hazennstuff:glowing_mushroom"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hazennstuff:smithing/armor/mycelium_guardian/mycelium_guardian_boots"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_glowing_mushroom"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hazennstuff:smithing/armor/mycelium_guardian/mycelium_guardian_boots"
+    ]
+  }
+}

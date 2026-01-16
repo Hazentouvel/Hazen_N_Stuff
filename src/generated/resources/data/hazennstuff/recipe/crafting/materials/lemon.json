@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:foods/fruit"
+    },
+    {
+      "tag": "irons_spellbooks:nature_focus"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:lemon"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:runestone_fragments"
+  },
+  "base": {
+    "tag": "hazennstuff:armors/pure/pure_chestplate"
+  },
+  "result": {
+    "components": {
+      "irons_spellbooks:spell_container": {
+        "data": [],
+        "maxSpells": 1,
+        "mustEquip": true,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "hazennstuff:sacred_robes_chestplate"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

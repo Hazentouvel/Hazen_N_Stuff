@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:iron_ingot"
+  },
+  "base": {
+    "tag": "hazennstuff:armors/pure/pure_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:iron431_leggings"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

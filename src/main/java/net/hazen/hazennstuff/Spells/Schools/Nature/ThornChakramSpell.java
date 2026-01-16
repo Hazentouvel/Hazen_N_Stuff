@@ -18,7 +18,6 @@ import net.minecraft.world.level.Level;
 import java.util.List;
 import java.util.Optional;
 
-@AutoSpellConfig
 public class ThornChakramSpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "thorn_chakram");
     @Override

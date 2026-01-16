@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:runestone_fragments"
+  },
+  "base": {
+    "tag": "hazennstuff:armors/pure/pure_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:sacred_robes_boots"
+  },
+  "template": {
+    "item": "hazennstuff:divine_mold"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "hazennstuff:block/frostbite_birch_planks"
+  }
+}

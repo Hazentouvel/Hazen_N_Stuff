@@ -158,7 +158,7 @@ dependencies {
     implementation "curse.maven:placebo-283644:6337156"
     compileOnly "curse.maven:apotheosis-${apotheosis_version}"
     //Ace Utils
-    implementation "curse.maven:ace_utils-1299492:7119308"
+    implementation "curse.maven:ace_utils-1299492:7465123"
     // Photon
     //implementation "curse.maven:photon-871522:6911487"
     //implementation "curse.maven:ldlib-626676:6911394"
@@ -174,11 +174,11 @@ dependencies {
     localRuntime "curse.maven:embeddium-908741:6118392"
 
     // Obscuria's Tooltips
-    localRuntime "curse.maven:obscurias_tooltips-715660:7315944"
+    //localRuntime "curse.maven:obscurias_tooltips-715660:7315944"
     localRuntime "curse.maven:fragmentum-1123977:7315935"
 
     //Better Combat
-    localRuntime "curse.maven:better-combat-by-daedelus-639842:5723092"
+    localRuntime "curse.maven:better-combat-by-daedelus-639842:7348161"
     localRuntime "curse.maven:cloth-config-348521:5623420"
 
     //Jade
@@ -200,12 +200,12 @@ dependencies {
     compileOnly "curse.maven:lodestone-616457:6630047"
 
     // Iron's Gems 'n Jewelry
-    localRuntime "curse.maven:irons_gems_n_jewelry-1101111:7084345"
+    localRuntime "curse.maven:irons_gems_n_jewelry-1101111:7358426"
     localRuntime "curse.maven:atlas_api-1145462:6880789"
 
     //Cataclysm Spellbooks
-    //localRuntime "curse.maven:cataclysm_spellbooks-1099461:6925079"
-    //compileOnly "curse.maven:cataclysm_spellbooks-1099461:6925079"
+    localRuntime "curse.maven:cataclysm_spellbooks-1099461:7358841"
+    compileOnly "curse.maven:cataclysm_spellbooks-1099461:7358841"
     localRuntime "curse.maven:l_enders_cataclysm-551586:6906997"
     compileOnly "curse.maven:l_enders_cataclysm-551586:6906997"
     localRuntime "curse.maven:lionfish-1001614:6168249"
@@ -226,10 +226,10 @@ dependencies {
     compileOnly "curse.maven:familiar_lib-1316458:6824093"
 
     //Ender's Spells and Stuff
-    localRuntime "curse.maven:enders_spells_and_stuff-1140215:6903947"
-    compileOnly "curse.maven:enders_spells_and_stuff-1140215:6903947"
-    localRuntime "curse.maven:gtbcs-spelllib-1194714:6164512"
-    compileOnly "curse.maven:gtbcs-spelllib-1194714:6164512"
+    localRuntime "curse.maven:enders_spells_and_stuff-1336977:7466777"
+    compileOnly "curse.maven:enders_spells_and_stuff-1336977:7466777"
+    localRuntime "curse.maven:gtbcs-spelllib-1194714:7385455"
+    compileOnly "curse.maven:gtbcs-spelllib-1194714:7385455"
 
 }
 

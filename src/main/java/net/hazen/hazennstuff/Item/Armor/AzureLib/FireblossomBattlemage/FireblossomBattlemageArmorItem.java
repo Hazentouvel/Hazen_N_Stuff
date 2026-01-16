@@ -2,20 +2,16 @@ package net.hazen.hazennstuff.Item.Armor.AzureLib.FireblossomBattlemage;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
-import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
-import net.hazen.hazennstuff.Animations.HnSDispatcher;
-import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
-import net.hazen.hazennstuff.Item.Armor.ImbuableHnSArmorItem;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
+import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
-import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -26,18 +22,12 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class FireblossomBattlemageArmorItem extends ImbuableHnSArmorItem implements IDisableJacket {
-    // This is your class where you will setup the AzCommands/Animations you wish to play
-    public final HnSDispatcher dispatcher;
 
     public FireblossomBattlemageArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.FIREBLOSSOM_MATERIAL, type, settings,
-                new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-        );
-        // Create the instance of the class here to use later.
-        this.dispatcher = new HnSDispatcher();
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, pureTierMulti(
+                AttributeRegistry.NATURE_SPELL_POWER,
+                AttributeRegistry.FIRE_SPELL_POWER
+        ));
     }
 
     public List<ItemAttributeModifiers.Entry> createExtraAttributes() {
@@ -66,22 +56,6 @@ public class FireblossomBattlemageArmorItem extends ImbuableHnSArmorItem impleme
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
         if (entity instanceof Player player && !level.isClientSide() && isWearingFullSet(player)) {
             evaluateArmorEffects(player);
-        }
-        if (!level.isClientSide && entity instanceof Player player ) {
-            player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.is(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN)) {
-                    dispatcher.idle(player, wornArmor);
-                }
-                if (wornArmor != null && wornArmor.is(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE)) {
-                    dispatcher.idle(player, wornArmor);
-                }
-                if (wornArmor != null && wornArmor.is(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS)) {
-                    dispatcher.idle(player, wornArmor);
-                }
-                if (wornArmor != null && wornArmor.is(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS)) {
-                    dispatcher.idle(player, wornArmor);
-                }
-            });
         }
     }
 

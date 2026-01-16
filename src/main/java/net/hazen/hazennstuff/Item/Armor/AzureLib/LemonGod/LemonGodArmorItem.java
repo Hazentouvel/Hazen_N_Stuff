@@ -5,11 +5,9 @@ import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
-import net.hazen.hazennstuff.Animations.HnSDispatcher;
-import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
-import net.hazen.hazennstuff.Item.Armor.ImbuableHnSArmorItem;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
+import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
-import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -26,8 +24,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class LemonGodArmorItem extends ImbuableHnSArmorItem implements IDisableJacket {
-    // This is your class where you will setup the AzCommands/Animations you wish to play
-    public final HnSDispatcher dispatcher;
 
     public LemonGodArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
@@ -35,8 +31,6 @@ public class LemonGodArmorItem extends ImbuableHnSArmorItem implements IDisableJ
                 new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
-        // Create the instance of the class here to use later.
-        this.dispatcher = new HnSDispatcher();
     }
 
     public List<ItemAttributeModifiers.Entry> createExtraAttributes() {
@@ -64,22 +58,6 @@ public class LemonGodArmorItem extends ImbuableHnSArmorItem implements IDisableJ
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
         if (entity instanceof Player player && !level.isClientSide() && isWearingFullSet(player)) {
             evaluateArmorEffects(player);
-        }
-        if (!level.isClientSide && entity instanceof Player player ) {
-            player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.is(HnSItemRegistry.LEMON_GOD_HELMET)) {
-                    dispatcher.idle(player, wornArmor);
-                }
-                if (wornArmor != null && wornArmor.is(HnSItemRegistry.LEMON_GOD_CHESTPLATE)) {
-                    dispatcher.idle(player, wornArmor);
-                }
-                if (wornArmor != null && wornArmor.is(HnSItemRegistry.LEMON_GOD_LEGGINGS)) {
-                    dispatcher.idle(player, wornArmor);
-                }
-                if (wornArmor != null && wornArmor.is(HnSItemRegistry.LEMON_GOD_BOOTS)) {
-                    dispatcher.idle(player, wornArmor);
-                }
-            });
         }
     }
 

@@ -6,11 +6,9 @@ import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
-import net.hazen.hazennstuff.Animations.HnSDispatcher;
-import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
-import net.hazen.hazennstuff.Item.Armor.ImbuableHnSArmorItem;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
+import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
-import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -23,8 +21,6 @@ import net.minecraft.world.level.Level;
 import java.util.List;
 
 public class InfestationArmorItem extends ImbuableHnSArmorItem implements IDisableJacket, IDisableHat {
-    // This is your class where you will setup the AzCommands/Animations you wish to play
-    public final HnSDispatcher dispatcher;
 
     public InfestationArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.INFESTATION_MATERIAL, type, settings,
@@ -32,7 +28,6 @@ public class InfestationArmorItem extends ImbuableHnSArmorItem implements IDisab
                 new AttributeContainer(AttributeRegistry.ELDRITCH_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
-        this.dispatcher = new HnSDispatcher();
     }
 
     public List<ItemAttributeModifiers.Entry> createExtraAttributes() {
@@ -50,22 +45,6 @@ public class InfestationArmorItem extends ImbuableHnSArmorItem implements IDisab
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
         if (entity instanceof Player player && !level.isClientSide() && isWearingFullSet(player)) {
             evaluateArmorEffects(player);
-        }
-        if (!level.isClientSide && entity instanceof Player player ) {
-            player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.is(HnSItemRegistry.INFESTATION_HELMET)) {
-                    dispatcher.idle(player, wornArmor);
-                }
-                if (wornArmor != null && wornArmor.is(HnSItemRegistry.INFESTATION_CHESTPLATE)) {
-                    dispatcher.idle(player, wornArmor);
-                }
-                if (wornArmor != null && wornArmor.is(HnSItemRegistry.INFESTATION_LEGGINGS)) {
-                    dispatcher.idle(player, wornArmor);
-                }
-                if (wornArmor != null && wornArmor.is(HnSItemRegistry.INFESTATION_BOOTS)) {
-                    dispatcher.idle(player, wornArmor);
-                }
-            });
         }
     }
 

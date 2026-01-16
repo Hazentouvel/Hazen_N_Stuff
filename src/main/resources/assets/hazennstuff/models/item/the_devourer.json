@@ -1,5 +1,5 @@
 {
-  "credit": "Made with Blockbench",
+  "credit": "Made by Hazen",
   "parent": "builtin/entity",
   "texture_size": [
     256,
@@ -37,7 +37,7 @@
         0
       ],
       "translation": [
-        0,
+        4.5,
         -4,
         0
       ],
@@ -54,7 +54,7 @@
         0
       ],
       "translation": [
-        0,
+        4.5,
         -4,
         0
       ],
@@ -68,7 +68,7 @@
       "rotation": [
         0,
         0,
-        180
+        -180
       ],
       "translation": [
         0,
@@ -105,8 +105,5 @@
         0
       ]
     }
-  },
-  "textures": {
-    "particle": "item/the_devourer"
   }
 }

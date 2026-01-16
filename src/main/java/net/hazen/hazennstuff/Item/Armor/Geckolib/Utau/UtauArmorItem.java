@@ -6,8 +6,9 @@ import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.armor.ImbuableChestplateArmorItem;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
+import net.hazen.hazennstuff.Compat.FLCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
-import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -34,6 +35,7 @@ public class UtauArmorItem extends ImbuableChestplateArmorItem implements IDisab
         var group = EquipmentSlotGroup.bySlot(getEquipmentSlot());
         ItemAttributeModifiers.Builder attributes = ItemAttributeModifiers.builder();
         MalumCompat.addArcaneResonance(attributes, group);
+        FLCompat.addSoundSpellPowerPure(attributes, group);
         return attributes.build().modifiers();
     }
 

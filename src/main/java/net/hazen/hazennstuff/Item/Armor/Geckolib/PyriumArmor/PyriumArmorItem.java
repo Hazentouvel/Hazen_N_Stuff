@@ -4,7 +4,7 @@ import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import net.hazen.hazennstuff.Item.Armor.Geckolib.HnSGeckolibArmorItem;
-import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;

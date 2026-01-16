@@ -1,5 +1,5 @@
 {
-  "credit": "Made with Blockbench",
+  "credit": "Made by Hazen",
   "parent": "builtin/entity",
   "texture_size": [
     64,
@@ -37,9 +37,14 @@
         0
       ],
       "translation": [
-        0,
-        -6,
+        4.5,
+        -1,
         0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
       ]
     },
     "firstperson_lefthand": {
@@ -49,14 +54,19 @@
         0
       ],
       "translation": [
-        0,
-        -6,
+        4.5,
+        -1,
         0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
       ]
     },
     "ground": {
       "rotation": [
-        180,
+        -180,
         0,
         0
       ],
@@ -95,8 +105,5 @@
         -0.25
       ]
     }
-  },
-  "textures": {
-    "particle": "item/excalibur"
   }
 }

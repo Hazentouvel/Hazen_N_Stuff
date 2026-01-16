@@ -1,5 +1,5 @@
 {
-  "credit": "Made with Blockbench",
+  "credit": "Made by Hazen",
   "parent": "builtin/entity",
   "texture_size": [
     64,
@@ -37,9 +37,14 @@
         0
       ],
       "translation": [
-        0,
-        -8,
+        3,
+        -2.5,
         0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
       ]
     },
     "firstperson_lefthand": {
@@ -49,9 +54,14 @@
         0
       ],
       "translation": [
-        0,
-        -8,
+        3,
+        -2.5,
         0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
       ]
     },
     "ground": {
@@ -85,8 +95,5 @@
         -0.5
       ]
     }
-  },
-  "textures": {
-    "particle": "item/dragon_splitter"
   }
 }

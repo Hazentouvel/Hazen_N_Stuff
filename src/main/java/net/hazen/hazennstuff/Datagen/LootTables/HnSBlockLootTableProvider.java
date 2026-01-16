@@ -1,7 +1,7 @@
 package net.hazen.hazennstuff.Datagen.LootTables;
 
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
-import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
+import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -103,6 +103,9 @@ public class HnSBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(HnSBlocks.MITHRIL_BLOCK.get());
         dropSelf(HnSBlocks.PYRIUM_BLOCK.get());
         dropSelf(HnSBlocks.ARCANE_STEEL_BLOCK.get());
+
+        // Statues
+        dropSelf(HnSBlocks.HAZEL_STATUE.get());
 
         /*
         *** Ore

@@ -7,8 +7,8 @@ import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.Animations.HnSDispatcher;
-import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
-import net.hazen.hazennstuff.Item.Armor.ImbuableHnSArmorItem;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
+import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableHnSArmorItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
@@ -30,7 +30,7 @@ public class ArbitriumRobesElytraArmorItem extends ImbuableHnSArmorItem implemen
 
     public ArbitriumRobesElytraArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
-                new AttributeContainer(ALObjects.Attributes.ELYTRA_FLIGHT, 1, AttributeModifier.Operation.ADD_VALUE),
+                //new AttributeContainer(ALObjects.Attributes.ELYTRA_FLIGHT, 1, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 300.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
@@ -53,7 +53,6 @@ public class ArbitriumRobesElytraArmorItem extends ImbuableHnSArmorItem implemen
                                 @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, context, lines, flag);
 
-        // --- Custom item description section ---
         lines.add(Component.translatable("item.hazennstuff.arbitrium_robes.description")
                 .withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
     }

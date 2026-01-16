@@ -5,7 +5,7 @@ import io.redspace.ironsspellbooks.util.ModTags;
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
+import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -127,6 +127,11 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get())
                 .add(HnSItemRegistry.BLAZEBORNE_BOOTS.get())
 
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_BOOTS.get())
+
                 //Soul Flame Armor
                 .add(HnSItemRegistry.SOUL_FLAME_HELMET.get())
                 .add(HnSItemRegistry.SOUL_FLAME_CHESTPLATE.get())
@@ -247,6 +252,11 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.SERAPH_LEGGINGS.get())
                 .add(HnSItemRegistry.SERAPH_BOOTS.get())
 
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_BOOTS.get())
+
                 //Gabriel ULTRAKILL Armor
                 .add(HnSItemRegistry.GABRIEL_ULTRAKILL_HELMET.get())
                 .add(HnSItemRegistry.GABRIEL_ULTRAKILL_CHESTPLATE.get())
@@ -333,10 +343,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_BOOTS.get())
 
                 //Legionnaire Armor
-                .add(HnSItemRegistry.LEGIONNAIRE_HELMET.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_CHESTPLATE.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_LEGGINGS.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_BOOTS.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_HELMET.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_BOOTS.get())
 
                 //Legionnaire Ruler Armor
                 .add(HnSItemRegistry.LEGIONNAIRE_RULER_HELMET.get())
@@ -704,6 +714,11 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get())
                 .add(HnSItemRegistry.BLAZEBORNE_BOOTS.get())
 
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_BOOTS.get())
+
                 //Soul Flame Armor
                 .add(HnSItemRegistry.SOUL_FLAME_HELMET.get())
                 .add(HnSItemRegistry.SOUL_FLAME_CHESTPLATE.get())
@@ -824,6 +839,11 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.SERAPH_LEGGINGS.get())
                 .add(HnSItemRegistry.SERAPH_BOOTS.get())
 
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_BOOTS.get())
+
                 //Gabriel ULTRAKILL Armor
                 .add(HnSItemRegistry.GABRIEL_ULTRAKILL_HELMET.get())
                 .add(HnSItemRegistry.GABRIEL_ULTRAKILL_CHESTPLATE.get())
@@ -910,10 +930,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_BOOTS.get())
 
                 //Legionnaire Armor
-                .add(HnSItemRegistry.LEGIONNAIRE_HELMET.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_CHESTPLATE.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_LEGGINGS.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_BOOTS.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_HELMET.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_BOOTS.get())
 
                 //Legionnaire Ruler Armor
                 .add(HnSItemRegistry.LEGIONNAIRE_RULER_HELMET.get())
@@ -1049,6 +1069,30 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_LEGGINGS.get())
                 .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_BOOTS.get())
 
+                //Enderman Shadowwalker Armor
+                .add(HnSItemRegistry.ENDERMAN_MASKED.get())
+                .add(HnSItemRegistry.ENDERMAN_BLINDFOLD.get())
+                .add(HnSItemRegistry.ENDERMAN_HOOD.get())
+                .add(HnSItemRegistry.ENDERMAN_CHESTPLATE.get())
+                .add(HnSItemRegistry.ENDERMAN_LEGGINGS.get())
+                .add(HnSItemRegistry.ENDERMAN_BOOTS.get())
+
+                //Pyromancer Brute Armor
+                .add(HnSItemRegistry.PYROMANCER_BRUTE_HELMET.get())
+                .add(HnSItemRegistry.PYROMANCER_BRUTE_CHESTPLATE.get())
+
+                //Bishop of Deceit Armor
+                .add(HnSItemRegistry.BISHOP_OF_DECEIT_HELMET.get())
+                .add(HnSItemRegistry.BISHOP_OF_DECEIT_CHESTPLATE.get())
+
+                //Bishop of Deceit Armor
+                .add(HnSItemRegistry.NECROMANCER_HELMET.get())
+                .add(HnSItemRegistry.NECROMANCER_CHESTPLATE.get())
+
+                //Bishop of Deceit Armor
+                .add(HnSItemRegistry.NAMELESS_ONE_HELMET.get())
+                .add(HnSItemRegistry.NAMELESS_ONE_CHESTPLATE.get())
+
                 /*
                 *** Tributes
                  */
@@ -1171,10 +1215,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.DURABILITY_ENCHANTABLE)
 
                 /*
-                *** Armor
-                 */
-
-                /*
                 *** Fire
                  */
 
@@ -1189,6 +1229,11 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get())
                 .add(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get())
                 .add(HnSItemRegistry.BLAZEBORNE_BOOTS.get())
+
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_BOOTS.get())
 
                 //Soul Flame Armor
                 .add(HnSItemRegistry.SOUL_FLAME_HELMET.get())
@@ -1310,6 +1355,11 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.SERAPH_LEGGINGS.get())
                 .add(HnSItemRegistry.SERAPH_BOOTS.get())
 
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_BOOTS.get())
+
                 //Gabriel ULTRAKILL Armor
                 .add(HnSItemRegistry.GABRIEL_ULTRAKILL_HELMET.get())
                 .add(HnSItemRegistry.GABRIEL_ULTRAKILL_CHESTPLATE.get())
@@ -1396,10 +1446,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_BOOTS.get())
 
                 //Legionnaire Armor
-                .add(HnSItemRegistry.LEGIONNAIRE_HELMET.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_CHESTPLATE.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_LEGGINGS.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_BOOTS.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_HELMET.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_BOOTS.get())
 
                 //Legionnaire Ruler Armor
                 .add(HnSItemRegistry.LEGIONNAIRE_RULER_HELMET.get())
@@ -1770,6 +1820,11 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get())
                 .add(HnSItemRegistry.BLAZEBORNE_BOOTS.get())
 
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_BOOTS.get())
+
                 //Soul Flame Armor
                 .add(HnSItemRegistry.SOUL_FLAME_HELMET.get())
                 .add(HnSItemRegistry.SOUL_FLAME_CHESTPLATE.get())
@@ -1890,6 +1945,11 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.SERAPH_LEGGINGS.get())
                 .add(HnSItemRegistry.SERAPH_BOOTS.get())
 
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_BOOTS.get())
+
                 //Gabriel ULTRAKILL Armor
                 .add(HnSItemRegistry.GABRIEL_ULTRAKILL_HELMET.get())
                 .add(HnSItemRegistry.GABRIEL_ULTRAKILL_CHESTPLATE.get())
@@ -1976,10 +2036,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_BOOTS.get())
 
                 //Legionnaire Armor
-                .add(HnSItemRegistry.LEGIONNAIRE_HELMET.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_CHESTPLATE.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_LEGGINGS.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_BOOTS.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_HELMET.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_BOOTS.get())
 
                 //Legionnaire Ruler Armor
                 .add(HnSItemRegistry.LEGIONNAIRE_RULER_HELMET.get())
@@ -2139,7 +2199,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.NAMELESS_ONE_HELMET.get())
                 .add(HnSItemRegistry.NAMELESS_ONE_CHESTPLATE.get())
 
-
                 /*
                 *** Tributes
                  */
@@ -2262,6 +2321,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.HEAD_ARMOR)
                 .add(HnSItemRegistry.CALAMITAS_HELMET.get())
                 .add(HnSItemRegistry.BLAZEBORNE_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_HELMET.get())
                 .add(HnSItemRegistry.SOUL_FLAME_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_HELMET.get())
                 .add(HnSItemRegistry.HAZEL_HELMET.get())
@@ -2288,7 +2348,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_INFESTATION_HELMET.get())
                 .add(HnSItemRegistry.PYRIUM_HELMET.get())
                 .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_HELMET.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_HELMET.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_HELMET.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_RULER_HELMET.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_HELMET.get())
                 .add(HnSItemRegistry.TYROS_HELMET.get())
@@ -2343,6 +2403,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.CHEST_ARMOR)
                 .add(HnSItemRegistry.CALAMITAS_CHESTPLATE.get())
                 .add(HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_CHESTPLATE.get())
                 .add(HnSItemRegistry.SOUL_FLAME_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_CHESTPLATE.get())
                 .add(HnSItemRegistry.HAZEL_CHESTPLATE.get())
@@ -2372,7 +2433,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_INFESTATION_CHESTPLATE.get())
                 .add(HnSItemRegistry.PYRIUM_CHESTPLATE.get())
                 .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_CHESTPLATE.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_CHESTPLATE.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_RULER_CHESTPLATE.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_CHESTPLATE.get())
                 .add(HnSItemRegistry.TYROS_CHESTPLATE.get())
@@ -2423,6 +2484,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.LEG_ARMOR)
                 .add(HnSItemRegistry.CALAMITAS_LEGGINGS.get())
                 .add(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_LEGGINGS.get())
                 .add(HnSItemRegistry.SOUL_FLAME_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_LEGGINGS.get())
                 .add(HnSItemRegistry.HAZEL_LEGGINGS.get())
@@ -2449,7 +2511,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_INFESTATION_LEGGINGS.get())
                 .add(HnSItemRegistry.PYRIUM_LEGGINGS.get())
                 .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_LEGGINGS.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_LEGGINGS.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_RULER_LEGGINGS.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_LEGGINGS.get())
                 .add(HnSItemRegistry.TYROS_LEGGINGS.get())
@@ -2498,314 +2560,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.FOOT_ARMOR)
                 .add(HnSItemRegistry.CALAMITAS_BOOTS.get())
                 .add(HnSItemRegistry.BLAZEBORNE_BOOTS.get())
-                .add(HnSItemRegistry.SOUL_FLAME_BOOTS.get())
-                .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_BOOTS.get())
-                .add(HnSItemRegistry.HAZEL_BOOTS.get())
-                .add(HnSItemRegistry.CRYOGENIC_RULER_BOOTS.get())
-                .add(HnSItemRegistry.CRYSTAL_ARACHNID_BOOTS.get())
-                .add(HnSItemRegistry.HERTA_PUPPET_BOOTS.get())
-                .add(HnSItemRegistry.CHARGED_SCOURGE_BOOTS.get())
-                .add(HnSItemRegistry.THUNDER_PROWLER_BOOTS.get())
-                .add(HnSItemRegistry.CREAKING_BOOTS.get())
-                .add(HnSItemRegistry.FLESH_MASS_BOOTS.get())
-                .add(HnSItemRegistry.THE_WITHER_BOOTS.get())
-                .add(HnSItemRegistry.GECKOLIB_THE_WITHER_BOOTS.get())
-                .add(HnSItemRegistry.ENDER_DRAGON_BOOTS.get())
-                .add(HnSItemRegistry.GECKOLIB_ENDER_DRAGON_BOOTS.get())
-                .add(HnSItemRegistry.SERAPH_BOOTS.get())
-                .add(HnSItemRegistry.GABRIEL_ULTRAKILL_BOOTS.get())
-                .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_BOOTS.get())
-                .add(HnSItemRegistry.MOTHIC_WITCH_BOOTS.get())
-                .add(HnSItemRegistry.SUPREME_WITCH_BOOTS.get())
-                .add(HnSItemRegistry.ALCHEMIST_SUPREME_BOOTS.get())
-                .add(HnSItemRegistry.MYCELIUM_GUARDIAN_BOOTS.get())
-                .add(HnSItemRegistry.SHADOW_SCALE_BOOTS.get())
-                .add(HnSItemRegistry.INFESTATION_BOOTS.get())
-                .add(HnSItemRegistry.GECKOLIB_INFESTATION_BOOTS.get())
-                .add(HnSItemRegistry.PYRIUM_BOOTS.get())
-                .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_BOOTS.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_RULER_BOOTS.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_BOOTS.get())
-                .add(HnSItemRegistry.TYROS_BOOTS.get())
-                .add(HnSItemRegistry.TYROS_SOUL_BOOTS.get())
-                .add(HnSItemRegistry.FRIEREN_BOOTS.get())
-                .add(HnSItemRegistry.SYNTHESIZER_V_BOOTS.get())
-                .add(HnSItemRegistry.UTAU_BOOTS.get())
-                .add(HnSItemRegistry.PROJECT_SEKAI_BOOTS.get())
-                .add(HnSItemRegistry.ROTTEN_GIRL_BOOTS.get())
-                .add(HnSItemRegistry.NERU_BOOTS.get())
-                .add(HnSItemRegistry.GIORNO_GIOVANNA_BOOTS.get())
-                .add(HnSItemRegistry.MINER_BOOTS.get())
-                .add(HnSItemRegistry.SPECTRAL_SPELUNKER_BOOTS.get())
-                .add(HnSItemRegistry.BOUNTY_HUNTER_BOOTS.get())
-                .add(HnSItemRegistry.FROSTBITE_HUNTER_BOOTS.get())
-                .add(HnSItemRegistry.FROSTBITE_KNIGHT_BOOTS.get())
-                .add(HnSItemRegistry.DREADSTEEL_KNIGHT_BOOTS.get())
-                .add(HnSItemRegistry.MAGEHUNTER_BOOTS.get())
-                .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_BOOTS.get())
-                .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_BOOTS.get())
-                .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_BOOTS.get())
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
-                .add(HnSItemRegistry.ARBITRIUM_ROBES_BOOTS.get())
-                .add(HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_BOOTS.get())
-                .add(HnSItemRegistry.GECKOLIB_ARBITRIUM_ROBES_BOOTS.get())
-                .add(HnSItemRegistry.GECKOLIB_ASCENDED_ARBITRIUM_ROBES_BOOTS.get())
-                .add(HnSItemRegistry.ATLAS_BOOTS.get())
-                .add(HnSItemRegistry.MAVERICK_BOOTS.get())
-                .add(HnSItemRegistry.SLC_CAT_BOOTS.get())
-                .add(HnSItemRegistry.ABBERANT_PREDATOR_BOOTS.get())
-                .add(HnSItemRegistry.IRON431_BOOTS.get())
-                .add(HnSItemRegistry.ASCENDED_IRON431_BOOTS.get())
-                .add(HnSItemRegistry.SACRED_ROBES_BOOTS.get())
-                .add(HnSItemRegistry.ASCENDED_SACRED_ROBES_BOOTS.get())
-                .add(HnSItemRegistry.LEMON_GOD_BOOTS.get())
-                .add(HnSItemRegistry.ASCENDED_LEMON_GOD_BOOTS.get())
-                .add(HnSItemRegistry.GECKOLIB_LEMON_GOD_BOOTS.get())
-                .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_BOOTS.get())
-                .add(HnSItemRegistry.ENDERMAN_BOOTS.get())
-                .add(HnSItemRegistry.CHLOROPHYTE_BOOTS.get())
-        ;
-
-        tag(ItemTags.HEAD_ARMOR)
-                .add(HnSItemRegistry.CALAMITAS_HELMET.get())
-                .add(HnSItemRegistry.BLAZEBORNE_HELMET.get())
-                .add(HnSItemRegistry.SOUL_FLAME_HELMET.get())
-                .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_HELMET.get())
-                .add(HnSItemRegistry.HAZEL_HELMET.get())
-                .add(HnSItemRegistry.CRYOGENIC_RULER_HELMET.get())
-                .add(HnSItemRegistry.CRYSTAL_ARACHNID_HELMET.get())
-                .add(HnSItemRegistry.HERTA_PUPPET_HELMET.get())
-                .add(HnSItemRegistry.CHARGED_SCOURGE_HELMET.get())
-                .add(HnSItemRegistry.THUNDER_PROWLER_HELMET.get())
-                .add(HnSItemRegistry.CREAKING_HELMET.get())
-                .add(HnSItemRegistry.FLESH_MASS_HELMET.get())
-                .add(HnSItemRegistry.THE_WITHER_HELMET.get())
-                .add(HnSItemRegistry.GECKOLIB_THE_WITHER_HELMET.get())
-                .add(HnSItemRegistry.ENDER_DRAGON_HELMET.get())
-                .add(HnSItemRegistry.GECKOLIB_ENDER_DRAGON_HELMET.get())
-                .add(HnSItemRegistry.SERAPH_HELMET.get())
-                .add(HnSItemRegistry.GABRIEL_ULTRAKILL_HELMET.get())
-                .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_HELMET.get())
-                .add(HnSItemRegistry.MOTHIC_WITCH_HELMET.get())
-                .add(HnSItemRegistry.SUPREME_WITCH_HELMET.get())
-                .add(HnSItemRegistry.ALCHEMIST_SUPREME_HELMET.get())
-                .add(HnSItemRegistry.MYCELIUM_GUARDIAN_HELMET.get())
-                .add(HnSItemRegistry.SHADOW_SCALE_HELMET.get())
-                .add(HnSItemRegistry.INFESTATION_HELMET.get())
-                .add(HnSItemRegistry.GECKOLIB_INFESTATION_HELMET.get())
-                .add(HnSItemRegistry.PYRIUM_HELMET.get())
-                .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_HELMET.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_HELMET.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_RULER_HELMET.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_HELMET.get())
-                .add(HnSItemRegistry.TYROS_HELMET.get())
-                .add(HnSItemRegistry.TYROS_SOUL_HELMET.get())
-                .add(HnSItemRegistry.FRIEREN_HELMET.get())
-                .add(HnSItemRegistry.SYNTHESIZER_V_HELMET.get())
-                .add(HnSItemRegistry.UTAU_HELMET.get())
-                .add(HnSItemRegistry.PROJECT_SEKAI_HELMET.get())
-                .add(HnSItemRegistry.ROTTEN_GIRL_HELMET.get())
-                .add(HnSItemRegistry.NERU_HELMET.get())
-                .add(HnSItemRegistry.GIORNO_GIOVANNA_HELMET.get())
-                .add(HnSItemRegistry.MINER_HELMET.get())
-                .add(HnSItemRegistry.SPECTRAL_SPELUNKER_HELMET.get())
-                .add(HnSItemRegistry.BOUNTY_HUNTER_HELMET.get())
-                .add(HnSItemRegistry.FROSTBITE_HUNTER_HELMET.get())
-                .add(HnSItemRegistry.FROSTBITE_KNIGHT_HELMET.get())
-                .add(HnSItemRegistry.DREADSTEEL_KNIGHT_HELMET.get())
-                .add(HnSItemRegistry.MAGEHUNTER_HELMET.get())
-                .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_HELMET.get())
-                .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_HELMET.get())
-                .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_HELMET.get())
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
-                .add(HnSItemRegistry.ARBITRIUM_ROBES_HELMET.get())
-                .add(HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_HELMET.get())
-                .add(HnSItemRegistry.GECKOLIB_ARBITRIUM_ROBES_HELMET.get())
-                .add(HnSItemRegistry.GECKOLIB_ASCENDED_ARBITRIUM_ROBES_HELMET.get())
-                .add(HnSItemRegistry.ATLAS_HELMET.get())
-                .add(HnSItemRegistry.MAVERICK_HELMET.get())
-                .add(HnSItemRegistry.SLC_CAT_HELMET.get())
-                .add(HnSItemRegistry.ABBERANT_PREDATOR_HELMET.get())
-                .add(HnSItemRegistry.IRON431_HELMET.get())
-                .add(HnSItemRegistry.ASCENDED_IRON431_HELMET.get())
-                .add(HnSItemRegistry.SACRED_ROBES_HELMET.get())
-                .add(HnSItemRegistry.ASCENDED_SACRED_ROBES_HELMET.get())
-                .add(HnSItemRegistry.LEMON_GOD_HELMET.get())
-                .add(HnSItemRegistry.ASCENDED_LEMON_GOD_HELMET.get())
-                .add(HnSItemRegistry.GECKOLIB_LEMON_GOD_HELMET.get())
-                .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_HELMET.get())
-                .add(HnSItemRegistry.ENDERMAN_MASKED.get())
-                .add(HnSItemRegistry.ENDERMAN_BLINDFOLD.get())
-                .add(HnSItemRegistry.ENDERMAN_HOOD.get())
-                .add(HnSItemRegistry.PYROMANCER_BRUTE_HELMET.get())
-                .add(HnSItemRegistry.BISHOP_OF_DECEIT_HELMET.get())
-                .add(HnSItemRegistry.NECROMANCER_HELMET.get())
-                .add(HnSItemRegistry.NAMELESS_ONE_HELMET.get())
-                .add(HnSItemRegistry.CHLOROPHYTE_HELMET.get())
-                .add(HnSItemRegistry.CHLOROPHYTE_HEADGEAR.get())
-                .add(HnSItemRegistry.CHLOROPHYTE_MASK.get())
-        ;
-
-        tag(ItemTags.CHEST_ARMOR)
-                .add(HnSItemRegistry.CALAMITAS_CHESTPLATE.get())
-                .add(HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get())
-                .add(HnSItemRegistry.SOUL_FLAME_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_CHESTPLATE.get())
-                .add(HnSItemRegistry.HAZEL_CHESTPLATE.get())
-                .add(HnSItemRegistry.HAZEL_HOLY_MOLLY_CHESTPLATE.get())
-                .add(HnSItemRegistry.CRYOGENIC_RULER_CHESTPLATE.get())
-                .add(HnSItemRegistry.CRYSTAL_ARACHNID_CHESTPLATE.get())
-                .add(HnSItemRegistry.HERTA_PUPPET_CHESTPLATE.get())
-                .add(HnSItemRegistry.CHARGED_SCOURGE_CHESTPLATE.get())
-                .add(HnSItemRegistry.THUNDER_PROWLER_CHESTPLATE.get())
-                .add(HnSItemRegistry.CREAKING_CHESTPLATE.get())
-                .add(HnSItemRegistry.FLESH_MASS_CHESTPLATE.get())
-                .add(HnSItemRegistry.FLESH_MASS_LEGGINGS.get())
-                .add(HnSItemRegistry.THE_WITHER_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_THE_WITHER_CHESTPLATE.get())
-                .add(HnSItemRegistry.ENDER_DRAGON_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_ENDER_DRAGON_CHESTPLATE.get())
-                .add(HnSItemRegistry.SERAPH_CHESTPLATE.get())
-                .add(HnSItemRegistry.GABRIEL_ULTRAKILL_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_LEGGINGS.get())
-                .add(HnSItemRegistry.MOTHIC_WITCH_CHESTPLATE.get())
-                .add(HnSItemRegistry.MOTHIC_WITCH_SECRET_CHESTPLATE.get())
-                .add(HnSItemRegistry.ALCHEMIST_SUPREME_CHESTPLATE.get())
-                .add(HnSItemRegistry.MYCELIUM_GUARDIAN_CHESTPLATE.get())
-                .add(HnSItemRegistry.SHADOW_SCALE_CHESTPLATE.get())
-                .add(HnSItemRegistry.INFESTATION_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_INFESTATION_CHESTPLATE.get())
-                .add(HnSItemRegistry.PYRIUM_CHESTPLATE.get())
-                .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_CHESTPLATE.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_CHESTPLATE.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_RULER_CHESTPLATE.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_CHESTPLATE.get())
-                .add(HnSItemRegistry.TYROS_CHESTPLATE.get())
-                .add(HnSItemRegistry.TYROS_SOUL_CHESTPLATE.get())
-                .add(HnSItemRegistry.FRIEREN_CHESTPLATE.get())
-                .add(HnSItemRegistry.SYNTHESIZER_V_CHESTPLATE.get())
-                .add(HnSItemRegistry.UTAU_CHESTPLATE.get())
-                .add(HnSItemRegistry.PROJECT_SEKAI_CHESTPLATE.get())
-                .add(HnSItemRegistry.ROTTEN_GIRL_CHESTPLATE.get())
-                .add(HnSItemRegistry.NERU_CHESTPLATE.get())
-                .add(HnSItemRegistry.GIORNO_GIOVANNA_CHESTPLATE.get())
-                .add(HnSItemRegistry.MINER_CHESTPLATE.get())
-                .add(HnSItemRegistry.SPECTRAL_SPELUNKER_CHESTPLATE.get())
-                .add(HnSItemRegistry.BOUNTY_HUNTER_CHESTPLATE.get())
-                .add(HnSItemRegistry.FROSTBITE_HUNTER_CHESTPLATE.get())
-                .add(HnSItemRegistry.FROSTBITE_KNIGHT_CHESTPLATE.get())
-                .add(HnSItemRegistry.DREADSTEEL_KNIGHT_CHESTPLATE.get())
-                .add(HnSItemRegistry.MAGEHUNTER_CHESTPLATE.get())
-                .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_CHESTPLATE.get())
-                .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_CHESTPLATE.get())
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
-                .add(HnSItemRegistry.ARBITRIUM_ROBES_CHESTPLATE.get())
-                .add(HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_ARBITRIUM_ROBES_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get())
-                .add(HnSItemRegistry.ATLAS_CHESTPLATE.get())
-                .add(HnSItemRegistry.MAVERICK_CHESTPLATE.get())
-                .add(HnSItemRegistry.SLC_CAT_CHESTPLATE.get())
-                .add(HnSItemRegistry.ABBERANT_PREDATOR_CHESTPLATE.get())
-                .add(HnSItemRegistry.IRON431_CHESTPLATE.get())
-                .add(HnSItemRegistry.ASCENDED_IRON431_CHESTPLATE.get())
-                .add(HnSItemRegistry.SACRED_ROBES_CHESTPLATE.get())
-                .add(HnSItemRegistry.ASCENDED_SACRED_ROBES_CHESTPLATE.get())
-                .add(HnSItemRegistry.LEMON_GOD_CHESTPLATE.get())
-                .add(HnSItemRegistry.ASCENDED_LEMON_GOD_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_LEMON_GOD_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_CHESTPLATE.get())
-                .add(HnSItemRegistry.ENDERMAN_CHESTPLATE.get())
-                .add(HnSItemRegistry.PYROMANCER_BRUTE_CHESTPLATE.get())
-                .add(HnSItemRegistry.BISHOP_OF_DECEIT_CHESTPLATE.get())
-                .add(HnSItemRegistry.NECROMANCER_CHESTPLATE.get())
-                .add(HnSItemRegistry.NAMELESS_ONE_CHESTPLATE.get())
-                .add(HnSItemRegistry.CHLOROPHYTE_CHESTPLATE.get())
-        ;
-
-        tag(ItemTags.LEG_ARMOR)
-                .add(HnSItemRegistry.CALAMITAS_LEGGINGS.get())
-                .add(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get())
-                .add(HnSItemRegistry.SOUL_FLAME_LEGGINGS.get())
-                .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_LEGGINGS.get())
-                .add(HnSItemRegistry.HAZEL_LEGGINGS.get())
-                .add(HnSItemRegistry.CRYOGENIC_RULER_LEGGINGS.get())
-                .add(HnSItemRegistry.CRYSTAL_ARACHNID_LEGGINGS.get())
-                .add(HnSItemRegistry.HERTA_PUPPET_LEGGINGS.get())
-                .add(HnSItemRegistry.CHARGED_SCOURGE_LEGGINGS.get())
-                .add(HnSItemRegistry.THUNDER_PROWLER_LEGGINGS.get())
-                .add(HnSItemRegistry.CREAKING_LEGGINGS.get())
-                .add(HnSItemRegistry.FLESH_MASS_LEGGINGS.get())
-                .add(HnSItemRegistry.THE_WITHER_LEGGINGS.get())
-                .add(HnSItemRegistry.GECKOLIB_THE_WITHER_LEGGINGS.get())
-                .add(HnSItemRegistry.ENDER_DRAGON_LEGGINGS.get())
-                .add(HnSItemRegistry.GECKOLIB_ENDER_DRAGON_LEGGINGS.get())
-                .add(HnSItemRegistry.SERAPH_LEGGINGS.get())
-                .add(HnSItemRegistry.GABRIEL_ULTRAKILL_LEGGINGS.get())
-                .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_LEGGINGS.get())
-                .add(HnSItemRegistry.MOTHIC_WITCH_LEGGINGS.get())
-                .add(HnSItemRegistry.SUPREME_WITCH_LEGGINGS.get())
-                .add(HnSItemRegistry.ALCHEMIST_SUPREME_LEGGINGS.get())
-                .add(HnSItemRegistry.MYCELIUM_GUARDIAN_LEGGINGS.get())
-                .add(HnSItemRegistry.SHADOW_SCALE_LEGGINGS.get())
-                .add(HnSItemRegistry.INFESTATION_LEGGINGS.get())
-                .add(HnSItemRegistry.GECKOLIB_INFESTATION_LEGGINGS.get())
-                .add(HnSItemRegistry.PYRIUM_LEGGINGS.get())
-                .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_LEGGINGS.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_LEGGINGS.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_RULER_LEGGINGS.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_LEGGINGS.get())
-                .add(HnSItemRegistry.TYROS_LEGGINGS.get())
-                .add(HnSItemRegistry.TYROS_SOUL_LEGGINGS.get())
-                .add(HnSItemRegistry.FRIEREN_LEGGINGS.get())
-                .add(HnSItemRegistry.SYNTHESIZER_V_LEGGINGS.get())
-                .add(HnSItemRegistry.UTAU_LEGGINGS.get())
-                .add(HnSItemRegistry.PROJECT_SEKAI_LEGGINGS.get())
-                .add(HnSItemRegistry.ROTTEN_GIRL_LEGGINGS.get())
-                .add(HnSItemRegistry.NERU_LEGGINGS.get())
-                .add(HnSItemRegistry.GIORNO_GIOVANNA_LEGGINGS.get())
-                .add(HnSItemRegistry.MINER_LEGGINGS.get())
-                .add(HnSItemRegistry.SPECTRAL_SPELUNKER_LEGGINGS.get())
-                .add(HnSItemRegistry.BOUNTY_HUNTER_LEGGINGS.get())
-                .add(HnSItemRegistry.FROSTBITE_HUNTER_LEGGINGS.get())
-                .add(HnSItemRegistry.FROSTBITE_KNIGHT_LEGGINGS.get())
-                .add(HnSItemRegistry.DREADSTEEL_KNIGHT_LEGGINGS.get())
-                .add(HnSItemRegistry.MAGEHUNTER_LEGGINGS.get())
-                .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_LEGGINGS.get())
-                .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_LEGGINGS.get())
-                .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_LEGGINGS.get())
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
-                .add(HnSItemRegistry.ARBITRIUM_ROBES_LEGGINGS.get())
-                .add(HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get())
-                .add(HnSItemRegistry.GECKOLIB_ARBITRIUM_ROBES_LEGGINGS.get())
-                .add(HnSItemRegistry.GECKOLIB_ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get())
-                .add(HnSItemRegistry.ATLAS_LEGGINGS.get())
-                .add(HnSItemRegistry.MAVERICK_LEGGINGS.get())
-                .add(HnSItemRegistry.SLC_CAT_LEGGINGS.get())
-                .add(HnSItemRegistry.ABBERANT_PREDATOR_LEGGINGS.get())
-                .add(HnSItemRegistry.IRON431_LEGGINGS.get())
-                .add(HnSItemRegistry.ASCENDED_IRON431_LEGGINGS.get())
-                .add(HnSItemRegistry.SACRED_ROBES_LEGGINGS.get())
-                .add(HnSItemRegistry.ASCENDED_SACRED_ROBES_LEGGINGS.get())
-                .add(HnSItemRegistry.LEMON_GOD_LEGGINGS.get())
-                .add(HnSItemRegistry.ASCENDED_LEMON_GOD_LEGGINGS.get())
-                .add(HnSItemRegistry.GECKOLIB_LEMON_GOD_LEGGINGS.get())
-                .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_LEGGINGS.get())
-                .add(HnSItemRegistry.ENDERMAN_LEGGINGS.get())
-                .add(HnSItemRegistry.NECROMANCER_LEGGINGS.get())
-                .add(HnSItemRegistry.NAMELESS_ONE_LEGGINGS.get())
-                .add(HnSItemRegistry.CHLOROPHYTE_LEGGINGS.get())
-        ;
-
-        tag(Tags.Items.ARMORS)
-                .add(HnSItemRegistry.CALAMITAS_BOOTS.get())
-                .add(HnSItemRegistry.BLAZEBORNE_BOOTS.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_BOOTS.get())
                 .add(HnSItemRegistry.SOUL_FLAME_BOOTS.get())
                 .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_BOOTS.get())
                 .add(HnSItemRegistry.HAZEL_BOOTS.get())
@@ -2893,6 +2648,11 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get())
                 .add(HnSItemRegistry.BLAZEBORNE_BOOTS.get())
 
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_BOOTS.get())
+
                 //Soul Flame Armor
                 .add(HnSItemRegistry.SOUL_FLAME_HELMET.get())
                 .add(HnSItemRegistry.SOUL_FLAME_CHESTPLATE.get())
@@ -3013,6 +2773,11 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.SERAPH_LEGGINGS.get())
                 .add(HnSItemRegistry.SERAPH_BOOTS.get())
 
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_BOOTS.get())
+
                 //Gabriel ULTRAKILL Armor
                 .add(HnSItemRegistry.GABRIEL_ULTRAKILL_HELMET.get())
                 .add(HnSItemRegistry.GABRIEL_ULTRAKILL_CHESTPLATE.get())
@@ -3099,10 +2864,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_BOOTS.get())
 
                 //Legionnaire Armor
-                .add(HnSItemRegistry.LEGIONNAIRE_HELMET.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_CHESTPLATE.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_LEGGINGS.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_BOOTS.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_HELMET.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_BOOTS.get())
 
                 //Legionnaire Ruler Armor
                 .add(HnSItemRegistry.LEGIONNAIRE_RULER_HELMET.get())
@@ -3379,7 +3144,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_BOOTS.get())
-
         ;
 
         tag(ItemTags.HEAD_ARMOR_ENCHANTABLE)
@@ -3411,7 +3175,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_INFESTATION_HELMET.get())
                 .add(HnSItemRegistry.PYRIUM_HELMET.get())
                 .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_HELMET.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_HELMET.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_HELMET.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_RULER_HELMET.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_HELMET.get())
                 .add(HnSItemRegistry.TYROS_HELMET.get())
@@ -3451,21 +3215,22 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.ASCENDED_LEMON_GOD_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_LEMON_GOD_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_HELMET.get())
-                .add(HnSItemRegistry.CHLOROPHYTE_HELMET.get())
-                .add(HnSItemRegistry.CHLOROPHYTE_MASK.get())
-                .add(HnSItemRegistry.CHLOROPHYTE_HEADGEAR.get())
-                .add(HnSItemRegistry.PYROMANCER_BRUTE_HELMET.get())
-                .add(HnSItemRegistry.ENDERMAN_BLINDFOLD.get())
                 .add(HnSItemRegistry.ENDERMAN_MASKED.get())
+                .add(HnSItemRegistry.ENDERMAN_BLINDFOLD.get())
                 .add(HnSItemRegistry.ENDERMAN_HOOD.get())
+                .add(HnSItemRegistry.PYROMANCER_BRUTE_HELMET.get())
                 .add(HnSItemRegistry.BISHOP_OF_DECEIT_HELMET.get())
                 .add(HnSItemRegistry.NECROMANCER_HELMET.get())
                 .add(HnSItemRegistry.NAMELESS_ONE_HELMET.get())
+                .add(HnSItemRegistry.CHLOROPHYTE_HELMET.get())
+                .add(HnSItemRegistry.CHLOROPHYTE_HEADGEAR.get())
+                .add(HnSItemRegistry.CHLOROPHYTE_MASK.get())
         ;
 
         tag(ItemTags.CHEST_ARMOR_ENCHANTABLE)
                 .add(HnSItemRegistry.CALAMITAS_CHESTPLATE.get())
                 .add(HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_CHESTPLATE.get())
                 .add(HnSItemRegistry.SOUL_FLAME_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_CHESTPLATE.get())
                 .add(HnSItemRegistry.HAZEL_CHESTPLATE.get())
@@ -3495,7 +3260,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_INFESTATION_CHESTPLATE.get())
                 .add(HnSItemRegistry.PYRIUM_CHESTPLATE.get())
                 .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_CHESTPLATE.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_CHESTPLATE.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_RULER_CHESTPLATE.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_CHESTPLATE.get())
                 .add(HnSItemRegistry.TYROS_CHESTPLATE.get())
@@ -3535,17 +3300,18 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.ASCENDED_LEMON_GOD_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_LEMON_GOD_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_CHESTPLATE.get())
-                .add(HnSItemRegistry.CHLOROPHYTE_CHESTPLATE.get())
-                .add(HnSItemRegistry.PYROMANCER_BRUTE_CHESTPLATE.get())
                 .add(HnSItemRegistry.ENDERMAN_CHESTPLATE.get())
+                .add(HnSItemRegistry.PYROMANCER_BRUTE_CHESTPLATE.get())
                 .add(HnSItemRegistry.BISHOP_OF_DECEIT_CHESTPLATE.get())
                 .add(HnSItemRegistry.NECROMANCER_CHESTPLATE.get())
                 .add(HnSItemRegistry.NAMELESS_ONE_CHESTPLATE.get())
+                .add(HnSItemRegistry.CHLOROPHYTE_CHESTPLATE.get())
         ;
 
         tag(ItemTags.LEG_ARMOR_ENCHANTABLE)
                 .add(HnSItemRegistry.CALAMITAS_LEGGINGS.get())
                 .add(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_LEGGINGS.get())
                 .add(HnSItemRegistry.SOUL_FLAME_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_LEGGINGS.get())
                 .add(HnSItemRegistry.HAZEL_LEGGINGS.get())
@@ -3572,7 +3338,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_INFESTATION_LEGGINGS.get())
                 .add(HnSItemRegistry.PYRIUM_LEGGINGS.get())
                 .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_LEGGINGS.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_LEGGINGS.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_RULER_LEGGINGS.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_LEGGINGS.get())
                 .add(HnSItemRegistry.TYROS_LEGGINGS.get())
@@ -3612,14 +3378,16 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.ASCENDED_LEMON_GOD_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_LEMON_GOD_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_LEGGINGS.get())
-                .add(HnSItemRegistry.CHLOROPHYTE_LEGGINGS.get())
+                .add(HnSItemRegistry.ENDERMAN_LEGGINGS.get())
                 .add(HnSItemRegistry.NECROMANCER_LEGGINGS.get())
                 .add(HnSItemRegistry.NAMELESS_ONE_LEGGINGS.get())
+                .add(HnSItemRegistry.CHLOROPHYTE_LEGGINGS.get())
         ;
 
         tag(ItemTags.FOOT_ARMOR_ENCHANTABLE)
                 .add(HnSItemRegistry.CALAMITAS_BOOTS.get())
                 .add(HnSItemRegistry.BLAZEBORNE_BOOTS.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_BOOTS.get())
                 .add(HnSItemRegistry.SOUL_FLAME_BOOTS.get())
                 .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_BOOTS.get())
                 .add(HnSItemRegistry.HAZEL_BOOTS.get())
@@ -3676,7 +3444,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.ATLAS_BOOTS.get())
                 .add(HnSItemRegistry.MAVERICK_BOOTS.get())
                 .add(HnSItemRegistry.SLC_CAT_BOOTS.get())
-                .add(HnSItemRegistry.ABBERANT_PREDATOR_LEGGINGS.get())
                 .add(HnSItemRegistry.ABBERANT_PREDATOR_BOOTS.get())
                 .add(HnSItemRegistry.IRON431_BOOTS.get())
                 .add(HnSItemRegistry.ASCENDED_IRON431_BOOTS.get())
@@ -3686,6 +3453,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.ASCENDED_LEMON_GOD_BOOTS.get())
                 .add(HnSItemRegistry.GECKOLIB_LEMON_GOD_BOOTS.get())
                 .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_BOOTS.get())
+                .add(HnSItemRegistry.ENDERMAN_BOOTS.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_BOOTS.get())
         ;
 
@@ -3769,6 +3537,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         tag(HnSTags.PURE_HELMET)
                 .add(HnSItemRegistry.CALAMITAS_HELMET.get())
                 .add(HnSItemRegistry.BLAZEBORNE_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_HELMET.get())
                 .add(HnSItemRegistry.SOUL_FLAME_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_HELMET.get())
                 .add(HnSItemRegistry.HAZEL_HELMET.get())
@@ -3793,7 +3562,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.SHADOW_SCALE_HELMET.get())
                 .add(HnSItemRegistry.INFESTATION_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_INFESTATION_HELMET.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_HELMET.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_HELMET.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_RULER_HELMET.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_HELMET.get())
                 .add(HnSItemRegistry.TYROS_HELMET.get())
@@ -3805,7 +3574,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_HELMET.get())
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
-                .add(HnSItemRegistry.ATLAS_HELMET.get())
                 .add(HnSItemRegistry.MAVERICK_HELMET.get())
                 .add(HnSItemRegistry.SLC_CAT_HELMET.get())
                 .add(HnSItemRegistry.ABBERANT_PREDATOR_HELMET.get())
@@ -3817,6 +3585,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         tag(HnSTags.PURE_CHESTPLATE)
                 .add(HnSItemRegistry.CALAMITAS_CHESTPLATE.get())
                 .add(HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_CHESTPLATE.get())
                 .add(HnSItemRegistry.SOUL_FLAME_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_CHESTPLATE.get())
                 .add(HnSItemRegistry.HAZEL_CHESTPLATE.get())
@@ -3844,7 +3613,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.SHADOW_SCALE_CHESTPLATE.get())
                 .add(HnSItemRegistry.INFESTATION_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_INFESTATION_CHESTPLATE.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_CHESTPLATE.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_RULER_CHESTPLATE.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_CHESTPLATE.get())
                 .add(HnSItemRegistry.TYROS_CHESTPLATE.get())
@@ -3865,6 +3634,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         tag(HnSTags.PURE_LEGGINGS)
                 .add(HnSItemRegistry.CALAMITAS_LEGGINGS.get())
                 .add(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_LEGGINGS.get())
                 .add(HnSItemRegistry.SOUL_FLAME_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_LEGGINGS.get())
                 .add(HnSItemRegistry.HAZEL_LEGGINGS.get())
@@ -3889,7 +3659,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.SHADOW_SCALE_LEGGINGS.get())
                 .add(HnSItemRegistry.INFESTATION_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_INFESTATION_LEGGINGS.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGACY_LEGIONNAIRE_LEGGINGS.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_RULER_LEGGINGS.get())
                 .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_LEGGINGS.get())
                 .add(HnSItemRegistry.TYROS_LEGGINGS.get())
@@ -3910,6 +3680,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         tag(HnSTags.PURE_BOOTS)
                 .add(HnSItemRegistry.CALAMITAS_BOOTS.get())
                 .add(HnSItemRegistry.BLAZEBORNE_BOOTS.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_BOOTS.get())
                 .add(HnSItemRegistry.SOUL_FLAME_BOOTS.get())
                 .add(HnSItemRegistry.GECKOLIB_SOUL_FLAME_BOOTS.get())
                 .add(HnSItemRegistry.HAZEL_BOOTS.get())
@@ -3949,6 +3720,148 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.MAVERICK_BOOTS.get())
                 .add(HnSItemRegistry.SLC_CAT_BOOTS.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_BOOTS.get())
+        ;
+
+        tag(HnSTags.ARMORS_FOR_IDLE)
+
+                /*
+                *** Fire
+                 */
+
+                //Blazeborne Armor
+                .add(HnSItemRegistry.BLAZEBORNE_HELMET.get())
+                .add(HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get())
+                .add(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get())
+                .add(HnSItemRegistry.BLAZEBORNE_BOOTS.get())
+
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_BOOTS.get())
+
+                //Calamitas Armor
+                .add(HnSItemRegistry.CALAMITAS_HELMET.get())
+                .add(HnSItemRegistry.CALAMITAS_CHESTPLATE.get())
+                .add(HnSItemRegistry.CALAMITAS_LEGGINGS.get())
+                .add(HnSItemRegistry.CALAMITAS_BOOTS.get())
+
+                /*
+                *** Ice
+                 */
+
+                //Cryogenic Ruler Armor
+                .add(HnSItemRegistry.CRYOGENIC_RULER_HELMET.get())
+                .add(HnSItemRegistry.CRYOGENIC_RULER_CHESTPLATE.get())
+                .add(HnSItemRegistry.CRYOGENIC_RULER_LEGGINGS.get())
+                .add(HnSItemRegistry.CRYOGENIC_RULER_BOOTS.get())
+
+                /*
+                *** Nature
+                 */
+
+                //Cryogenic Ruler Armor
+                .add(HnSItemRegistry.MAVERICK_HELMET.get())
+                .add(HnSItemRegistry.MAVERICK_CHESTPLATE.get())
+                .add(HnSItemRegistry.MAVERICK_LEGGINGS.get())
+                .add(HnSItemRegistry.MAVERICK_BOOTS.get())
+
+                /*
+                *** Lightning
+                 */
+
+                /*
+                *** Blood
+                 */
+
+                //Flesh Mass Armor
+                .add(HnSItemRegistry.FLESH_MASS_HELMET.get())
+                .add(HnSItemRegistry.FLESH_MASS_CHESTPLATE.get())
+                .add(HnSItemRegistry.FLESH_MASS_LEGGINGS.get())
+                .add(HnSItemRegistry.FLESH_MASS_BOOTS.get())
+
+                //The Wither Armor
+                .add(HnSItemRegistry.THE_WITHER_HELMET.get())
+                .add(HnSItemRegistry.THE_WITHER_CHESTPLATE.get())
+                .add(HnSItemRegistry.THE_WITHER_LEGGINGS.get())
+                .add(HnSItemRegistry.THE_WITHER_BOOTS.get())
+
+                .add(HnSItemRegistry.GECKOLIB_THE_WITHER_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_THE_WITHER_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_THE_WITHER_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_THE_WITHER_BOOTS.get())
+
+                /*
+                 *** Ender
+                 */
+
+                /*
+                *** Evocation
+                 */
+
+                /*
+                *** Holy
+                 */
+
+                //Seraph Armor
+                .add(HnSItemRegistry.SERAPH_HELMET.get())
+                .add(HnSItemRegistry.SERAPH_CHESTPLATE.get())
+                .add(HnSItemRegistry.SERAPH_LEGGINGS.get())
+                .add(HnSItemRegistry.SERAPH_BOOTS.get())
+
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_SERAPH_BOOTS.get())
+
+                //Gabriel ULTRAKILL Armor
+                .add(HnSItemRegistry.GABRIEL_ULTRAKILL_HELMET.get())
+                .add(HnSItemRegistry.GABRIEL_ULTRAKILL_CHESTPLATE.get())
+                .add(HnSItemRegistry.GABRIEL_ULTRAKILL_LEGGINGS.get())
+                .add(HnSItemRegistry.GABRIEL_ULTRAKILL_BOOTS.get())
+
+                .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_BOOTS.get())
+
+                //SLC!Cat Armor
+                .add(HnSItemRegistry.SLC_CAT_HELMET.get())
+                .add(HnSItemRegistry.SLC_CAT_CHESTPLATE.get())
+                .add(HnSItemRegistry.SLC_CAT_LEGGINGS.get())
+                .add(HnSItemRegistry.SLC_CAT_BOOTS.get())
+
+                /*
+                *** Shadow
+                 */
+
+                /*
+                 *** Radiance
+                 */
+
+                /*
+                 *** Eldritch
+                 */
+
+                //Infestation Armor
+                .add(HnSItemRegistry.INFESTATION_HELMET.get())
+                .add(HnSItemRegistry.INFESTATION_CHESTPLATE.get())
+                .add(HnSItemRegistry.INFESTATION_LEGGINGS.get())
+                .add(HnSItemRegistry.INFESTATION_BOOTS.get())
+
+                .add(HnSItemRegistry.GECKOLIB_INFESTATION_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_INFESTATION_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_INFESTATION_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_INFESTATION_BOOTS.get())
+
+                /*
+                *** Misc
+                 */
+
+                //Cryogenic Ruler Armor
+                .add(HnSItemRegistry.ATLAS_HELMET.get())
+                .add(HnSItemRegistry.ATLAS_CHESTPLATE.get())
+                .add(HnSItemRegistry.ATLAS_LEGGINGS.get())
+                .add(HnSItemRegistry.ATLAS_BOOTS.get())
         ;
 
 
@@ -4354,8 +4267,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.WISEWOOD_CANE.get())
                 .add(HnSItemRegistry.FRIEREN_STAFF.get())
                 .add(HnSItemRegistry.ROD_OF_DISCORD.get())
-
-
         ;
 
         tag(ModTags.CAN_BE_UPGRADED)
@@ -4428,14 +4339,12 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.PICKAXE_AXE_DIVINE_GOLD.get())
 
                 /*
-                 ***
+                 *** Staves
                  */
 
                 .add(HnSItemRegistry.WISEWOOD_CANE.get())
                 .add(HnSItemRegistry.FRIEREN_STAFF.get())
                 .add(HnSItemRegistry.ROD_OF_DISCORD.get())
-
-
         ;
 
         tag(ModTags.INSCRIBED_RUNES)

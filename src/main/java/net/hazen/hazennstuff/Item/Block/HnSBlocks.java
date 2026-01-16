@@ -3,7 +3,7 @@ package net.hazen.hazennstuff.Item.Block;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.HazelStatue;
 import net.hazen.hazennstuff.Datagen.Worldgen.Biomes.Trees.HnSTreeGrower;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
+import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;

@@ -26,7 +26,7 @@ import net.hazen.hazennstuff.Item.Armor.AzureLib.Seraph.SeraphArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.SoulFlame.SoulFlameArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.SupremeWitch.SupremeWitchArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.TheWither.TheWitherArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.GalvanizedSheath.GalvanizedCurioRenderer;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.GalvanizedSheath.GalvanizedSheathItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.ScrollSheath.ScrollCurioRenderer;
@@ -36,11 +36,10 @@ import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.Energ
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioRenderer;
 import net.hazen.hazennstuff.Item.Staves.SoulcallingScepter.SoulcallingScepterRenderer;
-import net.hazen.hazennstuff.Item.Weapons.HammerOfJustice.HammerOfJusticeRenderer;
-import net.hazen.hazennstuff.Item.Weapons.Terraprisma.TerraprismaRenderer;
-import net.hazen.hazennstuff.Item.Weapons.Volcano.VolcanoRenderer;
+import net.hazen.hazennstuff.Item.Weapons.Generic.HammerOfJustice.HammerOfJusticeRenderer;
+import net.hazen.hazennstuff.Item.Weapons.Generic.Terraprisma.TerraprismaRenderer;
+import net.hazen.hazennstuff.Item.Weapons.Generic.Volcano.VolcanoRenderer;
 import net.hazen.hazennstuff.Registries.*;
-import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
@@ -72,10 +71,10 @@ public class HazenNStuff
         ArsNoveauCompat.init();
 
         //ISS Addons Compat
-        AeromancyAdditionsCompat.init();
-        //CataclysmSpellbooksCompat.init();
-        EndersSpellsAndStuffCompat.init();
-        FamiliarsLibCompat.init();
+        AACompat.init();
+        CSCompat.init();
+        ESSRCompat.init();
+        FLCompat.init();
         MFTECompat.init();
 
         HnSCreativeModeTabs.register(modEventBus);

@@ -9,7 +9,7 @@ import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.Item.Armor.Geckolib.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Geckolib.Seraph.GeckolibSeraphArmorItem;
-import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;

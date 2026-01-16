@@ -1,5 +1,5 @@
 {
-  "credit": "Made with Blockbench",
+  "credit": "Made by Hazen",
   "parent": "builtin/entity",
   "texture_size": [
     128,
@@ -40,6 +40,11 @@
         1.75,
         0,
         0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
       ]
     },
     "firstperson_lefthand": {
@@ -52,6 +57,11 @@
         1.75,
         0,
         0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
       ]
     },
     "gui": {
@@ -78,8 +88,5 @@
         0
       ]
     }
-  },
-  "textures": {
-    "particle": "item/thorn_chakram"
   }
 }

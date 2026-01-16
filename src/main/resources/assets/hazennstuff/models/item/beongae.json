@@ -1,5 +1,5 @@
 {
-  "credit": "Made with Blockbench",
+  "credit": "Made by Hazen",
   "parent": "builtin/entity",
   "texture_size": [
     32,
@@ -34,24 +34,34 @@
       "rotation": [
         0,
         90,
-        -17
+        0
       ],
       "translation": [
-        4.5,
-        -4.75,
+        2,
+        -1,
         0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
       ]
     },
     "firstperson_lefthand": {
       "rotation": [
         0,
         -90,
-        17
+        0
       ],
       "translation": [
-        4.5,
-        -4.75,
+        2,
+        -1,
         0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
       ]
     },
     "ground": {
@@ -92,8 +102,5 @@
         0
       ]
     }
-  },
-  "textures": {
-    "particle": "item/beongae"
   }
 }

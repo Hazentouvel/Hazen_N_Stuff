@@ -5,9 +5,10 @@ import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
-import net.hazen.hazennstuff.Compat.FamiliarsLibCompat;
+import net.hazen.hazennstuff.Compat.FLCompat;
+import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.Item.Armor.Geckolib.ImbuableGeckolibHnSArmorItem;
-import net.hazen.hazennstuff.Item.Armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -33,7 +34,8 @@ public class RottenGirlArmorItem extends ImbuableGeckolibHnSArmorItem implements
     public List<ItemAttributeModifiers.Entry> createExtraAttributes() {
         var group = EquipmentSlotGroup.bySlot(getEquipmentSlot());
         ItemAttributeModifiers.Builder attributes = ItemAttributeModifiers.builder();
-        FamiliarsLibCompat.addSoundSpellPower(attributes, group);
+        MalumCompat.addArcaneResonance(attributes, group);
+        FLCompat.addSoundSpellPowerPure(attributes, group);
         return attributes.build().modifiers();
     }
 

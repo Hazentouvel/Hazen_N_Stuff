@@ -8,7 +8,7 @@ import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
-import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
+import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -157,7 +157,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItemRegistry.VOLT_CORE.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.LIGHTNING_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
@@ -167,7 +167,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -2F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItemRegistry.VOLT_CORE.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.LIGHTNING_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
@@ -177,7 +177,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -1.9F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItemRegistry.VOLT_CORE.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.LIGHTNING_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
@@ -187,7 +187,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             -1.8F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            () -> Ingredient.of(HnSItemRegistry.VOLT_CORE.get()),
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.LIGHTNING_SPELL_POWER, 0.25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
@@ -217,6 +217,46 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.CRIT_CHANCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.EVOCATION_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HnSExtendedWeaponsTiers PROVOCATION_DORMANT = new HnSExtendedWeaponsTiers(
+            8064,
+            6,
+            -2F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.EVOCATION_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HnSExtendedWeaponsTiers PROVOCATION_T1 = new HnSExtendedWeaponsTiers(
+            8064,
+            7,
+            -2F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.EVOCATION_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HnSExtendedWeaponsTiers PROVOCATION_T2 = new HnSExtendedWeaponsTiers(
+            8064,
+            8,
+            -1.9F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.EVOCATION_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HnSExtendedWeaponsTiers PROVOCATION_T3 = new HnSExtendedWeaponsTiers(
+            8064,
+            9,
+            -1.8F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.EVOCATION_SPELL_POWER, 0.25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
     /*
@@ -301,6 +341,46 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
+    public static HnSExtendedWeaponsTiers O_FORTUNA_DORMANT = new HnSExtendedWeaponsTiers(
+            8064,
+            6,
+            -2F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HnSExtendedWeaponsTiers O_FORTUNA_T1 = new HnSExtendedWeaponsTiers(
+            8064,
+            7,
+            -2F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HnSExtendedWeaponsTiers O_FORTUNA_T2 = new HnSExtendedWeaponsTiers(
+            8064,
+            8,
+            -1.9F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HnSExtendedWeaponsTiers O_FORTUNA_T3 = new HnSExtendedWeaponsTiers(
+            8064,
+            9,
+            -1.8F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
     /*
      *** Ender
      */
@@ -329,6 +409,46 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
+    public static HnSExtendedWeaponsTiers UMBRANOVA_DORMANT = new HnSExtendedWeaponsTiers(
+            8064,
+            6,
+            -2F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HnSExtendedWeaponsTiers UMBRANOVA_T1 = new HnSExtendedWeaponsTiers(
+            8064,
+            7,
+            -2F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HnSExtendedWeaponsTiers UMBRANOVA_T2 = new HnSExtendedWeaponsTiers(
+            8064,
+            8,
+            -1.9F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HnSExtendedWeaponsTiers UMBRANOVA_T3 = new HnSExtendedWeaponsTiers(
+            8064,
+            9,
+            -1.8F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, 0.25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
     /*
      *** Blood
      */
@@ -343,6 +463,46 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.LIFE_STEAL, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HnSExtendedWeaponsTiers DEVESTATOR_DORMANT = new HnSExtendedWeaponsTiers(
+            8064,
+            6,
+            -2F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HnSExtendedWeaponsTiers DEVESTATOR_T1 = new HnSExtendedWeaponsTiers(
+            8064,
+            7,
+            -2F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HnSExtendedWeaponsTiers DEVESTATOR_T2 = new HnSExtendedWeaponsTiers(
+            8064,
+            8,
+            -1.9F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    public static HnSExtendedWeaponsTiers DEVESTATOR_T3 = new HnSExtendedWeaponsTiers(
+            8064,
+            9,
+            -1.8F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, 0.25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
     /*

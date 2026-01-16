@@ -4,7 +4,7 @@ import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import io.redspace.ironsspellbooks.util.ModTags;
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.Registries.ItemRegistry.HnSItemRegistry;
+import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -1368,7 +1368,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', HnSItemRegistry.DEMONITE_INGOT.get())
                 .define('R', HnSItemRegistry.SHADOW_RUNE.get())
                 .define('P', ItemRegistry.NETHERITE_MAGE_HELMET.get())
-                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.DEMONITE_INGOT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_scale/shadow_scale_helmet"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.SHADOW_SCALE_CHESTPLATE.get())
@@ -1378,7 +1378,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', HnSItemRegistry.DEMONITE_INGOT.get())
                 .define('R', HnSItemRegistry.SHADOW_RUNE.get())
                 .define('P', ItemRegistry.NETHERITE_MAGE_CHESTPLATE.get())
-                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.DEMONITE_INGOT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_scale/shadow_scale_chestplate"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.SHADOW_SCALE_LEGGINGS.get())
@@ -1388,7 +1388,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', HnSItemRegistry.DEMONITE_INGOT.get())
                 .define('R', HnSItemRegistry.SHADOW_RUNE.get())
                 .define('P', ItemRegistry.NETHERITE_MAGE_LEGGINGS.get())
-                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.DEMONITE_INGOT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_scale/shadow_scale_leggings"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.SHADOW_SCALE_BOOTS.get())
@@ -1398,7 +1398,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', HnSItemRegistry.DEMONITE_INGOT.get())
                 .define('R', HnSItemRegistry.SHADOW_RUNE.get())
                 .define('P', ItemRegistry.NETHERITE_MAGE_BOOTS.get())
-                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.DEMONITE_INGOT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_scale/shadow_scale_boots"));
 
 
@@ -2481,7 +2481,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                         Ingredient.of(HnSItemRegistry.SILVER_SCRAPS.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.MAGEHUNTER_LEGGINGS.get())
-                .unlocks("has_mithril_ingot", has(ItemRegistry.MITHRIL_INGOT.get()))
+                .unlocks("has_mithril_ingot", has(HnSItemRegistry.SILVER_SCRAPS.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/magehunter/magehunter_leggings"));
 
         SmithingTransformRecipeBuilder.smithing(

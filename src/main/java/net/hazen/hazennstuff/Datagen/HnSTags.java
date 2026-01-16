@@ -14,8 +14,8 @@ import net.minecraft.world.level.block.Block;
 
 public class HnSTags {
 
-    /***
-     * Items
+    /*
+     *** Items
      */
 
     // Radiance School Focus
@@ -69,7 +69,12 @@ public class HnSTags {
     public static final TagKey<Item> PURE_BOOTS = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure/pure_boots").toString()));
 
-    // Ores
+    public static final TagKey<Item> ARMORS_FOR_IDLE = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure/pure_boots").toString()));
+
+    /*
+     *** Ores
+     */
     public static final TagKey<Item> CINDEROUS_EQUIPMENT = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "cinderous_equipment").toString()));
 

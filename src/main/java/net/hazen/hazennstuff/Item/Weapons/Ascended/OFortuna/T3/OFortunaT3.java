@@ -2,15 +2,9 @@ package net.hazen.hazennstuff.Item.Weapons.Ascended.OFortuna.T3;
 
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.Rarity.HnSRarities;
-import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.MaceItem;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;

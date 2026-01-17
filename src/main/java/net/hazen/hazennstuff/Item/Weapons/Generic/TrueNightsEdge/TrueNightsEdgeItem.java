@@ -8,7 +8,7 @@ import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
-import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.ChatFormatting;

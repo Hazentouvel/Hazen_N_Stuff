@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Armor.Geckolib;
+package net.hazen.hazennstuff.Item.HnSUtilities;
 
 import io.redspace.ironsspellbooks.api.spells.IPresetSpellContainer;
 import io.redspace.ironsspellbooks.api.spells.ISpellContainer;

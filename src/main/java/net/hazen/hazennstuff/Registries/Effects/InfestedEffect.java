@@ -106,7 +106,7 @@ public class InfestedEffect extends MagicMobEffect implements ISyncedMobEffect {
     public static double damageFor(@Nullable Entity entity) {
         double baseDamage = 10.0;
         if (entity instanceof LivingEntity livingAttacker) {
-            baseDamage = baseDamage * livingAttacker.getAttributeValue(AttributeRegistry.SPELL_POWER) * livingAttacker.getAttributeValue(HnSAttributeRegistry.RADIANCE_MAGIC_POWER);
+            baseDamage = baseDamage * livingAttacker.getAttributeValue(AttributeRegistry.SPELL_POWER) * livingAttacker.getAttributeValue(HnSAttributeRegistry.RADIANCE_SPELL_POWER);
         }
         return baseDamage;
     }

@@ -9,7 +9,7 @@ import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
-import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;

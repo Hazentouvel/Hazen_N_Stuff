@@ -36,6 +36,8 @@
   "rarity.hazennstuff_rarity_lightning.name": "Ionized",
   "rarity.hazennstuff_rarity_blood.name": "Sanguine",
   "rarity.hazennstuff_rarity_ender.name": "Enderconic",
+  "rarity.hazennstuff_rarity_holy.name": "Divine",
+  "rarity.hazennstuff_rarity_evocation.name": "Artificial",
   "rarity.hazennstuff_rarity_shadow.name": "Shadowed",
   "rarity.hazennstuff_rarity_radiance.name": "Radiant",
   "rarity.hazennstuff_rarity_eldritch.name": "Esoteric",
@@ -305,6 +307,11 @@
 
   "item.hazennstuff.ancient_warriors_axe": "Ancient Warrior's Axe",
   "item.hazennstuff.malice": "Malice",
+
+  "item.hazennstuff.provocation_dormant": "Provocation",
+  "item.hazennstuff.provocation_t1": "Provocation",
+  "item.hazennstuff.provocation_t2": "Provocation",
+  "item.hazennstuff.provocation_t3": "Provocation",
 
   "item.hazennstuff.lights_bane": "Light's Bane",
   "item.hazennstuff.nights_edge": "Night's Edge",

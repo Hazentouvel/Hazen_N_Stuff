@@ -3,7 +3,7 @@ package net.hazen.hazennstuff.Item.Staves.Frieren;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.Item.Staves.HnSStaffTier;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSStaffTier;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;

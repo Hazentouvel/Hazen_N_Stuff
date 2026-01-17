@@ -27,7 +27,6 @@ public class GabrielElytraArmorItem extends ImbuableHnSArmorItem implements IDis
     public GabrielElytraArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
-                //new AttributeContainer(ALObjects.Attributes.ELYTRA_FLIGHT, 1, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
@@ -50,7 +49,6 @@ public class GabrielElytraArmorItem extends ImbuableHnSArmorItem implements IDis
                                 @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, context, lines, flag);
 
-        // --- Custom item description section ---
         lines.add(Component.translatable("item.hazennstuff.ultrakill.description")
                 .withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
     }

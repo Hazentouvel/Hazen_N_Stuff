@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Staves;
+package net.hazen.hazennstuff.Item.HnSUtilities;
 
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.spells.IPresetSpellContainer;

@@ -12,7 +12,7 @@ import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.ImbuableGeckolibHnSArmorItem;
+import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
@@ -42,20 +42,17 @@ import java.util.Map;
 
 public class GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem(Type type, Properties settings) {
-        // Add in your armor tier + additional attributes for your item
-        super(HnSArmorMaterials.TYROS_MATERIAL, type, settings,
-                new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, .20, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE)
-        );
+        super(HnSArmorMaterials.TYROS_MATERIAL, type, settings, paragonTier(
+                AttributeRegistry.FIRE_SPELL_POWER
+        ));
     }
 
     public List<ItemAttributeModifiers.Entry> createExtraAttributes() {
         var group = EquipmentSlotGroup.bySlot(getEquipmentSlot());
         ItemAttributeModifiers.Builder attributes = ItemAttributeModifiers.builder();
         MalumCompat.addArcaneResonance(attributes, group);
-        ArsNoveauCompat.addManaRegen(attributes, group);
         ArsNoveauCompat.addMaxMana(attributes, group);
+        ArsNoveauCompat.addManaRegen(attributes, group);
         return attributes.build().modifiers();
     }
 

@@ -23,8 +23,8 @@ public class EnderDragonArmorItem extends ImbuableHnSArmorItem implements IDisab
     // This is your class where you will setup the AzCommands/Animations you wish to play
 
     public EnderDragonArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, pureTier(
-                AttributeRegistry.NATURE_SPELL_POWER
+        super(HnSArmorMaterials.ENDER_DRAGON_MATERIAL, type, settings, pureTier(
+                AttributeRegistry.ENDER_SPELL_POWER
         ));
     }
 

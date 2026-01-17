@@ -5,7 +5,8 @@ import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Animations.HnSDispatcher;
-import net.hazen.hazennstuff.Item.Staves.HnSStaffTier;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSStaffTier;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.sounds.SoundSource;
@@ -28,9 +29,9 @@ public class InsaniaAeternus extends StaffItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(Rarity.EPIC)
+                        .rarity(HnSRarities.ELDRITCH_RARITY.getValue())
                         .attributes(ExtendedSwordItem
-                                .createAttributes(HnSStaffTier.SOULCALLING_SCEPTER)
+                                .createAttributes(HnSStaffTier.INSANIA_AETERNUS)
                         )
         );
         this.dispatcher = new HnSDispatcher();
@@ -44,50 +45,15 @@ public class InsaniaAeternus extends StaffItem {
         }
     }
 
-    @Override
-    public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        boolean result = super.hurtEnemy(stack, target, attacker);
-
-        if (!attacker.level().isClientSide) {
-            boolean isCrit = false;
-
-            if (attacker instanceof Player player) {
-                isCrit =
-                        player.fallDistance > 0.0F &&
-                                !player.onGround() &&
-                                !player.isInWater() &&
-                                !player.hasEffect(net.minecraft.world.effect.MobEffects.BLINDNESS) &&
-                                !player.isPassenger() &&
-                                !player.isSprinting() &&
-                                player.getMainHandItem() == stack;
-            }
-
-            if (isCrit) {
-                attacker.level().playSound(
-                        null,
-                        target.getX(),
-                        target.getY(),
-                        target.getZ(),
-                        SoundRegistry.SOULCALLER_TOLL_SUCCESS,
-                        SoundSource.PLAYERS,
-                        0.5f,
-                        1.0f
-                );
-            }
-        }
-
-        return result;
-    }
-
-    @Override
-    public void appendHoverText(@NotNull ItemStack stack,
-                                @NotNull TooltipContext context,
-                                @NotNull List<Component> lines,
-                                @NotNull TooltipFlag flag) {
-        super.appendHoverText(stack, context, lines, flag);
-
-        // Custom item description section
-        lines.add(Component.translatable("item.hazennstuff.soulcalling_scepter.description")
-                .withStyle(Style.EMPTY.withColor(15881518).withItalic(true)));
-    }
+//    @Override
+//    public void appendHoverText(@NotNull ItemStack stack,
+//                                @NotNull TooltipContext context,
+//                                @NotNull List<Component> lines,
+//                                @NotNull TooltipFlag flag) {
+//        super.appendHoverText(stack, context, lines, flag);
+//
+//        // Custom item description section
+//        lines.add(Component.translatable("item.hazennstuff.soulcalling_scepter.description")
+//                .withStyle(Style.EMPTY.withColor(15881518).withItalic(true)));
+//    }
 }

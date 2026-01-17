@@ -25,8 +25,8 @@ import java.util.List;
 public class TheWitherArmorItem extends ImbuableHnSArmorItem implements IDisableJacket, IDisableHat {
 
     public TheWitherArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, pureTier(
-                AttributeRegistry.NATURE_SPELL_POWER
+        super(HnSArmorMaterials.FLESH_MASS_MATERIAL, type, settings, pureTier(
+                AttributeRegistry.BLOOD_SPELL_POWER
         ));
     }
 

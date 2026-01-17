@@ -144,15 +144,4 @@ public class HnSArmorItem extends ArmorItem {
 
         return builder.build();
     }
-
-    @Override
-    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
-        if (!level.isClientSide && entity instanceof Player player ) {
-            player.getArmorSlots().forEach(wornArmor -> {
-                if (wornArmor != null && wornArmor.is(HnSTags.ARMORS_FOR_IDLE)) {
-                    dispatcher.idle(player, wornArmor);
-                }
-            });
-        }
-    }
 }

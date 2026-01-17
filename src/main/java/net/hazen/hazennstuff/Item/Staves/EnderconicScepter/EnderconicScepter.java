@@ -3,7 +3,8 @@ package net.hazen.hazennstuff.Item.Staves.EnderconicScepter;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.Item.Staves.HnSStaffTier;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSStaffTier;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.world.item.Rarity;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -22,16 +23,16 @@ public class EnderconicScepter extends StaffItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(Rarity.EPIC)
+                        .rarity(HnSRarities.ENDER_RARITY.getValue())
                         .attributes(ExtendedSwordItem
-                                .createAttributes(HnSStaffTier.ARTIFICER)
+                                .createAttributes(HnSStaffTier.ENDERCONIC_SCEPTER)
                         )
         );
     }
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
-        //controllerRegistrar.add(animationController);
+        controllerRegistrar.add(animationController);
     }
 
     // Animations and stuff

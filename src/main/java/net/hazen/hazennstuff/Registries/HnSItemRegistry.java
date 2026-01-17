@@ -125,7 +125,7 @@ import net.hazen.hazennstuff.Item.Curios.Sheaths.ScrollSheath.ScrollSheath;
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbook;
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.GoldenShowerSpellbook;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWings;
-import net.hazen.hazennstuff.Item.Misc.HnSFoodProperties;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSFoodProperties;
 import net.hazen.hazennstuff.Item.Staves.BlossomOfTheEnchantress.BlossomOfTheEnchantress;
 import net.hazen.hazennstuff.Item.Staves.DivineScepter.DivineScepter;
 import net.hazen.hazennstuff.Item.Staves.EnderconicScepter.EnderconicScepter;
@@ -139,6 +139,7 @@ import net.hazen.hazennstuff.Item.Staves.WisewoodCane.WisewoodCane;
 import net.hazen.hazennstuff.Item.Util.PickaxeAxe.DivineGold.PickaxeAxeDivineGoldItem;
 import net.hazen.hazennstuff.Item.Util.PickaxeAxe.PickaxeAxeItem;
 import net.hazen.hazennstuff.Item.Util.SpectralPickaxe.SpectralPickaxeItem;
+import net.hazen.hazennstuff.Item.Weapons.Ascended.Devastator.Dormant.Devastator;
 import net.hazen.hazennstuff.Item.Weapons.Ascended.DraconicSplitter.DraconicSplitterItem;
 import net.hazen.hazennstuff.Item.Weapons.Ascended.IonicSplitter.Dormant.IonicSplitterItem;
 import net.hazen.hazennstuff.Item.Weapons.Ascended.IonicSplitter.T1.IonicSplitterT1Item;
@@ -680,7 +681,7 @@ public class HnSItemRegistry {
     Devastator
      */
     public static final DeferredHolder<Item, Item> DEVASTATOR_DORMANT = ITEMS.register
-            ("devastator_dormant", StarfuryItem::new);
+            ("devastator_dormant", Devastator::new);
 
     /*
      *** Ender

@@ -5,6 +5,7 @@ import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
+import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
@@ -58,6 +59,13 @@ public class LemonGodArmorItem extends ImbuableHnSArmorItem implements IDisableJ
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
         if (entity instanceof Player player && !level.isClientSide() && isWearingFullSet(player)) {
             evaluateArmorEffects(player);
+        }
+        if (!level.isClientSide && entity instanceof Player player ) {
+            player.getArmorSlots().forEach(wornArmor -> {
+                if (wornArmor != null && wornArmor.is(HnSTags.ARMORS_FOR_IDLE)) {
+                    dispatcher.idle(player, wornArmor);
+                }
+            });
         }
     }
 

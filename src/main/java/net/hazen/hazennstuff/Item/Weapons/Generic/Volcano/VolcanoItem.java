@@ -6,7 +6,7 @@ import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Animations.HnSDispatcher;
-import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;

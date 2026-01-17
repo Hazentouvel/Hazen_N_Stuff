@@ -35,6 +35,8 @@ import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.Energ
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioRenderer;
+import net.hazen.hazennstuff.Item.Staves.InsaniaAeternus.InsaniaAeternus;
+import net.hazen.hazennstuff.Item.Staves.InsaniaAeternus.InsaniaAeternusRenderer;
 import net.hazen.hazennstuff.Item.Staves.SoulcallingScepter.SoulcallingScepterRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Generic.HammerOfJustice.HammerOfJusticeRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Terraprisma.TerraprismaRenderer;
@@ -241,6 +243,7 @@ public class HazenNStuff
 
 
             AzItemRendererRegistry.register(SoulcallingScepterRenderer::new, HnSItemRegistry.SOULCALLING_SCEPTER.get());
+            AzItemRendererRegistry.register(InsaniaAeternusRenderer::new, HnSItemRegistry.INSANIA_AETERNUS.get());
 
             //Curios Rendering Registry
 
@@ -376,6 +379,7 @@ public class HazenNStuff
 
                     // Staves
                     HnSItemRegistry.SOULCALLING_SCEPTER.get(),
+                    HnSItemRegistry.INSANIA_AETERNUS.get(),
 
                     // Curios
 

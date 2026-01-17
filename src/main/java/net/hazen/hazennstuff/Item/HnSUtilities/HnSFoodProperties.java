@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Misc;
+package net.hazen.hazennstuff.Item.HnSUtilities;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

@@ -30,7 +30,6 @@ public class AscendedArbitriumRobesElytraArmorItem extends ImbuableHnSArmorItem 
 
     public AscendedArbitriumRobesElytraArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.DEUS_MATERIAL, type, settings,
-                //new AttributeContainer(ALObjects.Attributes.ELYTRA_FLIGHT, 1, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 9900, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, 1, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.COOLDOWN_REDUCTION, 0.90, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)

@@ -3857,11 +3857,52 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 *** Misc
                  */
 
-                //Cryogenic Ruler Armor
+                /*
+                *** Dedicated Armor
+                 */
+
+                //Atlas Armor
+
                 .add(HnSItemRegistry.ATLAS_HELMET.get())
                 .add(HnSItemRegistry.ATLAS_CHESTPLATE.get())
                 .add(HnSItemRegistry.ATLAS_LEGGINGS.get())
                 .add(HnSItemRegistry.ATLAS_BOOTS.get())
+
+                //Fireblossom Battlemage Armor
+
+                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
+
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
+
+                //Lemon God Armor
+
+                .add(HnSItemRegistry.LEMON_GOD_HELMET.get())
+                .add(HnSItemRegistry.LEMON_GOD_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEMON_GOD_LEGGINGS.get())
+                .add(HnSItemRegistry.LEMON_GOD_BOOTS.get())
+
+                .add(HnSItemRegistry.ASCENDED_LEMON_GOD_HELMET.get())
+                .add(HnSItemRegistry.ASCENDED_LEMON_GOD_CHESTPLATE.get())
+                .add(HnSItemRegistry.ASCENDED_LEMON_GOD_LEGGINGS.get())
+                .add(HnSItemRegistry.ASCENDED_LEMON_GOD_BOOTS.get())
+
+                .add(HnSItemRegistry.GECKOLIB_LEMON_GOD_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_LEMON_GOD_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_LEMON_GOD_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_LEMON_GOD_BOOTS.get())
+
+                .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_BOOTS.get())
         ;
 
 

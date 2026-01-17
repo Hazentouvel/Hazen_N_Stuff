@@ -33,7 +33,7 @@ public class AscendedArbitriumRobesArmorItem extends ImbuableHnSArmorItem implem
     public final HnSDispatcher dispatcher;
 
     public AscendedArbitriumRobesArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
+        super(HnSArmorMaterials.DEUS_MATERIAL, type, settings,
                 new AttributeContainer(ALObjects.Attributes.ELYTRA_FLIGHT, 1, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 9900, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, 1, AttributeModifier.Operation.ADD_VALUE),

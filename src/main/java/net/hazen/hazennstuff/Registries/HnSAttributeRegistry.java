@@ -16,11 +16,11 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class HnSAttributeRegistry {
     private static final DeferredRegister<Attribute> ATTRIBUTES = DeferredRegister.create(Registries.ATTRIBUTE, HazenNStuff.MOD_ID);
 
-    public static final DeferredHolder<Attribute, Attribute> RADIANCE_MAGIC_RESIST = registerResistanceAttribute("radiance");
-    public static final DeferredHolder<Attribute, Attribute> SHADOW_MAGIC_RESIST = registerResistanceAttribute("shadow");
+    public static final DeferredHolder<Attribute, Attribute> RADIANCE_SPELL_RESIST = registerResistanceAttribute("radiance");
+    public static final DeferredHolder<Attribute, Attribute> SHADOW_SPELL_RESIST = registerResistanceAttribute("shadow");
 
-    public static final DeferredHolder<Attribute, Attribute> RADIANCE_MAGIC_POWER = registerPowerAttribute("radiance");
-    public static final DeferredHolder<Attribute, Attribute> SHADOW_MAGIC_POWER = registerPowerAttribute("shadow");
+    public static final DeferredHolder<Attribute, Attribute> RADIANCE_SPELL_POWER = registerPowerAttribute("radiance");
+    public static final DeferredHolder<Attribute, Attribute> SHADOW_SPELL_POWER = registerPowerAttribute("shadow");
 
     public static void register(IEventBus eventBus)
     {

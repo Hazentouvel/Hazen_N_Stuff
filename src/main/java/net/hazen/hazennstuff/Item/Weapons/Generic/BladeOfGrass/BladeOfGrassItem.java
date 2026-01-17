@@ -2,7 +2,7 @@ package net.hazen.hazennstuff.Item.Weapons.Generic.BladeOfGrass;
 
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.Item.Weapons.HnSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.Item.HnSUtilities.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;

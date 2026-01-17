@@ -34,8 +34,8 @@ public class HnSSchoolRegistry {
                     RADIANCE_RESOURCE,
                     HnSTags.RADIANCE_FOCUS,
                     Component.translatable("school.hazennstuff.radiance").withStyle(Style.EMPTY.withColor(0xe4a6ea)),
-                    HnSAttributeRegistry.RADIANCE_MAGIC_POWER,
-                    HnSAttributeRegistry.RADIANCE_MAGIC_RESIST,
+                    HnSAttributeRegistry.RADIANCE_SPELL_POWER,
+                    HnSAttributeRegistry.RADIANCE_SPELL_RESIST,
                     SoundRegistry.EVOCATION_CAST,
                     HnSDamageTypes.RADIANCE_MAGIC
             ));
@@ -47,8 +47,8 @@ public class HnSSchoolRegistry {
                     SHADOW_RESOURCE,
                     HnSTags.SHADOW_FOCUS,
                     Component.translatable("school.hazennstuff.shadow").withStyle(Style.EMPTY.withColor(0x553a7f)),
-                    HnSAttributeRegistry.SHADOW_MAGIC_POWER,
-                    HnSAttributeRegistry.SHADOW_MAGIC_RESIST,
+                    HnSAttributeRegistry.SHADOW_SPELL_POWER,
+                    HnSAttributeRegistry.SHADOW_SPELL_RESIST,
                     SoundRegistry.BLOOD_CAST,
                     HnSDamageTypes.SHADOW_MAGIC
             ));

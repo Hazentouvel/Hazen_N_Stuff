@@ -30,7 +30,6 @@ public class ArbitriumRobesElytraArmorItem extends ImbuableHnSArmorItem implemen
 
     public ArbitriumRobesElytraArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
-                //new AttributeContainer(ALObjects.Attributes.ELYTRA_FLIGHT, 1, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 300.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
@@ -81,6 +80,6 @@ public class ArbitriumRobesElytraArmorItem extends ImbuableHnSArmorItem implemen
 
     @Override
     public boolean elytraFlightTick(ItemStack stack, LivingEntity entity, int flightTicks) {
-        return true; // Needed to allow flight ticking
+        return true;
     }
 }

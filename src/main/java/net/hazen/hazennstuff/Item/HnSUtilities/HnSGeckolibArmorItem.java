@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Armor.Geckolib;
+package net.hazen.hazennstuff.Item.HnSUtilities;
 
 import com.google.common.base.Suppliers;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
@@ -72,14 +72,68 @@ public class HnSGeckolibArmorItem extends ArmorItem implements GeoItem {
 
     }
 
-    // Can also be used for giving two attributes, doesn't have to be resistance
-    public static AttributeContainer[] schoolAttributesWithResistance(Holder<Attribute> school, Holder<Attribute> resistSchool, int mana, float schoolSpellPower, float spellPower, float resistSpellPower)
+    public static AttributeContainer[] pureTier(Holder<Attribute> school)
     {
         return new AttributeContainer[]{
-                new AttributeContainer(AttributeRegistry.MAX_MANA, mana, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(school, schoolSpellPower, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(resistSchool, resistSpellPower, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, spellPower, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)};
+                new AttributeContainer(school, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.MAX_MANA, 200, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.ELDRITCH_SPELL_POWER, 0.05f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+        };
+    }
+
+    public static AttributeContainer[] pureTierMulti(Holder<Attribute> school1, Holder<Attribute> school2)
+    {
+        return new AttributeContainer[]{
+                new AttributeContainer(school1, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(school2, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.MAX_MANA, 200, AttributeModifier.Operation.ADD_VALUE),
+        };
+    }
+
+    public static AttributeContainer[] pureTierTri(Holder<Attribute> school1, Holder<Attribute> school2)
+    {
+        return new AttributeContainer[]{
+                new AttributeContainer(school1, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(school2, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(school2, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.MAX_MANA, 200, AttributeModifier.Operation.ADD_VALUE),
+        };
+    }
+
+    public static AttributeContainer[] paragonTier(Holder<Attribute> school)
+    {
+        return new AttributeContainer[]{
+                new AttributeContainer(school, 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.MAX_MANA, 300, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.SPELL_RESIST, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+        };
+    }
+
+    public static AttributeContainer[] paragonTierMulti(Holder<Attribute> school1, Holder<Attribute> school2)
+    {
+        return new AttributeContainer[]{
+                new AttributeContainer(school1, 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(school2, 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.MAX_MANA, 300, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.SPELL_RESIST, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+        };
+    }
+
+    public static AttributeContainer[] paragonTierTri(Holder<Attribute> school1, Holder<Attribute> school2, Holder<Attribute> school3)
+    {
+        return new AttributeContainer[]{
+                new AttributeContainer(school1, 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(school2, 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(school3, 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.MAX_MANA, 300, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.SPELL_RESIST, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+        };
     }
 
     @Override

@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Weapons;
+package net.hazen.hazennstuff.Item.HnSUtilities;
 
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
@@ -536,7 +536,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(HnSAttributeRegistry.RADIANCE_MAGIC_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(HnSAttributeRegistry.RADIANCE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
@@ -548,7 +548,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(HnSAttributeRegistry.RADIANCE_MAGIC_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(HnSAttributeRegistry.RADIANCE_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
@@ -563,7 +563,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(HnSAttributeRegistry.RADIANCE_MAGIC_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            new AttributeContainer(HnSAttributeRegistry.RADIANCE_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
     public static HnSExtendedWeaponsTiers TERRAPRISMA = new HnSExtendedWeaponsTiers(
@@ -576,7 +576,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(HnSAttributeRegistry.RADIANCE_MAGIC_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            new AttributeContainer(HnSAttributeRegistry.RADIANCE_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
     /*
@@ -590,7 +590,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
-            new AttributeContainer(HnSAttributeRegistry.SHADOW_MAGIC_POWER, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            new AttributeContainer(HnSAttributeRegistry.SHADOW_SPELL_POWER, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
     public static HnSExtendedWeaponsTiers NIGHTS_EDGE = new HnSExtendedWeaponsTiers(

@@ -31,15 +31,14 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
 
+import static net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorItem.pureTier;
+
 public class GeckolibGabrielElytraItem extends ImbuableChestplateArmorItem implements IDisableJacket, IDisableHat {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     public GeckolibGabrielElytraItem(Type type, Properties settings) {
-        // Add in your armor tier + additional attributes for your item
-        super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
-                new AttributeContainer(AttributeRegistry.MAX_MANA, 500.0, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(ALObjects.Attributes.ELYTRA_FLIGHT, 1, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, .25, AttributeModifier.Operation.ADD_VALUE)
-        );
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, pureTier(
+                AttributeRegistry.HOLY_SPELL_POWER
+        ));
     }
 
     public List<ItemAttributeModifiers.Entry> createExtraAttributes() {

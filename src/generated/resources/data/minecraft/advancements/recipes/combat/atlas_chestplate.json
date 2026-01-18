@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_creaking_sorcerer_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hazennstuff:creaking_sorcerer_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:atlas_chestplate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_creaking_sorcerer_chestplate",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:atlas_chestplate"
+    ]
+  },
+  "sends_telemetry_event": false
+}

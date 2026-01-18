@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:magic_cloth"
+  },
+  "base": {
+    "item": "hazennstuff:pyrium_leggings"
+  },
+  "result": {
+    "item": "hazennstuff:legionnaire_ruler_leggings"
+  },
+  "template": {
+    "item": "hazennstuff:pyrium_nugget"
+  }
+}

@@ -1,9 +1,9 @@
-// 1.20.1	2025-11-04T13:17:23.0568991	Tags for minecraft:item mod id hazennstuff
-e0c942894d1401835d60080dadc1e25312f83085 data/forge/tags/items/armors.json
-05f95d402baf85f1892ad53b356f31321ad86a9f data/forge/tags/items/armors/boots.json
-3ef59b9a3c9340d569bf19273f327e5cd8574cf3 data/forge/tags/items/armors/chestplates.json
-804683cb81e09597afa068506b924664c5cd6ed8 data/forge/tags/items/armors/helmets.json
-9180242efc67081a1a5f64137b007230a1592028 data/forge/tags/items/armors/leggings.json
+// 1.20.1	2026-01-18T16:19:22.0714981	Tags for minecraft:item mod id hazennstuff
+ec195a697225029a4e5241950d141ae0fc954607 data/forge/tags/items/armors.json
+53a04a231402265cb907b232a47b682c8f87f16f data/forge/tags/items/armors/boots.json
+0b0ce89ab1109c6d15805b02b8a6f793af31bde1 data/forge/tags/items/armors/chestplates.json
+29e94deb25c01c3e70c8c60670ba247e419e520e data/forge/tags/items/armors/helmets.json
+a3775cd967f66b5287f14f5f72aee6fdb7c57e2f data/forge/tags/items/armors/leggings.json
 7a9059793c8505cd5af0f6144ecf08ae911c04f1 data/forge/tags/items/ingots.json
 ea68fd0ffa19680e06875f8993f3f4be9b1d3339 data/forge/tags/items/ingots/steel.json
 00cb4afae331931aed9e2de60d41b16a60a7ca6c data/forge/tags/items/nuggets.json

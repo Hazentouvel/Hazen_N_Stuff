@@ -13,7 +13,7 @@ import software.bernie.geckolib.renderer.layer.GeoRenderLayer;
 public class EnderconicScepterLayer extends GeoRenderLayer<EnderconicScepter> {
     private static final ResourceLocation LAYER = ResourceLocation.fromNamespaceAndPath(
             "hazennstuff",
-            "textures/staves/enderconic_staff_glowmask.png");
+            "textures/staves/enderconic_scepter_glowmask.png");
 
     public EnderconicScepterLayer(GeoRenderer<EnderconicScepter> entityRenderer) {
         super(entityRenderer);

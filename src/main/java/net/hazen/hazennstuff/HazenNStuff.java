@@ -3,10 +3,7 @@ package net.hazen.hazennstuff;
 import com.mojang.logging.LogUtils;
 import net.hazen.hazennstuff.Blocks.HnSBlockRegistry;
 import net.hazen.hazennstuff.Registries.HnSCreativeModeTabs;
-import net.hazen.hazennstuff.Registries.ItemRegistries.HnSArmorItemRegistry;
-import net.hazen.hazennstuff.Registries.ItemRegistries.HnSMaterialItemRegistry;
-import net.hazen.hazennstuff.Registries.ItemRegistries.HnSStaveItemRegistry;
-import net.hazen.hazennstuff.Registries.ItemRegistries.HnSWeaponItemRegistry;
+import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -34,14 +31,7 @@ public class HazenNStuff
 
         HnSCreativeModeTabs.register(modEventBus);
 
-        /*
-        *** Item Registries
-         */
-
-        HnSArmorItemRegistry.register(modEventBus);
-        HnSMaterialItemRegistry.register(modEventBus);
-        HnSWeaponItemRegistry.register(modEventBus);
-        HnSStaveItemRegistry.register(modEventBus);
+        HnSItemRegistry.register(modEventBus);
 
         HnSBlockRegistry.register(modEventBus);
 

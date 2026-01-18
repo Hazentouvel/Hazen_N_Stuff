@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "irons_spellbooks:arcane_ingot"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "M": {
+      "item": "hazennstuff:divine_mold"
+    }
+  },
+  "pattern": [
+    "DAD",
+    "DMD",
+    "DDD"
+  ],
+  "result": {
+    "count": 2,
+    "item": "hazennstuff:divine_mold"
+  },
+  "show_notification": true
+}

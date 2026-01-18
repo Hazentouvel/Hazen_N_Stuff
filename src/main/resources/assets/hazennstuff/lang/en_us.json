@@ -1,30 +1,4 @@
 {
-
-  "item.hazennstuff.calamity_fables.description": "A Calamity Fables reference.",
-  "item.hazennstuff.calamity.description": "A Calamity mod reference.",
-  "item.hazennstuff.tyros.description": "Bear the garments of the first flambearer...",
-  "item.hazennstuff.jojo.description": "A Jojo's Bizarre Adventure Reference.",
-  "item.hazennstuff.neru.description": "A reference to Neru Akita.",
-  "item.hazennstuff.ultrakill.description": "An Ultrakill Reference.",
-  "item.hazennstuff.terraria.description": "A Terraria reference.",
-  "item.hazennstuff.crk.description": "A Cookie Run Kingdom reference.",
-  "item.hazennstuff.honkai_star_rail.description": "A Honkai Star Rail Reference.",
-  "item.hazennstuff.mothic_witch.description": "This armor set is dedicated to Moth.",
-  "item.hazennstuff.abberant_predator.description": "This armor set is dedicated to Ill9ustratedSky.",
-  "item.hazennstuff.hazel.description": "Hazen's own armor set.",
-  "item.hazennstuff.cat.description": "This is dedicated to my good from of mine, Maverick___",
-  "item.hazennstuff.frieren.description": "A reference to the anime 'Frieren: Beyond Journey's End'.",
-  "item.hazennstuff.atlas.description": "This is a dedicated armor set for FoxeLocklear.",
-  "item.hazennstuff.calamitas.description": "A Calamity Mod Reference. This armor set resonates well with the scroll-forge...",
-  "item.hazennstuff.lemon_god.description": "An armor set dedicated to My401k.",
-  "item.hazennstuff.iron431.description": "An armor set dedicated to Iron431, a creator of Iron's Spells 'n Spellbooks.",
-  "item.hazennstuff.fireblossom_armor.description": "This is dedicated to MtheNinja.",
-  "item.hazennstuff.arbitrium_robes.description": "This is dedicated for Amadhe.",
-  "item.hazennstuff.dark_ritual_templar.description": "Discern the Eldritch... This armor set is dedicated for Ace_The_Eldritch_King",
-  "item.hazennstuff.sacred_robes.description": "An armor set dedicated to Smalls, a creator of Iron's Spells 'n Spellbooks.",
-
-
-
   "item.hazennstuff.excalibur_fragment": "Excalibur Fragment",
   "item.hazennstuff.deus_essence": "Deus Essence",
   "item.hazennstuff.runestone_fragments": "Runestone Fragments",
@@ -217,18 +191,22 @@
   "item.hazennstuff.skyscorcher": "Skyscorcher",
   "item.hazennstuff.skyscorcher.description": "The sky scorching axe, forged from the mace from the Trial Chambers. Works the same as a mace.",
   "item.hazennstuff.beongae": "Beongae",
+  "item.hazennstuff.ionic_splitter": "Ionic Splitter",
 
   "item.hazennstuff.bountiful_harvest": "Bountiful Harvest",
   "item.hazennstuff.thorn_chakram": "Thorn Chakram",
   "item.hazennstuff.blade_of_grass": "Blade of Grass",
+  "item.hazennstuff.o_fortuna": "O' Fortuna",
 
   "item.hazennstuff.vampire_knives": "Vampire Knives",
   "item.hazennstuff.vampire_knives.description": "A Terraria Reference. Right-Click to throw knives.",
+  "item.hazennstuff.devastator": "Devastator",
 
   "item.hazennstuff.starfury": "Starfury",
   "item.hazennstuff.obsidian_claymore": "Obsidian Claymore",
+  "item.hazennstuff.umbranova": "Umbranova",
 
-  "item.hazennstuff.hammer_of_justice": "Hammer of Justce",
+  "item.hazennstuff.hammer_of_justice": "Hammer of Justice",
   "item.hazennstuff.excalibur": "Excalibur",
   "item.hazennstuff.hazens_excalibur": "Excalibur",
   "item.hazennstuff.excalibur_divine_gold": "Excalibur",
@@ -240,6 +218,7 @@
 
   "item.hazennstuff.ancient_warriors_axe": "Ancient Warrior's Axe",
   "item.hazennstuff.malice": "Malice",
+  "item.hazennstuff.provocation": "Provocation",
 
   "item.hazennstuff.lights_bane": "Light's Bane",
   "item.hazennstuff.nights_edge": "Night's Edge",
@@ -746,6 +725,7 @@
 
 
   "creativetab.hazennstuff_materials": "Hazen 'n Stuff Materials",
+  "creativetab.hazennstuff_equipment": "Hazen 'n Stuff Equipment",
   "creativetab.hazennstuff_armor": "Hazen 'n Stuff Armor",
 
 

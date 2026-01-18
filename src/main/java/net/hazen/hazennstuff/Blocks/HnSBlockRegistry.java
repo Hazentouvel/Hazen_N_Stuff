@@ -1,7 +1,7 @@
 package net.hazen.hazennstuff.Blocks;
 
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.Registries.ItemRegistries.HnSMaterialItemRegistry;
+import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -49,7 +49,7 @@ public class HnSBlockRegistry {
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return HnSMaterialItemRegistry.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        return HnSItemRegistry.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {

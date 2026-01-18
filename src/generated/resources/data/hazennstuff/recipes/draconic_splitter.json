@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:netherite_sword"
+    },
+    "I": {
+      "item": "minecraft:blaze_rod"
+    },
+    "R": {
+      "item": "irons_spellbooks:fire_rune"
+    },
+    "W": {
+      "item": "irons_spellbooks:weapon_parts"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    " RI",
+    "ZBR",
+    "WZ "
+  ],
+  "result": {
+    "item": "hazennstuff:draconic_splitter"
+  },
+  "show_notification": true
+}

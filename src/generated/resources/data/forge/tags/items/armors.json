@@ -38,8 +38,13 @@
     "hazennstuff:infestation_leggings",
     "hazennstuff:infestation_boots",
     "hazennstuff:fireblossom_battlemage_helmet",
+    "hazennstuff:fireblossom_battlemage_crown",
     "hazennstuff:fireblossom_battlemage_chestplate",
     "hazennstuff:fireblossom_battlemage_leggings",
-    "hazennstuff:fireblossom_battlemage_boots"
+    "hazennstuff:fireblossom_battlemage_boots",
+    "hazennstuff:atlas_helmet",
+    "hazennstuff:atlas_chestplate",
+    "hazennstuff:atlas_leggings",
+    "hazennstuff:atlas_boots"
   ]
 }

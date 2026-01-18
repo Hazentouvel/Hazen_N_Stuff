@@ -1,7 +1,5 @@
 package net.hazen.hazennstuff.Items.Equipment.Weapons.FireblossomRapier;
 
-import net.hazen.hazennstuff.Items.Equipment.ArmorSets.Blazeborne.BlazeborneArmorItem;
-import net.hazen.hazennstuff.Items.Equipment.ArmorSets.EnderDragon.EnderDragonArmorItem;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.GeoModel;
 

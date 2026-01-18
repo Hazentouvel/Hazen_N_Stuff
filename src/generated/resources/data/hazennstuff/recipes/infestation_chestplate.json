@@ -2,6 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "M": {
+      "item": "hazennstuff:divine_mold"
+    },
     "R": {
       "tag": "hazennstuff:eldritch_rune"
     },
@@ -14,7 +17,7 @@
   },
   "pattern": [
     "ZSZ",
-    "ZRZ",
+    "RMR",
     "ZZZ"
   ],
   "result": {

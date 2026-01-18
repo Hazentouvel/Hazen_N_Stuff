@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:netherite_sword"
+    },
+    "I": {
+      "item": "irons_spellbooks:energized_core"
+    },
+    "R": {
+      "item": "irons_spellbooks:lightning_rune"
+    },
+    "W": {
+      "item": "irons_spellbooks:weapon_parts"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    " RI",
+    "ZBR",
+    "WZ "
+  ],
+  "result": {
+    "item": "hazennstuff:ionic_splitter"
+  },
+  "show_notification": true
+}

@@ -166,6 +166,14 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${jei_mc_version}-forge-api:${jei_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${jei_mc_version}-forge:${jei_version}")
 
+    //Better Combat
+    compileOnly  fg.deobf("curse.maven:better_combat-639842:7287334")
+    runtimeOnly  fg.deobf("curse.maven:better_combat-639842:7287334")
+
+    //Better Comb
+    compileOnly  fg.deobf("curse.maven:cloth_config_api-348521:5729105")
+    runtimeOnly  fg.deobf("curse.maven:cloth_config_api-348521:5729105")
+
     // Mixins
     annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
     // Mixin Extras

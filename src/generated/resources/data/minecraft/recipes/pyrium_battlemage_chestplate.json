@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:pyrium_ingot"
+  },
+  "base": {
+    "item": "irons_spellbooks:netherite_mage_chestplate"
+  },
+  "result": {
+    "item": "hazennstuff:pyrium_battlemage_chestplate"
+  },
+  "template": {
+    "item": "irons_spellbooks:timeless_slurry"
+  }
+}

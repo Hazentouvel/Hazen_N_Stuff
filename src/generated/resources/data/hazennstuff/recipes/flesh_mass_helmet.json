@@ -2,6 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "M": {
+      "item": "hazennstuff:divine_mold"
+    },
     "R": {
       "item": "irons_spellbooks:blood_rune"
     },
@@ -13,9 +16,9 @@
     }
   },
   "pattern": [
-    "ZRZ",
+    "RZR",
     "ZSZ",
-    "   "
+    " M "
   ],
   "result": {
     "item": "hazennstuff:flesh_mass_helmet"

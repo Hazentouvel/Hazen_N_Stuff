@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "irons_spellbooks:divine_soulshard"
+    },
+    "P": {
+      "item": "irons_spellbooks:pyrium_ingot"
+    },
+    "R": {
+      "item": "irons_spellbooks:blank_rune"
+    },
+    "S": {
+      "item": "irons_spellbooks:dragonskin"
+    },
+    "Z": {
+      "item": "hazennstuff:raw_zenalite"
+    }
+  },
+  "pattern": [
+    "ZDZ",
+    "ZRZ",
+    "SPS"
+  ],
+  "result": {
+    "count": 4,
+    "item": "hazennstuff:divine_mold"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "hazennstuff:item/armor_icons/atlas_chestplate"
+  }
+}

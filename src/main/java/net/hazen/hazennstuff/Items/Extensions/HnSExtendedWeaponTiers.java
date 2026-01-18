@@ -1,7 +1,7 @@
 package net.hazen.hazennstuff.Items.Extensions;
 
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
-import net.hazen.hazennstuff.Registries.ItemRegistries.HnSMaterialItemRegistry;
+import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
@@ -10,17 +10,18 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum HnSExtendedWeaponTiers implements Tier {
-    FIREBLOSSOM_RAPIER(3, 4800, -2.7f, 10, 16, () -> Ingredient.of(Items.BLAZE_ROD)),
-    ICE_PIKE(3, 1000, -2.6f, 5, 16, () -> Ingredient.of(HnSMaterialItemRegistry.ZENALITE_INGOT.get())),
-    IONIC_SPLITTER(3, 1000, -2.6f, 5, 16, () -> Ingredient.of(HnSMaterialItemRegistry.ZENALITE_INGOT.get())),
-    O_FORTUNA(3, 1000, -2.6f, 5, 16, () -> Ingredient.of(HnSMaterialItemRegistry.ZENALITE_INGOT.get())),
-    UMBRANOVA(3, 1000, -2.6f, 5, 16, () -> Ingredient.of(HnSMaterialItemRegistry.ZENALITE_INGOT.get())),
-    DEVESTATION(3, 1000, -2.6f, 5, 16, () -> Ingredient.of(HnSMaterialItemRegistry.ZENALITE_INGOT.get())),
-    PROVOCATION(3, 1000, -2.6f, 5, 16, () -> Ingredient.of(HnSMaterialItemRegistry.ZENALITE_INGOT.get())),
-    EXCALIBUR(3, 1000, -2.6f, 5, 16, () -> Ingredient.of(HnSMaterialItemRegistry.ZENALITE_INGOT.get())),
-    THE_DEVOURER(3, 1000, -2.6f, 5, 16, () -> Ingredient.of(HnSMaterialItemRegistry.ZENALITE_INGOT.get())),
-    RAVENS_BANE(3, 1000, -2.6f, 5, 16, () -> Ingredient.of(ItemRegistry.PYRIUM_INGOT.get())),
-    PYRIUM_TIER(3, 1681, -1.3f, 14.5F, 16, () -> Ingredient.of(ItemRegistry.PYRIUM_INGOT.get())),
+    FIREBLOSSOM_RAPIER(5, 6400, -1.7f, 10, 24, () -> Ingredient.of(Items.BLAZE_ROD)),
+    ICE_PIKE(5, 6400, -2.4f, 12, 24, () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get())),
+    IONIC_SPLITTER(5, 6400, -2f, 12, 24, () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get())),
+    O_FORTUNA(5, 6400, -2.6f, 12, 24, () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get())),
+    UMBRANOVA(5, 6400, -2.4f, 12, 24, () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get())),
+    DEVESTATOR(5, 6400, -2.4f, 12, 24, () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get())),
+    PROVOCATION(5, 6400, -2.1f, 12, 24, () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get())),
+    EXCALIBUR(5, 6400, -2f, 10, 24, () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get())),
+    THE_DEVOURER(5, 6400, -2.6f, 14, 24, () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get())),
+    RAVENS_BANE(6, 6400, -2.4f, 15, 32, () -> Ingredient.of(ItemRegistry.PYRIUM_INGOT.get())),
+    DRACONIC_SPLITTER(5, 6400, -2.7f, 13, 24, () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get())),
+    PYRIUM_TIER(6, 1681, -2.3f, 14F, 32, () -> Ingredient.of(ItemRegistry.PYRIUM_INGOT.get())),
     ;
 
     private final int level;

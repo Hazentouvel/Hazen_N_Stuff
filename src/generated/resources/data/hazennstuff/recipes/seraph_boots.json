@@ -2,6 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "M": {
+      "item": "hazennstuff:divine_mold"
+    },
     "R": {
       "item": "irons_spellbooks:holy_rune"
     },
@@ -13,9 +16,9 @@
     }
   },
   "pattern": [
-    "Z Z",
+    "RMR",
     "ZSZ",
-    " R "
+    "   "
   ],
   "result": {
     "item": "hazennstuff:seraph_boots"

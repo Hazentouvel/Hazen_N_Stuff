@@ -1,7 +1,7 @@
 package net.hazen.hazennstuff.Datagen.Items;
 
 import net.hazen.hazennstuff.Blocks.HnSBlockRegistry;
-import net.hazen.hazennstuff.Registries.ItemRegistries.HnSMaterialItemRegistry;
+import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
@@ -27,11 +27,11 @@ public class HnSBlockLootTables extends BlockLootSubProvider {
 
 
         this.add(HnSBlockRegistry.STONE_ZENALITE_ORE.get(),
-                block -> createOreDrop(HnSBlockRegistry.STONE_ZENALITE_ORE.get(), HnSMaterialItemRegistry.RAW_ZENALITE.get()));
+                block -> createOreDrop(HnSBlockRegistry.STONE_ZENALITE_ORE.get(), HnSItemRegistry.RAW_ZENALITE.get()));
         this.add(HnSBlockRegistry.DEEPSLATE_ZENALITE_ORE.get(),
-                block -> createOreDrop(HnSBlockRegistry.DEEPSLATE_ZENALITE_ORE.get(), HnSMaterialItemRegistry.RAW_ZENALITE.get()));
+                block -> createOreDrop(HnSBlockRegistry.DEEPSLATE_ZENALITE_ORE.get(), HnSItemRegistry.RAW_ZENALITE.get()));
         this.add(HnSBlockRegistry.END_STONE_ZENALITE_ORE.get(),
-                block -> createOreDrop(HnSBlockRegistry.END_STONE_ZENALITE_ORE.get(), HnSMaterialItemRegistry.RAW_ZENALITE.get()));
+                block -> createOreDrop(HnSBlockRegistry.END_STONE_ZENALITE_ORE.get(), HnSItemRegistry.RAW_ZENALITE.get()));
 
     }
 

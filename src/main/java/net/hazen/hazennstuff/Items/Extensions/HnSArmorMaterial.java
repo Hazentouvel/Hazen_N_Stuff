@@ -22,6 +22,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ArmorItem.Type;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import org.w3c.dom.Attr;
 
 public enum HnSArmorMaterial implements ArmorMaterial {
 
@@ -34,7 +35,7 @@ public enum HnSArmorMaterial implements ArmorMaterial {
             15, SoundEvents.ARMOR_EQUIP_NETHERITE,
             0.0F,
             0.0F,
-            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MAGIC_CLOTH.get()}),
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MITHRIL_WEAVE.get()}),
             Map.of(
                     (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", (double)200.0F, Operation.ADDITION),
                     (Attribute)AttributeRegistry.FIRE_SPELL_POWER.get(), new AttributeModifier("Fire Power", 0.15, Operation.MULTIPLY_BASE),
@@ -46,7 +47,7 @@ public enum HnSArmorMaterial implements ArmorMaterial {
             15, SoundEvents.ARMOR_EQUIP_NETHERITE,
             0.0F,
             0.0F,
-            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MAGIC_CLOTH.get()}),
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MITHRIL_WEAVE.get()}),
             Map.of(
                     (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", (double)200.0F, Operation.ADDITION),
                     (Attribute)AttributeRegistry.ICE_SPELL_POWER.get(), new AttributeModifier("Ice Power", 0.15, Operation.MULTIPLY_BASE),
@@ -58,7 +59,7 @@ public enum HnSArmorMaterial implements ArmorMaterial {
             15, SoundEvents.ARMOR_EQUIP_NETHERITE,
             0.0F,
             0.0F,
-            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MAGIC_CLOTH.get()}),
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MITHRIL_WEAVE.get()}),
             Map.of(
                     (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", (double)200.0F, Operation.ADDITION),
                     (Attribute)AttributeRegistry.LIGHTNING_SPELL_POWER.get(), new AttributeModifier("Lightning Power", 0.15, Operation.MULTIPLY_BASE),
@@ -70,7 +71,7 @@ public enum HnSArmorMaterial implements ArmorMaterial {
             15, SoundEvents.ARMOR_EQUIP_NETHERITE,
             0.0F,
             0.0F,
-            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MAGIC_CLOTH.get()}),
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MITHRIL_WEAVE.get()}),
             Map.of(
                     (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", (double)200.0F, Operation.ADDITION),
                     (Attribute)AttributeRegistry.NATURE_SPELL_POWER.get(), new AttributeModifier("Nature Power", 0.15, Operation.MULTIPLY_BASE),
@@ -82,7 +83,7 @@ public enum HnSArmorMaterial implements ArmorMaterial {
             15, SoundEvents.ARMOR_EQUIP_NETHERITE,
             0.0F,
             0.0F,
-            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MAGIC_CLOTH.get()}),
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MITHRIL_WEAVE.get()}),
             Map.of(
                     (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", (double)200.0F, Operation.ADDITION),
                     (Attribute)AttributeRegistry.ENDER_SPELL_POWER.get(), new AttributeModifier("Ender Power", 0.15, Operation.MULTIPLY_BASE),
@@ -94,7 +95,7 @@ public enum HnSArmorMaterial implements ArmorMaterial {
             15, SoundEvents.ARMOR_EQUIP_NETHERITE,
             0.0F,
             0.0F,
-            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MAGIC_CLOTH.get()}),
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MITHRIL_WEAVE.get()}),
             Map.of(
                     (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", (double)200.0F, Operation.ADDITION),
                     (Attribute)AttributeRegistry.BLOOD_SPELL_POWER.get(), new AttributeModifier("Blood Power", 0.15, Operation.MULTIPLY_BASE),
@@ -106,7 +107,7 @@ public enum HnSArmorMaterial implements ArmorMaterial {
             15, SoundEvents.ARMOR_EQUIP_NETHERITE,
             0.0F,
             0.0F,
-            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MAGIC_CLOTH.get()}),
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MITHRIL_WEAVE.get()}),
             Map.of(
                     (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", (double)200.0F, Operation.ADDITION),
                     (Attribute)AttributeRegistry.HOLY_SPELL_POWER.get(), new AttributeModifier("Holy Power", 0.15, Operation.MULTIPLY_BASE),
@@ -118,7 +119,7 @@ public enum HnSArmorMaterial implements ArmorMaterial {
             15, SoundEvents.ARMOR_EQUIP_NETHERITE,
             0.0F,
             0.0F,
-            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MAGIC_CLOTH.get()}),
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MITHRIL_WEAVE.get()}),
             Map.of(
                     (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", (double)200.0F, Operation.ADDITION),
                     (Attribute)AttributeRegistry.EVOCATION_SPELL_POWER.get(), new AttributeModifier("Evocation Power", 0.15, Operation.MULTIPLY_BASE),
@@ -131,10 +132,82 @@ public enum HnSArmorMaterial implements ArmorMaterial {
             15, SoundEvents.ARMOR_EQUIP_NETHERITE,
             0.0F,
             0.0F,
-            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MAGIC_CLOTH.get()}),
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MITHRIL_WEAVE.get()}),
             Map.of(
                     (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", (double)200.0F, Operation.ADDITION),
                     (Attribute)AttributeRegistry.ELDRITCH_SPELL_POWER.get(), new AttributeModifier("Eldritch Power", 0.2, Operation.MULTIPLY_BASE),
+                    (Attribute)AttributeRegistry.SPELL_POWER.get(), new AttributeModifier("Base Power", 0.15, Operation.MULTIPLY_BASE))),
+
+    PYRIUM("pyrium",
+            38, pyriumArmorMap(),
+            20, SoundEvents.ARMOR_EQUIP_NETHERITE,
+            0.5F,
+            0.0F,
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.PYRIUM_INGOT.get()}),
+            Map.of(
+                    (Attribute) Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", 0.05, Operation.MULTIPLY_BASE),
+                    (Attribute) Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier("Knockback Resistance", 1.0D, Operation.ADDITION)
+            )),
+
+    PYRIUM_BATTLEMAGE("pyrium_battlemage",
+            38, pyriumArmorMap(),
+            15, SoundEvents.ARMOR_EQUIP_NETHERITE,
+            0.0F,
+            0.0F,
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.PYRIUM_INGOT.get()}),
+            Map.of(
+                    (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", 200.0D, Operation.ADDITION),
+                    (Attribute)AttributeRegistry.CASTING_MOVESPEED.get(), new AttributeModifier("Casting Movespeed", 0.15, Operation.MULTIPLY_BASE),
+                    (Attribute)AttributeRegistry.CAST_TIME_REDUCTION.get(), new AttributeModifier("Cast Time Reduction", 0.15, Operation.MULTIPLY_BASE),
+                    (Attribute)AttributeRegistry.SPELL_POWER.get(), new AttributeModifier("Base Power", 0.15, Operation.MULTIPLY_BASE))),
+
+    MITHRIL_BATTLEMAGE("mithril_battlemage",
+            38, schoolArmorMap(),
+            15, SoundEvents.ARMOR_EQUIP_NETHERITE,
+            0.0F,
+            0.0F,
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.PYRIUM_INGOT.get()}),
+            Map.of(
+                    (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", 200.0D, Operation.ADDITION),
+                    (Attribute)AttributeRegistry.CASTING_MOVESPEED.get(), new AttributeModifier("Casting Movespeed", 0.15, Operation.MULTIPLY_BASE),
+                    (Attribute)AttributeRegistry.COOLDOWN_REDUCTION.get(), new AttributeModifier("Cooldown Reduction", 0.15, Operation.MULTIPLY_BASE),
+                    (Attribute)AttributeRegistry.SPELL_POWER.get(), new AttributeModifier("Base Power", 0.15, Operation.MULTIPLY_BASE))),
+
+    LEGIONNAIRE_RULER("legionnaire_ruler",
+            38, pyriumArmorMap(),
+            15, SoundEvents.ARMOR_EQUIP_NETHERITE,
+            0.0F,
+            0.0F,
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.PYRIUM_INGOT.get()}),
+            Map.of(
+                    (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", 300.0D, Operation.ADDITION),
+                    (Attribute)AttributeRegistry.FIRE_SPELL_POWER.get(), new AttributeModifier("Fire Power", 0.15, Operation.MULTIPLY_BASE),
+                    (Attribute)AttributeRegistry.CAST_TIME_REDUCTION.get(), new AttributeModifier("Fire Power", 0.05, Operation.MULTIPLY_BASE),
+                    (Attribute)AttributeRegistry.SUMMON_DAMAGE.get(), new AttributeModifier("Nature Power", 0.1, Operation.MULTIPLY_BASE),
+                    (Attribute)AttributeRegistry.SPELL_POWER.get(), new AttributeModifier("Base Power", 0.15, Operation.MULTIPLY_BASE))),
+
+    LEGIONNAIRE_COMMANDER("legionnaire_ruler",
+            38, pyriumArmorMap(),
+            15, SoundEvents.ARMOR_EQUIP_NETHERITE,
+            0.0F,
+            0.0F,
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.PYRIUM_INGOT.get()}),
+            Map.of(
+                    (Attribute)Attributes.ATTACK_DAMAGE, new AttributeModifier("Attack Damage", 0.5D, Operation.ADDITION),
+                    (Attribute)AttributeRegistry.FIRE_SPELL_POWER.get(), new AttributeModifier("Fire Power", 0.1, Operation.MULTIPLY_BASE),
+                    (Attribute)Attributes.ATTACK_SPEED, new AttributeModifier("Attack Speed", 0.1, Operation.MULTIPLY_BASE),
+                    (Attribute)AttributeRegistry.SPELL_POWER.get(), new AttributeModifier("Base Power", 0.15, Operation.MULTIPLY_BASE))),
+
+    ATLAS("atlas",
+            38, schoolArmorMap(),
+            15, SoundEvents.ARMOR_EQUIP_NETHERITE,
+            0.0F,
+            0.0F,
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MITHRIL_WEAVE.get()}),
+            Map.of(
+                    (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", 200.0D, Operation.ADDITION),
+                    (Attribute)AttributeRegistry.EVOCATION_SPELL_POWER.get(), new AttributeModifier("Evocation Power", 0.15, Operation.MULTIPLY_BASE),
+                    (Attribute)AttributeRegistry.NATURE_SPELL_POWER.get(), new AttributeModifier("Nature Power", 0.15, Operation.MULTIPLY_BASE),
                     (Attribute)AttributeRegistry.SPELL_POWER.get(), new AttributeModifier("Base Power", 0.15, Operation.MULTIPLY_BASE))),
 
 
@@ -143,7 +216,7 @@ public enum HnSArmorMaterial implements ArmorMaterial {
             15, SoundEvents.ARMOR_EQUIP_NETHERITE,
             0.0F,
             0.0F,
-            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MAGIC_CLOTH.get()}),
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MITHRIL_WEAVE.get()}),
             Map.of(
                     (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", 200.0D, Operation.ADDITION),
                     (Attribute)AttributeRegistry.FIRE_SPELL_POWER.get(), new AttributeModifier("Fire Power", 0.15, Operation.MULTIPLY_BASE),
@@ -156,7 +229,7 @@ public enum HnSArmorMaterial implements ArmorMaterial {
             15, SoundEvents.ARMOR_EQUIP_NETHERITE,
             0.0F,
             0.0F,
-            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MAGIC_CLOTH.get()}),
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MITHRIL_WEAVE.get()}),
             Map.of(
                     (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", 400.0D, Operation.ADDITION),
                     (Attribute)AttributeRegistry.FIRE_SPELL_POWER.get(), new AttributeModifier("Fire Power", 0.25, Operation.MULTIPLY_BASE),
@@ -168,7 +241,7 @@ public enum HnSArmorMaterial implements ArmorMaterial {
             15, SoundEvents.ARMOR_EQUIP_NETHERITE,
             0.0F,
             0.0F,
-            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MAGIC_CLOTH.get()}),
+            () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.MITHRIL_WEAVE.get()}),
             Map.of(
                     (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", 200.0D, Operation.ADDITION),
                     (Attribute)AttributeRegistry.FIRE_SPELL_POWER.get(), new AttributeModifier("Fire Power", 0.05, Operation.MULTIPLY_BASE),
@@ -176,8 +249,6 @@ public enum HnSArmorMaterial implements ArmorMaterial {
                     (Attribute)Attributes.ATTACK_DAMAGE, new AttributeModifier("Nature Power", 3D, Operation.ADDITION),
                     (Attribute)Attributes.ATTACK_SPEED, new AttributeModifier("Nature Power", 0.6D, Operation.ADDITION),
                     (Attribute)AttributeRegistry.SPELL_POWER.get(), new AttributeModifier("Base Power", 0.1, Operation.MULTIPLY_BASE)))
-
-
     ;
 
 
@@ -221,6 +292,10 @@ public enum HnSArmorMaterial implements ArmorMaterial {
 
     public static EnumMap<Type, Integer> schoolArmorMap() {
         return makeArmorMap(3, 8, 6, 3);
+    }
+
+    public static EnumMap<Type, Integer> pyriumArmorMap() {
+        return makeArmorMap(4, 9, 7, 4);
     }
 
     public int getDurabilityForSlot(EquipmentSlot pSlot) {

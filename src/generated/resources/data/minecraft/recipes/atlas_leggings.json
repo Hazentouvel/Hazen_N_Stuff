@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:blank_rune"
+  },
+  "base": {
+    "item": "hazennstuff:alchemist_supreme_leggings"
+  },
+  "result": {
+    "item": "hazennstuff:atlas_leggings"
+  },
+  "template": {
+    "item": "hazennstuff:creaking_sorcerer_leggings"
+  }
+}

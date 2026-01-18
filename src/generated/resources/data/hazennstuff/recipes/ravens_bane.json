@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "irons_spellbooks:hellrazor"
+    },
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "R": {
+      "item": "irons_spellbooks:fire_rune"
+    },
+    "W": {
+      "item": "irons_spellbooks:weapon_parts"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "ZFR",
+    "ZBR",
+    "WZ "
+  ],
+  "result": {
+    "item": "hazennstuff:ravens_bane"
+  },
+  "show_notification": true
+}

@@ -22,6 +22,6 @@ public class EnderconicScepterModel extends DefaultedItemGeoModel<EnderconicScep
 
     @Override
     public ResourceLocation getAnimationResource(EnderconicScepter animatable) {
-        return ResourceLocation.fromNamespaceAndPath(IronsSpellbooks.MODID, "animations/item/staves/enderconic_scepter.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/item/staves/enderconic_scepter.animation.json");
     }
 }

@@ -149,8 +149,11 @@
   "item.hazennstuff.ring_of_efficiency": "Ring of Efficiency",
 
   "item.hazennstuff.blade_of_the_legate": "Blade of the Legate",
+  "item.hazennstuff.blade_of_the_legate.desc": "A symbol, showing the rank of the legate...",
   "item.hazennstuff.the_prefects_ring": "The Prefect's Ring",
+  "item.hazennstuff.the_prefects_ring.desc": "A prized posession, showing the rank of the prefect...",
   "item.hazennstuff.the_tribunes_medallion": "The Tribune's Medallion",
+  "item.hazennstuff.the_tribunes_medallion.desc": "A medallion, showing the rank of the tribune...",
   "item.hazennstuff.legionnaire_curios.description": "This curio seems to resonate with a certain spell...",
 
 

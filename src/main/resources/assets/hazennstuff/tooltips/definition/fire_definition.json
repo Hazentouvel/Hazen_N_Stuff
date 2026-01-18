@@ -3,6 +3,6 @@
   "style": "hazennstuff:fire_style",
   "filter": {
     "type": "obscure_tooltips:rarity",
-    "rarity": "fire"
+    "rarity": "hazennstuff_fire"
   }
 }

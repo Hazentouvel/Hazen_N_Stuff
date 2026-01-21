@@ -272,35 +272,35 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> HAZEL_CHESTPLATE = ITEMS.register("hazel_chestplate", () -> new HazelArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> BIG_HAZEL_CHESTPLATE = ITEMS.register("how_did_you_find_the_hazel_chestplate", () -> new BigHazelArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> HAZEL_LEGGINGS = ITEMS.register("hazel_leggings", () -> new HazelArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> HAZEL_BOOTS = ITEMS.register("hazel_boots", () -> new HazelArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     // Blazeborne
@@ -309,28 +309,28 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> BLAZEBORNE_CHESTPLATE = ITEMS.register("blazeborne_chestplate", () -> new BlazeborneArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> BLAZEBORNE_LEGGINGS = ITEMS.register("blazeborne_leggings", () -> new BlazeborneArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> BLAZEBORNE_BOOTS = ITEMS.register("blazeborne_boots", () -> new BlazeborneArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     /*
@@ -343,28 +343,28 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> CRYOGENIC_RULER_CHESTPLATE = ITEMS.register("cryogenic_ruler_chestplate", () -> new CryogenicRulerArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> CRYOGENIC_RULER_LEGGINGS = ITEMS.register("cryogenic_ruler_leggings", () -> new CryogenicRulerArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> CRYOGENIC_RULER_BOOTS = ITEMS.register("cryogenic_ruler_boots", () -> new CryogenicRulerArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     /*
@@ -377,28 +377,28 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> CREAKING_SORCERER_CHESTPLATE = ITEMS.register("creaking_sorcerer_chestplate", () -> new CreakingSorcererArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> CREAKING_SORCERER_LEGGINGS = ITEMS.register("creaking_sorcerer_leggings", () -> new CreakingSorcererArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> CREAKING_SORCERER_BOOTS = ITEMS.register("creaking_sorcerer_boots", () -> new CreakingSorcererArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     /*
@@ -411,28 +411,28 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> THUNDER_PROWLER_CHESTPLATE = ITEMS.register("thunder_prowler_chestplate", () -> new ThunderProwlerArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> THUNDER_PROWLER_LEGGINGS = ITEMS.register("thunder_prowler_leggings", () -> new ThunderProwlerArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> THUNDER_PROWLER_BOOTS = ITEMS.register("thunder_prowler_boots", () -> new ThunderProwlerArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     /*
@@ -445,28 +445,28 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> ENDER_DRAGON_CHESTPLATE = ITEMS.register("ender_dragon_chestplate", () -> new EnderDragonArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> ENDER_DRAGON_LEGGINGS = ITEMS.register("ender_dragon_leggings", () -> new EnderDragonArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> ENDER_DRAGON_BOOTS = ITEMS.register("ender_dragon_boots", () -> new EnderDragonArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     /*
@@ -479,28 +479,28 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> FLESH_MASS_CHESTPLATE = ITEMS.register("flesh_mass_chestplate", () -> new FleshMassArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> FLESH_MASS_LEGGINGS = ITEMS.register("flesh_mass_leggings", () -> new FleshMassArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> FLESH_MASS_BOOTS = ITEMS.register("flesh_mass_boots", () -> new FleshMassArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     /*
@@ -513,28 +513,28 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> ALCHEMIST_SUPREME_HELMET = ITEMS.register("alchemist_supreme_helmet", () -> new AlchemistSupremeArmorItem
             (ArmorItem.Type.HELMET, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> ALCHEMIST_SUPREME_LEGGINGS = ITEMS.register("alchemist_supreme_leggings", () -> new AlchemistSupremeArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> ALCHEMIST_SUPREME_BOOTS = ITEMS.register("alchemist_supreme_boots", () -> new AlchemistSupremeArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     /*
@@ -547,28 +547,28 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> SERAPH_CHESTPLATE = ITEMS.register("seraph_chestplate", () -> new SeraphArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> SERAPH_LEGGINGS = ITEMS.register("seraph_leggings", () -> new SeraphArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> SERAPH_BOOTS = ITEMS.register("seraph_boots", () -> new SeraphArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     /*
@@ -581,28 +581,28 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> INFESTATION_CHESTPLATE = ITEMS.register("infestation_chestplate", () -> new InfestationArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> INFESTATION_LEGGINGS = ITEMS.register("infestation_leggings", () -> new InfestationArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> INFESTATION_BOOTS = ITEMS.register("infestation_boots", () -> new InfestationArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     /*
@@ -615,28 +615,28 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> PYRIUM_CHESTPLATE = ITEMS.register("pyrium_chestplate", () -> new PyriumArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> PYRIUM_LEGGINGS = ITEMS.register("pyrium_leggings", () -> new PyriumArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> PYRIUM_BOOTS = ITEMS.register("pyrium_boots", () -> new PyriumArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     // Pyrium
@@ -645,28 +645,28 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> PYRIUM_BATTLEMAGE_CHESTPLATE = ITEMS.register("pyrium_battlemage_chestplate", () -> new PyriumBattlemageArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> PYRIUM_BATTLEMAGE_LEGGINGS = ITEMS.register("pyrium_battlemage_leggings", () -> new PyriumBattlemageArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> PYRIUM_BATTLEMAGE_BOOTS = ITEMS.register("pyrium_battlemage_boots", () -> new PyriumBattlemageArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     // Legionnaire Ruler
@@ -675,28 +675,28 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> LEGIONNAIRE_RULER_CHESTPLATE = ITEMS.register("legionnaire_ruler_chestplate", () -> new LegionnaireRulerArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> LEGIONNAIRE_RULER_LEGGINGS = ITEMS.register("legionnaire_ruler_leggings", () -> new LegionnaireRulerArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> LEGIONNAIRE_RULER_BOOTS = ITEMS.register("legionnaire_ruler_boots", () -> new LegionnaireRulerArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     // Legionnaire Commander
@@ -705,28 +705,28 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> LEGIONNAIRE_COMMANDER_CHESTPLATE = ITEMS.register("legionnaire_commander_chestplate", () -> new LegionnaireCommanderArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> LEGIONNAIRE_COMMANDER_LEGGINGS = ITEMS.register("legionnaire_commander_leggings", () -> new LegionnaireCommanderArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> LEGIONNAIRE_COMMANDER_BOOTS = ITEMS.register("legionnaire_commander_boots", () -> new LegionnaireCommanderArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     // Mithril Battlemage
@@ -735,28 +735,28 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> MITHRIL_BATTLEMAGE_CHESTPLATE = ITEMS.register("mithril_battlemage_chestplate", () -> new MithrilBattlemageArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> MITHRIL_BATTLEMAGE_LEGGINGS = ITEMS.register("mithril_battlemage_leggings", () -> new MithrilBattlemageArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> MITHRIL_BATTLEMAGE_BOOTS = ITEMS.register("mithril_battlemage_boots", () -> new MithrilBattlemageArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     /*
@@ -769,35 +769,35 @@ public class HnSItemRegistry {
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> FIREBLOSSOM_BATTLEMAGE_CROWN = ITEMS.register("fireblossom_battlemage_crown", () -> new FireblossomBattlemageCrownArmorItem
             (ArmorItem.Type.HELMET, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("fireblossom_battlemage_chestplate", () -> new FireblossomBattlemageArmorItem
             (ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("fireblossom_battlemage_leggings", () -> new FireblossomBattlemageArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("fireblossom_battlemage_boots", () -> new FireblossomBattlemageArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     public static final RegistryObject<Item> ATLAS_HELMET = ITEMS.register("atlas_helmet", () -> new AtlasArmorItem
@@ -806,7 +806,7 @@ public class HnSItemRegistry {
                             .equipment()
                             .rarity(Rarity.EPIC)
                             .fireResistant()
-                            .durability(64)
+
             ));
     public static final RegistryObject<Item> ATLAS_CHESTPLATE = ITEMS.register("atlas_chestplate", () -> new AtlasArmorItem
             (ArmorItem.Type.CHESTPLATE,
@@ -814,21 +814,21 @@ public class HnSItemRegistry {
                             .equipment()
                             .rarity(Rarity.EPIC)
                             .fireResistant()
-                            .durability(64)
+
             ));
     public static final RegistryObject<Item> ATLAS_LEGGINGS = ITEMS.register("atlas_leggings", () -> new AtlasArmorItem
             (ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
     public static final RegistryObject<Item> ATLAS_BOOTS = ITEMS.register("atlas_boots", () -> new AtlasArmorItem
             (ArmorItem.Type.BOOTS, ItemPropertiesHelper
                     .equipment()
                     .rarity(Rarity.EPIC)
                     .fireResistant()
-                    .durability(64)
+
             ));
 
     public static void register(IEventBus eventBus) {

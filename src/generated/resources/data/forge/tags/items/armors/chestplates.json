@@ -11,6 +11,11 @@
     "hazennstuff:alchemist_supreme_chestplate",
     "hazennstuff:infestation_chestplate",
     "hazennstuff:fireblossom_battlemage_chestplate",
-    "hazennstuff:atlas_chestplate"
+    "hazennstuff:atlas_chestplate",
+    "hazennstuff:pyrium_chestplate",
+    "hazennstuff:pyrium_battlemage_chestplate",
+    "hazennstuff:mithril_battlemage_chestplate",
+    "hazennstuff:legionnaire_commander_chestplate",
+    "hazennstuff:legionnaire_ruler_chestplate"
   ]
 }

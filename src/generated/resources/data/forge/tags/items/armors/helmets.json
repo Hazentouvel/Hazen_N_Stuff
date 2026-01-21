@@ -11,6 +11,11 @@
     "hazennstuff:infestation_helmet",
     "hazennstuff:fireblossom_battlemage_helmet",
     "hazennstuff:fireblossom_battlemage_crown",
-    "hazennstuff:atlas_helmet"
+    "hazennstuff:atlas_helmet",
+    "hazennstuff:pyrium_helmet",
+    "hazennstuff:pyrium_battlemage_helmet",
+    "hazennstuff:mithril_battlemage_helmet",
+    "hazennstuff:legionnaire_commander_helmet",
+    "hazennstuff:legionnaire_ruler_helmet"
   ]
 }

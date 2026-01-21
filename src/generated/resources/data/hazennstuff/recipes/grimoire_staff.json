@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "irons_spellbooks:arcane_ingot"
+    },
+    "E": {
+      "item": "irons_spellbooks:diamond_spell_book"
+    },
+    "G": {
+      "item": "irons_spellbooks:graybeard_staff"
+    },
+    "R": {
+      "item": "irons_spellbooks:evocation_rune"
+    },
+    "S": {
+      "item": "irons_spellbooks:mithril_scrap"
+    }
+  },
+  "pattern": [
+    "  E",
+    " GS",
+    "AR "
+  ],
+  "result": {
+    "item": "hazennstuff:grimoire_staff"
+  },
+  "show_notification": true
+}

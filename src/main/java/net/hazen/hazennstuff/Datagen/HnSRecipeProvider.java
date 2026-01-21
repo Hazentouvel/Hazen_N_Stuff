@@ -286,6 +286,81 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         /*
+        *** Staves
+         */
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.BLOSSOM_OF_THE_ENCHANTRESS.get(), 1)
+                .pattern("SRR")
+                .pattern("MGC")
+                .pattern("LL ")
+                .define('G', ItemRegistry.GRAYBEARD_STAFF.get())
+                .define('R', ItemRegistry.NATURE_RUNE.get())
+                .define('M', Items.MOSS_BLOCK)
+                .define('L', Items.OAK_LOG)
+                .define('S', Items.SPORE_BLOSSOM)
+                .define('C', Items.CORNFLOWER)
+                .unlockedBy(getHasName(ItemRegistry.ARTIFICER_STAFF.get()),
+                        has(ItemRegistry.ARTIFICER_STAFF.get())
+                )
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.ENDERCONIC_SCEPTER.get(), 1)
+                .pattern(" DP")
+                .pattern("RED")
+                .pattern("AR ")
+                .define('A', ItemRegistry.ARTIFICER_STAFF.get())
+                .define('E', Items.ENDER_EYE)
+                .define('P', Items.CHORUS_FLOWER)
+                .define('R', ItemRegistry.ENDER_RUNE.get())
+                .define('D', ItemRegistry.DRAGONSKIN.get())
+                .unlockedBy(getHasName(ItemRegistry.ARTIFICER_STAFF.get()),
+                        has(ItemRegistry.ARTIFICER_STAFF.get())
+                )
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.DIVINE_SCEPTER.get(), 1)
+                .pattern(" PM")
+                .pattern("RAP")
+                .pattern("GR ")
+                .define('A', ItemRegistry.ARTIFICER_STAFF.get())
+                .define('M', ItemRegistry.MITHRIL_INGOT.get())
+                .define('P', ItemRegistry.DIVINE_PEARL.get())
+                .define('R', ItemRegistry.HOLY_RUNE.get())
+                .define('G', Items.GOLD_INGOT)
+                .unlockedBy(getHasName(ItemRegistry.ARTIFICER_STAFF.get()),
+                        has(ItemRegistry.ARTIFICER_STAFF.get())
+                )
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.INSANIA_AETERNUS.get(), 1)
+                .pattern("CBC")
+                .pattern("RAR")
+                .pattern(" E ")
+                .define('B', Items.BLACK_CANDLE)
+                .define('C', Items.SCULK_CATALYST)
+                .define('E', Items.ECHO_SHARD)
+                .define('A', ItemRegistry.ARTIFICER_STAFF.get())
+                .define('R', HnSItemRegistry.ELDRITCH_RUNE.get())
+                .unlockedBy(getHasName(ItemRegistry.ARTIFICER_STAFF.get()),
+                        has(ItemRegistry.ARTIFICER_STAFF.get())
+                )
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.GRIMOIRE_STAFF.get(), 1)
+                .pattern("  E")
+                .pattern(" GS")
+                .pattern("AR ")
+                .define('E', ItemRegistry.DIAMOND_SPELL_BOOK.get())
+                .define('A', ItemRegistry.ARCANE_INGOT.get())
+                .define('G', ItemRegistry.GRAYBEARD_STAFF.get())
+                .define('R', ItemRegistry.EVOCATION_RUNE.get())
+                .define('S', ItemRegistry.MITHRIL_SCRAP.get())
+                .unlockedBy(getHasName(ItemRegistry.GRAYBEARD_STAFF.get()),
+                        has(ItemRegistry.GRAYBEARD_STAFF.get())
+                )
+                .save(pWriter);
+
+        /*
         *** Armor Sets
          */
 

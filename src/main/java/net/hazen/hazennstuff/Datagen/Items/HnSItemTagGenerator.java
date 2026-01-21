@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Datagen.Items;
 
+import io.redspace.ironsspellbooks.util.ModTags;
 import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
@@ -95,6 +96,31 @@ public class HnSItemTagGenerator extends ItemTagsProvider {
                 .add(HnSItemRegistry.INFESTATION_LEGGINGS.get())
                 .add(HnSItemRegistry.INFESTATION_BOOTS.get())
 
+                .add(HnSItemRegistry.PYRIUM_HELMET.get())
+                .add(HnSItemRegistry.PYRIUM_CHESTPLATE.get())
+                .add(HnSItemRegistry.PYRIUM_LEGGINGS.get())
+                .add(HnSItemRegistry.PYRIUM_BOOTS.get())
+
+                .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_HELMET.get())
+                .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_BOOTS.get())
+
+                .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_HELMET.get())
+                .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_BOOTS.get())
+
+                .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_HELMET.get())
+                .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_BOOTS.get())
+
+                .add(HnSItemRegistry.LEGIONNAIRE_RULER_HELMET.get())
+                .add(HnSItemRegistry.LEGIONNAIRE_RULER_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGIONNAIRE_RULER_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGIONNAIRE_RULER_BOOTS.get())
+
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get())
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
@@ -120,6 +146,11 @@ public class HnSItemTagGenerator extends ItemTagsProvider {
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get())
                 .add(HnSItemRegistry.ATLAS_HELMET.get())
+                .add(HnSItemRegistry.PYRIUM_HELMET.get())
+                .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_HELMET.get())
+                .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_HELMET.get())
+                .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_HELMET.get())
+                .add(HnSItemRegistry.LEGIONNAIRE_RULER_HELMET.get())
         ;
 
         this.tag(Tags.Items.ARMORS_CHESTPLATES)
@@ -135,6 +166,11 @@ public class HnSItemTagGenerator extends ItemTagsProvider {
                 .add(HnSItemRegistry.INFESTATION_CHESTPLATE.get())
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
                 .add(HnSItemRegistry.ATLAS_CHESTPLATE.get())
+                .add(HnSItemRegistry.PYRIUM_CHESTPLATE.get())
+                .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGIONNAIRE_RULER_CHESTPLATE.get())
         ;
 
         this.tag(Tags.Items.ARMORS_LEGGINGS)
@@ -149,6 +185,11 @@ public class HnSItemTagGenerator extends ItemTagsProvider {
                 .add(HnSItemRegistry.INFESTATION_LEGGINGS.get())
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
                 .add(HnSItemRegistry.ATLAS_LEGGINGS.get())
+                .add(HnSItemRegistry.PYRIUM_LEGGINGS.get())
+                .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGIONNAIRE_RULER_LEGGINGS.get())
         ;
 
         this.tag(Tags.Items.ARMORS_BOOTS)
@@ -163,8 +204,11 @@ public class HnSItemTagGenerator extends ItemTagsProvider {
                 .add(HnSItemRegistry.INFESTATION_BOOTS.get())
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
                 .add(HnSItemRegistry.ATLAS_BOOTS.get())
+                .add(HnSItemRegistry.PYRIUM_BOOTS.get())
+                .add(HnSItemRegistry.PYRIUM_BATTLEMAGE_BOOTS.get())
+                .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_BOOTS.get())
+                .add(HnSItemRegistry.LEGIONNAIRE_COMMANDER_BOOTS.get())
+                .add(HnSItemRegistry.LEGIONNAIRE_RULER_BOOTS.get())
         ;
-
-
     }
 }

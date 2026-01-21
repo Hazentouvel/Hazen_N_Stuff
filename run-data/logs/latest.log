@@ -1,43 +1,43 @@
-[18Jan2026 16:19:03.416] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\darkp\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.10, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, hazennstuff, --all, --output, D:\Hazens InteliJ\Hazen_N_Stuff\src\generated\resources, --existing, D:\Hazens InteliJ\Hazen_N_Stuff\src\main\resources]
-[18Jan2026 16:19:03.422] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.10+10.0.10+main.22f00f84 starting: java version 17.0.15 by Microsoft; OS Windows 11 arch amd64 version 10.0
-[18Jan2026 16:19:03.669] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[18Jan2026 16:19:03.756] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/darkp/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23132!/ Service=ModLauncher Env=CLIENT
-[18Jan2026 16:19:04.216] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\darkp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.10\ccc533c7dd67e0983217197d7549c8b49e7ab453\javafmllanguage-1.20.1-47.4.10.jar is missing mods.toml file
-[18Jan2026 16:19:04.221] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\darkp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.10\e9a2879fe3612ea34b9728ec2633304a1e67d480\lowcodelanguage-1.20.1-47.4.10.jar is missing mods.toml file
-[18Jan2026 16:19:04.225] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\darkp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.10\ec5cefbbc65c67302b8fac317010faab85fa14b9\mclanguage-1.20.1-47.4.10.jar is missing mods.toml file
-[18Jan2026 16:19:04.229] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\darkp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.10\94dae566be650566ea9115a1414ab76bfcf5a804\fmlcore-1.20.1-47.4.10.jar is missing mods.toml file
-[18Jan2026 16:19:04.646] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: mixinextras. Using Mod File: C:\Users\darkp\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.4.1\5c35573a7b76103724799ca1174a69699b8a9aec\mixinextras-forge-0.4.1.jar
-[18Jan2026 16:19:04.647] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
-[18Jan2026 16:19:07.679] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[18Jan2026 16:19:07.714] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\darkp\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, hazennstuff, --all, --output, D:\Hazens InteliJ\Hazen_N_Stuff\src\generated\resources, --existing, D:\Hazens InteliJ\Hazen_N_Stuff\src\main\resources]
-[18Jan2026 16:19:08.555] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using D:\Hazens InteliJ\Hazen_N_Stuff\build\createSrgToMcp\output.srg
-[18Jan2026 16:19:08.560] [main/INFO] [mixin/]: Remapping refMap player-animation-lib-minecraft_common-refmap.json using D:\Hazens InteliJ\Hazen_N_Stuff\build\createSrgToMcp\output.srg
-[18Jan2026 16:19:08.563] [main/INFO] [mixin/]: Remapping refMap irons_spellbooks.refmap.json using D:\Hazens InteliJ\Hazen_N_Stuff\build\createSrgToMcp\output.srg
-[18Jan2026 16:19:08.569] [main/INFO] [mixin/]: Remapping refMap bettercombat-common-common-refmap.json using D:\Hazens InteliJ\Hazen_N_Stuff\build\createSrgToMcp\output.srg
-[18Jan2026 16:19:08.572] [main/INFO] [mixin/]: Remapping refMap caelus.refmap.json using D:\Hazens InteliJ\Hazen_N_Stuff\build\createSrgToMcp\output.srg
-[18Jan2026 16:19:08.574] [main/INFO] [mixin/]: Remapping refMap curios.refmap.json using D:\Hazens InteliJ\Hazen_N_Stuff\build\createSrgToMcp\output.srg
-[18Jan2026 16:19:09.654] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [hazennstuff]
-[18Jan2026 16:19:09.846] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[18Jan2026 16:19:19.201] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.10, for MC 1.20.1 with MCP 20230612.114412
-[18Jan2026 16:19:19.203] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.10 Initialized
-[18Jan2026 16:19:19.475] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
-[18Jan2026 16:19:19.740] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[18Jan2026 16:19:19.753] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 9.704 ms
-[18Jan2026 16:19:21.340] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/darkp/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.10_mapped_official_1.20.1/forge-1.20.1-47.4.10_mapped_official_1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[18Jan2026 16:19:21.341] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/darkp/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.10_mapped_official_1.20.1/forge-1.20.1-47.4.10_mapped_official_1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[18Jan2026 16:19:21.645] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[18Jan2026 16:19:21.817] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 171 ms
-[18Jan2026 16:19:21.817] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[18Jan2026 16:19:21.874] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 56 ms
-[18Jan2026 16:19:21.874] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: hazennstuff
-[18Jan2026 16:19:22.028] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: hazennstuff finished after 154 ms
-[18Jan2026 16:19:22.028] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: hazennstuff
-[18Jan2026 16:19:22.028] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: hazennstuff finished after 0 ms
-[18Jan2026 16:19:22.028] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id hazennstuff
-[18Jan2026 16:19:22.040] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id hazennstuff finished after 11 ms
-[18Jan2026 16:19:22.041] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id hazennstuff
-[18Jan2026 16:19:22.049] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id hazennstuff finished after 8 ms
-[18Jan2026 16:19:22.050] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[18Jan2026 16:19:22.069] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 19 ms
-[18Jan2026 16:19:22.069] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 425 ms
-[18Jan2026 16:19:22.105] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 216, old count: 140, new count: 217, removed stale: 0, written: 118
+[21Jan2026 10:26:27.190] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\darkp\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.10, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, hazennstuff, --all, --output, D:\Hazens InteliJ\Hazen_N_Stuff\src\generated\resources, --existing, D:\Hazens InteliJ\Hazen_N_Stuff\src\main\resources]
+[21Jan2026 10:26:27.208] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.10+10.0.10+main.22f00f84 starting: java version 17.0.15 by Microsoft; OS Windows 11 arch amd64 version 10.0
+[21Jan2026 10:26:27.724] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[21Jan2026 10:26:27.914] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/darkp/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23132!/ Service=ModLauncher Env=CLIENT
+[21Jan2026 10:26:29.540] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\darkp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.10\ccc533c7dd67e0983217197d7549c8b49e7ab453\javafmllanguage-1.20.1-47.4.10.jar is missing mods.toml file
+[21Jan2026 10:26:29.563] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\darkp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.10\e9a2879fe3612ea34b9728ec2633304a1e67d480\lowcodelanguage-1.20.1-47.4.10.jar is missing mods.toml file
+[21Jan2026 10:26:29.591] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\darkp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.10\ec5cefbbc65c67302b8fac317010faab85fa14b9\mclanguage-1.20.1-47.4.10.jar is missing mods.toml file
+[21Jan2026 10:26:29.617] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\darkp\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.10\94dae566be650566ea9115a1414ab76bfcf5a804\fmlcore-1.20.1-47.4.10.jar is missing mods.toml file
+[21Jan2026 10:26:31.115] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: mixinextras. Using Mod File: C:\Users\darkp\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.4.1\5c35573a7b76103724799ca1174a69699b8a9aec\mixinextras-forge-0.4.1.jar
+[21Jan2026 10:26:31.115] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[21Jan2026 10:26:46.247] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[21Jan2026 10:26:46.374] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\darkp\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, hazennstuff, --all, --output, D:\Hazens InteliJ\Hazen_N_Stuff\src\generated\resources, --existing, D:\Hazens InteliJ\Hazen_N_Stuff\src\main\resources]
+[21Jan2026 10:26:50.585] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using D:\Hazens InteliJ\Hazen_N_Stuff\build\createSrgToMcp\output.srg
+[21Jan2026 10:26:50.609] [main/INFO] [mixin/]: Remapping refMap player-animation-lib-minecraft_common-refmap.json using D:\Hazens InteliJ\Hazen_N_Stuff\build\createSrgToMcp\output.srg
+[21Jan2026 10:26:50.625] [main/INFO] [mixin/]: Remapping refMap irons_spellbooks.refmap.json using D:\Hazens InteliJ\Hazen_N_Stuff\build\createSrgToMcp\output.srg
+[21Jan2026 10:26:50.639] [main/INFO] [mixin/]: Remapping refMap bettercombat-common-common-refmap.json using D:\Hazens InteliJ\Hazen_N_Stuff\build\createSrgToMcp\output.srg
+[21Jan2026 10:26:50.646] [main/INFO] [mixin/]: Remapping refMap caelus.refmap.json using D:\Hazens InteliJ\Hazen_N_Stuff\build\createSrgToMcp\output.srg
+[21Jan2026 10:26:50.657] [main/INFO] [mixin/]: Remapping refMap curios.refmap.json using D:\Hazens InteliJ\Hazen_N_Stuff\build\createSrgToMcp\output.srg
+[21Jan2026 10:26:57.144] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [hazennstuff]
+[21Jan2026 10:26:58.678] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[21Jan2026 10:27:42.923] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.10, for MC 1.20.1 with MCP 20230612.114412
+[21Jan2026 10:27:42.926] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.10 Initialized
+[21Jan2026 10:27:45.183] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
+[21Jan2026 10:27:46.296] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[21Jan2026 10:27:46.332] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 26.57 ms
+[21Jan2026 10:27:56.043] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/darkp/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.10_mapped_official_1.20.1/forge-1.20.1-47.4.10_mapped_official_1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[21Jan2026 10:27:56.044] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/darkp/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.10_mapped_official_1.20.1/forge-1.20.1-47.4.10_mapped_official_1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[21Jan2026 10:27:57.577] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[21Jan2026 10:27:58.758] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 1163 ms
+[21Jan2026 10:27:58.760] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[21Jan2026 10:27:59.763] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 1003 ms
+[21Jan2026 10:27:59.764] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: hazennstuff
+[21Jan2026 10:28:02.005] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: hazennstuff finished after 2241 ms
+[21Jan2026 10:28:02.006] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: hazennstuff
+[21Jan2026 10:28:02.007] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: hazennstuff finished after 0 ms
+[21Jan2026 10:28:02.007] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id hazennstuff
+[21Jan2026 10:28:03.232] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id hazennstuff finished after 1224 ms
+[21Jan2026 10:28:03.233] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id hazennstuff
+[21Jan2026 10:28:03.309] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id hazennstuff finished after 74 ms
+[21Jan2026 10:28:03.309] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[21Jan2026 10:28:03.548] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 237 ms
+[21Jan2026 10:28:03.556] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 5980 ms
+[21Jan2026 10:28:04.212] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 226, old count: 226, new count: 227, removed stale: 0, written: 0

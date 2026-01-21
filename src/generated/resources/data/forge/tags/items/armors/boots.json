@@ -10,6 +10,11 @@
     "hazennstuff:alchemist_supreme_boots",
     "hazennstuff:infestation_boots",
     "hazennstuff:fireblossom_battlemage_boots",
-    "hazennstuff:atlas_boots"
+    "hazennstuff:atlas_boots",
+    "hazennstuff:pyrium_boots",
+    "hazennstuff:pyrium_battlemage_boots",
+    "hazennstuff:mithril_battlemage_boots",
+    "hazennstuff:legionnaire_commander_boots",
+    "hazennstuff:legionnaire_ruler_boots"
   ]
 }

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "irons_spellbooks:artificer_cane"
+    },
+    "D": {
+      "item": "irons_spellbooks:dragonskin"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "P": {
+      "item": "minecraft:chorus_flower"
+    },
+    "R": {
+      "item": "irons_spellbooks:ender_rune"
+    }
+  },
+  "pattern": [
+    " DP",
+    "RED",
+    "AR "
+  ],
+  "result": {
+    "item": "hazennstuff:enderconic_scepter"
+  },
+  "show_notification": true
+}

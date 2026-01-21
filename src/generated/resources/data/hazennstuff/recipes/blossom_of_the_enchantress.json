@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:cornflower"
+    },
+    "G": {
+      "item": "irons_spellbooks:graybeard_staff"
+    },
+    "L": {
+      "item": "minecraft:oak_log"
+    },
+    "M": {
+      "item": "minecraft:moss_block"
+    },
+    "R": {
+      "item": "irons_spellbooks:nature_rune"
+    },
+    "S": {
+      "item": "minecraft:spore_blossom"
+    }
+  },
+  "pattern": [
+    "SRR",
+    "MGC",
+    "LL "
+  ],
+  "result": {
+    "item": "hazennstuff:blossom_of_the_enchantress"
+  },
+  "show_notification": true
+}

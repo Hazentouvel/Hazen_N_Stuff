@@ -193,6 +193,7 @@ public enum HnSArmorMaterial implements ArmorMaterial {
             0.0F,
             () -> Ingredient.of(new ItemLike[]{(ItemLike) ItemRegistry.PYRIUM_INGOT.get()}),
             Map.of(
+                    (Attribute)AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", 150.0D, Operation.ADDITION),
                     (Attribute)Attributes.ATTACK_DAMAGE, new AttributeModifier("Attack Damage", 0.5D, Operation.ADDITION),
                     (Attribute)AttributeRegistry.FIRE_SPELL_POWER.get(), new AttributeModifier("Fire Power", 0.1, Operation.MULTIPLY_BASE),
                     (Attribute)Attributes.ATTACK_SPEED, new AttributeModifier("Attack Speed", 0.1, Operation.MULTIPLY_BASE),

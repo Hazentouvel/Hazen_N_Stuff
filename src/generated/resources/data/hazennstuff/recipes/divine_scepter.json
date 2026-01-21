@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "irons_spellbooks:artificer_cane"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "M": {
+      "item": "irons_spellbooks:mithril_ingot"
+    },
+    "P": {
+      "item": "irons_spellbooks:divine_pearl"
+    },
+    "R": {
+      "item": "irons_spellbooks:holy_rune"
+    }
+  },
+  "pattern": [
+    " PM",
+    "RAP",
+    "GR "
+  ],
+  "result": {
+    "item": "hazennstuff:divine_scepter"
+  },
+  "show_notification": true
+}

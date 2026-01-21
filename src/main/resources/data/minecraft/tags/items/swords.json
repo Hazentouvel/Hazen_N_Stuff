@@ -1,6 +1,17 @@
 {
   "replace": false,
   "values": [
-    "hazennstuff:fireblossom_rapier"
+    "hazennstuff:fireblossom_rapier",
+    "hazennstuff:draconic_splitter",
+    "hazennstuff:ravens_bane",
+    "hazennstuff:ice_pike",
+    "hazennstuff:o_fortuna",
+    "hazennstuff:ionic_splitter",
+    "hazennstuff:umbranova",
+    "hazennstuff:devastator",
+    "hazennstuff:provocation",
+    "hazennstuff:excalibur",
+    "hazennstuff:the_devourer",
+    "hazennstuff:legionnaire_warlock_axe"
   ]
 }

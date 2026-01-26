@@ -7,7 +7,7 @@ import net.hazen.hazennstuff.Spells.Schools.Evocation.ParrySpell;
 import net.hazen.hazennstuff.Spells.Schools.Evocation.SpectralAxeSpell;
 import net.hazen.hazennstuff.Spells.Schools.Fire.*;
 import net.hazen.hazennstuff.Spells.Schools.Holy.GoldenShowerSpell;
-import net.hazen.hazennstuff.Spells.Schools.Ice.CrystalVolleySpell;
+import net.hazen.hazennstuff.Spells.Schools.Ice.HailstormSpell;
 import net.hazen.hazennstuff.Spells.Schools.Ice.IceArrowSpell;
 import net.hazen.hazennstuff.Spells.Schools.Lightning.EnergyBurstSpell;
 import net.hazen.hazennstuff.Spells.Schools.Lightning.IonicSlashSpell;
@@ -68,7 +68,7 @@ public class HnSSpellRegistries {
     public static final Supplier<AbstractSpell> ICE_ARROW = registerSpell(new IceArrowSpell());
 
     //Crystal Volley
-    public static final Supplier<AbstractSpell> CRYSTAL_VOLLEY = registerSpell(new CrystalVolleySpell());
+    public static final Supplier<AbstractSpell> HAILSTORM = registerSpell(new HailstormSpell());
 
     /*
      *** Lightning
@@ -133,9 +133,6 @@ public class HnSSpellRegistries {
 
     // Call Forth Terraprisma
     public static final Supplier<AbstractSpell> CALL_FORTH_TERRAPRISMA = registerSpell(new CallForthTerraprismaSpell());
-
-    // Call Forth Terraprisma
-    //public static final Supplier<AbstractSpell> CRYSTALINE_MIRROR = registerSpell(new CrystalineMirrorSpell());
 
     /*
      *** Dark

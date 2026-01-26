@@ -10,7 +10,7 @@ import net.neoforged.fml.ModList;
 public class DTECompat {
     public static boolean LOADED;
     public static void init() {
-        LOADED = ModList.get().isLoaded("aero_additions");
+        LOADED = ModList.get().isLoaded("discerning_the_eldritch");
     }
 
     public static void addRitualSpellPowerPure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {

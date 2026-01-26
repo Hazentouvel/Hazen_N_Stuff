@@ -1,27 +1,26 @@
-package net.hazen.hazennstuff.Entity.Spells.Radiance.CrystalineMirror;
+package net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkA;
 
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
+import net.hazen.hazennstuff.Entity.Spells.Nature.SpiderLily.SpiderLily;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-public class CrystalineMirrorRenderer extends GeoEntityRenderer<CrystalineMirror> {
-    public CrystalineMirrorRenderer(EntityRendererProvider.Context context) {
-        super(context, new CrystalineMirrorModel());
+public class IceChunkARenderer extends GeoEntityRenderer<IceChunkA> {
+    public IceChunkARenderer(EntityRendererProvider.Context context) {
+        super(context, new IceChunkAModel());
         this.shadowRadius = 0f;
     }
 
     @Override
-    public void preRender(PoseStack poseStack, CrystalineMirror animatable, BakedGeoModel model,
+    public void preRender(PoseStack poseStack, IceChunkA animatable, BakedGeoModel model,
                           @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer,
                           boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
 
@@ -36,8 +35,4 @@ public class CrystalineMirrorRenderer extends GeoEntityRenderer<CrystalineMirror
         super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, colour);
     }
 
-    @Override
-    public RenderType getRenderType(CrystalineMirror animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick) {
-        return RenderType.entityCutout(texture);
-    }
 }

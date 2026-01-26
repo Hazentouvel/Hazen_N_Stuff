@@ -10,7 +10,7 @@ import net.neoforged.fml.ModList;
 public class ESSRCompat {
     public static boolean LOADED;
     public static void init() {
-        LOADED = ModList.get().isLoaded("endersequipment");
+        LOADED = ModList.get().isLoaded("ess_requiem");
     }
 
     public static void addSpellbladeSpellPowerPure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {

@@ -22,15 +22,16 @@ import net.hazen.hazennstuff.Entity.Spells.Fire.BrimstoneHellblast.BrimstoneHell
 import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
 import net.hazen.hazennstuff.Entity.Spells.Fire.ImmolatingObliterator.ScorchingSlash;
 import net.hazen.hazennstuff.Entity.Spells.Holy.IchorStream.IchorStream;
-import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.CrystalVolley.CrystalVolley;
+import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkA.IceChunkA;
+import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkB.IceChunkB;
+import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkC.IceChunkC;
 import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.IceArrow;
-import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.IceCloud.IceCloud;
+import net.hazen.hazennstuff.Entity.Spells.Ice.IceCloud.IceCloud;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.EnergyBurst.EnergyBurst;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.InstantLightningStrike.LightningStrike;
 import net.hazen.hazennstuff.Entity.Spells.Nature.DeathSentence.DeathSentence;
 import net.hazen.hazennstuff.Entity.Spells.Nature.SpiderLily.SpiderLily;
 import net.hazen.hazennstuff.Entity.Spells.Nature.ThornChakram.ThornChakram;
-import net.hazen.hazennstuff.Entity.Spells.Radiance.CrystalineMirror.CrystalineMirror;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.FallingStars.FallingStar;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.ShootingStar;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Syringe.Syringe;
@@ -104,12 +105,32 @@ public class HnSEntityRegistry {
             );
 
 
-    // Crystal Volley
-    public static final DeferredHolder<EntityType<?>, EntityType<CrystalVolley>> CRYSTAL_VOLLEY =
-            ENTITIES.register("crystal_volley", () -> EntityType.Builder.<CrystalVolley>of(CrystalVolley::new, MobCategory.MISC)
+    /*
+    *** Ice Chunks
+     */
+
+    //A
+    public static final DeferredHolder<EntityType<?>, EntityType<IceChunkA>> ICE_CHUNK_A =
+            ENTITIES.register("ice_chunk_a", () -> EntityType.Builder.<IceChunkA>of(IceChunkA::new, MobCategory.MISC)
                     .sized(1f, 1f)
                     .clientTrackingRange(64)
-                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crystal_volley").toString())
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ice_chunk_a").toString())
+            );
+
+    //B
+    public static final DeferredHolder<EntityType<?>, EntityType<IceChunkB>> ICE_CHUNK_B =
+            ENTITIES.register("ice_chunk_b", () -> EntityType.Builder.<IceChunkB>of(IceChunkB::new, MobCategory.MISC)
+                    .sized(1.5f, 1.5f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ice_chunk_b").toString())
+            );
+
+    //C
+    public static final DeferredHolder<EntityType<?>, EntityType<IceChunkC>> ICE_CHUNK_C =
+            ENTITIES.register("ice_chunk_c", () -> EntityType.Builder.<IceChunkC>of(IceChunkC::new, MobCategory.MISC)
+                    .sized(0.75f, 0.75f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ice_chunk_c").toString())
             );
 
     // Spectral Axe
@@ -190,14 +211,6 @@ public class HnSEntityRegistry {
                     .sized(0.5f, 0.5f)
                     .clientTrackingRange(64)
                     .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "fiery_dagger_magic_projectile").toString())
-            );
-
-    // Fiery Dagger Magic Projectile
-    public static final DeferredHolder<EntityType<?>, EntityType<CrystalineMirror>> CRYSTALINE_MIRROR =
-            ENTITIES.register("crystaline_mirror", () -> EntityType.Builder.<CrystalineMirror>of(CrystalineMirror::new, MobCategory.MISC)
-                    .sized(0.5f, 0.5f)
-                    .clientTrackingRange(64)
-                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crystaline_mirror").toString())
             );
 
 

@@ -16,7 +16,6 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomFlyingGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -34,6 +33,7 @@ public class SummonKeeper extends KeeperEntity implements IMagicSummon {
         this(HnSEntityRegistry.SUMMON_KEEPER.get(), level);
     }
 
+    @Override
     public void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(4, new KeeperAnimatedWarlockAttackGoal(this, (double)1.0F, 10, 30));
@@ -46,20 +46,13 @@ public class SummonKeeper extends KeeperEntity implements IMagicSummon {
         this.targetSelector.addGoal(3, new GenericCopyOwnerTargetGoal(this, this::getSummoner));
         this.targetSelector.addGoal(4, (new GenericHurtByTargetGoal(this, (entity) -> entity == this.getSummoner())).setAlertOthers(new Class[0]));
         this.targetSelector.addGoal(5, new GenericProtectOwnerTargetGoal(this, this::getSummoner));
-
-        this.goalSelector.addGoal(5, new WaterAvoidingRandomFlyingGoal(this, 0.75F));
-
-        this.targetSelector.addGoal(1, new GenericOwnerHurtByTargetGoal(this, this::getSummoner));
-        this.targetSelector.addGoal(2, new GenericOwnerHurtTargetGoal(this, this::getSummoner));
-        this.targetSelector.addGoal(3, new GenericCopyOwnerTargetGoal(this, this::getSummoner));
-        this.targetSelector.addGoal(5, new GenericProtectOwnerTargetGoal(this, this::getSummoner));
-        this.targetSelector.addGoal(4, (new GenericHurtByTargetGoal(this, (entity) -> entity == this.getSummoner())).setAlertOthers(new Class[0]));
     }
 
     public boolean doHurtTarget(Entity pEntity) {
         return Utils.doMeleeAttack(this, pEntity,
                 (HnSSpellRegistries.REIGN_OF_TYROS
-                        .get()).getDamageSource(this, this.getSummoner()
+                        .get())
+                        .getDamageSource(this, this.getSummoner()
                 ));
     }
 
@@ -70,7 +63,7 @@ public class SummonKeeper extends KeeperEntity implements IMagicSummon {
 
     public void onUnSummon() {
         if (!this.level.isClientSide) {
-            MagicManager.spawnParticles(this.level, ParticleTypes.POOF, this.getX(), this.getY(), this.getZ(), 25, 0.4, 0.8, 0.4, 0.03, false);
+            MagicManager.spawnParticles(this.level, ParticleTypes.SMOKE, this.getX(), this.getY(), this.getZ(), 25, 0.4, 0.8, 0.4, 0.03, false);
             this.setRemoved(RemovalReason.DISCARDED);
         }
     }
@@ -84,5 +77,7 @@ public class SummonKeeper extends KeeperEntity implements IMagicSummon {
     protected void populateDefaultEquipmentSlots(RandomSource pRandom, DifficultyInstance pDifficulty) {
         this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(this.isRestored() ? ItemRegistry.LEGIONNAIRE_FLAMBERGE : ItemRegistry.KEEPER_FLAMBERGE));
     }
+
+
 
 }

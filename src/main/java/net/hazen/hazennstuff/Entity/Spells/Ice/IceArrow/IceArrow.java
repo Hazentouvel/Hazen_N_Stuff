@@ -4,7 +4,7 @@ import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
-import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.IceCloud.IceCloud;
+import net.hazen.hazennstuff.Entity.Spells.Ice.IceCloud.IceCloud;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.core.Holder;
@@ -119,7 +119,6 @@ public class IceArrow extends AbstractMagicProjectile {
             this.yRotO += 180.0F;
         }
 
-
     }
 
 
@@ -127,7 +126,7 @@ public class IceArrow extends AbstractMagicProjectile {
     protected void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
         tag.putBoolean("inGround", this.inGround);
-        tag.putBoolean("hasEmittedPoison", hasEmittedPoison);
+        tag.putBoolean("hasEmittedFreezing", hasEmittedPoison);
         tag.putFloat("aoeDamage", aoeDamage);
     }
 
@@ -147,7 +146,7 @@ public class IceArrow extends AbstractMagicProjectile {
     protected void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         this.inGround = tag.getBoolean("inGround");
-        this.hasEmittedPoison = tag.getBoolean("hasEmittedPoison");
+        this.hasEmittedPoison = tag.getBoolean("hasEmittedFreezing");
         this.aoeDamage = tag.getFloat("aoeDamage");
     }
 

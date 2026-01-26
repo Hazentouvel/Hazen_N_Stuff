@@ -1,0 +1,48 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ice_chunk.spinning_a": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"iceChunk": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [720, 0, 0]
+						}
+					}
+				},
+				"rotate": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [0, -360, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.ice_chunk.spinning_b": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"iceChunk": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 360, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

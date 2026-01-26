@@ -2,6 +2,9 @@ package net.hazen.hazennstuff.Setup;
 
 import io.redspace.ironsspellbooks.entity.mobs.keeper.KeeperRenderer;
 import io.redspace.ironsspellbooks.entity.spells.fiery_dagger.FieryDaggerRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkA.IceChunkARenderer;
+import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkB.IceChunkBRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkC.IceChunkCRenderer;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.HazelStatueRenderer;
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnaceRenderer;
@@ -23,13 +26,11 @@ import net.hazen.hazennstuff.Entity.Spells.Eldritch.SoulSeeker.SoulSeekerRendere
 import net.hazen.hazennstuff.Entity.Spells.Evocation.SpectralAxe.SpectralRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Fire.BrimstoneHellblast.BrimstoneHellblastRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Fire.ImmolatingObliterator.ScorchingSlashRenderer;
-import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.CrystalVolley.CrystalVolleyRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.IceArrowRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.EnergyBurst.EnergyBurstRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Nature.DeathSentence.DeathSentenceRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Nature.SpiderLily.SpiderLilyRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Nature.ThornChakram.ThornChakramRenderer;
-import net.hazen.hazennstuff.Entity.Spells.Radiance.CrystalineMirror.CrystalineMirrorRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.FallingStars.FallingStarRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.ShootingStarRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Syringe.SyringeRenderer;
@@ -65,7 +66,9 @@ public class HnSClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.LIFESTEAL_KNIFE.get(), LifestealKnifeRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.THORN_CHAKRAM.get(), ThornChakramRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.ICE_ARROW.get(), IceArrowRenderer::new);
-        event.registerEntityRenderer(HnSEntityRegistry.CRYSTAL_VOLLEY.get(), CrystalVolleyRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.ICE_CHUNK_A.get(), IceChunkARenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.ICE_CHUNK_B.get(), IceChunkBRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.ICE_CHUNK_C.get(), IceChunkCRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.SPECTRAL_AXE.get(), SpectralRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.SOUL_SEEKER.get(), SoulSeekerRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.SPIDER_LILY.get(), SpiderLilyRenderer::new);
@@ -97,7 +100,6 @@ public class HnSClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.CINDEROUS_FURNACE.get(), CinderousFurnaceRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.THE_INFERNO.get(), TheInfernoRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.SUMMON_KEEPER.get(), KeeperRenderer::new);
-        event.registerEntityRenderer(HnSEntityRegistry.CRYSTALINE_MIRROR.get(), CrystalineMirrorRenderer::new);
 
 
         /*

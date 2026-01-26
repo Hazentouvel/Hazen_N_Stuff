@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.IceCloud;
+package net.hazen.hazennstuff.Entity.Spells.Ice.IceCloud;
 
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.damage.ISSDamageTypes;

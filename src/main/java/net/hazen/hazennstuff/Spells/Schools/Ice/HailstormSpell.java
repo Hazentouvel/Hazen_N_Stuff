@@ -149,7 +149,7 @@ public class HailstormSpell extends AbstractSpell {
         return 6.0F;
     }
 
-    public void shootIceChunkA(Level world, int spellLevel, LivingEntity entity, Vec3 spawn, Vec3 trajectory) {
+    public void shootIceChunkA (Level world, int spellLevel, LivingEntity entity, Vec3 spawn, Vec3 trajectory) {
         IceChunkA iceChunkA = new IceChunkA(world, entity);
         iceChunkA.setPos(spawn.add((double)-1.0F, (double)0.0F, (double)0.0F));
         iceChunkA.shoot(trajectory, 0.1F);
@@ -159,7 +159,7 @@ public class HailstormSpell extends AbstractSpell {
         world.playSound((Player)null, spawn.x, spawn.y, spawn.z, SoundEvents.FIREWORK_ROCKET_LAUNCH, SoundSource.PLAYERS, 3.0F, 0.7F + Utils.random.nextFloat() * 0.3F);
     }
 
-    public void shootIceChunkB(Level world, int spellLevel, LivingEntity entity, Vec3 spawn, Vec3 trajectory) {
+    public void shootIceChunkB (Level world, int spellLevel, LivingEntity entity, Vec3 spawn, Vec3 trajectory) {
         IceChunkB iceChunkB = new IceChunkB(world, entity);
         iceChunkB.setPos(spawn.add((double)-1.0F, (double)0.0F, (double)0.0F));
         iceChunkB.shoot(trajectory, 0.15F);
@@ -168,7 +168,7 @@ public class HailstormSpell extends AbstractSpell {
         world.playSound((Player)null, spawn.x, spawn.y, spawn.z, SoundEvents.FIREWORK_ROCKET_LAUNCH, SoundSource.PLAYERS, 3.0F, 0.7F + Utils.random.nextFloat() * 0.3F);
     }
 
-    public void shootIceChunkC(Level world, int spellLevel, LivingEntity entity, Vec3 spawn, Vec3 trajectory) {
+    public void shootIceChunkC (Level world, int spellLevel, LivingEntity entity, Vec3 spawn, Vec3 trajectory) {
         IceChunkC iceChunkC = new IceChunkC(world, entity);
         iceChunkC.setPos(spawn.add((double)-1.0F, (double)0.0F, (double)0.0F));
         iceChunkC.shoot(trajectory, 0.075F);

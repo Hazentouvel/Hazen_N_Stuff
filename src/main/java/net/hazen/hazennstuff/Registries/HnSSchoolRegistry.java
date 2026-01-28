@@ -15,16 +15,16 @@ import java.util.function.Supplier;
 import static io.redspace.ironsspellbooks.api.registry.SchoolRegistry.SCHOOL_REGISTRY_KEY;
 
 public class HnSSchoolRegistry {
-    private static final DeferredRegister<SchoolType> HnS_SCHOOLS = DeferredRegister.create(SCHOOL_REGISTRY_KEY, HazenNStuff.MOD_ID);
+    private static final DeferredRegister<SchoolType> HNS_SCHOOLS = DeferredRegister.create(SCHOOL_REGISTRY_KEY, HazenNStuff.MOD_ID);
 
     public static void register(IEventBus eventBus)
     {
-        HnS_SCHOOLS.register(eventBus);
+        HNS_SCHOOLS.register(eventBus);
     }
 
     private static Supplier<SchoolType> registerSchool(SchoolType type)
     {
-        return HnS_SCHOOLS.register(type.getId().getPath(), () -> type);
+        return HNS_SCHOOLS.register(type.getId().getPath(), () -> type);
     }
 
     public static final ResourceLocation RADIANCE_RESOURCE = HazenNStuff.id("radiance");
@@ -33,7 +33,8 @@ public class HnSSchoolRegistry {
             (
                     RADIANCE_RESOURCE,
                     HnSTags.RADIANCE_FOCUS,
-                    Component.translatable("school.hazennstuff.radiance").withStyle(Style.EMPTY.withColor(0xe4a6ea)),
+                    Component.translatable("school.hazennstuff.radiance")
+                            .withStyle(Style.EMPTY.withColor(0xe4a6ea)),
                     HnSAttributeRegistry.RADIANCE_SPELL_POWER,
                     HnSAttributeRegistry.RADIANCE_SPELL_RESIST,
                     SoundRegistry.EVOCATION_CAST,
@@ -46,10 +47,25 @@ public class HnSSchoolRegistry {
             (
                     SHADOW_RESOURCE,
                     HnSTags.SHADOW_FOCUS,
-                    Component.translatable("school.hazennstuff.shadow").withStyle(Style.EMPTY.withColor(0x553a7f)),
+                    Component.translatable("school.hazennstuff.shadow")
+                            .withStyle(Style.EMPTY.withColor(0x553a7f)),
                     HnSAttributeRegistry.SHADOW_SPELL_POWER,
                     HnSAttributeRegistry.SHADOW_SPELL_RESIST,
-                    SoundRegistry.BLOOD_CAST,
+                    SoundRegistry.EVOCATION_CAST,
                     HnSDamageTypes.SHADOW_MAGIC
             ));
-}
+
+    public static final ResourceLocation ASTRAL_RESOURCE = HazenNStuff.id("astral");
+
+    public static final Supplier<SchoolType> ASTRAL = registerSchool(new SchoolType
+            (
+                    ASTRAL_RESOURCE,
+                    HnSTags.ASTRAL_FOCUS,
+                    Component.translatable("school.hazennstuff.astral")
+                            .withStyle(Style.EMPTY.withColor(0x1f4568)),
+                    HnSAttributeRegistry.ASTRAL_SPELL_POWER,
+                    HnSAttributeRegistry.ASTRAL_SPELL_RESIST,
+                    SoundRegistry.BLOOD_CAST,
+                    HnSDamageTypes.ASTRAL_MAGIC
+            ));
+    }

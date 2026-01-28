@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Spells.Schools.Radiance;
+package net.hazen.hazennstuff.Spells.Schools.Astral;
 
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
@@ -41,7 +41,7 @@ public class StellarCollapseSpell extends AbstractSpell {
     public StellarCollapseSpell() {
         this.defaultConfig = (new DefaultConfig())
                 .setMinRarity(SpellRarity.UNCOMMON)
-                .setSchoolResource(HnSSchoolRegistry.RADIANCE_RESOURCE)
+                .setSchoolResource(HnSSchoolRegistry.ASTRAL_RESOURCE)
                 .setMaxLevel(10)
                 .setCooldownSeconds(16.0F)
                 .build();

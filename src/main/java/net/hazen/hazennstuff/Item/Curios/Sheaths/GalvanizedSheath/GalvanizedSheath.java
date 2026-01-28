@@ -52,21 +52,16 @@ public class GalvanizedSheath extends SheathCurioItem {
     public static void handleAbility(LivingIncomingDamageEvent event) {
         var sheath = ((GalvanizedSheath) HnSItemRegistry.GALVANIZED_SHEATH.get());
         Entity attacker = event.getSource().getEntity();
-
         if (attacker instanceof ServerPlayer player) {
             if (sheath.isEquippedBy(player) && sheath.tryProcCooldown(player)) {
                 var victim = event.getEntity();
-
                 if (victim instanceof LivingEntity livingVictim && victim != attacker) {
                     float baseDamage = event.getOriginalAmount();
-
                     if (livingVictim.hasEffect(HnSEffects.ELECTROCUTED)) {
                         event.setAmount(baseDamage * 1.5F);
                         HazenNStuff.LOGGER.debug("Damage: " + event.getAmount());
                     }
-
                     livingVictim.addEffect(new MobEffectInstance(HnSEffects.ELECTROCUTED, 100, 1));
-
                     spawnLightningLine(player.level(), player, livingVictim);
                 }
             }

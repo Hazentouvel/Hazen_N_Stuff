@@ -49,21 +49,14 @@ public class ScrollSheath extends SheathCurioItem {
     }
 
     @SubscribeEvent
-    public static void handleAbility(LivingIncomingDamageEvent event)
-    {
-        var sheath = ((ScrollSheath) HnSItemRegistry.SCROLL_SHEATH.get());
+    public static void handleAbility(LivingIncomingDamageEvent event) {
+        ScrollSheath sheath = (ScrollSheath) HnSItemRegistry.SCROLL_SHEATH.get();
         Entity attacker = event.getSource().getEntity();
-
-        if (attacker instanceof ServerPlayer player)
-        {
-            if (sheath.isEquippedBy(player))
-            {
-                if (sheath.tryProcCooldown(player))
-                {
-                    var victim = event.getEntity();
-
+        if (attacker instanceof ServerPlayer player) {
+            if (sheath.isEquippedBy(player) && sheath.tryProcCooldown(player)) {
+                LivingEntity victim = event.getEntity();
+                if (victim != attacker) {
                     float getBaseDamage = event.getOriginalAmount();
-
                     if (victim instanceof LivingEntity livingVictim && victim != attacker)
                     {
                         if (livingVictim.hasEffect(HnSEffects.MANA_SICKNESS))
@@ -75,9 +68,7 @@ public class ScrollSheath extends SheathCurioItem {
 
                         var magicData = io.redspace.ironsspellbooks.api.magic.MagicData.getPlayerMagicData(player);
                         magicData.getPlayerCooldowns().clearCooldowns();
-
                         magicData.getPlayerCooldowns().syncToPlayer(player);
-
                         player.displayClientMessage(
                                 net.minecraft.network.chat.Component.literal("§bAll spell cooldowns have been refreshed!"), true
                         );
@@ -85,6 +76,7 @@ public class ScrollSheath extends SheathCurioItem {
                 }
             }
         }
+
     }
 
     @Override

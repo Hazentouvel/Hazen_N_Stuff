@@ -2,6 +2,8 @@ package net.hazen.hazennstuff.Spells;
 
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Spells.Schools.Astral.ShootingStarSpell;
+import net.hazen.hazennstuff.Spells.Schools.Astral.StellarCollapseSpell;
 import net.hazen.hazennstuff.Spells.Schools.Eldritch.SoulSeekersSpell;
 import net.hazen.hazennstuff.Spells.Schools.Evocation.ParrySpell;
 import net.hazen.hazennstuff.Spells.Schools.Evocation.SpectralAxeSpell;
@@ -16,8 +18,8 @@ import net.hazen.hazennstuff.Spells.Schools.Nature.DeathSentenceSpell;
 import net.hazen.hazennstuff.Spells.Schools.Nature.ShardSwordSpell;
 import net.hazen.hazennstuff.Spells.Schools.Nature.ThornChakramSpell;
 import net.hazen.hazennstuff.Spells.Schools.Radiance.*;
-import net.hazen.hazennstuff.Spells.Shadow.ChaoticTeleportSpell;
-import net.hazen.hazennstuff.Spells.Shadow.NightsEdgeStrikeSpell;
+import net.hazen.hazennstuff.Spells.Schools.Shadow.ChaoticTeleportSpell;
+import net.hazen.hazennstuff.Spells.Schools.Shadow.NightsEdgeStrikeSpell;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -122,12 +124,6 @@ public class HnSSpellRegistries {
     //Syringe Barrage
     public static final Supplier<AbstractSpell> SYRINGE_BARRAGE = registerSpell(new SyringeBarrageSpell());
 
-    // Shooting Star
-    public static final Supplier<AbstractSpell> SHOOTING_STAR = registerSpell(new ShootingStarSpell());
-
-    // Falling Stars
-    public static final Supplier<AbstractSpell> STELLAR_COLLAPSE = registerSpell(new StellarCollapseSpell());
-
     // Terraprisma
     public static final Supplier<AbstractSpell> TERRAPRISMIC_BARRAGE = registerSpell(new TerraprismicBarrageSpell());
 
@@ -151,6 +147,16 @@ public class HnSSpellRegistries {
 
     // Soul Seekers
     public static final Supplier<AbstractSpell> SOUL_SEEKERS = registerSpell(new SoulSeekersSpell());
+
+    /*
+    *** Astral
+     */
+
+    // Shooting Star
+    public static final Supplier<AbstractSpell> SHOOTING_STAR = registerSpell(new ShootingStarSpell());
+
+    // Falling Stars
+    public static final Supplier<AbstractSpell> STELLAR_COLLAPSE = registerSpell(new StellarCollapseSpell());
 
 
 

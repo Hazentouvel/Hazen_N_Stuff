@@ -164,11 +164,14 @@ public class HnSEffects {
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
-    public static final Holder<MobEffect> COOLDOWN_RESET = MOB_EFFECTS.register("cooldown_reset",
+    public static final Holder<MobEffect> IONIC_AWAKENING = MOB_EFFECTS.register("ionic_awakening",
             () -> new GenericHazenEffect(MobEffectCategory.BENEFICIAL, 0xfbb741)
-                    .addAttributeModifier(AttributeRegistry.COOLDOWN_REDUCTION,
-                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "cooldown_reset"), 90000f,
-                            AttributeModifier.Operation.ADD_VALUE)
+                    .addAttributeModifier(AttributeRegistry.LIGHTNING_SPELL_POWER,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ionic_awakening"), 0.15f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                    .addAttributeModifier(Attributes.MOVEMENT_SPEED,
+                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ionic_awakening"), 0.15f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
     public static final DeferredHolder<MobEffect, MobEffect> INFESTED = MOB_EFFECTS.register("infested",

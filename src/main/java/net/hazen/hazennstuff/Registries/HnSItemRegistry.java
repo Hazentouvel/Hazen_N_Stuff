@@ -136,6 +136,7 @@ import net.hazen.hazennstuff.Item.Staves.RodOfDiscord.RodOfDiscord;
 import net.hazen.hazennstuff.Item.Staves.SoulcallingScepter.SoulcallingScepter;
 import net.hazen.hazennstuff.Item.Staves.WhiteLilyStaff.WhiteLilyStaff;
 import net.hazen.hazennstuff.Item.Staves.WisewoodCane.WisewoodCane;
+import net.hazen.hazennstuff.Item.UpgradeOrbs.Tier2.Test.EnhancedFireUpgradeOrb;
 import net.hazen.hazennstuff.Item.Util.PickaxeAxe.DivineGold.PickaxeAxeDivineGoldItem;
 import net.hazen.hazennstuff.Item.Util.PickaxeAxe.PickaxeAxeItem;
 import net.hazen.hazennstuff.Item.Util.SpectralPickaxe.SpectralPickaxeItem;
@@ -229,6 +230,14 @@ public class HnSItemRegistry {
                     .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.SHADOW_SPELL_POWER))
     );
 
+    // Astral Upgrade Orb
+    public static final DeferredHolder<Item, Item> ASTRAL_UPGRADE_ORB = ITEMS.register("astral_upgrade_orb",
+            () -> new UpgradeOrbItem(ItemPropertiesHelper
+                    .material()
+                    .rarity(Rarity.UNCOMMON)
+                    .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.ASTRAL_SPELL_POWER))
+    );
+
     // Melee Upgrade Orb
     public static final DeferredHolder<Item, Item> MELEE_UPGRADE_ORB = ITEMS.register("melee_upgrade_orb",
             () -> new UpgradeOrbItem(ItemPropertiesHelper
@@ -252,6 +261,14 @@ public class HnSItemRegistry {
                     .rarity(Rarity.UNCOMMON)
                     .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.ARCHERY_POWER))
     );
+
+    /*
+    *** Tier 2
+     */
+
+    // Enhanced Fire Upgrade Orb
+    public static final DeferredHolder<Item, Item> ENHANCED_FIRE_UPGRADE_ORB = ITEMS.register
+            ("enhanced_fire_upgrade_orb", EnhancedFireUpgradeOrb::new);
 
     /*
      *** [Materials] **************************************************************************
@@ -283,6 +300,11 @@ public class HnSItemRegistry {
 
     //Radiance Rune
     public static final DeferredHolder<Item, Item> RADIANCE_RUNE = ITEMS.register("radiance_rune",
+            () -> new Item(ItemPropertiesHelper.material())
+    );
+
+    //Radiance Rune
+    public static final DeferredHolder<Item, Item> ASTRAL_RUNE = ITEMS.register("astral_rune",
             () -> new Item(ItemPropertiesHelper.material())
     );
 
@@ -525,14 +547,14 @@ public class HnSItemRegistry {
     public static final DeferredItem<Item> ROSE_QUARTZ = ITEMS.register("rose_quartz",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.RARE))
+                    .rarity(Rarity.UNCOMMON))
     );
 
     //Rose Gold Ingot
     public static final DeferredItem<Item> ROSE_GOLD_INGOT = ITEMS.register("rose_gold_ingot",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.RARE))
+                    .rarity(Rarity.UNCOMMON))
     );
 
     // Zenalite Ingot
@@ -547,7 +569,7 @@ public class HnSItemRegistry {
     public static final DeferredItem<Item> RAW_ZENALITE = ITEMS.register("raw_zenalite",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.EPIC)
+                    .rarity(Rarity.RARE)
                     .fireResistant())
     );
 
@@ -572,7 +594,13 @@ public class HnSItemRegistry {
     // Silver Scrap
     public static final DeferredItem<Item> SILVER_SCRAPS = ITEMS.register("silver_scraps",
             () -> new Item(new Item.Properties()
-                    .rarity(Rarity.RARE))
+                    .rarity(Rarity.UNCOMMON))
+    );
+
+    // Stardust
+    public static final DeferredItem<Item> STARDUST = ITEMS.register("stardust",
+            () -> new Item(new Item.Properties()
+                    .rarity(HnSRarities.ASTRAL_RARITY.getValue()))
     );
 
     /*

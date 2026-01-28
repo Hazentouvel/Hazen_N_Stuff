@@ -24,13 +24,16 @@ public class HnSTags {
     // Shadow School Focus
     public static final TagKey<Item> SHADOW_FOCUS = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "focus/shadow_focus").toString()));
-    // Radiance School Focus
+    // Shadow School Focus
+    public static final TagKey<Item> ASTRAL_FOCUS = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "focus/astral_focus").toString()));
+    // Melee School Focus
     public static final TagKey<Item> MELEE_FOCUS = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "focus/melee_focus").toString()));
-    // Shadow School Focus
+    // Archery School Focus
     public static final TagKey<Item> ARCHERY_FOCUS = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "focus/archery_focus").toString()));
-    // Radiance School Focus
+    // Health School Focus
     public static final TagKey<Item> HEALTH_FOCUS = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "focus/health_focus").toString()));
 

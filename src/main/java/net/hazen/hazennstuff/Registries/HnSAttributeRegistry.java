@@ -18,9 +18,11 @@ public class HnSAttributeRegistry {
 
     public static final DeferredHolder<Attribute, Attribute> RADIANCE_SPELL_RESIST = registerResistanceAttribute("radiance");
     public static final DeferredHolder<Attribute, Attribute> SHADOW_SPELL_RESIST = registerResistanceAttribute("shadow");
+    public static final DeferredHolder<Attribute, Attribute> ASTRAL_SPELL_RESIST = registerResistanceAttribute("astral");
 
     public static final DeferredHolder<Attribute, Attribute> RADIANCE_SPELL_POWER = registerPowerAttribute("radiance");
     public static final DeferredHolder<Attribute, Attribute> SHADOW_SPELL_POWER = registerPowerAttribute("shadow");
+    public static final DeferredHolder<Attribute, Attribute> ASTRAL_SPELL_POWER = registerPowerAttribute("astral");
 
     public static void register(IEventBus eventBus)
     {

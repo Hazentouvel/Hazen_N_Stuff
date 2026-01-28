@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Spells.Shadow;
+package net.hazen.hazennstuff.Spells.Schools.Shadow;
 
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;

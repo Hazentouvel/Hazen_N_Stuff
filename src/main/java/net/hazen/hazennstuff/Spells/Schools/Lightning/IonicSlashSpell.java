@@ -20,14 +20,23 @@ import java.util.List;
 import java.util.Optional;
 
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSLash.IonicSlashOptions;
+import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.hazen.hazennstuff.Registries.HnSItemRegistry;
+import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
@@ -84,7 +93,39 @@ public class IonicSlashSpell extends AbstractSpell {
         return this.getCastTime(spellLevel);
     }
 
+    private boolean hasIonicSplitterDormant;
+
+
     public void onCast(Level level, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
+
+        boolean hasDormantMain = entity.getMainHandItem().is(HnSItemRegistry.IONIC_SPLITTER_DORMANT.get());
+        boolean hasDormantOff = entity.getOffhandItem().is(HnSItemRegistry.IONIC_SPLITTER_DORMANT.get());
+        boolean hasDormant = hasDormantMain || hasDormantOff;
+
+        if (hasDormant) {
+            if (entity instanceof ServerPlayer serverPlayer && !serverPlayer.level().isClientSide()) {
+                ItemStack t1Stack = new ItemStack(HnSItemRegistry.IONIC_SPLITTER_T1.get());
+                if (hasDormantMain) {
+                    // replace main hand (selected hotbar slot)
+                    serverPlayer.getInventory().setItem(serverPlayer.getInventory().selected, t1Stack);
+                } else {
+                    // replace offhand
+                    serverPlayer.setItemInHand(InteractionHand.OFF_HAND, t1Stack);
+                }
+
+                // play awaken sound and notify player
+                serverPlayer.level().playSound(null, serverPlayer.getX(), serverPlayer.getY(), serverPlayer.getZ(), HnSSounds.ELECTRIC_CAST, SoundSource.NEUTRAL, 0.5F, 1.3F);
+                serverPlayer.displayClientMessage(Component.literal("Awaken"), true);
+            }
+        } else {
+            this.slash(level, spellLevel, entity, playerMagicData);
+        }
+
+        super.onCast(level, spellLevel, entity, castSource, playerMagicData);
+    }
+
+
+    public void slash (Level level, int spellLevel, LivingEntity entity, MagicData playerMagicData) {
         float radius = 3.25F;
         float distance = 1.9F;
         Vec3 forward = entity.getForward();
@@ -104,7 +145,6 @@ public class IonicSlashSpell extends AbstractSpell {
 
         boolean mirrored = playerMagicData.getCastingEquipmentSlot().equals(SpellSelectionManager.OFFHAND);
         MagicManager.spawnParticles(level, new IonicSlashOptions((float)forward.x, (float)forward.y, (float)forward.z, mirrored, false, 1.0F), hitLocation.x, hitLocation.y + 0.3, hitLocation.z, 1, (double)0.0F, (double)0.0F, (double)0.0F, (double)0.0F, true);
-        super.onCast(level, spellLevel, entity, castSource, playerMagicData);
     }
 
     public SpellDamageSource getDamageSource(Entity projectile, Entity attacker) {
@@ -120,6 +160,7 @@ public class IonicSlashSpell extends AbstractSpell {
             return 0.0F;
         } else {
             float weaponDamage = Utils.getWeaponDamage(entity);
+
             //ItemStack weaponItem = entity.getWeaponItem();
 //            if (!weaponItem.isEmpty() && weaponItem.has(DataComponents.ENCHANTMENTS)) {
 //                weaponDamage += (float)Utils.getEnchantmentLevel(entity.level, Enchantments.FIRE_ASPECT, (ItemEnchantments)weaponItem.get(DataComponents.ENCHANTMENTS));
@@ -145,8 +186,17 @@ public class IonicSlashSpell extends AbstractSpell {
         }
     }
 
+    private boolean hasItem(LivingEntity entity, Item item) {
+        return entity.getMainHandItem().is(item)
+                || entity.getOffhandItem().is(item);
+    }
+
+
     public AnimationHolder getCastStartAnimation() {
-        return SpellAnimations.ONE_HANDED_HORIZONTAL_SWING_ANIMATION;
+        if (hasIonicSplitterDormant)
+            return SpellAnimations.THROW_SINGLE_ITEM;
+        else
+            return SpellAnimations.ONE_HANDED_HORIZONTAL_SWING_ANIMATION;
     }
 
     public AnimationHolder getCastFinishAnimation() {

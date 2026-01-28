@@ -73,13 +73,20 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.SPIDER_FANG);
                         output.accept(HnSItemRegistry.PRISMATIC_SHARD);
                         output.accept(HnSItemRegistry.VOLT_CORE);
+                        output.accept(HnSItemRegistry.STARDUST);
 
-                        //Upgrade Orbs
+                        /*
+                        *** Upgrade Orbs
+                         */
                         output.accept(HnSItemRegistry.RADIANCE_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.SHADOW_UPGRADE_ORB.get());
+                        output.accept(HnSItemRegistry.ASTRAL_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.ARCHERY_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.MELEE_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.HEALTH_UPGRADE_ORB.get());
+
+                        // Tier 2 Upgrade Orbs
+                        output.accept(HnSItemRegistry.ENHANCED_FIRE_UPGRADE_ORB.get());
 
                         //Runes
                         output.accept(HnSItemRegistry.MELEE_RUNE.get());
@@ -87,6 +94,7 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.HEALTH_RUNE.get());
                         output.accept(HnSItemRegistry.SHADOW_RUNE.get());
                         output.accept(HnSItemRegistry.RADIANCE_RUNE.get());
+                        output.accept(HnSItemRegistry.ASTRAL_RUNE.get());
                         output.accept(HnSItemRegistry.ELDRITCH_RUNE.get());
 
 

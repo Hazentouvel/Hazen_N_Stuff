@@ -16,10 +16,9 @@ public class HnSDamageTypes {
         );
     }
 
-
-
     public static final ResourceKey<DamageType> RADIANCE_MAGIC = register("radiance_magic");
     public static final ResourceKey<DamageType> SHADOW_MAGIC = register("shadow_magic");
+    public static final ResourceKey<DamageType> ASTRAL_MAGIC = register("astral_magic");
 
     public static final ResourceKey<DamageType> ICE_CLOUD = register("ice_cloud");
 

@@ -399,14 +399,14 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     public static HnSExtendedWeaponsTiers STARFURY = new HnSExtendedWeaponsTiers(
             8064,
-            8,
+            9,
             -2.4F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+            new AttributeContainer(HnSAttributeRegistry.ASTRAL_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
     public static HnSExtendedWeaponsTiers UMBRANOVA_DORMANT = new HnSExtendedWeaponsTiers(

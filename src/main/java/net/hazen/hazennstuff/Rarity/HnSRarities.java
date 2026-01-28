@@ -82,4 +82,10 @@ public class HnSRarities {
             "hazennstuff:nature",
             (UnaryOperator<Style>) ((style) -> style.withColor(GREEN))
     );
+
+    public static final EnumProxy<Rarity> ASTRAL_RARITY = new EnumProxy<>(Rarity.class,
+            -1,
+            "hazennstuff:astral",
+            (UnaryOperator<Style>) ((style) -> style.withColor(0x1f4568))
+    );
 }

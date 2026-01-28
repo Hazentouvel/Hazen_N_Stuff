@@ -11,6 +11,7 @@ import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSExtendedWeaponsTiers;
 import net.hazen.hazennstuff.Rarity.HnSRarities;
+import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
@@ -40,11 +41,12 @@ public class StarfuryItem extends MagicSwordItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(HnSRarities.SHADOW_RARITY.getValue())
+                        .rarity(HnSRarities.ASTRAL_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.STARFURY)
                         ),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(SpellRegistry.STARFALL_SPELL, 6)
+                        new SpellDataRegistryHolder(HnSSpellRegistries.STELLAR_COLLAPSE, 6),
+                        new SpellDataRegistryHolder(HnSSpellRegistries.SHOOTING_STAR, 5)
                 )
         );
     }
@@ -96,7 +98,8 @@ public class StarfuryItem extends MagicSwordItem implements GeoItem {
 
         super.initializeSpellContainer(itemStack);
         itemStack.set(ComponentRegistry.AFFINITY_COMPONENT, new AffinityData(Map.of(
-                SpellRegistry.STARFALL_SPELL.get().getSpellResource(), 1
+                HnSSpellRegistries.STELLAR_COLLAPSE.get().getSpellResource(), 1,
+                HnSSpellRegistries.SHOOTING_STAR.get().getSpellResource(), 1
         )));
     }
 
@@ -108,17 +111,19 @@ public class StarfuryItem extends MagicSwordItem implements GeoItem {
             LivingEntity caster = event.getEntity();
             if (caster == null) return;
 
-            if (event.getSpell() != SpellRegistry.STARFALL_SPELL.get()) {
-                return;
-            }
+            var spell = event.getSpell();
+
+            boolean isCinderousSpell =
+                    spell == HnSSpellRegistries.SHOOTING_STAR.get() ||
+                            spell == HnSSpellRegistries.STELLAR_COLLAPSE.get();
 
             ItemStack mainHand = caster.getMainHandItem();
             ItemStack offHand = caster.getOffhandItem();
 
-            boolean usingKnives = mainHand.getItem() instanceof StarfuryItem ||
+            boolean usingStarfury = mainHand.getItem() instanceof StarfuryItem ||
                     offHand.getItem() instanceof StarfuryItem;
 
-            if (usingKnives) {
+            if (usingStarfury) {
                 event.addLevels(1);
             }
         }

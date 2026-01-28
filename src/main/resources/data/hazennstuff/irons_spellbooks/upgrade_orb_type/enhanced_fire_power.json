@@ -1,0 +1,9 @@
+{
+  "amount": 0.7,
+  "attribute": "irons_spellbooks:fire_spell_power",
+  "containerItem": {
+    "count": 1,
+    "id": "hazennstuff:enhanced_fire_upgrade_orb"
+  },
+  "operation": "add_multiplied_base"
+}

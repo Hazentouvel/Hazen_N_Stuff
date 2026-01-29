@@ -32,8 +32,8 @@ import net.hazen.hazennstuff.Entity.Spells.Lightning.InstantLightningStrike.Ligh
 import net.hazen.hazennstuff.Entity.Spells.Nature.DeathSentence.DeathSentence;
 import net.hazen.hazennstuff.Entity.Spells.Nature.SpiderLily.SpiderLily;
 import net.hazen.hazennstuff.Entity.Spells.Nature.ThornChakram.ThornChakram;
-import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.FallingStars.FallingStar;
-import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.ShootingStar;
+import net.hazen.hazennstuff.Entity.Spells.Astral.ShootingStar.FallingStars.FallingStar;
+import net.hazen.hazennstuff.Entity.Spells.Astral.ShootingStar.ShootingStar;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Syringe.Syringe;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.Terraprisma;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.NightsEdgeAfterSlash.NightsEdgeAfterSlash;

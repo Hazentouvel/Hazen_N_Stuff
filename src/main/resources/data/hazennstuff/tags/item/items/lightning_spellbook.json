@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "hazennstuff:energized_core_spellbook",
+    {
+      "id": "discerning_the_eldritch:tempestuous_tome",
+      "required": false
+    }
+  ]
+}

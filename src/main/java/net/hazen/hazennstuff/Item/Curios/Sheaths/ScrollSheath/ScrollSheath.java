@@ -5,7 +5,6 @@ import com.google.common.collect.Multimap;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import net.acetheeldritchking.aces_spell_utils.items.curios.SheathCurioItem;
 import net.hazen.hazennstuff.Animations.HnSDispatcher;
-import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.HnSConfig;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
@@ -29,7 +28,7 @@ import top.theillusivec4.curios.api.SlotContext;
 @EventBusSubscriber
 public class ScrollSheath extends SheathCurioItem {
     public final HnSDispatcher dispatcher;
-    public static int COOLDOWN = HnSConfig.scrollSheathCooldown * 20;
+    public static int COOLDOWN;
 
     public ScrollSheath() {
         super(new Properties()
@@ -42,10 +41,12 @@ public class ScrollSheath extends SheathCurioItem {
         this.dispatcher = new HnSDispatcher();
     }
 
-
-    @Override
     protected int getCooldownTicks() {
         return HnSConfig.scrollSheathCooldown * 20;
+    }
+
+    static {
+        COOLDOWN = HnSConfig.scrollSheathCooldown * 20;
     }
 
     @SubscribeEvent
@@ -62,7 +63,7 @@ public class ScrollSheath extends SheathCurioItem {
                         if (livingVictim.hasEffect(HnSEffects.MANA_SICKNESS))
                         {
                             event.setAmount(getBaseDamage * 1.5F);
-                            HazenNStuff.LOGGER.debug("Damage: " + event.getAmount());
+                            //HazenNStuff.LOGGER.debug("Damage: " + event.getAmount());
                         }
                         livingVictim.addEffect(new MobEffectInstance(HnSEffects.MANA_SICKNESS, 300, 0));
 

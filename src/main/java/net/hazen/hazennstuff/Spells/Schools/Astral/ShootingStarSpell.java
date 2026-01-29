@@ -4,7 +4,7 @@ import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.Utils;
-import net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.ShootingStar;
+import net.hazen.hazennstuff.Entity.Spells.Astral.ShootingStar.ShootingStar;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.minecraft.network.chat.Component;

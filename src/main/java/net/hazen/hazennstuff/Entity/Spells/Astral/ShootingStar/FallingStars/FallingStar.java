@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar.FallingStars;
+package net.hazen.hazennstuff.Entity.Spells.Astral.ShootingStar.FallingStars;
 
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;

@@ -76,10 +76,21 @@ public class HnSTags {
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure/pure_boots").toString()));
 
     /*
-     *** Ores
+     *** Equipment
      */
+
     public static final TagKey<Item> CINDEROUS_EQUIPMENT = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "cinderous_equipment").toString()));
+
+
+    public static final TagKey<Item> IONIC_SPLITTER = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ionic_splitter").toString()));
+
+    public static final TagKey<Item> LIGHTNING_SPELLBOOK = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "lightning_spellbook").toString()));
+
+    public static final TagKey<Item> LIGHTNING_SHEATH = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "lightning_sheath").toString()));
 
 
     public static class Blocks {

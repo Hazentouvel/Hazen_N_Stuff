@@ -1,4 +1,4 @@
-// 1.21.1	2026-01-16T18:31:38.2400006	Tags for minecraft:item mod id hazennstuff
+// 1.21.1	2026-01-29T11:37:39.3021958	Tags for minecraft:item mod id hazennstuff
 7334472233d29aa1535fac5ef01cbe8a7dbf51bb data/c/tags/item/armors.json
 740053467c0e6401606132b0ce14777e5339d91f data/c/tags/item/bones.json
 9b523c3a03018cf7fd1a8079b41b62136742a9b1 data/c/tags/item/enchantables.json
@@ -24,6 +24,8 @@ b9954a780f37e2d30b2edd1085646f77332ff93c data/hazennstuff/tags/item/armors/nethe
 e49c83cf4b911a7304cda0831b3e0ab3af93805f data/hazennstuff/tags/item/armors/school/school_helmet.json
 211446df18033dced90eb51b0e44756cc1310908 data/hazennstuff/tags/item/armors/school/school_leggings.json
 cd8367c2634f001ba8713679900b76621a498cf6 data/hazennstuff/tags/item/cinderous_equipment.json
+b9b54010575eb78a6b943e2a567e0d4bfcbb51f8 data/hazennstuff/tags/item/ionic_splitter.json
+ed119c962b0d74e03e029acb5af3a12b2c2e1e92 data/hazennstuff/tags/item/lightning_sheath.json
 3a65407953f7484e090e8898b4658df2a5eff741 data/hazennstuff/tags/item/ores/zenalite.json
 05d638c654a728c24450eadca4dee57481cc0610 data/irons_spellbooks/tags/item/imbue_whitelist.json
 f8c3ec5560a2b88a23e8885e1a9559c75cdf8613 data/irons_spellbooks/tags/item/inscribed_rune.json
@@ -40,7 +42,7 @@ dcdd35bdcef3b873aacc4a77600d5477bc2375d1 data/minecraft/tags/item/enchantable/fo
 e980b5ccf5b7b1e2b532da4acf6efd141b901261 data/minecraft/tags/item/enchantable/leg_armor.json
 68f33931873211ee1de5bcb19f7714e2082852f4 data/minecraft/tags/item/enchantable/mace.json
 eb246ec29a19a160da18d2e464bfb9abcf33cc72 data/minecraft/tags/item/enchantable/mining.json
-a39e9d49934e8aa486146d643e8207537a8f6cb5 data/minecraft/tags/item/enchantable/sharp_weapon.json
+1e9714f43aa52437d7bbb4dcfee6366556749a66 data/minecraft/tags/item/enchantable/sharp_weapon.json
 8997331671aa7cba8a9cb970be783438fe63873e data/minecraft/tags/item/fences.json
 7747a657bf35c413736b2132fc993249218293e2 data/minecraft/tags/item/fence_gates.json
 dcdd35bdcef3b873aacc4a77600d5477bc2375d1 data/minecraft/tags/item/foot_armor.json

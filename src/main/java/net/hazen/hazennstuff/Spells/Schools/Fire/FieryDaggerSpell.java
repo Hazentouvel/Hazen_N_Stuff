@@ -10,6 +10,7 @@ import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
 import net.hazen.hazennstuff.Animations.HnSSpellAnimations;
+import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractTaggedSpell;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -23,7 +24,7 @@ import top.theillusivec4.curios.api.CuriosApi;
 
 import java.util.List;
 
-public class FieryDaggerSpell extends AbstractSpell {
+public class FieryDaggerSpell extends AbstractTaggedSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "fiery_dagger");
     private final DefaultConfig defaultConfig;
 
@@ -40,14 +41,14 @@ public class FieryDaggerSpell extends AbstractSpell {
                 .setMinRarity(SpellRarity.LEGENDARY)
                 .setSchoolResource(SchoolRegistry.FIRE_RESOURCE)
                 .setMaxLevel(5)
-                .setCooldownSeconds(8.0F)
+                .setCooldownSeconds(16.0F)
                 .setAllowCrafting(false)
                 .build();
-        this.manaCostPerLevel = 2;
+        this.manaCostPerLevel = 8;
         this.baseSpellPower = 12;
         this.spellPowerPerLevel = 1;
         this.castTime = 0;
-        this.baseManaCost = 10;
+        this.baseManaCost = 24;
     }
 
     public CastType getCastType() {
@@ -96,7 +97,7 @@ public class FieryDaggerSpell extends AbstractSpell {
                 Vec3 dir = look.yRot((float) Math.toRadians(angle));
                 dagger.shoot(dir.x, dir.y, dir.z, 1.25F, 0.0F);
 
-                dagger.setNoGravity(false); // Gravity ON
+                dagger.setNoGravity(false);
                 world.addFreshEntity(dagger);
             }
         } else {
@@ -132,14 +133,12 @@ public class FieryDaggerSpell extends AbstractSpell {
                 dagger.setExplosionRadius(0f);
                 dagger.setPos(spawnPos);
 
-                // Make dagger visually face the caster's current direction
-                dagger.setYRot(entity.getYRot());
-                dagger.setXRot(entity.getXRot());
-                dagger.yRotO = entity.getYRot();
-                dagger.xRotO = entity.getXRot();
+//                // Make dagger visually face the caster's current direction
+//                dagger.setYRot(entity.getYRot());
+//                dagger.setXRot(entity.getXRot());
+//                dagger.yRotO = entity.getYRot();
+//                dagger.xRotO = entity.getXRot();
 
-                // Do not lock a fixed launchDir here so the dagger can use the owner's look when it actually fires.
-                // (The projectile needs to sample owner.getLookAngle() at release time for this to take effect.)
                 dagger.launchDir = null;
                 dagger.ownerTrack = spawnPos.subtract(entity.position());
                 dagger.setDeltaMovement(0, 0, 0);
@@ -153,21 +152,21 @@ public class FieryDaggerSpell extends AbstractSpell {
     }
 
 
-    private boolean hasTaggedItem(LivingEntity entity, net.minecraft.tags.TagKey<net.minecraft.world.item.Item> tag) {
-        if (entity.getMainHandItem().is(tag) || entity.getOffhandItem().is(tag))
-            return true;
-
-        for (ItemStack armor : entity.getArmorSlots()) {
-            if (armor.is(tag))
-                return true;
-        }
-
-        boolean hasCurio = CuriosApi.getCuriosInventory(entity)
-                .map(curios -> !curios.findCurios(item -> item != null && item.is(tag)).isEmpty())
-                .orElse(false);
-
-        return hasCurio;
-    }
+//    private boolean hasTaggedItem(LivingEntity entity, net.minecraft.tags.TagKey<net.minecraft.world.item.Item> tag) {
+//        if (entity.getMainHandItem().is(tag) || entity.getOffhandItem().is(tag))
+//            return true;
+//
+//        for (ItemStack armor : entity.getArmorSlots()) {
+//            if (armor.is(tag))
+//                return true;
+//        }
+//
+//        boolean hasCurio = CuriosApi.getCuriosInventory(entity)
+//                .map(curios -> !curios.findCurios(item -> item != null && item.is(tag)).isEmpty())
+//                .orElse(false);
+//
+//        return hasCurio;
+//    }
 
     public SpellDamageSource getDamageSource(@Nullable Entity projectile, Entity attacker) {
         return super.getDamageSource(projectile, attacker).setFireTicks(60);

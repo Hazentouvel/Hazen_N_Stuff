@@ -80,6 +80,12 @@ public class HnSItemTagProvider extends ItemTagsProvider {
 
         ;
 
+        tag(HnSTags.LIGHTNING_SHEATH)
+
+                .add(HnSItemRegistry.GALVANIZED_SHEATH.get())
+
+        ;
+
         tag(HnSTags.CINDEROUS_EQUIPMENT)
 
                 .add(HnSItemRegistry.TYROS_HELMET.get())
@@ -4005,6 +4011,12 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.ICE_PIKE.get())
         ;
 
+        tag(HnSTags.IONIC_SPLITTER)
+                .add(HnSItemRegistry.IONIC_SPLITTER_T1.get())
+                .add(HnSItemRegistry.IONIC_SPLITTER_T2.get())
+                .add(HnSItemRegistry.IONIC_SPLITTER_T3.get())
+        ;
+
         tag(ItemTags.SHARP_WEAPON_ENCHANTABLE)
                 //Fire
                 .add(HnSItemRegistry.FIREBLOSSOM_RAPIER.get())
@@ -4022,17 +4034,29 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 //Lightning
                 .add(HnSItemRegistry.BEONGAE.get())
                 .add(HnSItemRegistry.SKYSCORCHER.get())
+                .add(HnSItemRegistry.IONIC_SPLITTER_DORMANT.get())
+                .add(HnSItemRegistry.IONIC_SPLITTER_T1.get())
+                .add(HnSItemRegistry.IONIC_SPLITTER_T2.get())
+                .add(HnSItemRegistry.IONIC_SPLITTER_T3.get())
 
                 //Nature
                 .add(HnSItemRegistry.BOUNTIFUL_HARVEST.get())
                 .add(HnSItemRegistry.THORN_CHAKRAM.get())
+                .add(HnSItemRegistry.O_FORTUNA_DORMANT.get())
+                //.add(HnSItemRegistry.O_FORTUNA_T1.get())
+                //.add(HnSItemRegistry.O_FORTUNA_T2.get())
+                //.add(HnSItemRegistry.O_FORTUNA_T3.get())
 
                 //Blood
                 .add(HnSItemRegistry.VAMPIRE_KNIVES.get())
+                .add(HnSItemRegistry.DEVASTATOR_DORMANT.get())
+                //.add(HnSItemRegistry.DEVASTATOR_T1.get())
 
                 //Ender
                 .add(HnSItemRegistry.OBSIDIAN_CLAYMORE.get())
                 .add(HnSItemRegistry.STARFURY.get())
+                .add(HnSItemRegistry.UMBRANOVA_DORMANT.get())
+                //.add(HnSItemRegistry.UMBRANOVA_T1.get())
 
                 //Radiance
                 .add(HnSItemRegistry.SPECTRUM.get())
@@ -4054,6 +4078,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 //Evocation
                 .add(HnSItemRegistry.MALICE.get())
                 .add(HnSItemRegistry.ANCIENT_WARRIORS_AXE.get())
+                .add(HnSItemRegistry.PROVOCATION_DORMANT.get())
+                //.add(HnSItemRegistry.PROVOCATION_T1.get())
 
                 //Eldritch
                 .add(HnSItemRegistry.THE_DEVOURER.get())

@@ -33,19 +33,23 @@ import top.theillusivec4.curios.api.SlotContext;
 @EventBusSubscriber
 public class GalvanizedSheath extends SheathCurioItem {
     public final HnSDispatcher dispatcher;
-    public static int COOLDOWN = HnSConfig.galvanizedSheathCooldown * 20;
+    public static int COOLDOWN;
 
     public GalvanizedSheath() {
-        super(new Properties().stacksTo(1).rarity(HnSRarities.LIGHTNING_RARITY.getValue()).fireResistant(), null);
-
-
+        super(new Properties()
+                .stacksTo(1)
+                .rarity(HnSRarities.LIGHTNING_RARITY.getValue())
+                .fireResistant(),
+                null);
         this.dispatcher = new HnSDispatcher();
     }
 
-
-    @Override
     protected int getCooldownTicks() {
         return HnSConfig.galvanizedSheathCooldown * 20;
+    }
+
+    static {
+        COOLDOWN = HnSConfig.galvanizedSheathCooldown * 20;
     }
 
     @SubscribeEvent
@@ -59,7 +63,7 @@ public class GalvanizedSheath extends SheathCurioItem {
                     float baseDamage = event.getOriginalAmount();
                     if (livingVictim.hasEffect(HnSEffects.ELECTROCUTED)) {
                         event.setAmount(baseDamage * 1.5F);
-                        HazenNStuff.LOGGER.debug("Damage: " + event.getAmount());
+                        //HazenNStuff.LOGGER.debug("Damage: " + event.getAmount());
                     }
                     livingVictim.addEffect(new MobEffectInstance(HnSEffects.ELECTROCUTED, 100, 1));
                     spawnLightningLine(player.level(), player, livingVictim);

@@ -4,7 +4,6 @@ import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.magic.SpellSelectionManager;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
-import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
 import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SpellAnimations;
@@ -19,16 +18,18 @@ import io.redspace.ironsspellbooks.util.ParticleHelper;
 import java.util.List;
 import java.util.Optional;
 
+import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSLash.IonicSlashOptions;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
-import net.hazen.hazennstuff.Registries.HnSSounds;
+import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractTaggedSpell;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -43,7 +44,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
-public class IonicSlashSpell extends AbstractSpell {
+public class IonicSlashSpell extends AbstractTaggedSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "ionic_slash");
     private final DefaultConfig defaultConfig;
 
@@ -53,10 +54,10 @@ public class IonicSlashSpell extends AbstractSpell {
 
     public IonicSlashSpell() {
         this.defaultConfig = (new DefaultConfig())
-                .setMinRarity(SpellRarity.COMMON)
+                .setMinRarity(SpellRarity.RARE)
                 .setSchoolResource(SchoolRegistry.LIGHTNING_RESOURCE)
                 .setMaxLevel(5)
-                .setCooldownSeconds((double)15.0F)
+                .setCooldownSeconds((double)14.0F)
                 .build();
         this.manaCostPerLevel = 15;
         this.baseSpellPower = 5;
@@ -94,28 +95,28 @@ public class IonicSlashSpell extends AbstractSpell {
     }
 
     private boolean hasIonicSplitterDormant;
+    private boolean hasIonicSplitter;
+    //private boolean hasLightningSpellbook;
+    //private boolean hasLightningSheath;
 
 
     public void onCast(Level level, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
 
-        boolean hasDormantMain = entity.getMainHandItem().is(HnSItemRegistry.IONIC_SPLITTER_DORMANT.get());
-        boolean hasDormantOff = entity.getOffhandItem().is(HnSItemRegistry.IONIC_SPLITTER_DORMANT.get());
-        boolean hasDormant = hasDormantMain || hasDormantOff;
+        boolean hasDormantMainhand = entity.getMainHandItem().is(HnSItemRegistry.IONIC_SPLITTER_DORMANT.get());
+        boolean hasDormantOffhand = entity.getOffhandItem().is(HnSItemRegistry.IONIC_SPLITTER_DORMANT.get());
+        hasIonicSplitterDormant = hasDormantMainhand || hasDormantOffhand;
 
-        if (hasDormant) {
+        if (hasIonicSplitterDormant) {
             if (entity instanceof ServerPlayer serverPlayer && !serverPlayer.level().isClientSide()) {
                 ItemStack t1Stack = new ItemStack(HnSItemRegistry.IONIC_SPLITTER_T1.get());
-                if (hasDormantMain) {
-                    // replace main hand (selected hotbar slot)
+                if (hasDormantMainhand) {
                     serverPlayer.getInventory().setItem(serverPlayer.getInventory().selected, t1Stack);
                 } else {
-                    // replace offhand
                     serverPlayer.setItemInHand(InteractionHand.OFF_HAND, t1Stack);
                 }
 
-                // play awaken sound and notify player
-                serverPlayer.level().playSound(null, serverPlayer.getX(), serverPlayer.getY(), serverPlayer.getZ(), HnSSounds.ELECTRIC_CAST, SoundSource.NEUTRAL, 0.5F, 1.3F);
-                serverPlayer.displayClientMessage(Component.literal("Awaken"), true);
+                serverPlayer.level().playSound(null, serverPlayer.getX(), serverPlayer.getY(), serverPlayer.getZ(), SoundEvents.TRIDENT_THUNDER, SoundSource.NEUTRAL, 0.5F, 1.3F);
+                serverPlayer.displayClientMessage(Component.translatable("item.hazennstuff.ionic_splitter_ignition.description"), true);
             }
         } else {
             this.slash(level, spellLevel, entity, playerMagicData);
@@ -126,6 +127,10 @@ public class IonicSlashSpell extends AbstractSpell {
 
 
     public void slash (Level level, int spellLevel, LivingEntity entity, MagicData playerMagicData) {
+
+        boolean hasIonicSplitter = hasTaggedItem(entity, HnSTags.IONIC_SPLITTER);
+        hasIonicSplitter = hasTaggedItem(entity, HnSTags.IONIC_SPLITTER);
+
         float radius = 3.25F;
         float distance = 1.9F;
         Vec3 forward = entity.getForward();
@@ -134,11 +139,16 @@ public class IonicSlashSpell extends AbstractSpell {
         SpellDamageSource damageSource = this.getDamageSource(entity);
 
         for(Entity targetEntity : entities) {
-            if (targetEntity instanceof LivingEntity && targetEntity.isAlive() && entity.isPickable() && targetEntity.position().subtract(entity.getEyePosition()).dot(forward) >= (double)0.0F && entity.distanceToSqr(targetEntity) < (double)(radius * radius) && Utils.hasLineOfSight(level, entity.getEyePosition(), targetEntity.getBoundingBox().getCenter(), true)) {
+            if (targetEntity instanceof LivingEntity targetLiving && targetEntity.isAlive() && entity.isPickable() && targetEntity.position().subtract(entity.getEyePosition()).dot(forward) >= (double)0.0F && entity.distanceToSqr(targetEntity) < (double)(radius * radius) && Utils.hasLineOfSight(level, entity.getEyePosition(), targetEntity.getBoundingBox().getCenter(), true)) {
                 Vec3 offsetVector = targetEntity.getBoundingBox().getCenter().subtract(entity.getEyePosition());
                 if (offsetVector.dot(forward) >= (double)0.0F && DamageSources.applyDamage(targetEntity, this.getDamage(spellLevel, entity), damageSource)) {
                     MagicManager.spawnParticles(level, ParticleHelper.ELECTRIC_SPARKS, targetEntity.getX(), targetEntity.getY() + (double)(targetEntity.getBbHeight() * 0.5F), targetEntity.getZ(), 30, (double)(targetEntity.getBbWidth() * 0.5F), (double)(targetEntity.getBbHeight() * 0.5F), (double)(targetEntity.getBbWidth() * 0.5F), 0.03, false);
                     EnchantmentHelper.doPostAttackEffects((ServerLevel)level, targetEntity, damageSource);
+
+                    // If caster has Ionic Splitter, inflict ELECTROCUTED on the hit target
+                    if (hasIonicSplitter && !level.isClientSide) {
+                        targetLiving.addEffect(new MobEffectInstance(HnSEffects.ELECTROCUTED, 100, 1));
+                    }
                 }
             }
         }
@@ -184,11 +194,6 @@ public class IonicSlashSpell extends AbstractSpell {
             float var10000 = this.getSpellPower(spellLevel, entity);
             return "" + var10000;
         }
-    }
-
-    private boolean hasItem(LivingEntity entity, Item item) {
-        return entity.getMainHandItem().is(item)
-                || entity.getOffhandItem().is(item);
     }
 
 

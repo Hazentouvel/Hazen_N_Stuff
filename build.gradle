@@ -167,7 +167,7 @@ dependencies {
     //implementation "curse.maven:photon-871522:6911487"
     //implementation "curse.maven:ldlib-626676:6911394"
     //AzureLib
-    implementation "mod.azure.azurelib:azurelib-neo-${minecraft_version}:${azurelib_version}"
+    implementation "curse.maven:azurelib-817423:7371539"
 
     /*
     *** Runtime Only ***************************************************************************************************
@@ -193,8 +193,8 @@ dependencies {
      */
 
     // Obscuria's Tooltips
-    localRuntime "curse.maven:obscurias_tooltips-715660:7315944"
-    localRuntime "curse.maven:fragmentum-1123977:7315935"
+    //localRuntime "curse.maven:obscurias_tooltips-715660:7315944"
+    //localRuntime "curse.maven:fragmentum-1123977:7315935"
 
     //Better Combat
     localRuntime "curse.maven:better-combat-by-daedelus-639842:7348161"

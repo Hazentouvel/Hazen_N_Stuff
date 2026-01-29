@@ -52,35 +52,17 @@ public class HnSServerEvents {
 
                 player.level().playSound(
                         null, player.getX(), player.getY(), player.getZ(),
-                        HnSSounds.ELECTRIC_IMPACT, SoundSource.PLAYERS, 0.5f, 1f
+                        HnSSounds.BRIMSTONE_HELLBLAST_IMPACT, SoundSource.PLAYERS, 0.5f, 1f
                 );
             }
         }
 
-
-
-
     }
 
-    @SubscribeEvent
-    public static void IonicSplitterAwakening(LivingDamageEvent.Pre event) {
-        var sourceEntity = event.getSource().getEntity();
-        if (sourceEntity instanceof ServerPlayer serverPlayer) {
-            ItemStack mainhandItem = ((LivingEntity) serverPlayer).getMainHandItem();
 
-            if (serverPlayer.hasEffect(HnSEffects.IONIC_AWAKENING)) {
-                if (mainhandItem.getItem() instanceof IonicSplitterItem) {
-                    serverPlayer.getInventory().setItem(serverPlayer.getInventory().selected, new ItemStack(HnSItemRegistry.IONIC_SPLITTER_T1.get()));
-                    serverPlayer.level().playSound(null, serverPlayer.getX(), serverPlayer.getY(), serverPlayer.getZ(), HnSSounds.ELECTRIC_CAST, SoundSource.NEUTRAL, 0.5F, 1.3F);
-                    serverPlayer.displayClientMessage(Component.literal(ChatFormatting.BOLD + "Awaken")
-                            .withStyle(s -> s.withColor(TextColor.fromRgb(5636095))), true);
-
-                }
-
-            }
-        }
-    }
-
+    /*
+    *** Changing Spell Schools *****************************************************************************************
+     */
     @SubscribeEvent
     public static void modifyBlackholeSchool (ModifyDefaultConfigValuesEvent event) {
         if(event.getSpell() instanceof BlackHoleSpell) {

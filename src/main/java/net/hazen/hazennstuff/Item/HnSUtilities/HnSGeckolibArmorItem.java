@@ -166,10 +166,9 @@ public class HnSGeckolibArmorItem extends ArmorItem implements GeoItem {
     // Geckolib
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<HnSGeckolibArmorItem>(this, "controller", this::predicate));
+        controllers.add(new AnimationController<HnSGeckolibArmorItem>(this, "controler", this::predicate));
     }
 
-    // Don't do anything w/ this
     private PlayState predicate(AnimationState<HnSGeckolibArmorItem> itemAnimationState)
     {
         itemAnimationState.getController().setAnimation(RawAnimation.begin().thenLoop("idle"));

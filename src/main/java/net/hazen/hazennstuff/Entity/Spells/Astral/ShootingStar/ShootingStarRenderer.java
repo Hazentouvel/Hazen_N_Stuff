@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Entity.Spells.Radiance.ShootingStar;
+package net.hazen.hazennstuff.Entity.Spells.Astral.ShootingStar;
 
 
 import com.mojang.blaze3d.vertex.PoseStack;

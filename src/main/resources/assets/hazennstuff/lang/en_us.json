@@ -41,6 +41,7 @@
   "rarity.hazennstuff_rarity_shadow.name": "Shadowed",
   "rarity.hazennstuff_rarity_radiance.name": "Radiant",
   "rarity.hazennstuff_rarity_eldritch.name": "Esoteric",
+  "rarity.hazennstuff_rarity_astral.name": "Cosmic",
   "rarity.hazennstuff_rarity_deus.name": "Enlightened",
 
   "item.hazennstuff.excalibur_fragment": "Excalibur Fragment",
@@ -930,9 +931,10 @@
   "effect.hazennstuff.infested": "Infested",
   "effect.hazennstuff.spores": "Spores",
   "effect.hazennstuff.ichor": "Ichor",
-  "effect.hazennstuff.cooldown_reset": "Cooldown Reset",
-  "effect.hazennstuff.electrocuted": "Cooldown Reset",
+  "effect.hazennstuff.ionic_awakening": "Ionic Awakening",
+  "effect.hazennstuff.electrocuted": "Electrocuted",
   "effect.hazennstuff.mana_sickness": "Mana Sickness",
+  "effect.hazennstuff.hexed": "Hexed",
 
   "effect.hazennstuff.tyrants_grace.description": "Recieve the Flamebearer's Tyrannical enhancement, increases your attack speed and damage by 1, and your cast movement speed by 20% and fire spellpower by 12%.",
   "effect.hazennstuff.fireblossom_ruler.description": "Reign over the lands as your cast movement speed increases by 15% and spell resist increases by 10%.",
@@ -947,8 +949,9 @@
   "effect.hazennstuff.spores.description": "You wither away as the spores in your body sap away at your health.",
   "effect.hazennstuff.electrocuted.description": "Your life zaps away at your health.",
   "effect.hazennstuff.ichor.description": "''Eww...'' Reduces your defence and spell resistance.",
-  "effect.hazennstuff.cooldown_reset.description": "Resets the cooldown of all of your spells.",
+  "effect.hazennstuff.ionic_awakening.description": "Resets the cooldown of all of your spells.",
   "effect.hazennstuff.mana_sickness.description": "You feel the disconnect with the link with your arcana and soul...",
+  "effect.hazennstuff.hexed.description": "You wither away with each spell cast...",
 
 
   "creativetab.hazennstuff.hazennstuff_materials": "Hazen 'n Stuff Materials",
@@ -966,6 +969,9 @@
   "attribute.hazennstuff.shadow_spell_power": "Shadow Spell Power",
   "attribute.hazennstuff.shadow_magic_resist": "Shadow Magic Resistance",
 
+  "attribute.hazennstuff.astral_spell_power": "Astral Spell Power",
+  "attribute.hazennstuff.astral_magic_resist": "Astral Magic Resistance",
+
   "material.hazennstuff.chlorophyte": "Chlorophyte",
   "material.hazennstuff.demonite": "Demonite",
   "material.hazennstuff.dreadsteel": "Dreadsteel",
@@ -981,5 +987,6 @@
   "material.hazennstuff.rune_melee": "Melee Rune",
   "material.hazennstuff.rune_eldritch": "Eldritch Rune",
   "material.hazennstuff.rune_radiance": "Radiance Rune",
-  "material.hazennstuff.rune_shadow": "Shadow Rune"
+  "material.hazennstuff.rune_shadow": "Shadow Rune",
+  "material.hazennstuff.rune_astral": "Astral Rune"
 }

@@ -3,11 +3,12 @@
   "render_type": "cutout",
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/curios/spirit_crystal_advanced"
+    "layer0": "irons_spellbooks:item/upgrade_orb_base",
+    "layer1": "hazennstuff:item/upgrade_orbs/upgrade_orb_astral"
   },
   "neoforge_data": {
     "layers": {
-      "0": {
+      "1": {
         "color": "FFFFFFFF",
         "block_light": 15,
         "sky_light": 15,

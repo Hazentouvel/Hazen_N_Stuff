@@ -3,7 +3,7 @@
   "render_type": "cutout",
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/curios/spirit_crystal_advanced"
+    "layer0": "hazennstuff:item/materials/catalyst"
   },
   "neoforge_data": {
     "layers": {

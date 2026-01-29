@@ -238,6 +238,14 @@ public class HnSItemRegistry {
                     .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.ASTRAL_SPELL_POWER))
     );
 
+    // Eldritch Upgrade Orb
+    public static final DeferredHolder<Item, Item> ELDRITCH_UPGRADE_ORB = ITEMS.register("eldritch_upgrade_orb",
+            () -> new UpgradeOrbItem(ItemPropertiesHelper
+                    .material()
+                    .rarity(Rarity.UNCOMMON)
+                    .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.ELDRITCH_SPELL_POWER))
+    );
+
     // Melee Upgrade Orb
     public static final DeferredHolder<Item, Item> MELEE_UPGRADE_ORB = ITEMS.register("melee_upgrade_orb",
             () -> new UpgradeOrbItem(ItemPropertiesHelper
@@ -382,6 +390,14 @@ public class HnSItemRegistry {
                     .fireResistant()
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
     );
+
+    //Catalyst
+    public static final DeferredItem<Item> CATALYST = ITEMS.register("catalyst",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(HnSRarities.DEUS_RARITY.getValue())
+                    .fireResistant()
+            ));
 
     //Runestone Fragment
     public static final DeferredItem<Item> RUNESTONE_FRAGMENTS = ITEMS.register("runestone_fragments",

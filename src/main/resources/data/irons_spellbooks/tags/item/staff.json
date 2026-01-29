@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
+    "hazennstuff:insania_aeternus",
+    "hazennstuff:divine_scepter",
+    "hazennstuff:grimoire_staff",
+    "hazennstuff:enderconic_scepter",
+    "hazennstuff:blossom_of_the_enchantress",
+    "hazennstuff:white_lily_staff",
     "hazennstuff:frieren_staff",
     "hazennstuff:rod_of_discord",
     "hazennstuff:wisewood_cane"

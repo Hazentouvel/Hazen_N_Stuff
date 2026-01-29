@@ -1,6 +1,19 @@
 {
+  "loader": "neoforge:item_layers",
+  "render_type": "cutout",
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/materials/storm_weave"
+    "layer0": "hazennstuff:item/materials/storm_weave",
+    "layer1": "hazennstuff:item/materials/storm_weave_glowmask"
+  },
+  "neoforge_data": {
+    "layers": {
+      "1": {
+        "color": "FFFFFFFF",
+        "block_light": 15,
+        "sky_light": 15,
+        "ambient_occlusion": false
+      }
+    }
   }
 }

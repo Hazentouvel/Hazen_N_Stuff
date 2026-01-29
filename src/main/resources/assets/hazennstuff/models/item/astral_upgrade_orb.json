@@ -1,8 +1,10 @@
 {
-  "parent": "item/generated",
+  "loader": "neoforge:item_layers",
+  "render_type": "cutout",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "irons_spellbooks:item/upgrade_orb_base",
-    "layer1": "hazennstuff:item/upgrade_orbs/upgrade_orb_astral"
+    "layer0": "hazennstuff:item/upgrade_orbs/upgrade_orb_eldritch",
+    "layer1": "hazennstuff:item/upgrade_orbs/upgrade_orb_eldritch_glowmask"
   },
   "neoforge_data": {
     "layers": {

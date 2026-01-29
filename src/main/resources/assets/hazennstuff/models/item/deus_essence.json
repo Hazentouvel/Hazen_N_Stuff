@@ -1,6 +1,18 @@
 {
+  "loader": "neoforge:item_layers",
+  "render_type": "cutout",
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "hazennstuff:item/materials/deus_essence"
+  },
+  "neoforge_data": {
+    "layers": {
+      "0": {
+        "color": "FFFFFFFF",
+        "block_light": 15,
+        "sky_light": 15,
+        "ambient_occlusion": false
+      }
+    }
   }
 }

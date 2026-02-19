@@ -28,7 +28,7 @@ public class HnSSounds {
      */
 
     // Chaotic Teleport
-    public static DeferredHolder<SoundEvent, SoundEvent> CHAOTIC_TELEPORT = registerSoundEvent("chaotic_teleport");
+    public static DeferredHolder<SoundEvent, SoundEvent> TERRARIA_CAST = registerSoundEvent("terraria_cast");
 
     // Brimstone Cast
     public static DeferredHolder<SoundEvent, SoundEvent> BRIMSTONE_CAST = registerSoundEvent("brimstone_cast");

@@ -1,22 +1,25 @@
-package net.hazen.hazennstuff.Spells.Schools.Shadow;
+package net.hazen.hazennstuff.Spells.Schools.Radiance;
 
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
+import io.redspace.ironsspellbooks.damage.DamageSources;
+import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import io.redspace.ironsspellbooks.spells.ender.TeleportSpell;
-import net.hazen.hazennstuff.Registries.HnSParticleHelper;
-import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
-import net.hazen.hazennstuff.Registries.HnSSounds;
+import net.hazen.hazennstuff.Registries.*;
 import net.minecraft.commands.arguments.EntityAnchorArgument.Anchor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -31,7 +34,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class ChaoticTeleportSpell extends AbstractSpell {
-    private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "chaotic_teleport");
+    private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "prismatic_shift");
     private final DefaultConfig defaultConfig;
 
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
@@ -41,13 +44,13 @@ public class ChaoticTeleportSpell extends AbstractSpell {
     public ChaoticTeleportSpell() {
         this.defaultConfig = (new DefaultConfig())
                 .setMinRarity(SpellRarity.UNCOMMON)
-                .setSchoolResource(HnSSchoolRegistry.SHADOW_RESOURCE)
-                .setMaxLevel(5)
-                .setCooldownSeconds((double)12.0F)
+                .setSchoolResource(HnSSchoolRegistry.RADIANCE_RESOURCE)
+                .setMaxLevel(3)
+                .setCooldownSeconds((double)3.0F)
                 .build();
         this.baseSpellPower = 12;
         this.spellPowerPerLevel = 4;
-        this.baseManaCost = 30;
+        this.baseManaCost = 40;
         this.manaCostPerLevel = 10;
         this.castTime = 0;
     }
@@ -69,7 +72,7 @@ public class ChaoticTeleportSpell extends AbstractSpell {
     }
 
     public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of(HnSSounds.CHAOTIC_TELEPORT.get());
+        return Optional.of(HnSSounds.TERRARIA_CAST.get());
     }
 
     public void onClientPreCast(Level level, int spellLevel, LivingEntity entity, InteractionHand hand, @Nullable MagicData playerMagicData) {
@@ -83,6 +86,7 @@ public class ChaoticTeleportSpell extends AbstractSpell {
     }
 
     public void onCast(Level level, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
+
         Vec3 dest = null;
         TeleportSpell.TeleportData teleportData = (TeleportSpell.TeleportData)playerMagicData.getAdditionalCastData();
         if (teleportData != null) {
@@ -122,10 +126,52 @@ public class ChaoticTeleportSpell extends AbstractSpell {
                 Utils.handleSpellTeleport(this, entity, dest);
             }
         }
+        this.chaoticTeleportHurt(level, spellLevel, entity, castSource, playerMagicData);
+        this.chaosState(level, spellLevel, entity, castSource, playerMagicData);
 
         entity.resetFallDistance();
         level.playSound((Player)null, dest.x, dest.y, dest.z, (SoundEvent)this.getCastFinishSound().get(), SoundSource.NEUTRAL, 1.0F, 1.0F);
         super.onCast(level, spellLevel, entity, castSource, playerMagicData);
+    }
+
+    public void chaoticTeleportHurt(Level level, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
+        boolean hasHexedEffect = entity.hasEffect(HnSEffects.CHAOS_STATE);
+        if (entity instanceof ServerPlayer player && !player.level().isClientSide())
+        {
+            if (hasHexedEffect)
+            {
+                float damage = 1.0F;
+                DamageSource damageSource = new DamageSource(
+                        DamageSources.getHolderFromResource(entity,
+                                HnSDamageTypes.CORRUPT_MAGIC
+                        )
+                );
+                entity.hurt(damageSource, damage);
+
+                player.level().playSound(
+                        null, player.getX(), player.getY(), player.getZ(),
+                        HnSSounds.BRIMSTONE_HELLBLAST_IMPACT, SoundSource.PLAYERS, 0.5f, 1f
+                );
+            }
+        }
+    }
+
+    public void chaosState(Level level, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
+        boolean hasRodOfHarmonyOn = entity.getMainHandItem().is(HnSItemRegistry.ROD_OF_HARMONY.get());
+        boolean hasRodOfHarmonyOff = entity.getOffhandItem().is(HnSItemRegistry.ROD_OF_HARMONY.get());
+        boolean hasRodOfHarmony = hasRodOfHarmonyOn || hasRodOfHarmonyOff;
+
+        if (hasRodOfHarmony) {
+            if (entity instanceof ServerPlayer serverPlayer && !serverPlayer.level().isClientSide()) {
+                if (hasRodOfHarmonyOn) {
+                    entity.addEffect(new MobEffectInstance(MobEffectRegistry.CHARGED, (int)(this.getSpellPower(spellLevel, entity) * 20.0F), spellLevel - 1, false, false, false));
+                } else {
+                    entity.addEffect(new MobEffectInstance(MobEffectRegistry.CHARGED, (int)(this.getSpellPower(spellLevel, entity) * 20.0F), spellLevel - 1, false, false, false));
+                }
+            }
+        } else {
+            entity.addEffect(new MobEffectInstance(HnSEffects.CHAOS_STATE, (int)(120 - (this.getSpellPower(spellLevel, entity) * 20.0F)), 1, false, false, false));
+        }
     }
 
     private float getDistance(int spellLevel, LivingEntity sourceEntity) {

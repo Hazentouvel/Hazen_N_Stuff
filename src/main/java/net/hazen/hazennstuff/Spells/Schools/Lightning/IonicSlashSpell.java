@@ -99,7 +99,6 @@ public class IonicSlashSpell extends AbstractTaggedSpell {
     //private boolean hasLightningSpellbook;
     //private boolean hasLightningSheath;
 
-
     public void onCast(Level level, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
 
         boolean hasDormantMainhand = entity.getMainHandItem().is(HnSItemRegistry.IONIC_SPLITTER_DORMANT.get());

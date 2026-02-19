@@ -52,6 +52,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.jetbrains.annotations.NotNull;
@@ -104,6 +105,81 @@ public class HazenNStuff
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
+    }
+
+    private void commonSetup(final FMLCommonSetupEvent event)
+    {
+        // Animation Registry
+        AzIdentityRegistry.register(
+
+                //Armor
+
+                HnSItemRegistry.ARBITRIUM_ROBES_HELMET.get(),
+                HnSItemRegistry.ARBITRIUM_ROBES_CHESTPLATE.get(),
+                HnSItemRegistry.ARBITRIUM_ROBES_LEGGINGS.get(),
+                HnSItemRegistry.ARBITRIUM_ROBES_BOOTS.get(),
+                HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_HELMET.get(),
+                HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get(),
+                HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get(),
+                HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_BOOTS.get(),
+
+                HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
+                HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
+                HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
+                HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
+                HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
+
+                HnSItemRegistry.INFESTATION_HELMET.get(),
+                HnSItemRegistry.INFESTATION_CHESTPLATE.get(),
+                HnSItemRegistry.INFESTATION_LEGGINGS.get(),
+                HnSItemRegistry.INFESTATION_BOOTS.get(),
+
+
+                HnSItemRegistry.BLAZEBORNE_HELMET.get(),
+                HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get(),
+                HnSItemRegistry.BLAZEBORNE_LEGGINGS.get(),
+                HnSItemRegistry.BLAZEBORNE_BOOTS.get(),
+
+                HnSItemRegistry.LEMON_GOD_HELMET.get(),
+                HnSItemRegistry.LEMON_GOD_CHESTPLATE.get(),
+                HnSItemRegistry.LEMON_GOD_LEGGINGS.get(),
+                HnSItemRegistry.LEMON_GOD_BOOTS.get(),
+
+                HnSItemRegistry.ASCENDED_LEMON_GOD_HELMET.get(),
+                HnSItemRegistry.ASCENDED_LEMON_GOD_CHESTPLATE.get(),
+                HnSItemRegistry.ASCENDED_LEMON_GOD_LEGGINGS.get(),
+                HnSItemRegistry.ASCENDED_LEMON_GOD_BOOTS.get(),
+
+                HnSItemRegistry.THE_WITHER_HELMET.get(),
+                HnSItemRegistry.THE_WITHER_CHESTPLATE.get(),
+                HnSItemRegistry.THE_WITHER_LEGGINGS.get(),
+                HnSItemRegistry.THE_WITHER_BOOTS.get(),
+
+                HnSItemRegistry.GABRIEL_ULTRAKILL_HELMET.get(),
+                HnSItemRegistry.GABRIEL_ULTRAKILL_CHESTPLATE.get(),
+                HnSItemRegistry.GABRIEL_ULTRAKILL_LEGGINGS.get(),
+                HnSItemRegistry.GABRIEL_ULTRAKILL_BOOTS.get(),
+
+                // Weapons
+
+                HnSItemRegistry.HAMMER_OF_JUSTICE.get(),
+                HnSItemRegistry.VOLCANO.get(),
+                HnSItemRegistry.TERRAPRISMA.get(),
+
+                // Staves
+                HnSItemRegistry.SOULCALLING_SCEPTER.get(),
+                HnSItemRegistry.INSANIA_AETERNUS.get(),
+
+                // Curios
+
+                HnSItemRegistry.ENERGIZED_CORE_SPELLBOOK.get(),
+
+                HnSItemRegistry.ARBITRIUM_WINGS.get(),
+
+                HnSItemRegistry.GALVANIZED_SHEATH.get(),
+                HnSItemRegistry.SCROLL_SHEATH.get()
+
+        );
     }
 
     @EventBusSubscriber(value = Dist.CLIENT)

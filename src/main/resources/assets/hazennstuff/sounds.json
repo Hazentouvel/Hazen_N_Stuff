@@ -179,9 +179,9 @@
       "hazennstuff:vampire_knife_hit"
     ]
   },
-  "chaotic_teleport": {
+  "terraria_cast": {
     "sounds": [
-      "hazennstuff:chaotic_teleport"
+      "hazennstuff:terraria_cast"
     ]
   },
   "terrablade_slash": {

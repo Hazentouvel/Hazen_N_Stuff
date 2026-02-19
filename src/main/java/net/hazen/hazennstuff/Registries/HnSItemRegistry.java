@@ -136,7 +136,8 @@ import net.hazen.hazennstuff.Item.Staves.RodOfDiscord.RodOfDiscord;
 import net.hazen.hazennstuff.Item.Staves.SoulcallingScepter.SoulcallingScepter;
 import net.hazen.hazennstuff.Item.Staves.WhiteLilyStaff.WhiteLilyStaff;
 import net.hazen.hazennstuff.Item.Staves.WisewoodCane.WisewoodCane;
-import net.hazen.hazennstuff.Item.UpgradeOrbs.Tier2.Test.EnhancedFireUpgradeOrb;
+import net.hazen.hazennstuff.Item.UpgradeOrbs.Concentrated.Fire.ConcentratedFireUpgradeOrb;
+import net.hazen.hazennstuff.Item.UpgradeOrbs.Concentrated.Ice.ConcentratedIceUpgradeOrb;
 import net.hazen.hazennstuff.Item.Util.PickaxeAxe.DivineGold.PickaxeAxeDivineGoldItem;
 import net.hazen.hazennstuff.Item.Util.PickaxeAxe.PickaxeAxeItem;
 import net.hazen.hazennstuff.Item.Util.SpectralPickaxe.SpectralPickaxeItem;
@@ -276,7 +277,11 @@ public class HnSItemRegistry {
 
     // Enhanced Fire Upgrade Orb
     public static final DeferredHolder<Item, Item> ENHANCED_FIRE_UPGRADE_ORB = ITEMS.register
-            ("enhanced_fire_upgrade_orb", EnhancedFireUpgradeOrb::new);
+            ("concentrated_upgrade_orb_fire", ConcentratedFireUpgradeOrb::new);
+
+    // Enhanced Fire Upgrade Orb
+    public static final DeferredHolder<Item, Item> ENHANCED_ICE_UPGRADE_ORB = ITEMS.register
+            ("concentrated_upgrade_orb_ice", ConcentratedIceUpgradeOrb::new);
 
     /*
      *** [Materials] **************************************************************************
@@ -910,12 +915,15 @@ public class HnSItemRegistry {
      *** Shadow
      */
 
-    //Rod of Discord
-    public static final DeferredHolder<Item, Item> ROD_OF_DISCORD = ITEMS.register("rod_of_discord", RodOfDiscord::new);
-
     /*
      *** Radiance
      */
+
+    //Rod of Discord
+    public static final DeferredHolder<Item, Item> ROD_OF_DISCORD = ITEMS.register("rod_of_discord", RodOfDiscord::new);
+
+    //Rod of Harmony
+    public static final DeferredHolder<Item, Item> ROD_OF_HARMONY = ITEMS.register("rod_of_harmony", RodOfDiscord::new);
 
     /*
      *** Eldritch

@@ -18,7 +18,7 @@ import net.hazen.hazennstuff.Spells.Schools.Nature.DeathSentenceSpell;
 import net.hazen.hazennstuff.Spells.Schools.Nature.ShardSwordSpell;
 import net.hazen.hazennstuff.Spells.Schools.Nature.ThornChakramSpell;
 import net.hazen.hazennstuff.Spells.Schools.Radiance.*;
-import net.hazen.hazennstuff.Spells.Schools.Shadow.ChaoticTeleportSpell;
+import net.hazen.hazennstuff.Spells.Schools.Radiance.ChaoticTeleportSpell;
 import net.hazen.hazennstuff.Spells.Schools.Shadow.NightsEdgeStrikeSpell;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;

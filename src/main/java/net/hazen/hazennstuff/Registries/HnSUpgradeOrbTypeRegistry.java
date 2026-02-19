@@ -18,5 +18,6 @@ public class HnSUpgradeOrbTypeRegistry {
 
 
     public static ResourceKey<UpgradeOrbType> ENHANCED_FIRE = ResourceKey.create(UpgradeOrbTypeRegistry.UPGRADE_ORB_REGISTRY_KEY, HazenNStuff.id("enhanced_fire_power"));
+    public static ResourceKey<UpgradeOrbType> ENHANCED_ICE = ResourceKey.create(UpgradeOrbTypeRegistry.UPGRADE_ORB_REGISTRY_KEY, HazenNStuff.id("enhanced_ice_power"));
 
 }

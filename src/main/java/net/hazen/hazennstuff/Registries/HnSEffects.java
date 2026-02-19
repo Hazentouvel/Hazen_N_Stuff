@@ -177,6 +177,9 @@ public class HnSEffects {
     public static final DeferredHolder<MobEffect, MobEffect> INFESTED = MOB_EFFECTS.register("infested",
             () -> new InfestedEffect(MobEffectCategory.HARMFUL, 0x2E2EFF));
 
+    public static final DeferredHolder<MobEffect, MobEffect> CHAOS_STATE = MOB_EFFECTS.register("chaos_state",
+            () -> new GenericHazenEffect(MobEffectCategory.HARMFUL, 0x2E2EFF));
+
     public static final DeferredHolder<MobEffect, MobEffect> SPORES = MOB_EFFECTS.register("spores",
             () -> new SporeEffect(MobEffectCategory.HARMFUL, 0x2E2EFF));
 

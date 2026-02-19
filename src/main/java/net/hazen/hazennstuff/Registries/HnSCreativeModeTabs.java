@@ -17,7 +17,7 @@ public class HnSCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, HazenNStuff.MOD_ID);
 
     public static final Supplier<CreativeModeTab> HAZEN_N_STUFF_MATERIALS = CREATIVE_MODE_TAB.register("hazennstuff_materials",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItemRegistry.STARDUST.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItemRegistry.DIVINE_MOLD.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "hazennstuff_blocks"))
                     .title(Component.translatable("creativetab.hazennstuff.hazennstuff_materials"))
                     .displayItems((itemDisplayParameters, output) -> {
@@ -66,7 +66,6 @@ public class HnSCreativeModeTabs {
                         //Misc
                         output.accept(HnSBlocks.FIREBLOSSOM);
                         output.accept(HnSItemRegistry.DEUS_ESSENCE);
-                        output.accept(HnSItemRegistry.CATALYST);
                         output.accept(HnSItemRegistry.CLOTH_OF_THE_FLAMEBEARER);
                         output.accept(HnSItemRegistry.LEMON);
                         output.accept(HnSItemRegistry.DIVINE_LEMON);
@@ -82,14 +81,13 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.RADIANCE_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.SHADOW_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.ASTRAL_UPGRADE_ORB.get());
-                        output.accept(HnSItemRegistry.ELDRITCH_UPGRADE_ORB.get());
-
                         output.accept(HnSItemRegistry.ARCHERY_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.MELEE_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.HEALTH_UPGRADE_ORB.get());
 
                         // Tier 2 Upgrade Orbs
-                        //output.accept(HnSItemRegistry.ENHANCED_FIRE_UPGRADE_ORB.get());
+                        output.accept(HnSItemRegistry.ENHANCED_FIRE_UPGRADE_ORB.get());
+                        output.accept(HnSItemRegistry.ENHANCED_ICE_UPGRADE_ORB.get());
 
                         //Runes
                         output.accept(HnSItemRegistry.MELEE_RUNE.get());

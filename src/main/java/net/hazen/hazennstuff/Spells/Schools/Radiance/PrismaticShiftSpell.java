@@ -33,7 +33,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Optional;
 
-public class ChaoticTeleportSpell extends AbstractSpell {
+public class PrismaticShiftSpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "prismatic_shift");
     private final DefaultConfig defaultConfig;
 
@@ -41,7 +41,7 @@ public class ChaoticTeleportSpell extends AbstractSpell {
         return List.of(Component.translatable("ui.irons_spellbooks.distance", new Object[]{Utils.stringTruncation((double)this.getDistance(spellLevel, caster), 1)}));
     }
 
-    public ChaoticTeleportSpell() {
+    public PrismaticShiftSpell() {
         this.defaultConfig = (new DefaultConfig())
                 .setMinRarity(SpellRarity.UNCOMMON)
                 .setSchoolResource(HnSSchoolRegistry.RADIANCE_RESOURCE)

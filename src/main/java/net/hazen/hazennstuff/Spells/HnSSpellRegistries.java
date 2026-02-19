@@ -18,7 +18,7 @@ import net.hazen.hazennstuff.Spells.Schools.Nature.DeathSentenceSpell;
 import net.hazen.hazennstuff.Spells.Schools.Nature.ShardSwordSpell;
 import net.hazen.hazennstuff.Spells.Schools.Nature.ThornChakramSpell;
 import net.hazen.hazennstuff.Spells.Schools.Radiance.*;
-import net.hazen.hazennstuff.Spells.Schools.Radiance.ChaoticTeleportSpell;
+import net.hazen.hazennstuff.Spells.Schools.Radiance.PrismaticShiftSpell;
 import net.hazen.hazennstuff.Spells.Schools.Shadow.NightsEdgeStrikeSpell;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -137,8 +137,8 @@ public class HnSSpellRegistries {
     //Night's Edge Strike
     public static final Supplier<AbstractSpell> NIGHTS_EDGE_STRIKE = registerSpell(new NightsEdgeStrikeSpell());
 
-    //Chaotic Teleport
-    public static final Supplier<AbstractSpell> CHAOTIC_TELEPORT = registerSpell(new ChaoticTeleportSpell());
+    //Prismatic Shift
+    public static final Supplier<AbstractSpell> PRISMATIC_SHIFT = registerSpell(new PrismaticShiftSpell());
 
 
     /*

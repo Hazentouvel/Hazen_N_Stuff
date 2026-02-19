@@ -33,7 +33,7 @@ public class RodOfDiscord extends ImbuableStaffItem implements GeoItem {
                         .rarity(HnSRarities.SHADOW_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSStaffTier.ROD_OF_DISCORD)),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(HnSSpellRegistries.CHAOTIC_TELEPORT, 6)
+                        new SpellDataRegistryHolder(HnSSpellRegistries.PRISMATIC_SHIFT, 6)
         ));
     }
 

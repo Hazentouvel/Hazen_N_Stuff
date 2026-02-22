@@ -32,7 +32,6 @@ import net.hazen.hazennstuff.Entity.Spells.Lightning.InstantLightningStrike.Ligh
 import net.hazen.hazennstuff.Entity.Spells.Nature.DeathSentence.DeathSentence;
 import net.hazen.hazennstuff.Entity.Spells.Nature.SpiderLily.SpiderLily;
 import net.hazen.hazennstuff.Entity.Spells.Nature.ThornChakram.ThornChakram;
-import net.hazen.hazennstuff.Entity.Spells.Astral.ShootingStar.FallingStars.FallingStar;
 import net.hazen.hazennstuff.Entity.Spells.Astral.ShootingStar.ShootingStar;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Syringe.Syringe;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.Terraprisma;
@@ -187,14 +186,6 @@ public class HnSEntityRegistry {
                     .sized(1f, 1f)
                     .clientTrackingRange(64)
                     .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "shooting_star").toString())
-            );
-
-    // Falling Star
-    public static final DeferredHolder<EntityType<?>, EntityType<FallingStar>> FALLING_STAR =
-            ENTITIES.register("falling_star", () -> EntityType.Builder.<FallingStar>of(FallingStar::new, MobCategory.MISC)
-                    .sized(1f, 1f)
-                    .clientTrackingRange(64)
-                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "falling_star").toString())
             );
 
     // Terraprisma

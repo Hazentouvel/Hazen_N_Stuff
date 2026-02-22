@@ -85,7 +85,7 @@ public class FieryDaggerSpell extends AbstractTaggedSpell {
 
         if (hasCinderousEquipment) {
             // Fiery Zone with Cinderous Equipment
-            float explosionRadius = 1.0F + spellLevel * 0.5F;
+            float explosionRadius = 1.0F + spellLevel * 0.25F;
             int[] angles = {0, -15, 15};
             for (int angle : angles) {
                 FieryDaggerMagicProjectile dagger = new FieryDaggerMagicProjectile(world);

@@ -3,15 +3,15 @@
   "render_type": "cutout",
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/upgrade_orbs/upgrade_orb_eldritch",
-    "layer1": "hazennstuff:item/upgrade_orbs/upgrade_orb_eldritch_glowmask"
+    "layer0": "irons_spellbooks:item/upgrade_orb_base",
+    "layer1": "hazennstuff:item/upgrade_orbs/upgrade_orb_cosmic"
   },
   "neoforge_data": {
     "layers": {
       "1": {
         "color": "FFFFFFFF",
-        "block_light": 15,
-        "sky_light": 15,
+        "block_light": 8,
+        "sky_light": 8,
         "ambient_occlusion": false
       }
     }

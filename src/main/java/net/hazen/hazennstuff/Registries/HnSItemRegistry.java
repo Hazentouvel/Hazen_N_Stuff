@@ -231,12 +231,12 @@ public class HnSItemRegistry {
                     .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.SHADOW_SPELL_POWER))
     );
 
-    // Astral Upgrade Orb
-    public static final DeferredHolder<Item, Item> ASTRAL_UPGRADE_ORB = ITEMS.register("astral_upgrade_orb",
+    // Cosmic Upgrade Orb
+    public static final DeferredHolder<Item, Item> COSMIC_UPGRADE_ORB = ITEMS.register("cosmic_upgrade_orb",
             () -> new UpgradeOrbItem(ItemPropertiesHelper
                     .material()
                     .rarity(Rarity.UNCOMMON)
-                    .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.ASTRAL_SPELL_POWER))
+                    .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.COSMIC_SPELL_POWER))
     );
 
     // Eldritch Upgrade Orb
@@ -317,7 +317,7 @@ public class HnSItemRegistry {
     );
 
     //Radiance Rune
-    public static final DeferredHolder<Item, Item> ASTRAL_RUNE = ITEMS.register("astral_rune",
+    public static final DeferredHolder<Item, Item> COSMIC_RUNE = ITEMS.register("cosmic_rune",
             () -> new Item(ItemPropertiesHelper.material())
     );
 
@@ -621,7 +621,7 @@ public class HnSItemRegistry {
     // Stardust
     public static final DeferredItem<Item> STARDUST = ITEMS.register("stardust",
             () -> new Item(new Item.Properties()
-                    .rarity(HnSRarities.ASTRAL_RARITY.getValue()))
+                    .rarity(HnSRarities.COSMIC_RARITY.getValue()))
     );
 
     /*

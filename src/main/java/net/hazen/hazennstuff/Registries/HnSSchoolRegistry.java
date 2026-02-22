@@ -55,17 +55,17 @@ public class HnSSchoolRegistry {
                     HnSDamageTypes.SHADOW_MAGIC
             ));
 
-    public static final ResourceLocation ASTRAL_RESOURCE = HazenNStuff.id("astral");
+    public static final ResourceLocation COSMIC_RESOURCE = HazenNStuff.id("cosmic");
 
-    public static final Supplier<SchoolType> ASTRAL = registerSchool(new SchoolType
+    public static final Supplier<SchoolType> COSMIC = registerSchool(new SchoolType
             (
-                    ASTRAL_RESOURCE,
-                    HnSTags.ASTRAL_FOCUS,
-                    Component.translatable("school.hazennstuff.astral")
-                            .withStyle(Style.EMPTY.withColor(0x1f4568)),
-                    HnSAttributeRegistry.ASTRAL_SPELL_POWER,
-                    HnSAttributeRegistry.ASTRAL_SPELL_RESIST,
-                    SoundRegistry.BLOOD_CAST,
-                    HnSDamageTypes.ASTRAL_MAGIC
+                    COSMIC_RESOURCE,
+                    HnSTags.COSMIC_FOCUS,
+                    Component.translatable("school.hazennstuff.cosmic")
+                            .withStyle(Style.EMPTY.withColor(0x473196)),
+                    HnSAttributeRegistry.COSMIC_SPELL_POWER,
+                    HnSAttributeRegistry.COSMIC_SPELL_RESIST,
+                    HnSSounds.STAR_CAST_1,
+                    HnSDamageTypes.COSMIC_MAGIC
             ));
     }

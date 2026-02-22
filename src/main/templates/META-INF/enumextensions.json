@@ -122,11 +122,11 @@
 
     {
       "enum": "net/minecraft/world/item/Rarity",
-      "name": "HAZENNSTUFF_RARITY_ASTRAL",
+      "name": "HAZENNSTUFF_RARITY_COSMIC",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
         "class": "net/hazen/hazennstuff/Rarity/HnSRarities",
-        "field": "ASTRAL_RARITY"
+        "field": "COSMIC_RARITY"
       }
     }
 

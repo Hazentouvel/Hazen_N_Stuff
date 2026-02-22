@@ -3,7 +3,6 @@ package net.hazen.hazennstuff.Spells;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Spells.Schools.Astral.ShootingStarSpell;
-import net.hazen.hazennstuff.Spells.Schools.Astral.StellarCollapseSpell;
 import net.hazen.hazennstuff.Spells.Schools.Eldritch.SoulSeekersSpell;
 import net.hazen.hazennstuff.Spells.Schools.Evocation.ParrySpell;
 import net.hazen.hazennstuff.Spells.Schools.Evocation.SpectralAxeSpell;
@@ -60,7 +59,7 @@ public class HnSSpellRegistries {
     public static final Supplier<AbstractSpell> FIERY_DAGGER = registerSpell(new FieryDaggerSpell());
 
     //Reign of Tyros
-    public static final Supplier<AbstractSpell> REIGN_OF_TYROS = registerSpell(new ReignOfTyrosSpell());
+    //public static final Supplier<AbstractSpell> REIGN_OF_TYROS = registerSpell(new ReignOfTyrosSpell());
 
     /*
     *** Ice
@@ -149,14 +148,11 @@ public class HnSSpellRegistries {
     public static final Supplier<AbstractSpell> SOUL_SEEKERS = registerSpell(new SoulSeekersSpell());
 
     /*
-    *** Astral
+    *** Cosmic
      */
 
     // Shooting Star
     public static final Supplier<AbstractSpell> SHOOTING_STAR = registerSpell(new ShootingStarSpell());
-
-    // Falling Stars
-    public static final Supplier<AbstractSpell> STELLAR_COLLAPSE = registerSpell(new StellarCollapseSpell());
 
 
 

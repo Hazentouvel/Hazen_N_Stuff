@@ -55,9 +55,6 @@ public class FireblossomBattlemageArmorItem extends ImbuableHnSArmorItem impleme
 
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
-        if (entity instanceof Player player && !level.isClientSide() && isWearingFullSet(player)) {
-            evaluateArmorEffects(player);
-        }
         if (!level.isClientSide && entity instanceof Player player ) {
             player.getArmorSlots().forEach(wornArmor -> {
                 if (wornArmor != null && wornArmor.is(HnSTags.ARMORS_FOR_IDLE)) {
@@ -71,12 +68,5 @@ public class FireblossomBattlemageArmorItem extends ImbuableHnSArmorItem impleme
         if (!player.hasEffect(HnSEffects.FIREBLOSSOM_RULER_EFFECT)) {
             player.addEffect(new MobEffectInstance(HnSEffects.FIREBLOSSOM_RULER_EFFECT, 320, 0, false, false, false));
         }
-    }
-
-    private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof FireblossomBattlemageArmorItem &&
-                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof FireblossomBattlemageHelmetArmorItem &&
-                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof FireblossomBattlemageHelmetArmorItem &&
-                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof FireblossomBattlemageHelmetArmorItem;
     }
 }

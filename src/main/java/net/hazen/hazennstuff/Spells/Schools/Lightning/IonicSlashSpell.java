@@ -94,6 +94,16 @@ public class IonicSlashSpell extends AbstractTaggedSpell {
         return this.getCastTime(spellLevel);
     }
 
+    public AnimationHolder getCastStartAnimation() {
+
+        if (hasIonicSplitterDormant) {
+            return SpellAnimations.THROW_SINGLE_ITEM;
+        } else {
+            return SpellAnimations.ONE_HANDED_HORIZONTAL_SWING_ANIMATION;
+        }
+
+    }
+
     private boolean hasIonicSplitterDormant;
     private boolean hasIonicSplitter;
     //private boolean hasLightningSpellbook;
@@ -193,14 +203,6 @@ public class IonicSlashSpell extends AbstractTaggedSpell {
             float var10000 = this.getSpellPower(spellLevel, entity);
             return "" + var10000;
         }
-    }
-
-
-    public AnimationHolder getCastStartAnimation() {
-        if (hasIonicSplitterDormant)
-            return SpellAnimations.THROW_SINGLE_ITEM;
-        else
-            return SpellAnimations.ONE_HANDED_HORIZONTAL_SWING_ANIMATION;
     }
 
     public AnimationHolder getCastFinishAnimation() {

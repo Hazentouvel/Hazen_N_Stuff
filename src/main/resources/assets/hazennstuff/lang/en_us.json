@@ -43,7 +43,7 @@
   "rarity.hazennstuff_rarity_shadow.name": "Shadowed",
   "rarity.hazennstuff_rarity_radiance.name": "Radiant",
   "rarity.hazennstuff_rarity_eldritch.name": "Esoteric",
-  "rarity.hazennstuff_rarity_astral.name": "Cosmic",
+  "rarity.hazennstuff_rarity_cosmic.name": "Cosmic",
   "rarity.hazennstuff_rarity_deus.name": "Enlightened",
 
   "item.hazennstuff.excalibur_fragment": "Excalibur Fragment",
@@ -99,9 +99,25 @@
 
   "item.hazennstuff.radiance_upgrade_orb": "Radiance Upgrade Orb",
   "item.hazennstuff.shadow_upgrade_orb": "Shadow Upgrade Orb",
+  "item.hazennstuff.cosmic_upgrade_orb": "Cosmic Upgrade Orb",
+  "item.hazennstuff.eldritch_upgrade_orb": "Eldritch Upgrade Orb",
   "item.hazennstuff.melee_upgrade_orb": "Melee Upgrade Orb",
   "item.hazennstuff.archery_upgrade_orb": "Archery Upgrade Orb",
   "item.hazennstuff.health_upgrade_orb": "Health Upgrade Orb",
+
+
+  "item.hazennstuff.concentrated_fire_upgrade_orb": "Concentrated Fire Upgrade Orb",
+  "item.hazennstuff.concentrated_ice_upgrade_orb": "Concentrated Ice Upgrade Orb",
+  "item.hazennstuff.concentrated_nature_upgrade_orb": "Concentrated Nature Upgrade Orb",
+  "item.hazennstuff.concentrated_lightning_upgrade_orb": "Concentrated Lightning Upgrade Orb",
+  "item.hazennstuff.concentrated_ender_upgrade_orb": "Concentrated Ender Upgrade Orb",
+  "item.hazennstuff.concentrated_blood_upgrade_orb": "Concentrated Blood Upgrade Orb",
+  "item.hazennstuff.concentrated_holy_upgrade_orb": "Concentrated Holy Upgrade Orb",
+  "item.hazennstuff.concentrated_evocation_upgrade_orb": "Concentrated Evocation Upgrade Orb",
+  "item.hazennstuff.concentrated_eldritch_upgrade_orb": "Concentrated Eldritch Upgrade Orb",
+  "item.hazennstuff.concentrated_radiance_upgrade_orb": "Concentrated Radiance Upgrade Orb",
+  "item.hazennstuff.concentrated_shadow_upgrade_orb": "Concentrated Shadow Upgrade Orb",
+  "item.hazennstuff.concentrated_cosmic_upgrade_orb": "Concentrated Cosmic Upgrade Orb",
 
   "item.hazennstuff.radiance_rune": "Radiance Rune",
   "item.hazennstuff.eldritch_rune": "Eldritch Rune",
@@ -109,6 +125,7 @@
   "item.hazennstuff.melee_rune": "Melee Rune",
   "item.hazennstuff.archery_rune": "Archery Rune",
   "item.hazennstuff.health_rune": "Health Rune",
+  "item.hazennstuff.cosmic_rune": "Cosmic Rune",
 
 
   "item.hazennstuff.ruptured": "Ruptured Mana Crystal",
@@ -365,6 +382,8 @@
 
   "item.hazennstuff.rod_of_discord": "Rod of Discord",
   "item.hazennstuff.rod_of_discord.description": "A Terraria Reference. This wand resonates well with the scroll-forge...",
+  "item.hazennstuff.rod_of_harmony": "Rod of Harmony",
+  "item.hazennstuff.rod_of_harmony.description": "A Terraria Reference. This scepter resonates well with the scroll-forge...",
 
   "item.hazennstuff.insania_aeternus": "Insania Aeternus",
 
@@ -860,11 +879,13 @@
   "spell.hazennstuff.cinderous_step": "Cinderous Step",
   "spell.hazennstuff.scorching_slash": "Scorching Slash",
   "spell.hazennstuff.fiery_dagger": "Fiery Dagger",
+  "spell.hazennstuff.reign_of_tyros": "Reign of Tyros",
 
   "spell.hazennstuff.ice_arrow": "Ice Arrow",
-  "spell.hazennstuff.crystal_volley": "Crystal Volley",
+  "spell.hazennstuff.hailstorm": "Hailstorm",
 
   "spell.hazennstuff.energy_burst": "Energy Burst",
+  "spell.hazennstuff.ionic_slash": "Ionic Slash",
 
   "spell.hazennstuff.thorn_chakram": "Thorn Chakram",
   "spell.hazennstuff.counterspell_spider_lily": "Spider Lily Counterspell",
@@ -874,14 +895,15 @@
   "spell.hazennstuff.golden_shower": "Golden Shower",
 
   "spell.hazennstuff.spectral_axe": "Spectral Axe",
+  "spell.hazennstuff.parry": "Parry",
 
   "spell.hazennstuff.syringe_barrage": "Syringe Barrage",
   "spell.hazennstuff.call_forth_terraprisma": "Call Forth Terraprisma",
   "spell.hazennstuff.terraprismic_barrage": "Terraprismic Barrage",
-  "spell.hazennstuff.shooting_star": "Shooting Star",
-  "spell.hazennstuff.stellar_collapse": "Stellar Collapse",
+  "spell.hazennstuff.prismatic_shift": "Prismatic Shift",
 
-  "spell.hazennstuff.chaotic_teleport": "Chaotic Teleport",
+  "spell.hazennstuff.shooting_star": "Shooting Star",
+
   "spell.hazennstuff.nights_edge_strike": "Night's Edge Strike",
 
   "spell.hazennstuff.soul_seekers": "Soul Seekers",
@@ -892,11 +914,13 @@
   "spell.hazennstuff.cinderous_step.guide": "Step into your destination in a flaring way. The souls of the many flamebearers engulf your body in flames, making you flame-kissed, your hands burning everything you touch, and your flames that you cast burning hotter than the stars.",
   "spell.hazennstuff.scorching_slash.guide": "The eternal flames burn brightly. Weild the blade ingulfed in flames and reduce your foes to nothing but ashes. This flame burns brighter than 10 stars to sever the threads of mana and arcana.",
   "spell.hazennstuff.fiery_dagger.guide": "A spell lost to time... conjure fiery daggers and unleash hell upon your opponents as you send a barrage of daggers at them... the flames seem to burn hotter when casting with certain equipment...",
+  "spell.hazennstuff.reign_of_tyros.guide": "Call forth the legion once commanded by Tyros, the ancient flamebearer that sought to seek immortality. This spell evolves the more artifacts you bear that were once dawned on the legionnaires...",
 
   "spell.hazennstuff.ice_arrow.guide": "Draw an arrow upon your foe and leave them pierced with an arrow of permafrost.",
-  "spell.hazennstuff.crystal_volley.guide": "An avalanche of arrows, piercing your enemies and leaving nothing but the hail and fallen foes.",
+  "spell.hazennstuff.hailstorm.guide": "Watch as your foes crumble under the weight of ice chunks that rain from the skies.",
 
   "spell.hazennstuff.energy_burst.guide": "A Calamity Fables Reference ''Fire a burst of electrifying energy balls, leaving your enemies shocked.''",
+  "spell.hazennstuff.ionic_slash.guide": "Unleash an electric slash that can smite down your foes. Such slash has the power and electricity to allow ignition for some artifacts... This spell resonates well with a dormant weapon...",
 
   "spell.hazennstuff.thorn_chakram.guide": "A Terraria Reference ''Throw the Thorn Chakram at your foes and watch as it ricochets from the walls and your enemies.''",
   "spell.hazennstuff.counterspell_spider_lily.guide": "Return your opponent's spells back to the soil of the earth.",
@@ -906,15 +930,16 @@
   "spell.hazennstuff.golden_shower.guide": "A Terraria Reference ''Sprays a shower of ichor. Decreases target's defense''",
 
   "spell.hazennstuff.spectral_axe.guide": "Throw a spectral axe, imbued with arcane magic, and strike down your foes.",
+  "spell.hazennstuff.parry.guide": "A ULTRAKILL Reference. ''Parry this you filthy casual. Parries a projectile with mana coursing through your left hand.'' ",
 
   "spell.hazennstuff.syringe_barrage.guide": "A Calamity Fables Reference ''Landing all 3 shots infects the target. Infected enemies erupt into mana-rich mushrooms on death, spreading the infection to nearby monsters.''",
   "spell.hazennstuff.call_forth_terraprisma.guide": "A Terraria Reference. Call forth Terraprismas that will attack and defend you. These fierce swords were the unrefined version of Summoned Swords once casted by the most pure entity in the Hallowed...",
   "spell.hazennstuff.terraprismic_barrage.guide": "A Terraria Reference. Command a barrage of Terraprismas, homing in on where you command them to go and piercing through your enemies.",
-  "spell.hazennstuff.shooting_star.guide": "A Terraria Reference. A cosmetic version of Magic Missile",
-  "spell.hazennstuff.stellar_collapse.guide": "A Terraria Reference. A cosmetic version of Starfall.",
+  "spell.hazennstuff.chaotic_teleport.guide": "A Terraria Reference ''A low cool down teleporting spell that the prismatic elementals have mastered. Unfortunately, due to your untuned vessel, each teleport puts you into a state of chaos. You must wait for your body to stabilize or else your vessel will start to crack...''",
 
-  "spell.hazennstuff.chaotic_teleport.guide": "A Terraria Reference ''Teleports you to the position of the mouse.''",
   "spell.hazennstuff.nights_edge_strike.guide": "A Terraria Reference ''Strike your foes with the strike of the Night's Edge.''",
+
+  "spell.hazennstuff.shooting_star.guide": "A Terraria Reference. A cosmetic version of Magic Missile",
 
   "spell.hazennstuff.soul_seekers.guide": "The reapers have come to claim the souls of your foes. Cast upon the 3 heads of the Soul Seekers to nullify your opponent's magic.",
 
@@ -937,6 +962,7 @@
   "effect.hazennstuff.electrocuted": "Electrocuted",
   "effect.hazennstuff.mana_sickness": "Mana Sickness",
   "effect.hazennstuff.hexed": "Hexed",
+  "effect.hazennstuff.chaos_state": "Chaos State",
 
   "effect.hazennstuff.tyrants_grace.description": "Recieve the Flamebearer's Tyrannical enhancement, increases your attack speed and damage by 1, and your cast movement speed by 20% and fire spellpower by 12%.",
   "effect.hazennstuff.fireblossom_ruler.description": "Reign over the lands as your cast movement speed increases by 15% and spell resist increases by 10%.",
@@ -954,6 +980,7 @@
   "effect.hazennstuff.ionic_awakening.description": "Resets the cooldown of all of your spells.",
   "effect.hazennstuff.mana_sickness.description": "You feel the disconnect with the link with your arcana and soul...",
   "effect.hazennstuff.hexed.description": "You wither away with each spell cast...",
+  "effect.hazennstuff.chaos_state.description": "Your body are in a chaotic state, wait until they stabilize before teleporting once more...",
 
 
   "creativetab.hazennstuff.hazennstuff_materials": "Hazen 'n Stuff Materials",
@@ -964,6 +991,7 @@
 
   "school.hazennstuff.radiance": "Radiance",
   "school.hazennstuff.shadow": "Shadow",
+  "school.hazennstuff.cosmic": "Cosmic",
 
   "attribute.hazennstuff.radiance_spell_power": "Radiance Spell Power",
   "attribute.hazennstuff.radiance_magic_resist": "Radiance Magic Resistance",
@@ -971,8 +999,8 @@
   "attribute.hazennstuff.shadow_spell_power": "Shadow Spell Power",
   "attribute.hazennstuff.shadow_magic_resist": "Shadow Magic Resistance",
 
-  "attribute.hazennstuff.astral_spell_power": "Astral Spell Power",
-  "attribute.hazennstuff.astral_magic_resist": "Astral Magic Resistance",
+  "attribute.hazennstuff.cosmic_spell_power": "Cosmic Spell Power",
+  "attribute.hazennstuff.cosmic_magic_resist": "Cosmic Magic Resistance",
 
   "material.hazennstuff.chlorophyte": "Chlorophyte",
   "material.hazennstuff.demonite": "Demonite",
@@ -990,5 +1018,8 @@
   "material.hazennstuff.rune_eldritch": "Eldritch Rune",
   "material.hazennstuff.rune_radiance": "Radiance Rune",
   "material.hazennstuff.rune_shadow": "Shadow Rune",
-  "material.hazennstuff.rune_astral": "Astral Rune"
+  "material.hazennstuff.rune_astral": "Astral Rune",
+
+  "death.attack.shadow_magic": "%1$s was consumed by darkness",
+  "death.attack.corrupt_magic": "%1$s shattered into fragments"
 }

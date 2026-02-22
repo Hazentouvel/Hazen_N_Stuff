@@ -80,14 +80,14 @@ public class HnSCreativeModeTabs {
                          */
                         output.accept(HnSItemRegistry.RADIANCE_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.SHADOW_UPGRADE_ORB.get());
-                        output.accept(HnSItemRegistry.ASTRAL_UPGRADE_ORB.get());
+                        output.accept(HnSItemRegistry.COSMIC_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.ARCHERY_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.MELEE_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.HEALTH_UPGRADE_ORB.get());
 
                         // Tier 2 Upgrade Orbs
-                        output.accept(HnSItemRegistry.ENHANCED_FIRE_UPGRADE_ORB.get());
-                        output.accept(HnSItemRegistry.ENHANCED_ICE_UPGRADE_ORB.get());
+                        //output.accept(HnSItemRegistry.ENHANCED_FIRE_UPGRADE_ORB.get());
+                        //output.accept(HnSItemRegistry.ENHANCED_ICE_UPGRADE_ORB.get());
 
                         //Runes
                         output.accept(HnSItemRegistry.MELEE_RUNE.get());
@@ -95,7 +95,7 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.HEALTH_RUNE.get());
                         output.accept(HnSItemRegistry.SHADOW_RUNE.get());
                         output.accept(HnSItemRegistry.RADIANCE_RUNE.get());
-                        output.accept(HnSItemRegistry.ASTRAL_RUNE.get());
+                        output.accept(HnSItemRegistry.COSMIC_RUNE.get());
                         output.accept(HnSItemRegistry.ELDRITCH_RUNE.get());
 
 
@@ -146,6 +146,8 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSBlocks.WISEWOOD_BUTTON);
                         output.accept(HnSBlocks.WISEWOOD_PRESSURE_PLATE);
 
+                        output.accept(HnSBlocks.WISEWOOD_SAPLING);
+
                         //Wisewood Set
                         output.accept(HnSBlocks.FROSTBITE_BIRCH_PLANKS);
                         output.accept(HnSBlocks.FROSTBITE_BIRCH_NAILED_PLANKS);
@@ -159,6 +161,8 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSBlocks.FROSTBITE_BIRCH_FENCE);
                         output.accept(HnSBlocks.FROSTBITE_BIRCH_BUTTON);
                         output.accept(HnSBlocks.FROSTBITE_BIRCH_PRESSURE_PLATE);
+
+                        output.accept(HnSBlocks.FROSTBITE_BIRCH_SAPLING);
 
 
                         /*

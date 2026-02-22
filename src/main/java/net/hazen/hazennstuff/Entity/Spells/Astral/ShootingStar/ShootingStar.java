@@ -88,7 +88,6 @@ public class ShootingStar extends AbstractMagicProjectile implements GeoEntity {
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
         DamageSources.applyDamage(entityHitResult.getEntity(), this.damage, (HnSSpellRegistries.SHOOTING_STAR.get()).getDamageSource(this, this.getOwner()));
-        this.discard();
     }
 
     //ANIMATION

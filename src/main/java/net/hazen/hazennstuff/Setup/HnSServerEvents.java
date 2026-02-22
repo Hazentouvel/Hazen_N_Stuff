@@ -3,27 +3,18 @@ package net.hazen.hazennstuff.Setup;
 import io.redspace.ironsspellbooks.api.config.IronConfigParameters;
 import io.redspace.ironsspellbooks.api.config.ModifyDefaultConfigValuesEvent;
 import io.redspace.ironsspellbooks.api.events.SpellPreCastEvent;
-import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.spells.ender.BlackHoleSpell;
-import net.hazen.hazennstuff.Item.Weapons.Ascended.IonicSplitter.Dormant.IonicSplitterItem;
 import net.hazen.hazennstuff.Registries.HnSDamageTypes;
 import net.hazen.hazennstuff.Registries.HnSEffects;
-import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextColor;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 
 
 @EventBusSubscriber
@@ -63,12 +54,10 @@ public class HnSServerEvents {
     /*
     *** Changing Spell Schools *****************************************************************************************
      */
-    @SubscribeEvent
-    public static void modifyBlackholeSchool (ModifyDefaultConfigValuesEvent event) {
-        if(event.getSpell() instanceof BlackHoleSpell) {
-            event.setDefaultValue(IronConfigParameters.SCHOOL, HnSSchoolRegistry.ASTRAL.get());
-        }
-    }
-
-
+//    @SubscribeEvent
+//    public static void modifyBlackholeSchool (ModifyDefaultConfigValuesEvent event) {
+//        if(event.getSpell() instanceof BlackHoleSpell) {
+//            event.setDefaultValue(IronConfigParameters.SCHOOL, HnSSchoolRegistry.COSMIC.get());
+//        }
+//    }
 }

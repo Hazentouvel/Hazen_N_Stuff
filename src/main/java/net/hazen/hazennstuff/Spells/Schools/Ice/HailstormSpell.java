@@ -88,19 +88,7 @@ public class HailstormSpell extends AbstractSpell {
             Vec3 targetArea = Utils.moveToRelativeGroundLevel(world, Utils.raycastForEntity(world, entity, 40.0F, true).getLocation(), 12);
             playerMagicData.setAdditionalCastData(new StarfallCastData(targetArea));
         }
-
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
-    }
-
-    public static void particleTrail(Level level, Vec3 a, Vec3 b, ParticleOptions particleType) {
-        double d = a.distanceTo(b) * (double)4.0F;
-
-        for(int i = 0; (double)i < d; ++i) {
-            double p = (double)i / d;
-            Vec3 vec = a.add(b.subtract(a).scale(p));
-            MagicManager.spawnParticles(level, particleType, vec.x, vec.y, vec.z, 1, (double)0.0F, (double)0.0F, (double)0.0F, (double)0.0F, true);
-        }
-
     }
 
     public void onServerCastTick(Level level, int spellLevel, LivingEntity entity, @Nullable MagicData playerMagicData) {
@@ -115,26 +103,62 @@ public class HailstormSpell extends AbstractSpell {
                 }
 
                 if (tick % 4 == 0) {
-                    for(int i = 0; i < 2; ++i) {
+                    for (int i = 0; i < 2; ++i) {
+
                         Vec3 center = castData.center;
                         Vec3 weightedArea = Vec3.ZERO;
 
-                        for(Entity target : castData.trackedEntities) {
-                            weightedArea = weightedArea.add(target.position().subtract(center).scale((double)(1.0F / (float)castData.trackedEntities.size())));
+                        for (Entity target : castData.trackedEntities) {
+                            weightedArea = weightedArea.add(
+                                    target.position()
+                                            .subtract(center)
+                                            .scale(1.0F / (float) castData.trackedEntities.size())
+                            );
                         }
 
-                        double spawnRadius = Mth.clampedLerp((double)var16, (double)var16 * (double)0.5F, weightedArea.length() / (double)var16);
-                        Vec3 spawnTarget = Utils.moveToRelativeGroundLevel(level, center.add(weightedArea).add((new Vec3((double)0.0F, (double)0.0F, (double)entity.getRandom().nextFloat() * spawnRadius)).yRot((float)entity.getRandom().nextInt(360) * ((float)Math.PI / 180F))), 3).add((double)0.0F, (double)0.5F, (double)0.0F);
-                        Vec3 trajectory = (new Vec3((double)0.15F, (double)-0.85F, (double)0.0F)).normalize();
-                        Vec3 spawn = Utils.raycastForBlock(level, spawnTarget, spawnTarget.add(trajectory.scale((double)-12.0F)), Fluid.NONE).getLocation().add(trajectory);
-                        this.shootIceChunkA(level, spellLevel, entity, spawn, trajectory);
-                        this.shootIceChunkB(level, spellLevel, entity, spawn, trajectory);
-                        this.shootIceChunkC(level, spellLevel, entity, spawn, trajectory);
-                        MagicManager.spawnParticles(level, HnSParticleHelper.ICE_CLOUD, spawn.x, spawn.y, spawn.z, 1, (double)1.0F, (double)1.0F, (double)1.0F, (double)1.0F, false);
-                        MagicManager.spawnParticles(level, HnSParticleHelper.ICE_CLOUD, spawn.x, spawn.y, spawn.z, 1, (double)1.0F, (double)1.0F, (double)1.0F, (double)1.0F, true);
+                        double spawnRadius = Mth.clampedLerp(
+                                var16,
+                                var16 * 0.5F,
+                                weightedArea.length() / var16
+                        );
+
+                        Vec3 spawnTarget = Utils.moveToRelativeGroundLevel(
+                                level,
+                                center.add(weightedArea)
+                                        .add(new Vec3(0.0D, 0.0D,
+                                                entity.getRandom().nextFloat() * spawnRadius)
+                                                .yRot(entity.getRandom().nextInt(360)
+                                                        * ((float) Math.PI / 180F))),
+                                3
+                        ).add(0.0D, 0.5D, 0.0D);
+
+                        Vec3 trajectory = new Vec3(0.15F, -0.85F, 0.0F).normalize();
+
+                        Vec3 spawn = Utils.raycastForBlock(
+                                level,
+                                spawnTarget,
+                                spawnTarget.add(trajectory.scale(-12.0D)),
+                                Fluid.NONE
+                        ).getLocation().add(trajectory);
+
+                        // 🎲 Randomly choose which ice chunk to fire
+                        int choice = entity.getRandom().nextInt(3);
+
+                        switch (choice) {
+                            case 0 -> this.shootIceChunkA(level, spellLevel, entity, spawn, trajectory);
+                            case 1 -> this.shootIceChunkB(level, spellLevel, entity, spawn, trajectory);
+                            case 2 -> this.shootIceChunkC(level, spellLevel, entity, spawn, trajectory);
+                        }
+
+                        MagicManager.spawnParticles(level, HnSParticleHelper.ICE_CLOUD,
+                                spawn.x, spawn.y, spawn.z,
+                                1, 1.0D, 1.0D, 1.0D, 1.0D, false);
+
+                        MagicManager.spawnParticles(level, HnSParticleHelper.ICE_CLOUD,
+                                spawn.x, spawn.y, spawn.z,
+                                1, 1.0D, 1.0D, 1.0D, 1.0D, true);
                     }
                 }
-
                 return;
             }
         }

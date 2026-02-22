@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "SSS",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_nugget"
+    },
+    "S": {
+      "item": "hazennstuff:frostbite_birch_log"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:frostbite_birch_nailed_planks",
+    "count": 12
+  }
+}

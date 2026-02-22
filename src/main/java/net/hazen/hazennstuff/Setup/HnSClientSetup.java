@@ -31,7 +31,6 @@ import net.hazen.hazennstuff.Entity.Spells.Lightning.EnergyBurst.EnergyBurstRend
 import net.hazen.hazennstuff.Entity.Spells.Nature.DeathSentence.DeathSentenceRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Nature.SpiderLily.SpiderLilyRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Nature.ThornChakram.ThornChakramRenderer;
-import net.hazen.hazennstuff.Entity.Spells.Astral.ShootingStar.FallingStars.FallingStarRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Astral.ShootingStar.ShootingStarRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Syringe.SyringeRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.TerraprismaRenderer;
@@ -76,7 +75,6 @@ public class HnSClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.NIGHTS_EDGE_AFTER_SLASH.get(), NightsEdgeAfterSlashRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.SCORCHING_SLASH.get(), ScorchingSlashRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.SHOOTING_STAR.get(), ShootingStarRenderer::new);
-        event.registerEntityRenderer(HnSEntityRegistry.FALLING_STAR.get(), FallingStarRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.TERRAPRISMA_PROJECTILE.get(), TerraprismaRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.FIERY_DAGGER_MAGIC_PROJECTILE.get(), FieryDaggerRenderer::new);
 

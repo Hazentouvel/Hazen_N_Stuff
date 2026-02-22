@@ -5,7 +5,6 @@ import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
@@ -41,11 +40,10 @@ public class StarfuryItem extends MagicSwordItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(HnSRarities.ASTRAL_RARITY.getValue())
+                        .rarity(HnSRarities.COSMIC_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.STARFURY)
                         ),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(HnSSpellRegistries.STELLAR_COLLAPSE, 6),
                         new SpellDataRegistryHolder(HnSSpellRegistries.SHOOTING_STAR, 5)
                 )
         );
@@ -98,7 +96,6 @@ public class StarfuryItem extends MagicSwordItem implements GeoItem {
 
         super.initializeSpellContainer(itemStack);
         itemStack.set(ComponentRegistry.AFFINITY_COMPONENT, new AffinityData(Map.of(
-                HnSSpellRegistries.STELLAR_COLLAPSE.get().getSpellResource(), 1,
                 HnSSpellRegistries.SHOOTING_STAR.get().getSpellResource(), 1
         )));
     }
@@ -114,8 +111,7 @@ public class StarfuryItem extends MagicSwordItem implements GeoItem {
             var spell = event.getSpell();
 
             boolean isCinderousSpell =
-                    spell == HnSSpellRegistries.SHOOTING_STAR.get() ||
-                            spell == HnSSpellRegistries.STELLAR_COLLAPSE.get();
+                    spell == HnSSpellRegistries.SHOOTING_STAR.get();
 
             ItemStack mainHand = caster.getMainHandItem();
             ItemStack offHand = caster.getOffhandItem();

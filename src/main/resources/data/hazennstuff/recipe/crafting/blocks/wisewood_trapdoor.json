@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "hazennstuff:wisewood_planks"
+    }
+  },
+  "result": {
+    "id": "hazennstuff:wisewood_door",
+    "count": 2
+  }
+}

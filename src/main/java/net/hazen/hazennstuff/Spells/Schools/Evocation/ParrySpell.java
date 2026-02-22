@@ -31,8 +31,8 @@ public class ParrySpell extends AbstractSpell {
         this.defaultConfig = (new DefaultConfig())
                 .setMinRarity(SpellRarity.COMMON)
                 .setSchoolResource(SchoolRegistry.EVOCATION_RESOURCE)
-                .setMaxLevel(5)
-                .setCooldownSeconds((double)15.0F)
+                .setMaxLevel(1)
+                .setCooldownSeconds((double)12.0F)
                 .build();
         this.manaCostPerLevel = 15;
         this.baseSpellPower = 5;

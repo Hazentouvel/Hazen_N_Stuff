@@ -406,7 +406,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(HnSAttributeRegistry.ASTRAL_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+            new AttributeContainer(HnSAttributeRegistry.RADIANCE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
     public static HnSExtendedWeaponsTiers UMBRANOVA_DORMANT = new HnSExtendedWeaponsTiers(

@@ -1,16 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "I#I",
-    "#S#",
-    "I#I"
+    "###",
+    "#I#",
+    "###"
   ],
   "key": {
-    "S": {
-      "item": "hazennstuff:permafrost_fragment"
-    },
-    "T": {
-      "item": "minecraft:ice"
+    "I": {
+      "item": "minecraft:blue_ice"
     },
     "#": {
       "tag": "minecraft:saplings"

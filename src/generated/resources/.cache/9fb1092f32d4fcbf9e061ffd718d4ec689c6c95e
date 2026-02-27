@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-22T00:10:41.0621355	Recipes
+// 1.21.1	2026-02-26T22:43:58.7160681	Recipes
 cd3eb4cd868f11a3c30e74ae13a4fccac5cb83dd data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_boots.json
 92bd0e35e8f7b7c6d0bb8f93326ff2e126cd8d36 data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_chestplate.json
 96a36bfd7dfb8a042b3c6c3c7d9513c8139abc06 data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_helmet.json
@@ -228,6 +228,11 @@ c7a74a2c4b1fbd9b99da1a8ef4ec5a4993ee9141 data/hazennstuff/advancement/recipes/mi
 8731f8849cc0faf3b07139fd66bc249b9d7c316b data/hazennstuff/advancement/recipes/misc/crafting/runes/melee_rune.json
 bea9629b38d7f9774ab69253dde235845f298b2d data/hazennstuff/advancement/recipes/misc/crafting/runes/radiance_rune.json
 007fee80487895a78af53e73c9497ecdd5cb2ddf data/hazennstuff/advancement/recipes/misc/crafting/runes/shadow_rune.json
+fcdcb4d5e5ccbb392ca36d28d9f4dd5b2f215855 data/hazennstuff/advancement/recipes/misc/crafting/staves/blossom_of_the_enchantress.json
+512e9ff2c911aea99eea50cf41719a006f9b4c05 data/hazennstuff/advancement/recipes/misc/crafting/staves/divine_scepter.json
+82d9e47eea938cbfd9a2781954dfecb622f1338b data/hazennstuff/advancement/recipes/misc/crafting/staves/enderconic_scepter.json
+816d44ee368019b1acc9dcd7c49b9f4f94bca973 data/hazennstuff/advancement/recipes/misc/crafting/staves/grimoire_staff.json
+f71198625bf9fd6c79bc082c87976e7355feccb6 data/hazennstuff/advancement/recipes/misc/crafting/staves/insania_aeternus.json
 ad7e52659f2f6a791f04857b427d0e5ca4d30a06 data/hazennstuff/advancement/recipes/misc/crafting/upgrade_orbs/archery_upgrade_orb.json
 d99ad7d0743e189afd7a7fc12f052c558b855742 data/hazennstuff/advancement/recipes/misc/crafting/upgrade_orbs/health_upgrade_orb.json
 cd226b7f79161d427720dc3ea71403910463bc61 data/hazennstuff/advancement/recipes/misc/crafting/upgrade_orbs/melee_upgrade_orb.json
@@ -325,7 +330,12 @@ c429018fbfd449dd455e359dcaf6cfcc5257e23e data/hazennstuff/recipe/crafting/runes/
 1826764b98d73fe0434e23431b2bf3cccbd91710 data/hazennstuff/recipe/crafting/runes/melee_rune.json
 fbf7cc06bfdb7f2ecd5dbffa85c057921bc083a6 data/hazennstuff/recipe/crafting/runes/radiance_rune.json
 53684f79407660e1501b2da272a1da1df24730bd data/hazennstuff/recipe/crafting/runes/shadow_rune.json
-729896567aacd6870cb8840b1dcc04685f142d8a data/hazennstuff/recipe/crafting/staves/soulcalling_scepter.json
+549bcdb6cb99a6fbf5cc8f3dd18fd265c8c1be5c data/hazennstuff/recipe/crafting/staves/blossom_of_the_enchantress.json
+95873e04436b17290b3eb768b048c082b53f7041 data/hazennstuff/recipe/crafting/staves/divine_scepter.json
+c80361b73d459c2b7045f6503dec3bd34a894cd7 data/hazennstuff/recipe/crafting/staves/enderconic_scepter.json
+106c3447c0ec3b46def14273b86410e91ab5f7e3 data/hazennstuff/recipe/crafting/staves/grimoire_staff.json
+0adecc8315412d00e0caec93a77f5e630529aa65 data/hazennstuff/recipe/crafting/staves/insania_aeternus.json
+3efe320341a24b4ee3212e9fad8a868df1e9b27e data/hazennstuff/recipe/crafting/staves/soulcalling_scepter.json
 5b274a3d2c53645e4c6562873b2fb37eba4fa2a7 data/hazennstuff/recipe/crafting/staves/white_lily_staff.json
 b0eefe191489d218ca43554419a076295f478b49 data/hazennstuff/recipe/crafting/tools/pickaxe_axe.json
 1ea7ac52175bef0c8d4c46f2a28ae85f63c759fb data/hazennstuff/recipe/crafting/upgrade_orbs/archery_upgrade_orb.json

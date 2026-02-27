@@ -2,6 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
+    "B": {
+      "item": "minecraft:blaze_rod"
+    },
     "C": {
       "item": "irons_spellbooks:cinderous_soulcaller"
     },
@@ -11,9 +14,6 @@
     "N": {
       "item": "hazennstuff:pyrium_nugget"
     },
-    "P": {
-      "item": "irons_spellbooks:pyrium_staff"
-    },
     "S": {
       "item": "irons_spellbooks:pyrium_staff"
     }
@@ -21,7 +21,7 @@
   "pattern": [
     "NFC",
     " SF",
-    "P N"
+    "B N"
   ],
   "result": {
     "count": 1,

@@ -7,7 +7,7 @@
   ],
   "type": "malum:spirit_infusion",
   "carryOverComponentData": true,
-  "extraIngredients": [
+  "extraInputs": [
     {
       "count": 1,
       "item": "hazennstuff:divine_mold"
@@ -17,26 +17,22 @@
       "item": "hazennstuff:deus_essence"
     }
   ],
-  "ingredient": {
+  "input": {
     "count": 1,
-    "item": "hazennstuff:reinforced"
+    "item": "hazennstuff:strengthened"
   },
-  "output": {
+  "result": {
     "count": 1,
-    "id": "hazennstuff:radiance"
+    "id": "hazennstuff:singularity"
   },
   "spirits": [
     {
-      "type": "arcane",
-      "count": 16
+    "type": "malum:eldritch",
+    "count": 48
     },
     {
-      "type": "eldritch",
-      "count": 8
-    },
-    {
-      "type": "sacred",
-      "count": 8
+    "type": "malum:sacred",
+    "count": 32
     }
   ]
 }

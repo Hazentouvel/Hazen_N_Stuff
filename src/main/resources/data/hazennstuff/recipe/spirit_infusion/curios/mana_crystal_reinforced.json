@@ -7,40 +7,40 @@
   ],
   "type": "malum:spirit_infusion",
   "carryOverComponentData": true,
-  "extraIngredients": [
+  "extraInputs": [
     {
       "count": 4,
       "item": "hazennstuff:zenalite_ingot"
     },
     {
       "count": 1,
-      "item": "hazennstuff:health_upgrade_orb"
+      "item": "irons_spellbooks:mana_upgrade_orb"
     },
     {
       "count": 2,
-      "item": "hazennstuff:hallowed_ingot"
+      "item": "irons_spellbooks:mithril_ingot"
     },
     {
       "count": 1,
       "item": "hazennstuff:pyrium_nugget"
     }
   ],
-  "ingredient": {
+  "input": {
     "count": 1,
-    "item": "hazennstuff:sacred"
+    "item": "hazennstuff:refined"
   },
-  "output": {
+  "result": {
     "count": 1,
-    "id": "hazennstuff:strengthened"
+    "id": "hazennstuff:reinforced"
   },
   "spirits": [
     {
-      "type": "arcane",
-      "count": 12
+      "type": "malum:arcane",
+      "count": 32
     },
     {
-      "type": "sacred",
-      "count": 4
+      "type": "malum:sacred",
+      "count": 24
     }
   ]
 }

@@ -84,6 +84,7 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.ARCHERY_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.MELEE_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.HEALTH_UPGRADE_ORB.get());
+                        output.accept(HnSItemRegistry.ELDRITCH_UPGRADE_ORB.get());
 
                         // Tier 2 Upgrade Orbs
                         //output.accept(HnSItemRegistry.ENHANCED_FIRE_UPGRADE_ORB.get());

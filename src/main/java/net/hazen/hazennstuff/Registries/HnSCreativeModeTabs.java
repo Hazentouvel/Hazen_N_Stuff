@@ -17,7 +17,7 @@ public class HnSCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, HazenNStuff.MOD_ID);
 
     public static final Supplier<CreativeModeTab> HAZEN_N_STUFF_MATERIALS = CREATIVE_MODE_TAB.register("hazennstuff_materials",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItemRegistry.DIVINE_MOLD.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItemRegistry.STARDUST.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "hazennstuff_blocks"))
                     .title(Component.translatable("creativetab.hazennstuff.hazennstuff_materials"))
                     .displayItems((itemDisplayParameters, output) -> {

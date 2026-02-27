@@ -48,6 +48,7 @@
 
   "item.hazennstuff.excalibur_fragment": "Excalibur Fragment",
   "item.hazennstuff.deus_essence": "Deus Essence",
+  "item.hazennstuff.stardust": "Stardust",
   "item.hazennstuff.runestone_fragments": "Runestone Fragments",
   "item.hazennstuff.permafrost_fragment": "Permafrost Fragment",
   "item.hazennstuff.charred_bones": "Charred Bones",
@@ -1020,7 +1021,7 @@
   "material.hazennstuff.rune_eldritch": "Eldritch Rune",
   "material.hazennstuff.rune_radiance": "Radiance Rune",
   "material.hazennstuff.rune_shadow": "Shadow Rune",
-  "material.hazennstuff.rune_astral": "Astral Rune",
+  "material.hazennstuff.rune_cosmic": "Cosmic Rune",
 
   "death.attack.shadow_magic": "%1$s was consumed by darkness",
   "death.attack.corrupt_magic": "%1$s shattered into fragments"

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "irons_spellbooks:upgrade_orb"
+    },
+    "R": {
+      "tag": "hazennstuff:items/eldritch_runes"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "ROR",
+    "RRR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:eldritch_upgrade_orb"
+  }
+}

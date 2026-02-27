@@ -9,7 +9,7 @@
       "item": "irons_spellbooks:netherite_mage_boots"
     },
     "R": {
-      "item": "hazennstuff:eldritch_rune"
+      "tag": "hazennstuff:items/eldritch_runes"
     },
     "T": {
       "item": "hazennstuff:zenalite_ingot"

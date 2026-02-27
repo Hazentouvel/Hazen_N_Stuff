@@ -1,0 +1,9 @@
+{
+  "values": [
+    "hazennstuff:eldritch_rune",
+    {
+      "id": "discerning_the_eldritch:eldritch_rune",
+      "required": false
+    }
+  ]
+}

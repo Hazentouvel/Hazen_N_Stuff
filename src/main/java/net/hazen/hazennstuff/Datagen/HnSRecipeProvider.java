@@ -79,6 +79,15 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/archery_upgrade_orb"));
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.ELDRITCH_UPGRADE_ORB.get())
+                .pattern("RRR")
+                .pattern("ROR")
+                .pattern("RRR")
+                .define('R', HnSTags.ELDRITCH_RUNES)
+                .define('O', ItemRegistry.UPGRADE_ORB.get())
+                .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/eldritch_upgrade_orb"));
+
 
         //Runes
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.RADIANCE_RUNE.get())
@@ -566,7 +575,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', Items.SCULK_CATALYST)
                 .define('E', Items.ECHO_SHARD)
                 .define('A', ItemRegistry.ARTIFICER_STAFF.get())
-                .define('R', HnSItemRegistry.ELDRITCH_RUNE.get())
+                .define('R', HnSTags.ELDRITCH_RUNES)
                 .unlockedBy("has_artificer_staff", has(ItemRegistry.ARTIFICER_STAFF.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/staves/insania_aeternus"));
 
@@ -1356,7 +1365,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern(" M ")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.ELDRITCH_RUNE.get())
+                .define('R', HnSTags.ELDRITCH_RUNES)
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', ItemRegistry.NETHERITE_MAGE_HELMET.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1378,7 +1387,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern("T T")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.ELDRITCH_RUNE.get())
+                .define('R', HnSTags.ELDRITCH_RUNES)
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', ItemRegistry.NETHERITE_MAGE_LEGGINGS.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1389,7 +1398,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern("   ")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.ELDRITCH_RUNE.get())
+                .define('R', HnSTags.ELDRITCH_RUNES)
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', ItemRegistry.NETHERITE_MAGE_BOOTS.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))

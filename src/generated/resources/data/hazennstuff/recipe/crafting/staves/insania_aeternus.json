@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "irons_spellbooks:artificer_cane"
+    },
+    "B": {
+      "item": "minecraft:black_candle"
+    },
+    "C": {
+      "item": "minecraft:sculk_catalyst"
+    },
+    "E": {
+      "item": "minecraft:echo_shard"
+    },
+    "R": {
+      "tag": "hazennstuff:items/eldritch_runes"
+    }
+  },
+  "pattern": [
+    "CBC",
+    "RAR",
+    " E "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:insania_aeternus"
+  }
+}

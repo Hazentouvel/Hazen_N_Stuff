@@ -72,7 +72,6 @@ public class Syringe extends AbstractMagicProjectile implements GeoEntity {
     public void trailParticles() {
     }
 
-
     @Override
     public void impactParticles(double x, double y, double z) {
     }

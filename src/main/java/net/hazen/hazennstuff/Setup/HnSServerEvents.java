@@ -1,20 +1,24 @@
 package net.hazen.hazennstuff.Setup;
 
-import io.redspace.ironsspellbooks.api.config.IronConfigParameters;
-import io.redspace.ironsspellbooks.api.config.ModifyDefaultConfigValuesEvent;
+import com.mojang.datafixers.util.Either;
 import io.redspace.ironsspellbooks.api.events.SpellPreCastEvent;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.damage.DamageSources;
-import io.redspace.ironsspellbooks.spells.ender.BlackHoleSpell;
 import net.hazen.hazennstuff.Registries.HnSDamageTypes;
 import net.hazen.hazennstuff.Registries.HnSEffects;
-import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
+import net.hazen.hazennstuff.Spells.Tooltips.LightningClientTooltipComponent;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.FormattedText;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.inventory.tooltip.TooltipComponent;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.RenderTooltipEvent;
+
+import java.util.List;
 
 
 @EventBusSubscriber
@@ -50,10 +54,55 @@ public class HnSServerEvents {
 
     }
 
+    @SubscribeEvent
+    public static void onGatherTooltipComponents(RenderTooltipEvent.GatherComponents event) {
+        List<Either<FormattedText, TooltipComponent>> elements = event.getTooltipElements();
+        String marker = "\u26A1"; // ⚡
+
+        for (final int[] i = {0}; i[0] < elements.size(); i[0]++) {
+            var element = elements.get(i[0]);
+
+            // We only care about the "Left" side (the raw text/Components)
+            element.left().ifPresent(text -> {
+                String rawText = text.getString();
+
+                if (rawText.contains(marker)) {
+                    // 1. Extract the text between the symbols
+                    int start = rawText.indexOf(marker);
+                    int end = rawText.lastIndexOf(marker);
+
+                    if (start != end) {
+                        String prefix = rawText.substring(0, start);
+                        String lightningPart = rawText.substring(start + 1, end);
+                        String suffix = rawText.substring(end + 1);
+
+                        // 2. Clear the current line
+                        elements.remove(i[0]);
+
+                        // 3. Reconstruct the line
+                        if (!prefix.isEmpty()) {
+                            elements.add(i[0], Either.left(Component.literal(prefix)));
+                            i[0]++;
+                        }
+
+                        // Inject our custom Lightning Component
+                        elements.add(i[0], Either.right(new LightningClientTooltipComponent.LightningTooltipData(Component.literal(lightningPart))));
+                        i[0]++;
+
+                        if (!suffix.isEmpty()) {
+                            elements.add(i[0], Either.left(Component.literal(suffix)));
+                        }
+                    }
+                }
+            });
+        }
+    }
+
 
     /*
     *** Changing Spell Schools *****************************************************************************************
      */
+
 //    @SubscribeEvent
 //    public static void modifyBlackholeSchool (ModifyDefaultConfigValuesEvent event) {
 //        if(event.getSpell() instanceof BlackHoleSpell) {

@@ -15,9 +15,12 @@ import io.redspace.ironsspellbooks.particle.ZapParticleOption;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
 import mod.azure.azurelib.core.utils.MathHelper;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
+import net.hazen.hazennstuff.Registries.HnSParticleHelper;
+import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.core.Holder;
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -76,14 +79,14 @@ public class SoulSeeker extends AbstractMagicProjectile implements GeoEntity {
     @Override
     public void trailParticles() {
         Vec3 pos = this.getBoundingBox().getCenter().add(getDeltaMovement());
-        Vec3 random = Utils.getRandomVec3(0.25f).add(pos);
+        Vec3 random = Utils.getRandomVec3(0);
         pos = pos.add(getDeltaMovement());
-        level.addParticle(new ZapParticleOption(random), pos.x, pos.y, pos.z, 0, 0, 0);
+        level.addParticle(HnSParticleHelper.BLADE_PARTICLE, pos.x, pos.y, pos.z, random.x, random.y, random.z);
     }
 
     @Override
     public void impactParticles(double x, double y, double z) {
-        MagicManager.spawnParticles(level(), ParticleHelper.ELECTRIC_SPARKS, x, y, z, 12, .08, .08, .08, 0.3, false);
+        MagicManager.spawnParticles(level, HnSParticleHelper.BLADE_PARTICLE, x, y, z, 12, .08, .08, .08, 0.3, false);
     }
 
 

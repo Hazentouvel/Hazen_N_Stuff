@@ -19,6 +19,7 @@ import net.hazen.hazennstuff.Spells.Schools.Nature.ThornChakramSpell;
 import net.hazen.hazennstuff.Spells.Schools.Radiance.*;
 import net.hazen.hazennstuff.Spells.Schools.Radiance.PrismaticShiftSpell;
 import net.hazen.hazennstuff.Spells.Schools.Shadow.NightsEdgeStrikeSpell;
+import net.hazen.hazennstuff.Spells.Schools.Shadow.UmbrashiftBarrageSpell;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -129,15 +130,18 @@ public class HnSSpellRegistries {
     // Call Forth Terraprisma
     public static final Supplier<AbstractSpell> CALL_FORTH_TERRAPRISMA = registerSpell(new CallForthTerraprismaSpell());
 
+    //Prismatic Shift
+    public static final Supplier<AbstractSpell> PRISMATIC_SHIFT = registerSpell(new PrismaticShiftSpell());
+
     /*
-     *** Dark
+     *** Shadow
      */
 
     //Night's Edge Strike
     public static final Supplier<AbstractSpell> NIGHTS_EDGE_STRIKE = registerSpell(new NightsEdgeStrikeSpell());
 
-    //Prismatic Shift
-    public static final Supplier<AbstractSpell> PRISMATIC_SHIFT = registerSpell(new PrismaticShiftSpell());
+    //Umbrashift Barrage
+    public static final Supplier<AbstractSpell> UMBRASHIFT_BARRAGE = registerSpell(new UmbrashiftBarrageSpell());
 
 
     /*

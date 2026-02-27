@@ -5,6 +5,7 @@ import io.redspace.ironsspellbooks.entity.spells.fiery_dagger.FieryDaggerRendere
 import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkA.IceChunkARenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkB.IceChunkBRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkC.IceChunkCRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowDagger.ShadowDaggerRenderer;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.HazelStatueRenderer;
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnaceRenderer;
@@ -37,21 +38,22 @@ import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.TerraprismaRende
 import net.hazen.hazennstuff.Entity.Spells.Shadow.NightsEdgeAfterSlash.NightsEdgeAfterSlashRenderer;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
-import net.hazen.hazennstuff.Particle.General.HnSGenericParticle;
+import net.hazen.hazennstuff.Particle.HnSGenericParticle;
 import net.hazen.hazennstuff.Particle.LeafParticle.LeafParticle;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSLash.IonicSlash;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NatureSlash.NatureSlash;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrike;
+import net.hazen.hazennstuff.Spells.Tooltips.LightningClientTooltipComponent;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 
 @EventBusSubscriber(value = Dist.CLIENT)
 public class HnSClientSetup {
-
 
     @SubscribeEvent
     public static void registerRenderer(EntityRenderersEvent.RegisterRenderers event) {
@@ -77,6 +79,7 @@ public class HnSClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.SHOOTING_STAR.get(), ShootingStarRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.TERRAPRISMA_PROJECTILE.get(), TerraprismaRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.FIERY_DAGGER_MAGIC_PROJECTILE.get(), FieryDaggerRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.SHADOW_DAGGER.get(), ShadowDaggerRenderer::new);
 
 
         /*
@@ -127,6 +130,11 @@ public class HnSClientSetup {
         event.registerSpriteSet(HnSParticleRegistry.NIGHTS_EDGE_STRIKE_PARTICLE.get(), NightsEdgeStrike.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.NATURE_SLASH_PARTICLE.get(), NatureSlash.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.IONIC_SLASH.get(), IonicSlash.Provider::new);
+    }
+
+    @SubscribeEvent
+    public static void onRegisterTooltipComponents(RegisterClientTooltipComponentFactoriesEvent event) {
+        event.register(LightningClientTooltipComponent.LightningTooltipData.class, LightningClientTooltipComponent::new);
     }
 
 }

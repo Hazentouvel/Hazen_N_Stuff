@@ -12,7 +12,7 @@
     "irons_jewelry:attribute": {
       "attribute": "minecraft:generic.max_health",
       "amount": 0.5,
-      "operation": "add_multiplied_total"
+      "operation": "add_value"
     }
   }
 }

@@ -60,15 +60,11 @@ public class SpectralAxe extends AbstractMagicProjectile implements GeoEntity {
 
     @Override
     public void trailParticles() {
-        Vec3 pos = this.getBoundingBox().getCenter().add(getDeltaMovement());
-        Vec3 random = Utils.getRandomVec3(0.25f).add(pos);
-        pos = pos.add(getDeltaMovement());
-        level.addParticle(new ZapParticleOption(random), pos.x, pos.y, pos.z, 0, 0, 0);
-    }
+        }
 
     @Override
     public void impactParticles(double x, double y, double z) {
-        MagicManager.spawnParticles(level, ParticleHelper.ELECTRIC_SPARKS, x, y, z, 12, .08, .08, .08, 0.3, false);
+
     }
 
 

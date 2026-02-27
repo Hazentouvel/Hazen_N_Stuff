@@ -1,0 +1,66 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "knife",
+					"pivot": [0, 0, 3]
+				},
+				{
+					"name": "handle",
+					"parent": "knife",
+					"pivot": [0, 0, 4],
+					"cubes": [
+						{"origin": [-1, 0.5, 3], "size": [2, 1, 4], "uv": [0, 9]}
+					]
+				},
+				{
+					"name": "pommel",
+					"parent": "handle",
+					"pivot": [0, 0, 4],
+					"cubes": [
+						{"origin": [0, -0.5, 7], "size": [2, 3, 1], "pivot": [0, -0.5, 8], "rotation": [0, 22.5, 0], "uv": [0, 17]},
+						{"origin": [-2, -0.5, 7], "size": [2, 3, 1], "inflate": 0.025, "pivot": [0, -0.5, 8], "rotation": [0, -22.5, 0], "uv": [6, 17]}
+					]
+				},
+				{
+					"name": "handGuard",
+					"parent": "handle",
+					"pivot": [0, 0, 4],
+					"cubes": [
+						{"origin": [-2.5, 0, 1.5], "size": [5, 2, 1], "uv": [0, 14]}
+					]
+				},
+				{
+					"name": "handGuardRotate",
+					"parent": "handGuard",
+					"pivot": [0, 1, 2],
+					"rotation": [0, 0, 45],
+					"cubes": [
+						{"origin": [-1.5, -0.5, 1], "size": [3, 3, 2], "uv": [12, 9]},
+						{"origin": [-2.5, -1.5, 1.5], "size": [2, 2, 1], "inflate": 0.025, "uv": [12, 17]},
+						{"origin": [0.5, 1.5, 1.5], "size": [2, 2, 1], "inflate": 0.025, "uv": [18, 17]}
+					]
+				},
+				{
+					"name": "blade",
+					"parent": "knife",
+					"pivot": [0, 0, 3],
+					"cubes": [
+						{"origin": [-1, 0.5, -7], "size": [2, 1, 8], "uv": [0, 0]},
+						{"origin": [-1, 0.5, -8], "size": [2, 1, 2], "inflate": 0.025, "pivot": [0, 1, -7], "rotation": [0, -45, 0], "uv": [12, 14]}
+					]
+				}
+			]
+		}
+	]
+}

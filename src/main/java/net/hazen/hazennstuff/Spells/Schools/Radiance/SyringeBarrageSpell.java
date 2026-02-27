@@ -69,7 +69,6 @@ public class SyringeBarrageSpell extends AbstractSpell {
     }
 
 
-    @Override
     public void onCast(Level world, int spellLevel, LivingEntity caster,
                        CastSource castSource, MagicData playerMagicData) {
         if (world.isClientSide) return;

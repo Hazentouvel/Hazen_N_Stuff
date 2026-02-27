@@ -1,13 +1,4 @@
 {
-  "neoforge:conditions": [
-    {
-      "type": "neoforge:not",
-      "value": {
-        "type": "neoforge:mod_loaded",
-        "modid": "malum"
-      }
-    }
-  ],
   "type": "minecraft:smithing_transform",
   "template": {
     "item": "hazennstuff:divine_mold"

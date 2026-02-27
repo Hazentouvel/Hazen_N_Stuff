@@ -36,6 +36,7 @@ import net.hazen.hazennstuff.Entity.Spells.Astral.ShootingStar.ShootingStar;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Syringe.Syringe;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.Terraprisma;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.NightsEdgeAfterSlash.NightsEdgeAfterSlash;
+import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowDagger.ShadowDagger;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -202,6 +203,14 @@ public class HnSEntityRegistry {
                     .sized(0.5f, 0.5f)
                     .clientTrackingRange(64)
                     .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "fiery_dagger_magic_projectile").toString())
+            );
+
+    // Shadow Dagger
+    public static final DeferredHolder<EntityType<?>, EntityType<ShadowDagger>> SHADOW_DAGGER =
+            ENTITIES.register("shadow_dagger", () -> EntityType.Builder.<ShadowDagger>of(ShadowDagger::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "shadow_dagger").toString())
             );
 
 

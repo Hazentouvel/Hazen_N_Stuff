@@ -85,7 +85,18 @@ public class HnSSounds {
     public static DeferredHolder<SoundEvent, SoundEvent> TERRAPRISMA_SUMMON = registerSoundEvent("terraprisma_summon");
     public static DeferredHolder<SoundEvent, SoundEvent> TERRARIA_SUMMON = registerSoundEvent("terraria_summon");
 
+    /*
+    *** Umbrashift Barrage Sounds
+     */
 
+    //Spark Cast
+    public static final Holder<SoundEvent> SHADOW_DAGGER_HIT_1 = registerSoundEvent("shadow_dagger_hit_1");
+    public static final Holder<SoundEvent> SHADOW_DAGGER_HIT_2 = registerSoundEvent("shadow_dagger_hit_2");
+    public static final Holder<SoundEvent> SHADOW_DAGGER_HIT_3 = registerSoundEvent("shadow_dagger_hit_3");
+
+    public static final Holder<SoundEvent> SHADOW_DAGGER_HIT = registerSoundEvent("shadow_dagger_hit");
+
+    public static DeferredHolder<SoundEvent, SoundEvent> UMBRASHIFT_BARRAGE = registerSoundEvent("umbrashift_barrage_cast");
 
     /*
     *** Melee Sounds

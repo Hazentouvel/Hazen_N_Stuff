@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Particle.General;
+package net.hazen.hazennstuff.Particle;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;

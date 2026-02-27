@@ -1,15 +1,19 @@
-package net.hazen.hazennstuff.Entity.Spells.Nature.DeathSentence;
+package net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowDagger;
 
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
-import io.redspace.ironsspellbooks.registries.SoundRegistry;
+import io.redspace.ironsspellbooks.particle.ZapParticleOption;
+import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleHelper;
+import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.core.Holder;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.EntityType;
@@ -27,69 +31,37 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.Optional;
 
-public class DeathSentence extends AbstractMagicProjectile implements GeoEntity {
+public class ShadowDagger extends AbstractMagicProjectile implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    public int despawnTimer = 30;
 
-    @Override
-    public void tick() {
-        super.tick();
-        if (despawnTimer > 0) {
-            despawnTimer--;
-            if (despawnTimer == 0) discard();
-        }
-    }
-
-    public void startDespawning() {
-        despawnTimer = 15;
-    }
-
-    public boolean isDespawning() {
-        return despawnTimer > 0;
-    }
-
-    public float getDespawnPercent(float partialTicks) {
-        return (despawnTimer - partialTicks) / 10.0F;
-    }
-
-    public DeathSentence(EntityType<? extends Projectile> pEntityType, Level pLevel) {
+    public ShadowDagger(EntityType<? extends Projectile> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
-        this.setNoGravity(true);
+        this.setNoGravity(false);
     }
 
-    public DeathSentence(Level level, LivingEntity shooter)
+    public ShadowDagger(Level level, LivingEntity shooter)
     {
-        this(HnSEntityRegistry.DEATH_SENTENCE.get(), level);
+        this(HnSEntityRegistry.SHADOW_DAGGER.get(), level);
         setOwner(shooter);
     }
 
-    @Override
-    public void trailParticles() {
-        Vec3 pos = this.getBoundingBox().getCenter().add(getDeltaMovement());
-        Vec3 random = Utils.getRandomVec3(0);
-        pos = pos.add(getDeltaMovement());
-        level.addParticle(HnSParticleHelper.BLADE_PARTICLE, pos.x, pos.y, pos.z, random.x, random.y, random.z);
-    }
-
-    @Override
-    public void impactParticles(double x, double y, double z) {
-        MagicManager.spawnParticles(level, HnSParticleHelper.BLADE_PARTICLE, x, y, z, 12, .08, .08, .08, 0.3, false);
-    }
-
-
-    @Override
     public float getSpeed() {
-        return 1.2f;
+        return 1.4f;
     }
 
-    @Override
     public Optional<Holder<SoundEvent>> getImpactSound() {
-        return Optional.of(SoundRegistry.ECHOING_STRIKE);
+        return Optional.of(HnSSounds.SHADOW_DAGGER_HIT);
     }
 
-    @Override
     protected void doImpactSound(Holder<SoundEvent> sound) {
         level.playSound(null, getX(), getY(), getZ(), sound, SoundSource.NEUTRAL, 1.5f, 1.0f);
+    }
+
+    public void trailParticles() {
+    }
+
+    public void impactParticles(double x, double y, double z) {
+        MagicManager.spawnParticles(level, HnSParticleHelper.NIGHTS_EDGE_PARTICLE, x, y, z, 12, .08, .08, .08, 0.3, false);
     }
 
     @Override
@@ -103,14 +75,13 @@ public class DeathSentence extends AbstractMagicProjectile implements GeoEntity 
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
         DamageSources.applyDamage(
-                entityHitResult.getEntity(),
-                damage,
-                HnSSpellRegistries.DEATH_SENTENCE.get().getDamageSource(this, getOwner())
+                    entityHitResult.getEntity(), damage,
+                HnSSpellRegistries.UMBRASHIFT_BARRAGE.get().getDamageSource(this, getOwner())
         );
+        discard();
     }
 
-    //ANIMATION
-    private final RawAnimation idle = RawAnimation.begin().thenLoop("animation.spectral_axe.idle");
+    private final RawAnimation idle = RawAnimation.begin().thenLoop("animation.spark.idle");
 
     private PlayState predicate(AnimationState event) {
         event.getController().setAnimation(idle);
@@ -126,8 +97,6 @@ public class DeathSentence extends AbstractMagicProjectile implements GeoEntity 
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
     }
-
-    private float damage = 2.0f; // Default value
 
     public void setDamage(float damage) {
         this.damage = damage;

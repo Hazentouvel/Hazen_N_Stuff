@@ -253,5 +253,17 @@
     "sounds": [
       "hazennstuff:parry"
     ]
+  },
+  "umbrashift_barrage_cast": {
+    "sounds": [
+      "hazennstuff:umbrashift_barrage_cast"
+    ]
+  },
+  "shadow_dagger_hit": {
+    "sounds": [
+      "hazennstuff:shadow_dagger_hit_1",
+      "hazennstuff:shadow_dagger_hit_2",
+      "hazennstuff:shadow_dagger_hit_3"
+    ]
   }
 }

@@ -905,6 +905,7 @@
   "spell.hazennstuff.shooting_star": "Shooting Star",
 
   "spell.hazennstuff.nights_edge_strike": "Night's Edge Strike",
+  "spell.hazennstuff.umbrashift_barrage": "Umbrashift Barrage",
 
   "spell.hazennstuff.soul_seekers": "Soul Seekers",
 
@@ -935,9 +936,10 @@
   "spell.hazennstuff.syringe_barrage.guide": "A Calamity Fables Reference ''Landing all 3 shots infects the target. Infected enemies erupt into mana-rich mushrooms on death, spreading the infection to nearby monsters.''",
   "spell.hazennstuff.call_forth_terraprisma.guide": "A Terraria Reference. Call forth Terraprismas that will attack and defend you. These fierce swords were the unrefined version of Summoned Swords once casted by the most pure entity in the Hallowed...",
   "spell.hazennstuff.terraprismic_barrage.guide": "A Terraria Reference. Command a barrage of Terraprismas, homing in on where you command them to go and piercing through your enemies.",
-  "spell.hazennstuff.chaotic_teleport.guide": "A Terraria Reference ''A low cool down teleporting spell that the prismatic elementals have mastered. Unfortunately, due to your untuned vessel, each teleport puts you into a state of chaos. You must wait for your body to stabilize or else your vessel will start to crack...''",
+  "spell.hazennstuff.prismatic_shift.guide": "A Terraria Reference ''A low cool down teleporting spell that the prismatic elementals have mastered. Unfortunately, due to your untuned vessel, each teleport puts you into a state of chaos. You must wait for your body to stabilize or else your vessel will start to crack...''",
 
   "spell.hazennstuff.nights_edge_strike.guide": "A Terraria Reference ''Strike your foes with the strike of the Night's Edge.''",
+  "spell.hazennstuff.umbrashift_barrage.guide": "Teleport and fire daggers on your victims",
 
   "spell.hazennstuff.shooting_star.guide": "A Terraria Reference. A cosmetic version of Magic Missile",
 

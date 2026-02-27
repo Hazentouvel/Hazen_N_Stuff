@@ -17,7 +17,7 @@ public abstract class AbstractGoldenShowerSpell extends AbstractSpell {
 
     @Override
     public boolean allowLooting() {
-        return true;
+        return false;
     }
 
     @Override

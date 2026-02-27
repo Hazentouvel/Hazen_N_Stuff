@@ -185,8 +185,8 @@ dependencies {
     localRuntime "curse.maven:jade-324717:6853386"
 
     // MmmMmmMmm
-    localRuntime "curse.maven:mmm-225738:6826533"
-    localRuntime "curse.maven:moonlight_lib-499980:6814741"
+    localRuntime "curse.maven:mmm-225738:7206981"
+    localRuntime "curse.maven:moonlight_lib-499980:7669172"
 
     /*
     *** Optional Dependencies ******************************************************************************************
@@ -205,11 +205,11 @@ dependencies {
     compileOnly "curse.maven:ars_nouveau-401955:6827634"
 
     //Malum
-    localRuntime "curse.maven:malum-484064:6655805"
-    compileOnly "curse.maven:malum-484064:6655805"
+    localRuntime "curse.maven:malum-484064:7307339"
+    compileOnly "curse.maven:malum-484064:7307339"
 
-    localRuntime "curse.maven:lodestone-616457:6630047"
-    compileOnly "curse.maven:lodestone-616457:6630047"
+    localRuntime "curse.maven:lodestone-616457:7264731"
+    compileOnly "curse.maven:lodestone-616457:7264731"
 
     // Iron's Gems 'n Jewelry
     localRuntime "curse.maven:irons_gems_n_jewelry-1101111:7358426"

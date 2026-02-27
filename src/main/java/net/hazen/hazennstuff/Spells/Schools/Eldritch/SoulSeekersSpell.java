@@ -100,6 +100,6 @@ public class SoulSeekersSpell extends AbstractSpell {
 
 
     private float getDamage(int spellLevel, LivingEntity entity) {
-        return getSpellPower(spellLevel, entity) * .3f;
+        return getSpellPower(spellLevel, entity) * .75f;
     }
 }

@@ -80,14 +80,10 @@ public class ShootingStar extends AbstractMagicProjectile implements GeoEntity {
         return Optional.of(HnSSounds.TERRARIA_IMPACT);
     }
 
-    protected void onHitBlock(BlockHitResult blockHitResult) {
-        super.onHitBlock(blockHitResult);
-        this.discard();
-    }
-
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
         DamageSources.applyDamage(entityHitResult.getEntity(), this.damage, (HnSSpellRegistries.SHOOTING_STAR.get()).getDamageSource(this, this.getOwner()));
+        this.discard();
     }
 
     //ANIMATION

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "hazennstuff:solar_core",
+    "hazennstuff:volt_core",
+    "hazennstuff:chlorophyte",
+    "hazennstuff:zenalite",
+    "hazennstuff:hallowed",
+    "hazennstuff:permafrost_shard"
+  ]
+}

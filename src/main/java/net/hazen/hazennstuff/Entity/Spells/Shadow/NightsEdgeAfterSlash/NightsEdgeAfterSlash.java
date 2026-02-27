@@ -59,44 +59,36 @@ public class NightsEdgeAfterSlash extends AbstractMagicProjectile implements Geo
         setOwner(shooter);
     }
 
-    @Override
     public void trailParticles() {
     }
 
-    @Override
     public void impactParticles(double x, double y, double z) {
         MagicManager.spawnParticles(level, HnSParticleHelper.NIGHTS_EDGE_PARTICLE, x, y, z, 12, .08, .08, .08, 0.3, false);
     }
 
-
-    @Override
     public float getSpeed() {
         return 1.6f;
     }
 
-    @Override
     public Optional<Holder<SoundEvent>> getImpactSound() {
         return Optional.empty();
     }
 
-    @Override
     protected void doImpactSound(Holder<SoundEvent> sound) {
         level.playSound(null, getX(), getY(), getZ(), sound, SoundSource.NEUTRAL, 1.5f, 1.0f);
     }
 
-    @Override
     protected void onHitBlock(BlockHitResult blockHitResult) {
         super.onHitBlock(blockHitResult);
         discard();
     }
 
-    @Override
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
         DamageSources.applyDamage(
                 entityHitResult.getEntity(),
                 damage,
-                HnSSpellRegistries.DEATH_SENTENCE.get().getDamageSource(this, getOwner())
+                HnSSpellRegistries.NIGHTS_EDGE_STRIKE.get().getDamageSource(this, getOwner())
         );
     }
 

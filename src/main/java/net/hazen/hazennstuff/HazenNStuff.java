@@ -97,6 +97,8 @@ public class HazenNStuff
         HnSAttributeRegistry.register(modEventBus);
         HnSSchoolRegistry.register(modEventBus);
 
+        modEventBus.addListener(this::commonSetup);
+
         modContainer.registerConfig(ModConfig.Type.COMMON, HnSConfig.SPEC);
     }
 

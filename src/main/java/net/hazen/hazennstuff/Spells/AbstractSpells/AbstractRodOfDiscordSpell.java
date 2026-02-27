@@ -17,7 +17,7 @@ public abstract class AbstractRodOfDiscordSpell extends AbstractSpell {
 
     @Override
     public boolean allowLooting() {
-        return true;
+        return false;
     }
 
     @Override

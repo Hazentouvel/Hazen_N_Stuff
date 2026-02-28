@@ -454,6 +454,11 @@ public class HnSItemRegistry {
 
     );
 
+
+    /*
+    *** Food
+     */
+
     //Lemon
     public static final DeferredItem<Item> LEMON = ITEMS.register("lemon",
             () -> new Item(new Item
@@ -469,8 +474,15 @@ public class HnSItemRegistry {
                     .food(HnSFoodProperties.DIVINE_LEMON)
                     .rarity(Rarity.EPIC)
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
-
     );
+
+    //Divine Lemon
+    public static final DeferredItem<Item> FRIED_ICE_SPIDER_EGG = ITEMS.register("fried_ice_spider_egg",
+            () -> new Item(new Item
+                    .Properties()
+                    .food(HnSFoodProperties.FRIED_ICE_SPIDER_EGG)
+                    .rarity(HnSRarities.ICE_RARITY.getValue())
+            ));
 
 
     /*

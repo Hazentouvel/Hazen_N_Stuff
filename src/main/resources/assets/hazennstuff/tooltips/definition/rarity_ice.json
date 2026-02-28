@@ -1,8 +1,8 @@
 {
   "priority": 50,
-  "style": "hazennstuff:fire_style",
+  "style": "hazennstuff:ice_style",
   "filter": {
     "type": "obscure_tooltips:rarity",
-    "rarity": "hazennstuff_fire"
+    "rarity": "hazennstuff_rarity_ice"
   }
 }

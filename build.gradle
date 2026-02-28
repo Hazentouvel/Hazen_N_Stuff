@@ -193,8 +193,8 @@ dependencies {
      */
 
     // Obscuria's Tooltips
-    //localRuntime "curse.maven:obscurias_tooltips-715660:7315944"
-    //localRuntime "curse.maven:fragmentum-1123977:7315935"
+    localRuntime "curse.maven:obscurias_tooltips-715660:7315944"
+    localRuntime "curse.maven:fragmentum-1123977:7315935"
 
     //Better Combat
     localRuntime "curse.maven:better-combat-by-daedelus-639842:7348161"

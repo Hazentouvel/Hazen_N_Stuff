@@ -1,5 +1,8 @@
 {
-  "item.hazennstuff.ionic_splitter_ignition.description": "The Ionic Ignition has awakened the Ionic Splitter from its dormancy...",
+  "spell.hazennstuff.ionic_splitter_ignition.description": "The Ionic Ignition has awakened the Ionic Splitter from its dormancy...",
+
+  "curio.hazennstuff.scroll_sheath.description": "§sAll spell cooldowns have been refreshed!",
+
 
   "ui.hazennstuff.staff_resonation": "This spell requires a certain staff to be crafted...",
   "ui.hazennstuff.armor_resonation": "This spell requires a certain armor set to be crafted...",

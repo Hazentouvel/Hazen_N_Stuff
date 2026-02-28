@@ -22,17 +22,7 @@ public class GalvanizedCurioRenderer implements ICurioRenderer {
     private final GalvanizedSheathItemRenderer curioRenderer = new GalvanizedSheathItemRenderer();
 
     @Override
-    public <T extends LivingEntity, M extends EntityModel<T>> void render(
-            ItemStack stack,
-            SlotContext slotContext,
-            PoseStack matrixStack,
-            RenderLayerParent<T, M> renderLayerParent,
-            MultiBufferSource renderTypeBuffer,
-            int light,
-            float limbSwing,
-            float limbSwingAmount,
-            float partialTicks,
-            float ageInTicks,
+    public <T extends LivingEntity, M extends EntityModel<T>> void render(ItemStack stack,SlotContext slotContext,PoseStack matrixStack,RenderLayerParent<T, M> renderLayerParent,MultiBufferSource renderTypeBuffer,int light,float limbSwing,float limbSwingAmount,float partialTicks,float ageInTicks,
             float netHeadYaw,
             float headPitch) {
 
@@ -42,7 +32,7 @@ public class GalvanizedCurioRenderer implements ICurioRenderer {
 
         curioRenderer.prepForRender(entity, stack, EquipmentSlot.BODY, (HumanoidModel<?>) renderLayerParent.getModel());
 
-        matrixStack.translate(-0.3D, -0.7D, 0.0D); // x = sideways, y = up/down, z = forward/back
+        matrixStack.translate(0.3D, -0.7D, 0.0D); // x = sideways, y = up/down, z = forward/back
 
         AzBakedModel model = curioRenderer.provider().provideBakedModel(entity, stack);
         ResourceLocation textureLocation = GalvanizedSheathItemRenderer.TEX;

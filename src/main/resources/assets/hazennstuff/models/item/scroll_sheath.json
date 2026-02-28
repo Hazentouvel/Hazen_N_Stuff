@@ -1,6 +1,127 @@
 {
-  "parent": "minecraft:item/generated",
+  "credit": "Made by Hazen",
+  "parent": "builtin/entity",
+  "texture_size": [
+    128,
+    128
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        -4,
+        6.5
+      ],
+      "scale": [
+        0.99,
+        0.99,
+        0.99
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        -4,
+        6.5
+      ],
+      "scale": [
+        0.99,
+        0.99,
+        0.99
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        75,
+        15,
+        -35
+      ],
+      "translation": [
+        9,
+        1.5,
+        0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        75,
+        15,
+        -35
+      ],
+      "translation": [
+        9,
+        1.5,
+        0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "ground": {
+      "rotation": [
+        45,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        4,
+        4.5
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "gui": {
+      "rotation": [
+        90,
+        45,
+        -90
+      ],
+      "translation": [
+        3.25,
+        -1,
+        0
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        90,
+        -45,
+        90
+      ],
+      "translation": [
+        -6,
+        0,
+        -3
+      ]
+    }
+  },
   "textures": {
-    "layer0": "hazennstuff:item/curios/sheaths/scroll_sheath"
+    "particle": "scroll_sheath"
   }
 }

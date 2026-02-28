@@ -9,6 +9,7 @@ import net.hazen.hazennstuff.HnSConfig;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.core.Holder;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -63,7 +64,6 @@ public class ScrollSheath extends SheathCurioItem {
                         if (livingVictim.hasEffect(HnSEffects.MANA_SICKNESS))
                         {
                             event.setAmount(getBaseDamage * 1.5F);
-                            //HazenNStuff.LOGGER.debug("Damage: " + event.getAmount());
                         }
                         livingVictim.addEffect(new MobEffectInstance(HnSEffects.MANA_SICKNESS, 300, 0));
 
@@ -71,13 +71,12 @@ public class ScrollSheath extends SheathCurioItem {
                         magicData.getPlayerCooldowns().clearCooldowns();
                         magicData.getPlayerCooldowns().syncToPlayer(player);
                         player.displayClientMessage(
-                                net.minecraft.network.chat.Component.literal("§bAll spell cooldowns have been refreshed!"), true
+                                Component.translatable("curio.hazennstuff.scroll_sheath.description"), true
                         );
                     }
                 }
             }
         }
-
     }
 
     @Override

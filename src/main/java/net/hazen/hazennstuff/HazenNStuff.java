@@ -345,11 +345,13 @@ public class HazenNStuff
                     HnSItemRegistry.GALVANIZED_SHEATH.get(), GalvanizedCurioRenderer::new
             );
 
-            // Scroll Sheath
-            AzArmorRendererRegistry.register(ScrollSheathItemRenderer::new, HnSItemRegistry.SCROLL_SHEATH.get());
-            CuriosRendererRegistry.register(
-                    HnSItemRegistry.SCROLL_SHEATH.get(), ScrollCurioRenderer::new
-            );
+//            // Scroll Sheath
+//            AzArmorRendererRegistry.register(ScrollSheathItemRenderer::new, HnSItemRegistry.SCROLL_SHEATH.get());
+//            CuriosRendererRegistry.register(
+//                    HnSItemRegistry.SCROLL_SHEATH.get(), ScrollCurioRenderer::new
+//            );
+
+            AzItemRendererRegistry.register(ScrollSheathItemRenderer::new, HnSItemRegistry.SCROLL_SHEATH.get());
 
             /*
             *** Wings

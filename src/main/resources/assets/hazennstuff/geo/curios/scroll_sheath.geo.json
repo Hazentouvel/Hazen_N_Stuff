@@ -93,25 +93,26 @@
 				{
 					"name": "cloth_segment_1",
 					"parent": "cloth",
-					"pivot": [-2, 2.5, 11.5],
+					"pivot": [2, 2.5, 11.5],
+					"rotation": [0, 0, -180],
 					"cubes": [
-						{"origin": [-8, 2.5, 10], "size": [6, 0, 3], "uv": [0, 80]}
+						{"origin": [-4, 2.5, 10], "size": [6, 0, 3], "uv": [0, 80]}
 					]
 				},
 				{
 					"name": "cloth_segment_2",
 					"parent": "cloth_segment_1",
-					"pivot": [-8, 2.5, 11.5],
+					"pivot": [-4, 2.5, 11.5],
 					"cubes": [
-						{"origin": [-14, 2.5, 10], "size": [6, 0, 3], "uv": [18, 80]}
+						{"origin": [-10, 2.5, 10], "size": [6, 0, 3], "uv": [18, 80]}
 					]
 				},
 				{
 					"name": "cloth_segment_3",
 					"parent": "cloth_segment_2",
-					"pivot": [-14, 2.5, 11.5],
+					"pivot": [-10, 2.5, 11.5],
 					"cubes": [
-						{"origin": [-20, 2.5, 10], "size": [6, 0, 3], "uv": [36, 80]}
+						{"origin": [-16, 2.5, 10], "size": [6, 0, 3], "uv": [36, 80]}
 					]
 				}
 			]

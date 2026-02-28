@@ -125,7 +125,7 @@ public class IonicSlashSpell extends AbstractTaggedSpell {
                 }
 
                 serverPlayer.level().playSound(null, serverPlayer.getX(), serverPlayer.getY(), serverPlayer.getZ(), SoundEvents.TRIDENT_THUNDER, SoundSource.NEUTRAL, 0.5F, 1.3F);
-                serverPlayer.displayClientMessage(Component.translatable("item.hazennstuff.ionic_splitter_ignition.description"), true);
+                serverPlayer.displayClientMessage(Component.translatable("spell.hazennstuff.ionic_splitter_ignition.description"), true);
             }
         } else {
             this.slash(level, spellLevel, entity, playerMagicData);

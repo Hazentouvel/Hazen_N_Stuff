@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-26T23:14:54.3315403	Recipes
+// 1.21.1	2026-02-27T09:43:46.6256916	Recipes
 cd3eb4cd868f11a3c30e74ae13a4fccac5cb83dd data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_boots.json
 92bd0e35e8f7b7c6d0bb8f93326ff2e126cd8d36 data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_chestplate.json
 96a36bfd7dfb8a042b3c6c3c7d9513c8139abc06 data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_helmet.json
@@ -286,7 +286,7 @@ a45d8ce8a2439a1dd03f45c7c9a1045c1b26766e data/hazennstuff/recipe/crafting/armor/
 855325614fc4cfebd53d82c7f0467bfbfe61e9ca data/hazennstuff/recipe/crafting/armor/gabriel_ultrakill/gabriel_ultrakill_helmet.json
 f4a8014fe9c05e35113e0624886aea989743e13b data/hazennstuff/recipe/crafting/armor/gabriel_ultrakill/gabriel_ultrakill_leggings.json
 c65ad4de8ee0b5ea827c528d56191732baf10555 data/hazennstuff/recipe/crafting/armor/infestation/infestation_boots.json
-b84c447881786144978903935c589729fae201c7 data/hazennstuff/recipe/crafting/armor/infestation/infestation_chestplate.json
+aa638d0643ef8c86af294a3aa00bc0c73b316c30 data/hazennstuff/recipe/crafting/armor/infestation/infestation_chestplate.json
 7799870549b9fde2c003ac782106658255cd49bf data/hazennstuff/recipe/crafting/armor/infestation/infestation_helmet.json
 07a554f80f54a67e0de66e98aec2df21e751154c data/hazennstuff/recipe/crafting/armor/infestation/infestation_leggings.json
 f2f56a7be8f59d3edfbe6466cf8a54c2cd545b24 data/hazennstuff/recipe/crafting/armor/seraph/seraph_boots.json

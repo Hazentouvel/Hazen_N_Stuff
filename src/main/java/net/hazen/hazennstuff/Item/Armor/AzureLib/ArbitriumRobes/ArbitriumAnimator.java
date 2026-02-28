@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.Item.Armor.AzureLib.ArbitriumRobes;
 
 import mod.azure.azurelib.common.animation.controller.AzAnimationController;
 import mod.azure.azurelib.common.animation.controller.AzAnimationControllerContainer;
+import mod.azure.azurelib.common.animation.easing.AzEasingTypeRegistry;
 import mod.azure.azurelib.common.animation.impl.AzItemAnimator;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.resources.ResourceLocation;
@@ -18,6 +19,8 @@ public class ArbitriumAnimator extends AzItemAnimator {
     public void registerControllers(AzAnimationControllerContainer animationControllerContainer) {
         animationControllerContainer.add(
                 AzAnimationController.builder(this, "base_controller")
+                        .setEasingType(AzEasingTypeRegistry.getOrNull("linear"))
+                        .setTransitionLength(6)
                         .build()
         );
     }

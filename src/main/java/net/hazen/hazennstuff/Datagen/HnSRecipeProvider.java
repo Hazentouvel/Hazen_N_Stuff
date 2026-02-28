@@ -1376,7 +1376,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("RMR")
                 .pattern("TTT")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.ELDRITCH_RUNE.get())
+                .define('R', HnSTags.ELDRITCH_RUNES)
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', ItemRegistry.NETHERITE_MAGE_CHESTPLATE.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))

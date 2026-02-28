@@ -6,7 +6,6 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import net.acetheeldritchking.aces_spell_utils.items.curios.SheathCurioItem;
 import net.hazen.hazennstuff.Animations.HnSDispatcher;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.InstantLightningStrike.LightningStrike;
-import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.HnSConfig;
 import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.hazen.hazennstuff.Registries.HnSEffects;
@@ -54,19 +53,22 @@ public class GalvanizedSheath extends SheathCurioItem {
 
     @SubscribeEvent
     public static void handleAbility(LivingIncomingDamageEvent event) {
-        var sheath = ((GalvanizedSheath) HnSItemRegistry.GALVANIZED_SHEATH.get());
+        GalvanizedSheath sheath = (GalvanizedSheath) HnSItemRegistry.GALVANIZED_SHEATH.get();
         Entity attacker = event.getSource().getEntity();
         if (attacker instanceof ServerPlayer player) {
             if (sheath.isEquippedBy(player) && sheath.tryProcCooldown(player)) {
-                var victim = event.getEntity();
-                if (victim instanceof LivingEntity livingVictim && victim != attacker) {
-                    float baseDamage = event.getOriginalAmount();
-                    if (livingVictim.hasEffect(HnSEffects.ELECTROCUTED)) {
-                        event.setAmount(baseDamage * 1.5F);
-                        //HazenNStuff.LOGGER.debug("Damage: " + event.getAmount());
+                LivingEntity victim = event.getEntity();
+                if (victim != attacker) {
+                    float getBaseDamage = event.getOriginalAmount();
+                    if (victim instanceof LivingEntity livingVictim && victim != attacker)
+                    {
+                        if (livingVictim.hasEffect(HnSEffects.ELECTROCUTED))
+                        {
+                            event.setAmount(getBaseDamage * 1.5F);
+                        }
+                        livingVictim.addEffect(new MobEffectInstance(HnSEffects.ELECTROCUTED, 100, 0));
+                        spawnLightningLine(player.level(), player, livingVictim);
                     }
-                    livingVictim.addEffect(new MobEffectInstance(HnSEffects.ELECTROCUTED, 100, 1));
-                    spawnLightningLine(player.level(), player, livingVictim);
                 }
             }
         }
@@ -79,12 +81,10 @@ public class GalvanizedSheath extends SheathCurioItem {
         Vec3 end = victim.position().add(0, victim.getBbHeight() * 0.5, 0);
         Vec3 direction = end.subtract(start).normalize();
 
-        // Extend lightning past the victim
-        double extraDistance = 32.0;
+        double extraDistance = 16.0;
         double totalDistance = start.distanceTo(end) + extraDistance;
 
-        // How many lightning strikes to spawn
-        int maxStrikes = 8;
+        int maxStrikes = 3;
 
         double stepDistance = totalDistance / maxStrikes;
         Vec3 step = direction.scale(stepDistance);

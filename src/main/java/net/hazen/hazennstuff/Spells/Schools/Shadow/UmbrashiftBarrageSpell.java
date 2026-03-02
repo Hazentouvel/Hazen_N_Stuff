@@ -41,17 +41,12 @@ public class UmbrashiftBarrageSpell extends AbstractSpell {
         return List.of(Component.translatable("ui.irons_spellbooks.distance", new Object[]{Utils.stringTruncation((double)this.getDistance(spellLevel, caster), 1)}));
     }
 
-    public boolean allowLooting() {
-        return false;
-    }
-
     public UmbrashiftBarrageSpell() {
         this.defaultConfig = (new DefaultConfig())
                 .setMinRarity(SpellRarity.RARE)
                 .setSchoolResource(HnSSchoolRegistry.SHADOW_RESOURCE)
                 .setMaxLevel(5)
                 .setCooldownSeconds((double)12.0F)
-                .setAllowCrafting(false)
                 .build();
         this.baseSpellPower = 12;
         this.spellPowerPerLevel = 4;

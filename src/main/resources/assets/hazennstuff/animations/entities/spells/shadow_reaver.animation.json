@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle_1": {
+			"loop": true
+		},
+		"idle_2": {
+			"loop": true,
+			"bones": {
+				"mandibleRight": {
+					"rotation": {
+						"vector": [0, 22.5, 0]
+					}
+				},
+				"mandibleLeft": {
+					"rotation": {
+						"vector": [0, -22.5, 0]
+					}
+				}
+			}
+		}
+	}
+}

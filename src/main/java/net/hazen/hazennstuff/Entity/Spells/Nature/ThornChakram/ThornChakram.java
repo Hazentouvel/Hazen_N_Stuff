@@ -102,7 +102,7 @@ public class ThornChakram extends AbstractMagicProjectile implements GeoEntity {
             return;
         }
 
-        var entities = level.getEntities(this, this.getBoundingBox().inflate(0.25f), this::canHitEntity);
+        var entities = level.getEntities(this, this.getBoundingBox().inflate(0.0f), this::canHitEntity);
         for (Entity entity : entities) {
             if (entity instanceof LivingEntity living && !entity.isSpectator()) {
                 onHit(new EntityHitResult(entity, this.position()));

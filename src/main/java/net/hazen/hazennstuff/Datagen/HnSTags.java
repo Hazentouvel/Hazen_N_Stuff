@@ -85,6 +85,12 @@ public class HnSTags {
     public static final TagKey<Item> CINDEROUS_EQUIPMENT = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "cinderous_equipment").toString()));
 
+    public static final TagKey<Item> HARMONIOUS_EQUIPMENT = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "harmonious_equipment").toString()));
+
+
+
+
 
     public static final TagKey<Item> IONIC_SPLITTER = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ionic_splitter").toString()));

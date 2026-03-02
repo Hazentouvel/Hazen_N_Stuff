@@ -8,6 +8,7 @@ import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvent;
@@ -28,6 +29,7 @@ import java.util.Optional;
 
 public class ShootingStar extends AbstractMagicProjectile implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+
     public ShootingStar(EntityType<? extends ShootingStar> entityType, Level level) {
         super(entityType, level);
         this.setNoGravity(true);
@@ -86,6 +88,11 @@ public class ShootingStar extends AbstractMagicProjectile implements GeoEntity {
         this.discard();
     }
 
+    @Override
+    protected void onHitBlock(BlockHitResult blockHitResult) {
+        super.onHitBlock(blockHitResult);
+    }
+
     //ANIMATION
     private final RawAnimation idle = RawAnimation.begin().thenLoop("animation.shooting_star.idle");
 
@@ -99,7 +106,6 @@ public class ShootingStar extends AbstractMagicProjectile implements GeoEntity {
         controllerRegistrar.add(new AnimationController<GeoAnimatable>(this, "controller", 0, this::predicate));
     }
 
-    @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
     }
@@ -109,4 +115,6 @@ public class ShootingStar extends AbstractMagicProjectile implements GeoEntity {
     public void setDamage(float damage) {
         this.damage = damage;
     }
+
+
 }

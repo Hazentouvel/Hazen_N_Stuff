@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.Spells;
 
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Spells.Schools.Astral.CosmicBoltSpell;
 import net.hazen.hazennstuff.Spells.Schools.Astral.ShootingStarSpell;
 import net.hazen.hazennstuff.Spells.Schools.Eldritch.SoulSeekersSpell;
 import net.hazen.hazennstuff.Spells.Schools.Evocation.ParrySpell;
@@ -19,6 +20,7 @@ import net.hazen.hazennstuff.Spells.Schools.Nature.ThornChakramSpell;
 import net.hazen.hazennstuff.Spells.Schools.Radiance.*;
 import net.hazen.hazennstuff.Spells.Schools.Radiance.PrismaticShiftSpell;
 import net.hazen.hazennstuff.Spells.Schools.Shadow.NightsEdgeStrikeSpell;
+import net.hazen.hazennstuff.Spells.Schools.Shadow.ShadowReaverSpell;
 import net.hazen.hazennstuff.Spells.Schools.Shadow.UmbrashiftBarrageSpell;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -143,6 +145,9 @@ public class HnSSpellRegistries {
     //Umbrashift Barrage
     public static final Supplier<AbstractSpell> UMBRASHIFT_BARRAGE = registerSpell(new UmbrashiftBarrageSpell());
 
+    //Umbrashift Barrage
+    public static final Supplier<AbstractSpell> SHADOW_REAVER = registerSpell(new ShadowReaverSpell());
+
 
     /*
      *** Eldritch
@@ -158,10 +163,14 @@ public class HnSSpellRegistries {
     // Shooting Star
     public static final Supplier<AbstractSpell> SHOOTING_STAR = registerSpell(new ShootingStarSpell());
 
+    // Cosmic Bolt
+    public static final Supplier<AbstractSpell> COSMIC_BOLT = registerSpell(new CosmicBoltSpell());
+
 
 
     public static void register(IEventBus eventBus)
     {
         SPELLS.register(eventBus);
     }
+
 }

@@ -135,6 +135,18 @@ public class HnSEffects {
                     AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
+    public static final DeferredHolder<MobEffect, MobEffect> HARMONIZED = MOB_EFFECTS.register("harmonized", () -> new HarmonizedEffect(MobEffectCategory.BENEFICIAL, 3311322)
+            .addAttributeModifier(ALObjects.Attributes.CRIT_DAMAGE,
+                    HazenNStuff.id("harmonized"),
+                    HarmonizedEffect.CRIT_PER_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+
+            .addAttributeModifier(ALObjects.Attributes.CRIT_DAMAGE,
+                    HazenNStuff.id("harmonized"),
+                    HarmonizedEffect.CRIT_PER_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
     public static final DeferredHolder<MobEffect, MobEffect> ICHOR = MOB_EFFECTS.register("ichor", () -> new IchorEffect(MobEffectCategory.HARMFUL, 3311322)
             .addAttributeModifier(Attributes.ARMOR,
                     HazenNStuff.id("ichor"),

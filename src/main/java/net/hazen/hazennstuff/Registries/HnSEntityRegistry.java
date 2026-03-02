@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.Registries;
 
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnace;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.TheInferno.TheInferno;
+import net.hazen.hazennstuff.Entity.Mobs.Mobs.VoidWanderer.VoidWanderer;
 import net.hazen.hazennstuff.Entity.Mobs.Summons.ReignOfTyros.Keeper.SummonKeeper;
 import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprisma;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.BishopOfDeciet.BishopOfDeceitEntity;
@@ -15,6 +16,7 @@ import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ReignOfTyros.Pyromus.Pyrom
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ServantsOfEnder.ServantsOfEnderEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.Dryad.DryadEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.TheRecluse.TheRecluseEntity;
+import net.hazen.hazennstuff.Entity.Spells.Astral.CosmicBolt.CosmicBolt;
 import net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife.VampireKnife;
 import net.hazen.hazennstuff.Entity.Spells.Eldritch.SoulSeeker.SoulSeeker;
 import net.hazen.hazennstuff.Entity.Spells.Evocation.SpectralAxe.SpectralAxe;
@@ -37,6 +39,7 @@ import net.hazen.hazennstuff.Entity.Spells.Radiance.Syringe.Syringe;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.Terraprisma;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.NightsEdgeAfterSlash.NightsEdgeAfterSlash;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowDagger.ShadowDagger;
+import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowReaver.ShadowReaver;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -213,6 +216,22 @@ public class HnSEntityRegistry {
                     .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "shadow_dagger").toString())
             );
 
+    // Cosmic Bolt
+    public static final DeferredHolder<EntityType<?>, EntityType<CosmicBolt>> COSMIC_BOLT =
+            ENTITIES.register("cosmic_bolt", () -> EntityType.Builder.<CosmicBolt>of(CosmicBolt::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "cosmic_bolt").toString())
+            );
+
+    // Shadow Reaver
+    public static final DeferredHolder<EntityType<?>, EntityType<ShadowReaver>> SHADOW_REAVER =
+            ENTITIES.register("shadow_reaver", () -> EntityType.Builder.<ShadowReaver>of(ShadowReaver::new, MobCategory.MISC)
+                    .sized(0.75f, 0.75f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "shadow_reaver").toString())
+            );
+
 
 
 
@@ -333,14 +352,22 @@ public class HnSEntityRegistry {
                     .eyeHeight(1.6f)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "the_inferno").toString()));
 
-    // The Inferno
+    // Summon Keeper
     public static final DeferredHolder<EntityType<?>, EntityType<SummonKeeper>> SUMMON_KEEPER =
             ENTITIES.register("summon_keeper",  () -> EntityType.Builder.<SummonKeeper>of(SummonKeeper::new, MobCategory.MONSTER)
                     .sized(0.85F, 2.3F)
                     .clientTrackingRange(64)
                     .eyeHeight(2.3F)
-                    .build(ResourceLocation.fromNamespaceAndPath("summoned_keeper", "summon_keeper").toString())
-            );
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "summon_keeper").toString()
+                    ));
+
+    // Void Wanderer
+    public static final DeferredHolder<EntityType<?>, EntityType<VoidWanderer>> VOID_WANDERER =
+            ENTITIES.register("void_wanderer",  () -> EntityType.Builder.<VoidWanderer>of(VoidWanderer::new, MobCategory.MONSTER)
+                    .sized(0.85F, 2.3F)
+                    .clientTrackingRange(64)
+                    .eyeHeight(2.3F)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "void_wanderer").toString()));
 
 
 

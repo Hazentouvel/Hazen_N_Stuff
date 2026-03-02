@@ -47,10 +47,7 @@ public class ArbitriumRobesArmorItem extends ImbuableHnSArmorItem implements IDi
     }
 
     @Override
-    public void appendHoverText(@NotNull ItemStack stack,
-                                @NotNull TooltipContext context,
-                                @NotNull List<Component> lines,
-                                @NotNull TooltipFlag flag) {
+    public void appendHoverText(@NotNull ItemStack stack,@NotNull TooltipContext context,@NotNull List<Component> lines,@NotNull TooltipFlag flag) {
         super.appendHoverText(stack, context, lines, flag);
 
         // --- Custom item description section ---

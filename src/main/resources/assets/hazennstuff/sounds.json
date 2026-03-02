@@ -265,5 +265,45 @@
       "hazennstuff:shadow_dagger_hit_2",
       "hazennstuff:shadow_dagger_hit_3"
     ]
+  },
+  "cosmic_cast_instant": {
+    "sounds": [
+      "hazennstuff:cosmic_cast_instant"
+    ]
+  },
+  "cosmic_cast_long": {
+    "sounds": [
+      "hazennstuff:cosmic_cast_long"
+    ]
+  },
+  "evercomet_cast": {
+    "sounds": [
+      "hazennstuff:evercomet_cast"
+    ]
+  },
+  "evercomet_impact": {
+    "sounds": [
+      "hazennstuff:evercomet_impact"
+    ]
+  },
+  "cosmic_bolt_hit": {
+    "sounds": [
+      "hazennstuff:cosmic_bolt_hit"
+    ]
+  },
+  "cosmic_bolt_okay": {
+    "sounds": [
+      "hazennstuff:cosmic_bolt_okay"
+    ]
+  },
+  "cosmic_bolt_good": {
+    "sounds": [
+      "hazennstuff:cosmic_bolt_good"
+    ]
+  },
+  "cosmic_bolt_excellent": {
+    "sounds": [
+      "hazennstuff:cosmic_bolt_excellent"
+    ]
   }
 }

@@ -23,7 +23,7 @@ public class HnSSounds {
 
 
 
-    /***
+    /*
      * Spell Sounds
      */
 
@@ -80,6 +80,7 @@ public class HnSSounds {
     /*
      ***Terraprisma Sounds
      */
+
     // Cast
     public static DeferredHolder<SoundEvent, SoundEvent> TERRAPRISMA_CASTING = registerSoundEvent("terraprisma_casting");
     public static DeferredHolder<SoundEvent, SoundEvent> TERRAPRISMA_SUMMON = registerSoundEvent("terraprisma_summon");
@@ -99,6 +100,28 @@ public class HnSSounds {
     public static DeferredHolder<SoundEvent, SoundEvent> UMBRASHIFT_BARRAGE = registerSoundEvent("umbrashift_barrage_cast");
 
     /*
+    *** Cosmic Sounds
+     */
+
+    // Cosmic Casting
+    public static DeferredHolder<SoundEvent, SoundEvent> COSMIC_CAST_INSTANT = registerSoundEvent("cosmic_cast_instant");
+    public static DeferredHolder<SoundEvent, SoundEvent> COSMIC_CAST_LONG = registerSoundEvent("cosmic_cast_long");
+
+    // Evercomet Spell
+    public static DeferredHolder<SoundEvent, SoundEvent> EVERCOMET_CAST = registerSoundEvent("evercomet_cast");
+    public static DeferredHolder<SoundEvent, SoundEvent> EVERCOMET_IMPACT = registerSoundEvent("evercomet_impact");
+
+    // Cosmic Bolt Spell
+    public static DeferredHolder<SoundEvent, SoundEvent> COSMIC_BOLT_HIT = registerSoundEvent("cosmic_bolt_hit");
+    public static DeferredHolder<SoundEvent, SoundEvent> COSMIC_BOLT_OKAY = registerSoundEvent("cosmic_bolt_okay");
+    public static DeferredHolder<SoundEvent, SoundEvent> COSMIC_BOLT_GOOD = registerSoundEvent("cosmic_bolt_good");
+    public static DeferredHolder<SoundEvent, SoundEvent> COSMIC_BOLT_EXCELLENT = registerSoundEvent("cosmic_bolt_excellent");
+
+    //Star Cast
+    public static DeferredHolder<SoundEvent, SoundEvent> STAR_CAST_1 = registerSoundEvent("star_cast_1");
+    public static DeferredHolder<SoundEvent, SoundEvent> STAR_CAST_2 = registerSoundEvent("star_cast_2");
+
+    /*
     *** Melee Sounds
      */
 
@@ -109,11 +132,6 @@ public class HnSSounds {
     //Terraria Sword Sounds
     public static DeferredHolder<SoundEvent, SoundEvent> TERRARIA_SWING = registerSoundEvent("terraria_swing");
     public static DeferredHolder<SoundEvent, SoundEvent> TERRARIA_IMPACT = registerSoundEvent("terraria_impact");
-
-
-    //Star Cast
-    public static DeferredHolder<SoundEvent, SoundEvent> STAR_CAST_1 = registerSoundEvent("star_cast_1");
-    public static DeferredHolder<SoundEvent, SoundEvent> STAR_CAST_2 = registerSoundEvent("star_cast_2");
 
     //Cat Sounds
     public static DeferredHolder<SoundEvent, SoundEvent> CAT_SWING = registerSoundEvent("cat_swing");

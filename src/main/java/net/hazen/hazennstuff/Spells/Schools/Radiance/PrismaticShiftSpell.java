@@ -11,7 +11,9 @@ import io.redspace.ironsspellbooks.network.particles.TeleportParticlesPacket;
 import io.redspace.ironsspellbooks.particle.BlastwaveParticleOptions;
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import io.redspace.ironsspellbooks.spells.ender.TeleportSpell;
+import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Registries.*;
+import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractTaggedSpell;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.commands.arguments.EntityAnchorArgument.Anchor;
@@ -42,7 +44,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Optional;
 
-public class PrismaticShiftSpell extends AbstractSpell {
+public class PrismaticShiftSpell extends AbstractTaggedSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "prismatic_shift");
     private final DefaultConfig defaultConfig;
 
@@ -55,7 +57,7 @@ public class PrismaticShiftSpell extends AbstractSpell {
                 .setMinRarity(SpellRarity.UNCOMMON)
                 .setSchoolResource(HnSSchoolRegistry.RADIANCE_RESOURCE)
                 .setMaxLevel(3)
-                .setCooldownSeconds((double)3.0F)
+                .setCooldownSeconds((double)1.5F)
                 .build();
         this.baseSpellPower = 12;
         this.spellPowerPerLevel = 4;
@@ -83,6 +85,8 @@ public class PrismaticShiftSpell extends AbstractSpell {
     public Optional<SoundEvent> getCastFinishSound() {
         return Optional.of(HnSSounds.TERRARIA_CAST.get());
     }
+
+    private boolean hasHarmonious;
 
     public void onClientPreCast(Level level, int spellLevel, LivingEntity entity, InteractionHand hand, @Nullable MagicData playerMagicData) {
         super.onClientPreCast(level, spellLevel, entity, hand, playerMagicData);
@@ -126,9 +130,7 @@ public class PrismaticShiftSpell extends AbstractSpell {
 
                         for (int j = 0; j < 8; ++j) {
                             dest = target.position().subtract(
-                                    new Vec3(0.0F, 0.0F, 1.5F)
-                                            .yRot(-(target.getYRot() + (j * 45)) * ((float)Math.PI / 180F))
-                            );
+                                    new Vec3(0.0F, 0.0F, 1.5F).yRot(-(target.getYRot() + (j * 45)) * ((float)Math.PI / 180F)));
                             if (level.getBlockState(BlockPos.containing(dest).above()).isAir()) {
                                 break;
                             }
@@ -157,35 +159,43 @@ public class PrismaticShiftSpell extends AbstractSpell {
     public void chaoticTeleportHurt(LivingEntity entity) {
         boolean hasChaosState = entity.hasEffect(HnSEffects.CHAOS_STATE);
 
-        if (entity instanceof ServerPlayer player && !player.level().isClientSide())
-        {
-            if (hasChaosState)
-            {
-                float damage = 1.0F;
+        if (entity instanceof ServerPlayer player && !player.level().isClientSide()) {
+            if (hasChaosState) {
+
+                float percentDamage = 0.25F;
+
+                float maxHealth = entity.getMaxHealth();
+                float damage = maxHealth * percentDamage;
+
+                // Optional safety clamp so it never kills instantly
+                damage = Math.max(1.0F, damage);
+
                 DamageSource damageSource = new DamageSource(
-                        DamageSources.getHolderFromResource(entity,
-                                HnSDamageTypes.CORRUPT_MAGIC
-                        )
+                        DamageSources.getHolderFromResource(entity, HnSDamageTypes.RADIANCE_MAGIC)
                 );
+
                 entity.hurt(damageSource, damage);
 
                 player.level().playSound(
-                        null, player.getX(), player.getY(), player.getZ(),
-                        SoundEvents.SOUL_ESCAPE, SoundSource.PLAYERS, 1.25f, 1f
+                        null,
+                        player.getX(), player.getY(), player.getZ(),
+                        SoundEvents.SOUL_ESCAPE,
+                        SoundSource.PLAYERS,
+                        1.25f,
+                        1f
                 );
             }
         }
     }
 
     public void chaosState(int spellLevel, LivingEntity entity) {
-        boolean hasRodOfHarmonyOn = entity.getMainHandItem().is(HnSItemRegistry.ROD_OF_HARMONY.get());
-        boolean hasRodOfHarmonyOff = entity.getOffhandItem().is(HnSItemRegistry.ROD_OF_HARMONY.get());
-        boolean hasRodOfHarmony = hasRodOfHarmonyOn || hasRodOfHarmonyOff;
 
-        if (hasRodOfHarmony) {
+        hasHarmonious = hasTaggedItem(entity, HnSTags.HARMONIOUS_EQUIPMENT);
+
+        if (hasHarmonious) {
             if (entity instanceof ServerPlayer serverPlayer && !serverPlayer.level().isClientSide()) {
-                if (hasRodOfHarmonyOn) {
-                    //entity.addEffect(new MobEffectInstance(MobEffectRegistry.CHARGED, (int)(this.getSpellPower(spellLevel, entity) * 20.0F), spellLevel - 1, false, false, false));
+                if (hasHarmonious) {
+                    entity.addEffect(new MobEffectInstance(HnSEffects.HARMONIZED, (int)(this.getSpellPower(spellLevel, entity) * 20.0F), (int)((spellLevel) * 0.5) - 1, false, false, true));
                 }
             }
         } else {

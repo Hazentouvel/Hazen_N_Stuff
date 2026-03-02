@@ -65,15 +65,21 @@ public class HnSCreativeModeTabs {
 
                         //Misc
                         output.accept(HnSBlocks.FIREBLOSSOM);
-                        output.accept(HnSItemRegistry.DEUS_ESSENCE);
+
+                        //Misc
                         output.accept(HnSItemRegistry.CLOTH_OF_THE_FLAMEBEARER);
-                        output.accept(HnSItemRegistry.LEMON);
-                        output.accept(HnSItemRegistry.DIVINE_LEMON);
                         output.accept(HnSItemRegistry.STORM_WEAVE);
                         output.accept(HnSItemRegistry.SPIDER_FANG);
                         output.accept(HnSItemRegistry.PRISMATIC_SHARD);
                         output.accept(HnSItemRegistry.VOLT_CORE);
                         output.accept(HnSItemRegistry.STARDUST);
+                        output.accept(HnSItemRegistry.DEUS_ESSENCE);
+                        output.accept(HnSItemRegistry.CATALYST);
+
+                        //Food
+                        output.accept(HnSItemRegistry.LEMON);
+                        output.accept(HnSItemRegistry.DIVINE_LEMON);
+                        output.accept(HnSItemRegistry.FRIED_ICE_SPIDER_EGG);
 
                         /*
                         *** Upgrade Orbs

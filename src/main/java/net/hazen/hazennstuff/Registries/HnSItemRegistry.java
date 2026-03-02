@@ -119,6 +119,7 @@ import net.hazen.hazennstuff.Item.Curios.Crystals.SpiritCrystals.AbsoluteCurio;
 import net.hazen.hazennstuff.Item.Curios.Crystals.SpiritCrystals.AbstractCurio;
 import net.hazen.hazennstuff.Item.Curios.Crystals.SpiritCrystals.AdvancedCurio;
 import net.hazen.hazennstuff.Item.Curios.Misc.LegionnaireCurios;
+import net.hazen.hazennstuff.Item.Curios.Misc.PendantOfHarmonyCurio;
 import net.hazen.hazennstuff.Item.Curios.Rings.RingOfEfficiencyCurio;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.GalvanizedSheath.GalvanizedSheath;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.ScrollSheath.ScrollSheath;
@@ -1037,6 +1038,9 @@ public class HnSItemRegistry {
 
     //Ring of Efficiency
     public static final DeferredItem<RingOfEfficiencyCurio> RING_OF_EFFICIENCY = ITEMS.register("ring_of_efficiency", RingOfEfficiencyCurio::new);
+
+    //Pendant of Harmony
+    public static final DeferredItem<PendantOfHarmonyCurio> PENDANT_OF_HARMONY = ITEMS.register("pendant_of_harmony", PendantOfHarmonyCurio::new);
 
 
 

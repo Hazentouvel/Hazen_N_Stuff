@@ -30,8 +30,9 @@
         "type": "malum:wicked",
         "count": 48
     },
-        "type": "malum:eldritch",
-        "count": 32
+    {
+      "type": "malum:eldritch",
+      "count": 24
     },
     {
         "type": "malum:sacred",

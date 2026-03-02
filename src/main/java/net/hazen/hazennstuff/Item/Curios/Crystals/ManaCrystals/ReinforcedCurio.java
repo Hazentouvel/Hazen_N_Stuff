@@ -5,13 +5,19 @@ import com.google.common.collect.Multimap;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.TooltipFlag;
+import org.jetbrains.annotations.NotNull;
 import top.theillusivec4.curios.api.SlotContext;
+
+import java.util.List;
 
 public class ReinforcedCurio extends CurioBaseItem {
     public ReinforcedCurio() {
@@ -20,6 +26,13 @@ public class ReinforcedCurio extends CurioBaseItem {
                 .stacksTo(1)
                 .fireResistant()
                 .rarity(Rarity.EPIC));
+    }
+
+    @Override
+    public void appendHoverText(@NotNull ItemStack stack, @NotNull TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, lines, flag);
+        lines.add(Component.translatable("item.hazennstuff.mana_crystal.description")
+                .withStyle(ChatFormatting.WHITE));
     }
 
     //naur

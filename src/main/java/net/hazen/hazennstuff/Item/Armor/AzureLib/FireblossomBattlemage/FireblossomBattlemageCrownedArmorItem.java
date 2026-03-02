@@ -79,8 +79,8 @@ public class FireblossomBattlemageCrownedArmorItem extends ImbuableHnSArmorItem 
 
     private boolean isWearingFullSet(Player player) {
         return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof FireblossomBattlemageCrownedArmorItem &&
-                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof FireblossomBattlemageHelmetArmorItem &&
-                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof FireblossomBattlemageHelmetArmorItem &&
-                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof FireblossomBattlemageHelmetArmorItem;
+                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof FireblossomBattlemageArmorItem &&
+                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof FireblossomBattlemageArmorItem &&
+                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof FireblossomBattlemageArmorItem;
     }
 }

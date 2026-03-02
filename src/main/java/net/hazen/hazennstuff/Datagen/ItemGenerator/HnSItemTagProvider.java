@@ -86,6 +86,12 @@ public class HnSItemTagProvider extends ItemTagsProvider {
 
         ;
 
+        tag(HnSTags.HARMONIOUS_EQUIPMENT)
+
+                .add(HnSItemRegistry.PENDANT_OF_HARMONY.get())
+
+        ;
+
         tag(HnSTags.CINDEROUS_EQUIPMENT)
 
                 .add(HnSItemRegistry.TYROS_HELMET.get())
@@ -2382,6 +2388,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_HELMET.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.ARBITRIUM_ROBES_HELMET.get())
@@ -3209,6 +3217,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_HELMET.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.ARBITRIUM_ROBES_HELMET.get())
@@ -3584,6 +3594,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.DREADSTEEL_KNIGHT_HELMET.get())
                 .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_HELMET.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.MAVERICK_HELMET.get())

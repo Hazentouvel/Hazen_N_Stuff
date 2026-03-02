@@ -18,6 +18,7 @@ public class HnSParticleHelper {
     public static final ParticleOptions NATURE_IMPACT = new BlastwaveParticleOptions(new Vector3f(0.95F, 0.7F, 0.23F), 1.0F);
     public static final ParticleOptions BLADE_PARTICLE = HnSParticleRegistry.BLADE_PARTICLES.get();
     public static final ParticleOptions MUSHROOM_PARTICLE = HnSParticleRegistry.MUSHROOM_PARTICLE.get();
+    public static final ParticleOptions STAR_PARTICLE = HnSParticleRegistry.STAR_PARTICLE.get();
     public static final ParticleOptions NIGHTS_EDGE_PARTICLE = HnSParticleRegistry.NIGHTS_EDGE_PARTICLE.get();
     public static final ParticleOptions ROD_OF_DISCORD_PARTICLE = HnSParticleRegistry.ROD_OF_DISCORD_PARTICLE.get();
 

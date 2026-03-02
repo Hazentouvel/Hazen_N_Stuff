@@ -65,7 +65,7 @@ public class HnSSchoolRegistry {
                             .withStyle(Style.EMPTY.withColor(0x473196)),
                     HnSAttributeRegistry.COSMIC_SPELL_POWER,
                     HnSAttributeRegistry.COSMIC_SPELL_RESIST,
-                    HnSSounds.STAR_CAST_1,
+                    HnSSounds.COSMIC_CAST_INSTANT,
                     HnSDamageTypes.COSMIC_MAGIC
             ));
     }

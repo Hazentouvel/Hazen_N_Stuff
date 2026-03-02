@@ -10,6 +10,12 @@
   "ui.hazennstuff.item_resonation": "This spell requires a certain item to be crafted...",
   "ui.hazennstuff.material_resonation": "This spell requires a certain material to be crafted...",
 
+  "item.hazennstuff.mana_crystal.description": "Mana Crystal",
+  "item.hazennstuff.life_crystal.description": "Life Crystal",
+  "item.hazennstuff.spirit_crystal.description": "Spirit Crystal",
+
+  "item.hazennstuff.ionic_splitter_dormant.description": "There's no spark inside of this blade... Perhaps a spell serve as ignition for this dormant blade...",
+
   "item.hazennstuff.calamity_fables.description": "A Calamity Fables reference.",
   "item.hazennstuff.calamity.description": "A Calamity mod reference.",
   "item.hazennstuff.tyros.description": "Bear the garments of the first flambearer...",
@@ -51,6 +57,7 @@
 
   "item.hazennstuff.excalibur_fragment": "Excalibur Fragment",
   "item.hazennstuff.deus_essence": "Deus Essence",
+  "item.hazennstuff.catalyst": "Catalyst",
   "item.hazennstuff.stardust": "Stardust",
   "item.hazennstuff.runestone_fragments": "Runestone Fragments",
   "item.hazennstuff.permafrost_fragment": "Permafrost Fragment",
@@ -132,23 +139,24 @@
   "item.hazennstuff.cosmic_rune": "Cosmic Rune",
 
 
-  "item.hazennstuff.ruptured": "Ruptured Mana Crystal",
-  "item.hazennstuff.refined": "Refined Mana Crystal",
-  "item.hazennstuff.reinforced": "Reinforced Mana Crystal",
-  "item.hazennstuff.radiance": "Radiance Mana Crystal",
+  "item.hazennstuff.ruptured": "Ruptured",
+  "item.hazennstuff.refined": "Refined",
+  "item.hazennstuff.reinforced": "Reinforced",
+  "item.hazennstuff.radiance": "Radiance",
 
-  "item.hazennstuff.abstract": "Abstract Spirit Crystal",
-  "item.hazennstuff.advanced": "Advanced Spirit Crystal",
-  "item.hazennstuff.abomination": "Abomination Spirit Crystal",
-  "item.hazennstuff.absolute": "Absolute Spirit Crystal",
+  "item.hazennstuff.abstract": "Abstract",
+  "item.hazennstuff.advanced": "Advanced",
+  "item.hazennstuff.abomination": "Abomination",
+  "item.hazennstuff.absolute": "Absolute",
 
-  "item.hazennstuff.shattered": "Shattered Life Crystal",
-  "item.hazennstuff.sacred": "Sacred Life Crystal",
-  "item.hazennstuff.strengthened": "Strengthened Life Crystal",
-  "item.hazennstuff.singularity": "Singularity Life Crystal",
+  "item.hazennstuff.shattered": "Shattered",
+  "item.hazennstuff.sacred": "Sacred",
+  "item.hazennstuff.strengthened": "Strengthened",
+  "item.hazennstuff.singularity": "Singularity",
 
 
   "item.irons_spellbooks.chained_book.guide": "The Flamebearer keeps their secrets to the other schools in here...",
+
 
   "item.hazennstuff.energized_core_spellbook": "Energized Core Spellbook",
   "item.hazennstuff.energized_core_spellbook.guide": "This core resonates more than just electricity...",
@@ -171,6 +179,10 @@
 
 
   "item.hazennstuff.ring_of_efficiency": "Ring of Efficiency",
+
+
+  "item.hazennstuff.pendant_of_harmony": "Pendant of Harmony",
+  "item.hazennstuff.pendant_of_harmony.description": "Your body has now attuned, you no longer teleport in a chaotic state...",
 
   "item.hazennstuff.blade_of_the_legate": "Blade of the Legate",
   "item.hazennstuff.blade_of_the_legate.desc": "A symbol, showing the rank of the legate...",

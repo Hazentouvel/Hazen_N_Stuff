@@ -16,6 +16,7 @@ import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ReignOfTyros.Pyromus.Pyrom
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ServantsOfEnder.ServantsOfEnderEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.Dryad.DryadEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.TheRecluse.TheRecluseEntity;
+import net.hazen.hazennstuff.Entity.Spells.Astral.Evercomet.Evercomet;
 import net.hazen.hazennstuff.Entity.Spells.Astral.CosmicBolt.CosmicBolt;
 import net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife.VampireKnife;
 import net.hazen.hazennstuff.Entity.Spells.Eldritch.SoulSeeker.SoulSeeker;
@@ -53,11 +54,9 @@ public class HnSEntityRegistry {
     private static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister
             .create(Registries.ENTITY_TYPE, HazenNStuff.MOD_ID);
 
-
     /*
     *** Spells
      */
-
 
     // Brimstone Hellblast
     public static final DeferredHolder<EntityType<?>, EntityType<BrimstoneHellblast>> BRIMSTONE_HELLBLAST =
@@ -232,6 +231,14 @@ public class HnSEntityRegistry {
                     .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "shadow_reaver").toString())
             );
 
+    // Shadow Reaver
+    public static final DeferredHolder<EntityType<?>, EntityType<Evercomet>> EVERCOMET =
+            ENTITIES.register("evercomet", () -> EntityType.Builder.<Evercomet>of(Evercomet::new, MobCategory.MISC)
+                    .sized(0.75f, 0.75f)
+                    .clientTrackingRange(64)
+                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "evercomet").toString())
+            );
+
 
 
 
@@ -364,7 +371,7 @@ public class HnSEntityRegistry {
     // Void Wanderer
     public static final DeferredHolder<EntityType<?>, EntityType<VoidWanderer>> VOID_WANDERER =
             ENTITIES.register("void_wanderer",  () -> EntityType.Builder.<VoidWanderer>of(VoidWanderer::new, MobCategory.MONSTER)
-                    .sized(0.85F, 2.3F)
+                    .sized(1F, 2.5F)
                     .clientTrackingRange(64)
                     .eyeHeight(2.3F)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "void_wanderer").toString()));

@@ -32,7 +32,7 @@ public class ShadowReaverSpell extends AbstractSpell {
                 .setMinRarity(SpellRarity.EPIC)
                 .setSchoolResource(HnSSchoolRegistry.SHADOW_RESOURCE)
                 .setMaxLevel(6)
-                .setCooldownSeconds((double)2.5F)
+                .setCooldownSeconds((double)4F)
                 .build();
         this.manaCostPerLevel = 2;
         this.baseSpellPower = 12;

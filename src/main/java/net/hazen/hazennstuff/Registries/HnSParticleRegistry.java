@@ -22,8 +22,17 @@ public class HnSParticleRegistry {
     // Mushroom Particle
     public static final Supplier<SimpleParticleType> MUSHROOM_PARTICLE = PARTICLE_TYPES.register("mushroom_particle",
             () -> new SimpleParticleType(false));
-    // Mushroom Particle
+
+    // Star Particle
     public static final Supplier<SimpleParticleType> STAR_PARTICLE = PARTICLE_TYPES.register("star_particle",
+            () -> new SimpleParticleType(false));
+
+    // Star impact Particle
+    public static final Supplier<SimpleParticleType> STAR_IMPACT_PARTICLE = PARTICLE_TYPES.register("star_impact_particle",
+            () -> new SimpleParticleType(false));
+
+    // Star impact Particle
+    public static final Supplier<SimpleParticleType> COSMIC_EMBER_PARTICLE = PARTICLE_TYPES.register("cosmic_ember_particle",
             () -> new SimpleParticleType(false));
 
     // Ball Particles

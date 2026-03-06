@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Spells.Schools.Astral;
+package net.hazen.hazennstuff.Spells.Schools.Cosmic;
 
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
@@ -35,7 +35,7 @@ public class ShootingStarSpell extends AbstractSpell {
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.COMMON)
-            .setSchoolResource(HnSSchoolRegistry.RADIANCE_RESOURCE)
+            .setSchoolResource(HnSSchoolRegistry.COSMIC_RESOURCE)
             .setMaxLevel(10)
             .setCooldownSeconds(2)
             .build();

@@ -106,6 +106,8 @@
   "item.hazennstuff.lemon.guide": "When life gives you lemons...",
   "item.hazennstuff.divine_lemon": "Divine Lemon",
   "item.hazennstuff.divine_lemon.guide": "Delectable!",
+  "item.hazennstuff.friend_ice_spider_egg": "Fried Ice Spider Egg",
+  "item.hazennstuff.friend_ice_spider_egg.guide": "Mmm, I ate the baby.",
 
 
   "item.hazennstuff.radiance_upgrade_orb": "Radiance Upgrade Orb",
@@ -170,8 +172,8 @@
   "item.hazennstuff.galvanized_sheath.desc": "Upon hit, strike down your foes with a line of lightning.",
   "item.hazennstuff.galvanized_sheath.guide": "Smite your foes with a line of lightning.",
   "item.hazennstuff.scroll_sheath": "Scroll Sheath",
-  "item.hazennstuff.scroll_sheath.desc": "Upon hit, inflict mana sickness on your foes and reset your cooldown.",
-  "item.hazennstuff.scroll_sheath.guide": "WIP.",
+  "item.hazennstuff.scroll_sheath.desc": "Upon hit, vex your foes with the curse of mana sickness and hexed and reset your cooldown.",
+  "item.hazennstuff.scroll_sheath.guide": "Inflicts mana sickness and hexed on your foes and refreshes all spell cooldowns upon hit.",
 
 
   "item.hazennstuff.arbitrium_wings": "Arbitrium Wings",
@@ -859,6 +861,7 @@
   "entity.hazennstuff.piglin_pyromancer": "Piglin Pyromancer",
   "entity.hazennstuff.necromancer": "Necromancer",
   "entity.hazennstuff.nameless_one": "Nameless One",
+  "entity.hazennstuff.void_wanderer": "Void Wanderer",
 
 
 
@@ -869,7 +872,9 @@
   "entity.hazennstuff.fiery_dagger_magic_projectile": "Fiery Dagger",
 
   "entity.hazennstuff.ice_arrow": "Ice Arrow",
-  "entity.hazennstuff.crystal_volley": "Crystal Volley",
+  "entity.hazennstuff.ice_chunk_a": "Ice Chunk",
+  "entity.hazennstuff.ice_chunk_b": "Ice Chunk",
+  "entity.hazennstuff.ice_chunk_c": "Ice Chunk",
 
   "entity.hazennstuff.energy_burst": "Energy Burst",
   "entity.hazennstuff.lightning_strike": "Lightning Strike",
@@ -882,13 +887,18 @@
   "entity.hazennstuff.spectral_axe": "Spectral Axe",
 
   "entity.hazennstuff.syringe": "Syringe",
-  "entity.hazennstuff.shooting_star": "Syringe",
+  "entity.hazennstuff.shooting_star": "Falling Star",
   "entity.hazennstuff.terraprisma_projectile": "Terraprisma",
   "entity.hazennstuff.terraprisma": "Terraprisma",
 
   "entity.hazennstuff.nights_edge_after_slash": "Night's Edge Slash",
+  "entity.hazennstuff.shadow_reaver": "Shadow Reaver",
+  "entity.hazennstuff.shadow_dagger": "Shadow Dagger",
 
   "entity.hazennstuff.soul_seeker": "Soul Seeker",
+
+  "entity.hazennstuff.cosmic_bolt": "Cosmic Bolt",
+  "entity.hazennstuff.evercomet": "Evercomet",
 
 
   "spell.hazennstuff.brimstone_hellblast": "Brimstone Hellblast",
@@ -919,9 +929,13 @@
   "spell.hazennstuff.prismatic_shift": "Prismatic Shift",
 
   "spell.hazennstuff.shooting_star": "Shooting Star",
+  "spell.hazennstuff.cosmic_bolt": "Cosmic Bolt",
+  "spell.hazennstuff.evercomet_barrage": "Evercomet Barrage",
+  "spell.hazennstuff.supernova": "Supernova",
 
   "spell.hazennstuff.nights_edge_strike": "Night's Edge Strike",
   "spell.hazennstuff.umbrashift_barrage": "Umbrashift Barrage",
+  "spell.hazennstuff.shadow_reaver": "Shadow Reaver",
 
   "spell.hazennstuff.soul_seekers": "Soul Seekers",
 
@@ -957,7 +971,10 @@
   "spell.hazennstuff.nights_edge_strike.guide": "A Terraria Reference ''Strike your foes with the strike of the Night's Edge.''",
   "spell.hazennstuff.umbrashift_barrage.guide": "Teleport and fire daggers on your victims",
 
-  "spell.hazennstuff.shooting_star.guide": "A Terraria Reference. A cosmetic version of Magic Missile",
+  "spell.hazennstuff.shooting_star.guide": "A Terraria Reference. Fire 2 stars down on your opponent.",
+  "spell.hazennstuff.cosmic_bolt.guide": "Fire a cosmic bolt that homes in on more enemies the higher the level.",
+  "spell.hazennstuff.evercomet_barrage.guide": "Fire a barrage of comets that scale off of cosmic and ice spell power.",
+  "spell.hazennstuff.supernova.guide": "Your final stand... become a dying star and be engulfed by your spirit's black hole...",
 
   "spell.hazennstuff.soul_seekers.guide": "The reapers have come to claim the souls of your foes. Cast upon the 3 heads of the Soul Seekers to nullify your opponent's magic.",
 

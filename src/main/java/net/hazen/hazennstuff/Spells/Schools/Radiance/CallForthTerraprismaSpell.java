@@ -88,14 +88,6 @@ public class CallForthTerraprismaSpell extends AbstractSpell {
         return 2;
     }
 
-    public double getHealthBonus(int spellLevel, LivingEntity caster) {
-        return (double)(this.getSpellPower(spellLevel, caster) - 1.0F) * 0.1;
-    }
-
-    public double getDamageBonus(int spellLevel, LivingEntity caster) {
-        return (double)(this.getSpellPower(spellLevel, caster) - 1.0F) * 0.05;
-    }
-
     public void onRecastFinished(ServerPlayer serverPlayer, RecastInstance recastInstance, RecastResult recastResult, ICastDataSerializable castDataSerializable) {
         if (SummonManager.recastFinishedHelper(serverPlayer, recastInstance, recastResult, castDataSerializable)) {
             super.onRecastFinished(serverPlayer, recastInstance, recastResult, castDataSerializable);
@@ -116,7 +108,6 @@ public class CallForthTerraprismaSpell extends AbstractSpell {
             int summonTime = 12000;
 
             for (int i = 0; i < summonCount; i++) {
-
                 SummonedTerraprisma summonedTerraprisma = new SummonedTerraprisma(world, entity);
                 summonedTerraprisma.setPos(entity.position());
                 summonedTerraprisma.getAttributes().getInstance(Attributes.ATTACK_DAMAGE).setBaseValue((double)this.getTerraprismaDamage(spellLevel, entity));

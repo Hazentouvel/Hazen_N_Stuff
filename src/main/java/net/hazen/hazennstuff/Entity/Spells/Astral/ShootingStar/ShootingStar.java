@@ -1,16 +1,13 @@
 package net.hazen.hazennstuff.Entity.Spells.Astral.ShootingStar;
 
-import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
-import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
+import net.hazen.hazennstuff.Registries.HnSParticleHelper;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.EntityType;
@@ -65,13 +62,13 @@ public class ShootingStar extends AbstractMagicProjectile implements GeoEntity {
             double y = Mth.lerp((double)offset, y1, y2) + swirl.y + (double)(this.getBbHeight() / 2.0F);
             double z = Mth.lerp((double)offset, z1, z2) + swirl.z;
             Vec3 jitter = Vec3.ZERO;
-            this.level.addParticle(ParticleTypes.FIREWORK, x, y, z, jitter.x, jitter.y, jitter.z);
+            this.level.addParticle(HnSParticleHelper.COSMIC_EMBER_PARTICLE, x, y, z, jitter.x, jitter.y, jitter.z);
         }
 
     }
 
     public void impactParticles(double x, double y, double z) {
-        MagicManager.spawnParticles(this.level(), ParticleTypes.FIREWORK, x, y, z, 25, 0.0F, 0.0F, 0.0F, 0.18, true);
+        MagicManager.spawnParticles(this.level(), HnSParticleHelper.STAR_IMPACT_PARTICLE, x, y, z, 25, 0.0F, 0.0F, 0.0F, 0.18, true);
     }
 
     public float getSpeed() {

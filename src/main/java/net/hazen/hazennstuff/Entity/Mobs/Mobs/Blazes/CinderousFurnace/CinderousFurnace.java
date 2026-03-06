@@ -69,6 +69,7 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
         this.goalSelector.addGoal(5, new MoveTowardsRestrictionGoal(this, (double) 1.0F));
         this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, (double) 1.0F, 0.0F));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, new Class[0])).setAlertOthers(new Class[0]));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, true));
         this.goalSelector.addGoal(4, new PatrolNearLocationGoal(this, 30, .75f));
@@ -86,7 +87,9 @@ public class CinderousFurnace extends AbstractSpellCastingMob implements Enemy {
         return LivingEntity.createLivingAttributes()
                 .add(Attributes.ATTACK_DAMAGE, 6.0)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.0)
-                .add(Attributes.MAX_HEALTH, 120.0)
+                .add(Attributes.MAX_HEALTH, 240.0)
+                .add(Attributes.ARMOR, 12.0)
+                .add(Attributes.ARMOR_TOUGHNESS, 8.0)
                 .add(AttributeRegistry.SPELL_RESIST, 20.0)
                 .add(Attributes.FOLLOW_RANGE, 24.0)
                 .add(Attributes.MOVEMENT_SPEED, .25);

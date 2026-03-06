@@ -23,12 +23,4 @@ public class VoidWandererRenderer extends GeoEntityRenderer<VoidWanderer> {
         super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTicks, packedLight, packedOverlay, colour);
         poseStack.translate(0.0F, entity.getBbHeight() * 0.5F, 0.0F);
     }
-
-    public @Nullable RenderType getRenderType(VoidWanderer animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick) {
-        return CustomerRenderType.magic(texture);
-    }
-
-    public Color getRenderColor(VoidWanderer animatable, float partialTick, int packedLight) {
-        return Color.LIGHT_GRAY;
-    }
 }

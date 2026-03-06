@@ -9,6 +9,7 @@ import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.Item.Armor.Geckolib.Chlorophyte.ChlorophyteArmorItem;
 import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
+import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;

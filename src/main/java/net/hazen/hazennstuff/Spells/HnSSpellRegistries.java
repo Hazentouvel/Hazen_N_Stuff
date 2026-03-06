@@ -2,8 +2,9 @@ package net.hazen.hazennstuff.Spells;
 
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.Spells.Schools.Astral.CosmicBoltSpell;
-import net.hazen.hazennstuff.Spells.Schools.Astral.ShootingStarSpell;
+import net.hazen.hazennstuff.Spells.Schools.Cosmic.CosmicBoltSpell;
+import net.hazen.hazennstuff.Spells.Schools.Cosmic.EvercometBarrageSpell;
+import net.hazen.hazennstuff.Spells.Schools.Cosmic.ShootingStarSpell;
 import net.hazen.hazennstuff.Spells.Schools.Eldritch.SoulSeekersSpell;
 import net.hazen.hazennstuff.Spells.Schools.Evocation.ParrySpell;
 import net.hazen.hazennstuff.Spells.Schools.Evocation.SpectralAxeSpell;
@@ -165,6 +166,9 @@ public class HnSSpellRegistries {
 
     // Cosmic Bolt
     public static final Supplier<AbstractSpell> COSMIC_BOLT = registerSpell(new CosmicBoltSpell());
+
+    // Cosmic Bolt
+    public static final Supplier<AbstractSpell> EVERCOMET_BARRAGE = registerSpell(new EvercometBarrageSpell());
 
 
 

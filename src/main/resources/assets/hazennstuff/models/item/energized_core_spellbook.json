@@ -1,6 +1,15 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "hazennstuff:item/curios/spellbooks/energized_core_spellbook_gui"
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "hazennstuff:item/energized_core_spellbook_handheld"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "hazennstuff:item/energized_core_spellbook_gui"
+    },
+    "fixed": {
+      "parent": "hazennstuff:item/energized_core_spellbook_fixed"
+    }
   }
 }

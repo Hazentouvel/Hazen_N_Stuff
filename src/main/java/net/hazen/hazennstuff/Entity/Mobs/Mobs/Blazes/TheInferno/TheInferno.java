@@ -82,8 +82,9 @@ public class TheInferno extends CinderousFurnace {
         return LivingEntity.createLivingAttributes()
                 .add(Attributes.ATTACK_DAMAGE, 10.0)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.0)
-                .add(Attributes.MAX_HEALTH, 360.0)
-                .add(AttributeRegistry.SPELL_RESIST, 30.0)
+                .add(Attributes.MAX_HEALTH, 240.0)
+                .add(Attributes.ARMOR, 16.0)
+                .add(AttributeRegistry.SPELL_RESIST, 20.0)
                 .add(Attributes.FOLLOW_RANGE, 24.0)
                 .add(Attributes.MOVEMENT_SPEED, .25);
     }
@@ -103,8 +104,6 @@ public class TheInferno extends CinderousFurnace {
     public float getLightLevelDependentMagicValue() {
         return 1.0F;
     }
-
-
 
     public boolean isOnFire() {
         return this.isCharged();

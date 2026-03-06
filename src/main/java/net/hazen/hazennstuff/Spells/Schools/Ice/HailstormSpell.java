@@ -13,6 +13,7 @@ import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
+import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import io.redspace.ironsspellbooks.entity.spells.comet.Comet;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 
@@ -222,5 +223,10 @@ public class HailstormSpell extends AbstractSpell {
             this.trackedEntities.clear();
             this.trackedEntities.addAll(entities);
         }
+    }
+
+    @Override
+    public SpellDamageSource getDamageSource(@javax.annotation.Nullable Entity projectile, Entity attacker) {
+        return super.getDamageSource(projectile, attacker).setFreezeTicks(80);
     }
 }

@@ -933,6 +933,7 @@ public class HnSCreativeModeTabs {
 
                         //Misc
                         output.accept(HnSItemRegistry.RING_OF_EFFICIENCY.get());
+                        output.accept(HnSItemRegistry.PENDANT_OF_HARMONY.get());
 
 
 

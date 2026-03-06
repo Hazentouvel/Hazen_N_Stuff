@@ -935,9 +935,6 @@ public class HnSItemRegistry {
     //Rod of Discord
     public static final DeferredHolder<Item, Item> ROD_OF_DISCORD = ITEMS.register("rod_of_discord", RodOfDiscord::new);
 
-    //Rod of Harmony
-    public static final DeferredHolder<Item, Item> ROD_OF_HARMONY = ITEMS.register("rod_of_harmony", RodOfDiscord::new);
-
     /*
      *** Eldritch
      */

@@ -1,7 +1,7 @@
 {
   "panel": "hazennstuff:ice",
   "frame": "hazennstuff:ice",
-  "icon": "obscure_tooltips:default",
+  "icon": "hazennstuff:ice",
   "effects": [
   ]
 }

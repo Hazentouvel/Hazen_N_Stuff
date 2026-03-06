@@ -27,15 +27,11 @@ import net.hazen.hazennstuff.Item.Armor.AzureLib.SoulFlame.SoulFlameArmorRendere
 import net.hazen.hazennstuff.Item.Armor.AzureLib.SupremeWitch.SupremeWitchArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.TheWither.TheWitherArmorRenderer;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
-import net.hazen.hazennstuff.Item.Curios.Sheaths.GalvanizedSheath.GalvanizedCurioRenderer;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.GalvanizedSheath.GalvanizedSheathItemRenderer;
-import net.hazen.hazennstuff.Item.Curios.Sheaths.ScrollSheath.ScrollCurioRenderer;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.ScrollSheath.ScrollSheathItemRenderer;
-import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioItemRenderer;
-import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookCurioRenderer;
+import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioRenderer;
-import net.hazen.hazennstuff.Item.Staves.InsaniaAeternus.InsaniaAeternus;
 import net.hazen.hazennstuff.Item.Staves.InsaniaAeternus.InsaniaAeternusRenderer;
 import net.hazen.hazennstuff.Item.Staves.SoulcallingScepter.SoulcallingScepterRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Generic.HammerOfJustice.HammerOfJusticeRenderer;
@@ -329,29 +325,14 @@ public class HazenNStuff
             *** Spellbooks
              */
 
-            //Energized Core Spellbook
-            AzArmorRendererRegistry.register(EnergizedCoreSpellbookCurioItemRenderer::new, HnSItemRegistry.ENERGIZED_CORE_SPELLBOOK.get());
-            CuriosRendererRegistry.register(
-                    HnSItemRegistry.ENERGIZED_CORE_SPELLBOOK.get(), EnergizedCoreSpellbookCurioRenderer::new
-            );
+            AzItemRendererRegistry.register(EnergizedCoreSpellbookRenderer::new, HnSItemRegistry.ENERGIZED_CORE_SPELLBOOK.get());
 
             /*
             *** Sheaths
              */
 
-            // Galvanized Sheath
-            AzArmorRendererRegistry.register(GalvanizedSheathItemRenderer::new, HnSItemRegistry.GALVANIZED_SHEATH.get());
-            CuriosRendererRegistry.register(
-                    HnSItemRegistry.GALVANIZED_SHEATH.get(), GalvanizedCurioRenderer::new
-            );
-
-//            // Scroll Sheath
-//            AzArmorRendererRegistry.register(ScrollSheathItemRenderer::new, HnSItemRegistry.SCROLL_SHEATH.get());
-//            CuriosRendererRegistry.register(
-//                    HnSItemRegistry.SCROLL_SHEATH.get(), ScrollCurioRenderer::new
-//            );
-
             AzItemRendererRegistry.register(ScrollSheathItemRenderer::new, HnSItemRegistry.SCROLL_SHEATH.get());
+            AzItemRendererRegistry.register(GalvanizedSheathItemRenderer::new, HnSItemRegistry.GALVANIZED_SHEATH.get());
 
             /*
             *** Wings

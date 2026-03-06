@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Spells.Schools.Astral;
+package net.hazen.hazennstuff.Spells.Schools.Cosmic;
 
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;

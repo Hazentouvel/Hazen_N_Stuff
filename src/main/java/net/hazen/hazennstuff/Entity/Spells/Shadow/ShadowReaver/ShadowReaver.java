@@ -45,7 +45,7 @@ public class ShadowReaver extends AbstractMagicProjectile implements GeoEntity {
     }
 
     public ShadowReaver(Level level, LivingEntity shooter) {
-        this(HnSEntityRegistry.COSMIC_BOLT.get(), level);
+        this(HnSEntityRegistry.SHADOW_REAVER.get(), level);
         setOwner(shooter);
     }
 
@@ -69,12 +69,12 @@ public class ShadowReaver extends AbstractMagicProjectile implements GeoEntity {
             double y = Mth.lerp((double)offset, y1, y2) + swirl.y + (double)(this.getBbHeight() / 2.0F);
             double z = Mth.lerp((double)offset, z1, z2) + swirl.z;
             Vec3 jitter = Vec3.ZERO;
-            this.level.addParticle(HnSParticleHelper.STAR_PARTICLE, x, y, z, jitter.x, jitter.y, jitter.z);
+            this.level.addParticle(HnSParticleHelper.NIGHTS_EDGE_PARTICLE, x, y, z, jitter.x, jitter.y, jitter.z);
         }
     }
 
     public void impactParticles(double x, double y, double z) {
-        MagicManager.spawnParticles(this.level(), HnSParticleHelper.STAR_PARTICLE, x, y, z, 25, 0.0F, 0.0F, 0.0F, 0.18, true);
+        MagicManager.spawnParticles(this.level(), HnSParticleHelper.NIGHTS_EDGE_PARTICLE, x, y, z, 25, 0.0F, 0.0F, 0.0F, 0.18, true);
     }
 
 

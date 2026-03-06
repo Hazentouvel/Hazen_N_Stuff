@@ -2,7 +2,9 @@ package net.hazen.hazennstuff.Setup;
 
 import io.redspace.ironsspellbooks.entity.mobs.keeper.KeeperRenderer;
 import io.redspace.ironsspellbooks.entity.spells.fiery_dagger.FieryDaggerRenderer;
+import io.redspace.ironsspellbooks.particle.EmberParticle;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.VoidWanderer.VoidWandererRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Astral.Evercomet.EvercometRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Astral.CosmicBolt.CosmicBoltRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkA.IceChunkARenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkB.IceChunkBRenderer;
@@ -47,6 +49,7 @@ import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSLash.IonicSlas
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NatureSlash.NatureSlash;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrike;
 import net.hazen.hazennstuff.Spells.Tooltips.LightningClientTooltipComponent;
+import net.minecraft.client.particle.TextureSheetParticle;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -85,6 +88,7 @@ public class HnSClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.SHADOW_DAGGER.get(), ShadowDaggerRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.COSMIC_BOLT.get(), CosmicBoltRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.SHADOW_REAVER.get(), ShadowReaverRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.EVERCOMET.get(), EvercometRenderer::new);
 
 
         /*
@@ -128,6 +132,11 @@ public class HnSClientSetup {
     public static void registerParticles(RegisterParticleProvidersEvent event)
     {
         event.registerSpriteSet(HnSParticleRegistry.MUSHROOM_PARTICLE.get(), HnSGenericParticle.Provider::new);
+
+        event.registerSpriteSet(HnSParticleRegistry.STAR_PARTICLE.get(), HnSGenericParticle.Provider::new);
+        event.registerSpriteSet(HnSParticleRegistry.STAR_IMPACT_PARTICLE.get(), HnSGenericParticle.Provider::new);
+        event.registerSpriteSet(HnSParticleRegistry.COSMIC_EMBER_PARTICLE.get(), HnSGenericParticle.Provider::new);
+
         event.registerSpriteSet(HnSParticleRegistry.BLADE_PARTICLES.get(), HnSGenericParticle.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.NIGHTS_EDGE_PARTICLE.get(), HnSGenericParticle.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.ROD_OF_DISCORD_PARTICLE.get(), HnSGenericParticle.Provider::new);

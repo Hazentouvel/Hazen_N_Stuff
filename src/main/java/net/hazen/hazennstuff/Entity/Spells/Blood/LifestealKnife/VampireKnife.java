@@ -72,6 +72,7 @@ public class VampireKnife extends AbstractMagicProjectile implements GeoEntity {
     public void impactParticles(double x, double y, double z) {
         MagicManager.spawnParticles(this.level, ParticleHelper.BLOOD, x, y, z, 5, .1, .1, .1, .25, true);
     }
+
     @Override
     public float getSpeed() {
         return 1.4f;

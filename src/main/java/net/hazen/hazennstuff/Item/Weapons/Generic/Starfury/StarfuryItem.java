@@ -44,7 +44,7 @@ public class StarfuryItem extends MagicSwordItem implements GeoItem {
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.STARFURY)
                         ),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(HnSSpellRegistries.SHOOTING_STAR, 5)
+                        new SpellDataRegistryHolder(HnSSpellRegistries.SHOOTING_STAR, 3)
                 )
         );
     }

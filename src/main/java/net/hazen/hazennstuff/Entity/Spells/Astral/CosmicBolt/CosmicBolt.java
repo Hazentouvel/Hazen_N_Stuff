@@ -4,6 +4,7 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
+import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleHelper;
 import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
@@ -61,6 +62,10 @@ public class CosmicBolt extends AbstractMagicProjectile implements GeoEntity {
         this.spellLevel = level;
     }
 
+    public void impactParticles(double x, double y, double z) {
+        MagicManager.spawnParticles(this.level, HnSParticleHelper.STAR_IMPACT_PARTICLE, x, y, z, 5, 0.1, 0.1, 0.1, (double)0.25F, true);
+    }
+
     public void trailParticles() {
         float yHeading = -((float)(Mth.atan2(this.getDeltaMovement().z, this.getDeltaMovement().x) * (double)(180F / (float)Math.PI)) + 90.0F);
         float radius = 0.25F;
@@ -85,20 +90,14 @@ public class CosmicBolt extends AbstractMagicProjectile implements GeoEntity {
         }
     }
 
-    public void impactParticles(double x, double y, double z) {
-        MagicManager.spawnParticles(this.level(), HnSParticleHelper.STAR_PARTICLE, x, y, z, 25, 0.0F, 0.0F, 0.0F, 0.18, true);
-    }
-
-
     public float getSpeed() {
-        return 2f;
+        return 1.6f;
     }
 
     @Override
     protected boolean canHitEntity(Entity pTarget) {
         return super.canHitEntity(pTarget) && canHitVictim(pTarget);
     }
-
 
     @Override
     public void tick() {
@@ -199,10 +198,11 @@ public class CosmicBolt extends AbstractMagicProjectile implements GeoEntity {
         } else {
             return Optional.of(HnSSounds.COSMIC_BOLT_EXCELLENT);
         }
+
     }
 
     //ANIMATION
-    private final RawAnimation idle = RawAnimation.begin().thenLoop("animation.thorn_chakram_spell.idle");
+    private final RawAnimation idle = RawAnimation.begin().thenLoop("idle");
 
     private PlayState predicate(AnimationState event) {
         event.getController().setAnimation(idle);

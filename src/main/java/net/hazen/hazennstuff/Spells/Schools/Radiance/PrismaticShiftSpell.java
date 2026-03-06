@@ -162,7 +162,7 @@ public class PrismaticShiftSpell extends AbstractTaggedSpell {
         if (entity instanceof ServerPlayer player && !player.level().isClientSide()) {
             if (hasChaosState) {
 
-                float percentDamage = 0.25F;
+                float percentDamage = 0.3F;
 
                 float maxHealth = entity.getMaxHealth();
                 float damage = maxHealth * percentDamage;
@@ -181,8 +181,7 @@ public class PrismaticShiftSpell extends AbstractTaggedSpell {
                         player.getX(), player.getY(), player.getZ(),
                         SoundEvents.SOUL_ESCAPE,
                         SoundSource.PLAYERS,
-                        1.25f,
-                        1f
+                        1.25f, 1f
                 );
             }
         }

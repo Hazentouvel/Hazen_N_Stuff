@@ -1,0 +1,16 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hazennstuff:item/curios/pendant_of_harmony"
+  },
+  "neoforge_data": {
+  "layers": {
+    "0": {
+      "color": "FFFFFFFF",
+      "block_light": 15,
+      "sky_light": 15,
+      "ambient_occlusion": false
+    }
+  }
+}
+}

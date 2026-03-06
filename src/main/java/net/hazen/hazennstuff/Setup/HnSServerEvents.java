@@ -37,18 +37,24 @@ public class HnSServerEvents {
             if (hasHexedEffect)
             {
                 // Damage
-                float damage = 1.0F;
+                float percentDamage = 0.25F;
+
+                float maxHealth = entity.getMaxHealth();
+                float damage = maxHealth * percentDamage;
+
+                damage = Math.max(1.0F, damage);
+
                 DamageSource damageSource = new DamageSource(
-                        DamageSources.getHolderFromResource(entity,
-                                HnSDamageTypes.CORRUPT_MAGIC
-                        )
+                        DamageSources.getHolderFromResource(entity, HnSDamageTypes.CORRUPT_MAGIC)
                 );
+
                 entity.hurt(damageSource, damage);
 
                 player.level().playSound(
                         null, player.getX(), player.getY(), player.getZ(),
                         HnSSounds.BRIMSTONE_HELLBLAST_IMPACT, SoundSource.PLAYERS, 0.5f, 1f
                 );
+
             }
         }
 

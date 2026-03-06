@@ -8,7 +8,7 @@ import mod.azure.azurelib.common.render.layer.AzAutoGlowingLayer;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.resources.ResourceLocation;
 
-public class GalvanizedSheathItemRenderer extends AzArmorRenderer {
+public class GalvanizedSheathItemRenderer extends AzItemRenderer {
     public static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
             "geo/curios/galvanized_sheath.geo.json"
@@ -21,7 +21,7 @@ public class GalvanizedSheathItemRenderer extends AzArmorRenderer {
 
     public GalvanizedSheathItemRenderer() {
         super(
-                AzArmorRendererConfig.builder(GEO, TEX)
+                AzItemRendererConfig.builder(GEO, TEX)
                         .setAnimatorProvider(GalvanizedSheathAnimator::new)
                         .addRenderLayer(new AzAutoGlowingLayer<>())
                         .build()

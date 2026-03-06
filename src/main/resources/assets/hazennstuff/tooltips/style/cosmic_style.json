@@ -1,0 +1,10 @@
+{
+  "panel": "hazennstuff:cosmic",
+  "frame": "hazennstuff:cosmic",
+  "icon": "hazennstuff:cosmic",
+  "effects": [
+    "hazennstuff:cosmic_icon_particle",
+    "hazennstuff:cosmic_inward",
+    "hazennstuff:cosmic_shimmer"
+  ]
+}

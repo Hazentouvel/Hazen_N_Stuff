@@ -1,7 +1,8 @@
-// 1.21.1	2026-01-29T11:37:39.3021958	Tags for minecraft:item mod id hazennstuff
+// 1.21.1	2026-03-02T12:18:22.5791249	Tags for minecraft:item mod id hazennstuff
 7334472233d29aa1535fac5ef01cbe8a7dbf51bb data/c/tags/item/armors.json
 740053467c0e6401606132b0ce14777e5339d91f data/c/tags/item/bones.json
 9b523c3a03018cf7fd1a8079b41b62136742a9b1 data/c/tags/item/enchantables.json
+bc0fbf26094825cd60ac9937206fa609d2b71a25 data/c/tags/item/foods.json
 7aa24cfa00593b4dbd92d0e19b403da85cb4cda6 data/c/tags/item/gems.json
 c9b72b0f8fc707a84546851029c3a9cef2cb6b32 data/c/tags/item/gems/quartz.json
 689293c1724f58bcc49e08e20b600fab23258396 data/c/tags/item/hidden_from_recipe_viewers.json
@@ -17,13 +18,14 @@ b9954a780f37e2d30b2edd1085646f77332ff93c data/hazennstuff/tags/item/armors/nethe
 0fd9b110e434eb6e16384c3d1604c526e49c8648 data/hazennstuff/tags/item/armors/netherite_battlemage/netherite_battlemage_leggings.json
 9ff38481ca6fc71febe8fd5bd8a3fbb63eed4284 data/hazennstuff/tags/item/armors/pure/pure_boots.json
 6d22b39c0fcb8524406dd7f5e05787109b15f43f data/hazennstuff/tags/item/armors/pure/pure_chestplate.json
-4f4c9e6d6e89ae5dd0f9c085b44d78d7cbafa235 data/hazennstuff/tags/item/armors/pure/pure_helmet.json
+11b7ab12e126d3b3b48545a36814c8b12cc4ee1f data/hazennstuff/tags/item/armors/pure/pure_helmet.json
 4db43ee311acad10b60b666ba9815257d7e5879c data/hazennstuff/tags/item/armors/pure/pure_leggings.json
 38a7d237753eaf46ce98dfeecc17ff3bcdc55158 data/hazennstuff/tags/item/armors/school/school_boots.json
 7e1e6281df5bb02ed088837508fbbed2e598ae42 data/hazennstuff/tags/item/armors/school/school_chestplate.json
 e49c83cf4b911a7304cda0831b3e0ab3af93805f data/hazennstuff/tags/item/armors/school/school_helmet.json
 211446df18033dced90eb51b0e44756cc1310908 data/hazennstuff/tags/item/armors/school/school_leggings.json
 cd8367c2634f001ba8713679900b76621a498cf6 data/hazennstuff/tags/item/cinderous_equipment.json
+a1c9233a7f31d2816e38def670e88f789a3c0006 data/hazennstuff/tags/item/harmonious_equipment.json
 b9b54010575eb78a6b943e2a567e0d4bfcbb51f8 data/hazennstuff/tags/item/ionic_splitter.json
 ed119c962b0d74e03e029acb5af3a12b2c2e1e92 data/hazennstuff/tags/item/lightning_sheath.json
 3a65407953f7484e090e8898b4658df2a5eff741 data/hazennstuff/tags/item/ores/zenalite.json
@@ -38,7 +40,7 @@ a823f3237a2a08d8f4f5d6c9d92a8252a8b6b487 data/minecraft/tags/item/doors.json
 9b523c3a03018cf7fd1a8079b41b62136742a9b1 data/minecraft/tags/item/enchantable/durability.json
 7334472233d29aa1535fac5ef01cbe8a7dbf51bb data/minecraft/tags/item/enchantable/equippable.json
 dcdd35bdcef3b873aacc4a77600d5477bc2375d1 data/minecraft/tags/item/enchantable/foot_armor.json
-2f7a83b815172fe360f54bed5b7836103b99c19d data/minecraft/tags/item/enchantable/head_armor.json
+57ef81577f535740d09bb6b9811b3279250cbac5 data/minecraft/tags/item/enchantable/head_armor.json
 e980b5ccf5b7b1e2b532da4acf6efd141b901261 data/minecraft/tags/item/enchantable/leg_armor.json
 68f33931873211ee1de5bcb19f7714e2082852f4 data/minecraft/tags/item/enchantable/mace.json
 eb246ec29a19a160da18d2e464bfb9abcf33cc72 data/minecraft/tags/item/enchantable/mining.json
@@ -46,7 +48,7 @@ eb246ec29a19a160da18d2e464bfb9abcf33cc72 data/minecraft/tags/item/enchantable/mi
 8997331671aa7cba8a9cb970be783438fe63873e data/minecraft/tags/item/fences.json
 7747a657bf35c413736b2132fc993249218293e2 data/minecraft/tags/item/fence_gates.json
 dcdd35bdcef3b873aacc4a77600d5477bc2375d1 data/minecraft/tags/item/foot_armor.json
-b83c793692c7c0462468aef5caafbe8ce453055c data/minecraft/tags/item/head_armor.json
+215c7928e59e1a69c86cdb2d0c705f71a5ce6c40 data/minecraft/tags/item/head_armor.json
 6edcba37d2555de390d6e7cf4fae15b3ce573dc6 data/minecraft/tags/item/leaves.json
 e980b5ccf5b7b1e2b532da4acf6efd141b901261 data/minecraft/tags/item/leg_armor.json
 2a055035ec9a4f8e66e0865cf2586b8647ce7c71 data/minecraft/tags/item/logs.json

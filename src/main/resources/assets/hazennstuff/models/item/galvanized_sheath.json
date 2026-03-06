@@ -1,94 +1,15 @@
 {
-  "credit": "Made by Hazen",
-  "parent": "builtin/entity",
-  "texture_size": [
-    256,
-    256
-  ],
-  "display": {
-    "thirdperson_righthand": {
-      "rotation": [
-        90,
-        0,
-        0
-      ],
-      "translation": [
-        0,
-        -6,
-        4.5
-      ],
-      "scale": [
-        0.99,
-        0.99,
-        0.99
-      ]
-    },
-    "thirdperson_lefthand": {
-      "rotation": [
-        90,
-        0,
-        0
-      ],
-      "translation": [
-        0,
-        -6,
-        4.5
-      ],
-      "scale": [
-        0.99,
-        0.99,
-        0.99
-      ]
-    },
-    "firstperson_righthand": {
-      "translation": [
-        4,
-        0.5,
-        0
-      ]
-    },
-    "firstperson_lefthand": {
-      "translation": [
-        4,
-        0.5,
-        0
-      ]
-    },
-    "ground": {
-      "rotation": [
-        12.5,
-        0,
-        0
-      ]
-    },
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "hazennstuff:item/galvanized_sheath_handheld"
+  },
+  "perspectives": {
     "gui": {
-      "rotation": [
-        -90,
-        135,
-        90
-      ],
-      "translation": [
-        3.25,
-        3,
-        0
-      ],
-      "scale": [
-        0.75,
-        0.75,
-        0.75
-      ]
+      "parent": "hazennstuff:item/galvanized_sheath_gui"
     },
     "fixed": {
-      "rotation": [
-        -90,
-        -135,
-        -90
-      ],
-      "translation": [
-        -6,
-        2.5,
-        0
-      ]
+      "parent": "hazennstuff:item/galvanized_sheath_fixed"
     }
   }
 }

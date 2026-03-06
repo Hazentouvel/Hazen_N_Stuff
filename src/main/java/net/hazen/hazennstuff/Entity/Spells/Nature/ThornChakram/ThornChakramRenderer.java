@@ -33,5 +33,4 @@ public class ThornChakramRenderer extends GeoEntityRenderer<ThornChakram> {
 
         super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, colour);
     }
-
 }

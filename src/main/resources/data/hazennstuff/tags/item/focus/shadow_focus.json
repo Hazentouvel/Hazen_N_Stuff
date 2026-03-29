@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "hazennstuff:shadow_scale"
+    "hazennstuff:shadow_scale",
+    "hazennstuff:nightmare_fuel"
   ]
 }

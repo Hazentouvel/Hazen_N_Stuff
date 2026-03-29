@@ -8,5 +8,5 @@
       "minecraft:entities/pillager"
     }
   ],
-  "key": "hazennstuff:entities/additional_illager_loot"
+  "key": "hazennstuff:entities/additional_loot/additional_illager_loot"
 }

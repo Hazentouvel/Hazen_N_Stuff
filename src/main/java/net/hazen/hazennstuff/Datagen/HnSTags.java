@@ -6,8 +6,10 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.block.Block;
@@ -62,7 +64,6 @@ public class HnSTags {
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/netherite_battlemage/netherite_battlemage_boots").toString()));
 
 
-
     public static final TagKey<Item> PURE_HELMET = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure/pure_helmet").toString()));
     public static final TagKey<Item> PURE_CHESTPLATE = ItemTags
@@ -101,6 +102,13 @@ public class HnSTags {
     public static final TagKey<Item> LIGHTNING_SHEATH = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "lightning_sheath").toString()));
 
+
+    /*
+    ***
+     */
+
+    public static final TagKey<EntityType<?>> ASTRAL_CONSTRUCT = TagKey.create(Registries.ENTITY_TYPE,
+            ResourceLocation.fromNamespaceAndPath("hazennstuff", "astral_constuct"));
 
     public static class Blocks {
 

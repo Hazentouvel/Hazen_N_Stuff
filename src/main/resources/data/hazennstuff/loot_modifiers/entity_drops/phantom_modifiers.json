@@ -8,5 +8,5 @@
       "minecraft:entities/phantom"
     }
   ],
-  "key": "hazennstuff:entities/additional_phantom_loot"
+  "key": "hazennstuff:entities/additional_loot/additional_phantom_loot"
 }

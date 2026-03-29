@@ -8,5 +8,5 @@
       "minecraft:entities/enderman"
     }
   ],
-  "key": "hazennstuff:entities/additional_endermen_loot"
+  "key": "hazennstuff:entities/additional_loot/additional_endermen_loot"
 }

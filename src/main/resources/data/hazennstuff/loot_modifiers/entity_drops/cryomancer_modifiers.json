@@ -8,5 +8,5 @@
       "irons_spellbooks:entities/cryomancer"
     }
   ],
-  "key": "hazennstuff:entities/additional_cryomancer_loot"
+  "key": "hazennstuff:entities/additional_loot/additional_cryomancer_loot"
 }

@@ -194,6 +194,32 @@ public class HnSEffects {
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
+
+
+    public static final DeferredHolder<MobEffect, MobEffect> MOONKISSED = MOB_EFFECTS.register("moonkissed", () -> new MoonkissedEffect(MobEffectCategory.BENEFICIAL, 3311322)
+            .addAttributeModifier(Attributes.SUBMERGED_MINING_SPEED,
+                    HazenNStuff.id("moonkissed"),
+                    MoonkissedEffect.SUBMERGED_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+
+            .addAttributeModifier(Attributes.WATER_MOVEMENT_EFFICIENCY,
+                    HazenNStuff.id("moonkissed"),
+                    MoonkissedEffect.SUBMERGED_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+
+
+
+            .addAttributeModifier(HnSAttributeRegistry.COSMIC_SPELL_POWER,
+                    HazenNStuff.id("moonkissed"),
+                    MoonkissedEffect.SPELL_POWER_PER_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+
+            .addAttributeModifier(ASAttributeRegistry.HYDRO_MAGIC_POWER,
+                    HazenNStuff.id("moonkissed"),
+                    MoonkissedEffect.SPELL_POWER_PER_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
     public static final DeferredHolder<MobEffect, MobEffect> INFESTED = MOB_EFFECTS.register("infested",
             () -> new InfestedEffect(MobEffectCategory.HARMFUL, 0x2E2EFF));
 

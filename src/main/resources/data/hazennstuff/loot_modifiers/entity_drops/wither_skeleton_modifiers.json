@@ -8,5 +8,5 @@
       "minecraft:entities/wither_skeleton"
     }
   ],
-  "key": "hazennstuff:entities/additional_wither_skeleton_loot"
+  "key": "hazennstuff:entities/additional_loot/additional_wither_skeleton_loot"
 }

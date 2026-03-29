@@ -13,12 +13,12 @@ public class PyromancerBruteArmorModel extends DefaultedEntityGeoModel<Pyromance
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(PyromancerBruteArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/thunder_prowler_armor.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/pyromancer_brute_armor.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(PyromancerBruteArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/thunder_prowler_armor.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/pyromancer_brute_armor.png");
     }
 
     @Override

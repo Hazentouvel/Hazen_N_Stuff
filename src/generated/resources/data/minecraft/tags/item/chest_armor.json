@@ -1,5 +1,8 @@
 {
   "values": [
+    "#hazennstuff:armors/school/school_chestplate",
+    "#hazennstuff:armors/netherite_battlemage/netherite_battlemage_chestplate",
+    "#hazennstuff:armors/pure/pure_chestplate",
     "hazennstuff:calamitas_chestplate",
     "hazennstuff:blazeborne_chestplate",
     "hazennstuff:geckolib_blazeborne_chestplate",

@@ -16,6 +16,15 @@ public class HnSCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, HazenNStuff.MOD_ID);
 
+    public static final Supplier<CreativeModeTab> HAZEN_N_STUFF_MOBS = CREATIVE_MODE_TAB.register("hazennstuff_mobs",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItemRegistry.VOID_WANDERER_EGG.get()))
+                    .title(Component.translatable("creativetab.hazennstuff.hazennstuff_mobs"))
+                    .displayItems((itemDisplayParameters, output) -> {
+
+                        output.accept(HnSItemRegistry.VOID_WANDERER_EGG);
+
+                    }).build());
+
     public static final Supplier<CreativeModeTab> HAZEN_N_STUFF_MATERIALS = CREATIVE_MODE_TAB.register("hazennstuff_materials",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItemRegistry.STARDUST.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "hazennstuff_blocks"))
@@ -62,6 +71,7 @@ public class HnSCreativeModeTabs {
                         //Focus Materials
                         output.accept(HnSItemRegistry.GLOWING_MUSHROOM);
                         output.accept(HnSItemRegistry.SHADOW_SCALE);
+                        output.accept(HnSItemRegistry.NIGHTMARE_FUEL);
 
                         //Misc
                         output.accept(HnSBlocks.FIREBLOSSOM);

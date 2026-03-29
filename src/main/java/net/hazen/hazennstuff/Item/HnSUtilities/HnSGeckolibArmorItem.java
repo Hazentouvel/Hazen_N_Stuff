@@ -61,15 +61,12 @@ public class HnSGeckolibArmorItem extends ArmorItem implements GeoItem {
         });
     }
 
-    // These two methods are used for giving additional attributes to armor sets. Feel free to edit these!
-    public static AttributeContainer[] schoolAttributes(Holder<Attribute> school, int mana, float schoolSpellPower, float spellPower)
-    {
+    public static AttributeContainer[] schoolTierMulti(Holder<Attribute> school1, Holder<Attribute> school2) {
         return new AttributeContainer[]{
-                new AttributeContainer(AttributeRegistry.MAX_MANA, mana, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(school, schoolSpellPower, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, spellPower, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-        };
-
+                new AttributeContainer(school1, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(school2, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.MAX_MANA, (double)125.0F, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)};
     }
 
     public static AttributeContainer[] pureTier(Holder<Attribute> school)

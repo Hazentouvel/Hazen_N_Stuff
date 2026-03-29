@@ -45,8 +45,8 @@ public class CallForthTerraprismaSpell extends AbstractSpell {
 
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         return List.of(
-                Component.translatable("ui.irons_spellbooks.hp", new Object[]{Utils.stringTruncation((double)this.getTerraprismaHealth(spellLevel, caster), 1)}),
-                Component.translatable("ui.irons_spellbooks.damage", new Object[]{Utils.stringTruncation((double)this.getTerraprismaDamage(spellLevel, caster), 1)})
+                Component.translatable("ui.irons_spellbooks.hp", new Object[]{Utils.stringTruncation((double)this.getHealthBonus(spellLevel, caster), 1)}),
+                Component.translatable("ui.irons_spellbooks.damage", new Object[]{Utils.stringTruncation((double)this.getDamageBonus(spellLevel, caster), 1)})
         );
     }
 
@@ -109,15 +109,14 @@ public class CallForthTerraprismaSpell extends AbstractSpell {
 
             for (int i = 0; i < summonCount; i++) {
                 SummonedTerraprisma summonedTerraprisma = new SummonedTerraprisma(world, entity);
-                summonedTerraprisma.setPos(entity.position());
-                summonedTerraprisma.getAttributes().getInstance(Attributes.ATTACK_DAMAGE).setBaseValue((double)this.getTerraprismaDamage(spellLevel, entity));
-                summonedTerraprisma.getAttributes().getInstance(Attributes.MAX_HEALTH).setBaseValue((double)this.getTerraprismaHealth(spellLevel, entity));
+                summonedTerraprisma.getAttributes().getInstance(Attributes.ATTACK_DAMAGE).setBaseValue(this.getDamageBonus(spellLevel, entity));
+                summonedTerraprisma.getAttributes().getInstance(Attributes.MAX_HEALTH).setBaseValue(this.getHealthBonus(spellLevel, entity));
                 summonedTerraprisma.setHealth(summonedTerraprisma.getMaxHealth());
-                SummonedTerraprisma creature = (SummonedTerraprisma)((SpellSummonEvent)NeoForge.EVENT_BUS.post(new SpellSummonEvent(entity, summonedTerraprisma, this.spellId, spellLevel))).getCreature();
+                summonedTerraprisma.setPos(entity.position());
+                SummonedTerraprisma creature = (SummonedTerraprisma)(NeoForge.EVENT_BUS.post(new SpellSummonEvent(entity, summonedTerraprisma, this.spellId, spellLevel))).getCreature();
                 world.addFreshEntity(creature);
                 SummonManager.initSummon(entity, creature, summonTime, summonedEntitiesCastData);
             }
-
             RecastInstance recastInstance = new RecastInstance(this.getSpellId(), spellLevel, this.getRecastCount(spellLevel, entity), summonTime, castSource, summonedEntitiesCastData);
             recasts.addRecast(recastInstance, playerMagicData);
         }
@@ -125,11 +124,11 @@ public class CallForthTerraprismaSpell extends AbstractSpell {
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
 
-    private float getTerraprismaHealth(int spellLevel, LivingEntity caster) {
-        return (float)(20 + spellLevel * 4) * this.getEntityPowerMultiplier(caster);
+    public double getHealthBonus(int spellLevel, LivingEntity caster) {
+        return (double)(this.getSpellPower(spellLevel, caster) - 1.0F) * 0.1;
     }
 
-    private float getTerraprismaDamage(int spellLevel, LivingEntity caster) {
-        return this.getSpellPower(spellLevel, caster);
+    public double getDamageBonus(int spellLevel, LivingEntity caster) {
+        return (double)(this.getSpellPower(spellLevel, caster) - 1.0F) * 0.05;
     }
 }

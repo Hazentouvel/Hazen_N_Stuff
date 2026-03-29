@@ -8,5 +8,5 @@
       "minecraft:entities/evoker"
     }
   ],
-  "key": "hazennstuff:entities/additional_evoker_loot"
+  "key": "hazennstuff:entities/additional_loot/additional_evoker_loot"
 }

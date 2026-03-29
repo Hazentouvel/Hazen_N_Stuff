@@ -99,6 +99,7 @@
   "item.hazennstuff.glowing_mushroom.guide": "Combine glow ink sacs with mushrooms to make glowing mushrooms.",
   "item.hazennstuff.shadow_scale": "Shadow Scale",
   "item.hazennstuff.shadow_scale.guide": "Kill Phantoms to obtain Shadow Scales.",
+  "item.hazennstuff.nightmare_fuel": "Nightmare Fuel",
 
   "item.hazennstuff.cloth_of_the_flamebearer": "Cloth of the Flamebearer",
   "item.hazennstuff.cloth_of_the_flamebearer.guide": "Some echos still hold some remains of the flamebearer...",
@@ -106,9 +107,11 @@
   "item.hazennstuff.lemon.guide": "When life gives you lemons...",
   "item.hazennstuff.divine_lemon": "Divine Lemon",
   "item.hazennstuff.divine_lemon.guide": "Delectable!",
-  "item.hazennstuff.friend_ice_spider_egg": "Fried Ice Spider Egg",
-  "item.hazennstuff.friend_ice_spider_egg.guide": "Mmm, I ate the baby.",
+  "item.hazennstuff.fried_ice_spider_egg": "Fried Ice Spider Egg",
+  "item.hazennstuff.fried_ice_spider_egg.guide": "Mmm, I ate the baby.",
 
+
+  "item.hazennstuff.void_wanderer_egg": "Void Wanderer Egg",
 
   "item.hazennstuff.radiance_upgrade_orb": "Radiance Upgrade Orb",
   "item.hazennstuff.shadow_upgrade_orb": "Shadow Upgrade Orb",
@@ -970,6 +973,7 @@
 
   "spell.hazennstuff.nights_edge_strike.guide": "A Terraria Reference ''Strike your foes with the strike of the Night's Edge.''",
   "spell.hazennstuff.umbrashift_barrage.guide": "Teleport and fire daggers on your victims",
+  "spell.hazennstuff.shadow_reaver.guide": "The Shadow Reaver seeks to claim its victim and corrupt their spellcasting...",
 
   "spell.hazennstuff.shooting_star.guide": "A Terraria Reference. Fire 2 stars down on your opponent.",
   "spell.hazennstuff.cosmic_bolt.guide": "Fire a cosmic bolt that homes in on more enemies the higher the level.",
@@ -1022,6 +1026,7 @@
   "creativetab.hazennstuff.hazennstuff_blocks": "Hazen 'n Stuff Blocks",
   "creativetab.hazennstuff.hazennstuff_utility": "Hazen 'n Stuff Utility",
   "creativetab.hazennstuff.hazennstuff_equipment": "Hazen 'n Stuff Equipment",
+  "creativetab.hazennstuff.hazennstuff_mobs": "Hazen 'n Stuff Mobs",
 
 
   "school.hazennstuff.radiance": "Radiance",

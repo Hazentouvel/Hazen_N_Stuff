@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.Registries;
 
 import io.redspace.ironsspellbooks.item.UpgradeOrbItem;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
+import io.redspace.ironsspellbooks.registries.EntityRegistry;
 import io.redspace.ironsspellbooks.render.CinderousRarity;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorItem;
@@ -12,9 +13,9 @@ import net.hazen.hazennstuff.Item.Armor.AzureLib.Blazeborne.BlazeborneArmorItem;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.CreakingSorcerer.CreakingSorcererArmorItem;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.DarkRitualTemplar.DarkRitualTemplarArmorItem;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.EnderDragon.EnderDragonArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageCrownedArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageHelmetArmorItem;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.Fireblossom.PureTier.Legacy.FireblossomBattlemageArmorItemLegacy;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.Fireblossom.PureTier.Legacy.FireblossomBattlemageCrownedArmorItemLegacy;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.Fireblossom.PureTier.Legacy.FireblossomBattlemageHelmetArmorItemLegacy;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.GabrielULTRAKILL.GabrielArmorItem;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.GabrielULTRAKILL.GabrielElytraArmorItem;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.Infestation.InfestationArmorItem;
@@ -48,9 +49,9 @@ import net.hazen.hazennstuff.Item.Armor.Geckolib.CrystalArachnid.CrystalArachnid
 import net.hazen.hazennstuff.Item.Armor.Geckolib.DarkRitualTemplar.GeckolibDarkRitualTemplarArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Geckolib.DreadsteelKnight.DreadsteelKnightArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Geckolib.EnderDragon.GeckolibEnderDragonArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.FireblossomBattlemage.GeckolibFireblossomBattlemageArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.FireblossomBattlemage.GeckolibFireblossomBattlemageCrownedArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.FireblossomBattlemage.GeckolibFireblossomBattlemageHelmetArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Geckolib.Fireblossom.PureTier.Legacy.GeckolibFireblossomBattlemageArmorItemLegacy;
+import net.hazen.hazennstuff.Item.Armor.Geckolib.Fireblossom.PureTier.Legacy.GeckolibFireblossomBattlemageCrownedArmorItemLegacy;
+import net.hazen.hazennstuff.Item.Armor.Geckolib.Fireblossom.PureTier.Legacy.GeckolibFireblossomBattlemageHelmetArmorItemLegacy;
 import net.hazen.hazennstuff.Item.Armor.Geckolib.FleshMass.FleshMassArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Geckolib.Frieren.FrierenArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Geckolib.FrostbiteHunter.FrostbiteHunterArmorItem;
@@ -192,6 +193,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -200,6 +202,19 @@ import java.util.Collection;
 
 public class HnSItemRegistry {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(HazenNStuff.MOD_ID);
+
+    /*
+    *** [Spawn Eggs] *********************************************************************
+     */
+
+    public static final DeferredItem<DeferredSpawnEggItem> VOID_WANDERER_EGG = ITEMS.register("void_wanderer_egg",
+            () -> new DeferredSpawnEggItem(HnSEntityRegistry.VOID_WANDERER,
+                    4074272,
+                    5331255,
+                    ItemPropertiesHelper.material()
+                            .stacksTo(64)
+            )
+    );
 
     /*
     *** [Blocks] **************************************************************************
@@ -392,7 +407,7 @@ public class HnSItemRegistry {
     public static final DeferredItem<Item> DEUS_ESSENCE = ITEMS.register("deus_essence",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.EPIC)
+                    .rarity(Rarity.RARE)
                     .fireResistant()
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
     );
@@ -409,14 +424,14 @@ public class HnSItemRegistry {
     public static final DeferredItem<Item> RUNESTONE_FRAGMENTS = ITEMS.register("runestone_fragments",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.UNCOMMON))
+                    .rarity(Rarity.COMMON))
     );
 
     //Permafrost Fragment
     public static final DeferredItem<Item> PERMAFROST_FRAGMENT = ITEMS.register("permafrost_fragment",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.RARE))
+                    .rarity(Rarity.UNCOMMON))
     );
 
     //Charred Bones
@@ -435,14 +450,22 @@ public class HnSItemRegistry {
     public static final DeferredItem<Item> GLOWING_MUSHROOM = ITEMS.register("glowing_mushroom",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.UNCOMMON))
+                    .rarity(Rarity.COMMON))
     );
 
     //Shadow Scale
     public static final DeferredItem<Item> SHADOW_SCALE = ITEMS.register("shadow_scale",
             () -> new Item(new Item
                     .Properties()
-                    .rarity(Rarity.RARE))
+                    .rarity(Rarity.COMMON))
+
+    );
+
+    //Shadow Scale
+    public static final DeferredItem<Item> NIGHTMARE_FUEL = ITEMS.register("nightmare_fuel",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(Rarity.COMMON))
 
     );
 
@@ -2743,35 +2766,35 @@ public class HnSItemRegistry {
 
     //Fireblossom
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_CROWN = ITEMS.register("fireblossom_crown", () -> new FireblossomBattlemageCrownedArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_CROWN = ITEMS.register("fireblossom_crown", () -> new FireblossomBattlemageCrownedArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
             .rarity(HnSRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("fireblossom_helmet", () -> new FireblossomBattlemageHelmetArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("fireblossom_helmet", () -> new FireblossomBattlemageHelmetArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
             .rarity(HnSRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("fireblossom_chestplate", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("fireblossom_chestplate", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
             .rarity(HnSRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("fireblossom_leggings", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("fireblossom_leggings", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
             .rarity(HnSRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("fireblossom_boots", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("fireblossom_boots", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
             .rarity(HnSRarities.FIRE_RARITY.getValue())
             .fireResistant()
@@ -2784,30 +2807,30 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN = ITEMS.register("geckolib_fireblossom_crown", () -> new GeckolibFireblossomBattlemageCrownedArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN = ITEMS.register("geckolib_fireblossom_crown", () -> new GeckolibFireblossomBattlemageCrownedArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
             .rarity(HnSRarities.FIRE_RARITY.getValue())
             .fireResistant()
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("geckolib_fireblossom_helmet", () -> new GeckolibFireblossomBattlemageHelmetArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("geckolib_fireblossom_helmet", () -> new GeckolibFireblossomBattlemageHelmetArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
             .rarity(HnSRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("geckolib_fireblossom_chestplate", () -> new GeckolibFireblossomBattlemageArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("geckolib_fireblossom_chestplate", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
             .rarity(HnSRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("geckolib_fireblossom_leggings", () -> new GeckolibFireblossomBattlemageArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("geckolib_fireblossom_leggings", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
             .rarity(HnSRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("geckolib_fireblossom_boots", () -> new GeckolibFireblossomBattlemageArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("geckolib_fireblossom_boots", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
             .rarity(HnSRarities.FIRE_RARITY.getValue())
             .fireResistant()

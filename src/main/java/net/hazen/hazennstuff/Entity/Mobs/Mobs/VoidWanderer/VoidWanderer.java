@@ -1,19 +1,19 @@
 package net.hazen.hazennstuff.Entity.Mobs.Mobs.VoidWanderer;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SpellData;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.entity.mobs.IAnimatedAttacker;
+import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.AbstractSpellCastingMob;
 import io.redspace.ironsspellbooks.entity.mobs.goals.*;
 import io.redspace.ironsspellbooks.entity.mobs.goals.melee.AttackAnimationData;
 import io.redspace.ironsspellbooks.entity.mobs.wizards.fire_boss.NotIdioticNavigation;
 import java.util.List;
 
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
-import net.acetheeldritchking.aces_spell_utils.entity.mobs.UniqueAbstractSpellCastingMob;
 import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
+import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
@@ -38,6 +38,7 @@ import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.animation.AnimationController.State;
@@ -46,7 +47,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import javax.annotation.Nullable;
 
-public class VoidWanderer extends UniqueAbstractSpellCastingMob implements Enemy, IAnimatedAttacker {
+public class VoidWanderer extends AbstractSpellCastingMob implements Enemy, IAnimatedAttacker {
     private final AnimatableInstanceCache cache;
     RawAnimation animationToPlay = null;
     private SpellData castingSpell;
@@ -58,7 +59,7 @@ public class VoidWanderer extends UniqueAbstractSpellCastingMob implements Enemy
     private int nextHeightOffsetChangeTick;
     private float allowedHeightOffset = 0.25F;
 
-    public VoidWanderer(EntityType<? extends UniqueAbstractSpellCastingMob> entityType, Level level) {
+    public VoidWanderer(EntityType<? extends AbstractSpellCastingMob> entityType, Level level) {
         super(entityType, level);
         this.cache = GeckoLibUtil.createInstanceCache(this);
         this.setPathfindingMalus(PathType.WATER, -1.0F);
@@ -69,9 +70,9 @@ public class VoidWanderer extends UniqueAbstractSpellCastingMob implements Enemy
         this.animationToPlay = null;
 
         // make attack controller check more often so animations start quickly
-        this.attackAnimationController = new AnimationController(this, "attack_controller", 0, this::attackPredicate);
-        this.contCastAnimationController = new AnimationController(this, "continuous_cast_controller", 0, this::continuousCastPredicate);
-        this.animationController = new AnimationController(this, "controller", 0, this::predicate);
+        this.attackAnimationController = new AnimationController<>(this, "attack_controller", 5, this::attackPredicate);
+        this.contCastAnimationController = new AnimationController<>(this, "continuous_cast_controller", 5, this::continuousCastPredicate);
+        this.animationController = new AnimationController<>(this, "controller", 2, this::predicate);
 
         this.xpReward = 0;
         this.lookControl = this.createLookControl();
@@ -117,17 +118,20 @@ public class VoidWanderer extends UniqueAbstractSpellCastingMob implements Enemy
         this.goalSelector.addGoal(2, new SpellBarrageGoal(this,
                 HnSSpellRegistries.EVERCOMET_BARRAGE.get(), 3, 5, 250, 350, 1)
         );
-        this.goalSelector.addGoal(4, new VoidWandererAttackGoal(
+        this.goalSelector.addGoal(3, new VoidWandererAttackGoal(
                 this,
                 1.0F,
                 10,
                 30)
                 .setSpells(
                         List.of(
-                                HnSSpellRegistries.COSMIC_BOLT.get()
+                                HnSSpellRegistries.COSMIC_BOLT.get(),
+                                HnSSpellRegistries.COSMIC_BOLT.get(),
+                                HnSSpellRegistries.SHOOTING_STAR.get(),
+                                HnSSpellRegistries.SHOOTING_STAR.get()
                         ),
                         List.of(
-                                HnSSpellRegistries.SHOOTING_STAR.get()
+
                         ),
                         List.of(
 
@@ -183,8 +187,12 @@ public class VoidWanderer extends UniqueAbstractSpellCastingMob implements Enemy
                 ;
     }
 
+    public boolean isAlliedTo(Entity pEntity) {
+        return super.isAlliedTo(pEntity) || pEntity.getType().is(HnSTags.ASTRAL_CONSTRUCT);
+    }
+
     @Override
-    public SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pReason, @Nullable SpawnGroupData pSpawnData) {
+    public SpawnGroupData finalizeSpawn(@NotNull ServerLevelAccessor pLevel, @NotNull DifficultyInstance pDifficulty, @NotNull MobSpawnType pReason, @Nullable SpawnGroupData pSpawnData) {
         RandomSource randomsource = Utils.random;
         this.populateDefaultEquipmentSlots(randomsource, pDifficulty);
         return super.finalizeSpawn(pLevel, pDifficulty, pReason, pSpawnData);
@@ -301,5 +309,8 @@ public class VoidWanderer extends UniqueAbstractSpellCastingMob implements Enemy
         return this.cache;
     }
 
-
+    @Override
+    protected boolean shouldDespawnInPeaceful() {
+        return true;
+    }
 }

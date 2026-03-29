@@ -120,7 +120,6 @@ public class HnSBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
 
-
         ;
 
         tag(HnSTags.Blocks.NEEDS_MITRHIL_TOOL)

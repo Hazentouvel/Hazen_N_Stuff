@@ -16,8 +16,8 @@ import net.hazen.hazennstuff.Item.Armor.AzureLib.Blazeborne.BlazeborneArmorRende
 import net.hazen.hazennstuff.Item.Armor.AzureLib.CreakingSorcerer.CreakingSorcererArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.DarkRitualTemplar.DarkRitualTemplarArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.EnderDragon.EnderDragonArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageCrownedArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.FireblossomBattlemage.FireblossomBattlemageHelmetArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.Fireblossom.PureTier.Legacy.FireblossomBattlemageCrownedArmorRendererLegacy;
+import net.hazen.hazennstuff.Item.Armor.AzureLib.Fireblossom.PureTier.Legacy.FireblossomBattlemageHelmetArmorRendererLegacy;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.GabrielULTRAKILL.GabrielArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.Infestation.InfestationArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.AzureLib.LemonGod.LemonGodArmorRenderer;
@@ -222,13 +222,13 @@ public class HazenNStuff
                     HnSItemRegistry.ENDER_DRAGON_BOOTS.get());
 
             // Fireblossom Helmet
-            AzArmorRendererRegistry.register(FireblossomBattlemageHelmetArmorRenderer::new,
+            AzArmorRendererRegistry.register(FireblossomBattlemageHelmetArmorRendererLegacy::new,
                     HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
                     HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
                     HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
                     HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
             // Fireblossom Crown
-            AzArmorRendererRegistry.register(FireblossomBattlemageCrownedArmorRenderer::new,
+            AzArmorRendererRegistry.register(FireblossomBattlemageCrownedArmorRendererLegacy::new,
                     HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get());
 
             // Seraph

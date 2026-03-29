@@ -1,7 +1,5 @@
-// 1.21.1	2026-03-02T12:18:22.5791249	Tags for minecraft:item mod id hazennstuff
-7334472233d29aa1535fac5ef01cbe8a7dbf51bb data/c/tags/item/armors.json
+// 1.21.1	2026-03-19T01:30:19.4706451	Tags for minecraft:item mod id hazennstuff
 740053467c0e6401606132b0ce14777e5339d91f data/c/tags/item/bones.json
-9b523c3a03018cf7fd1a8079b41b62136742a9b1 data/c/tags/item/enchantables.json
 bc0fbf26094825cd60ac9937206fa609d2b71a25 data/c/tags/item/foods.json
 7aa24cfa00593b4dbd92d0e19b403da85cb4cda6 data/c/tags/item/gems.json
 c9b72b0f8fc707a84546851029c3a9cef2cb6b32 data/c/tags/item/gems/quartz.json
@@ -33,24 +31,17 @@ ed119c962b0d74e03e029acb5af3a12b2c2e1e92 data/hazennstuff/tags/item/lightning_sh
 f8c3ec5560a2b88a23e8885e1a9559c75cdf8613 data/irons_spellbooks/tags/item/inscribed_rune.json
 05d638c654a728c24450eadca4dee57481cc0610 data/irons_spellbooks/tags/item/upgrade_whitelist.json
 f551afd2077ca15213570bee683ca4bd6e1179c0 data/minecraft/tags/item/axes.json
-831a541cf072e545f4b25b8d16f6a3da111625cf data/minecraft/tags/item/chest_armor.json
+afd02e54050669a5f0f892d574949f6bee30543b data/minecraft/tags/item/chest_armor.json
 a823f3237a2a08d8f4f5d6c9d92a8252a8b6b487 data/minecraft/tags/item/doors.json
-7334472233d29aa1535fac5ef01cbe8a7dbf51bb data/minecraft/tags/item/enchantable/armor.json
-831a541cf072e545f4b25b8d16f6a3da111625cf data/minecraft/tags/item/enchantable/chest_armor.json
-9b523c3a03018cf7fd1a8079b41b62136742a9b1 data/minecraft/tags/item/enchantable/durability.json
-7334472233d29aa1535fac5ef01cbe8a7dbf51bb data/minecraft/tags/item/enchantable/equippable.json
-dcdd35bdcef3b873aacc4a77600d5477bc2375d1 data/minecraft/tags/item/enchantable/foot_armor.json
-57ef81577f535740d09bb6b9811b3279250cbac5 data/minecraft/tags/item/enchantable/head_armor.json
-e980b5ccf5b7b1e2b532da4acf6efd141b901261 data/minecraft/tags/item/enchantable/leg_armor.json
 68f33931873211ee1de5bcb19f7714e2082852f4 data/minecraft/tags/item/enchantable/mace.json
 eb246ec29a19a160da18d2e464bfb9abcf33cc72 data/minecraft/tags/item/enchantable/mining.json
 1e9714f43aa52437d7bbb4dcfee6366556749a66 data/minecraft/tags/item/enchantable/sharp_weapon.json
 8997331671aa7cba8a9cb970be783438fe63873e data/minecraft/tags/item/fences.json
 7747a657bf35c413736b2132fc993249218293e2 data/minecraft/tags/item/fence_gates.json
-dcdd35bdcef3b873aacc4a77600d5477bc2375d1 data/minecraft/tags/item/foot_armor.json
-215c7928e59e1a69c86cdb2d0c705f71a5ce6c40 data/minecraft/tags/item/head_armor.json
+ae61f7207589121f24ce79e14f2810c91c923975 data/minecraft/tags/item/foot_armor.json
+e5c0f908a853595042fe63ecf55f4ff586b9f095 data/minecraft/tags/item/head_armor.json
 6edcba37d2555de390d6e7cf4fae15b3ce573dc6 data/minecraft/tags/item/leaves.json
-e980b5ccf5b7b1e2b532da4acf6efd141b901261 data/minecraft/tags/item/leg_armor.json
+9c76cb6db74d96f6f9db3d5eb5c16f0b32a94e2a data/minecraft/tags/item/leg_armor.json
 2a055035ec9a4f8e66e0865cf2586b8647ce7c71 data/minecraft/tags/item/logs.json
 771267b892a1213842d55bce5ac3db17984a6254 data/minecraft/tags/item/logs_that_burn.json
 eb246ec29a19a160da18d2e464bfb9abcf33cc72 data/minecraft/tags/item/pickaxes.json

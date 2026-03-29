@@ -162,7 +162,7 @@ dependencies {
     implementation "curse.maven:placebo-283644:6337156"
     compileOnly "curse.maven:apotheosis-${apotheosis_version}"
     //Ace Utils
-    implementation "curse.maven:ace_utils-1299492:7465123"
+    implementation "curse.maven:ace_utils-1299492:7782715"
     // Photon
     //implementation "curse.maven:photon-871522:6911487"
     //implementation "curse.maven:ldlib-626676:6911394"
@@ -193,8 +193,8 @@ dependencies {
      */
 
     // Obscuria's Tooltips
-    localRuntime "curse.maven:obscurias_tooltips-715660:7315944"
-    localRuntime "curse.maven:fragmentum-1123977:7315935"
+    //localRuntime "curse.maven:obscurias_tooltips-715660:7315944"
+    //localRuntime "curse.maven:fragmentum-1123977:7315935"
 
     //Better Combat
     localRuntime "curse.maven:better-combat-by-daedelus-639842:7348161"

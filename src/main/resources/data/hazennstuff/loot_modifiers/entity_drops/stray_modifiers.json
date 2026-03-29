@@ -8,5 +8,5 @@
       "minecraft:entities/stray"
     }
   ],
-  "key": "hazennstuff:entities/additional_stray_loot"
+  "key": "hazennstuff:entities/additional_loot/additional_stray_loot"
 }

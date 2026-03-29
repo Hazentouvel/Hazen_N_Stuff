@@ -39,13 +39,13 @@ public class HnSBiomeModifiers {
         ));
 
         context.register(ADD_ZENALITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.END_BARRENS), biomes.getOrThrow(Biomes.END_MIDLANDS), biomes.getOrThrow(Biomes.END_HIGHLANDS)),
+                biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeatures.getOrThrow(HnSPlacedFeatures.ZENALITE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
 
         context.register(ADD_CHLOROPHYTE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.JUNGLE), biomes.getOrThrow(Biomes.BAMBOO_JUNGLE)),
+                biomes.getOrThrow(BiomeTags.IS_JUNGLE),
                 HolderSet.direct(placedFeatures.getOrThrow(HnSPlacedFeatures.CHLOROPHYTE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));

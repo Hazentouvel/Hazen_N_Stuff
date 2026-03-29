@@ -8,5 +8,5 @@
       "minecraft:entities/bogged"
     }
   ],
-  "key": "hazennstuff:entities/additional_bogged_loot"
+  "key": "hazennstuff:entities/additional_loot/additional_bogged_loot"
 }

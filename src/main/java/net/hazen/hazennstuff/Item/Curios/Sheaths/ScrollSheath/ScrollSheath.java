@@ -67,6 +67,12 @@ public class ScrollSheath extends SheathCurioItem {
                         }
                         livingVictim.addEffect(new MobEffectInstance(HnSEffects.MANA_SICKNESS, 300, 0));
 
+                        if (livingVictim.hasEffect(HnSEffects.HEXED))
+                        {
+                            event.setAmount(getBaseDamage * 1.5F);
+                        }
+                        livingVictim.addEffect(new MobEffectInstance(HnSEffects.HEXED, 100, 0));
+
                         var magicData = io.redspace.ironsspellbooks.api.magic.MagicData.getPlayerMagicData(player);
                         magicData.getPlayerCooldowns().clearCooldowns();
                         magicData.getPlayerCooldowns().syncToPlayer(player);

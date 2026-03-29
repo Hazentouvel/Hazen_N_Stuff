@@ -2522,7 +2522,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/iron431/iron431_boots"));
 
 
-        //Arbitrium Armor
+        // Sacred Robes
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
                         Ingredient.of(HnSTags.PURE_HELMET),

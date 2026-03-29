@@ -6,6 +6,7 @@ import net.hazen.hazennstuff.Particle.LeafParticle.LeafParticleOptions;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSLash.IonicSlashOptions;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NatureSlash.NatureSlashOptions;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrikeOptions;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.ScorchingSlash.ScorchingSlashOptions;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.Registries;
@@ -88,6 +89,18 @@ public class HnSParticleRegistry {
 
                 public StreamCodec<? super RegistryFriendlyByteBuf, IonicSlashOptions> streamCodec() {
                     return IonicSlashOptions.STREAM_CODEC;
+                }
+            });
+
+
+    public static final Supplier<ParticleType<ScorchingSlashOptions>> SCORCHING_SLASH =
+            PARTICLE_TYPES.register("scorching_slash_particle", () -> new ParticleType<ScorchingSlashOptions>(true) {
+                public MapCodec<ScorchingSlashOptions> codec() {
+                    return ScorchingSlashOptions.MAP_CODEC;
+                }
+
+                public StreamCodec<? super RegistryFriendlyByteBuf, ScorchingSlashOptions> streamCodec() {
+                    return ScorchingSlashOptions.STREAM_CODEC;
                 }
             });
 

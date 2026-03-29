@@ -8,5 +8,5 @@
       "minecraft:entities/cave_spider"
     }
   ],
-  "key": "hazennstuff:entities/additional_spider_loot"
+  "key": "hazennstuff:entities/additional_loot/additional_spider_loot"
 }

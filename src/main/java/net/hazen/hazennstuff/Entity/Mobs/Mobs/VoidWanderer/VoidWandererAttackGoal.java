@@ -30,27 +30,23 @@ public class VoidWandererAttackGoal extends GenericAnimatedWarlockAttackGoal<Voi
     }
 
     protected float meleeBias() {
-        return 0.45F;
+        return 0.4F;
     }
 
     @Override
     protected void handleAttackLogic(double distanceSquared) {
-
         if (this.mob.isCasting()) {
             super.handleAttackLogic(distanceSquared);
             return;
         }
-
         if (this.target == null) {
             super.handleAttackLogic(distanceSquared);
             return;
         }
-
         if (this.meleeAnimTimer < 0) {
             super.handleAttackLogic(distanceSquared);
             return;
         }
-
         float meleeRange = this.meleeRange();
         float distance = (float)Math.sqrt(distanceSquared);
         this.mob.getLookControl().setLookAt(this.target);
@@ -215,9 +211,9 @@ public class VoidWandererAttackGoal extends GenericAnimatedWarlockAttackGoal<Voi
         aoe.moveTo(this.target.position());
         aoe.setOwner(this.mob);
         aoe.setCircular();
-        aoe.setRadius(8.0F);
+        aoe.setRadius(5.0F);
         aoe.setDuration(10);
-        aoe.setDamage(1.0F);
+        aoe.setDamage(3.0F);
         aoe.setSlownessAmplifier(0);
         ((VoidWanderer)this.mob).level().addFreshEntity(aoe);
     }

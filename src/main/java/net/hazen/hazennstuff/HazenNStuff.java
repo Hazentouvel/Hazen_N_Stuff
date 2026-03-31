@@ -8,30 +8,37 @@ import mod.azure.azurelib.common.render.armor.AzArmorRendererRegistry;
 import mod.azure.azurelib.common.render.item.AzItemRendererRegistry;
 import net.acetheeldritchking.aces_spell_utils.entity.render.items.SheathCurioRenderer;
 import net.acetheeldritchking.aces_spell_utils.items.curios.SheathCurioItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.DormantTier.AzureLib.FireblossomGownArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.PureTier.AzureLib.FireblossomBattlemageArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.SchoolTier.AzureLib.FireblossomKnightArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.PureTier.AstraconicWeaver.AzureLib.AstraconicWeaverArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.SchoolTier.CosmicScholar.AzureLib.CosmicScholarArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.SchoolTier.RadiantCrystal.AzureLib.RadiantCrystalArmorRenderer;
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.Compat.*;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.Blazeborne.BlazeborneArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.CreakingSorcerer.CreakingSorcererArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.DarkRitualTemplar.DarkRitualTemplarArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.EnderDragon.EnderDragonArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.Fireblossom.PureTier.Legacy.FireblossomBattlemageCrownedArmorRendererLegacy;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.Fireblossom.PureTier.Legacy.FireblossomBattlemageHelmetArmorRendererLegacy;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.GabrielULTRAKILL.GabrielArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.Infestation.InfestationArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.LemonGod.LemonGodArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.SLCCat.SLCCatArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.Seraph.SeraphArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.SoulFlame.SoulFlameArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.SupremeWitch.SupremeWitchArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.TheWither.TheWitherArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.AzureLib.ArbitriumRobesArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.PureTier.Blazeborne.AzureLib.BlazeborneArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.PureTier.ChargedScourge.AzureLib.CreakingSorcererArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.DarkRitualTemplar.AzureLib.DarkRitualTemplarArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.PureTier.EnderDragon.AzureLib.EnderDragonArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.Legacy.AzureLib.FireblossomBattlemageCrownedArmorRendererLegacy;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.Legacy.AzureLib.FireblossomBattlemageHelmetArmorRendererLegacy;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.GabrielULTRAKILL.AzureLib.GabrielArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.PureTier.Infestation.AzureLib.InfestationArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.LemonGod.AzureLib.LemonGodArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.SLCCat.SLCCatArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.PureTier.Seraph.AzureLib.SeraphArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.SoulFlame.AzureLib.SoulFlameArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.PureTier.SupremeWitch.AzureLib.SupremeWitchArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.PureTier.TheWither.AzureLib.TheWitherArmorRenderer;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.GalvanizedSheath.GalvanizedSheathItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.ScrollSheath.ScrollSheathItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioRenderer;
+import net.hazen.hazennstuff.Item.Staves.CeaselessVoid.CeaselessVoidRenderer;
 import net.hazen.hazennstuff.Item.Staves.InsaniaAeternus.InsaniaAeternusRenderer;
 import net.hazen.hazennstuff.Item.Staves.SoulcallingScepter.SoulcallingScepterRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Generic.HammerOfJustice.HammerOfJusticeRenderer;
@@ -121,11 +128,11 @@ public class HazenNStuff
                 HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get(),
                 HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_BOOTS.get(),
 
-                HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
-                HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
-                HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
-                HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
-                HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
+                HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
+                HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
+                HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
+                HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
+                HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
 
                 HnSItemRegistry.INFESTATION_HELMET.get(),
                 HnSItemRegistry.INFESTATION_CHESTPLATE.get(),
@@ -223,13 +230,13 @@ public class HazenNStuff
 
             // Fireblossom Helmet
             AzArmorRendererRegistry.register(FireblossomBattlemageHelmetArmorRendererLegacy::new,
-                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
-                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
-                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
-                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
+                    HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
+                    HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
+                    HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
+                    HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
             // Fireblossom Crown
             AzArmorRendererRegistry.register(FireblossomBattlemageCrownedArmorRendererLegacy::new,
-                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get());
+                    HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CROWN.get());
 
             // Seraph
             AzArmorRendererRegistry.register(SeraphArmorRenderer::new,
@@ -301,6 +308,48 @@ public class HazenNStuff
                     HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get(),
                     HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_BOOTS.get());
 
+            // Cosmic Scholar
+            AzArmorRendererRegistry.register(CosmicScholarArmorRenderer::new,
+                    HnSItemRegistry.COSMIC_SCHOLAR_HELMET.get(),
+                    HnSItemRegistry.COSMIC_SCHOLAR_CHESTPLATE.get(),
+                    HnSItemRegistry.COSMIC_SCHOLAR_LEGGINGS.get(),
+                    HnSItemRegistry.COSMIC_SCHOLAR_BOOTS.get());
+
+            // Astraconic Weaver
+            AzArmorRendererRegistry.register(AstraconicWeaverArmorRenderer::new,
+                    HnSItemRegistry.ASTRACONIC_WEAVER_HELMET.get(),
+                    HnSItemRegistry.ASTRACONIC_WEAVER_CHESTPLATE.get(),
+                    HnSItemRegistry.ASTRACONIC_WEAVER_LEGGINGS.get(),
+                    HnSItemRegistry.ASTRACONIC_WEAVER_BOOTS.get());
+
+            // Radiant Crystal
+            AzArmorRendererRegistry.register(RadiantCrystalArmorRenderer::new,
+                    HnSItemRegistry.RADIANT_CRYSTAL_HELMET.get(),
+                    HnSItemRegistry.RADIANT_CRYSTAL_CHESTPLATE.get(),
+                    HnSItemRegistry.RADIANT_CRYSTAL_LEGGINGS.get(),
+                    HnSItemRegistry.RADIANT_CRYSTAL_BOOTS.get());
+
+            // Fireblossom Gown
+            AzArmorRendererRegistry.register(FireblossomGownArmorRenderer::new,
+                    HnSItemRegistry.FIREBLOSSOM_GOWN_HELMET.get(),
+                    HnSItemRegistry.FIREBLOSSOM_GOWN_CHESTPLATE.get(),
+                    HnSItemRegistry.FIREBLOSSOM_GOWN_LEGGINGS.get(),
+                    HnSItemRegistry.FIREBLOSSOM_GOWN_BOOTS.get());
+
+            // Fireblossom Knight
+            AzArmorRendererRegistry.register(FireblossomKnightArmorRenderer::new,
+                    HnSItemRegistry.FIREBLOSSOM_KNIGHT_HELMET.get(),
+                    HnSItemRegistry.FIREBLOSSOM_KNIGHT_CHESTPLATE.get(),
+                    HnSItemRegistry.FIREBLOSSOM_KNIGHT_LEGGINGS.get(),
+                    HnSItemRegistry.FIREBLOSSOM_KNIGHT_BOOTS.get());
+
+            // Fireblossom Battlemage
+            AzArmorRendererRegistry.register(FireblossomBattlemageArmorRenderer::new,
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
+
             // Gabriel Ultrakill
             AzArmorRendererRegistry.register(GabrielArmorRenderer::new,
                     HnSItemRegistry.GABRIEL_ULTRAKILL_HELMET.get(),
@@ -318,6 +367,7 @@ public class HazenNStuff
 
             AzItemRendererRegistry.register(SoulcallingScepterRenderer::new, HnSItemRegistry.SOULCALLING_SCEPTER.get());
             AzItemRendererRegistry.register(InsaniaAeternusRenderer::new, HnSItemRegistry.INSANIA_AETERNUS.get());
+            AzItemRendererRegistry.register(CeaselessVoidRenderer::new, HnSItemRegistry.CEASELESS_VOID.get());
 
             //Curios Rendering Registry
 
@@ -375,11 +425,11 @@ public class HazenNStuff
                     HnSItemRegistry.ENDER_DRAGON_LEGGINGS.get(),
                     HnSItemRegistry.ENDER_DRAGON_BOOTS.get(),
 
-                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
-                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
-                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
-                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
-                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
+                    HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
+                    HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CROWN.get(),
+                    HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
+                    HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
+                    HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
 
                     HnSItemRegistry.SERAPH_HELMET.get(),
                     HnSItemRegistry.SERAPH_CHESTPLATE.get(),
@@ -432,6 +482,21 @@ public class HazenNStuff
                     HnSItemRegistry.GABRIEL_ULTRAKILL_LEGGINGS.get(),
                     HnSItemRegistry.GABRIEL_ULTRAKILL_BOOTS.get(),
 
+                    HnSItemRegistry.FIREBLOSSOM_GOWN_HELMET.get(),
+                    HnSItemRegistry.FIREBLOSSOM_GOWN_CHESTPLATE.get(),
+                    HnSItemRegistry.FIREBLOSSOM_GOWN_LEGGINGS.get(),
+                    HnSItemRegistry.FIREBLOSSOM_GOWN_BOOTS.get(),
+
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get(),
+                    HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get(),
+
+                    HnSItemRegistry.FIREBLOSSOM_KNIGHT_HELMET.get(),
+                    HnSItemRegistry.FIREBLOSSOM_KNIGHT_CHESTPLATE.get(),
+                    HnSItemRegistry.FIREBLOSSOM_KNIGHT_LEGGINGS.get(),
+                    HnSItemRegistry.FIREBLOSSOM_KNIGHT_BOOTS.get(),
+
                     // Weapons
 
                     HnSItemRegistry.HAMMER_OF_JUSTICE.get(),
@@ -441,6 +506,7 @@ public class HazenNStuff
                     // Staves
                     HnSItemRegistry.SOULCALLING_SCEPTER.get(),
                     HnSItemRegistry.INSANIA_AETERNUS.get(),
+                    HnSItemRegistry.CEASELESS_VOID.get(),
 
                     // Curios
 

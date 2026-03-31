@@ -23,7 +23,7 @@ import net.hazen.hazennstuff.Entity.Spells.Eldritch.SoulSeeker.SoulSeeker;
 import net.hazen.hazennstuff.Entity.Spells.Evocation.SpectralAxe.SpectralAxe;
 import net.hazen.hazennstuff.Entity.Spells.Fire.BrimstoneHellblast.BrimstoneHellblast;
 import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
-import net.hazen.hazennstuff.Entity.Spells.Fire.ImmolatingObliterator.ScorchingSlash;
+import net.hazen.hazennstuff.Entity.Spells.Fire.ScorchingSlash.ScorchingSlash;
 import net.hazen.hazennstuff.Entity.Spells.Holy.IchorStream.IchorStream;
 import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkA.IceChunkA;
 import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkB.IceChunkB;

@@ -1958,7 +1958,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                         Ingredient.of(HnSItemRegistry.BLAZEBORNE_HELMET.get()),
                         Ingredient.of(HnSBlocks.FIREBLOSSOM.get()),
                         RecipeCategory.COMBAT,
-                        HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                        HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
                 .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_battlemage/fireblossom_battlemage_crown"));
 
@@ -1967,7 +1967,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                         Ingredient.of(HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get()),
                         Ingredient.of(HnSBlocks.FIREBLOSSOM.get()),
                         RecipeCategory.COMBAT,
-                        HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
+                        HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
                 .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_battlemage/fireblossom_battlemage_chestplate"));
 
@@ -1976,7 +1976,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                         Ingredient.of(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get()),
                         Ingredient.of(HnSBlocks.FIREBLOSSOM.get()),
                         RecipeCategory.COMBAT,
-                        HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
+                        HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
                 .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_battlemage/fireblossom_battlemage_leggings"));
 
@@ -1985,25 +1985,25 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                         Ingredient.of(HnSItemRegistry.BLAZEBORNE_BOOTS.get()),
                         Ingredient.of(HnSBlocks.FIREBLOSSOM.get()),
                         RecipeCategory.COMBAT,
-                        HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
+                        HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
                 .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_battlemage/fireblossom_battlemage_boots"));
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
-                        Ingredient.of(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get()),
+                        Ingredient.of(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CROWN.get()),
                         Ingredient.of(Items.GOLD_INGOT),
                         RecipeCategory.COMBAT,
-                        HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                        HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
                 .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_battlemage/convert_fireblossom_battlemage_helmet"));
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
-                        Ingredient.of(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get()),
+                        Ingredient.of(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get()),
                         Ingredient.of(HnSBlocks.FIREBLOSSOM.get()),
                         RecipeCategory.COMBAT,
-                        HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get())
+                        HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
                 .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_battlemage/convert_fireblossom_battlemage_crown"));
 

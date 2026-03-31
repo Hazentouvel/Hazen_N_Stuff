@@ -10,11 +10,11 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
-import io.redspace.ironsspellbooks.particle.FlameStrikeParticleOptions;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
-import net.hazen.hazennstuff.Entity.Spells.Fire.ImmolatingObliterator.ScorchingSlash;
+import net.hazen.hazennstuff.Entity.Spells.Fire.ScorchingSlash.ScorchingSlash;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.ScorchingSlash.ScorchingSlashOptions;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractRavensBaneSpell;
 import net.minecraft.core.component.DataComponents;
@@ -127,7 +127,7 @@ public class ScorchingSlashSpell extends AbstractRavensBaneSpell {
             level.addFreshEntity(projectile);
         }
         boolean mirrored = playerMagicData.getCastingEquipmentSlot().equals(SpellSelectionManager.OFFHAND);
-        MagicManager.spawnParticles(level, new FlameStrikeParticleOptions((float)forward.x, (float)forward.y, (float)forward.z, mirrored, false, 1.0F), hitLocation.x, hitLocation.y + 0.3, hitLocation.z, 1, (double)0.0F, (double)0.0F, (double)0.0F, (double)0.0F, true);
+        MagicManager.spawnParticles(level, new ScorchingSlashOptions((float)forward.x, (float)forward.y, (float)forward.z, mirrored, false, 1.0F), hitLocation.x, hitLocation.y + 0.3, hitLocation.z, 1, (double)0.0F, (double)0.0F, (double)0.0F, (double)0.0F, true);
         super.onCast(level, spellLevel, entity, castSource, playerMagicData);
     }
 

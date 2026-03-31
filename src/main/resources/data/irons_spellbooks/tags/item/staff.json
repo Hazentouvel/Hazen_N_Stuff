@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "hazennstuff:glassweaver_staff",
+    "hazennstuff:ceaseless_void",
+    "hazennstuff:nexus",
+    "hazennstuff:coralite_cane",
     "hazennstuff:insania_aeternus",
     "hazennstuff:divine_scepter",
     "hazennstuff:grimoire_staff",

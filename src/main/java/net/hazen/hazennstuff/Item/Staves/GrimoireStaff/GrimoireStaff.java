@@ -6,7 +6,6 @@ import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSStaffTier;
 import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
-import net.minecraft.world.item.Rarity;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -25,7 +24,7 @@ public class GrimoireStaff extends StaffItem implements GeoItem {
                         .fireResistant()
                         .rarity(HnSRarities.EVOCATION_RARITY.getValue())
                         .attributes(ExtendedSwordItem
-                                .createAttributes(HnSStaffTier.GRIMORIE_STAFF)
+                                .createAttributes(HnSStaffTier.GRIMOIRE_STAFF)
                         )
         );
     }

@@ -2,7 +2,6 @@ package net.hazen.hazennstuff.Setup;
 
 import io.redspace.ironsspellbooks.entity.mobs.keeper.KeeperRenderer;
 import io.redspace.ironsspellbooks.entity.spells.fiery_dagger.FieryDaggerRenderer;
-import io.redspace.ironsspellbooks.particle.EmberParticle;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.VoidWanderer.VoidWandererRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Astral.Evercomet.EvercometRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Astral.CosmicBolt.CosmicBoltRenderer;
@@ -31,7 +30,7 @@ import net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife.LifestealKnifeRe
 import net.hazen.hazennstuff.Entity.Spells.Eldritch.SoulSeeker.SoulSeekerRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Evocation.SpectralAxe.SpectralRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Fire.BrimstoneHellblast.BrimstoneHellblastRenderer;
-import net.hazen.hazennstuff.Entity.Spells.Fire.ImmolatingObliterator.ScorchingSlashRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Fire.ScorchingSlash.ScorchingSlashRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.IceArrowRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.EnergyBurst.EnergyBurstRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Nature.DeathSentence.DeathSentenceRenderer;
@@ -49,7 +48,6 @@ import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSLash.IonicSlas
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NatureSlash.NatureSlash;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrike;
 import net.hazen.hazennstuff.Spells.Tooltips.LightningClientTooltipComponent;
-import net.minecraft.client.particle.TextureSheetParticle;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;

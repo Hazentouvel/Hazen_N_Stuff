@@ -79,6 +79,9 @@ public class HnSTags {
     public static final TagKey<Item> ELDRITCH_RUNES = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "items/eldritch_runes").toString()));
 
+    public static final TagKey<Item> HYDRO_RUNES = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "items/hydro_runes").toString()));
+
     /*
      *** Equipment
      */

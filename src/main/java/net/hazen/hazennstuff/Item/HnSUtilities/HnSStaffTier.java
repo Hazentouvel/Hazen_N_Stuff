@@ -39,7 +39,7 @@ public class HnSStaffTier implements IronsWeaponTier {
             new AttributeContainer(AttributeRegistry.SPELL_POWER, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
-    // RoD
+    // Divine Scepter
     public static HnSStaffTier DIVINE_SCEPTER = new HnSStaffTier(3, -3,
             new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.CAST_TIME_REDUCTION, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
@@ -47,7 +47,7 @@ public class HnSStaffTier implements IronsWeaponTier {
             new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
-    // RoD
+    // Blossom of the Enchantress
     public static HnSStaffTier BLOSSOM_OF_THE_ENCHANTRESS = new HnSStaffTier(3, -3,
             new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.HEALING_RECEIVED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
@@ -55,25 +55,53 @@ public class HnSStaffTier implements IronsWeaponTier {
             new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
-    // RoD
-    public static HnSStaffTier GRIMORIE_STAFF = new HnSStaffTier(3, -3,
+    // Grimoire Staff
+    public static HnSStaffTier GRIMOIRE_STAFF = new HnSStaffTier(3, -3,
             new AttributeContainer(AttributeRegistry.EVOCATION_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.COOLDOWN_REDUCTION, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.CASTING_MOVESPEED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
-    // RoD
+    // Enderconic Scepter
     public static HnSStaffTier ENDERCONIC_SCEPTER = new HnSStaffTier(3, -3,
             new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.SPELL_RESIST, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.SPELL_POWER, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
-    // RoD
+    // Insania Aeternus
     public static HnSStaffTier INSANIA_AETERNUS = new HnSStaffTier(3, -3,
             new AttributeContainer(AttributeRegistry.ELDRITCH_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.COOLDOWN_REDUCTION, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.CAST_TIME_REDUCTION, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    // Glassweaver Staff
+    public static HnSStaffTier GLASSWEAVER_SCEPTER = new HnSStaffTier(3, -3,
+            new AttributeContainer(HnSAttributeRegistry.RADIANCE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.COOLDOWN_REDUCTION, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    // Ceaseless Void
+    public static HnSStaffTier CEASELESS_VOID = new HnSStaffTier(3, -3,
+            new AttributeContainer(HnSAttributeRegistry.SHADOW_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.CAST_TIME_REDUCTION, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    // Coralite Cane
+    public static HnSStaffTier CORALITE_CANE = new HnSStaffTier(3, -3,
+            new AttributeContainer(ASAttributeRegistry.HYDRO_MAGIC_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.CAST_TIME_REDUCTION, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
+    // Nexus
+    public static HnSStaffTier NEXUS = new HnSStaffTier(3, -3,
+            new AttributeContainer(HnSAttributeRegistry.COSMIC_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.CAST_TIME_REDUCTION, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );

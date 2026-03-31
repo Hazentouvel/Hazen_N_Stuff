@@ -21,9 +21,10 @@ public class HnSCreativeModeTabs {
                     .title(Component.translatable("creativetab.hazennstuff.hazennstuff_mobs"))
                     .displayItems((itemDisplayParameters, output) -> {
 
-                        output.accept(HnSItemRegistry.VOID_WANDERER_EGG);
+                        output.accept(HnSItemRegistry.VOID_WANDERER_EGG.get());
 
-                    }).build());
+                    })
+                    .build());
 
     public static final Supplier<CreativeModeTab> HAZEN_N_STUFF_MATERIALS = CREATIVE_MODE_TAB.register("hazennstuff_materials",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItemRegistry.STARDUST.get()))
@@ -389,6 +390,24 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.MYCELIUM_GUARDIAN_LEGGINGS.get());
                         output.accept(HnSItemRegistry.MYCELIUM_GUARDIAN_BOOTS.get());
 
+                        // Radiant Crystal
+                        output.accept(HnSItemRegistry.GECKOLIB_RADIANT_CRYSTAL_HELMET.get());
+                        output.accept(HnSItemRegistry.GECKOLIB_RADIANT_CRYSTAL_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.GECKOLIB_RADIANT_CRYSTAL_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.GECKOLIB_RADIANT_CRYSTAL_BOOTS.get());
+
+                        // Radiant Crystal
+                        output.accept(HnSItemRegistry.RADIANT_CRYSTAL_HELMET.get());
+                        output.accept(HnSItemRegistry.RADIANT_CRYSTAL_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.RADIANT_CRYSTAL_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.RADIANT_CRYSTAL_BOOTS.get());
+
+                        // Glassweaver
+                        output.accept(HnSItemRegistry.GLASSWEAVER_HELMET.get());
+                        output.accept(HnSItemRegistry.GLASSWEAVER_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.GLASSWEAVER_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.GLASSWEAVER_BOOTS.get());
+
 
 
                         /*
@@ -401,6 +420,54 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.SHADOW_SCALE_CHESTPLATE.get());
                         output.accept(HnSItemRegistry.SHADOW_SCALE_LEGGINGS.get());
                         output.accept(HnSItemRegistry.SHADOW_SCALE_BOOTS.get());
+
+                        // Masked Fool
+                        output.accept(HnSItemRegistry.MASKED_FOOL_HELMET.get());
+                        output.accept(HnSItemRegistry.MASKED_FOOL_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.MASKED_FOOL_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.MASKED_FOOL_BOOTS.get());
+
+                        // Shadow Jester
+                        output.accept(HnSItemRegistry.SHADOW_JESTER_HELMET.get());
+                        output.accept(HnSItemRegistry.SHADOW_JESTER_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.SHADOW_JESTER_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.SHADOW_JESTER_BOOTS.get());
+
+
+                        /*
+                         *** Cosmic
+                         */
+
+
+                        // Cosmic Scholar
+                        output.accept(HnSItemRegistry.COSMIC_SCHOLAR_HELMET.get());
+                        output.accept(HnSItemRegistry.COSMIC_SCHOLAR_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.COSMIC_SCHOLAR_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.COSMIC_SCHOLAR_BOOTS.get());
+
+                        // Astraconic Weaver
+                        output.accept(HnSItemRegistry.ASTRACONIC_WEAVER_HELMET.get());
+                        output.accept(HnSItemRegistry.ASTRACONIC_WEAVER_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.ASTRACONIC_WEAVER_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.ASTRACONIC_WEAVER_BOOTS.get());
+
+
+                        /*
+                         *** Hydro
+                         */
+
+
+                        // Nautilus Knight
+                        output.accept(HnSItemRegistry.NAUTILUS_KNIGHT_HELMET.get());
+                        output.accept(HnSItemRegistry.NAUTILUS_KNIGHT_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.NAUTILUS_KNIGHT_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.NAUTILUS_KNIGHT_BOOTS.get());
+
+                        // Elder Guardian
+                        output.accept(HnSItemRegistry.ELDER_GUARDIAN_HELMET.get());
+                        output.accept(HnSItemRegistry.ELDER_GUARDIAN_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.ELDER_GUARDIAN_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.ELDER_GUARDIAN_BOOTS.get());
 
                         /*
                          *** Eldritch
@@ -608,11 +675,48 @@ public class HnSCreativeModeTabs {
 
 
                         // Fireblossom
-                        output.accept(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get());
+
+
                         output.accept(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get());
                         output.accept(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get());
                         output.accept(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get());
                         output.accept(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
+
+
+                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get());
+                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
+
+
+                        output.accept(HnSItemRegistry.FIREBLOSSOM_KNIGHT_HELMET.get());
+                        output.accept(HnSItemRegistry.FIREBLOSSOM_KNIGHT_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.FIREBLOSSOM_KNIGHT_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.FIREBLOSSOM_KNIGHT_BOOTS.get());
+
+
+                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_KNIGHT_HELMET.get());
+                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_KNIGHT_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_KNIGHT_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_KNIGHT_BOOTS.get());
+
+
+                        output.accept(HnSItemRegistry.FIREBLOSSOM_GOWN_HELMET.get());
+                        output.accept(HnSItemRegistry.FIREBLOSSOM_GOWN_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.FIREBLOSSOM_GOWN_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.FIREBLOSSOM_GOWN_BOOTS.get());
+
+
+                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_GOWN_HELMET.get());
+                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_GOWN_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_GOWN_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_GOWN_BOOTS.get());
+
+                        output.accept(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CROWN.get());
+                        output.accept(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get());
+                        output.accept(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
 
                         // Arbitrium Robes
                         output.accept(HnSItemRegistry.ARBITRIUM_ROBES_HELMET.get());

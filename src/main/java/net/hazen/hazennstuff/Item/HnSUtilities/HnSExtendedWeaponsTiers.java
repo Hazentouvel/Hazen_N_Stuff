@@ -583,6 +583,17 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
      *** Shadow
      */
 
+    public static HnSExtendedWeaponsTiers SOUL_REAPER = new HnSExtendedWeaponsTiers(
+            8064,
+            8,
+            -1.7F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(HnSAttributeRegistry.SHADOW_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ASAttributeRegistry.SPELL_RES_PENETRATION, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
     public static HnSExtendedWeaponsTiers LIGHTS_BANE = new HnSExtendedWeaponsTiers(
             8064,
             8,
@@ -616,6 +627,39 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(ALObjects.Attributes.CRIT_CHANCE, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
+
+    /*
+    *** Cosmic
+     */
+
+    public static HnSExtendedWeaponsTiers ASTRALITE_CLEAVER = new HnSExtendedWeaponsTiers(
+            8064,
+            8,
+            -1.7F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(HnSAttributeRegistry.SHADOW_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ALObjects.Attributes.CRIT_CHANCE, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
+
+    /*
+    *** Hydro
+     */
+
+
+    public static HnSExtendedWeaponsTiers TIDAL_WAVE = new HnSExtendedWeaponsTiers(
+            8064,
+            8,
+            -1.7F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(ASAttributeRegistry.HYDRO_MAGIC_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(ASAttributeRegistry.MAGIC_PROJECTILE_CRIT_CHANCE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
 
     /*
      *** Misc

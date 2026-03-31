@@ -138,6 +138,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.CHARGED_SCOURGE_HELMET.get())
                 .add(HnSItemRegistry.THUNDER_PROWLER_HELMET.get())
                 .add(HnSItemRegistry.CREAKING_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_CREAKING_HELMET.get())
                 .add(HnSItemRegistry.FLESH_MASS_HELMET.get())
                 .add(HnSItemRegistry.THE_WITHER_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_THE_WITHER_HELMET.get())
@@ -148,6 +149,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_HELMET.get())
                 .add(HnSItemRegistry.MOTHIC_WITCH_HELMET.get())
                 .add(HnSItemRegistry.SUPREME_WITCH_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_SUPREME_WITCH_HELMET.get())
                 .add(HnSItemRegistry.ALCHEMIST_SUPREME_HELMET.get())
                 .add(HnSItemRegistry.MYCELIUM_GUARDIAN_HELMET.get())
                 .add(HnSItemRegistry.SHADOW_SCALE_HELMET.get())
@@ -177,10 +179,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_HELMET.get())
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.ARBITRIUM_ROBES_HELMET.get())
                 .add(HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_ARBITRIUM_ROBES_HELMET.get())
@@ -207,6 +209,23 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.CHLOROPHYTE_HELMET.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_HEADGEAR.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_MASK.get())
+                .add(HnSItemRegistry.COSMIC_SCHOLAR_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_COSMIC_SCHOLAR_HELMET.get())
+                .add(HnSItemRegistry.ASTRACONIC_WEAVER_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_ASTRACONIC_WEAVER_HELMET.get())
+                .add(HnSItemRegistry.GLASSWEAVER_HELMET.get())
+                .add(HnSItemRegistry.RADIANT_CRYSTAL_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_RADIANT_CRYSTAL_HELMET.get())
+                .add(HnSItemRegistry.MASKED_FOOL_HELMET.get())
+                .add(HnSItemRegistry.SHADOW_JESTER_HELMET.get())
+                .add(HnSItemRegistry.NAUTILUS_KNIGHT_HELMET.get())
+                .add(HnSItemRegistry.ELDER_GUARDIAN_HELMET.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_GOWN_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_GOWN_HELMET.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_KNIGHT_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_KNIGHT_HELMET.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
         ;
 
         tag(ItemTags.CHEST_ARMOR)
@@ -226,6 +245,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.CHARGED_SCOURGE_CHESTPLATE.get())
                 .add(HnSItemRegistry.THUNDER_PROWLER_CHESTPLATE.get())
                 .add(HnSItemRegistry.CREAKING_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_CREAKING_CHESTPLATE.get())
                 .add(HnSItemRegistry.FLESH_MASS_CHESTPLATE.get())
                 .add(HnSItemRegistry.FLESH_MASS_LEGGINGS.get())
                 .add(HnSItemRegistry.THE_WITHER_CHESTPLATE.get())
@@ -238,6 +258,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_LEGGINGS.get())
                 .add(HnSItemRegistry.MOTHIC_WITCH_CHESTPLATE.get())
                 .add(HnSItemRegistry.MOTHIC_WITCH_SECRET_CHESTPLATE.get())
+                .add(HnSItemRegistry.SUPREME_WITCH_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_SUPREME_WITCH_CHESTPLATE.get())
                 .add(HnSItemRegistry.ALCHEMIST_SUPREME_CHESTPLATE.get())
                 .add(HnSItemRegistry.MYCELIUM_GUARDIAN_CHESTPLATE.get())
                 .add(HnSItemRegistry.SHADOW_SCALE_CHESTPLATE.get())
@@ -267,8 +289,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_CHESTPLATE.get())
                 .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_CHESTPLATE.get())
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
                 .add(HnSItemRegistry.ARBITRIUM_ROBES_CHESTPLATE.get())
                 .add(HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_ARBITRIUM_ROBES_CHESTPLATE.get())
@@ -291,6 +313,23 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.NECROMANCER_CHESTPLATE.get())
                 .add(HnSItemRegistry.NAMELESS_ONE_CHESTPLATE.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_CHESTPLATE.get())
+                .add(HnSItemRegistry.COSMIC_SCHOLAR_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_COSMIC_SCHOLAR_CHESTPLATE.get())
+                .add(HnSItemRegistry.ASTRACONIC_WEAVER_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_ASTRACONIC_WEAVER_CHESTPLATE.get())
+                .add(HnSItemRegistry.GLASSWEAVER_CHESTPLATE.get())
+                .add(HnSItemRegistry.RADIANT_CRYSTAL_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_RADIANT_CRYSTAL_CHESTPLATE.get())
+                .add(HnSItemRegistry.MASKED_FOOL_CHESTPLATE.get())
+                .add(HnSItemRegistry.SHADOW_JESTER_CHESTPLATE.get())
+                .add(HnSItemRegistry.NAUTILUS_KNIGHT_CHESTPLATE.get())
+                .add(HnSItemRegistry.ELDER_GUARDIAN_CHESTPLATE.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_GOWN_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_GOWN_CHESTPLATE.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_KNIGHT_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_KNIGHT_CHESTPLATE.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
         ;
 
         tag(ItemTags.LEG_ARMOR)
@@ -309,6 +348,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.CHARGED_SCOURGE_LEGGINGS.get())
                 .add(HnSItemRegistry.THUNDER_PROWLER_LEGGINGS.get())
                 .add(HnSItemRegistry.CREAKING_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_CREAKING_LEGGINGS.get())
                 .add(HnSItemRegistry.FLESH_MASS_LEGGINGS.get())
                 .add(HnSItemRegistry.THE_WITHER_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_THE_WITHER_LEGGINGS.get())
@@ -319,6 +359,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_LEGGINGS.get())
                 .add(HnSItemRegistry.MOTHIC_WITCH_LEGGINGS.get())
                 .add(HnSItemRegistry.SUPREME_WITCH_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_SUPREME_WITCH_LEGGINGS.get())
                 .add(HnSItemRegistry.ALCHEMIST_SUPREME_LEGGINGS.get())
                 .add(HnSItemRegistry.MYCELIUM_GUARDIAN_LEGGINGS.get())
                 .add(HnSItemRegistry.SHADOW_SCALE_LEGGINGS.get())
@@ -348,8 +389,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_LEGGINGS.get())
                 .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_LEGGINGS.get())
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
                 .add(HnSItemRegistry.ARBITRIUM_ROBES_LEGGINGS.get())
                 .add(HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_ARBITRIUM_ROBES_LEGGINGS.get())
@@ -370,6 +411,23 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.NECROMANCER_LEGGINGS.get())
                 .add(HnSItemRegistry.NAMELESS_ONE_LEGGINGS.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_LEGGINGS.get())
+                .add(HnSItemRegistry.COSMIC_SCHOLAR_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_COSMIC_SCHOLAR_LEGGINGS.get())
+                .add(HnSItemRegistry.ASTRACONIC_WEAVER_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_ASTRACONIC_WEAVER_LEGGINGS.get())
+                .add(HnSItemRegistry.GLASSWEAVER_LEGGINGS.get())
+                .add(HnSItemRegistry.RADIANT_CRYSTAL_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_RADIANT_CRYSTAL_LEGGINGS.get())
+                .add(HnSItemRegistry.MASKED_FOOL_LEGGINGS.get())
+                .add(HnSItemRegistry.SHADOW_JESTER_LEGGINGS.get())
+                .add(HnSItemRegistry.NAUTILUS_KNIGHT_LEGGINGS.get())
+                .add(HnSItemRegistry.ELDER_GUARDIAN_LEGGINGS.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_GOWN_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_GOWN_LEGGINGS.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_KNIGHT_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_KNIGHT_LEGGINGS.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
         ;
 
         tag(ItemTags.FOOT_ARMOR)
@@ -388,6 +446,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.CHARGED_SCOURGE_BOOTS.get())
                 .add(HnSItemRegistry.THUNDER_PROWLER_BOOTS.get())
                 .add(HnSItemRegistry.CREAKING_BOOTS.get())
+                .add(HnSItemRegistry.GECKOLIB_CREAKING_BOOTS.get())
                 .add(HnSItemRegistry.FLESH_MASS_BOOTS.get())
                 .add(HnSItemRegistry.THE_WITHER_BOOTS.get())
                 .add(HnSItemRegistry.GECKOLIB_THE_WITHER_BOOTS.get())
@@ -398,6 +457,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_BOOTS.get())
                 .add(HnSItemRegistry.MOTHIC_WITCH_BOOTS.get())
                 .add(HnSItemRegistry.SUPREME_WITCH_BOOTS.get())
+                .add(HnSItemRegistry.GECKOLIB_SUPREME_WITCH_BOOTS.get())
                 .add(HnSItemRegistry.ALCHEMIST_SUPREME_BOOTS.get())
                 .add(HnSItemRegistry.MYCELIUM_GUARDIAN_BOOTS.get())
                 .add(HnSItemRegistry.SHADOW_SCALE_BOOTS.get())
@@ -426,8 +486,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.MITHRIL_BATTLEMAGE_BOOTS.get())
                 .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_BOOTS.get())
                 .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_BOOTS.get())
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
                 .add(HnSItemRegistry.ARBITRIUM_ROBES_BOOTS.get())
                 .add(HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_BOOTS.get())
                 .add(HnSItemRegistry.GECKOLIB_ARBITRIUM_ROBES_BOOTS.get())
@@ -446,6 +506,23 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_ASCENDED_LEMON_GOD_BOOTS.get())
                 .add(HnSItemRegistry.ENDERMAN_BOOTS.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_BOOTS.get())
+                .add(HnSItemRegistry.COSMIC_SCHOLAR_BOOTS.get())
+                .add(HnSItemRegistry.GECKOLIB_COSMIC_SCHOLAR_BOOTS.get())
+                .add(HnSItemRegistry.ASTRACONIC_WEAVER_BOOTS.get())
+                .add(HnSItemRegistry.GECKOLIB_ASTRACONIC_WEAVER_BOOTS.get())
+                .add(HnSItemRegistry.GLASSWEAVER_BOOTS.get())
+                .add(HnSItemRegistry.RADIANT_CRYSTAL_BOOTS.get())
+                .add(HnSItemRegistry.GECKOLIB_RADIANT_CRYSTAL_BOOTS.get())
+                .add(HnSItemRegistry.MASKED_FOOL_BOOTS.get())
+                .add(HnSItemRegistry.SHADOW_JESTER_BOOTS.get())
+                .add(HnSItemRegistry.NAUTILUS_KNIGHT_BOOTS.get())
+                .add(HnSItemRegistry.ELDER_GUARDIAN_BOOTS.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_GOWN_BOOTS.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_GOWN_BOOTS.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_KNIGHT_BOOTS.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_KNIGHT_BOOTS.get())
+                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
+                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
         ;
 
         tag(HnSTags.SCHOOL_HELMET)
@@ -457,6 +534,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(ItemRegistry.ELECTROMANCER_HELMET.get())
                 .add(ItemRegistry.CULTIST_HELMET.get())
                 .add(ItemRegistry.SHADOWWALKER_HELMET.get())
+                .add(HnSItemRegistry.MASKED_FOOL_HELMET.get())
+                .add(HnSItemRegistry.RADIANT_CRYSTAL_HELMET.get())
+                .add(HnSItemRegistry.COSMIC_SCHOLAR_HELMET.get())
+                .add(HnSItemRegistry.NAUTILUS_KNIGHT_HELMET.get())
         ;
 
         tag(HnSTags.SCHOOL_CHESTPLATE)
@@ -468,6 +549,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(ItemRegistry.ELECTROMANCER_CHESTPLATE.get())
                 .add(ItemRegistry.CULTIST_CHESTPLATE.get())
                 .add(ItemRegistry.SHADOWWALKER_CHESTPLATE.get())
+                .add(HnSItemRegistry.MASKED_FOOL_CHESTPLATE.get())
+                .add(HnSItemRegistry.RADIANT_CRYSTAL_CHESTPLATE.get())
+                .add(HnSItemRegistry.COSMIC_SCHOLAR_CHESTPLATE.get())
+                .add(HnSItemRegistry.NAUTILUS_KNIGHT_CHESTPLATE.get())
         ;
 
         tag(HnSTags.SCHOOL_LEGGINGS)
@@ -479,6 +564,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(ItemRegistry.ELECTROMANCER_LEGGINGS.get())
                 .add(ItemRegistry.CULTIST_LEGGINGS.get())
                 .add(ItemRegistry.SHADOWWALKER_LEGGINGS.get())
+                .add(HnSItemRegistry.MASKED_FOOL_LEGGINGS.get())
+                .add(HnSItemRegistry.RADIANT_CRYSTAL_LEGGINGS.get())
+                .add(HnSItemRegistry.COSMIC_SCHOLAR_LEGGINGS.get())
+                .add(HnSItemRegistry.NAUTILUS_KNIGHT_LEGGINGS.get())
         ;
 
         tag(HnSTags.SCHOOL_BOOTS)
@@ -490,6 +579,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(ItemRegistry.ELECTROMANCER_BOOTS.get())
                 .add(ItemRegistry.CULTIST_BOOTS.get())
                 .add(ItemRegistry.SHADOWWALKER_BOOTS.get())
+                .add(HnSItemRegistry.MASKED_FOOL_BOOTS.get())
+                .add(HnSItemRegistry.RADIANT_CRYSTAL_BOOTS.get())
+                .add(HnSItemRegistry.COSMIC_SCHOLAR_BOOTS.get())
+                .add(HnSItemRegistry.NAUTILUS_KNIGHT_BOOTS.get())
         ;
 
 
@@ -536,6 +629,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.CHARGED_SCOURGE_HELMET.get())
                 .add(HnSItemRegistry.THUNDER_PROWLER_HELMET.get())
                 .add(HnSItemRegistry.CREAKING_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_CREAKING_HELMET.get())
                 .add(HnSItemRegistry.FLESH_MASS_HELMET.get())
                 .add(HnSItemRegistry.THE_WITHER_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_THE_WITHER_HELMET.get())
@@ -546,6 +640,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_HELMET.get())
                 .add(HnSItemRegistry.MOTHIC_WITCH_HELMET.get())
                 .add(HnSItemRegistry.SUPREME_WITCH_HELMET.get())
+                .add(HnSItemRegistry.GECKOLIB_SUPREME_WITCH_HELMET.get())
                 .add(HnSItemRegistry.ALCHEMIST_SUPREME_HELMET.get())
                 .add(HnSItemRegistry.MYCELIUM_GUARDIAN_HELMET.get())
                 .add(HnSItemRegistry.SHADOW_SCALE_HELMET.get())
@@ -561,16 +656,20 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.DREADSTEEL_KNIGHT_HELMET.get())
                 .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_HELMET.get())
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.MAVERICK_HELMET.get())
                 .add(HnSItemRegistry.SLC_CAT_HELMET.get())
                 .add(HnSItemRegistry.ABBERANT_PREDATOR_HELMET.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_HELMET.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_HEADGEAR.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_MASK.get())
+                .add(HnSItemRegistry.ASTRACONIC_WEAVER_HELMET.get())
+                .add(HnSItemRegistry.GLASSWEAVER_HELMET.get())
+                .add(HnSItemRegistry.SHADOW_JESTER_HELMET.get())
+                .add(HnSItemRegistry.ELDER_GUARDIAN_HELMET.get())
         ;
 
         tag(HnSTags.PURE_CHESTPLATE)
@@ -587,6 +686,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.CHARGED_SCOURGE_CHESTPLATE.get())
                 .add(HnSItemRegistry.THUNDER_PROWLER_CHESTPLATE.get())
                 .add(HnSItemRegistry.CREAKING_CHESTPLATE.get())
+                .add(HnSItemRegistry.GECKOLIB_CREAKING_CHESTPLATE.get())
                 .add(HnSItemRegistry.FLESH_MASS_CHESTPLATE.get())
                 .add(HnSItemRegistry.FLESH_MASS_LEGGINGS.get())
                 .add(HnSItemRegistry.THE_WITHER_CHESTPLATE.get())
@@ -599,6 +699,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_LEGGINGS.get())
                 .add(HnSItemRegistry.MOTHIC_WITCH_CHESTPLATE.get())
                 .add(HnSItemRegistry.MOTHIC_WITCH_SECRET_CHESTPLATE.get())
+                .add(HnSItemRegistry.SUPREME_WITCH_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_SUPREME_WITCH_LEGGINGS.get())
                 .add(HnSItemRegistry.ALCHEMIST_SUPREME_CHESTPLATE.get())
                 .add(HnSItemRegistry.MYCELIUM_GUARDIAN_CHESTPLATE.get())
                 .add(HnSItemRegistry.SHADOW_SCALE_CHESTPLATE.get())
@@ -614,12 +716,16 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.DREADSTEEL_KNIGHT_CHESTPLATE.get())
                 .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_CHESTPLATE.get())
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
                 .add(HnSItemRegistry.MAVERICK_CHESTPLATE.get())
                 .add(HnSItemRegistry.SLC_CAT_CHESTPLATE.get())
                 .add(HnSItemRegistry.ABBERANT_PREDATOR_CHESTPLATE.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_CHESTPLATE.get())
+                .add(HnSItemRegistry.ASTRACONIC_WEAVER_CHESTPLATE.get())
+                .add(HnSItemRegistry.GLASSWEAVER_CHESTPLATE.get())
+                .add(HnSItemRegistry.SHADOW_JESTER_CHESTPLATE.get())
+                .add(HnSItemRegistry.ELDER_GUARDIAN_CHESTPLATE.get())
         ;
 
         tag(HnSTags.PURE_LEGGINGS)
@@ -635,6 +741,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.CHARGED_SCOURGE_LEGGINGS.get())
                 .add(HnSItemRegistry.THUNDER_PROWLER_LEGGINGS.get())
                 .add(HnSItemRegistry.CREAKING_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_CREAKING_LEGGINGS.get())
                 .add(HnSItemRegistry.FLESH_MASS_LEGGINGS.get())
                 .add(HnSItemRegistry.THE_WITHER_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_THE_WITHER_LEGGINGS.get())
@@ -645,6 +752,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_LEGGINGS.get())
                 .add(HnSItemRegistry.MOTHIC_WITCH_LEGGINGS.get())
                 .add(HnSItemRegistry.SUPREME_WITCH_LEGGINGS.get())
+                .add(HnSItemRegistry.GECKOLIB_SUPREME_WITCH_LEGGINGS.get())
                 .add(HnSItemRegistry.ALCHEMIST_SUPREME_LEGGINGS.get())
                 .add(HnSItemRegistry.MYCELIUM_GUARDIAN_LEGGINGS.get())
                 .add(HnSItemRegistry.SHADOW_SCALE_LEGGINGS.get())
@@ -660,12 +768,16 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.DREADSTEEL_KNIGHT_LEGGINGS.get())
                 .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_LEGGINGS.get())
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
                 .add(HnSItemRegistry.MAVERICK_LEGGINGS.get())
                 .add(HnSItemRegistry.SLC_CAT_LEGGINGS.get())
                 .add(HnSItemRegistry.ABBERANT_PREDATOR_LEGGINGS.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_LEGGINGS.get())
+                .add(HnSItemRegistry.ASTRACONIC_WEAVER_LEGGINGS.get())
+                .add(HnSItemRegistry.GLASSWEAVER_LEGGINGS.get())
+                .add(HnSItemRegistry.SHADOW_JESTER_LEGGINGS.get())
+                .add(HnSItemRegistry.ELDER_GUARDIAN_LEGGINGS.get())
         ;
 
         tag(HnSTags.PURE_BOOTS)
@@ -681,6 +793,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.CHARGED_SCOURGE_BOOTS.get())
                 .add(HnSItemRegistry.THUNDER_PROWLER_BOOTS.get())
                 .add(HnSItemRegistry.CREAKING_BOOTS.get())
+                .add(HnSItemRegistry.GECKOLIB_CREAKING_BOOTS.get())
                 .add(HnSItemRegistry.FLESH_MASS_BOOTS.get())
                 .add(HnSItemRegistry.THE_WITHER_BOOTS.get())
                 .add(HnSItemRegistry.GECKOLIB_THE_WITHER_BOOTS.get())
@@ -691,6 +804,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_GABRIEL_ULTRAKILL_BOOTS.get())
                 .add(HnSItemRegistry.MOTHIC_WITCH_BOOTS.get())
                 .add(HnSItemRegistry.SUPREME_WITCH_BOOTS.get())
+                .add(HnSItemRegistry.GECKOLIB_SUPREME_WITCH_BOOTS.get())
                 .add(HnSItemRegistry.ALCHEMIST_SUPREME_BOOTS.get())
                 .add(HnSItemRegistry.MYCELIUM_GUARDIAN_BOOTS.get())
                 .add(HnSItemRegistry.SHADOW_SCALE_BOOTS.get())
@@ -706,11 +820,15 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.DREADSTEEL_KNIGHT_BOOTS.get())
                 .add(HnSItemRegistry.DARK_RITUAL_TEMPLAR_BOOTS.get())
                 .add(HnSItemRegistry.GECKOLIB_DARK_RITUAL_TEMPLAR_BOOTS.get())
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
                 .add(HnSItemRegistry.MAVERICK_BOOTS.get())
                 .add(HnSItemRegistry.SLC_CAT_BOOTS.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_BOOTS.get())
+                .add(HnSItemRegistry.ASTRACONIC_WEAVER_BOOTS.get())
+                .add(HnSItemRegistry.GLASSWEAVER_BOOTS.get())
+                .add(HnSItemRegistry.SHADOW_JESTER_BOOTS.get())
+                .add(HnSItemRegistry.ELDER_GUARDIAN_BOOTS.get())
         ;
 
         tag(HnSTags.ARMORS_FOR_IDLE)
@@ -861,17 +979,23 @@ public class HnSItemTagProvider extends ItemTagsProvider {
 
                 //Fireblossom Battlemage Armor
 
-                .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CROWN.get())
+
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
                 .add(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
 
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
-                .add(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
+
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
+                .add(HnSItemRegistry.LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
 
                 //Lemon God Armor
 
@@ -1039,7 +1163,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
 
                 //Ender
                 .add(HnSItemRegistry.OBSIDIAN_CLAYMORE.get())
-                .add(HnSItemRegistry.STARFURY.get())
                 .add(HnSItemRegistry.UMBRANOVA_DORMANT.get())
                 //.add(HnSItemRegistry.UMBRANOVA_T1.get())
 
@@ -1049,9 +1172,18 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.HAMMUSH.get())
 
                 //Shadow
+                .add(HnSItemRegistry.SOUL_REAPER.get())
                 .add(HnSItemRegistry.LIGHTS_BANE.get())
                 .add(HnSItemRegistry.NIGHTS_EDGE.get())
                 .add(HnSItemRegistry.TRUE_NIGHTS_EDGE.get())
+
+                //Cosmic
+
+                .add(HnSItemRegistry.ASTRALITE_CLEAVER.get())
+                .add(HnSItemRegistry.STARFURY.get())
+
+                // Hydro
+                .add(HnSItemRegistry.TIDAL_WAVE.get())
 
                 //Holy
                 .add(HnSItemRegistry.HAMMER_OF_JUSTICE.get())
@@ -1242,163 +1374,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.MOTHIC_WITCH_SECRET_CHESTPLATE.get())
         ;
 
-        tag(ModTags.CAN_BE_IMBUED)
-
-                //Fire
-                .add(HnSItemRegistry.FIREBLOSSOM_RAPIER.get())
-                .add(HnSItemRegistry.DRACONIC_SPLITTER.get())
-                .add(HnSItemRegistry.FIREBRAND.get())
-                .add(HnSItemRegistry.WARFLAMING_LANCE.get())
-                .add(HnSItemRegistry.RAVENS_BANE.get())
-                .add(HnSItemRegistry.VOLCANO.get())
-
-                //Ice
-                .add(HnSItemRegistry.ICE_PIKE.get())
-                .add(HnSItemRegistry.FROSTBURN_DAGGER.get())
-
-                //Lightning
-                .add(HnSItemRegistry.BEONGAE.get())
-                .add(HnSItemRegistry.SKYSCORCHER.get())
-
-                //Nature
-                .add(HnSItemRegistry.BOUNTIFUL_HARVEST.get())
-                .add(HnSItemRegistry.THORN_CHAKRAM.get())
-                .add(HnSItemRegistry.BLADE_OF_GRASS.get())
-
-
-                //Blood
-                .add(HnSItemRegistry.VAMPIRE_KNIVES.get())
-
-                //Ender
-                .add(HnSItemRegistry.OBSIDIAN_CLAYMORE.get())
-                .add(HnSItemRegistry.STARFURY.get())
-
-                //Radiance
-                .add(HnSItemRegistry.SPECTRUM.get())
-                .add(HnSItemRegistry.MEOWMERE.get())
-                .add(HnSItemRegistry.HAMMUSH.get())
-
-                //Shadow
-                .add(HnSItemRegistry.LIGHTS_BANE.get())
-                .add(HnSItemRegistry.NIGHTS_EDGE.get())
-                .add(HnSItemRegistry.TRUE_NIGHTS_EDGE.get())
-
-                //Holy
-                .add(HnSItemRegistry.HAMMER_OF_JUSTICE.get())
-                .add(HnSItemRegistry.DIVINE_GREATSWORD.get())
-                .add(HnSItemRegistry.EXCALIBUR.get())
-                .add(HnSItemRegistry.HAZENS_EXCALIBUR.get())
-                .add(HnSItemRegistry.ISS_EXCALIBUR.get())
-
-                //Evocation
-                .add(HnSItemRegistry.MALICE.get())
-                .add(HnSItemRegistry.ANCIENT_WARRIORS_AXE.get())
-
-                //Eldritch
-                .add(HnSItemRegistry.THE_DEVOURER.get())
-
-                //Misc
-                .add(HnSItemRegistry.MAGE_BANE.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_WARLOCK_AXE.get())
-                .add(HnSItemRegistry.MURAMASA.get())
-                .add(HnSItemRegistry.DAWNMAKER.get())
-
-
-                /*
-                *** Tools
-                 */
-
-                .add(HnSItemRegistry.SPECTRAL_PICKAXE.get())
-                .add(HnSItemRegistry.PICKAXE_AXE.get())
-                .add(HnSItemRegistry.PICKAXE_AXE_DIVINE_GOLD.get())
-
-                /*
-                ***
-                */
-
-                .add(HnSItemRegistry.WISEWOOD_CANE.get())
-                .add(HnSItemRegistry.FRIEREN_STAFF.get())
-                .add(HnSItemRegistry.ROD_OF_DISCORD.get())
-        ;
-
-        tag(ModTags.CAN_BE_UPGRADED)
-
-                //Fire
-                .add(HnSItemRegistry.FIREBLOSSOM_RAPIER.get())
-                .add(HnSItemRegistry.DRACONIC_SPLITTER.get())
-                .add(HnSItemRegistry.FIREBRAND.get())
-                .add(HnSItemRegistry.WARFLAMING_LANCE.get())
-                .add(HnSItemRegistry.RAVENS_BANE.get())
-                .add(HnSItemRegistry.VOLCANO.get())
-
-                //Ice
-                .add(HnSItemRegistry.ICE_PIKE.get())
-                .add(HnSItemRegistry.FROSTBURN_DAGGER.get())
-
-                //Lightning
-                .add(HnSItemRegistry.BEONGAE.get())
-                .add(HnSItemRegistry.SKYSCORCHER.get())
-
-                //Nature
-                .add(HnSItemRegistry.BOUNTIFUL_HARVEST.get())
-                .add(HnSItemRegistry.THORN_CHAKRAM.get())
-                .add(HnSItemRegistry.BLADE_OF_GRASS.get())
-
-                //Blood
-                .add(HnSItemRegistry.VAMPIRE_KNIVES.get())
-
-                //Ender
-                .add(HnSItemRegistry.OBSIDIAN_CLAYMORE.get())
-                .add(HnSItemRegistry.STARFURY.get())
-
-                //Radiance
-                .add(HnSItemRegistry.SPECTRUM.get())
-                .add(HnSItemRegistry.MEOWMERE.get())
-                .add(HnSItemRegistry.HAMMUSH.get())
-
-                //Shadow
-                .add(HnSItemRegistry.LIGHTS_BANE.get())
-                .add(HnSItemRegistry.NIGHTS_EDGE.get())
-                .add(HnSItemRegistry.TRUE_NIGHTS_EDGE.get())
-
-                //Holy
-                .add(HnSItemRegistry.HAMMER_OF_JUSTICE.get())
-                .add(HnSItemRegistry.DIVINE_GREATSWORD.get())
-                .add(HnSItemRegistry.EXCALIBUR.get())
-                .add(HnSItemRegistry.HAZENS_EXCALIBUR.get())
-                .add(HnSItemRegistry.ISS_EXCALIBUR.get())
-
-                //Evocation
-                .add(HnSItemRegistry.MALICE.get())
-                .add(HnSItemRegistry.ANCIENT_WARRIORS_AXE.get())
-
-                //Eldritch
-                .add(HnSItemRegistry.THE_DEVOURER.get())
-
-                //Misc
-                .add(HnSItemRegistry.MAGE_BANE.get())
-                .add(HnSItemRegistry.LEGIONNAIRE_WARLOCK_AXE.get())
-                .add(HnSItemRegistry.MURAMASA.get())
-                .add(HnSItemRegistry.DAWNMAKER.get())
-
-
-                /*
-                 *** Tools
-                 */
-
-                .add(HnSItemRegistry.SPECTRAL_PICKAXE.get())
-                .add(HnSItemRegistry.PICKAXE_AXE.get())
-                .add(HnSItemRegistry.PICKAXE_AXE_DIVINE_GOLD.get())
-
-                /*
-                 *** Staves
-                 */
-
-                .add(HnSItemRegistry.WISEWOOD_CANE.get())
-                .add(HnSItemRegistry.FRIEREN_STAFF.get())
-                .add(HnSItemRegistry.ROD_OF_DISCORD.get())
-        ;
-
         tag(ModTags.INSCRIBED_RUNES)
                 .add(HnSItemRegistry.MELEE_RUNE.get())
                 .add(HnSItemRegistry.ARCHERY_RUNE.get())
@@ -1406,6 +1381,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.ELDRITCH_RUNE.get())
                 .add(HnSItemRegistry.SHADOW_RUNE.get())
                 .add(HnSItemRegistry.RADIANCE_RUNE.get())
+                .add(HnSItemRegistry.COSMIC_RUNE.get())
+                .add(HnSItemRegistry.HYDRO_RUNE.get())
         ;
 
     }

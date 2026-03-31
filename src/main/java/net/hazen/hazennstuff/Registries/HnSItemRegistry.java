@@ -2,109 +2,125 @@ package net.hazen.hazennstuff.Registries;
 
 import io.redspace.ironsspellbooks.item.UpgradeOrbItem;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
-import io.redspace.ironsspellbooks.registries.EntityRegistry;
 import io.redspace.ironsspellbooks.render.CinderousRarity;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.ArbitriumRobes.ArbitriumRobesArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.ArbitriumRobes.ArbitriumRobesElytraArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.ArbitriumRobes.Ascended.AscendedArbitriumRobesArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.ArbitriumRobes.Ascended.AscendedArbitriumRobesElytraArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.Blazeborne.BlazeborneArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.CreakingSorcerer.CreakingSorcererArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.DarkRitualTemplar.DarkRitualTemplarArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.EnderDragon.EnderDragonArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.Fireblossom.PureTier.Legacy.FireblossomBattlemageArmorItemLegacy;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.Fireblossom.PureTier.Legacy.FireblossomBattlemageCrownedArmorItemLegacy;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.Fireblossom.PureTier.Legacy.FireblossomBattlemageHelmetArmorItemLegacy;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.GabrielULTRAKILL.GabrielArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.GabrielULTRAKILL.GabrielElytraArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.Infestation.InfestationArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.LemonGod.Ascended.AscendedLemonGodArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.LemonGod.LemonGodArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.SLCCat.SLCCatArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.Seraph.SeraphArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.SoulFlame.SoulFlameArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.SupremeWitch.SupremeWitchArmorItem;
-import net.hazen.hazennstuff.Item.Armor.AzureLib.TheWither.TheWitherArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.AbberantPredator.AbberantPredatorArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.AlchemistSupreme.AlchemistSupremeArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.ArbitriumRobes.Ascended.GeckolibAscendedArbitriumRobesArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.ArbitriumRobes.Ascended.GeckolibAscendedArbitriumRobesElytraItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.ArbitriumRobes.GeckolibArbitriumRobesArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.ArbitriumRobes.GeckolibArbitriumRobesElytraItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Atlas.AtlasArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.BishopOfDeceitArmor.BishopOfDeceitArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Blazeborne.GeckolibBlazeborneArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.BountyHunter.BountyHunterArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Calamitas.CalamitasArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Calamitas.CalamitasChestplateArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.ChargedScourge.GeckolibChargedScourgeArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Chlorophyte.ChlorophyteArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Chlorophyte.Headgear.ChlorophyteHeadgearArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Chlorophyte.Helmet.ChlorophyteHelmetArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Chlorophyte.Mask.ChlorophyteMaskArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.CreakingSorcerer.GeckolibCreakingSorcererArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.CryogenicRuler.CryogenicRulerArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.CrystalArachnid.CrystalArachnidArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.DarkRitualTemplar.GeckolibDarkRitualTemplarArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.DreadsteelKnight.DreadsteelKnightArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.EnderDragon.GeckolibEnderDragonArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Fireblossom.PureTier.Legacy.GeckolibFireblossomBattlemageArmorItemLegacy;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Fireblossom.PureTier.Legacy.GeckolibFireblossomBattlemageCrownedArmorItemLegacy;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Fireblossom.PureTier.Legacy.GeckolibFireblossomBattlemageHelmetArmorItemLegacy;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.FleshMass.FleshMassArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Frieren.FrierenArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.FrostbiteHunter.FrostbiteHunterArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.FrostbiteKnight.FrostbiteKnightArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.GabrielULTRAKILL.GeckolibGabrielArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.GabrielULTRAKILL.GeckolibGabrielElytraItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.GarmentsOfTheFirstFlamebearer.GarmentsOfTheFirstFlamebearerArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.GarmentsOfTheFirstFlamebearer.GarmentsOfTheFirstFlamebearerChestplateArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.GarmentsOfTheFirstFlamebearer.SoulMode.GarmentsOfTheFirstFlamebearerSoulArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.GarmentsOfTheFirstFlamebearer.SoulMode.GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.GiornoGiovanna.GiornoGiovannaArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Hazel.HazelArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Hazel.HazelHOLYMOLYArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.HertaPuppet.HertaPuppetArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Infestation.GeckolibInfestationArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Iron431.Ascended.AscendedIron431ArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Iron431.Iron431ArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Legionnaire.OldLegionnaireArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.LegionnaireCommander.LegionnaireCommanderArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.LegionnaireRuler.LegionnaireRulerArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.LegionnaireRuler.Soul.SoulLegionnaireRulerArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.LemonGod.Ascended.GeckolibAscendedLemonGodArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.LemonGod.GeckolibLemonGodArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.MageHunter.MageHunterArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Maverick.MaverickArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Miner.MinerArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.MithrilBattlemage.MithrilBattlemageArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.MothicWitch.MothicWitchArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.MothicWitch.NerfedMothicWitchArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.MyceliumGuardian.MyceliumGuardianArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.NamelessOneArmor.NamelessOneArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.NecromancerArmor.NecromancerArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Neru.AkitaNeruArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.PermafrostPrince.PermafrostPrinceArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.ProjectSekai.ProjectSekaiArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.PyriumArmor.PyriumArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.PyriumBattlemage.PyriumBattlemageArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.PyromancerBrute.PyromancerBruteArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.RottenGirl.RottenGirlArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.SacredRobes.Ascended.AscendedSacredRobesArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.SacredRobes.SacredRobesArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Seraph.GeckolibSeraphArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.ShadowScale.ShadowScaleArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.ShadowWalkerEnderman.ShadowwalkerEndermanArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.ShadowWalkerEnderman.ShadowwalkerEndermanBlindfoldItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.ShadowWalkerEnderman.ShadowwalkerEndermanHoodItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.SoulFlame.GeckolibSoulFlameArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.SpectralSpelunker.SpectralSpelunkerArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.SupremeWitch.GeckolibSupremeWitchArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.SynthesizerV.SynthesizerVArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.TheWither.GeckolibTheWitherArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.ThunderProwler.ThunderProwlerArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Geckolib.Utau.UtauArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.AzureLib.ArbitriumRobesArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.AzureLib.ArbitriumRobesElytraArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.Ascended.AzureLib.AscendedArbitriumRobesArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.Ascended.AzureLib.AscendedArbitriumRobesElytraArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.DormantTier.AzureLib.FireblossomGownArmor;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.DormantTier.GeckoLibFireblossomGownArmor;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.PureTier.AzureLib.FireblossomBattlemageArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.PureTier.GeckoLibFireblossomBattlemageArmor;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.SchoolTier.AzureLib.FireblossomKnightArmor;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.SchoolTier.GeckoLibFireblossomKnightArmor;
+import net.hazen.hazennstuff.Item.Armor.PureTier.AstraconicWeaver.AzureLib.AstraconicWeaverArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.AstraconicWeaver.GeckolibAstraconicWeaverArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.Blazeborne.AzureLib.BlazeborneArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.ChargedScourge.AzureLib.CreakingSorcererArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.DarkRitualTemplar.AzureLib.DarkRitualTemplarArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.ElderGuardian.ElderGuardianArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.EnderDragon.AzureLib.EnderDragonArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.Legacy.AzureLib.FireblossomBattlemageArmorItemLegacy;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.Legacy.AzureLib.FireblossomBattlemageCrownedArmorItemLegacy;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.Legacy.AzureLib.FireblossomBattlemageHelmetArmorItemLegacy;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.GabrielULTRAKILL.AzureLib.GabrielArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.GabrielULTRAKILL.AzureLib.GabrielElytraArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.Glassweaver.GlassweaverArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.Infestation.AzureLib.InfestationArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.LemonGod.Ascended.AzureLib.AscendedLemonGodArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.LemonGod.AzureLib.LemonGodArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.SLCCat.SLCCatArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.Seraph.AzureLib.SeraphArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.SoulFlame.AzureLib.SoulFlameArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.ShadowJester.ShadowJesterArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.SupremeWitch.AzureLib.SupremeWitchArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.TheWither.AzureLib.TheWitherArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.AbberantPredator.AbberantPredatorArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.AlchemistSupreme.AlchemistSupremeArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.Ascended.GeckolibAscendedArbitriumRobesArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.Ascended.GeckolibAscendedArbitriumRobesElytraItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.GeckolibArbitriumRobesArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.GeckolibArbitriumRobesElytraItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Atlas.AtlasArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Misc.BishopOfDeceitArmor.BishopOfDeceitArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.Blazeborne.GeckolibBlazeborneArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Ranger.BountyHunter.BountyHunterArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Calamitas.CalamitasArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Calamitas.CalamitasChestplateArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.ChargedScourge.GeckolibChargedScourgeArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Chlorophyte.ChlorophyteArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Chlorophyte.Headgear.ChlorophyteHeadgearArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Chlorophyte.Helmet.ChlorophyteHelmetArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Chlorophyte.Mask.ChlorophyteMaskArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.CreakingSorcerer.GeckolibCreakingSorcererArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.CryogenicRuler.CryogenicRulerArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.CrystalArachnid.CrystalArachnidArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.DarkRitualTemplar.GeckolibDarkRitualTemplarArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Melee.DreadsteelKnight.DreadsteelKnightArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.EnderDragon.GeckolibEnderDragonArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.Legacy.GeckolibFireblossomBattlemageArmorItemLegacy;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.Legacy.GeckolibFireblossomBattlemageCrownedArmorItemLegacy;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.Legacy.GeckolibFireblossomBattlemageHelmetArmorItemLegacy;
+import net.hazen.hazennstuff.Item.Armor.PureTier.FleshMass.FleshMassArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.Battlemage.Frieren.FrierenArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Ranger.FrostbiteHunter.FrostbiteHunterArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Melee.FrostbiteKnight.FrostbiteKnightArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.GabrielULTRAKILL.GeckolibGabrielArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.GabrielULTRAKILL.GeckolibGabrielElytraItem;
+import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.GarmentsOfTheFirstFlamebearer.GarmentsOfTheFirstFlamebearerArmorItem;
+import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.GarmentsOfTheFirstFlamebearer.GarmentsOfTheFirstFlamebearerChestplateArmorItem;
+import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.GarmentsOfTheFirstFlamebearer.SoulMode.GarmentsOfTheFirstFlamebearerSoulArmorItem;
+import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.GarmentsOfTheFirstFlamebearer.SoulMode.GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.Battlemage.GiornoGiovanna.GiornoGiovannaArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Hazel.HazelArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Hazel.HazelHOLYMOLYArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.HertaPuppet.HertaPuppetArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.Infestation.GeckolibInfestationArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Iron431.Ascended.AscendedIron431ArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Iron431.Iron431ArmorItem;
+import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.Legionnaire.OldLegionnaireArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Melee.LegionnaireCommander.LegionnaireCommanderArmorItem;
+import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.LegionnaireRuler.LegionnaireRulerArmorItem;
+import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.LegionnaireRuler.Soul.SoulLegionnaireRulerArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.LemonGod.Ascended.GeckolibAscendedLemonGodArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.LemonGod.GeckolibLemonGodArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Battlemage.MageHunter.MageHunterArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.Maverick.MaverickArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Misc.Miner.MinerArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Battlemage.MithrilBattlemage.MithrilBattlemageArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.MothicWitch.MothicWitchArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.MothicWitch.NerfedMothicWitchArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.MyceliumGuardian.MyceliumGuardianArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Misc.NamelessOneArmor.NamelessOneArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Misc.NecromancerArmor.NecromancerArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.Neru.AkitaNeruArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Ranger.PermafrostPrince.PermafrostPrinceArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.ProjectSekai.ProjectSekaiArmorItem;
+import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.PyriumArmor.PyriumArmorItem;
+import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.PyriumBattlemage.PyriumBattlemageArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Misc.PyromancerBrute.PyromancerBruteArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.RottenGirl.RottenGirlArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.SacredRobes.Ascended.AscendedSacredRobesArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Dedicated.SacredRobes.SacredRobesArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.Seraph.GeckolibSeraphArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.ShadowScale.ShadowScaleArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Misc.ShadowWalkerEnderman.ShadowwalkerEndermanArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Misc.ShadowWalkerEnderman.ShadowwalkerEndermanBlindfoldItem;
+import net.hazen.hazennstuff.Item.Armor.Misc.ShadowWalkerEnderman.ShadowwalkerEndermanHoodItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.SoulFlame.GeckolibSoulFlameArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Misc.SpectralSpelunker.SpectralSpelunkerArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.SupremeWitch.GeckolibSupremeWitchArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.SynthesizerV.SynthesizerVArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.TheWither.GeckolibTheWitherArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.ThunderProwler.ThunderProwlerArmorItem;
+import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.Utau.UtauArmorItem;
+import net.hazen.hazennstuff.Item.Armor.SchoolTier.CosmicScholar.AzureLib.CosmicScholarArmorItem;
+import net.hazen.hazennstuff.Item.Armor.SchoolTier.CosmicScholar.GeckolibCosmicScholarArmorItem;
+import net.hazen.hazennstuff.Item.Armor.SchoolTier.MaskedFool.MaskedFoolArmorItem;
+import net.hazen.hazennstuff.Item.Armor.SchoolTier.NautilusKnight.NautilusKnightArmorItem;
+import net.hazen.hazennstuff.Item.Armor.SchoolTier.RadiantCrystal.AzureLib.RadiantCrystalArmorItem;
+import net.hazen.hazennstuff.Item.Armor.SchoolTier.RadiantCrystal.GeckolibRadiantCrystalArmorItem;
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Item.Curios.Crystals.LifeCrystals.SacredCurio;
@@ -128,12 +144,17 @@ import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.Energ
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.GoldenShowerSpellbook;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWings;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSFoodProperties;
+import net.hazen.hazennstuff.Item.SpawnEggs.SpawnVoidWanderer;
 import net.hazen.hazennstuff.Item.Staves.BlossomOfTheEnchantress.BlossomOfTheEnchantress;
+import net.hazen.hazennstuff.Item.Staves.CeaselessVoid.CeaselessVoid;
+import net.hazen.hazennstuff.Item.Staves.CoraliteCane.CoraliteCane;
 import net.hazen.hazennstuff.Item.Staves.DivineScepter.DivineScepter;
 import net.hazen.hazennstuff.Item.Staves.EnderconicScepter.EnderconicScepter;
 import net.hazen.hazennstuff.Item.Staves.Frieren.FrierenStaff;
+import net.hazen.hazennstuff.Item.Staves.GlassweaverStaff.GlassweaverScepter;
 import net.hazen.hazennstuff.Item.Staves.GrimoireStaff.GrimoireStaff;
 import net.hazen.hazennstuff.Item.Staves.InsaniaAeternus.InsaniaAeternus;
+import net.hazen.hazennstuff.Item.Staves.Nexus.Nexus;
 import net.hazen.hazennstuff.Item.Staves.RodOfDiscord.RodOfDiscord;
 import net.hazen.hazennstuff.Item.Staves.SoulcallingScepter.SoulcallingScepter;
 import net.hazen.hazennstuff.Item.Staves.WhiteLilyStaff.WhiteLilyStaff;
@@ -154,6 +175,7 @@ import net.hazen.hazennstuff.Item.Weapons.Ascended.Provocation.Dormant.Provocati
 import net.hazen.hazennstuff.Item.Weapons.Ascended.RavensBane.RavensBaneItem;
 import net.hazen.hazennstuff.Item.Weapons.Ascended.Umbranova.Dormant.Umbranova;
 import net.hazen.hazennstuff.Item.Weapons.Generic.AncientWarriorsAxe.AncientWarriorsAxeItem;
+import net.hazen.hazennstuff.Item.Weapons.Generic.AstraliteCleaver.AstraliteCleaver;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Beongae.BeongaeItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.BladeOfGrass.BladeOfGrassItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.BountifulHarvest.BountifulHarvestItem;
@@ -177,11 +199,13 @@ import net.hazen.hazennstuff.Item.Weapons.Generic.Muramasa.MuramasaItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.NightsEdge.NightsEdgeItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.ObsidianClaymore.ObsidianClaymoreItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Skyscorcher.SkyscorcherItem;
+import net.hazen.hazennstuff.Item.Weapons.Generic.SoulReaper.SoulReaper;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Spectrum.SpectrumItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Starfury.StarfuryItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Terraprisma.TerraprismaItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.TheDevourer.TheDevourerItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.ThornChakram.ThornChakramItem;
+import net.hazen.hazennstuff.Item.Weapons.Generic.TidalWave.TidalWave;
 import net.hazen.hazennstuff.Item.Weapons.Generic.TrueNightsEdge.TrueNightsEdgeItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.VampireKnives.VampireKnivesItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Volcano.VolcanoItem;
@@ -193,7 +217,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -207,14 +230,9 @@ public class HnSItemRegistry {
     *** [Spawn Eggs] *********************************************************************
      */
 
-    public static final DeferredItem<DeferredSpawnEggItem> VOID_WANDERER_EGG = ITEMS.register("void_wanderer_egg",
-            () -> new DeferredSpawnEggItem(HnSEntityRegistry.VOID_WANDERER,
-                    4074272,
-                    5331255,
-                    ItemPropertiesHelper.material()
-                            .stacksTo(64)
-            )
-    );
+    // Void wanderer
+    public static final DeferredHolder<Item, Item> VOID_WANDERER_EGG = ITEMS.register
+            ("void_wanderer_egg", SpawnVoidWanderer::new);
 
     /*
     *** [Blocks] **************************************************************************
@@ -339,6 +357,11 @@ public class HnSItemRegistry {
 
     //Eldritch Rune
     public static final DeferredHolder<Item, Item> ELDRITCH_RUNE = ITEMS.register("eldritch_rune",
+            () -> new Item(ItemPropertiesHelper.material())
+    );
+
+    //Hydro Rune
+    public static final DeferredHolder<Item, Item> HYDRO_RUNE = ITEMS.register("hydro_rune",
             () -> new Item(ItemPropertiesHelper.material())
     );
 
@@ -660,6 +683,20 @@ public class HnSItemRegistry {
                     .rarity(HnSRarities.COSMIC_RARITY.getValue()))
     );
 
+    // Arcane Sea Shell
+    public static final DeferredItem<Item> ARCANE_SEA_SHELL = ITEMS.register("arcane_sea_shell",
+            () -> new Item(new Item.Properties()
+                    .rarity(HnSRarities.HYDRO_RARITY.getValue()))
+    );
+
+    // Cosmic Gold Ingot
+    public static final DeferredItem<Item> COSMIC_GOLD_INGOT = ITEMS.register("cosmic_gold_ingot",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(HnSRarities.COSMIC_RARITY.getValue())
+                    .fireResistant())
+    );
+
     /*
      *** [Weapons] **************************************************************************
      */
@@ -802,13 +839,17 @@ public class HnSItemRegistry {
     public static final DeferredHolder<Item, Item> HAMMUSH = ITEMS.register
             ("hammush", HammushItem::new);
 
-    //Hammush
+    //Terraprisma
     public static final DeferredHolder<Item, Item> TERRAPRISMA = ITEMS.register
             ("terraprisma", TerraprismaItem::new);
 
     /*
      *** Shadow
      */
+
+    // Soul Reaper
+    public static final DeferredHolder<Item, Item> SOUL_REAPER = ITEMS.register
+            ("soul_reaper", SoulReaper::new);
 
     //Lights Bane
     public static final DeferredHolder<Item, Item> LIGHTS_BANE = ITEMS.register
@@ -872,6 +913,22 @@ public class HnSItemRegistry {
     //The Devourer
     public static final DeferredHolder<Item, Item> THE_DEVOURER = ITEMS.register
             ("the_devourer", TheDevourerItem::new);
+
+    /*
+    *** Cosmic
+     */
+
+    //Astralite Cleaveer
+    public static final DeferredHolder<Item, Item> ASTRALITE_CLEAVER = ITEMS.register
+            ("astralite_cleaver", AstraliteCleaver::new);
+
+    /*
+     *** Hydro
+     */
+
+    //Tidal Wave
+    public static final DeferredHolder<Item, Item> TIDAL_WAVE = ITEMS.register
+            ("tidal_wave", TidalWave::new);
 
     /*
      *** Misc
@@ -951,12 +1008,32 @@ public class HnSItemRegistry {
      *** Shadow
      */
 
+    //Ceaseless Void
+    public static final DeferredHolder<Item, Item> CEASELESS_VOID = ITEMS.register("ceaseless_void", CeaselessVoid::new);
+
     /*
      *** Radiance
      */
 
     //Rod of Discord
     public static final DeferredHolder<Item, Item> ROD_OF_DISCORD = ITEMS.register("rod_of_discord", RodOfDiscord::new);
+
+    //Glassweaver Scepter
+    public static final DeferredHolder<Item, Item> GLASSWEAVER_SCEPTER = ITEMS.register("glassweaver_sscepter", GlassweaverScepter::new);
+
+    /*
+     *** Hydro
+     */
+
+    //Coralite Cane
+    public static final DeferredHolder<Item, Item> CORALITE_CANE = ITEMS.register("coralite_cane", CoraliteCane::new);
+
+    /*
+     *** Cosmic
+     */
+
+    //Nexus
+    public static final DeferredHolder<Item, Item> NEXUS = ITEMS.register("nexus", Nexus::new);
 
     /*
      *** Eldritch
@@ -1924,6 +2001,58 @@ public class HnSItemRegistry {
 
     ));
 
+    // Masked Fool
+
+    public static final DeferredHolder<Item, Item> MASKED_FOOL_HELMET = ITEMS.register("masked_fool_helmet", () -> new MaskedFoolArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.SHADOW_RARITY.getValue())
+            .durability(ArmorItem.Type.HELMET.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> MASKED_FOOL_CHESTPLATE = ITEMS.register("masked_fool_chestplate", () -> new MaskedFoolArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.SHADOW_RARITY.getValue())
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> MASKED_FOOL_LEGGINGS = ITEMS.register("masked_fool_leggings", () -> new MaskedFoolArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.SHADOW_RARITY.getValue())
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> MASKED_FOOL_BOOTS = ITEMS.register("masked_fool_boots", () -> new MaskedFoolArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.SHADOW_RARITY.getValue())
+            .durability(ArmorItem.Type.BOOTS.getDurability(32))
+
+    ));
+
+    // Shadow Jester
+
+    public static final DeferredHolder<Item, Item> SHADOW_JESTER_HELMET = ITEMS.register("shadow_jester_helmet", () -> new ShadowJesterArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.SHADOW_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(64))
+    ));
+    public static final DeferredHolder<Item, Item> SHADOW_JESTER_CHESTPLATE = ITEMS.register("shadow_jester_chestplate", () -> new ShadowJesterArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.SHADOW_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
+    ));
+    public static final DeferredHolder<Item, Item> SHADOW_JESTER_LEGGINGS = ITEMS.register("shadow_jester_leggings", () -> new ShadowJesterArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.SHADOW_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
+    ));
+    public static final DeferredHolder<Item, Item> SHADOW_JESTER_BOOTS = ITEMS.register("shadow_jester_boots", () -> new ShadowJesterArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.SHADOW_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.BOOTS.getDurability(64))
+
+    ));
+
 
     /*
      *** Radiance
@@ -1955,6 +2084,287 @@ public class HnSItemRegistry {
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
 
+    ));
+
+    // Radiant Crystal
+
+    public static final DeferredHolder<Item, Item> RADIANT_CRYSTAL_HELMET = ITEMS.register("radiant_crystal_helmet", () -> new RadiantCrystalArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> RADIANT_CRYSTAL_CHESTPLATE = ITEMS.register("radiant_crystal_chestplate", () -> new RadiantCrystalArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> RADIANT_CRYSTAL_LEGGINGS = ITEMS.register("radiant_crystal_leggings", () -> new RadiantCrystalArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> RADIANT_CRYSTAL_BOOTS = ITEMS.register("radiant_crystal_boots", () -> new RadiantCrystalArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.BOOTS.getDurability(32))
+
+    ));
+
+    /*
+    *** GeckoLib
+     */
+
+    public static final DeferredHolder<Item, Item> GECKOLIB_RADIANT_CRYSTAL_HELMET = ITEMS.register("geckolib_radiant_crystal_helmet", () -> new GeckolibRadiantCrystalArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_RADIANT_CRYSTAL_CHESTPLATE = ITEMS.register("geckolib_radiant_crystal_chestplate", () -> new GeckolibRadiantCrystalArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_RADIANT_CRYSTAL_LEGGINGS = ITEMS.register("geckolib_radiant_crystal_leggings", () -> new GeckolibRadiantCrystalArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_RADIANT_CRYSTAL_BOOTS = ITEMS.register("geckolib_radiant_crystal_boots", () -> new GeckolibRadiantCrystalArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.BOOTS.getDurability(32))
+
+    ));
+
+    // Glassweaver Helmet
+
+    public static final DeferredHolder<Item, Item> GLASSWEAVER_HELMET = ITEMS.register("glassweaver_helmet", () -> new GlassweaverArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(64))
+    ));
+    public static final DeferredHolder<Item, Item> GLASSWEAVER_CHESTPLATE = ITEMS.register("glassweaver_chestplate", () -> new GlassweaverArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
+    ));
+    public static final DeferredHolder<Item, Item> GLASSWEAVER_LEGGINGS = ITEMS.register("glassweaver_leggings", () -> new GlassweaverArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
+    ));
+    public static final DeferredHolder<Item, Item> GLASSWEAVER_BOOTS = ITEMS.register("glassweaver_boots", () -> new GlassweaverArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.BOOTS.getDurability(64))
+
+    ));
+
+    /*
+     *** Cosmic
+     */
+
+    // Cosmic Scholar
+
+    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_HELMET = ITEMS.register("cosmic_scholar_helmet", () -> new CosmicScholarArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_CHESTPLATE = ITEMS.register("cosmic_scholar_chestplate", () -> new CosmicScholarArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_LEGGINGS = ITEMS.register("cosmic_scholar_leggings", () -> new CosmicScholarArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_BOOTS = ITEMS.register("cosmic_scholar_boots", () -> new CosmicScholarArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.BOOTS.getDurability(32))
+
+    ));
+
+
+
+    // GeckoLib
+
+
+
+    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_HELMET = ITEMS.register("geckolib_cosmic_scholar_helmet", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_CHESTPLATE = ITEMS.register("geckolib_cosmic_scholar_chestplate", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_LEGGINGS = ITEMS.register("geckolib_cosmic_scholar_leggings", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_BOOTS = ITEMS.register("geckolib_cosmic_scholar_boots", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.BOOTS.getDurability(32))
+
+    ));
+
+
+
+    // Astraconic Weaver
+
+
+
+    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_HELMET = ITEMS.register("astraconic_weaver_helmet", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(64))
+    ));
+    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_CHESTPLATE = ITEMS.register("astraconic_weaver_chestplate", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
+    ));
+    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_LEGGINGS = ITEMS.register("astraconic_weaver_leggings", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
+    ));
+    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_BOOTS = ITEMS.register("astraconic_weaver_boots", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.BOOTS.getDurability(64))
+
+    ));
+
+
+
+    // Geckolib
+
+
+
+    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_HELMET = ITEMS.register("geckolib_astraconic_weaver_helmet", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(64))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_CHESTPLATE = ITEMS.register("geckolib_astraconic_weaver_chestplate", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_LEGGINGS = ITEMS.register("geckolib_astraconic_weaver_leggings", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_BOOTS = ITEMS.register("geckolib_astraconic_weaver_boots", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.COSMIC_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.BOOTS.getDurability(64))
+
+    ));
+
+
+
+    /*
+     *** Hydro
+     */
+
+
+
+    // Nautilus Knight
+
+    public static final DeferredHolder<Item, Item> NAUTILUS_KNIGHT_HELMET = ITEMS.register("nautilus_knight_helmet", () -> new NautilusKnightArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> NAUTILUS_KNIGHT_CHESTPLATE = ITEMS.register("nautilus_knight_chestplate", () -> new NautilusKnightArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> NAUTILUS_KNIGHT_LEGGINGS = ITEMS.register("nautilus_knight_leggings", () -> new NautilusKnightArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> NAUTILUS_KNIGHT_BOOTS = ITEMS.register("nautilus_knight_boots", () -> new NautilusKnightArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.BOOTS.getDurability(32))
+
+    ));
+
+
+    // Elder Guardian
+
+    public static final DeferredHolder<Item, Item> ELDER_GUARDIAN_HELMET = ITEMS.register("elder_guardian_helmet", () -> new ElderGuardianArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .fireResistant()
+            .rarity(HnSRarities.HYDRO_RARITY.getValue())
+            .durability(ArmorItem.Type.HELMET.getDurability(64))
+    ));
+
+    public static final DeferredHolder<Item, Item> ELDER_GUARDIAN_CHESTPLATE = ITEMS.register("elder_guardian_chestplate", () -> new ElderGuardianArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.HYDRO_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
+    ));
+
+    public static final DeferredHolder<Item, Item> ELDER_GUARDIAN_LEGGINGS = ITEMS.register("elder_guardian_leggings", () -> new ElderGuardianArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.HYDRO_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
+    ));
+
+    public static final DeferredHolder<Item, Item> ELDER_GUARDIAN_BOOTS = ITEMS.register("elder_guardian_boots", () -> new ElderGuardianArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .fireResistant()
+            .rarity(HnSRarities.HYDRO_RARITY.getValue())
+            .durability(ArmorItem.Type.BOOTS.getDurability(64))
     ));
 
     /*
@@ -2764,39 +3174,221 @@ public class HnSItemRegistry {
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
     ));
 
-    //Fireblossom
+    /*
+    *** Fireblossom Sets
+     */
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_CROWN = ITEMS.register("fireblossom_crown", () -> new FireblossomBattlemageCrownedArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
+    // Gown
+
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_GOWN_HELMET = ITEMS.register("fireblossom_gown_helmet", () -> new FireblossomGownArmor(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .durability(ArmorItem.Type.HELMET.getDurability(16))
+    ));
+
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_GOWN_CHESTPLATE = ITEMS.register("fireblossom_gown_chestplate", () -> new FireblossomGownArmor(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(16))
+    ));
+
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_GOWN_LEGGINGS = ITEMS.register("fireblossom_gown_leggings", () -> new FireblossomGownArmor(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(16))
+    ));
+
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_GOWN_BOOTS = ITEMS.register("fireblossom_gown_boots", () -> new FireblossomGownArmor(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .durability(ArmorItem.Type.BOOTS.getDurability(16))
+    ));
+
+
+
+    //*** Geckolib ***
+
+
+
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_GOWN_HELMET = ITEMS.register("geckolib_fireblossom_gown_helmet", () -> new GeckoLibFireblossomGownArmor(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .durability(ArmorItem.Type.HELMET.getDurability(16))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_GOWN_CHESTPLATE = ITEMS.register("geckolib_fireblossom_gown_chestplate", () -> new GeckoLibFireblossomGownArmor(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(16))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_GOWN_LEGGINGS = ITEMS.register("geckolib_fireblossom_gown_leggings", () -> new GeckoLibFireblossomGownArmor(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(16))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_GOWN_BOOTS = ITEMS.register("geckolib_fireblossom_gown_boots", () -> new GeckoLibFireblossomGownArmor(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .durability(ArmorItem.Type.BOOTS.getDurability(16))
+
+    ));
+
+    // Fireblossom Knight
+
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_KNIGHT_HELMET = ITEMS.register("fireblossom_knight_helmet", () -> new FireblossomKnightArmor(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(32))
+    ));
+
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_KNIGHT_CHESTPLATE = ITEMS.register("fireblossom_knight_chestplate", () -> new FireblossomKnightArmor(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
+    ));
+
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_KNIGHT_LEGGINGS = ITEMS.register("fireblossom_knight_leggings", () -> new FireblossomKnightArmor(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
+    ));
+
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_KNIGHT_BOOTS = ITEMS.register("fireblossom_knight_boots", () -> new FireblossomKnightArmor(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.BOOTS.getDurability(32))
+    ));
+
+
+
+    //*** Geckolib ***
+
+
+
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_KNIGHT_HELMET = ITEMS.register("geckolib_fireblossom_knight_helmet", () -> new GeckoLibFireblossomKnightArmor(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_KNIGHT_CHESTPLATE = ITEMS.register("geckolib_fireblossom_knight_chestplate", () -> new GeckoLibFireblossomKnightArmor(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_KNIGHT_LEGGINGS = ITEMS.register("geckolib_fireblossom_knight_leggings", () -> new GeckoLibFireblossomKnightArmor(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(3216))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_KNIGHT_BOOTS = ITEMS.register("geckolib_fireblossom_knight_boots", () -> new GeckoLibFireblossomKnightArmor(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.BOOTS.getDurability(32))
+
+    ));
+
+    // Fireblossom Knight
+
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("fireblossom_battlemage_helmet", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(32))
+    ));
+
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("fireblossom_battlemage_chestplate", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
+    ));
+
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("fireblossom_battlemage_leggings", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
+    ));
+
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("fireblossom_battlemage_boots", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.BOOTS.getDurability(32))
+    ));
+
+
+
+    //*** Geckolib ***
+
+
+
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("geckolib_fireblossom_battlemage_helmet", () -> new GeckoLibFireblossomBattlemageArmor(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("geckolib_fireblossom_battlemage_chestplate", () -> new GeckoLibFireblossomBattlemageArmor(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("geckolib_fireblossom_battlemage_leggings", () -> new GeckoLibFireblossomBattlemageArmor(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(3216))
+    ));
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("geckolib_fireblossom_battlemage_boots", () -> new GeckoLibFireblossomBattlemageArmor(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.BOOTS.getDurability(32))
+
+    ));
+
+    // Legacy
+
+    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_CROWN = ITEMS.register("legacy_fireblossom_crown", () -> new FireblossomBattlemageCrownedArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("fireblossom_helmet", () -> new FireblossomBattlemageHelmetArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("legacy_fireblossom_helmet", () -> new FireblossomBattlemageHelmetArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("fireblossom_chestplate", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("legacy_fireblossom_chestplate", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("fireblossom_leggings", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("legacy_fireblossom_leggings", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("fireblossom_boots", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("legacy_fireblossom_boots", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
     ));
@@ -2807,32 +3399,32 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN = ITEMS.register("geckolib_fireblossom_crown", () -> new GeckolibFireblossomBattlemageCrownedArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN = ITEMS.register("legacy_geckolib_fireblossom_crown", () -> new GeckolibFireblossomBattlemageCrownedArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("geckolib_fireblossom_helmet", () -> new GeckolibFireblossomBattlemageHelmetArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("legacy_geckolib_fireblossom_helmet", () -> new GeckolibFireblossomBattlemageHelmetArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("geckolib_fireblossom_chestplate", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("legacy_geckolib_fireblossom_chestplate", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("geckolib_fireblossom_leggings", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("legacy_geckolib_fireblossom_leggings", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("geckolib_fireblossom_boots", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("legacy_geckolib_fireblossom_boots", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
+            .rarity(HnSRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
 

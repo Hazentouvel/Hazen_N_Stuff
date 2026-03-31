@@ -88,4 +88,16 @@ public class HnSRarities {
             "hazennstuff:cosmic",
             (UnaryOperator<Style>) ((style) -> style.withColor(0x473196))
     );
+
+    public static final EnumProxy<Rarity> HYDRO_RARITY = new EnumProxy<>(Rarity.class,
+            -1,
+            "hazennstuff:hydro",
+            (UnaryOperator<Style>) ((style) -> style.withColor(0x275ffb))
+    );
+
+    public static final EnumProxy<Rarity> FIREBLOSSOM_RARITY = new EnumProxy<>(Rarity.class,
+            -1,
+            "hazennstuff:fireblossom",
+            (UnaryOperator<Style>) ((style) -> style.withColor(0xee6646))
+    );
 }

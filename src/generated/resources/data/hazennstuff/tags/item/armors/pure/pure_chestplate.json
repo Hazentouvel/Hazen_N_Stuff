@@ -13,6 +13,7 @@
     "hazennstuff:charged_scourge_chestplate",
     "hazennstuff:thunder_prowler_chestplate",
     "hazennstuff:creaking_chestplate",
+    "hazennstuff:geckolib_creaking_chestplate",
     "hazennstuff:flesh_mass_chestplate",
     "hazennstuff:flesh_mass_leggings",
     "hazennstuff:the_wither_chestplate",
@@ -25,6 +26,8 @@
     "hazennstuff:geckolib_gabriel_ultrakill_leggings",
     "hazennstuff:mothic_witch_chestplate",
     "hazennstuff:how_did_you_find_the_mothic_witch_chestplate",
+    "hazennstuff:supreme_witch_leggings",
+    "hazennstuff:geckolib_supreme_witch_leggings",
     "hazennstuff:alchemist_supreme_chestplate",
     "hazennstuff:mycelium_guardian_chestplate",
     "hazennstuff:shadow_scale_chestplate",
@@ -40,11 +43,15 @@
     "hazennstuff:dreadsteel_knight_chestplate",
     "hazennstuff:dark_ritual_templar_chestplate",
     "hazennstuff:geckolib_dark_ritual_templar_chestplate",
-    "hazennstuff:fireblossom_chestplate",
-    "hazennstuff:geckolib_fireblossom_chestplate",
+    "hazennstuff:legacy_fireblossom_chestplate",
+    "hazennstuff:legacy_geckolib_fireblossom_chestplate",
     "hazennstuff:maverick_chestplate",
     "hazennstuff:slc_cat_chestplate",
     "hazennstuff:abberant_predator_chestplate",
-    "hazennstuff:chlorophyte_chestplate"
+    "hazennstuff:chlorophyte_chestplate",
+    "hazennstuff:astraconic_weaver_chestplate",
+    "hazennstuff:glassweaver_chestplate",
+    "hazennstuff:shadow_jester_chestplate",
+    "hazennstuff:elder_guardian_chestplate"
   ]
 }

@@ -12,10 +12,12 @@ import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
-import net.hazen.hazennstuff.Entity.Spells.Fire.ScorchingSlash.ScorchingSlash;
+import net.hazen.hazennstuff.Animations.HnSSpellAnimations;
+import net.hazen.hazennstuff.Entity.Spells.Fire.ScorchingSlash.ScorchingBlade;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.ScorchingSlash.ScorchingSlashOptions;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
+import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractRavensBaneSpell;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
@@ -62,16 +64,16 @@ public class ScorchingSlashSpell extends AbstractRavensBaneSpell {
         this.manaCostPerLevel = 15;
         this.baseSpellPower = 5;
         this.spellPowerPerLevel = 2;
-        this.castTime = 10;
+        this.castTime = 20;
         this.baseManaCost = 30;
     }
 
     public Optional<SoundEvent> getCastStartSound() {
-        return Optional.of(SoundRegistry.FLAMING_STRIKE_UPSWING.get());
+        return Optional.of(HnSSounds.SCORCHING_SLASH_WIND_UP.get());
     }
 
     public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of(SoundRegistry.FLAMING_STRIKE_SWING.get());
+        return Optional.of(HnSSounds.SCORCHING_SLASH_SWING.get());
     }
 
     public CastType getCastType() {
@@ -91,11 +93,11 @@ public class ScorchingSlashSpell extends AbstractRavensBaneSpell {
     }
 
     public AnimationHolder getCastStartAnimation() {
-        return SpellAnimations.ONE_HANDED_HORIZONTAL_SWING_ANIMATION;
+        return HnSSpellAnimations.SCORCHING_SLASH_STANCE;
     }
 
     public AnimationHolder getCastFinishAnimation() {
-        return AnimationHolder.pass();
+        return HnSSpellAnimations.SCORCHING_SLASH_SLASH;
     }
 
     public int getEffectiveCastTime(int spellLevel, @Nullable LivingEntity entity) {
@@ -107,7 +109,7 @@ public class ScorchingSlashSpell extends AbstractRavensBaneSpell {
         float distance = 1.9F;
         Vec3 forward = entity.getForward();
         Vec3 hitLocation = entity.position().add((double)0.0F, (double)(entity.getBbHeight() * 0.3F), (double)0.0F).add(forward.scale((double)distance));
-        List<Entity> entities = level.getEntities(entity, AABB.ofSize(hitLocation, (double)(radius * 2.0F), (double)radius, (double)(radius * 2.0F)));
+        List<Entity> entities = level.getEntities(entity, AABB.ofSize(hitLocation, (double)(radius * 4.0F), (double)radius, (double)(radius * 2.0F)));
         SpellDamageSource damageSource = this.getDamageSource(entity);
         for(Entity targetEntity : entities) {
             if (targetEntity instanceof LivingEntity && targetEntity.isAlive() && entity.isPickable() && targetEntity.position().subtract(entity.getEyePosition()).dot(forward) >= (double)0.0F && entity.distanceToSqr(targetEntity) < (double)(radius * radius) && Utils.hasLineOfSight(level, entity.getEyePosition(), targetEntity.getBoundingBox().getCenter(), true)) {
@@ -119,7 +121,7 @@ public class ScorchingSlashSpell extends AbstractRavensBaneSpell {
             }
         }
         if (!level.isClientSide) {
-            ScorchingSlash projectile = new ScorchingSlash(HnSEntityRegistry.SCORCHING_SLASH.get(), level);
+            ScorchingBlade projectile = new ScorchingBlade(HnSEntityRegistry.SCORCHING_SLASH.get(), level);
             projectile.setOwner(entity);
             projectile.setPos(entity.getX(), entity.getEyeY() - 0.2, entity.getZ());
             projectile.shoot(entity.getLookAngle().x, entity.getLookAngle().y, entity.getLookAngle().z, 1.6f, 0.05f);
@@ -127,7 +129,7 @@ public class ScorchingSlashSpell extends AbstractRavensBaneSpell {
             level.addFreshEntity(projectile);
         }
         boolean mirrored = playerMagicData.getCastingEquipmentSlot().equals(SpellSelectionManager.OFFHAND);
-        MagicManager.spawnParticles(level, new ScorchingSlashOptions((float)forward.x, (float)forward.y, (float)forward.z, mirrored, false, 1.0F), hitLocation.x, hitLocation.y + 0.3, hitLocation.z, 1, (double)0.0F, (double)0.0F, (double)0.0F, (double)0.0F, true);
+        MagicManager.spawnParticles(level, new ScorchingSlashOptions((float)forward.x, (float)forward.y, (float)forward.z, mirrored, false, 2.0F), hitLocation.x, hitLocation.y + 0.3, hitLocation.z, 1, (double)0.0F, (double)0.0F, (double)0.0F, (double)0.0F, true);
         super.onCast(level, spellLevel, entity, castSource, playerMagicData);
     }
 

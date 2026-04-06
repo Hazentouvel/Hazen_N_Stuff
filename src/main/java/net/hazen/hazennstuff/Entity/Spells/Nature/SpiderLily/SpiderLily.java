@@ -26,6 +26,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
@@ -39,6 +40,7 @@ import software.bernie.geckolib.animation.PlayState;
 import software.bernie.geckolib.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import java.util.List;
 import java.util.Optional;
 
 public class SpiderLily extends AbstractMagicProjectile implements GeoEntity {
@@ -78,6 +80,21 @@ public class SpiderLily extends AbstractMagicProjectile implements GeoEntity {
     }
 
     @Override
+    protected void onHitBlock(BlockHitResult blockHitResult) {
+        super.onHitBlock(blockHitResult);
+        if (this.level.isClientSide) return;
+        LivingEntity owner = (LivingEntity) this.getOwner();
+        Vec3 hitPos = blockHitResult.getLocation();
+        applyCounterspellArea(hitPos, owner, 3.0f);
+
+        if (!this.level.isClientSide && !hasEmittedPoison) {
+            createPoisonCloud(blockHitResult.getLocation());
+        }
+
+        discard();
+    }
+
+    @Override
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
 
@@ -86,53 +103,61 @@ public class SpiderLily extends AbstractMagicProjectile implements GeoEntity {
         Entity target = entityHitResult.getEntity();
         LivingEntity owner = (LivingEntity) this.getOwner();
 
-        CounterSpellEvent event = new CounterSpellEvent(owner, target);
-        NeoForge.EVENT_BUS.post(event);
+        // Use the target position as center for the area counterspell
+        Vec3 center = target.position();
+        applyCounterspellArea(center, owner, 3.0f);
 
-        if (!event.isCanceled()) {
-            if (target instanceof LivingEntity livingTarget) {
-                MagicData targetMagicData = MagicData.getPlayerMagicData(livingTarget);
+        if (target.getType() != EntityType.ENDERMAN && !hasEmittedPoison) {
+            createPoisonCloud(target.position());
+        }
 
-                if (target instanceof AntiMagicSusceptible antiMagicTarget) {
-                    if (antiMagicTarget instanceof IMagicSummon summon) {
-                        if (summon.getSummoner() == owner) {
-                            if (summon instanceof Mob mob && mob.getTarget() == null) {
-                                antiMagicTarget.onAntiMagic(targetMagicData);
-                            }
-                        } else {
+        discard();
+    }
+
+    // Apply counterspell behavior in an area centered at `center` with given radius
+    private void applyCounterspellArea(Vec3 center, LivingEntity owner, float radius) {
+        List<LivingEntity> targets = this.level.getEntitiesOfClass(LivingEntity.class,
+                AABB.ofSize(center, (double)radius * 2.0D, (double)radius * 2.0D, (double)radius * 2.0D));
+
+        for (LivingEntity livingTarget : targets) {
+            if (livingTarget == null || !livingTarget.isAlive()) continue;
+
+            CounterSpellEvent event = new CounterSpellEvent(owner, livingTarget);
+            NeoForge.EVENT_BUS.post(event);
+
+            if (event.isCanceled()) continue;
+
+            MagicData targetMagicData = MagicData.getPlayerMagicData(livingTarget);
+
+            if (livingTarget instanceof AntiMagicSusceptible antiMagicTarget) {
+                if (antiMagicTarget instanceof IMagicSummon summon) {
+                    if (summon.getSummoner() == owner) {
+                        if (summon instanceof Mob mob && mob.getTarget() == null) {
                             antiMagicTarget.onAntiMagic(targetMagicData);
                         }
                     } else {
                         antiMagicTarget.onAntiMagic(targetMagicData);
                     }
-                } else if (target instanceof ServerPlayer serverPlayer) {
-                    Utils.serverSideCancelCast(serverPlayer, true);
-                    MagicData.getPlayerMagicData(serverPlayer).getPlayerRecasts().removeAll(RecastResult.COUNTERSPELL);
-                } else if (target instanceof IMagicEntity magicEntity) {
-                    magicEntity.cancelCast();
+                } else {
+                    antiMagicTarget.onAntiMagic(targetMagicData);
                 }
+            } else if (livingTarget instanceof ServerPlayer serverPlayer) {
+                Utils.serverSideCancelCast(serverPlayer, true);
+                MagicData.getPlayerMagicData(serverPlayer).getPlayerRecasts().removeAll(RecastResult.COUNTERSPELL);
+            } else if (livingTarget instanceof IMagicEntity magicEntity) {
+                magicEntity.cancelCast();
+            }
 
-                for (Holder<MobEffect> mobEffect : livingTarget.getActiveEffectsMap().keySet().stream().toList()) {
-                    if (mobEffect.value() instanceof MagicMobEffect) {
-                        livingTarget.removeEffect(mobEffect);
-                    }
-                }
-
-                try {
-                    DamageSources.applyDamage(
-                            target,
-                            getDamage(),
-                            HnSSpellRegistries.COUNTERSPELL_SPIDER_LILY.get().getDamageSource(this, owner)
-                    );
-                } catch (Exception ignored) {}
-
-                if (target.getType() != EntityType.ENDERMAN && !hasEmittedPoison) {
-                    createPoisonCloud(target.position());
+            for (Holder<MobEffect> mobEffect : livingTarget.getActiveEffectsMap().keySet().stream().toList()) {
+                if (mobEffect.value() instanceof MagicMobEffect) {
+                    livingTarget.removeEffect(mobEffect);
                 }
             }
-        }
 
-        discard();
+            try {
+                DamageSources.applyDamage(livingTarget, damage, HnSSpellRegistries.COUNTERSPELL_SPIDER_LILY.get().getDamageSource(this, owner));
+            } catch (Exception ignored) {}
+        }
     }
 
 
@@ -149,17 +174,6 @@ public class SpiderLily extends AbstractMagicProjectile implements GeoEntity {
             this.level.addFreshEntity(cloud);
             hasEmittedPoison = true;
         }
-    }
-
-    @Override
-    protected void onHitBlock(BlockHitResult blockHitResult) {
-        super.onHitBlock(blockHitResult);
-
-        if (!this.level.isClientSide && !hasEmittedPoison) {
-            createPoisonCloud(blockHitResult.getLocation());
-        }
-
-        this.discard();
     }
 
     //ANIMATION

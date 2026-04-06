@@ -18,6 +18,8 @@ import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import static io.redspace.ironsspellbooks.datagen.IronRecipeProvider.schoolArmorSmithing;
+
 public class HnSRecipeProvider extends RecipeProvider implements IConditionBuilder {
     public HnSRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
@@ -207,6 +209,15 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('R', HnSItemRegistry.ROSE_QUARTZ.get())
                 .unlockedBy("has_rose_quartz", has(HnSItemRegistry.ROSE_QUARTZ.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/rose_gold_ingot"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.COSMIC_GOLD_INGOT.get())
+                .pattern("   ")
+                .pattern("SZ ")
+                .pattern("ZS ")
+                .define('Z', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('S', HnSItemRegistry.STARDUST.get())
+                .unlockedBy("has_stardust", has(HnSItemRegistry.STARDUST.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/cosmic_gold_ingot"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItemRegistry.STEEL_NUGGET.get(), 9)
                 .requires(HnSItemRegistry.STEEL_INGOT)
@@ -526,6 +537,41 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_excalibur_fragment", has(HnSItemRegistry.EXCALIBUR_FRAGMENT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/weapons/terraprisma"));
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.TIDAL_WAVE.get(), 1)
+                .pattern("  D")
+                .pattern("RE ")
+                .pattern("WR ")
+                .define('R', HnSItemRegistry.HYDRO_RUNE.get())
+                .define('E', HnSItemRegistry.EXCALIBUR_FRAGMENT.get())
+                .define('D', Items.DIAMOND)
+                .define('W', ItemRegistry.WEAPON_PARTS.get())
+                .unlockedBy("has_excalibur_fragment", has(HnSItemRegistry.EXCALIBUR_FRAGMENT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/weapons/tidal_wave"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.SOUL_REAPER.get(), 1)
+                .pattern("SSZ")
+                .pattern(" RZ")
+                .pattern("WRE")
+                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('E', HnSItemRegistry.EXCALIBUR_FRAGMENT.get())
+                .define('S', HnSItemRegistry.SHADESTONE.get())
+                .define('Z', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('W', ItemRegistry.WEAPON_PARTS.get())
+                .unlockedBy("has_excalibur_fragment", has(HnSItemRegistry.EXCALIBUR_FRAGMENT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/weapons/soul_reaper"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.ASTRALITE_CLEAVER.get(), 1)
+                .pattern(" GG")
+                .pattern("RZE")
+                .pattern("WR ")
+                .define('R', HnSItemRegistry.COSMIC_RUNE.get())
+                .define('G', HnSItemRegistry.COSMIC_GOLD_INGOT.get())
+                .define('Z', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('E', HnSItemRegistry.EXCALIBUR_FRAGMENT.get())
+                .define('W', ItemRegistry.WEAPON_PARTS.get())
+                .unlockedBy("has_excalibur_fragment", has(HnSItemRegistry.EXCALIBUR_FRAGMENT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/weapons/astralite_cleaver"));
+
         /*
          *** Staves
          */
@@ -554,6 +600,54 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('D', ItemRegistry.DRAGONSKIN.get())
                 .unlockedBy("has_artificer_staff", has(ItemRegistry.ARTIFICER_STAFF.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/staves/enderconic_scepter"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.CORALITE_CANE.get(), 1)
+                .pattern(" RH")
+                .pattern("AER")
+                .pattern("SA ")
+                .define('S', ItemRegistry.ARTIFICER_STAFF.get())
+                .define('E', HnSItemRegistry.ELDER_GUARDIAN_SPINE)
+                .define('H', Items.HEART_OF_THE_SEA)
+                .define('A', HnSItemRegistry.ARCANE_SEA_SHELL.get())
+                .define('R', HnSItemRegistry.HYDRO_RUNE.get())
+                .unlockedBy("has_artificer_staff", has(ItemRegistry.ARTIFICER_STAFF.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/staves/coralite_cane"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.CEASELESS_VOID.get(), 1)
+                .pattern(" SN")
+                .pattern("ZRS")
+                .pattern("AZ ")
+                .define('A', ItemRegistry.ARTIFICER_STAFF.get())
+                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('Z', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('S', HnSItemRegistry.SHADESTONE.get())
+                .define('N', HnSItemRegistry.NIGHTMARE_FUEL.get())
+                .unlockedBy("has_artificer_staff", has(ItemRegistry.ARTIFICER_STAFF.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/staves/ceaseless_void"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.GLASSWEAVER_SCEPTER.get(), 1)
+                .pattern(" PN")
+                .pattern("ZRP")
+                .pattern("AZ ")
+                .define('A', ItemRegistry.ARTIFICER_STAFF.get())
+                .define('R', HnSItemRegistry.RADIANCE_RUNE.get())
+                .define('Z', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('P', HnSItemRegistry.PRISMATIC_SHARD.get())
+                .define('N', Items.AMETHYST_CLUSTER)
+                .unlockedBy("has_artificer_staff", has(ItemRegistry.ARTIFICER_STAFF.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/staves/glassweaver_scepter"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.NEXUS.get(), 1)
+                .pattern(" PN")
+                .pattern("ZRP")
+                .pattern("AZ ")
+                .define('A', ItemRegistry.ARTIFICER_STAFF.get())
+                .define('R', HnSItemRegistry.COSMIC_RUNE.get())
+                .define('Z', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('P', HnSItemRegistry.COSMIC_GOLD_INGOT.get())
+                .define('N', HnSItemRegistry.STARDUST.get())
+                .unlockedBy("has_artificer_staff", has(ItemRegistry.ARTIFICER_STAFF.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/staves/nexus"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.DIVINE_SCEPTER.get(), 1)
                 .pattern(" PM")
@@ -1306,10 +1400,130 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
          *** Radiance
          */
 
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.RADIANCE_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_HELMET.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.RADIANT_CRYSTAL_HELMET.get())
+                .unlocks("has_radiance_rune", has(HnSItemRegistry.RADIANCE_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/bounty_hunter/radiant_crystal_helmet"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.RADIANCE_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_CHESTPLATE.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.RADIANT_CRYSTAL_CHESTPLATE.get())
+                .unlocks("has_radiance_rune", has(HnSItemRegistry.RADIANCE_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/radiant_crystal/radiant_crystal_chestplate"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.RADIANCE_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_LEGGINGS.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.RADIANT_CRYSTAL_LEGGINGS.get())
+                .unlocks("has_radiance_rune", has(HnSItemRegistry.RADIANCE_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/radiant_crystal/radiant_crystal_leggings"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.RADIANCE_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_BOOTS.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.RADIANT_CRYSTAL_BOOTS.get())
+                .unlocks("has_radiance_rune", has(HnSItemRegistry.RADIANCE_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/radiant_crystal/radiant_crystal_boots"));
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.GLASSWEAVER_HELMET.get())
+                .pattern("RTR")
+                .pattern("TPT")
+                .pattern(" M ")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.RADIANCE_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.RADIANT_CRYSTAL_HELMET.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/glassweaver/glassweaver_helmet"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.GLASSWEAVER_CHESTPLATE.get())
+                .pattern("TPT")
+                .pattern("RMR")
+                .pattern("TTT")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.RADIANCE_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.RADIANT_CRYSTAL_CHESTPLATE.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/glassweaver/glassweaver_chestplate"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.GLASSWEAVER_LEGGINGS.get())
+                .pattern("RMR")
+                .pattern("TPT")
+                .pattern("T T")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.RADIANCE_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.RADIANT_CRYSTAL_LEGGINGS.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/glassweaver/glassweaver_leggings"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.GLASSWEAVER_BOOTS.get())
+                .pattern("RMR")
+                .pattern("TPT")
+                .pattern("   ")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.RADIANCE_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.RADIANT_CRYSTAL_BOOTS.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/glassweaver/glassweaver_boots"));
+
+
 
         /*
          *** Shadow
          */
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.SHADOW_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_HELMET.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.MASKED_FOOL_HELMET.get())
+                .unlocks("has_shadow_rune", has(HnSItemRegistry.SHADOW_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/masked_fool/masked_fool_helmet"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.SHADOW_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_CHESTPLATE.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.MASKED_FOOL_CHESTPLATE.get())
+                .unlocks("has_shadow_rune", has(HnSItemRegistry.SHADOW_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/masked_fool/masked_fool_chestplate"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.SHADOW_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_LEGGINGS.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.MASKED_FOOL_LEGGINGS.get())
+                .unlocks("has_shadow_rune", has(HnSItemRegistry.SHADOW_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/masked_fool/masked_fool_leggings"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.SHADOW_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_BOOTS.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.MASKED_FOOL_BOOTS.get())
+                .unlocks("has_shadow_rune", has(HnSItemRegistry.SHADOW_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/masked_fool/masked_fool_boots"));
+
 
 
         // Shadow Scale Armor
@@ -1319,7 +1533,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("   ")
                 .define('T', HnSItemRegistry.DEMONITE_INGOT.get())
                 .define('R', HnSItemRegistry.SHADOW_RUNE.get())
-                .define('P', ItemRegistry.NETHERITE_MAGE_HELMET.get())
+                .define('P', HnSItemRegistry.MASKED_FOOL_HELMET.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.DEMONITE_INGOT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_scale/shadow_scale_helmet"));
 
@@ -1329,7 +1543,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TTT")
                 .define('T', HnSItemRegistry.DEMONITE_INGOT.get())
                 .define('R', HnSItemRegistry.SHADOW_RUNE.get())
-                .define('P', ItemRegistry.NETHERITE_MAGE_CHESTPLATE.get())
+                .define('P', HnSItemRegistry.MASKED_FOOL_CHESTPLATE.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.DEMONITE_INGOT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_scale/shadow_scale_chestplate"));
 
@@ -1339,7 +1553,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("T T")
                 .define('T', HnSItemRegistry.DEMONITE_INGOT.get())
                 .define('R', HnSItemRegistry.SHADOW_RUNE.get())
-                .define('P', ItemRegistry.NETHERITE_MAGE_LEGGINGS.get())
+                .define('P', HnSItemRegistry.MASKED_FOOL_LEGGINGS.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.DEMONITE_INGOT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_scale/shadow_scale_leggings"));
 
@@ -1349,10 +1563,229 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("   ")
                 .define('T', HnSItemRegistry.DEMONITE_INGOT.get())
                 .define('R', HnSItemRegistry.SHADOW_RUNE.get())
-                .define('P', ItemRegistry.NETHERITE_MAGE_BOOTS.get())
+                .define('P', HnSItemRegistry.MASKED_FOOL_BOOTS.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.DEMONITE_INGOT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_scale/shadow_scale_boots"));
 
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.SHADOW_JESTER_HELMET.get())
+                .pattern("RTR")
+                .pattern("TPT")
+                .pattern(" M ")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.MASKED_FOOL_HELMET.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_jester/shadow_jester_helmet"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.SHADOW_JESTER_CHESTPLATE.get())
+                .pattern("TPT")
+                .pattern("RMR")
+                .pattern("TTT")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.MASKED_FOOL_CHESTPLATE.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_jester/shadow_jester_chestplate"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.SHADOW_JESTER_LEGGINGS.get())
+                .pattern("RMR")
+                .pattern("TPT")
+                .pattern("T T")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.MASKED_FOOL_LEGGINGS.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_jester/shadow_jester_leggings"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.SHADOW_JESTER_BOOTS.get())
+                .pattern("RMR")
+                .pattern("TPT")
+                .pattern("   ")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.MASKED_FOOL_BOOTS.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_jester/shadow_jester_boots"));
+
+
+        /*
+         *** Cosmic
+         */
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.COSMIC_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_HELMET.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.COSMIC_SCHOLAR_HELMET.get())
+                .unlocks("has_cosmic_rune", has(HnSItemRegistry.COSMIC_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/cosmic_scholar/cosmic_scholar_helmet"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.COSMIC_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_CHESTPLATE.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.COSMIC_SCHOLAR_CHESTPLATE.get())
+                .unlocks("has_cosmic_rune", has(HnSItemRegistry.COSMIC_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/cosmic_scholar/cosmic_scholar_chestplate"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.COSMIC_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_LEGGINGS.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.COSMIC_SCHOLAR_LEGGINGS.get())
+                .unlocks("has_cosmic_rune", has(HnSItemRegistry.COSMIC_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/cosmic_scholar/cosmic_scholar_leggings"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.COSMIC_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_BOOTS.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.COSMIC_SCHOLAR_BOOTS.get())
+                .unlocks("has_cosmic_rune", has(HnSItemRegistry.COSMIC_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/cosmic_scholar/cosmic_scholar_boots"));
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.ASTRACONIC_WEAVER_HELMET.get())
+                .pattern("RTR")
+                .pattern("TPT")
+                .pattern(" M ")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.COSMIC_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.COSMIC_SCHOLAR_HELMET.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/astraconic_weaver/astraconic_weaver_helmet"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.ASTRACONIC_WEAVER_CHESTPLATE.get())
+                .pattern("TPT")
+                .pattern("RMR")
+                .pattern("TTT")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.COSMIC_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.COSMIC_SCHOLAR_CHESTPLATE.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/astraconic_weaver/astraconic_weaver_chestplate"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.ASTRACONIC_WEAVER_LEGGINGS.get())
+                .pattern("RMR")
+                .pattern("TPT")
+                .pattern("T T")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.COSMIC_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.COSMIC_SCHOLAR_LEGGINGS.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/astraconic_weaver/astraconic_weaver_leggings"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.ASTRACONIC_WEAVER_BOOTS.get())
+                .pattern("RMR")
+                .pattern("TPT")
+                .pattern("   ")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.COSMIC_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.COSMIC_SCHOLAR_BOOTS.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/astraconic_weaver/astraconic_weaver_boots"));
+
+
+        /*
+         *** Hydro
+         */
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.HYDRO_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_HELMET.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.NAUTILUS_KNIGHT_HELMET.get())
+                .unlocks("has_hydro_rune", has(HnSItemRegistry.HYDRO_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/nautilus_knight/nautilus_knight_helmet"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.HYDRO_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_CHESTPLATE.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.NAUTILUS_KNIGHT_CHESTPLATE.get())
+                .unlocks("has_hydro_rune", has(HnSItemRegistry.HYDRO_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/nautilus_knight/nautilus_knight_chestplate"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.HYDRO_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_LEGGINGS.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.NAUTILUS_KNIGHT_LEGGINGS.get())
+                .unlocks("has_hydro_rune", has(HnSItemRegistry.HYDRO_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/nautilus_knight/nautilus_knight_leggings"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.HYDRO_RUNE.get()),
+                        Ingredient.of(ItemRegistry.WIZARD_BOOTS.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.NAUTILUS_KNIGHT_BOOTS.get())
+                .unlocks("has_hydro_rune", has(HnSItemRegistry.HYDRO_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/nautilus_knight/nautilus_knight_boots"));
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.ELDER_GUARDIAN_HELMET.get())
+                .pattern("RTR")
+                .pattern("TPT")
+                .pattern(" M ")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.NAUTILUS_KNIGHT_HELMET.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/elder_guardian/elder_guardian_helmet"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.ELDER_GUARDIAN_CHESTPLATE.get())
+                .pattern("TPT")
+                .pattern("RMR")
+                .pattern("TTT")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.NAUTILUS_KNIGHT_CHESTPLATE.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/elder_guardian/elder_guardian_chestplate"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.ELDER_GUARDIAN_LEGGINGS.get())
+                .pattern("RMR")
+                .pattern("TPT")
+                .pattern("T T")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.NAUTILUS_KNIGHT_LEGGINGS.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/elder_guardian/elder_guardian_leggings"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.ELDER_GUARDIAN_BOOTS.get())
+                .pattern("RMR")
+                .pattern("TPT")
+                .pattern("   ")
+                .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
+                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('M', HnSItemRegistry.DIVINE_MOLD.get())
+                .define('P', HnSItemRegistry.NAUTILUS_KNIGHT_BOOTS.get())
+                .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/elder_guardian/elder_guardian_boots"));
 
 
         /*

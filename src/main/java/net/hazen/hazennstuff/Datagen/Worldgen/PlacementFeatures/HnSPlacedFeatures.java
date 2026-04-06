@@ -29,14 +29,14 @@ public class HnSPlacedFeatures {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, ZENALITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.ZENALITE_ORE_KEY),
-                HnSOrePlacement.commonOrePlacement(2,
+                HnSOrePlacement.commonOrePlacement(4,
                         HeightRangePlacement
                                 .uniform(VerticalAnchor.absolute(-64),
                                         VerticalAnchor.absolute(80))
                 ));
 
         register(context, SOLAR_CORE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.SOLAR_CORE_ORE_KEY),
-                HnSOrePlacement.commonOrePlacement(5,
+                HnSOrePlacement.commonOrePlacement(4,
                         HeightRangePlacement
                                 .uniform(VerticalAnchor.absolute(-64),
                                         VerticalAnchor.absolute(80))

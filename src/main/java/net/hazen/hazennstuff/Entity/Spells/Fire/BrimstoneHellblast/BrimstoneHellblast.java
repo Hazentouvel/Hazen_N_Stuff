@@ -52,13 +52,6 @@ public class BrimstoneHellblast extends AbstractMagicProjectile implements GeoEn
         this.setOwner(pShooter);
     }
 
-    public void setRotation(float x, float y) {
-        this.setXRot(x);
-        this.xRotO = x;
-        this.setYRot(y);
-        this.yRotO = y;
-    }
-
     public void trailParticles() {
         Vec3 vec3 = this.getDeltaMovement();
         double d0 = this.getX() - vec3.x;

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "hazennstuff:excalibur_fragment"
+    },
+    "G": {
+      "item": "hazennstuff:cosmic_gold_ingot"
+    },
+    "R": {
+      "item": "hazennstuff:cosmic_rune"
+    },
+    "W": {
+      "item": "irons_spellbooks:weapon_parts"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    " GG",
+    "RZE",
+    "WR "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:astralite_cleaver"
+  }
+}

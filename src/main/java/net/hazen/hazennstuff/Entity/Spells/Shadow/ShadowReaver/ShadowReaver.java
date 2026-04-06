@@ -13,6 +13,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -20,10 +21,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.EntityHitResult;
-import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.*;
 import software.bernie.geckolib.animatable.GeoAnimatable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -85,18 +83,36 @@ public class ShadowReaver extends AbstractMagicProjectile implements GeoEntity {
 
     @Override
     protected void onHitEntity(EntityHitResult pResult) {
-        var target = pResult.getEntity();
+        if (this.level.isClientSide) return;
 
-        DamageSources.applyDamage(target, damage,
-                HnSSpellRegistries.SHADOW_REAVER.get().getDamageSource(this, getOwner()));
+        Entity hitEntity = pResult.getEntity();
+        LivingEntity owner = (LivingEntity) this.getOwner();
 
-        if (target instanceof LivingEntity livingTarget) {
-            livingTarget.addEffect(new net.minecraft.world.effect.MobEffectInstance(
-                    HnSEffects.HEXED, 100, 0, false, true, true
-            ));
-        }
+        Vec3 center = hitEntity.position();
+
+        applyAreaEffect(center, owner, 4.0F);
 
         discard();
+    }
+
+    private void applyAreaEffect(Vec3 center, LivingEntity owner, float radius) {
+        List<LivingEntity> targets = this.level.getEntitiesOfClass(
+                LivingEntity.class,
+                AABB.ofSize(center, (double)radius * 2.0D, (double)radius * 2.0D, (double)radius * 2.0D));
+
+        for (LivingEntity target : targets) {
+            if (target == null || !target.isAlive()) continue;
+            if (target == owner) continue;
+
+            Vec3 toTarget = target.position().subtract(center);
+            if (toTarget.lengthSqr() > radius * radius) continue;
+
+            DamageSources.applyDamage(target, damage, HnSSpellRegistries.SHADOW_REAVER.get().getDamageSource(this, owner));
+
+            target.addEffect(new MobEffectInstance(HnSEffects.HEXED, 100, 0));
+        }
+
+        impactParticles(center.x, center.y, center.z);
     }
 
     protected void doImpactSound(Holder<SoundEvent> sound) {
@@ -110,6 +126,10 @@ public class ShadowReaver extends AbstractMagicProjectile implements GeoEntity {
 
     protected void onHitBlock(BlockHitResult blockHitResult) {
         super.onHitBlock(blockHitResult);
+        if (this.level.isClientSide) return;
+        LivingEntity owner = (LivingEntity) this.getOwner();
+        Vec3 hitPos = blockHitResult.getLocation();
+        applyAreaEffect(hitPos, owner, 4.0f);
         discard();
     }
 

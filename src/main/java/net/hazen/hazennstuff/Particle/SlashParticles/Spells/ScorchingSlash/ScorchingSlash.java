@@ -42,7 +42,7 @@ public class ScorchingSlash extends TextureSheetParticle {
 
     public void tick() {
         if (this.age == 0) {
-            this.createElectricParticle();
+            this.createFireParticle();
         }
 
         if (this.age++ > this.lifetime) {
@@ -53,14 +53,14 @@ public class ScorchingSlash extends TextureSheetParticle {
 
     }
 
-    private void createElectricParticle() {
+    private void createFireParticle() {
         int particleCount = (int)(9.0F * this.quadSize);
 
         for(int i = 1; i < particleCount - 1; ++i) {
             float t = (float)i / (float)particleCount;
             float u = 1.0F - t;
             Vec3 localPos = this.vec3Copy(this.localVertices[1]).scale((double)(u * u * u)).add(this.vec3Copy(this.localVertices[2]).scale((double)(3.0F * u * u * t)).add(this.vec3Copy(this.localVertices[3]).scale((double)(3.0F * u * t * t)).add(this.vec3Copy(this.localVertices[0]).scale((double)(t * t * t))))).scale((double)(this.quadSize * 0.75F)).add(Utils.getRandomVec3(0.3));
-            this.level.addParticle(ParticleHelper.ELECTRICITY, this.x + localPos.x, this.y + localPos.y, this.z + localPos.z, (double)0.0F, (double)0.0F, (double)0.0F);
+            this.level.addParticle(ParticleHelper.FIRE, this.x + localPos.x, this.y + localPos.y, this.z + localPos.z, (double)0.0F, (double)0.0F, (double)0.0F);
         }
 
     }
@@ -88,7 +88,7 @@ public class ScorchingSlash extends TextureSheetParticle {
 
         Vector3f[] vertices = new Vector3f[]{new Vector3f(-1.0F, -1.0F, 0.0F), new Vector3f(-1.0F, 1.0F, 0.0F), new Vector3f(1.0F, 1.0F, 0.0F), new Vector3f(1.0F, -1.0F, 0.0F)};
 
-        for(int i = 0; i < 8; ++i) {
+        for(int i = 0; i < 4; ++i) {
             float x = (float)(primary.x * (double)vertices[i].x + secondary.x * (double)vertices[i].y);
             float y = (float)(primary.y * (double)vertices[i].x + secondary.y * (double)vertices[i].y);
             float z = (float)(primary.z * (double)vertices[i].x + secondary.z * (double)vertices[i].y);
@@ -110,7 +110,7 @@ public class ScorchingSlash extends TextureSheetParticle {
         float f2 = (float)(Mth.lerp((double)partialTick, this.zo, this.z) - vec3.z());
         Vector3f[] vertices = new Vector3f[4];
 
-        for(int i = 0; i < 8; ++i) {
+        for(int i = 0; i < 4; ++i) {
             Vector3f localVertex = this.localVertices[i];
             vertices[i] = new Vector3f(localVertex.x, localVertex.y, localVertex.z);
             vertices[i].mul(this.getQuadSize(partialTick));

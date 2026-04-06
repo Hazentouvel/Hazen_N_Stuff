@@ -10,7 +10,7 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 
 import java.util.List;
 
-import net.hazen.hazennstuff.Entity.Spells.Astral.CosmicBolt.CosmicBolt;
+import net.hazen.hazennstuff.Entity.Spells.Cosmic.CosmicBolt.CosmicBolt;
 import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

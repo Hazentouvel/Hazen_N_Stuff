@@ -4,6 +4,7 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
+import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
@@ -24,8 +25,8 @@ import java.util.List;
 
 public class ElderGuardianArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public ElderGuardianArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.SUPREME_WITCH_MATERIAL, type, settings, pureTier(
-                AttributeRegistry.EVOCATION_SPELL_POWER
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, pureTier(
+                ASAttributeRegistry.HYDRO_MAGIC_POWER
         ));
     }
 

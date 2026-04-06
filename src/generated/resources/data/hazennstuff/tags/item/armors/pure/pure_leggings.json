@@ -12,6 +12,7 @@
     "hazennstuff:charged_scourge_leggings",
     "hazennstuff:thunder_prowler_leggings",
     "hazennstuff:creaking_leggings",
+    "hazennstuff:geckolib_creaking_leggings",
     "hazennstuff:flesh_mass_leggings",
     "hazennstuff:the_wither_leggings",
     "hazennstuff:geckolib_the_wither_leggings",
@@ -22,6 +23,7 @@
     "hazennstuff:geckolib_gabriel_ultrakill_leggings",
     "hazennstuff:mothic_witch_leggings",
     "hazennstuff:supreme_witch_leggings",
+    "hazennstuff:geckolib_supreme_witch_leggings",
     "hazennstuff:alchemist_supreme_leggings",
     "hazennstuff:mycelium_guardian_leggings",
     "hazennstuff:shadow_scale_leggings",
@@ -37,11 +39,15 @@
     "hazennstuff:dreadsteel_knight_leggings",
     "hazennstuff:dark_ritual_templar_leggings",
     "hazennstuff:geckolib_dark_ritual_templar_leggings",
-    "hazennstuff:fireblossom_leggings",
-    "hazennstuff:geckolib_fireblossom_leggings",
+    "hazennstuff:legacy_fireblossom_leggings",
+    "hazennstuff:legacy_geckolib_fireblossom_leggings",
     "hazennstuff:maverick_leggings",
     "hazennstuff:slc_cat_leggings",
     "hazennstuff:abberant_predator_leggings",
-    "hazennstuff:chlorophyte_leggings"
+    "hazennstuff:chlorophyte_leggings",
+    "hazennstuff:astraconic_weaver_leggings",
+    "hazennstuff:glassweaver_leggings",
+    "hazennstuff:shadow_jester_leggings",
+    "hazennstuff:elder_guardian_leggings"
   ]
 }

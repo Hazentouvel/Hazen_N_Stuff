@@ -22,7 +22,7 @@ public class Nexus extends StaffItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(HnSRarities.NATURE_RARITY.getValue())
+                        .rarity(HnSRarities.COSMIC_RARITY.getValue())
                         .attributes(ExtendedSwordItem
                                 .createAttributes(HnSStaffTier.NEXUS)
                         )

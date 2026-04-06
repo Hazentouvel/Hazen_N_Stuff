@@ -24,7 +24,7 @@ import java.util.List;
 
 public class ShadowJesterArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public ShadowJesterArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.SUPREME_WITCH_MATERIAL, type, settings, pureTier(
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, pureTier(
                 HnSAttributeRegistry.SHADOW_SPELL_POWER
         ));
     }

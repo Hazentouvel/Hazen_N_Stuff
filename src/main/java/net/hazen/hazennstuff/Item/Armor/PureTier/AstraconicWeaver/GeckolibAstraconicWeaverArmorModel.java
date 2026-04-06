@@ -13,12 +13,12 @@ public class GeckolibAstraconicWeaverArmorModel extends DefaultedEntityGeoModel<
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(GeckolibAstraconicWeaverArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/alchemist_supreme_armor.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/astraconic_weaver_armor.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(GeckolibAstraconicWeaverArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/alchemist_supreme_armor.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/astraconic_weaver_armor.png");
     }
 
     @Override

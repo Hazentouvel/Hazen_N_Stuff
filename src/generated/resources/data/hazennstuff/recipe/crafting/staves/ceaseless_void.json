@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "irons_spellbooks:artificer_cane"
+    },
+    "N": {
+      "item": "hazennstuff:nightmare_fuel"
+    },
+    "R": {
+      "item": "hazennstuff:shadow_rune"
+    },
+    "S": {
+      "item": "hazennstuff:shadestone"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    " SN",
+    "ZRS",
+    "AZ "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:ceaseless_void"
+  }
+}

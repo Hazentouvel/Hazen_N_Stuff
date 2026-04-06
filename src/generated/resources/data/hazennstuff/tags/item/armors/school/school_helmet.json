@@ -7,6 +7,10 @@
     "irons_spellbooks:cryomancer_helmet",
     "irons_spellbooks:electromancer_helmet",
     "irons_spellbooks:cultist_helmet",
-    "irons_spellbooks:shadowwalker_helmet"
+    "irons_spellbooks:shadowwalker_helmet",
+    "hazennstuff:masked_fool_helmet",
+    "hazennstuff:radiant_crystal_helmet",
+    "hazennstuff:cosmic_scholar_helmet",
+    "hazennstuff:nautilus_knight_helmet"
   ]
 }

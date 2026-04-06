@@ -61,10 +61,40 @@ public class HnSGeckolibArmorItem extends ArmorItem implements GeoItem {
         });
     }
 
+    public static AttributeContainer[] dormantTier(Holder<Attribute> school1) {
+        return new AttributeContainer[]{
+                new AttributeContainer(school1, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.MAX_MANA, (double)50.0F, AttributeModifier.Operation.ADD_VALUE)};
+    }
+
+    public static AttributeContainer[] dormantTierMulti(Holder<Attribute> school1, Holder<Attribute> school2) {
+        return new AttributeContainer[]{
+                new AttributeContainer(school1, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(school2, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.MAX_MANA, (double)50.0F, AttributeModifier.Operation.ADD_VALUE)};
+    }
+
+    public static AttributeContainer[] dormantTierTri(Holder<Attribute> school1, Holder<Attribute> school2, Holder<Attribute> school3) {
+        return new AttributeContainer[]{
+                new AttributeContainer(school1, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(school2, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(school3, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.MAX_MANA, (double)50.0F, AttributeModifier.Operation.ADD_VALUE)};
+    }
+
     public static AttributeContainer[] schoolTierMulti(Holder<Attribute> school1, Holder<Attribute> school2) {
         return new AttributeContainer[]{
                 new AttributeContainer(school1, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(school2, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.MAX_MANA, (double)125.0F, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)};
+    }
+
+    public static AttributeContainer[] schoolTierTri(Holder<Attribute> school1, Holder<Attribute> school2, Holder<Attribute> school3) {
+        return new AttributeContainer[]{
+                new AttributeContainer(school1, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(school2, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(school3, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, (double)125.0F, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)};
     }
@@ -89,12 +119,12 @@ public class HnSGeckolibArmorItem extends ArmorItem implements GeoItem {
         };
     }
 
-    public static AttributeContainer[] pureTierTri(Holder<Attribute> school1, Holder<Attribute> school2)
+    public static AttributeContainer[] pureTierTri(Holder<Attribute> school1, Holder<Attribute> school2, Holder<Attribute> school3)
     {
         return new AttributeContainer[]{
                 new AttributeContainer(school1, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(school2, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(school2, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(school3, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 200, AttributeModifier.Operation.ADD_VALUE),
         };

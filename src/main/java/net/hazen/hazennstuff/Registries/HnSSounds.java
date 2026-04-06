@@ -27,8 +27,13 @@ public class HnSSounds {
      * Spell Sounds
      */
 
-    // Chaotic Teleport
+    // Terraria Cast
     public static DeferredHolder<SoundEvent, SoundEvent> TERRARIA_CAST = registerSoundEvent("terraria_cast");
+
+    // Scorching Slash Wind Up
+    public static DeferredHolder<SoundEvent, SoundEvent> SCORCHING_SLASH_WIND_UP = registerSoundEvent("scorching_slash_wind_up");
+    // Scorching Slash Swing
+    public static DeferredHolder<SoundEvent, SoundEvent> SCORCHING_SLASH_SWING = registerSoundEvent("scorching_slash_swing");
 
     // Brimstone Cast
     public static DeferredHolder<SoundEvent, SoundEvent> BRIMSTONE_CAST = registerSoundEvent("brimstone_cast");
@@ -53,8 +58,25 @@ public class HnSSounds {
 
     public static final Holder<SoundEvent> SPARK_CAST = registerSoundEvent("spark_cast");
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> VIOLENT_REGURGITATION_CHARGING = registerSoundEvent("violent_regurgitation_charging");
+    public static final DeferredHolder<SoundEvent, SoundEvent> FLESH_IMPACT_CAST = registerSoundEvent("violent_regurgitation_cast");
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> FLESH_IMPACT_1 = registerSoundEvent("flesh_impact_1");
+    public static final DeferredHolder<SoundEvent, SoundEvent> FLESH_IMPACT_2 = registerSoundEvent("flesh_impact_2");
+    public static final DeferredHolder<SoundEvent, SoundEvent> FLESH_IMPACT_3 = registerSoundEvent("flesh_impact_3");
+
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> ENDRACONIC_METEOR_CHARGING = registerSoundEvent("endraconic_meteor_charging");
+    public static final DeferredHolder<SoundEvent, SoundEvent> ENDRACONIC_METEOR_CAST = registerSoundEvent("endraconic_meteor_cast");
+    public static final DeferredHolder<SoundEvent, SoundEvent> ENDRACONIC_METEOR_IMPACT = registerSoundEvent("endraconic_meteor_impact");
+
     // Charged
     public static DeferredHolder<SoundEvent, SoundEvent> CHARGED = registerSoundEvent("charged");
+
+    //Spark Cast
+    public static final Holder<SoundEvent> NINGU_DEMONBANE_PETALBLADE_CAST_1 = registerSoundEvent("ningu_demonbane_petalblade_cast_1");
+    public static final Holder<SoundEvent> NINGU_DEMONBANE_PETALBLADE_CAST_2 = registerSoundEvent("ningu_demonbane_petalblade_cast_2");
+    public static final Holder<SoundEvent> NINGU_DEMONBANE_PETALBLADE_CAST_3 = registerSoundEvent("ningu_demonbane_petalblade_cast_3");
 
     // Syringe Barrage Cast
     public static DeferredHolder<SoundEvent, SoundEvent> SYRINGE_BARRAGE_CAST = registerSoundEvent("syringe_barrage_cast");
@@ -120,6 +142,15 @@ public class HnSSounds {
     //Star Cast
     public static DeferredHolder<SoundEvent, SoundEvent> STAR_CAST_1 = registerSoundEvent("star_cast_1");
     public static DeferredHolder<SoundEvent, SoundEvent> STAR_CAST_2 = registerSoundEvent("star_cast_2");
+
+    // Hydro cast
+    public static DeferredHolder<SoundEvent, SoundEvent> HYDRO_CAST_1 = registerSoundEvent("hydro_cast_1");
+    public static DeferredHolder<SoundEvent, SoundEvent> HYDRO_CAST_2 = registerSoundEvent("hydro_cast_2");
+
+    public static DeferredHolder<SoundEvent, SoundEvent> TRIDENT_JETSTREAM_CAST = registerSoundEvent("trident_jetstream_cast");
+    public static DeferredHolder<SoundEvent, SoundEvent> RAZORBLADE_TYPHOON_CAST = registerSoundEvent("razorblade_typhoon_cast");
+
+    public static DeferredHolder<SoundEvent, SoundEvent> ARCANE_CARD_CAST = registerSoundEvent("arcane_card_cast");
 
     /*
     *** Melee Sounds

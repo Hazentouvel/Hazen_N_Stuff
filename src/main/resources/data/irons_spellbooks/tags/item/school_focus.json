@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "#aces_spell_utils:hydro_focus",
     "#hazennstuff:focus/cosmic_focus",
     "#hazennstuff:focus/shadow_focus",
     "#hazennstuff:focus/radiance_focus"

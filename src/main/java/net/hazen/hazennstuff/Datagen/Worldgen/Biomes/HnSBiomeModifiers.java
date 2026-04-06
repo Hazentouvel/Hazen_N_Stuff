@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Datagen.Worldgen.Biomes;
 
+import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Datagen.Worldgen.PlacementFeatures.HnSPlacedFeatures;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.core.HolderSet;
@@ -39,7 +40,7 @@ public class HnSBiomeModifiers {
         ));
 
         context.register(ADD_ZENALITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_END),
+                biomes.getOrThrow(HnSTags.VOID_WANDERER_BIOMES),
                 HolderSet.direct(placedFeatures.getOrThrow(HnSPlacedFeatures.ZENALITE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));

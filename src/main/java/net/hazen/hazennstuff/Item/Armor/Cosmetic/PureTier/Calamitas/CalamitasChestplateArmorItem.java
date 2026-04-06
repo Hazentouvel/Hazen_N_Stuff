@@ -8,6 +8,7 @@ import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
+import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.DTECompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
@@ -34,9 +35,10 @@ import java.util.Map;
 
 public class CalamitasChestplateArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public CalamitasChestplateArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.CALAMITAS_MATERIAL, type, settings, pureTierMulti(
+        super(HnSArmorMaterials.CALAMITAS_MATERIAL, type, settings, pureTierTri(
                 AttributeRegistry.FIRE_SPELL_POWER,
-                AttributeRegistry.BLOOD_SPELL_POWER
+                AttributeRegistry.BLOOD_SPELL_POWER,
+                ASAttributeRegistry.RITUAL_MAGIC_POWER
         ));
     }
 

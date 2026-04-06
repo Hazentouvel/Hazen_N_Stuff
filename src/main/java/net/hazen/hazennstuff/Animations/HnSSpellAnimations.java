@@ -12,4 +12,9 @@ public class HnSSpellAnimations {
     public static final AnimationHolder FIERY_DAGGER_CAST = new AnimationHolder(HazenNStuff.id("fiery_dagger_cast"), true);
     public static final AnimationHolder FIERY_DAGGER_SUMMON = new AnimationHolder(HazenNStuff.id("fiery_dagger_summon"), true);
     public static final AnimationHolder PARRY = new AnimationHolder(HazenNStuff.id("parry"), true);
+    public static final AnimationHolder SCORCHING_SLASH_STANCE = new AnimationHolder(HazenNStuff.id("scorching_slash_stance"), true);
+    public static final AnimationHolder SCORCHING_SLASH_SLASH = new AnimationHolder(HazenNStuff.id("scorching_slash_slash"), true);
+    public static final AnimationHolder RAPPA_RECAST_1 = new AnimationHolder(HazenNStuff.id("rappa_recast_1"), true);
+    public static final AnimationHolder RAPPA_RECAST_2 = new AnimationHolder(HazenNStuff.id("rappa_recast_2"), true);
+    public static final AnimationHolder RAPPA_RECAST_3 = new AnimationHolder(HazenNStuff.id("rappa_recast_3"), true);
 }

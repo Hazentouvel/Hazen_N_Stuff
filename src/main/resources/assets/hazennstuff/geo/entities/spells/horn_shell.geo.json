@@ -1,0 +1,74 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "hornShell",
+					"pivot": [0, 4, -2],
+					"rotation": [0, 0, 45],
+					"cubes": [
+						{"origin": [-3, 1, -2], "size": [6, 6, 6], "uv": [0, 12]},
+						{"origin": [-2, 2, -10], "size": [4, 4, 8], "uv": [0, 24]},
+						{"origin": [-4, 0, 4], "size": [8, 8, 4], "uv": [0, 0]},
+						{"origin": [-1, 3, -18], "size": [2, 2, 8], "uv": [0, 36]},
+						{"origin": [-1, 3, -18], "size": [2, 2, 8], "inflate": 0.25, "uv": [24, 36]},
+						{"origin": [-4, 0, 4], "size": [8, 8, 4], "inflate": 0.25, "uv": [24, 0]},
+						{"origin": [-2, 2, -10], "size": [4, 4, 8], "inflate": 0.25, "uv": [24, 24]},
+						{"origin": [-3, 1, -2], "size": [6, 6, 6], "inflate": 0.25, "uv": [24, 12]}
+					]
+				},
+				{
+					"name": "riptideEffect",
+					"pivot": [0, 4, -6]
+				},
+				{
+					"name": "segment1",
+					"parent": "riptideEffect",
+					"pivot": [0, 4, -15],
+					"cubes": [
+						{"origin": [-2, 2, -19], "size": [4, 0, 8], "uv": [104, 0]},
+						{"origin": [-2, 6, -19], "size": [4, 0, 8], "uv": [112, 0]},
+						{"origin": [-2, 2, -19], "size": [4, 4, 0], "uv": [120, 16]},
+						{"origin": [2, 2, -19], "size": [0, 4, 8], "uv": [112, 0]},
+						{"origin": [-2, 2, -19], "size": [0, 4, 8], "uv": [112, 4]}
+					]
+				},
+				{
+					"name": "segment2",
+					"parent": "riptideEffect",
+					"pivot": [0, 4, -6],
+					"cubes": [
+						{"origin": [-4, 0, -11], "size": [8, 0, 9], "uv": [103, 103]},
+						{"origin": [-4, 8, -11], "size": [8, 0, 9], "uv": [103, 94]},
+						{"origin": [-4, 0, -11], "size": [8, 8, 0], "uv": [112, 112]},
+						{"origin": [4, 0, -11], "size": [0, 8, 9], "uv": [110, 69]},
+						{"origin": [4, 0, -11], "size": [0, 8, 9], "uv": [110, 77]},
+						{"origin": [-4, 0, -11], "size": [0, 8, 9], "uv": [110, 111]}
+					]
+				},
+				{
+					"name": "segment3",
+					"parent": "riptideEffect",
+					"pivot": [0, 4, -6],
+					"cubes": [
+						{"origin": [-6, -2, -2], "size": [12, 0, 16], "uv": [8, 112]},
+						{"origin": [-6, 10, -2], "size": [12, 0, 16], "uv": [-16, 112]},
+						{"origin": [-6, -2, -2], "size": [12, 12, 0], "uv": [32, 100]},
+						{"origin": [-6, -2, 14], "size": [12, 12, 0], "uv": [32, 88]},
+						{"origin": [6, -2, -2], "size": [0, 12, 16], "uv": [0, 84]},
+						{"origin": [-6, -2, -2], "size": [0, 12, 16], "uv": [0, 72]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -13,16 +13,16 @@ public class GlassweaverArmorModel extends DefaultedEntityGeoModel<GlassweaverAr
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(GlassweaverArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/alchemist_supreme_armor.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/glassweaver_armor.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(GlassweaverArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/alchemist_supreme_armor.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/glassweaver_armor.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(GlassweaverArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(IronsSpellbooks.MODID, "animations/wizard_armor_animation.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/armor/glassweaver_armor.animation.json");
     }
 }

@@ -54,11 +54,14 @@
   "rarity.hazennstuff_rarity_eldritch.name": "Esoteric",
   "rarity.hazennstuff_rarity_cosmic.name": "Cosmic",
   "rarity.hazennstuff_rarity_deus.name": "Enlightened",
+  "rarity.hazennstuff_rarity_hydro.name": "Aquatic",
 
   "item.hazennstuff.excalibur_fragment": "Excalibur Fragment",
   "item.hazennstuff.deus_essence": "Deus Essence",
   "item.hazennstuff.catalyst": "Catalyst",
   "item.hazennstuff.stardust": "Stardust",
+  "item.hazennstuff.arcane_sea_shell": "Arcane Sea Shell",
+  "item.hazennstuff.elder_guardian_spine": "Elder Guardian Spine",
   "item.hazennstuff.runestone_fragments": "Runestone Fragments",
   "item.hazennstuff.permafrost_fragment": "Permafrost Fragment",
   "item.hazennstuff.charred_bones": "Charred Bones",
@@ -81,6 +84,7 @@
   "item.hazennstuff.hallowed_ingot": "Hallowed Ingot",
   "item.hazennstuff.demonite_ingot": "Demonite Ingot",
   "item.hazennstuff.steel_ingot": "Steel Ingot",
+  "item.hazennstuff.cosmic_gold_ingot": "Cosmic Gold Ingot",
 
   "item.hazennstuff.raw_zenalite": "Raw Zenalite",
   "item.hazennstuff.raw_zenalite.guide": "It lies dormant... the touch of a god or the warmth of a star may awaken this mineral...",
@@ -120,6 +124,7 @@
   "item.hazennstuff.melee_upgrade_orb": "Melee Upgrade Orb",
   "item.hazennstuff.archery_upgrade_orb": "Archery Upgrade Orb",
   "item.hazennstuff.health_upgrade_orb": "Health Upgrade Orb",
+  "item.hazennstuff.hydro_upgrade_orb": "Hydro Upgrade Orb",
 
 
   "item.hazennstuff.concentrated_upgrade_orb_fire": "Concentrated Fire Upgrade Orb",
@@ -142,6 +147,7 @@
   "item.hazennstuff.archery_rune": "Archery Rune",
   "item.hazennstuff.health_rune": "Health Rune",
   "item.hazennstuff.cosmic_rune": "Cosmic Rune",
+  "item.hazennstuff.hydro_rune": "Hydro Rune",
 
 
   "item.hazennstuff.ruptured": "Ruptured",
@@ -321,7 +327,6 @@
   "item.hazennstuff.devastator_t2": "Devastator",
   "item.hazennstuff.devastator_t3": "Devastator",
 
-  "item.hazennstuff.starfury": "Starfury",
   "item.hazennstuff.obsidian_claymore": "Obsidian Claymore",
 
   "item.hazennstuff.umbranova_dormant": "Umbranova",
@@ -357,6 +362,7 @@
   "item.hazennstuff.provocation_t2": "Provocation",
   "item.hazennstuff.provocation_t3": "Provocation",
 
+  "item.hazennstuff.soul_reaper": "Soul Reaper",
   "item.hazennstuff.lights_bane": "Light's Bane",
   "item.hazennstuff.nights_edge": "Night's Edge",
   "item.hazennstuff.nights_edge.description": "A Terraria Reference. Dawn the power of the Night's Edge. This weapon resonates well with the scroll-forge...",
@@ -368,6 +374,11 @@
   "item.hazennstuff.twilight_t2": "Twilight",
 
   "item.hazennstuff.eclipse": "Eclipse",
+
+  "item.hazennstuff.starfury": "Starfury",
+  "item.hazennstuff.astralive_cleaver": "Astralite Cleaver",
+
+  "item.hazennstuff.tidal_wave": "Tidal Wave",
 
   "item.hazennstuff.the_devourer": "The Devourer",
 
@@ -398,8 +409,14 @@
   "item.hazennstuff.divine_scepter": "Divine Scepter",
 
   "item.hazennstuff.dawn": "Dawn",
+  "item.hazennstuff.glassweaver_scepter": "Glassweaver Scepter",
 
   "item.hazennstuff.dusk": "Dusk",
+  "item.hazennstuff.ceaseless_void": "Ceaseless Void",
+
+  "item.hazennstuff.nexus": "Nexus",
+
+  "item.hazennstuff.coralite_cane": "Coralite Cane",
 
   "item.hazennstuff.rod_of_discord": "Rod of Discord",
   "item.hazennstuff.rod_of_discord.description": "A Terraria Reference. This wand resonates well with the scroll-forge...",
@@ -533,13 +550,43 @@
   "item.hazennstuff.ascended_arbitrium_robes_leggings": "Ascended Arbitrium Leggings",
   "item.hazennstuff.ascended_arbitrium_robes_boots": "Ascended Arbitrium Tracers",
 
-  "item.hazennstuff.fireblossom_crown": "Fireblossom Battlemage Crown",
+  "item.hazennstuff.legacy_fireblossom_crown": "Fireblossom Battlemage Crown",
   "item.hazennstuff.fireblossom_crown.description": "Dawning the Fireblossom Crown improves your affinity with magic. This armor set is dedicated to MtheNinja.",
-  "item.hazennstuff.fireblossom_helmet": "Fireblossom Battlemage Helmet",
+  "item.hazennstuff.legacy_fireblossom_helmet": "Fireblossom Battlemage Helmet",
   "item.hazennstuff.fireblossom_helmet.description": "Dawning the Battlemage Helmet improves your sword mastery. This armor set is dedicated to MtheNinja.",
-  "item.hazennstuff.fireblossom_chestplate": "Fireblossom Battlemage Chestplate",
-  "item.hazennstuff.fireblossom_leggings": "Fireblossom Battlemage Leggings",
-  "item.hazennstuff.fireblossom_boots": "Fireblossom Battlemage Boots",
+  "item.hazennstuff.legacy_fireblossom_chestplate": "Fireblossom Battlemage Chestplate",
+  "item.hazennstuff.legacy_fireblossom_leggings": "Fireblossom Battlemage Leggings",
+  "item.hazennstuff.legacy_fireblossom_boots": "Fireblossom Battlemage Boots",
+
+  "item.hazennstuff.fireblossom_gown_helmet": "Fireblossom Crown",
+  "item.hazennstuff.fireblossom_gown_chestplate": "Fireblossom Gown",
+  "item.hazennstuff.fireblossom_gown_leggings": "Fireblossom Skirt",
+  "item.hazennstuff.fireblossom_gown_boots": "Fireblossom Boots",
+
+  "item.hazennstuff.fireblossom_knight_helmet": "Fireblossom Knight helmet",
+  "item.hazennstuff.fireblossom_knight_chestplate": "Fireblossom Knight Chestplate",
+  "item.hazennstuff.fireblossom_knight_leggings": "Fireblossom Knight Leggings",
+  "item.hazennstuff.fireblossom_knight_boots": "Fireblossom Knight Boots",
+
+  "item.hazennstuff.fireblossom_battlemage_helmet": "Fireblossom Battlemage Helmet",
+  "item.hazennstuff.fireblossom_battlemage_chestplate": "Fireblossom Battlemage Chestplate",
+  "item.hazennstuff.fireblossom_battlemage_leggings": "Fireblossom Battlemage Leggings",
+  "item.hazennstuff.fireblossom_battlemage_boots": "Fireblossom Battlemage Boots",
+
+  "item.hazennstuff.geckolib_fireblossom_gown_helmet": "Fireblossom Crown",
+  "item.hazennstuff.geckolib_fireblossom_gown_chestplate": "Fireblossom Gown",
+  "item.hazennstuff.geckolib_fireblossom_gown_leggings": "Fireblossom Skirt",
+  "item.hazennstuff.geckolib_fireblossom_gown_boots": "Fireblossom Boots",
+
+  "item.hazennstuff.geckolib_fireblossom_knight_helmet": "Fireblossom Knight helmet",
+  "item.hazennstuff.geckolib_fireblossom_knight_chestplate": "Fireblossom Knight Chestplate",
+  "item.hazennstuff.geckolib_fireblossom_knight_leggings": "Fireblossom Knight Leggings",
+  "item.hazennstuff.geckolib_fireblossom_knight_boots": "Fireblossom Knight Boots",
+
+  "item.hazennstuff.geckolib_fireblossom_battlemage_helmet": "Fireblossom Battlemage Helmet",
+  "item.hazennstuff.geckolib_fireblossom_battlemage_chestplate": "Fireblossom Battlemage Chestplate",
+  "item.hazennstuff.geckolib_fireblossom_battlemage_leggings": "Fireblossom Battlemage Leggings",
+  "item.hazennstuff.geckolib_fireblossom_battlemage_boots": "Fireblossom Battlemage Boots",
 
   "item.hazennstuff.frieren_helmet": "Frieren Hair",
   "item.hazennstuff.frieren_chestplate": "Frieren Robes",
@@ -675,10 +722,65 @@
   "item.hazennstuff.mycelium_guardian_leggings": "Mycelium Guardian Leggings",
   "item.hazennstuff.mycelium_guardian_boots": "Mycelium Guardian Boots",
 
+  "item.hazennstuff.radiant_crystal_helmet": "Radiant Crystal Ball",
+  "item.hazennstuff.radiant_crystal_chestplate": "Radiant Crystal Chestplate",
+  "item.hazennstuff.radiant_crystal_leggings": "Radiant Crystal Leggings",
+  "item.hazennstuff.radiant_crystal_boots": "Radiant Crystal Boots",
+
+  "item.hazennstuff.geckolib_radiant_crystal_helmet": "Radiant Crystal Ball",
+  "item.hazennstuff.geckolib_radiant_crystal_chestplate": "Radiant Crystal Chestplate",
+  "item.hazennstuff.geckolib_radiant_crystal_leggings": "Radiant Crystal Leggings",
+  "item.hazennstuff.geckolib_radiant_crystal_boots": "Radiant Crystal Boots",
+
+  "item.hazennstuff.glassweaver_helmet": "Glassweaver Mask",
+  "item.hazennstuff.glassweaver_chestplate": "Glassweaver Chestplate",
+  "item.hazennstuff.glassweaver_leggings": "Glassweaver Leggings",
+  "item.hazennstuff.glassweaver_boots": "Glassweaver Boots",
+
   "item.hazennstuff.shadow_scale_helmet": "Shadow Scale Helmet",
   "item.hazennstuff.shadow_scale_chestplate": "Shadow Scale Chestplate",
   "item.hazennstuff.shadow_scale_leggings": "Shadow Scale Leggings",
   "item.hazennstuff.shadow_scale_boots": "Shadow Scale Boots",
+
+  "item.hazennstuff.masked_fool_helmet": "Masked Fool Mask",
+  "item.hazennstuff.masked_fool_chestplate": "Masked Fool Suit",
+  "item.hazennstuff.masked_fool_leggings": "Masked Fool Leggings",
+  "item.hazennstuff.masked_fool_boots": "Masked Fool Boots",
+
+  "item.hazennstuff.shadow_jester_helmet": "Shadow Jester Hat",
+  "item.hazennstuff.shadow_jester_chestplate": "Shadow Jester Chestplate",
+  "item.hazennstuff.shadow_jester_leggings": "Shadow Jester Leggings",
+  "item.hazennstuff.shadow_jester_boots": "Shadow Scale Boots",
+
+  "item.hazennstuff.cosmic_scholar_helmet": "Cosmic Scholar Hat",
+  "item.hazennstuff.cosmic_scholar_chestplate": "Cosmic Scholar Robes",
+  "item.hazennstuff.cosmic_scholar_leggings": "Cosmic Scholar Leggings",
+  "item.hazennstuff.cosmic_scholar_boots": "Cosmic Scholar Boots",
+
+  "item.hazennstuff.geckolib_cosmic_scholar_helmet": "Cosmic Scholar Hat",
+  "item.hazennstuff.geckolib_cosmic_scholar_chestplate": "Cosmic Scholar Robes",
+  "item.hazennstuff.geckolib_cosmic_scholar_leggings": "Cosmic Scholar Leggings",
+  "item.hazennstuff.geckolib_cosmic_scholar_boots": "Cosmic Scholar Boots",
+
+  "item.hazennstuff.astraconic_weaver_helmet": "Astraconic Weaver Mask",
+  "item.hazennstuff.astraconic_weaver_chestplate": "Astraconic Weaver Chestplate",
+  "item.hazennstuff.astraconic_weaver_leggings": "Astraconic Weaver Leggings",
+  "item.hazennstuff.astraconic_weaver_boots": "Astraconic Weaver Boots",
+
+  "item.hazennstuff.geckolib_astraconic_weaver_helmet": "Astraconic Weaver Mask",
+  "item.hazennstuff.geckolib_astraconic_weaver_chestplate": "Astraconic Weaver Chestplate",
+  "item.hazennstuff.geckolib_astraconic_weaver_leggings": "Astraconic Weaver Leggings",
+  "item.hazennstuff.geckolib_astraconic_weaver_boots": "Astraconic Weaver Boots",
+
+  "item.hazennstuff.nautilus_knight_helmet": "Nautilus Knight Visor",
+  "item.hazennstuff.nautilus_knight_chestplate": "Nautilus Knight Suit",
+  "item.hazennstuff.nautilus_knight_leggings": "Nautilus Knight Leggings",
+  "item.hazennstuff.nautilus_knight_boots": "Nautilus Knight Boots",
+
+  "item.hazennstuff.elder_guardian_helmet": "Elder Guardian Helmet",
+  "item.hazennstuff.elder_guardian_chestplate": "Elder Guardian Chestplate",
+  "item.hazennstuff.elder_guardian_leggings": "Elder Guardian Leggings",
+  "item.hazennstuff.elder_guardian_boots": "Elder Guardian Boots",
 
   "item.hazennstuff.infestation_helmet": "Infestation Mask",
   "item.hazennstuff.infestation_chestplate": "Infestation Chestplate",
@@ -871,7 +973,7 @@
 
 
   "entity.hazennstuff.brimstone_hellblast": "Brimstone Hellblast",
-  "entity.hazennstuff.scorching_slash": "Scorching Slash",
+  "entity.hazennstuff.scorching_blade": "Scorching Blade",
   "entity.hazennstuff.fiery_dagger_magic_projectile": "Fiery Dagger",
 
   "entity.hazennstuff.ice_arrow": "Ice Arrow",
@@ -881,9 +983,19 @@
 
   "entity.hazennstuff.energy_burst": "Energy Burst",
   "entity.hazennstuff.lightning_strike": "Lightning Strike",
+  "entity.hazennstuff.ningu_demonbane_petalblade": "Ningu Demonbane Petalblade",
+  "entity.hazennstuff.ningu_demonbane_petalblade_shuriken": "Ningu Demonbane Petalblade",
+  "entity.hazennstuff.coruscation_discharge": "Coruscation Discharge",
 
   "entity.hazennstuff.thorn_chakram": "Thorn Chakram",
   "entity.hazennstuff.spider_lily": "Spider Lily",
+
+  "entity.hazennstuff.endraconic_meteor": "Endraconic Meteor",
+  "entity.hazennstuff.endraconic_breath": "Endraconic Breath",
+
+  "entity.hazennstuff.flesh_chunk": "Flesh Chunk",
+  "entity.hazennstuff.flesh_mound": "Flesh Mound",
+  "entity.hazennstuff.flesh_piece": "Flesh Piece",
 
   "entity.hazennstuff.ichor_stream": "Stream of Ichor",
 
@@ -897,11 +1009,21 @@
   "entity.hazennstuff.nights_edge_after_slash": "Night's Edge Slash",
   "entity.hazennstuff.shadow_reaver": "Shadow Reaver",
   "entity.hazennstuff.shadow_dagger": "Shadow Dagger",
+  "entity.hazennstuff.spade": "Arcane Card",
+  "entity.hazennstuff.diamond": "Arcane Card",
+  "entity.hazennstuff.club": "Arcane Card",
+  "entity.hazennstuff.heart": "Arcane Card",
 
   "entity.hazennstuff.soul_seeker": "Soul Seeker",
 
   "entity.hazennstuff.cosmic_bolt": "Cosmic Bolt",
   "entity.hazennstuff.evercomet": "Evercomet",
+
+  "entity.hazennstuff.hydrobullet": "Hydrobullet",
+  "entity.hazennstuff.water_bolt": "Water Bolt",
+  "entity.hazennstuff.razorblade_typhoon": "Razorblade Typhoon",
+  "entity.hazennstuff.trident_barrage": "Trident Barrage",
+  "entity.hazennstuff.horn_shell": "Horn Shell",
 
 
   "spell.hazennstuff.brimstone_hellblast": "Brimstone Hellblast",
@@ -915,11 +1037,16 @@
 
   "spell.hazennstuff.energy_burst": "Energy Burst",
   "spell.hazennstuff.ionic_slash": "Ionic Slash",
+  "spell.hazennstuff.dazzling_obliteration": "Dazzling Obliteration",
 
   "spell.hazennstuff.thorn_chakram": "Thorn Chakram",
   "spell.hazennstuff.counterspell_spider_lily": "Spider Lily Counterspell",
   "spell.hazennstuff.shard_sword": "Shard Sword",
   "spell.hazennstuff.death_sentence": "Death Sentence",
+
+  "spell.hazennstuff.endraconic_meteor": "Endraconic Meteor",
+
+  "spell.hazennstuff.violent_regurgitation": "Violent Regurgitation",
 
   "spell.hazennstuff.golden_shower": "Golden Shower",
 
@@ -934,11 +1061,19 @@
   "spell.hazennstuff.shooting_star": "Shooting Star",
   "spell.hazennstuff.cosmic_bolt": "Cosmic Bolt",
   "spell.hazennstuff.evercomet_barrage": "Evercomet Barrage",
+  "spell.hazennstuff.moonkissed": "Moonkissed",
   "spell.hazennstuff.supernova": "Supernova",
 
   "spell.hazennstuff.nights_edge_strike": "Night's Edge Strike",
   "spell.hazennstuff.umbrashift_barrage": "Umbrashift Barrage",
   "spell.hazennstuff.shadow_reaver": "Shadow Reaver",
+  "spell.hazennstuff.arcane_cards": "Arcane Cards",
+
+  "spell.hazennstuff.hydrobullet": "Hydrobullet",
+  "spell.hazennstuff.water_bolt": "Water Bolt",
+  "spell.hazennstuff.trident_jetstream": "Trident Jetstream",
+  "spell.hazennstuff.horn_shell": "Horn Shell",
+  "spell.hazennstuff.razorblade_typhoon": "Razorblade Typhoon",
 
   "spell.hazennstuff.soul_seekers": "Soul Seekers",
 
@@ -955,11 +1090,16 @@
 
   "spell.hazennstuff.energy_burst.guide": "A Calamity Fables Reference ''Fire a burst of electrifying energy balls, leaving your enemies shocked.''",
   "spell.hazennstuff.ionic_slash.guide": "Unleash an electric slash that can smite down your foes. Such slash has the power and electricity to allow ignition for some artifacts... This spell resonates well with a dormant weapon...",
+  "spell.hazennstuff.dazzling_obliteration.guide": "A Honkai Star Rail reference. Ninjutsu Secret Technique: Dazzling Obliteration!",
 
   "spell.hazennstuff.thorn_chakram.guide": "A Terraria Reference ''Throw the Thorn Chakram at your foes and watch as it ricochets from the walls and your enemies.''",
   "spell.hazennstuff.counterspell_spider_lily.guide": "Return your opponent's spells back to the soil of the earth.",
   "spell.hazennstuff.shard_sword.guide": "A Honkai Star-Rail Reference. May your blade pierce through your foes...",
   "spell.hazennstuff.death_sentence.guide": "A Honkai Star-Rail Reference ''That paradise may be unreachable for me... Savor it in my place''",
+
+  "spell.hazennstuff.violent_regurgitation.guide": "You regurgitate a chunk of flesh from your own body and vomit it out to hurt your foes... You will feel pain and hunger when hurling out your flesh, but you seem to have a hunger for the mound of flesh that lies after hitting the ground...",
+
+  "spell.hazennstuff.endraconic_meteor.guide": "Fire out 3 Endraconic Meteors, once fired from the Elder Ender Dragons of old, and wreak havoc upon those that cross your path as you incinerate them with the breath and flames of ender...",
 
   "spell.hazennstuff.golden_shower.guide": "A Terraria Reference ''Sprays a shower of ichor. Decreases target's defense''",
 
@@ -974,11 +1114,19 @@
   "spell.hazennstuff.nights_edge_strike.guide": "A Terraria Reference ''Strike your foes with the strike of the Night's Edge.''",
   "spell.hazennstuff.umbrashift_barrage.guide": "Teleport and fire daggers on your victims",
   "spell.hazennstuff.shadow_reaver.guide": "The Shadow Reaver seeks to claim its victim and corrupt their spellcasting...",
+  "spell.hazennstuff.arcane_cards.guide": "Fires a spread of cards at your foes.",
 
   "spell.hazennstuff.shooting_star.guide": "A Terraria Reference. Fire 2 stars down on your opponent.",
   "spell.hazennstuff.cosmic_bolt.guide": "Fire a cosmic bolt that homes in on more enemies the higher the level.",
   "spell.hazennstuff.evercomet_barrage.guide": "Fire a barrage of comets that scale off of cosmic and ice spell power.",
+  "spell.hazennstuff.moonkissed.guide": "Call upon the blessing of the moon.",
   "spell.hazennstuff.supernova.guide": "Your final stand... become a dying star and be engulfed by your spirit's black hole...",
+
+  "spell.hazennstuff.hydrobullet.guide": "Fires a hydrobullet that deals splash damage.",
+  "spell.hazennstuff.water_bolt.guide": "A Terraria Reference. Fire a bouncing bolt of water",
+  "spell.hazennstuff.razorblade_typhoon.guide": "A Terraria Reference. A typhoon that shreds through your foes.",
+  "spell.hazennstuff.horn_shell.guide": "Fire a piercing horn shell.",
+  "spell.hazennstuff.trident_barrage.guide": "Fire a barrage of tridents.",
 
   "spell.hazennstuff.soul_seekers.guide": "The reapers have come to claim the souls of your foes. Cast upon the 3 heads of the Soul Seekers to nullify your opponent's magic.",
 
@@ -993,6 +1141,7 @@
   "effect.hazennstuff.archer_set_bonus": "Archer Set Bonus",
   "effect.hazennstuff.summoner_set_bonus": "Summoner Set Bonus",
   "effect.hazennstuff.flame_kissed": "Flame Kissed",
+  "effect.hazennstuff.moonkissed": "Moonkissed",
   "effect.hazennstuff.dryads_blessing": "Dryad's Blessing",
   "effect.hazennstuff.infested": "Infested",
   "effect.hazennstuff.spores": "Spores",
@@ -1011,6 +1160,7 @@
   "effect.hazennstuff.archer_set_bonus.description": "By wearing the full set of the archer armor, you gain an increase of movement speed by 15% and increase of arrow draw speed and velocity by 10%.",
   "effect.hazennstuff.summoner_set_bonus.description": "By wearing the full set of the summoner armor, you gain an increase of summon damage by 15% and increase mana steal by 10%.",
   "effect.hazennstuff.flame_kissed.description": "Your body has been flame-kissed by the flamebearers. Your fire spell power and damage increases.",
+  "effect.hazennstuff.moonkissed.description": "The moon gazes down on you, your cosmic connection strengthens with the tides of the sea.",
   "effect.hazennstuff.dryads_blessing.description": "Blessed by the Dryad, your defence increases as you recieve more healing and enable overheal.",
   "effect.hazennstuff.infested.description": "The spores grow within your body...",
   "effect.hazennstuff.spores.description": "You wither away as the spores in your body sap away at your health.",
@@ -1059,7 +1209,56 @@
   "material.hazennstuff.rune_radiance": "Radiance Rune",
   "material.hazennstuff.rune_shadow": "Shadow Rune",
   "material.hazennstuff.rune_cosmic": "Cosmic Rune",
+  "material.hazennstuff.rune_hydro": "Hydro Rune",
 
   "death.attack.shadow_magic": "%1$s was consumed by darkness",
-  "death.attack.corrupt_magic": "%1$s shattered into fragments"
+  "death.attack.cosmic_magic": "%1$s returned into cosmic dust...",
+  "death.attack.corrupt_magic": "%1$s shattered into fragments",
+
+  "death.attack.brimstone_hellblast": "%1$s was slain by the brimstone flames of the hellblast",
+  "death.attack.scorching_slash": "%1$s was split in half from a scorching slash",
+  "death.attack.fiery_dagger": "%1$s was incernerated by the daggers of the flamebearer...",
+  "death.attack.reign_of_tyros": "%1$s has faltered to the power of the legion...",
+
+  "death.attack.ice_arrow": "%1$s was pierced by an ice arrow",
+  "death.attack.hailstorm": "%1$s was lost amidst the raining chunks of ice",
+
+  "death.attack.energy_burst": "%1$s shockingly died",
+  "death.attack.ionic_slash": "%1$s was struck down with an ionic slash",
+  "death.attack.dazzling_obliteration": "%1$s was obliterated by the Ninjitsu Secret Technique: Dazzling Obliteration",
+
+  "death.attack.thorn_chakram": "%1$s was shredded by a thorn chakram",
+  "death.attack.counterspell_spider_lily": "%1$s met their end to a spider lily",
+  "death.attack.shard_sword": "%1$s has reached a paradise that was unreachable to you...",
+  "death.attack.death_sentence": "%1$s ",
+
+  "death.attack.endraconic_meteor": "%1$s was incernated by the flames of ender",
+
+  "death.attack.violent_regurgitation": "%1$s was absorbed into the meat ball",
+
+  "death.attack.golden_shower": "%1$s was... oh-",
+
+  "death.attack.spectral_axe": "%1$s was pierced by the spectral axe",
+
+  "death.attack.syringe_barrage": "%1$s sucumbed to the spores of the glowing mushroom...",
+  "death.attack.call_forth_terraprisma": "%1$s was elegantly slain by a Terraprisma",
+  "death.attack.terraprismic_barrage": "%1$s was pierced by the barrage of Terraprismas",
+
+  "death.attack.shooting_star": "%1$s was smited from the heavens by a shooting star",
+  "death.attack.cosmic_bolt": "%1$s got comboed on by a cosmic bolt",
+  "death.attack.evercomet_barrage": "%1$s was frozen amidst the barrage of comets",
+  "death.attack.supernova": "%1$s was reduced to nothing...",
+
+  "death.attack.nights_edge_strike": "%1$s was struck down by the killing blow of the Night's Edge",
+  "death.attack.umbrashift_barrage": "%1$s could not withstand the The World",
+  "death.attack.shadow_reaver": "%1$s had their soul claimed by the Shadow Reaver",
+  "death.attack.arcane_cards": "%1$s didn't have a good hand. Womp womp.",
+
+  "death.attack.hydrobullet": "%1$s got wet from the hydrobullet",
+  "death.attack.water_bolt": "%1$s got wet from the water bolt",
+  "death.attack.trident_jetstream": "%1$s was pierced by a barrage of tridents",
+  "death.attack.horn_shell": "%1$s was pierced by a horn shell",
+  "death.attack.razorblade_typhoon": "%1$s was shredded by the razorblade typhoon",
+
+  "death.attack.soul_seekers": "%1$s was claimed by the soul seekers..."
 }

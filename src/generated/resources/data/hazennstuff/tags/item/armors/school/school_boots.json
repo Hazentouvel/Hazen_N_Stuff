@@ -7,6 +7,10 @@
     "irons_spellbooks:cryomancer_boots",
     "irons_spellbooks:electromancer_boots",
     "irons_spellbooks:cultist_boots",
-    "irons_spellbooks:shadowwalker_boots"
+    "irons_spellbooks:shadowwalker_boots",
+    "hazennstuff:masked_fool_boots",
+    "hazennstuff:radiant_crystal_boots",
+    "hazennstuff:cosmic_scholar_boots",
+    "hazennstuff:nautilus_knight_boots"
   ]
 }

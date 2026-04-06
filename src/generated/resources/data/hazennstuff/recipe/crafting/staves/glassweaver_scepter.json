@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "irons_spellbooks:artificer_cane"
+    },
+    "N": {
+      "item": "minecraft:amethyst_cluster"
+    },
+    "P": {
+      "item": "hazennstuff:prismatic_shard"
+    },
+    "R": {
+      "item": "hazennstuff:radiance_rune"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    " PN",
+    "ZRP",
+    "AZ "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:glassweaver_scepter"
+  }
+}

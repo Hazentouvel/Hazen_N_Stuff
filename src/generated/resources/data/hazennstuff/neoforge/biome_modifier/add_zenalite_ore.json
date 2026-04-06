@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
-  "biomes": "#minecraft:is_end",
+  "biomes": "#hazennstuff:void_wanderer_biomes",
   "features": "hazennstuff:zenalite_ore_placed",
   "step": "underground_ores"
 }

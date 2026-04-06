@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "hazennstuff:stardust"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    "SZ ",
+    "ZS "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:cosmic_gold_ingot"
+  }
+}

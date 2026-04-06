@@ -13,17 +13,17 @@ public class GeckoLibFireblossomBattlemageArmorModel extends DefaultedEntityGeoM
     // Just replace where the path is with the file path of your texture, EZ PZ
     @Override
     public ResourceLocation getModelResource(GeckoLibFireblossomBattlemageArmor animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/fireblossom_knight_armor_geckolib.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/armor/fireblossom_battlemage_armor.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(GeckoLibFireblossomBattlemageArmor animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/fireblossom_knight_armor.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/fireblossom_battlemage_armor.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(GeckoLibFireblossomBattlemageArmor animatable) {
-        return ResourceLocation.fromNamespaceAndPath(IronsSpellbooks.MODID, "animations/wizard_armor_animation.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/armor/fireblossom_battlemage_armor.animation.json");
     }
 }
 

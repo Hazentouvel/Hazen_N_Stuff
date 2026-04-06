@@ -22,7 +22,7 @@ public class CoraliteCane extends StaffItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(HnSRarities.NATURE_RARITY.getValue())
+                        .rarity(HnSRarities.HYDRO_RARITY.getValue())
                         .attributes(ExtendedSwordItem
                                 .createAttributes(HnSStaffTier.CORALITE_CANE)
                         )

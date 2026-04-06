@@ -27,7 +27,7 @@ public class HnSCreativeModeTabs {
                     .build());
 
     public static final Supplier<CreativeModeTab> HAZEN_N_STUFF_MATERIALS = CREATIVE_MODE_TAB.register("hazennstuff_materials",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItemRegistry.STARDUST.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItemRegistry.COSMIC_GOLD_INGOT.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "hazennstuff_blocks"))
                     .title(Component.translatable("creativetab.hazennstuff.hazennstuff_materials"))
                     .displayItems((itemDisplayParameters, output) -> {
@@ -51,6 +51,7 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.CHLOROPHYTE_INGOT);
                         output.accept(HnSItemRegistry.HALLOWED_INGOT);
                         output.accept(HnSItemRegistry.DEMONITE_INGOT);
+                        output.accept(HnSItemRegistry.COSMIC_GOLD_INGOT);
 
                         //Nuggets
                         output.accept(HnSItemRegistry.PYRIUM_NUGGET);
@@ -84,6 +85,8 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.PRISMATIC_SHARD);
                         output.accept(HnSItemRegistry.VOLT_CORE);
                         output.accept(HnSItemRegistry.STARDUST);
+                        output.accept(HnSItemRegistry.ELDER_GUARDIAN_SPINE);
+                        output.accept(HnSItemRegistry.ARCANE_SEA_SHELL);
                         output.accept(HnSItemRegistry.DEUS_ESSENCE);
                         output.accept(HnSItemRegistry.CATALYST);
 
@@ -98,6 +101,7 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.RADIANCE_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.SHADOW_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.COSMIC_UPGRADE_ORB.get());
+                        output.accept(HnSItemRegistry.HYDRO_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.ARCHERY_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.MELEE_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.HEALTH_UPGRADE_ORB.get());
@@ -114,6 +118,7 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.SHADOW_RUNE.get());
                         output.accept(HnSItemRegistry.RADIANCE_RUNE.get());
                         output.accept(HnSItemRegistry.COSMIC_RUNE.get());
+                        output.accept(HnSItemRegistry.HYDRO_RUNE.get());
                         output.accept(HnSItemRegistry.ELDRITCH_RUNE.get());
 
 
@@ -389,12 +394,6 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.MYCELIUM_GUARDIAN_CHESTPLATE.get());
                         output.accept(HnSItemRegistry.MYCELIUM_GUARDIAN_LEGGINGS.get());
                         output.accept(HnSItemRegistry.MYCELIUM_GUARDIAN_BOOTS.get());
-
-                        // Radiant Crystal
-                        output.accept(HnSItemRegistry.GECKOLIB_RADIANT_CRYSTAL_HELMET.get());
-                        output.accept(HnSItemRegistry.GECKOLIB_RADIANT_CRYSTAL_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.GECKOLIB_RADIANT_CRYSTAL_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.GECKOLIB_RADIANT_CRYSTAL_BOOTS.get());
 
                         // Radiant Crystal
                         output.accept(HnSItemRegistry.RADIANT_CRYSTAL_HELMET.get());
@@ -683,34 +682,15 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
 
 
-                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET.get());
-                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS.get());
-
-
                         output.accept(HnSItemRegistry.FIREBLOSSOM_KNIGHT_HELMET.get());
                         output.accept(HnSItemRegistry.FIREBLOSSOM_KNIGHT_CHESTPLATE.get());
                         output.accept(HnSItemRegistry.FIREBLOSSOM_KNIGHT_LEGGINGS.get());
                         output.accept(HnSItemRegistry.FIREBLOSSOM_KNIGHT_BOOTS.get());
 
-
-                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_KNIGHT_HELMET.get());
-                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_KNIGHT_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_KNIGHT_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_KNIGHT_BOOTS.get());
-
-
                         output.accept(HnSItemRegistry.FIREBLOSSOM_GOWN_HELMET.get());
                         output.accept(HnSItemRegistry.FIREBLOSSOM_GOWN_CHESTPLATE.get());
                         output.accept(HnSItemRegistry.FIREBLOSSOM_GOWN_LEGGINGS.get());
                         output.accept(HnSItemRegistry.FIREBLOSSOM_GOWN_BOOTS.get());
-
-
-                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_GOWN_HELMET.get());
-                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_GOWN_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_GOWN_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.GECKOLIB_FIREBLOSSOM_GOWN_BOOTS.get());
 
                         output.accept(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CROWN.get());
                         output.accept(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get());
@@ -932,12 +912,27 @@ public class HnSCreativeModeTabs {
                         //Shadow
 
 
+                        // Soul Reaper
+                        output.accept(HnSItemRegistry.SOUL_REAPER.get());
                         //Lights Bane
                         output.accept(HnSItemRegistry.LIGHTS_BANE.get());
                         //Nights Edge
                         output.accept(HnSItemRegistry.NIGHTS_EDGE.get());
                         //True Nights Edge
                         output.accept(HnSItemRegistry.TRUE_NIGHTS_EDGE.get());
+
+
+                        // Cosmic
+
+
+                        // Soul Reaper
+                        output.accept(HnSItemRegistry.ASTRALITE_CLEAVER.get());
+
+
+                        // Hydro
+
+                        // Soul Reaper
+                        output.accept(HnSItemRegistry.TIDAL_WAVE.get());
 
 
                         //Eldritch
@@ -993,6 +988,18 @@ public class HnSCreativeModeTabs {
 
                         //Divine Scepter
                         output.accept(HnSItemRegistry.DIVINE_SCEPTER.get());
+
+                        // Ceaseless Void
+                        output.accept(HnSItemRegistry.CEASELESS_VOID.get());
+
+                        // Glassweaver Scepter
+                        output.accept(HnSItemRegistry.GLASSWEAVER_SCEPTER.get());
+
+                        // Nexus
+                        output.accept(HnSItemRegistry.NEXUS.get());
+
+                        // Coralite Cane
+                        output.accept(HnSItemRegistry.CORALITE_CANE.get());
 
                         //Insania Aeternus
                         output.accept(HnSItemRegistry.INSANIA_AETERNUS.get());

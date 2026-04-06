@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "hazennstuff:arcane_sea_shell"
+    },
+    "E": {
+      "item": "hazennstuff:elder_guardian_spine"
+    },
+    "H": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "R": {
+      "item": "hazennstuff:hydro_rune"
+    },
+    "S": {
+      "item": "irons_spellbooks:artificer_cane"
+    }
+  },
+  "pattern": [
+    " RH",
+    "AER",
+    "SA "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:coralite_cane"
+  }
+}

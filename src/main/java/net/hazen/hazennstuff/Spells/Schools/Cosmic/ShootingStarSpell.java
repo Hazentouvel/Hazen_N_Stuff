@@ -6,7 +6,7 @@ import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.TargetEntityCastData;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
-import net.hazen.hazennstuff.Entity.Spells.Astral.ShootingStar.ShootingStar;
+import net.hazen.hazennstuff.Entity.Spells.Cosmic.ShootingStar.ShootingStar;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.minecraft.network.chat.Component;
@@ -48,22 +48,18 @@ public class ShootingStarSpell extends AbstractSpell {
         this.baseManaCost = 40;
     }
 
-    @Override
     public Optional<SoundEvent> getCastFinishSound() {
         return Optional.of(HnSSounds.STAR_CAST_1.get());
     }
 
-    @Override
     public CastType getCastType() {
         return CastType.INSTANT;
     }
 
-    @Override
     public DefaultConfig getDefaultConfig() {
         return defaultConfig;
     }
 
-    @Override
     public ResourceLocation getSpellResource() {
         return spellId;
     }

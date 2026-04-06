@@ -3,15 +3,15 @@
 	"animations": {
 		"idle": {
 			"loop": true,
-			"animation_length": 0.5,
+			"animation_length": 1,
 			"bones": {
-				"cometRotate": {
+				"evercometRotate": {
 					"rotation": {
 						"0.0": {
 							"vector": [0, 0, 0]
 						},
-						"0.5": {
-							"vector": [360, 0, 0]
+						"1.0": {
+							"vector": [0, -360, 0]
 						}
 					}
 				}

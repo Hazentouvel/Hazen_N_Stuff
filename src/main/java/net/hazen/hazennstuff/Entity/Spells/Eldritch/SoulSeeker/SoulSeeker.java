@@ -31,6 +31,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
@@ -59,7 +60,6 @@ public class SoulSeeker extends AbstractMagicProjectile implements GeoEntity {
         setOwner(shooter);
     }
 
-    @Override
     public void travel() {
         this.setPos(this.position().add(this.getDeltaMovement()));
         if (!this.isNoGravity())
@@ -67,48 +67,6 @@ public class SoulSeeker extends AbstractMagicProjectile implements GeoEntity {
             Vec3 vec3 = this.getDeltaMovement();
             this.setDeltaMovement(vec3.x, vec3.y - 0.05000000074505806, vec3.z);
         }
-    }
-
-    public void setRotation(float x, float y) {
-        this.setXRot(x);
-        this.xRotO = x;
-        this.setYRot(y);
-        this.yRotO = y;
-    }
-
-    @Override
-    public void trailParticles() {
-        Vec3 pos = this.getBoundingBox().getCenter().add(getDeltaMovement());
-        Vec3 random = Utils.getRandomVec3(0);
-        pos = pos.add(getDeltaMovement());
-        level.addParticle(HnSParticleHelper.BLADE_PARTICLE, pos.x, pos.y, pos.z, random.x, random.y, random.z);
-    }
-
-    @Override
-    public void impactParticles(double x, double y, double z) {
-        MagicManager.spawnParticles(level, HnSParticleHelper.BLADE_PARTICLE, x, y, z, 12, .08, .08, .08, 0.3, false);
-    }
-
-
-    @Override
-    public float getSpeed() {
-        return 1.4f;
-    }
-
-    @Override
-    public Optional<Holder<SoundEvent>> getImpactSound() {
-        return Optional.of(HnSSounds.BRIMSTONE_HELLBLAST_IMPACT);
-    }
-
-    @Override
-    protected void doImpactSound(Holder<SoundEvent> sound) {
-        level.playSound(null, getX(), getY(), getZ(), sound, SoundSource.NEUTRAL, 1.5f, 1.0f);
-    }
-
-    @Override
-    protected void onHitBlock(BlockHitResult blockHitResult) {
-        super.onHitBlock(blockHitResult);
-        discard();
     }
 
     private LivingEntity findNearestTarget() {
@@ -163,60 +121,107 @@ public class SoulSeeker extends AbstractMagicProjectile implements GeoEntity {
                 }
             }
         }
+    }
 
+
+    @Override
+    public void trailParticles() {
+        Vec3 pos = this.getBoundingBox().getCenter().add(getDeltaMovement());
+        Vec3 random = Utils.getRandomVec3(0);
+        pos = pos.add(getDeltaMovement());
+        level.addParticle(HnSParticleHelper.BLADE_PARTICLE, pos.x, pos.y, pos.z, random.x, random.y, random.z);
+    }
+
+    @Override
+    public void impactParticles(double x, double y, double z) {
+        MagicManager.spawnParticles(level, HnSParticleHelper.ELDRITCH_SOUL_PARTICLE, x, y, z, 12, .08, .08, .08, 0.3, false);
+    }
+
+    @Override
+    public float getSpeed() {
+        return 2f;
+    }
+
+    @Override
+    public Optional<Holder<SoundEvent>> getImpactSound() {
+        return Optional.of(HnSSounds.BRIMSTONE_HELLBLAST_IMPACT);
+    }
+
+    @Override
+    protected void doImpactSound(Holder<SoundEvent> sound) {
+        level.playSound(null, getX(), getY(), getZ(), sound, SoundSource.NEUTRAL, 1.5f, 1.0f);
+    }
+
+    @Override
+    protected void onHitBlock(BlockHitResult blockHitResult) {
+        super.onHitBlock(blockHitResult);
+        if (this.level.isClientSide) return;
+        LivingEntity owner = (LivingEntity) this.getOwner();
+        Vec3 hitPos = blockHitResult.getLocation();
+        applyCounterspellArea(hitPos, owner, 6.0f);
+        discard();
     }
 
     @Override
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
 
+        if (this.level.isClientSide) return;
+
         Entity target = entityHitResult.getEntity();
         LivingEntity owner = (LivingEntity) this.getOwner();
 
-        CounterSpellEvent event = new CounterSpellEvent(owner, target);
-        NeoForge.EVENT_BUS.post(event);
+        // Use the target position as center for the area counterspell
+        Vec3 center = target.position();
+        applyCounterspellArea(center, owner, 6.0f);
 
-        if (!event.isCanceled()) {
-            if (target instanceof LivingEntity livingTarget) {
-                MagicData targetMagicData = MagicData.getPlayerMagicData(livingTarget);
+        discard();
+    }
 
-                if (target instanceof AntiMagicSusceptible antiMagicTarget) {
-                    if (antiMagicTarget instanceof IMagicSummon summon) {
-                        if (summon.getSummoner() == owner) {
-                            if (summon instanceof Mob mob && mob.getTarget() == null) {
-                                antiMagicTarget.onAntiMagic(targetMagicData);
-                            }
-                        } else {
+    // Apply counterspell behavior in an area centered at `center` with given radius
+    private void applyCounterspellArea(Vec3 center, LivingEntity owner, float radius) {
+        List<LivingEntity> targets = this.level.getEntitiesOfClass(LivingEntity.class,
+                AABB.ofSize(center, (double)radius * 2.0D, (double)radius * 2.0D, (double)radius * 2.0D));
+
+        for (LivingEntity livingTarget : targets) {
+            if (livingTarget == null || !livingTarget.isAlive()) continue;
+
+            CounterSpellEvent event = new CounterSpellEvent(owner, livingTarget);
+            NeoForge.EVENT_BUS.post(event);
+
+            if (event.isCanceled()) continue;
+
+            MagicData targetMagicData = MagicData.getPlayerMagicData(livingTarget);
+
+            if (livingTarget instanceof AntiMagicSusceptible antiMagicTarget) {
+                if (antiMagicTarget instanceof IMagicSummon summon) {
+                    if (summon.getSummoner() == owner) {
+                        if (summon instanceof Mob mob && mob.getTarget() == null) {
                             antiMagicTarget.onAntiMagic(targetMagicData);
                         }
                     } else {
                         antiMagicTarget.onAntiMagic(targetMagicData);
                     }
-                } else if (target instanceof ServerPlayer serverPlayer) {
-                    Utils.serverSideCancelCast(serverPlayer, true);
-                    MagicData.getPlayerMagicData(serverPlayer).getPlayerRecasts().removeAll(RecastResult.COUNTERSPELL);
-                } else if (target instanceof IMagicEntity magicEntity) {
-                    magicEntity.cancelCast();
+                } else {
+                    antiMagicTarget.onAntiMagic(targetMagicData);
                 }
+            } else if (livingTarget instanceof ServerPlayer serverPlayer) {
+                Utils.serverSideCancelCast(serverPlayer, true);
+                MagicData.getPlayerMagicData(serverPlayer).getPlayerRecasts().removeAll(RecastResult.COUNTERSPELL);
+            } else if (livingTarget instanceof IMagicEntity magicEntity) {
+                magicEntity.cancelCast();
+            }
 
-                for (Holder<MobEffect> mobEffect : livingTarget.getActiveEffectsMap().keySet().stream().toList()) {
-                    if (mobEffect.value() instanceof MagicMobEffect) {
-                        livingTarget.removeEffect(mobEffect);
-                    }
-                }
-
-                try {
-                    DamageSources.applyDamage(
-                            target,
-                            damage,
-                            HnSSpellRegistries.SOUL_SEEKERS.get().getDamageSource(this, owner)
-                    );
-                } catch (Exception ignored) {
+            for (Holder<MobEffect> mobEffect : livingTarget.getActiveEffectsMap().keySet().stream().toList()) {
+                if (mobEffect.value() instanceof MagicMobEffect) {
+                    livingTarget.removeEffect(mobEffect);
                 }
             }
-        }
 
-        discard();
+            try {
+                DamageSources.applyDamage(livingTarget, damage, HnSSpellRegistries.SOUL_SEEKERS.get().getDamageSource(this, owner));
+            } catch (Exception ignored) {}
+        }
     }
 
     //ANIMATION

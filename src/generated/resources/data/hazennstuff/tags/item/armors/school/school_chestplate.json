@@ -7,6 +7,10 @@
     "irons_spellbooks:cryomancer_chestplate",
     "irons_spellbooks:electromancer_chestplate",
     "irons_spellbooks:cultist_chestplate",
-    "irons_spellbooks:shadowwalker_chestplate"
+    "irons_spellbooks:shadowwalker_chestplate",
+    "hazennstuff:masked_fool_chestplate",
+    "hazennstuff:radiant_crystal_chestplate",
+    "hazennstuff:cosmic_scholar_chestplate",
+    "hazennstuff:nautilus_knight_chestplate"
   ]
 }

@@ -133,12 +133,6 @@ public class FieryDaggerSpell extends AbstractTaggedSpell {
                 dagger.setExplosionRadius(0f);
                 dagger.setPos(spawnPos);
 
-//                // Make dagger visually face the caster's current direction
-//                dagger.setYRot(entity.getYRot());
-//                dagger.setXRot(entity.getXRot());
-//                dagger.yRotO = entity.getYRot();
-//                dagger.xRotO = entity.getXRot();
-
                 dagger.launchDir = null;
                 dagger.ownerTrack = spawnPos.subtract(entity.position());
                 dagger.setDeltaMovement(0, 0, 0);
@@ -151,28 +145,14 @@ public class FieryDaggerSpell extends AbstractTaggedSpell {
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
 
-
-//    private boolean hasTaggedItem(LivingEntity entity, net.minecraft.tags.TagKey<net.minecraft.world.item.Item> tag) {
-//        if (entity.getMainHandItem().is(tag) || entity.getOffhandItem().is(tag))
-//            return true;
-//
-//        for (ItemStack armor : entity.getArmorSlots()) {
-//            if (armor.is(tag))
-//                return true;
-//        }
-//
-//        boolean hasCurio = CuriosApi.getCuriosInventory(entity)
-//                .map(curios -> !curios.findCurios(item -> item != null && item.is(tag)).isEmpty())
-//                .orElse(false);
-//
-//        return hasCurio;
-//    }
-
     public SpellDamageSource getDamageSource(@Nullable Entity projectile, Entity attacker) {
-        return super.getDamageSource(projectile, attacker).setFireTicks(60);
+        return super.getDamageSource(projectile, attacker)
+                .setFireTicks(60)
+                .setIFrames(0)
+                ;
     }
 
     private float getDamage(int spellLevel, LivingEntity entity) {
-        return this.getSpellPower(spellLevel, entity) * 0.5F;
+        return this.getSpellPower(spellLevel, entity) * 0.3F;
     }
 }

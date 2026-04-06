@@ -10,12 +10,12 @@ import net.minecraft.resources.ResourceLocation;
 public class AstraconicWeaverArmorRenderer extends AzArmorRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/armor/ender_dragon_armor.geo.json"
+            "geo/armor/astraconic_weaver_armor.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/armor/ender_dragon_armor.png"
+            "textures/armor/astraconic_weaver_armor.png"
     );
 
     public AstraconicWeaverArmorRenderer() {

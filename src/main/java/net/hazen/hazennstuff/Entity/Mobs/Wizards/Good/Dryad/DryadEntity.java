@@ -89,11 +89,17 @@ public class DryadEntity extends NeutralWizard implements VillagerDataHolder, Su
         this.goalSelector.addGoal(2, new SpellBarrageGoal(this, SpellRegistry.ROOT_SPELL.get(), 3, 6, 100, 250, 1));
         this.goalSelector.addGoal(3, new WizardAttackGoal(this, 1.25f, 35, 70)
                 .setSpells(
-                        List.of(HnSSpellRegistries.THORN_CHAKRAM.get(), SpellRegistry.POISON_ARROW_SPELL.get()),
-                        List.of(SpellRegistry.POISON_SPLASH_SPELL.get()),
+                        List.of(SpellRegistry.ROOT_SPELL.get(), SpellRegistry.ROOT_SPELL.get()),
+                        List.of(SpellRegistry.ROOT_SPELL.get()),
                         List.of(),
-                        List.of(SpellRegistry.STOMP_SPELL.get()))
-                .setSingleUseSpell(SpellRegistry.OAKSKIN_SPELL.get(), 80, 400, 3, 4)
+                        List.of(SpellRegistry.ROOT_SPELL.get()))
+                .setSingleUseSpell(SpellRegistry.ROOT_SPELL.get(), 80, 400, 3, 4)
+//                .setSpells(
+//                        List.of(HnSSpellRegistries.THORN_CHAKRAM.get(), SpellRegistry.POISON_ARROW_SPELL.get()),
+//                        List.of(SpellRegistry.POISON_SPLASH_SPELL.get()),
+//                        List.of(),
+//                        List.of(SpellRegistry.STOMP_SPELL.get()))
+//                .setSingleUseSpell(SpellRegistry.OAKSKIN_SPELL.get(), 80, 400, 3, 4)
                 .setSpellQuality(0.3f, 0.5f)
                 .setDrinksPotions());
         //this.goalSelector.addGoal(1, new EndermanFreezeWhenLookedAt(this));

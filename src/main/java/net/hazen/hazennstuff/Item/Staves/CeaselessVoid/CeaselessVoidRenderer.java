@@ -20,7 +20,6 @@ public class CeaselessVoidRenderer extends AzItemRenderer {
     public CeaselessVoidRenderer() {
         super(
                 AzItemRendererConfig.builder(GEO, TEX)
-                        .addRenderLayer(new AzAutoGlowingLayer<>())
                         .build()
         );
     }

@@ -84,16 +84,14 @@ public class HnSBlockTagProvider extends BlockTagsProvider {
 
         ;
 
-        tag(BlockTags.MINEABLE_WITH_HOE)
-
-        ;
-
         tag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
-
+                .add(HnSBlocks.ZENALITE_ABYSSLATE_ORE.get())
+                .add(HnSBlocks.ZENALITE_DEEPSLATE_ORE.get())
+                .add(HnSBlocks.ZENALITE_STONE_ORE.get())
+                .add(HnSBlocks.ZENALITE_END_STONE_ORE.get())
         ;
 
         tag(BlockTags.INCORRECT_FOR_IRON_TOOL)
-
                 .add(HnSBlocks.ZENALITE_ABYSSLATE_ORE.get())
                 .add(HnSBlocks.ZENALITE_DEEPSLATE_ORE.get())
                 .add(HnSBlocks.ZENALITE_STONE_ORE.get())
@@ -104,12 +102,13 @@ public class HnSBlockTagProvider extends BlockTagsProvider {
         ;
 
         tag(BlockTags.INCORRECT_FOR_GOLD_TOOL)
-
-
+                .add(HnSBlocks.ZENALITE_ABYSSLATE_ORE.get())
+                .add(HnSBlocks.ZENALITE_DEEPSLATE_ORE.get())
+                .add(HnSBlocks.ZENALITE_STONE_ORE.get())
+                .add(HnSBlocks.ZENALITE_END_STONE_ORE.get())
         ;
 
         tag(BlockTags.INCORRECT_FOR_STONE_TOOL)
-
                 .add(HnSBlocks.ZENALITE_BLOCK.get())
                 .add(HnSBlocks.ARCANE_STEEL_BLOCK.get())
                 .add(HnSBlocks.MITHRIL_BLOCK.get())
@@ -119,7 +118,10 @@ public class HnSBlockTagProvider extends BlockTagsProvider {
         ;
 
         tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
-
+                .add(HnSBlocks.ZENALITE_ABYSSLATE_ORE.get())
+                .add(HnSBlocks.ZENALITE_DEEPSLATE_ORE.get())
+                .add(HnSBlocks.ZENALITE_STONE_ORE.get())
+                .add(HnSBlocks.ZENALITE_END_STONE_ORE.get())
         ;
 
         tag(HnSTags.Blocks.NEEDS_MITRHIL_TOOL)
@@ -134,7 +136,6 @@ public class HnSBlockTagProvider extends BlockTagsProvider {
 
         tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(HnSBlocks.CHLOROPHYTE_ORE.get())
-
         ;
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)

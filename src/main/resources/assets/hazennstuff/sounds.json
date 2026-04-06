@@ -305,5 +305,95 @@
     "sounds": [
       "hazennstuff:cosmic_bolt_excellent"
     ]
+  },
+  "scorching_slash_wind_up": {
+    "sounds": [
+      "hazennstuff:scorching_slash_wind_up"
+    ]
+  },
+  "scorching_slash_swing": {
+    "sounds": [
+      "hazennstuff:scorching_slash_swing"
+    ]
+  },
+  "ningu_demonbane_petablade_cast_1": {
+    "sounds": [
+      "hazennstuff:ningu_demonbane_petablade_cast_1"
+    ]
+  },
+  "ningu_demonbane_petablade_cast_2": {
+    "sounds": [
+      "hazennstuff:ningu_demonbane_petablade_cast_2"
+    ]
+  },
+  "ningu_demonbane_petablade_cast_3": {
+    "sounds": [
+      "hazennstuff:ningu_demonbane_petablade_cast_3"
+    ]
+  },
+  "hydro_cast_1": {
+    "sounds": [
+      "hazennstuff:hydro_cast_1"
+    ]
+  },
+  "hydro_cast_2": {
+    "sounds": [
+      "hazennstuff:hydro_cast_2"
+    ]
+  },
+  "trident_jetstream_cast": {
+    "sounds": [
+      "hazennstuff:trident_jetstream_cast"
+    ]
+  },
+  "arcane_card_cast": {
+    "sounds": [
+      "hazennstuff:arcane_card_cast"
+    ]
+  },
+  "razorblade_typhoon_cast": {
+    "sounds": [
+      "hazennstuff:razorblade_typhoon_cast"
+    ]
+  },
+  "endraconic_meteor_cast": {
+    "sounds": [
+      "hazennstuff:endraconic_meteor_cast"
+    ]
+  },
+  "endraconic_meteor_charging": {
+    "sounds": [
+      "hazennstuff:endraconic_meteor_charging"
+    ]
+  },
+  "endraconic_meteor_impact": {
+    "sounds": [
+      "hazennstuff:endraconic_meteor_impact"
+    ]
+  },
+  "flesh_impact_1": {
+    "sounds": [
+      "hazennstuff:flesh_impact_1"
+    ]
+  },
+  "flesh_impact_2": {
+    "sounds": [
+      "hazennstuff:flesh_impact_2"
+    ]
+  },
+  "flesh_impact_3": {
+    "sounds": [
+      "hazennstuff:flesh_impact_3"
+    ]
+  },
+  "violent_regurgitation_charging": {
+    "sounds": [
+      "hazennstuff:violent_regurgitation_charging"
+    ]
+  },
+  "violent_regurgitation_cast": {
+    "sounds": [
+      "hazennstuff:violent_regurgitation_cast"
+    ]
   }
 }

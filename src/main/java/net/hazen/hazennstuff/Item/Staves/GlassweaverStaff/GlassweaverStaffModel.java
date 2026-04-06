@@ -12,12 +12,12 @@ public class GlassweaverStaffModel extends DefaultedItemGeoModel<GlassweaverScep
 
     @Override
     public ResourceLocation getModelResource(GlassweaverScepter animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/item/staves/glassweaver_staff.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/item/staves/glassweaver_scepter.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(GlassweaverScepter animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/staves/glassweaver_staff.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/staves/glassweaver_scepter.png");
     }
 
     @Override

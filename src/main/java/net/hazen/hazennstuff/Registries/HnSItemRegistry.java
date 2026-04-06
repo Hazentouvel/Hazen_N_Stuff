@@ -273,6 +273,14 @@ public class HnSItemRegistry {
                     .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.COSMIC_SPELL_POWER))
     );
 
+    // Cosmic Upgrade Orb
+    public static final DeferredHolder<Item, Item> HYDRO_UPGRADE_ORB = ITEMS.register("hydro_upgrade_orb",
+            () -> new UpgradeOrbItem(ItemPropertiesHelper
+                    .material()
+                    .rarity(Rarity.UNCOMMON)
+                    .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.HYDRO_SPELL_POWER))
+    );
+
     // Eldritch Upgrade Orb
     public static final DeferredHolder<Item, Item> ELDRITCH_UPGRADE_ORB = ITEMS.register("eldritch_upgrade_orb",
             () -> new UpgradeOrbItem(ItemPropertiesHelper
@@ -689,6 +697,12 @@ public class HnSItemRegistry {
                     .rarity(HnSRarities.HYDRO_RARITY.getValue()))
     );
 
+    // Arcane Sea Shell
+    public static final DeferredItem<Item> ELDER_GUARDIAN_SPINE = ITEMS.register("elder_guardian_spine",
+            () -> new Item(new Item.Properties()
+                    .rarity(HnSRarities.HYDRO_RARITY.getValue()))
+    );
+
     // Cosmic Gold Ingot
     public static final DeferredItem<Item> COSMIC_GOLD_INGOT = ITEMS.register("cosmic_gold_ingot",
             () -> new Item(new Item
@@ -1019,7 +1033,7 @@ public class HnSItemRegistry {
     public static final DeferredHolder<Item, Item> ROD_OF_DISCORD = ITEMS.register("rod_of_discord", RodOfDiscord::new);
 
     //Glassweaver Scepter
-    public static final DeferredHolder<Item, Item> GLASSWEAVER_SCEPTER = ITEMS.register("glassweaver_sscepter", GlassweaverScepter::new);
+    public static final DeferredHolder<Item, Item> GLASSWEAVER_SCEPTER = ITEMS.register("glassweaver_scepter", GlassweaverScepter::new);
 
     /*
      *** Hydro

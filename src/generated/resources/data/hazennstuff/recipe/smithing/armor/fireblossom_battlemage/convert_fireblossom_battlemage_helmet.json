@@ -4,11 +4,11 @@
     "item": "minecraft:gold_ingot"
   },
   "base": {
-    "item": "hazennstuff:fireblossom_crown"
+    "item": "hazennstuff:legacy_fireblossom_crown"
   },
   "result": {
     "count": 1,
-    "id": "hazennstuff:fireblossom_helmet"
+    "id": "hazennstuff:legacy_fireblossom_helmet"
   },
   "template": {
     "item": "hazennstuff:flaming_template"

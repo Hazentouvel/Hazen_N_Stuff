@@ -4,22 +4,27 @@ import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Spells.Schools.Cosmic.CosmicBoltSpell;
 import net.hazen.hazennstuff.Spells.Schools.Cosmic.EvercometBarrageSpell;
+import net.hazen.hazennstuff.Spells.Schools.Cosmic.MoonkissedSpell;
 import net.hazen.hazennstuff.Spells.Schools.Cosmic.ShootingStarSpell;
 import net.hazen.hazennstuff.Spells.Schools.Eldritch.SoulSeekersSpell;
+import net.hazen.hazennstuff.Spells.Schools.Ender.EndraconicMeteorSpell;
 import net.hazen.hazennstuff.Spells.Schools.Evocation.ParrySpell;
 import net.hazen.hazennstuff.Spells.Schools.Evocation.SpectralAxeSpell;
 import net.hazen.hazennstuff.Spells.Schools.Fire.*;
 import net.hazen.hazennstuff.Spells.Schools.Holy.GoldenShowerSpell;
+import net.hazen.hazennstuff.Spells.Schools.Hydro.*;
 import net.hazen.hazennstuff.Spells.Schools.Ice.HailstormSpell;
 import net.hazen.hazennstuff.Spells.Schools.Ice.IceArrowSpell;
 import net.hazen.hazennstuff.Spells.Schools.Lightning.EnergyBurstSpell;
 import net.hazen.hazennstuff.Spells.Schools.Lightning.IonicSlashSpell;
+import net.hazen.hazennstuff.Spells.Schools.Lightning.DazzlingObliterationSpell;
 import net.hazen.hazennstuff.Spells.Schools.Nature.CounterspellSpiderLilySpell;
 import net.hazen.hazennstuff.Spells.Schools.Nature.DeathSentenceSpell;
 import net.hazen.hazennstuff.Spells.Schools.Nature.ShardSwordSpell;
 import net.hazen.hazennstuff.Spells.Schools.Nature.ThornChakramSpell;
 import net.hazen.hazennstuff.Spells.Schools.Radiance.*;
 import net.hazen.hazennstuff.Spells.Schools.Radiance.PrismaticShiftSpell;
+import net.hazen.hazennstuff.Spells.Schools.Shadow.ArcaneCardsSpell;
 import net.hazen.hazennstuff.Spells.Schools.Shadow.NightsEdgeStrikeSpell;
 import net.hazen.hazennstuff.Spells.Schools.Shadow.ShadowReaverSpell;
 import net.hazen.hazennstuff.Spells.Schools.Shadow.UmbrashiftBarrageSpell;
@@ -40,6 +45,9 @@ public class HnSSpellRegistries {
     /*
      *** Ender
      */
+
+    //Ice Arrow
+    public static final Supplier<AbstractSpell> ENDRACONIC_METEOR = registerSpell(new EndraconicMeteorSpell());
 
     /*
      *** Blood
@@ -84,6 +92,9 @@ public class HnSSpellRegistries {
 
     //Ionic Slash
     public static final Supplier<AbstractSpell> IONIC_SLASH = registerSpell(new IonicSlashSpell());
+
+    //Dazzling Obliteration
+    public static final Supplier<AbstractSpell> DAZZLING_OBLITERATION = registerSpell(new DazzlingObliterationSpell());
 
 
     /*
@@ -149,6 +160,9 @@ public class HnSSpellRegistries {
     //Umbrashift Barrage
     public static final Supplier<AbstractSpell> SHADOW_REAVER = registerSpell(new ShadowReaverSpell());
 
+    //Arcane Cards
+    public static final Supplier<AbstractSpell> ARCANE_CARDS = registerSpell(new ArcaneCardsSpell());
+
 
     /*
      *** Eldritch
@@ -167,8 +181,30 @@ public class HnSSpellRegistries {
     // Cosmic Bolt
     public static final Supplier<AbstractSpell> COSMIC_BOLT = registerSpell(new CosmicBoltSpell());
 
-    // Cosmic Bolt
+    // Evercomet Barrage
     public static final Supplier<AbstractSpell> EVERCOMET_BARRAGE = registerSpell(new EvercometBarrageSpell());
+
+    // Moonkissed
+    public static final Supplier<AbstractSpell> MOONKISSED = registerSpell(new MoonkissedSpell());
+
+    /*
+    *** Hydro
+     */
+
+    // CosmicBolt
+    public static final Supplier<AbstractSpell> HYDROBULLET = registerSpell(new HydrobulletSpell());
+
+    // Water Bolt
+    public static final Supplier<AbstractSpell> WATER_BOLT = registerSpell(new WaterBoltSpell());
+
+    // Razorblade Typhoon
+    public static final Supplier<AbstractSpell> RAZORBLADE_TYPHOON = registerSpell(new RazorbladeTyphoonSpell());
+
+    // Trident Jetstream
+    public static final Supplier<AbstractSpell> TRIDENT_JETSTREAM = registerSpell(new TridentJetstreamSpell());
+
+    // Horn Shell
+    public static final Supplier<AbstractSpell> HORN_SHELL = registerSpell(new HornShellSpell());
 
 
 

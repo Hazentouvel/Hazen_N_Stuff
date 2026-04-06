@@ -12,7 +12,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class GeckoLibFireblossomGownArmor extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public GeckoLibFireblossomGownArmor(Type type, Properties settings) {
-        super(HnSArmorMaterials.ADVANCED_BATTLEMAGE_MATERIAL, type, settings, schoolTierMulti(
+        super(HnSArmorMaterials.ADVANCED_BATTLEMAGE_MATERIAL, type, settings, dormantTierMulti(
                 AttributeRegistry.FIRE_SPELL_POWER,
                 AttributeRegistry.NATURE_SPELL_POWER
         ));

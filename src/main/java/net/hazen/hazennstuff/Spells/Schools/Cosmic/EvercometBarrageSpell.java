@@ -3,7 +3,6 @@ package net.hazen.hazennstuff.Spells.Schools.Cosmic;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
 import io.redspace.ironsspellbooks.api.spells.CastType;
@@ -14,7 +13,7 @@ import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import java.util.List;
 import java.util.Optional;
 
-import net.hazen.hazennstuff.Entity.Spells.Astral.Evercomet.Evercomet;
+import net.hazen.hazennstuff.Entity.Spells.Cosmic.Evercomet.Evercomet;
 import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
 import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;

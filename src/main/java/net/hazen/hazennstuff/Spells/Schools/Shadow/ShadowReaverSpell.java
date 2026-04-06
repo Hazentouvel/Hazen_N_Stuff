@@ -9,12 +9,15 @@ import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import io.redspace.ironsspellbooks.api.util.Utils;
 
 import java.util.List;
+import java.util.Optional;
 
+import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowReaver.ShadowReaver;
 import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 
@@ -34,11 +37,11 @@ public class ShadowReaverSpell extends AbstractSpell {
                 .setMaxLevel(6)
                 .setCooldownSeconds((double)4F)
                 .build();
-        this.manaCostPerLevel = 2;
-        this.baseSpellPower = 12;
+        this.manaCostPerLevel = 15;
+        this.baseSpellPower = 1;
         this.spellPowerPerLevel = 1;
-        this.castTime = 0;
-        this.baseManaCost = 10;
+        this.castTime = 40;
+        this.baseManaCost = 60;
     }
 
     public DefaultConfig getDefaultConfig() {
@@ -46,11 +49,15 @@ public class ShadowReaverSpell extends AbstractSpell {
     }
 
     public CastType getCastType() {
-        return CastType.INSTANT;
+        return CastType.LONG;
     }
 
     public ResourceLocation getSpellResource() {
         return this.spellId;
+    }
+
+    public Optional<SoundEvent> getCastStartSound() {
+        return Optional.of((SoundEvent) SoundRegistry.BLACK_HOLE_CHARGE.get());
     }
 
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
@@ -62,7 +69,7 @@ public class ShadowReaverSpell extends AbstractSpell {
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
 
-    private float getDamage(int spellLevel, LivingEntity entity) {
-        return this.getSpellPower(spellLevel, entity) * 0.5F;
+    public float getDamage(int spellLevel, LivingEntity caster) {
+        return 5.0F + 5.0F * this.getSpellPower(spellLevel, caster);
     }
 }

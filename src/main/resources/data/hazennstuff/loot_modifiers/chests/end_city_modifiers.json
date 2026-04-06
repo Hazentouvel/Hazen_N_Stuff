@@ -1,0 +1,12 @@
+{
+  "type": "irons_spellbooks:append_loot",
+  "conditions": [
+    {
+      "condition":
+      "neoforge:loot_table_id",
+      "loot_table_id":
+      "minecraft:chests/end_city_treasure"
+    }
+  ],
+  "key": "hazennstuff:chests/additional_end_city_treasure_loot"
+}

@@ -124,43 +124,7 @@ public class HnSTags {
 
     }
 
-    public static final ResourceKey<Biome> WISEWOOD_FOREST = create("wisewood_forest");
-    public static final ResourceKey<Biome> PERMAFROST_FOREST = create("permafrost_forest");
-
-
-    private static Biome.BiomeBuilder baseBiomeBuilder(BiomeSpecialEffects.Builder specialEffects, MobSpawnSettings.Builder mobSpawnSettings, BiomeGenerationSettings.Builder genSettings) {
-        return new Biome.BiomeBuilder()
-                .hasPrecipitation(true)
-                .temperature(0.5F)
-                .downfall(0.5F)
-                .specialEffects(specialEffects.build())
-                .mobSpawnSettings(mobSpawnSettings.build())
-                .generationSettings(genSettings.build())
-                .temperatureAdjustment(Biome.TemperatureModifier.NONE);
-    }
-
-
-    private static BiomeSpecialEffects.Builder baseEffectsBuilder() {
-        return baseEffectsBuilder(true);
-    }
-
-
-    private static BiomeSpecialEffects.Builder baseEffectsBuilder(boolean ambientParticle) {
-        BiomeSpecialEffects.Builder builder = new BiomeSpecialEffects.Builder()
-                .fogColor(5195923)
-                .foliageColorOverride(5195923)
-                .grassColorOverride(5195923)
-                .waterColor(6187416)
-                .waterFogColor(1184291)
-                .skyColor(5658761)
-                ;
-        if (ambientParticle) {
-            builder.ambientParticle(new AmbientParticleSettings(ParticleRegistry.SNOWFLAKE_PARTICLE.get(), 0.001f));
-        }
-        return builder;
-    }
-
-
+    public static final TagKey<Biome> VOID_WANDERER_BIOMES = TagKey.create(Registries.BIOME, HazenNStuff.id("void_wanderer_biomes"));
 
     public static ResourceKey<Biome> create(String name) {
         return ResourceKey.create(Registries.BIOME, HazenNStuff.id(name));

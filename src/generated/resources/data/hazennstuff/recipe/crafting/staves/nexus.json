@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "irons_spellbooks:artificer_cane"
+    },
+    "N": {
+      "item": "hazennstuff:stardust"
+    },
+    "P": {
+      "item": "hazennstuff:cosmic_gold_ingot"
+    },
+    "R": {
+      "item": "hazennstuff:cosmic_rune"
+    },
+    "Z": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    " PN",
+    "ZRP",
+    "AZ "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:nexus"
+  }
+}

@@ -70,7 +70,6 @@ public class ShadowDagger extends AbstractMagicProjectile implements GeoEntity {
         discard();
     }
 
-
     @Override
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);

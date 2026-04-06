@@ -47,7 +47,7 @@ public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
 
     private static final int SPAWN_LAUNCH_EXTRA_MIN = 10;
     private static final int SPAWN_LAUNCH_EXTRA_MAX = 30;
-    public @Nullable Vec3 launchDir; // new: direction to use when launching after delay
+    public @Nullable Vec3 launchDir;
 
     public FieryDaggerMagicProjectile(EntityType<? extends Projectile> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);

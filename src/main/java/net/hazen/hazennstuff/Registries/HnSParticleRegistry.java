@@ -20,6 +20,10 @@ import java.util.function.Supplier;
 public class HnSParticleRegistry {
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(Registries.PARTICLE_TYPE, HazenNStuff.MOD_ID);
 
+    // Eldritch Soul Particle
+    public static final Supplier<SimpleParticleType> ELDRITCH_SOUL_PARTICLE = PARTICLE_TYPES.register("eldritch_soul_particle",
+            () -> new SimpleParticleType(false));
+
     // Mushroom Particle
     public static final Supplier<SimpleParticleType> MUSHROOM_PARTICLE = PARTICLE_TYPES.register("mushroom_particle",
             () -> new SimpleParticleType(false));
@@ -32,15 +36,18 @@ public class HnSParticleRegistry {
     public static final Supplier<SimpleParticleType> STAR_IMPACT_PARTICLE = PARTICLE_TYPES.register("star_impact_particle",
             () -> new SimpleParticleType(false));
 
-    // Star impact Particle
+    // Cosmic Ember Particle
     public static final Supplier<SimpleParticleType> COSMIC_EMBER_PARTICLE = PARTICLE_TYPES.register("cosmic_ember_particle",
             () -> new SimpleParticleType(false));
+    // Ender Ember Particle
+    public static final Supplier<SimpleParticleType> ENDER_EMBER_PARTICLE = PARTICLE_TYPES.register("ender_ember_particle",
+            () -> new SimpleParticleType(false));
 
-    // Ball Particles
+    // Night's Edge Particle
     public static final Supplier<SimpleParticleType> NIGHTS_EDGE_PARTICLE = PARTICLE_TYPES.register("nights_edge_particle",
             () -> new SimpleParticleType(false));
 
-    // Ball Particles
+    // Rod of Discord Particle
     public static final Supplier<SimpleParticleType> ROD_OF_DISCORD_PARTICLE = PARTICLE_TYPES.register("rod_of_discord_particle",
             () -> new SimpleParticleType(false));
 

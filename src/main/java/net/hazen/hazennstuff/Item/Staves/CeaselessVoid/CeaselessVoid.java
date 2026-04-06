@@ -6,6 +6,7 @@ import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Animations.HnSDispatcher;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSStaffTier;
+import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.sounds.SoundSource;
@@ -27,10 +28,9 @@ public class CeaselessVoid extends StaffItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(Rarity.EPIC)
+                        .rarity(HnSRarities.SHADOW_RARITY.getValue())
                         .attributes(ExtendedSwordItem
-                                .createAttributes(HnSStaffTier.CEASELESS_VOID)
-                        )
+                                .createAttributes(HnSStaffTier.CEASELESS_VOID))
         );
     }
 }

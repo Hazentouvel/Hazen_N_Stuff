@@ -10,6 +10,7 @@ public class HnSUpgradeOrbTypeRegistry {
     public static ResourceKey<UpgradeOrbType> RADIANCE_SPELL_POWER = ResourceKey.create(UpgradeOrbTypeRegistry.UPGRADE_ORB_REGISTRY_KEY, HazenNStuff.id("radiance_power"));
     public static ResourceKey<UpgradeOrbType> SHADOW_SPELL_POWER = ResourceKey.create(UpgradeOrbTypeRegistry.UPGRADE_ORB_REGISTRY_KEY, HazenNStuff.id("shadow_power"));
     public static ResourceKey<UpgradeOrbType> COSMIC_SPELL_POWER = ResourceKey.create(UpgradeOrbTypeRegistry.UPGRADE_ORB_REGISTRY_KEY, HazenNStuff.id("cosmic_power"));
+    public static ResourceKey<UpgradeOrbType> HYDRO_SPELL_POWER = ResourceKey.create(UpgradeOrbTypeRegistry.UPGRADE_ORB_REGISTRY_KEY, HazenNStuff.id("hydro_power"));
 
     public static ResourceKey<UpgradeOrbType> ELDRITCH_SPELL_POWER = ResourceKey.create(UpgradeOrbTypeRegistry.UPGRADE_ORB_REGISTRY_KEY, HazenNStuff.id("eldritch_power"));
 

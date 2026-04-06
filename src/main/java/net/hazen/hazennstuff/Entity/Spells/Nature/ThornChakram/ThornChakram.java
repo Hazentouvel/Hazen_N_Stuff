@@ -52,12 +52,7 @@ public class ThornChakram extends AbstractMagicProjectile implements GeoEntity {
         setOwner(shooter);
     }
 
-    @Override
     public void trailParticles() {
-        Vec3 pos = this.getBoundingBox().getCenter().add(getDeltaMovement());
-        Vec3 random = Utils.getRandomVec3(0);
-        pos = pos.add(getDeltaMovement());
-        level.addParticle(HnSParticleHelper.LEAF_PARTICLE, pos.x, pos.y, pos.z, random.x, random.y, random.z);
     }
 
     @Override
@@ -70,11 +65,9 @@ public class ThornChakram extends AbstractMagicProjectile implements GeoEntity {
         return 1.2f;
     }
 
-    @Override
     protected boolean canHitEntity(Entity pTarget) {
         return super.canHitEntity(pTarget) && canHitVictim(pTarget);
     }
-
 
     @Override
     public void tick() {

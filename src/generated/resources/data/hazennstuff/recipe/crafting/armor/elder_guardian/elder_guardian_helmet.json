@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "item": "hazennstuff:divine_mold"
+    },
+    "P": {
+      "item": "hazennstuff:nautilus_knight_helmet"
+    },
+    "R": {
+      "item": "hazennstuff:shadow_rune"
+    },
+    "T": {
+      "item": "hazennstuff:zenalite_ingot"
+    }
+  },
+  "pattern": [
+    "RTR",
+    "TPT",
+    " M "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:elder_guardian_helmet"
+  }
+}

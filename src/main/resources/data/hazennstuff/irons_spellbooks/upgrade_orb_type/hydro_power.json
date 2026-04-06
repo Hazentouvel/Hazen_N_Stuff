@@ -1,0 +1,9 @@
+{
+  "amount": 0.05,
+  "attribute": "aces_spell_utils:hydro_spell_power",
+  "containerItem": {
+    "count": 1,
+    "id": "hazennstuff:hydro_upgrade_orb"
+  },
+  "operation": "add_multiplied_base"
+}

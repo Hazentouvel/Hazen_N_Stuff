@@ -9,7 +9,7 @@
     "firstperson_righthand": {
       "translation": [
         4.5,
-        1,
+        -3,
         0
       ],
       "scale": [
@@ -21,7 +21,7 @@
     "firstperson_lefthand": {
       "translation": [
         4.5,
-        1,
+        -3,
         0
       ],
       "scale": [
@@ -33,7 +33,7 @@
     "ground": {
       "translation": [
         0,
-        2.5,
+        0,
         0
       ],
       "scale": [
@@ -49,8 +49,8 @@
         -90
       ],
       "translation": [
-        -1,
-        -5,
+        0,
+        0,
         0
       ],
       "scale": [

@@ -8,6 +8,7 @@ import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.Item.Armor.PureTier.ChargedScourge.AzureLib.CreakingSorcererArmorItem;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableHnSArmorItem;
+import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
@@ -23,8 +24,8 @@ public class AstraconicWeaverArmorItem extends ImbuableHnSArmorItem implements I
     // This is your class where you will setup the AzCommands/Animations you wish to play
 
     public AstraconicWeaverArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.ENDER_DRAGON_MATERIAL, type, settings, pureTier(
-                AttributeRegistry.ENDER_SPELL_POWER
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, pureTier(
+                HnSAttributeRegistry.COSMIC_SPELL_POWER
         ));
     }
 

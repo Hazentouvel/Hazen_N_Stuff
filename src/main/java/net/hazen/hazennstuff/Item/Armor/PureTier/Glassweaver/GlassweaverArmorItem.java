@@ -8,6 +8,7 @@ import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableGeckolibHnSArmorItem;
+import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
@@ -24,8 +25,8 @@ import java.util.List;
 
 public class GlassweaverArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public GlassweaverArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.SUPREME_WITCH_MATERIAL, type, settings, pureTier(
-                AttributeRegistry.EVOCATION_SPELL_POWER
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, pureTier(
+                HnSAttributeRegistry.SHADOW_SPELL_POWER
         ));
     }
 

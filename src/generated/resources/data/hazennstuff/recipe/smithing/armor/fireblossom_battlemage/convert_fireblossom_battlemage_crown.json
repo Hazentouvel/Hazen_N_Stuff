@@ -4,11 +4,11 @@
     "item": "hazennstuff:fireblossom"
   },
   "base": {
-    "item": "hazennstuff:fireblossom_helmet"
+    "item": "hazennstuff:legacy_fireblossom_helmet"
   },
   "result": {
     "count": 1,
-    "id": "hazennstuff:fireblossom_crown"
+    "id": "hazennstuff:legacy_fireblossom_crown"
   },
   "template": {
     "item": "hazennstuff:flaming_template"

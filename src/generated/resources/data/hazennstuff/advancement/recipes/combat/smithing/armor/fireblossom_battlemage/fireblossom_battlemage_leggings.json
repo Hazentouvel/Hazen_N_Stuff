@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_flaming_template": {
+    "has_divine_mold": {
       "conditions": {
         "items": [
           {
-            "items": "hazennstuff:flaming_template"
+            "items": "hazennstuff:divine_mold"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_flaming_template"
+      "has_divine_mold"
     ]
   ],
   "rewards": {

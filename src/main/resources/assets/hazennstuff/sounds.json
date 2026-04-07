@@ -387,5 +387,10 @@
     "sounds": [
       "hazennstuff:violent_regurgitation_cast"
     ]
+  },
+  "flesh_mound_bite": {
+    "sounds": [
+      "hazennstuff:flesh_mound_bite"
+    ]
   }
 }

@@ -4,7 +4,7 @@
   "spawners": [
     {
       "type": "hazennstuff:void_wanderer",
-      "weight": 3,
+      "weight": 1,
       "minCount": 1,
       "maxCount": 1
     }

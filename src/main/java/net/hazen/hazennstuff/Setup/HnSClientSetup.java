@@ -171,6 +171,7 @@ public class HnSClientSetup {
         event.registerSpriteSet(HnSParticleRegistry.STAR_PARTICLE.get(), HnSGenericParticle.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.STAR_IMPACT_PARTICLE.get(), HnSGenericParticle.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.COSMIC_EMBER_PARTICLE.get(), HnSGenericParticle.Provider::new);
+        event.registerSpriteSet(HnSParticleRegistry.ENDER_EMBER_PARTICLE.get(), HnSGenericParticle.Provider::new);
 
         event.registerSpriteSet(HnSParticleRegistry.BLADE_PARTICLES.get(), HnSGenericParticle.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.NIGHTS_EDGE_PARTICLE.get(), HnSGenericParticle.Provider::new);

@@ -26,7 +26,7 @@ import java.util.List;
 public class GlassweaverArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public GlassweaverArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, pureTier(
-                HnSAttributeRegistry.SHADOW_SPELL_POWER
+                HnSAttributeRegistry.RADIANCE_SPELL_POWER
         ));
     }
 

@@ -19,7 +19,7 @@ public class BountyHunterArmorItem extends ImbuableGeckolibHnSArmorItem implemen
         super(HnSArmorMaterials.ARCHER_MATERIAL, type, settings,
                 new AttributeContainer(ALObjects.Attributes.ARROW_DAMAGE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(ALObjects.Attributes.ARROW_VELOCITY, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(Attributes.MOVEMENT_SPEED, .25, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+                new AttributeContainer(Attributes.MOVEMENT_SPEED, .05, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
         );
     }
 

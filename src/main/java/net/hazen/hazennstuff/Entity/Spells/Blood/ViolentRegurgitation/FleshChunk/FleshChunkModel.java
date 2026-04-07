@@ -8,19 +8,16 @@ public class FleshChunkModel extends GeoModel<FleshChunk> {
 
     @Override
     public ResourceLocation getModelResource(FleshChunk animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/entities/spells/hydrobullet.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/entities/spells/flesh_chunk.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(FleshChunk animatable) {
-        int frameCount = 7;
-        int frameDuration = 1; // ticks per frame
-        int frame = (animatable.tickCount / frameDuration) % frameCount;
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/hydrobullet_" + frame + ".png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/spells/flesh_chunk.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(FleshChunk animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/entities/spells/hydrobullet.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/entities/spells/flesh_chunk.animation.json");
     }
 }

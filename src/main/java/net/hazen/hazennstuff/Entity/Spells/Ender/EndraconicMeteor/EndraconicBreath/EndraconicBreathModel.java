@@ -22,6 +22,6 @@ public class EndraconicBreathModel extends GeoModel<EndraconicBreath> {
 
     @Override
     public ResourceLocation getAnimationResource(EndraconicBreath animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/entities/spells/endraconic_breath_.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/entities/spells/endraconic_breath.animation.json");
     }
 }

@@ -1,16 +1,16 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "hazennstuff:fireblossom"
+    "item": "hazennstuff:zenalite_ingot"
   },
   "base": {
-    "item": "hazennstuff:blazeborne_helmet"
+    "item": "hazennstuff:fireblossom_knight_helmet"
   },
   "result": {
     "count": 1,
-    "id": "hazennstuff:legacy_fireblossom_helmet"
+    "id": "hazennstuff:fireblossom_battlemage_helmet"
   },
   "template": {
-    "item": "hazennstuff:flaming_template"
+    "item": "hazennstuff:divine_mold"
   }
 }

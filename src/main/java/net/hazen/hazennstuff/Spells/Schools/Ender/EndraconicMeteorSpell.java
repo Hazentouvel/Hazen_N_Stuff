@@ -88,20 +88,18 @@ public class EndraconicMeteorSpell extends AbstractSpell {
         int count = 3;
         double arcAngle = Math.toRadians(45);
         double radius = 1.2;
-        double heightAboveHead = 4.0;
+        double heightAboveHead = 1;
         int baseDelay = 20;
         int delayBetween = 6;
 
         Vec3 forward = entity.getLookAngle().normalize();
-        Vec3 up = new Vec3(0, 1, 0);
+        Vec3 up = new Vec3(0, 0.5, 0);
         Vec3 right = forward.cross(up).normalize();
         up = right.cross(forward).normalize();
 
         Vec3 arcCenter = entity.position()
                 .add(0, entity.getEyeHeight() + heightAboveHead, 0)
                 .add(forward.scale(0.5));
-
-        Vec3 targetPoint = entity.getEyePosition().add(look.scale(60.0));
 
         for (int i = 0; i < count; i++) {
             double t = (double) i / (count - 1 == 0 ? 1 : (count - 1));
@@ -120,12 +118,10 @@ public class EndraconicMeteorSpell extends AbstractSpell {
             meteor.setPos(spawnPos);
             meteor.setDeltaMovement(0, 0, 0);
 
-            // Have the meteor "follow" or hold above the player before firing.
             meteor.ownerTrack = spawnPos.subtract(entity.position());
             meteor.delay = baseDelay + i * delayBetween;
 
-            // Compute the launch direction toward the point the player is looking at
-            Vec3 launchDir = targetPoint.subtract(spawnPos).normalize();
+            Vec3 launchDir = forward.yRot((float) angle).normalize();
             meteor.launchDir = launchDir;
 
             world.addFreshEntity(meteor);

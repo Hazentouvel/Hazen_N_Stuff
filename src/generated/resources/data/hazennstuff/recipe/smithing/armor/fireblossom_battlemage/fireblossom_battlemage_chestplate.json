@@ -1,10 +1,10 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "hazennstuff:fireblossom"
+    "item": "hazennstuff:zenalite_ingot"
   },
   "base": {
-    "item": "hazennstuff:blazeborne_chestplate"
+    "item": "hazennstuff:fireblossom_knight_chestplate"
   },
   "result": {
     "components": {
@@ -16,9 +16,9 @@
       }
     },
     "count": 1,
-    "id": "hazennstuff:legacy_fireblossom_chestplate"
+    "id": "hazennstuff:fireblossom_battlemage_chestplate"
   },
   "template": {
-    "item": "hazennstuff:flaming_template"
+    "item": "hazennstuff:divine_mold"
   }
 }

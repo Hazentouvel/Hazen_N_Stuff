@@ -17,9 +17,7 @@ import software.bernie.geckolib.renderer.GeoEntityRenderer;
 public class FleshMoundRenderer extends GeoEntityRenderer<FleshMound> {
     public FleshMoundRenderer(EntityRendererProvider.Context context) {
         super(context, new FleshMoundModel());
-        this.shadowRadius = 0f;
-
-        this.addRenderLayer(new EndraconicBreathEmissiveLayer(this));
+        this.shadowRadius = 2f;
     }
 
     @Override

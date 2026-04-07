@@ -194,7 +194,18 @@ public class HnSEffects {
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
+    public static final Holder<MobEffect> GLUTTONOUS_HUNGER = MOB_EFFECTS.register("gluttonous_hunger",
+            () -> new GluttonousHungerEffect(MobEffectCategory.BENEFICIAL, 0xfbb741)
+                    .addAttributeModifier(Attributes.MAX_HEALTH,
+                            HazenNStuff.id("moonkissed"),
+                            GluttonousHungerEffect.HEALTH_PER_LEVEL,
+                            AttributeModifier.Operation.ADD_VALUE)
 
+                    .addAttributeModifier(ASAttributeRegistry.HUNGER_STEAL,
+                            HazenNStuff.id("moonkissed"),
+                            GluttonousHungerEffect.HUNGER_STEAL_PER_LEVEL,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
 
     public static final DeferredHolder<MobEffect, MobEffect> MOONKISSED = MOB_EFFECTS.register("moonkissed", () -> new MoonkissedEffect(MobEffectCategory.BENEFICIAL, 3311322)
             .addAttributeModifier(Attributes.SUBMERGED_MINING_SPEED,

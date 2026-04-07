@@ -1,4 +1,4 @@
-        package net.hazen.hazennstuff.Entity.Spells.Ender.EndraconicMeteor;
+package net.hazen.hazennstuff.Entity.Spells.Ender.EndraconicMeteor;
 
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.util.Utils;
@@ -135,7 +135,6 @@ public class EndraconicMeteor extends AbstractMagicProjectile implements GeoEnti
                 }
             }
 
-            PacketDistributor.sendToPlayersTrackingEntity(this, new FieryExplosionParticlesPacket(hitResult.getLocation().subtract(this.getDeltaMovement().scale((double)0.5F)), this.getExplosionRadius()), new CustomPacketPayload[0]);
             this.playSound((SoundEvent)HnSSounds.ENDRACONIC_METEOR_IMPACT.value(), 4.0F, (1.0F + (this.level.random.nextFloat() - this.level.random.nextFloat()) * 0.2F) * 0.7F);
             this.discard();
         }
@@ -220,9 +219,9 @@ public class EndraconicMeteor extends AbstractMagicProjectile implements GeoEnti
                     this.ownerTrack = null;
 
                     if (Utils.random.nextFloat() < 0.25F) {
-                        this.playSound((SoundEvent)HnSSounds.ENDRACONIC_METEOR_CAST.value(), 0.75F, (float)Utils.random.nextIntBetweenInclusive(90, 110) * 0.01F);
+                        this.playSound((SoundEvent)HnSSounds.ENDRACONIC_METEOR_CAST.value(), 0.75F, 1);
                     } else {
-                        this.playSound((SoundEvent)HnSSounds.ENDRACONIC_METEOR_CAST.value(), 2.0F, (float)Utils.random.nextIntBetweenInclusive(90, 110) * 0.01F);
+                        this.playSound((SoundEvent)HnSSounds.ENDRACONIC_METEOR_CAST.value(), 1.0F, 1);
                     }
                 }
             }

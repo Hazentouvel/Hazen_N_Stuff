@@ -157,25 +157,22 @@ public class PrismaticShiftSpell extends AbstractTaggedSpell {
     }
 
     public void chaoticTeleportHurt(LivingEntity entity) {
-        boolean hasChaosState = entity.hasEffect(HnSEffects.CHAOS_STATE);
+        if (entity.level().isClientSide()) return;
 
-        if (entity instanceof ServerPlayer player && !player.level().isClientSide()) {
-            if (hasChaosState) {
+        if (entity.hasEffect(HnSEffects.CHAOS_STATE)) {
 
-                float percentDamage = 0.3F;
+            float percentDamage = 0.3F;
+            float maxHealth = entity.getMaxHealth();
+            float damage = Math.max(1.0F, maxHealth * percentDamage);
 
-                float maxHealth = entity.getMaxHealth();
-                float damage = maxHealth * percentDamage;
+            DamageSource damageSource = new DamageSource(
+                    DamageSources.getHolderFromResource(entity, HnSDamageTypes.RADIANCE_MAGIC)
+            );
 
-                // Optional safety clamp so it never kills instantly
-                damage = Math.max(1.0F, damage);
+            entity.hurt(damageSource, damage);
 
-                DamageSource damageSource = new DamageSource(
-                        DamageSources.getHolderFromResource(entity, HnSDamageTypes.RADIANCE_MAGIC)
-                );
-
-                entity.hurt(damageSource, damage);
-
+            // Optional: only players play sound
+            if (entity instanceof ServerPlayer player) {
                 player.level().playSound(
                         null,
                         player.getX(), player.getY(), player.getZ(),

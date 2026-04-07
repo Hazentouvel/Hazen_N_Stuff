@@ -89,13 +89,26 @@ public class ViolentRegurgitationSpell extends AbstractCalamitasSpell {
     }
 
 
-    @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         Vec3 origin = entity.getEyePosition();
+
+        if (!world.isClientSide) {
+            float currentHealth = entity.getHealth();
+            float healthCost = currentHealth * 0.25f;
+            entity.hurt(entity.damageSources().generic(), healthCost);
+
+            int hungerCost = Math.min(3, Math.max(0, spellLevel));
+            if (entity instanceof net.minecraft.world.entity.player.Player player) {
+                int currentFood = player.getFoodData().getFoodLevel();
+                int newFood = Math.max(0, currentFood - hungerCost);
+                player.getFoodData().setFoodLevel(newFood);
+            }
+        }
 
         FleshChunk fleshChunk = new FleshChunk(world, entity);
 
         fleshChunk.setDamage(getDamage(spellLevel, entity));
+        fleshChunk.setSourceSpellLevel(spellLevel);
 
         fleshChunk.setPos(origin.add(entity.getForward()).subtract(0, fleshChunk.getBbHeight() / 2, 0));
         fleshChunk.shoot(entity.getLookAngle());

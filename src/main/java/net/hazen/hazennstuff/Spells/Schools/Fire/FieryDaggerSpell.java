@@ -121,7 +121,7 @@ public class FieryDaggerSpell extends AbstractTaggedSpell {
             int delayBetween = 2;
 
             Vec3 forward = entity.getLookAngle().normalize();
-            Vec3 up = new Vec3(0, 1, 0);
+            Vec3 up = new Vec3(0, 0.5, 0);
             Vec3 right = forward.cross(up).normalize();
             up = right.cross(forward).normalize();
 

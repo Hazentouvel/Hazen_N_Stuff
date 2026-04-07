@@ -1152,6 +1152,7 @@
   "effect.hazennstuff.mana_sickness": "Mana Sickness",
   "effect.hazennstuff.hexed": "Hexed",
   "effect.hazennstuff.chaos_state": "Chaos State",
+  "effect.hazennstuff.gluttonous_hunger": "Gluttonous Hunger",
 
   "effect.hazennstuff.tyrants_grace.description": "Recieve the Flamebearer's Tyrannical enhancement, increases your attack speed and damage by 1, and your cast movement speed by 20% and fire spellpower by 12%.",
   "effect.hazennstuff.fireblossom_ruler.description": "Reign over the lands as your cast movement speed increases by 15% and spell resist increases by 10%.",
@@ -1171,6 +1172,7 @@
   "effect.hazennstuff.mana_sickness.description": "You feel the disconnect with the link with your arcana and soul...",
   "effect.hazennstuff.hexed.description": "You wither away with each spell cast...",
   "effect.hazennstuff.chaos_state.description": "Your body are in a chaotic state, wait until they stabilize before teleporting once more...",
+  "effect.hazennstuff.gluttonous_hunger.description": "You crave for flesh...",
 
 
   "creativetab.hazennstuff.hazennstuff_materials": "Hazen 'n Stuff Materials",

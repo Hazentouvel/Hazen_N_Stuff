@@ -1,4 +1,4 @@
-// 1.21.1	2026-01-16T15:41:20.9781278	Tags for minecraft:block mod id hazennstuff
+// 1.21.1	2026-04-07T00:58:59.8133142	Tags for minecraft:block mod id hazennstuff
 d403b06095b060e2ba6a1188962d016f7424528e data/hazennstuff/tags/block/needs_mithril_tool.json
 38d011491e26808115f49deb2c491a9330d2fcc4 data/minecraft/tags/block/beacon_base_blocks.json
 aecf1bc58f9dfe93291370ab966b25cfea8f33a4 data/minecraft/tags/block/buttons.json
@@ -6,16 +6,15 @@ aecf1bc58f9dfe93291370ab966b25cfea8f33a4 data/minecraft/tags/block/buttons.json
 a823f3237a2a08d8f4f5d6c9d92a8252a8b6b487 data/minecraft/tags/block/doors.json
 8997331671aa7cba8a9cb970be783438fe63873e data/minecraft/tags/block/fences.json
 7747a657bf35c413736b2132fc993249218293e2 data/minecraft/tags/block/fence_gates.json
-35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/block/incorrect_for_diamond_tool.json
-35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/block/incorrect_for_gold_tool.json
+28feb578de921b6a124d8e2d1a3b24e9ca03eb25 data/minecraft/tags/block/incorrect_for_diamond_tool.json
+28feb578de921b6a124d8e2d1a3b24e9ca03eb25 data/minecraft/tags/block/incorrect_for_gold_tool.json
 53e53f7df38d0456a0be9708e7dea709d091cd81 data/minecraft/tags/block/incorrect_for_iron_tool.json
 2efab52665e9392f9b656f96006bcd565824de5b data/minecraft/tags/block/incorrect_for_stone_tool.json
-35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/block/incorrect_for_wooden_tool.json
+28feb578de921b6a124d8e2d1a3b24e9ca03eb25 data/minecraft/tags/block/incorrect_for_wooden_tool.json
 6edcba37d2555de390d6e7cf4fae15b3ce573dc6 data/minecraft/tags/block/leaves.json
 2a055035ec9a4f8e66e0865cf2586b8647ce7c71 data/minecraft/tags/block/logs.json
 771267b892a1213842d55bce5ac3db17984a6254 data/minecraft/tags/block/logs_that_burn.json
 7a870fe2332780a7952415dd9811770ba73b3ebc data/minecraft/tags/block/mineable/axe.json
-35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/block/mineable/hoe.json
 468c834b2e1d1ab507213cf0998888c044fb6d9e data/minecraft/tags/block/mineable/pickaxe.json
 a823f3237a2a08d8f4f5d6c9d92a8252a8b6b487 data/minecraft/tags/block/mob_interactable_doors.json
 490350ecb33b1aca6234c38684c36147413e9a8a data/minecraft/tags/block/needs_diamond_tool.json

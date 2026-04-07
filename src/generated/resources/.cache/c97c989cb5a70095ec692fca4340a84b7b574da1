@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-30T23:42:03.8049095	Tags for minecraft:item mod id hazennstuff
+// 1.21.1	2026-04-07T00:58:59.7963053	Tags for minecraft:item mod id hazennstuff
 740053467c0e6401606132b0ce14777e5339d91f data/c/tags/item/bones.json
 bc0fbf26094825cd60ac9937206fa609d2b71a25 data/c/tags/item/foods.json
 7aa24cfa00593b4dbd92d0e19b403da85cb4cda6 data/c/tags/item/gems.json
@@ -15,7 +15,7 @@ b7b1064eb4a3f14aed6cb5e487059a9c124cae9c data/c/tags/item/raw_materials.json
 b9954a780f37e2d30b2edd1085646f77332ff93c data/hazennstuff/tags/item/armors/netherite_battlemage/netherite_battlemage_helmet.json
 0fd9b110e434eb6e16384c3d1604c526e49c8648 data/hazennstuff/tags/item/armors/netherite_battlemage/netherite_battlemage_leggings.json
 d0afb6503054f0504e3e5b80d27eb880870c7868 data/hazennstuff/tags/item/armors/pure/pure_boots.json
-4cb359db08b27d8c71a443f3b974d140b1a61019 data/hazennstuff/tags/item/armors/pure/pure_chestplate.json
+84b11b528207c60f804fb7795db89cd85aa5efbd data/hazennstuff/tags/item/armors/pure/pure_chestplate.json
 22f09dd3b0c93d98268c2dca772966cda21133da data/hazennstuff/tags/item/armors/pure/pure_helmet.json
 83d8c4230e38c319641da5ae1dd59b89277c5e21 data/hazennstuff/tags/item/armors/pure/pure_leggings.json
 d108a09ffa1a5d67ff8351d5e89c9d5f4b011ddc data/hazennstuff/tags/item/armors/school/school_boots.json

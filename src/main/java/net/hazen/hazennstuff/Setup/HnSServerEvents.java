@@ -28,42 +28,39 @@ public class HnSServerEvents {
     public static void onPlayerCastEvent(SpellPreCastEvent event)
     {
         var entity = event.getEntity();
-        var spell = SpellRegistry.getSpell(event.getSpellId());
 
-        // Hexed
-        boolean hasHexedEffect = entity.hasEffect(HnSEffects.HEXED);
-        if (entity instanceof ServerPlayer player && !player.level().isClientSide())
+        // Only run on server
+        if (entity.level().isClientSide()) return;
+
+        // Hexed check
+        if (entity.hasEffect(HnSEffects.HEXED))
         {
-            if (hasHexedEffect)
-            {
-                // Damage
-                float percentDamage = 0.25F;
+            float percentDamage = 0.25F;
 
-                float maxHealth = entity.getMaxHealth();
-                float damage = maxHealth * percentDamage;
+            float maxHealth = entity.getMaxHealth();
+            float damage = Math.max(1.0F, maxHealth * percentDamage);
 
-                damage = Math.max(1.0F, damage);
+            DamageSource damageSource = new DamageSource(
+                    DamageSources.getHolderFromResource(entity, HnSDamageTypes.CORRUPT_MAGIC)
+            );
 
-                DamageSource damageSource = new DamageSource(
-                        DamageSources.getHolderFromResource(entity, HnSDamageTypes.CORRUPT_MAGIC)
-                );
+            entity.hurt(damageSource, damage);
 
-                entity.hurt(damageSource, damage);
-
+            // Only play sound if it's a player (optional)
+            if (entity instanceof ServerPlayer player) {
                 player.level().playSound(
                         null, player.getX(), player.getY(), player.getZ(),
-                        HnSSounds.BRIMSTONE_HELLBLAST_IMPACT, SoundSource.PLAYERS, 0.5f, 1f
+                        HnSSounds.BRIMSTONE_HELLBLAST_IMPACT,
+                        SoundSource.PLAYERS, 0.5f, 1f
                 );
-
             }
         }
-
     }
 
     @SubscribeEvent
     public static void onGatherTooltipComponents(RenderTooltipEvent.GatherComponents event) {
         List<Either<FormattedText, TooltipComponent>> elements = event.getTooltipElements();
-        String marker = "\u26A1"; // ⚡
+        String marker = "\u26A1";
 
         for (final int[] i = {0}; i[0] < elements.size(); i[0]++) {
             var element = elements.get(i[0]);

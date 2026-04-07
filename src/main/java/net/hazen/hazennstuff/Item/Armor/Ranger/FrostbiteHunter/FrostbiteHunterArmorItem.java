@@ -54,7 +54,7 @@ public class FrostbiteHunterArmorItem extends ImbuableGeckolibHnSArmorItem imple
     }
 
     private void evaluateArmorEffects(Player player) {
-        if (!player.hasEffect(HnSEffects.MAGE_SET_BONUS)) {
+        if (!player.hasEffect(HnSEffects.ARCHER_SET_BONUS)) {
             player.addEffect(new MobEffectInstance(HnSEffects.ARCHER_SET_BONUS, 320, 0, false, false, false));
         }
     }

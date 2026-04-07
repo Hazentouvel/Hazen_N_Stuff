@@ -34,6 +34,8 @@ import java.util.UUID;
 
 public class FleshChunk extends AbstractMagicProjectile implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+    // store the spell level that spawned this chunk so created mounds can scale
+    private int sourceSpellLevel = 1;
     HashMap<UUID, Integer> victims;
 
     public int shakeTime;
@@ -68,10 +70,6 @@ public class FleshChunk extends AbstractMagicProjectile implements GeoEntity {
         Vec3 center = hitEntity.position();
 
         applyAreaEffect(center, owner, 3.0F);
-
-        if (!level.isClientSide && !hasEmittedPoison) {
-            createFleshMound(pResult.getLocation());
-        }
 
         discard();
     }
@@ -123,13 +121,16 @@ public class FleshChunk extends AbstractMagicProjectile implements GeoEntity {
     public void createFleshMound(Vec3 location) {
         if (!level.isClientSide) {
             FleshMound fleshMound = new FleshMound(level);
-            fleshMound.setOwner(getOwner());
             fleshMound.setDuration(300);
-            fleshMound.setDamage(aoeDamage);
+            fleshMound.setSourceSpellLevel(this.sourceSpellLevel);
             fleshMound.moveTo(location);
             level.addFreshEntity(fleshMound);
             hasEmittedPoison = true;
         }
+    }
+
+    public void setSourceSpellLevel(int level) {
+        this.sourceSpellLevel = Math.max(1, level);
     }
 
     public Optional<Holder<SoundEvent>> getImpactSound() {

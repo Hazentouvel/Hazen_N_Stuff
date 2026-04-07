@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "hazennstuff:fireblossom"
+  },
+  "base": {
+    "item": "hazennstuff:fireblossom_gown_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:fireblossom_knight_boots"
+  },
+  "template": {
+    "item": "hazennstuff:flaming_template"
+  }
+}

@@ -50,7 +50,7 @@ public class ViolentRegurgitationSpell extends AbstractCalamitasSpell {
         this.manaCostPerLevel = 15;
         this.baseSpellPower = 1;
         this.spellPowerPerLevel = 1;
-        this.castTime = 30;
+        this.castTime = 50;
         this.baseManaCost = 60;
     }
 

@@ -1,11 +1,17 @@
 package net.hazen.hazennstuff.Setup;
 
 import com.mojang.datafixers.util.Either;
+import io.redspace.ironsspellbooks.api.config.IronConfigParameters;
+import io.redspace.ironsspellbooks.api.config.ModifyDefaultConfigValuesEvent;
 import io.redspace.ironsspellbooks.api.events.SpellPreCastEvent;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.damage.DamageSources;
+import io.redspace.ironsspellbooks.spells.blood.WitherSkullSpell;
+import io.redspace.ironsspellbooks.spells.ender.BlackHoleSpell;
+import io.redspace.ironsspellbooks.spells.ender.StarfallSpell;
 import net.hazen.hazennstuff.Registries.HnSDamageTypes;
 import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazennstuff.Spells.Tooltips.LightningClientTooltipComponent;
 import net.minecraft.network.chat.Component;
@@ -106,10 +112,18 @@ public class HnSServerEvents {
     *** Changing Spell Schools *****************************************************************************************
      */
 
-//    @SubscribeEvent
-//    public static void modifyBlackholeSchool (ModifyDefaultConfigValuesEvent event) {
-//        if(event.getSpell() instanceof BlackHoleSpell) {
-//            event.setDefaultValue(IronConfigParameters.SCHOOL, HnSSchoolRegistry.COSMIC.get());
-//        }
-//    }
+    @SubscribeEvent
+    public static void modifyBlackholeSchool (ModifyDefaultConfigValuesEvent event) {
+        if(event.getSpell() instanceof BlackHoleSpell) {
+            event.setDefaultValue(IronConfigParameters.SCHOOL, HnSSchoolRegistry.COSMIC.get());
+        }
+
+        if(event.getSpell() instanceof StarfallSpell) {
+            event.setDefaultValue(IronConfigParameters.SCHOOL, HnSSchoolRegistry.COSMIC.get());
+        }
+
+        if(event.getSpell() instanceof WitherSkullSpell) {
+            event.setDefaultValue(IronConfigParameters.SCHOOL, HnSSchoolRegistry.SHADOW.get());
+        }
+    }
 }

@@ -97,9 +97,9 @@ public class DazzlingObliterationSpell extends AbstractSpell {
     public boolean checkPreCastConditions(Level level, int spellLevel, LivingEntity entity, MagicData playerMagicData) {
         if (playerMagicData != null && playerMagicData.getPlayerRecasts() != null) {
             int remaining = playerMagicData.getPlayerRecasts().getRemainingRecastsForSpell(spellId.toString());
-            if (remaining >= 3) recastStage = 1;
+            if (remaining <= 0 || remaining >= 3) recastStage = 1;
             else if (remaining == 2) recastStage = 2;
-            else recastStage = 3;
+            else recastStage = 3; // remaining == 1
         } else {
             recastStage = 1;
         }
@@ -199,10 +199,7 @@ public class DazzlingObliterationSpell extends AbstractSpell {
             level.addFreshEntity(shuriken);
         }
 
-        int remaining = playerMagicData.getPlayerRecasts().getRemainingRecastsForSpell(spellId.toString());
-        if (remaining >= 3) recastStage = 2;
-        else if (remaining == 2) recastStage = 3;
-        else recastStage = 1;
+        // Don't mutate recastStage here; let checkPreCastConditions determine the stage on the next cast.
 
         super.onCast(level, spellLevel, entity, castSource, playerMagicData);
     }

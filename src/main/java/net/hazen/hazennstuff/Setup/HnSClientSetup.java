@@ -28,6 +28,7 @@ import net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Heart.HeartRendere
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Spade.SpadeRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowDagger.ShadowDaggerRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowReaver.ShadowReaverRenderer;
+import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.HazelStatueRenderer;
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnaceRenderer;
@@ -74,7 +75,7 @@ import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 
-@EventBusSubscriber
+@EventBusSubscriber(modid = HazenNStuff.MOD_ID)
 public class HnSClientSetup {
 
     @SubscribeEvent

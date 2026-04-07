@@ -45,11 +45,11 @@ public class ArcaneCardsSpell extends AbstractSpell {
                 .setMaxLevel(10)
                 .setCooldownSeconds((double)2.5F)
                 .build();
-        this.manaCostPerLevel = 2;
+        this.manaCostPerLevel = 4;
         this.baseSpellPower = 12;
         this.spellPowerPerLevel = 1;
         this.castTime = 0;
-        this.baseManaCost = 10;
+        this.baseManaCost = 15;
     }
 
     public DefaultConfig getDefaultConfig() {

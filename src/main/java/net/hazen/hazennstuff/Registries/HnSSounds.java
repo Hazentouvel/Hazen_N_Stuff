@@ -59,11 +59,9 @@ public class HnSSounds {
     public static final Holder<SoundEvent> SPARK_CAST = registerSoundEvent("spark_cast");
 
     public static final DeferredHolder<SoundEvent, SoundEvent> VIOLENT_REGURGITATION_CHARGING = registerSoundEvent("violent_regurgitation_charging");
-    public static final DeferredHolder<SoundEvent, SoundEvent> FLESH_IMPACT_CAST = registerSoundEvent("violent_regurgitation_cast");
+    public static final DeferredHolder<SoundEvent, SoundEvent> VIOLENT_REGURGITATION_CAST = registerSoundEvent("violent_regurgitation_cast");
 
-    public static final DeferredHolder<SoundEvent, SoundEvent> FLESH_IMPACT_1 = registerSoundEvent("flesh_impact_1");
-    public static final DeferredHolder<SoundEvent, SoundEvent> FLESH_IMPACT_2 = registerSoundEvent("flesh_impact_2");
-    public static final DeferredHolder<SoundEvent, SoundEvent> FLESH_IMPACT_3 = registerSoundEvent("flesh_impact_3");
+    public static final DeferredHolder<SoundEvent, SoundEvent> FLESH_IMPACT = registerSoundEvent("flesh_impact");
 
 
     public static final DeferredHolder<SoundEvent, SoundEvent> ENDRACONIC_METEOR_CHARGING = registerSoundEvent("endraconic_meteor_charging");

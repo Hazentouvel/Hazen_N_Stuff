@@ -7,6 +7,7 @@
   "ui.hazennstuff.staff_resonation": "This spell requires a certain staff to be crafted...",
   "ui.hazennstuff.armor_resonation": "This spell requires a certain armor set to be crafted...",
   "ui.hazennstuff.weapon_resonation": "This spell requires a certain weapon to be crafted...",
+  "ui.hazennstuff.spellbook_resonation": "This spell requires a certain spellbook to be crafted...",
   "ui.hazennstuff.item_resonation": "This spell requires a certain item to be crafted...",
   "ui.hazennstuff.material_resonation": "This spell requires a certain material to be crafted...",
 
@@ -750,7 +751,7 @@
   "item.hazennstuff.shadow_jester_helmet": "Shadow Jester Hat",
   "item.hazennstuff.shadow_jester_chestplate": "Shadow Jester Chestplate",
   "item.hazennstuff.shadow_jester_leggings": "Shadow Jester Leggings",
-  "item.hazennstuff.shadow_jester_boots": "Shadow Scale Boots",
+  "item.hazennstuff.shadow_jester_boots": "Shadow Jester Boots",
 
   "item.hazennstuff.cosmic_scholar_helmet": "Cosmic Scholar Hat",
   "item.hazennstuff.cosmic_scholar_chestplate": "Cosmic Scholar Robes",

@@ -371,18 +371,10 @@
       "hazennstuff:endraconic_meteor_impact"
     ]
   },
-  "flesh_impact_1": {
+  "flesh_impact": {
     "sounds": [
-      "hazennstuff:flesh_impact_1"
-    ]
-  },
-  "flesh_impact_2": {
-    "sounds": [
-      "hazennstuff:flesh_impact_2"
-    ]
-  },
-  "flesh_impact_3": {
-    "sounds": [
+      "hazennstuff:flesh_impact_1",
+      "hazennstuff:flesh_impact_2",
       "hazennstuff:flesh_impact_3"
     ]
   },

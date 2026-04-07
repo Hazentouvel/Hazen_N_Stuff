@@ -3,6 +3,10 @@ package net.hazen.hazennstuff.Setup;
 import io.redspace.ironsspellbooks.entity.mobs.keeper.KeeperRenderer;
 import io.redspace.ironsspellbooks.entity.spells.fiery_dagger.FieryDaggerRenderer;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.VoidWanderer.VoidWandererRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshChunk.FleshChunkRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshChunk.FleshMound.FleshMoundRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshPiece.FleshPiece;
+import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshPiece.FleshPieceRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Cosmic.Evercomet.EvercometRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Cosmic.CosmicBolt.CosmicBoltRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ender.EndraconicMeteor.EndraconicBreath.EndraconicBreathRenderer;
@@ -70,7 +74,7 @@ import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 
-@EventBusSubscriber(value = Dist.CLIENT)
+@EventBusSubscriber
 public class HnSClientSetup {
 
     @SubscribeEvent
@@ -113,6 +117,10 @@ public class HnSClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.NINGU_DEMONBANE_PETALBLADE.get(), NinguDemonbanePetalbladeRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.NINGU_DEMONBANE_PETALBLADE_SHURIKEN.get(), NinguDemonbanePetalbladeShurikenRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.ENDRACONIC_METEOR.get(), EndraconicMeteorRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.ENDRACONIC_BREATH.get(), EndraconicBreathRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.FLESH_CHUNK.get(), FleshChunkRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.FLESH_PIECE.get(), FleshPieceRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.FLESH_MOUND.get(), FleshMoundRenderer::new);
 
 
         /*

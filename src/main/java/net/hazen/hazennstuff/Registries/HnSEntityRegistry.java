@@ -16,6 +16,9 @@ import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ReignOfTyros.Pyromus.Pyrom
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ServantsOfEnder.ServantsOfEnderEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.Dryad.DryadEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.TheRecluse.TheRecluseEntity;
+import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshChunk.FleshChunk;
+import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshChunk.FleshMound.FleshMound;
+import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshPiece.FleshPiece;
 import net.hazen.hazennstuff.Entity.Spells.Cosmic.CosmicBolt.CosmicBolt;
 import net.hazen.hazennstuff.Entity.Spells.Cosmic.Evercomet.Evercomet;
 import net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife.VampireKnife;
@@ -341,9 +344,33 @@ public class HnSEntityRegistry {
     // Endraconic Meteor
     public static final DeferredHolder<EntityType<?>, EntityType<EndraconicMeteor>> ENDRACONIC_METEOR =
             ENTITIES.register("endraconic_meteor", () -> EntityType.Builder.<EndraconicMeteor>of(EndraconicMeteor::new, MobCategory.MISC)
-                    .sized(1f, 1f)
+                    .sized(1.5f, 1.5f)
                     .clientTrackingRange(4)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "endraconic_meteor").toString())
+            );
+
+    // Flesh Chunk
+    public static final DeferredHolder<EntityType<?>, EntityType<FleshChunk>> FLESH_CHUNK =
+            ENTITIES.register("flesh_chunk", () -> EntityType.Builder.<FleshChunk>of(FleshChunk::new, MobCategory.MISC)
+                    .sized(1.5f, 1.5f)
+                    .clientTrackingRange(4)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "flesh_chunk").toString())
+            );
+
+    // Flesh Piece
+    public static final DeferredHolder<EntityType<?>, EntityType<FleshPiece>> FLESH_PIECE =
+            ENTITIES.register("flesh_piece", () -> EntityType.Builder.<FleshPiece>of(FleshPiece::new, MobCategory.MISC)
+                    .sized(.5f, .5f)
+                    .clientTrackingRange(4)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "flesh_piece").toString())
+            );
+
+    // Flesh Mound
+    public static final DeferredHolder<EntityType<?>, EntityType<FleshMound>> FLESH_MOUND =
+            ENTITIES.register("flesh_mound", () -> EntityType.Builder.<FleshMound>of(FleshMound::new, MobCategory.MISC)
+                    .sized(2f, 1.5f)
+                    .clientTrackingRange(4)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "flesh_mound").toString())
             );
 
 

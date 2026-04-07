@@ -8,7 +8,7 @@ import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableHnSArmorItem;
 public class FireblossomKnightArmor extends ImbuableHnSArmorItem implements IDisableHat {
 
     public FireblossomKnightArmor(Type type, Properties settings) {
-        super(HnSArmorMaterials.ADVANCED_BATTLEMAGE_MATERIAL, type, settings, pureTierMulti(
+        super(HnSArmorMaterials.BATTLEMAGE_MATERIAL, type, settings, pureTierMulti(
                 AttributeRegistry.FIRE_SPELL_POWER,
                 AttributeRegistry.NATURE_SPELL_POWER
         ));

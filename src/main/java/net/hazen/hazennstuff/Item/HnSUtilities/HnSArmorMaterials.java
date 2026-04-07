@@ -325,8 +325,8 @@ public class HnSArmorMaterials {
 
     public static EnumMap<ArmorItem.Type, Integer> battlemageArmorMap(){return makeArmorMap(3, 8, 6, 3);}
     public static EnumMap<ArmorItem.Type, Integer> deityArmorMap(){return makeArmorMap(20, 20, 20, 20);}
-    public static EnumMap<ArmorItem.Type, Integer> advancedBattlemageArmorMap(){return makeArmorMap(4, 6, 9, 4);}
-    public static EnumMap<ArmorItem.Type, Integer> pyrium(){return makeArmorMap(4, 6, 9, 4);}
+    public static EnumMap<ArmorItem.Type, Integer> advancedBattlemageArmorMap(){return makeArmorMap(4, 9, 6, 4);}
+    public static EnumMap<ArmorItem.Type, Integer> pyrium(){return makeArmorMap(4, 9, 6, 4);}
 
     public static void register(IEventBus eventBus)
     {

@@ -32,7 +32,7 @@ public class ParrySpell extends AbstractSpell {
                 .setMinRarity(SpellRarity.COMMON)
                 .setSchoolResource(SchoolRegistry.EVOCATION_RESOURCE)
                 .setMaxLevel(1)
-                .setCooldownSeconds((double)12.0F)
+                .setCooldownSeconds((double)3.0F)
                 .build();
         this.manaCostPerLevel = 15;
         this.baseSpellPower = 5;
@@ -68,14 +68,14 @@ public class ParrySpell extends AbstractSpell {
         Vec3 end = Utils.raycastForBlock(level, entity.getEyePosition(), entity.getEyePosition().add(forward.scale((double)distance)), Fluid.NONE).getLocation();
 
         AABB hitbox = entity.getHitbox().expandTowards(end.subtract(entity.getEyePosition()))
-                .inflate(6.0D);
+                .inflate(8.0D);
 
         List<Entity> targetableEntities = level.getEntities(entity, hitbox, (e) -> !e.isSpectator() && e instanceof Projectile && e.getBoundingBox().getCenter().subtract(entity.getBoundingBox().getCenter()).normalize().dot(entity.getForward()) >= 0.85);
         targetableEntities.sort(Comparator.comparingDouble((e) -> e.distanceToSqr(entity)));
         if (!targetableEntities.isEmpty() && targetableEntities.get(0).distanceToSqr(entity) < (double)(distance * distance)) {
             Entity closestEntity = targetableEntities.get(0);
 
-            float radius = 4.0F;
+            float radius = 6.0F;
             AABB damageBox = AABB.ofSize(closestEntity.getBoundingBox().getCenter(), (double)radius, (double)(radius + 1.0F), (double)radius).move(forward.scale((double)(radius / 2.0F)));
             List<Entity> damageEntities = level.getEntities(entity, damageBox);
             boolean projectileEffects = false;
@@ -86,19 +86,10 @@ public class ParrySpell extends AbstractSpell {
                     if (!projectile.noPhysics) {
                         projectileEffects = true;
 
-                        // Reflect the projectile
                         projectile.setOwner(entity);
                         projectile.shoot(forward.x, forward.y, forward.z, (float) projectile.getDeltaMovement().length(), 0.0F);
 
-                        // Play PARRY sound immediately at the projectile's position
-                        level.playSound(
-                                (Player) null,
-                                projectile.getX(),
-                                projectile.getY(),
-                                projectile.getZ(),
-                                HnSSounds.PARRY.get(),
-                                entity.getSoundSource()
-                        );
+                        level.playSound((Player) null, projectile.getX(), projectile.getY(), projectile.getZ(), HnSSounds.PARRY.get(), entity.getSoundSource());
                     }
                 }
             }

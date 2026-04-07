@@ -2385,60 +2385,80 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/soul_flame/soul_flame_boots"));
 
 
-        //Fireblossom Armor
+        //Fireblossom Knight Armor
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
-                        Ingredient.of(HnSItemRegistry.BLAZEBORNE_HELMET.get()),
+                        Ingredient.of(HnSItemRegistry.FIREBLOSSOM_GOWN_HELMET.get()),
                         Ingredient.of(HnSBlocks.FIREBLOSSOM.get()),
                         RecipeCategory.COMBAT,
-                        HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                        HnSItemRegistry.FIREBLOSSOM_KNIGHT_HELMET.get())
                 .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_knight/fireblossom_knight_crown"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
+                        Ingredient.of(HnSItemRegistry.FIREBLOSSOM_GOWN_CHESTPLATE.get()),
+                        Ingredient.of(HnSBlocks.FIREBLOSSOM.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.FIREBLOSSOM_KNIGHT_CHESTPLATE.get())
+                .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_knight/fireblossom_knight_chestplate"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
+                        Ingredient.of(HnSItemRegistry.FIREBLOSSOM_GOWN_LEGGINGS.get()),
+                        Ingredient.of(HnSBlocks.FIREBLOSSOM.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.FIREBLOSSOM_KNIGHT_LEGGINGS.get())
+                .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_knight/fireblossom_knight_leggings"));
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
+                        Ingredient.of(HnSItemRegistry.FIREBLOSSOM_GOWN_BOOTS.get()),
+                        Ingredient.of(HnSBlocks.FIREBLOSSOM.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.FIREBLOSSOM_KNIGHT_BOOTS.get())
+                .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_knight/fireblossom_knight_boots"));
+
+
+        //Fireblossom Battlemage Armor
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
+                        Ingredient.of(HnSItemRegistry.FIREBLOSSOM_KNIGHT_HELMET.get()),
+                        Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+                        RecipeCategory.COMBAT,
+                        HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_HELMET.get())
+                .unlocks("has_divine_mold", has(HnSItemRegistry.DIVINE_MOLD.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_battlemage/fireblossom_battlemage_crown"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
-                        Ingredient.of(HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get()),
-                        Ingredient.of(HnSBlocks.FIREBLOSSOM.get()),
+                        Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
+                        Ingredient.of(HnSItemRegistry.FIREBLOSSOM_KNIGHT_CHESTPLATE.get()),
+                        Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
                         RecipeCategory.COMBAT,
-                        HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
-                .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
+                        HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get())
+                .unlocks("has_divine_mold", has(HnSItemRegistry.DIVINE_MOLD.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_battlemage/fireblossom_battlemage_chestplate"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
-                        Ingredient.of(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get()),
-                        Ingredient.of(HnSBlocks.FIREBLOSSOM.get()),
+                        Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
+                        Ingredient.of(HnSItemRegistry.FIREBLOSSOM_KNIGHT_LEGGINGS.get()),
+                        Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
                         RecipeCategory.COMBAT,
-                        HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
-                .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
+                        HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_LEGGINGS.get())
+                .unlocks("has_divine_mold", has(HnSItemRegistry.DIVINE_MOLD.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_battlemage/fireblossom_battlemage_leggings"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
-                        Ingredient.of(HnSItemRegistry.BLAZEBORNE_BOOTS.get()),
-                        Ingredient.of(HnSBlocks.FIREBLOSSOM.get()),
+                        Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
+                        Ingredient.of(HnSItemRegistry.FIREBLOSSOM_KNIGHT_BOOTS.get()),
+                        Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
                         RecipeCategory.COMBAT,
-                        HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
-                .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
+                        HnSItemRegistry.FIREBLOSSOM_BATTLEMAGE_BOOTS.get())
+                .unlocks("has_divine_mold", has(HnSItemRegistry.DIVINE_MOLD.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_battlemage/fireblossom_battlemage_boots"));
-
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
-                        Ingredient.of(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CROWN.get()),
-                        Ingredient.of(Items.GOLD_INGOT),
-                        RecipeCategory.COMBAT,
-                        HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get())
-                .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_battlemage/convert_fireblossom_battlemage_helmet"));
-
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
-                        Ingredient.of(HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get()),
-                        Ingredient.of(HnSBlocks.FIREBLOSSOM.get()),
-                        RecipeCategory.COMBAT,
-                        HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CROWN.get())
-                .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_battlemage/convert_fireblossom_battlemage_crown"));
 
 
         //Calamitas Armor

@@ -17,4 +17,6 @@ public class HnSSpellAnimations {
     public static final AnimationHolder RAPPA_RECAST_1 = new AnimationHolder(HazenNStuff.id("rappa_recast_1"), true);
     public static final AnimationHolder RAPPA_RECAST_2 = new AnimationHolder(HazenNStuff.id("rappa_recast_2"), true);
     public static final AnimationHolder RAPPA_RECAST_3 = new AnimationHolder(HazenNStuff.id("rappa_recast_3"), true);
+    public static final AnimationHolder VIOLENT_REGURGITATION_CHARGING = new AnimationHolder(HazenNStuff.id("violent_regurgitation_charging"), true);
+    public static final AnimationHolder VIOLENT_REGURGITATION_CAST = new AnimationHolder(HazenNStuff.id("violent_regurgitation_cast"), true);
 }

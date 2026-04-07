@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "hazennstuff:fireblossom_gown_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hazennstuff:fireblossom_gown_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hazennstuff:fireblossom_gown_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hazennstuff:fireblossom_gown_boots"
+        }
+      ]
+    }
+  ]
+}

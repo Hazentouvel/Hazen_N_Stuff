@@ -3,8 +3,8 @@
   "render_type": "cutout",
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/materials/cosmic_gold_animated",
-    "layer1": "hazennstuff:item/materials/cosmic_gold_animated_glowmask"
+    "layer0": "hazennstuff:item/materials/cosmic_gold_ingot_animated",
+    "layer1": "hazennstuff:item/materials/cosmic_gold_ingot_animated_glowmask"
   },
   "neoforge_data": {
     "layers": {

@@ -17,6 +17,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
@@ -77,7 +78,17 @@ public class FieryDaggerSpell extends AbstractTaggedSpell {
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         if (world.isClientSide) return;
 
-        Vec3 look = entity.getLookAngle();
+        Vec3 eyePos = entity.getEyePosition();
+        Vec3 lookVec = entity.getLookAngle();
+        double range = 40.0;
+
+        Vec3 end = eyePos.add(lookVec.scale(range));
+        var hitResult = entity
+                .level()
+                .clip(new ClipContext(eyePos, end, ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity));
+
+        Vec3 targetPos = hitResult.getLocation();
+        Vec3 look = targetPos.subtract(eyePos).normalize();
 
         boolean hasCinderousEquipment = hasTaggedItem(entity, HnSTags.CINDEROUS_EQUIPMENT);
         hasCinderous = hasTaggedItem(entity, HnSTags.CINDEROUS_EQUIPMENT);

@@ -239,12 +239,6 @@ public class HnSCreativeModeTabs {
                         *** Fire
                          */
 
-                        // Soul Flamed
-                        output.accept(HnSItemRegistry.SOUL_FLAME_HELMET.get());
-                        output.accept(HnSItemRegistry.SOUL_FLAME_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.SOUL_FLAME_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.SOUL_FLAME_BOOTS.get());
-
                         // Blazeborne
                         output.accept(HnSItemRegistry.BLAZEBORNE_HELMET.get());
                         output.accept(HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get());

@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-07T00:58:59.8018748	Recipes
+// 1.21.1	2026-04-08T11:03:00.6188491	Recipes
 cd3eb4cd868f11a3c30e74ae13a4fccac5cb83dd data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_boots.json
 92bd0e35e8f7b7c6d0bb8f93326ff2e126cd8d36 data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_chestplate.json
 96a36bfd7dfb8a042b3c6c3c7d9513c8139abc06 data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_helmet.json
@@ -225,10 +225,6 @@ f0a9f9fdf6c5af7cbbf9948f0f723115c89611bf data/hazennstuff/advancement/recipes/co
 cadd1e479cbaf18f5ecdcd1d392070860d695e54 data/hazennstuff/advancement/recipes/combat/smithing/armor/slc_cat/slc_cat_chestplate.json
 279cfe8545231206a690186bbd285cbd1b2359c0 data/hazennstuff/advancement/recipes/combat/smithing/armor/slc_cat/slc_cat_helmet.json
 5beca9b8d9df2aa8f2ab23c7355ae52caff7c961 data/hazennstuff/advancement/recipes/combat/smithing/armor/slc_cat/slc_cat_leggings.json
-105d29d0a217df2490b648f7e72d7a2687bfa094 data/hazennstuff/advancement/recipes/combat/smithing/armor/soul_flame/soul_flame_boots.json
-613bbe255471c39358ea42b34ed266e5b9c27698 data/hazennstuff/advancement/recipes/combat/smithing/armor/soul_flame/soul_flame_chestplate.json
-411ff631060cf8ff69b2f09ff2f6d7b5c4828fb9 data/hazennstuff/advancement/recipes/combat/smithing/armor/soul_flame/soul_flame_helmet.json
-defc1e34de1238145877b0caef199358b849a211 data/hazennstuff/advancement/recipes/combat/smithing/armor/soul_flame/soul_flame_leggings.json
 87b62ee82fd810556ff9ba1ab007d5519eefea70 data/hazennstuff/advancement/recipes/combat/smithing/armor/the_wither/the_wither_boots.json
 7743e7b11ac2e219c0d19ec71f9d5569ba12ddf6 data/hazennstuff/advancement/recipes/combat/smithing/armor/the_wither/the_wither_chestplate.json
 e5fee25cad305edd79381844d34549db95e9c0ed data/hazennstuff/advancement/recipes/combat/smithing/armor/the_wither/the_wither_helmet.json
@@ -544,10 +540,6 @@ b20523ca642665d6717c375cba746a37519593f7 data/hazennstuff/recipe/smithing/armor/
 e1dfc26cc2253fe0ea82481f7c47e8feef6f2ef1 data/hazennstuff/recipe/smithing/armor/slc_cat/slc_cat_chestplate.json
 c02b504a220bdea66f14360694cadebff4e4b5ac data/hazennstuff/recipe/smithing/armor/slc_cat/slc_cat_helmet.json
 5ff17b59c10d00748227a4194314e21562dcf732 data/hazennstuff/recipe/smithing/armor/slc_cat/slc_cat_leggings.json
-9aa78587c83ffaf096c041eade67d8969c29b1f2 data/hazennstuff/recipe/smithing/armor/soul_flame/soul_flame_boots.json
-4267b378879d74826cba013c194798b34ecef350 data/hazennstuff/recipe/smithing/armor/soul_flame/soul_flame_chestplate.json
-e693c24fc6f72dc0d58d75200e2102cc8b6c3db9 data/hazennstuff/recipe/smithing/armor/soul_flame/soul_flame_helmet.json
-2ae40d359ab69ff07022617fd1934e05264ca8e2 data/hazennstuff/recipe/smithing/armor/soul_flame/soul_flame_leggings.json
 5d6fdea9806e1c7978eed8af6e779d3ae8da543b data/hazennstuff/recipe/smithing/armor/the_wither/the_wither_boots.json
 323fafb05046e5212926e70e3a3a9d0ec927de43 data/hazennstuff/recipe/smithing/armor/the_wither/the_wither_chestplate.json
 cc9a46b6de5f89c1f45d2ff2e61bfe67b2c0b828 data/hazennstuff/recipe/smithing/armor/the_wither/the_wither_helmet.json

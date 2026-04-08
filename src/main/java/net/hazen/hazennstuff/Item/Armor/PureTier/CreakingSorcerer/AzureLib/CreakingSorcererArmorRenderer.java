@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.SoulFlame.AzureLib;
+package net.hazen.hazennstuff.Item.Armor.PureTier.CreakingSorcerer.AzureLib;
 
 import mod.azure.azurelib.common.render.armor.AzArmorRenderer;
 import mod.azure.azurelib.common.render.armor.AzArmorRendererConfig;
@@ -7,22 +7,22 @@ import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Item.HnSUtilities.AzArmorLeggingTorsoLayerPipeline;
 import net.minecraft.resources.ResourceLocation;
 
-public class SoulFlameArmorRenderer extends AzArmorRenderer {
+public class CreakingSorcererArmorRenderer extends AzArmorRenderer {
     private static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "geo/armor/soul_flame_armor.geo.json"
+            "geo/armor/creaking_sorcerer_armor.geo.json"
     );
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/armor/soul_flame_armor_animated.png"
+            "textures/armor/creaking_sorcerer_armor.png"
     );
 
-    public SoulFlameArmorRenderer() {
+    public CreakingSorcererArmorRenderer() {
         super(
                 AzArmorRendererConfig.builder(GEO, TEX)
-                        .setPipelineContext(AzArmorLeggingTorsoLayerPipeline::new)
                         .addRenderLayer(new AzAutoGlowingLayer<>())
+                        .setPipelineContext(AzArmorLeggingTorsoLayerPipeline::new)
                         .build()
         );
     }

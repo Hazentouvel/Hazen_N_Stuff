@@ -19,7 +19,7 @@ import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.Compat.*;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.AzureLib.ArbitriumRobesArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Blazeborne.AzureLib.BlazeborneArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.PureTier.ChargedScourge.AzureLib.CreakingSorcererArmorRenderer;
+import net.hazen.hazennstuff.Item.Armor.PureTier.CreakingSorcerer.AzureLib.CreakingSorcererArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.DarkRitualTemplar.AzureLib.DarkRitualTemplarArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.PureTier.EnderDragon.AzureLib.EnderDragonArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.Legacy.AzureLib.FireblossomBattlemageCrownedArmorRendererLegacy;
@@ -29,7 +29,6 @@ import net.hazen.hazennstuff.Item.Armor.PureTier.Infestation.AzureLib.Infestatio
 import net.hazen.hazennstuff.Item.Armor.Dedicated.LemonGod.AzureLib.LemonGodArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.SLCCat.SLCCatArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Seraph.AzureLib.SeraphArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.SoulFlame.AzureLib.SoulFlameArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.PureTier.SupremeWitch.AzureLib.SupremeWitchArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.PureTier.TheWither.AzureLib.TheWitherArmorRenderer;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
@@ -245,13 +244,6 @@ public class HazenNStuff
                     HnSItemRegistry.SERAPH_LEGGINGS.get(),
                     HnSItemRegistry.SERAPH_BOOTS.get());
 
-            // Soul Flame
-            AzArmorRendererRegistry.register(SoulFlameArmorRenderer::new,
-                    HnSItemRegistry.SOUL_FLAME_HELMET.get(),
-                    HnSItemRegistry.SOUL_FLAME_CHESTPLATE.get(),
-                    HnSItemRegistry.SOUL_FLAME_LEGGINGS.get(),
-                    HnSItemRegistry.SOUL_FLAME_BOOTS.get());
-
             // Supreme Witch
             AzArmorRendererRegistry.register(SupremeWitchArmorRenderer::new,
                     HnSItemRegistry.SUPREME_WITCH_HELMET.get(),
@@ -435,11 +427,6 @@ public class HazenNStuff
                     HnSItemRegistry.SERAPH_CHESTPLATE.get(),
                     HnSItemRegistry.SERAPH_LEGGINGS.get(),
                     HnSItemRegistry.SERAPH_BOOTS.get(),
-
-                    HnSItemRegistry.SOUL_FLAME_HELMET.get(),
-                    HnSItemRegistry.SOUL_FLAME_CHESTPLATE.get(),
-                    HnSItemRegistry.SOUL_FLAME_LEGGINGS.get(),
-                    HnSItemRegistry.SOUL_FLAME_BOOTS.get(),
 
                     HnSItemRegistry.SUPREME_WITCH_HELMET.get(),
                     HnSItemRegistry.SUPREME_WITCH_CHESTPLATE.get(),

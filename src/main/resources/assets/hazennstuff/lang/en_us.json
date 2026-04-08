@@ -56,6 +56,7 @@
   "rarity.hazennstuff_rarity_cosmic.name": "Cosmic",
   "rarity.hazennstuff_rarity_deus.name": "Enlightened",
   "rarity.hazennstuff_rarity_hydro.name": "Aquatic",
+  "rarity.hazennstuff_rarity_fireblossom.name": "Fireblossomed",
 
   "item.hazennstuff.excalibur_fragment": "Excalibur Fragment",
   "item.hazennstuff.deus_essence": "Deus Essence",
@@ -194,6 +195,7 @@
 
 
   "item.hazennstuff.pendant_of_harmony": "Pendant of Harmony",
+  "item.hazennstuff.pendant_of_harmony.desc": "It's shimmering, making your body feel much more stable...",
   "item.hazennstuff.pendant_of_harmony.description": "Your body has now attuned, you no longer teleport in a chaotic state...",
 
   "item.hazennstuff.blade_of_the_legate": "Blade of the Legate",
@@ -377,7 +379,7 @@
   "item.hazennstuff.eclipse": "Eclipse",
 
   "item.hazennstuff.starfury": "Starfury",
-  "item.hazennstuff.astralive_cleaver": "Astralite Cleaver",
+  "item.hazennstuff.astralite_cleaver": "Astralite Cleaver",
 
   "item.hazennstuff.tidal_wave": "Tidal Wave",
 
@@ -1127,7 +1129,7 @@
   "spell.hazennstuff.water_bolt.guide": "A Terraria Reference. Fire a bouncing bolt of water",
   "spell.hazennstuff.razorblade_typhoon.guide": "A Terraria Reference. A typhoon that shreds through your foes.",
   "spell.hazennstuff.horn_shell.guide": "Fire a piercing horn shell.",
-  "spell.hazennstuff.trident_barrage.guide": "Fire a barrage of tridents.",
+  "spell.hazennstuff.trident_jetstream.guide": "Fire a barrage of tridents.",
 
   "spell.hazennstuff.soul_seekers.guide": "The reapers have come to claim the souls of your foes. Cast upon the 3 heads of the Soul Seekers to nullify your opponent's magic.",
 

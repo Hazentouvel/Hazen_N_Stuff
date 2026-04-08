@@ -17,7 +17,7 @@ import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.SchoolTier.GeckoLi
 import net.hazen.hazennstuff.Item.Armor.PureTier.AstraconicWeaver.AzureLib.AstraconicWeaverArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.AstraconicWeaver.GeckolibAstraconicWeaverArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Blazeborne.AzureLib.BlazeborneArmorItem;
-import net.hazen.hazennstuff.Item.Armor.PureTier.ChargedScourge.AzureLib.CreakingSorcererArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.CreakingSorcerer.AzureLib.CreakingSorcererArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.DarkRitualTemplar.AzureLib.DarkRitualTemplarArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.ElderGuardian.ElderGuardianArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.EnderDragon.AzureLib.EnderDragonArmorItem;
@@ -32,7 +32,6 @@ import net.hazen.hazennstuff.Item.Armor.Dedicated.LemonGod.Ascended.AzureLib.Asc
 import net.hazen.hazennstuff.Item.Armor.Dedicated.LemonGod.AzureLib.LemonGodArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.SLCCat.SLCCatArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Seraph.AzureLib.SeraphArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.SoulFlame.AzureLib.SoulFlameArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.ShadowJester.ShadowJesterArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.SupremeWitch.AzureLib.SupremeWitchArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.TheWither.AzureLib.TheWitherArmorItem;
@@ -108,7 +107,6 @@ import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.ShadowScale.ShadowSc
 import net.hazen.hazennstuff.Item.Armor.Misc.ShadowWalkerEnderman.ShadowwalkerEndermanArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Misc.ShadowWalkerEnderman.ShadowwalkerEndermanBlindfoldItem;
 import net.hazen.hazennstuff.Item.Armor.Misc.ShadowWalkerEnderman.ShadowwalkerEndermanHoodItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.SoulFlame.GeckolibSoulFlameArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Misc.SpectralSpelunker.SpectralSpelunkerArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.SupremeWitch.GeckolibSupremeWitchArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.SynthesizerV.SynthesizerVArmorItem;
@@ -1234,68 +1232,6 @@ public class HnSItemRegistry {
             .fireResistant()
             .rarity(HnSRarities.FIRE_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
-    ));
-
-    //Soul Flame [Marked for Deletion]
-
-    public static final DeferredHolder<Item, Item> SOUL_FLAME_HELMET = ITEMS.register("soul_flame_helmet", () -> new SoulFlameArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-
-    public static final DeferredHolder<Item, Item> SOUL_FLAME_CHESTPLATE = ITEMS.register("soul_flame_chestplate", () -> new SoulFlameArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-
-    public static final DeferredHolder<Item, Item> SOUL_FLAME_LEGGINGS = ITEMS.register("soul_flame_leggings", () -> new SoulFlameArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-
-    public static final DeferredHolder<Item, Item> SOUL_FLAME_BOOTS = ITEMS.register("soul_flame_boots", () -> new SoulFlameArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-    ));
-
-
-
-    //*** GeckoLib ***
-
-
-
-    public static final DeferredHolder<Item, Item> GECKOLIB_SOUL_FLAME_HELMET = ITEMS.register("geckolib_soul_flame_helmet", () -> new GeckolibSoulFlameArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_SOUL_FLAME_CHESTPLATE = ITEMS.register("geckolib_soul_flame_chestplate", () -> new GeckolibSoulFlameArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_SOUL_FLAME_LEGGINGS = ITEMS.register("geckolib_soul_flame_leggings", () -> new GeckolibSoulFlameArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_SOUL_FLAME_BOOTS = ITEMS.register("geckolib_soul_flame_boots", () -> new GeckolibSoulFlameArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-
     ));
 
     // Calamitas

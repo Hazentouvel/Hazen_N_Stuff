@@ -6,7 +6,7 @@ import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.Datagen.HnSTags;
-import net.hazen.hazennstuff.Item.Armor.PureTier.ChargedScourge.AzureLib.CreakingSorcererArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.CreakingSorcerer.AzureLib.CreakingSorcererArmorItem;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;

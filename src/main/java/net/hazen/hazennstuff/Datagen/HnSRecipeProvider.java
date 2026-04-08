@@ -2346,45 +2346,6 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Armor Upgrading (Smithing Table)
 
-
-        //Soul Flame Armor
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
-                        Ingredient.of(HnSItemRegistry.BLAZEBORNE_HELMET.get()),
-                        Ingredient.of(Items.SOUL_SAND),
-                        RecipeCategory.COMBAT,
-                        HnSItemRegistry.SOUL_FLAME_HELMET.get())
-                .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/soul_flame/soul_flame_helmet"));
-
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
-                        Ingredient.of(HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get()),
-                        Ingredient.of(Items.SOUL_SAND),
-                        RecipeCategory.COMBAT,
-                        HnSItemRegistry.SOUL_FLAME_CHESTPLATE.get())
-                .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/soul_flame/soul_flame_chestplate"));
-
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
-                        Ingredient.of(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get()),
-                        Ingredient.of(Items.SOUL_SAND),
-                        RecipeCategory.COMBAT,
-                        HnSItemRegistry.SOUL_FLAME_LEGGINGS.get())
-                .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/soul_flame/soul_flame_leggings"));
-
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),
-                        Ingredient.of(HnSItemRegistry.BLAZEBORNE_BOOTS.get()),
-                        Ingredient.of(Items.SOUL_SAND),
-                        RecipeCategory.COMBAT,
-                        HnSItemRegistry.SOUL_FLAME_BOOTS.get())
-                .unlocks("has_flaming_template", has(HnSItemRegistry.FLAMING_TEMPLATE.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/soul_flame/soul_flame_boots"));
-
-
         //Fireblossom Knight Armor
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.FLAMING_TEMPLATE.get()),

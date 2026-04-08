@@ -5,7 +5,7 @@ import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
-import net.hazen.hazennstuff.Item.Armor.PureTier.ChargedScourge.AzureLib.CreakingSorcererArmorItem;
+import net.hazen.hazennstuff.Item.Armor.PureTier.CreakingSorcerer.AzureLib.CreakingSorcererArmorItem;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
@@ -56,9 +56,9 @@ public class EnderDragonArmorItem extends ImbuableHnSArmorItem implements IDisab
         }
     }
     private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof CreakingSorcererArmorItem &&
-                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof CreakingSorcererArmorItem &&
-                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof CreakingSorcererArmorItem &&
-                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof CreakingSorcererArmorItem;
+        return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof EnderDragonArmorItem &&
+                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof EnderDragonArmorItem &&
+                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof EnderDragonArmorItem &&
+                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof EnderDragonArmorItem;
     }
 }

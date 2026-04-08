@@ -639,7 +639,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
-            new AttributeContainer(HnSAttributeRegistry.SHADOW_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(HnSAttributeRegistry.COSMIC_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.CRIT_CHANCE, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 

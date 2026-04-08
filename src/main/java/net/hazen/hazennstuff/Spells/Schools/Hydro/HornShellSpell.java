@@ -19,7 +19,7 @@ import net.minecraft.world.level.Level;
 import java.util.List;
 
 public class HornShellSpell extends AbstractHydroSpell {
-    private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "horn_shell_spell");
+    private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "horn_shell");
     private final DefaultConfig defaultConfig;
 
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {

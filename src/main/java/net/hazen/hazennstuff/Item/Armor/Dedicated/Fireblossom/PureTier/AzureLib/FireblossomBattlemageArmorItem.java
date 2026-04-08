@@ -22,7 +22,8 @@ import java.util.List;
 public class FireblossomBattlemageArmorItem extends ImbuableHnSArmorItem implements IDisableJacket, IDisableHat {
 
     public FireblossomBattlemageArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.CREAKING_SORCERER_MATERIAL, type, settings, pureTier(
+        super(HnSArmorMaterials.CREAKING_SORCERER_MATERIAL, type, settings, pureTierMulti(
+                AttributeRegistry.FIRE_SPELL_POWER,
                 AttributeRegistry.NATURE_SPELL_POWER
         ));
     }

@@ -1,6 +1,8 @@
 package net.hazen.hazennstuff.Setup;
 
+import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.entity.mobs.keeper.KeeperEntity;
+import io.redspace.ironsspellbooks.registries.EntityRegistry;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnace;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.TheInferno.TheInferno;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.VoidWanderer.VoidWanderer;
@@ -17,10 +19,14 @@ import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ServantsOfEnder.ServantsOf
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.Dryad.DryadEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.TheRecluse.TheRecluseEntity;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.SpawnPlacementTypes;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
 @EventBusSubscriber
 public class HnSCommonSetup {
@@ -43,6 +49,11 @@ public class HnSCommonSetup {
         event.put(HnSEntityRegistry.THE_INFERNO.get(), TheInferno.prepareAttributes().build());
         event.put(HnSEntityRegistry.SUMMON_KEEPER.get(), KeeperEntity.prepareAttributes().build());
         event.put(HnSEntityRegistry.VOID_WANDERER.get(), VoidWanderer.prepareAttributes().build());
+    }
+
+    @SubscribeEvent
+    public static void spawnPlacements(RegisterSpawnPlacementsEvent event) {
+        event.register(HnSEntityRegistry.VOID_WANDERER.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (type, serverLevelAccessor, spawnType, blockPos, random) -> Utils.checkMonsterSpawnRules(serverLevelAccessor, spawnType, blockPos, random), RegisterSpawnPlacementsEvent.Operation.OR);
     }
 }
 

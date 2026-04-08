@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Armor.PureTier.ChargedScourge.AzureLib;
+package net.hazen.hazennstuff.Item.Armor.PureTier.CreakingSorcerer.AzureLib;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;

@@ -152,7 +152,11 @@ public class VoidWanderer extends AbstractSpellCastingMob implements Enemy, IAni
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, true));
         this.goalSelector.addGoal(5, new PatrolNearLocationGoal(this, 30, .75f));
         this.goalSelector.addGoal(11, new LookAtPlayerGoal(this, Player.class, 8.0F));
-
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, true, (entity) -> !entity.getType().is(HnSTags.ASTRAL_CONSTRUCT)));
+        this.targetSelector.addGoal(3,
+                new NearestAttackableTargetGoal<>(this, Mob.class, true,
+                        entity -> entity.getType().is(HnSTags.SPAWNS_OF_ENDER)
+                ));
     }
 
     public static enum AttackType {
@@ -198,7 +202,7 @@ public class VoidWanderer extends AbstractSpellCastingMob implements Enemy, IAni
         return super.finalizeSpawn(pLevel, pDifficulty, pReason, pSpawnData);
     }
 
-    protected @org.jetbrains.annotations.Nullable SoundEvent getAmbientSound() {
+    protected @Nullable SoundEvent getAmbientSound() {
         return SoundRegistry.KEEPER_IDLE.get();
     }
 

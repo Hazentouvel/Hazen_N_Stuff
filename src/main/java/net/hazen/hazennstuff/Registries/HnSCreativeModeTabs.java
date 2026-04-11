@@ -22,6 +22,8 @@ public class HnSCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
 
                         output.accept(HnSItemRegistry.VOID_WANDERER_EGG.get());
+                        output.accept(HnSItemRegistry.SERVANT_OF_ENDER_EGG.get());
+                        output.accept(HnSItemRegistry.THE_RECLUSE_EGG.get());
 
                     })
                     .build());

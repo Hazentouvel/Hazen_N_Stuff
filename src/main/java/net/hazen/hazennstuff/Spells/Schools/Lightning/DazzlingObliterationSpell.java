@@ -99,7 +99,7 @@ public class DazzlingObliterationSpell extends AbstractSpell {
             int remaining = playerMagicData.getPlayerRecasts().getRemainingRecastsForSpell(spellId.toString());
             if (remaining <= 0 || remaining >= 3) recastStage = 1;
             else if (remaining == 2) recastStage = 2;
-            else recastStage = 3; // remaining == 1
+            else recastStage = 3;
         } else {
             recastStage = 1;
         }
@@ -117,9 +117,7 @@ public class DazzlingObliterationSpell extends AbstractSpell {
             );
         }
 
-        // FieryDagger-like formatting: handle each recast stage but keep logic streamlined and consistent
         if (recastStage == 1) {
-            // First cast: spawn a single blade 3 blocks to the right of the player and fire forward immediately
             Vec3 forward = entity.getLookAngle().normalize();
             Vec3 right = forward.cross(new Vec3(0, 1, 0)).normalize();
             Vec3 spawnPos = entity.position()
@@ -128,13 +126,12 @@ public class DazzlingObliterationSpell extends AbstractSpell {
 
             NinguDemonbanePetalblade blade = new NinguDemonbanePetalblade(level, entity);
             blade.setPos(spawnPos);
-            // Fire in the direction the player is looking
             blade.shoot(forward);
             blade.setDamage(getDamage(spellLevel, entity));
+            blade.setCursorHoming(true);
             level.addFreshEntity(blade);
 
         } else if (recastStage == 2) {
-            // Second cast: spawn two blades from behind the targeted entity so they cross at the mob's center
             var raycast = Utils.raycastForEntity(level, entity, 45.0F, true);
             LivingEntity targetEntity = null;
             Vec3 targetCenter = null;
@@ -151,7 +148,6 @@ public class DazzlingObliterationSpell extends AbstractSpell {
                 Vec3 tForward = targetEntity.getLookAngle().normalize();
                 Vec3 tRight = tForward.cross(new Vec3(0, 1, 0)).normalize();
 
-                // Spawn both blades behind the target, offset left and right so they cross at the target center
                 Vec3 spawn1 = targetCenter.add(tForward.scale(-3.0)).add(tRight.scale(2.5));
                 Vec3 spawn2 = targetCenter.add(tForward.scale(-3.0)).add(tRight.scale(-2.5));
 
@@ -159,16 +155,17 @@ public class DazzlingObliterationSpell extends AbstractSpell {
                 blade1.setPos(spawn1);
                 blade1.shoot(targetCenter.subtract(spawn1).normalize());
                 blade1.setDamage(getDamage(spellLevel, entity));
+                blade1.setCursorHoming(true);
                 level.addFreshEntity(blade1);
 
                 NinguDemonbanePetalblade blade2 = new NinguDemonbanePetalblade(level, entity);
                 blade2.setPos(spawn2);
                 blade2.shoot(targetCenter.subtract(spawn2).normalize());
                 blade2.setDamage(getDamage(spellLevel, entity));
+                blade2.setCursorHoming(true);
                 level.addFreshEntity(blade2);
 
             } else {
-                // No target found: spawn behind the caster's look direction similar to previous fallback
                 Vec3 spawnCenter = entity.position()
                         .add(0, entity.getEyeHeight() - 0.2f, 0)
                         .add(entity.getLookAngle().normalize().scale(-7.0));
@@ -176,30 +173,29 @@ public class DazzlingObliterationSpell extends AbstractSpell {
                 NinguDemonbanePetalblade blade1 = new NinguDemonbanePetalblade(level, entity);
                 blade1.setPos(spawnCenter.add(-0.5, 0, 0));
                 blade1.shoot(entity.getLookAngle());
+                blade1.setCursorHoming(true);
                 blade1.setDamage(getDamage(spellLevel, entity));
                 level.addFreshEntity(blade1);
 
                 NinguDemonbanePetalblade blade2 = new NinguDemonbanePetalblade(level, entity);
                 blade2.setPos(spawnCenter.add(0.5, 0, 0));
                 blade2.shoot(entity.getLookAngle());
+                blade2.setCursorHoming(true);
                 blade2.setDamage(getDamage(spellLevel, entity));
                 level.addFreshEntity(blade2);
             }
 
         } else if (recastStage == 3) {
-            // Final cast: spawn the shuriken which will follow the player for a short delay then fire where the player is looking
             int delay = 15;
             NinguDemonbanePetalbladeShuriken shuriken = new NinguDemonbanePetalbladeShuriken(level, entity);
             Vec3 spawnPos = entity.position().add(0, entity.getEyeHeight() - shuriken.getBbHeight() * 0.5, 0);
             shuriken.setSpawnPos(spawnPos);
-            // store the offset from the owner so it maintains position relative to the owner while waiting
             shuriken.ownerTrack = spawnPos.subtract(entity.position());
             shuriken.setDelay(delay);
+            shuriken.setCursorHoming(true);
             shuriken.setDamage(getDamage(spellLevel, entity));
             level.addFreshEntity(shuriken);
         }
-
-        // Don't mutate recastStage here; let checkPreCastConditions determine the stage on the next cast.
 
         super.onCast(level, spellLevel, entity, castSource, playerMagicData);
     }

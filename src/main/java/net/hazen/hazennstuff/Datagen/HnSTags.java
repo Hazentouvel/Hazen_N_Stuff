@@ -1,12 +1,10 @@
 package net.hazen.hazennstuff.Datagen;
 
-import io.redspace.ironsspellbooks.registries.ParticleRegistry;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
@@ -44,6 +42,20 @@ public class HnSTags {
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ores/zenalite").toString()));
 
     //Armor
+
+
+    public static final TagKey<Item> ENDER_MASK = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "misc/ender_mask").toString()));
+
+    public static final TagKey<Item> HNS_HELMET = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/hns_helmet").toString()));
+    public static final TagKey<Item> HNS_CHESTPLATE = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/hns_chestplate").toString()));
+    public static final TagKey<Item> HNS_LEGGINGS = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/hns_leggings").toString()));
+    public static final TagKey<Item> HNS_BOOTS = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/hns_boots").toString()));
+
     public static final TagKey<Item> SCHOOL_HELMET = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/school/school_helmet").toString()));
     public static final TagKey<Item> SCHOOL_CHESTPLATE = ItemTags
@@ -62,7 +74,6 @@ public class HnSTags {
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/netherite_battlemage/netherite_battlemage_leggings").toString()));
     public static final TagKey<Item> NETHERITE_BATTLEMAGE_BOOTS = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/netherite_battlemage/netherite_battlemage_boots").toString()));
-
 
     public static final TagKey<Item> PURE_HELMET = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure/pure_helmet").toString()));
@@ -93,7 +104,11 @@ public class HnSTags {
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "harmonious_equipment").toString()));
 
 
+    public static final TagKey<EntityType<?>> ASTRAL_CONSTRUCT = TagKey
+            .create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "astral_construct"));
 
+    public static final TagKey<EntityType<?>> SPAWNS_OF_ENDER = TagKey
+            .create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "spawns_of_ender"));
 
 
     public static final TagKey<Item> IONIC_SPLITTER = ItemTags
@@ -104,14 +119,6 @@ public class HnSTags {
 
     public static final TagKey<Item> LIGHTNING_SHEATH = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "lightning_sheath").toString()));
-
-
-    /*
-    ***
-     */
-
-    public static final TagKey<EntityType<?>> ASTRAL_CONSTRUCT = TagKey.create(Registries.ENTITY_TYPE,
-            ResourceLocation.fromNamespaceAndPath("hazennstuff", "astral_constuct"));
 
     public static class Blocks {
 
@@ -124,7 +131,7 @@ public class HnSTags {
 
     }
 
-    public static final TagKey<Biome> VOID_WANDERER_BIOMES = TagKey.create(Registries.BIOME, HazenNStuff.id("void_wanderer_biomes"));
+    public static final TagKey<Biome> OUTER_END_BIOMES = TagKey.create(Registries.BIOME, HazenNStuff.id("outer_end_biomes"));
 
     public static ResourceKey<Biome> create(String name) {
         return ResourceKey.create(Registries.BIOME, HazenNStuff.id(name));

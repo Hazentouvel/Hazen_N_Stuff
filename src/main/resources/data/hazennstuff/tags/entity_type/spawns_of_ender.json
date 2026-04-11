@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:enderman",
+    "hazennstuff:the_recluse",
+    "hazennstuff:servant_of_ender"
+  ]
+}

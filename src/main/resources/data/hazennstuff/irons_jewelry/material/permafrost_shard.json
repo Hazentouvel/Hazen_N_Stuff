@@ -11,7 +11,7 @@
   "bonusParameters": {
     "irons_jewelry:attribute": {
       "attribute": "apothic_attributes:cold_damage",
-      "amount": 5,
+      "amount": 1.5,
       "operation": "add_value"
     },
     "irons_jewelry:negative_effect": {

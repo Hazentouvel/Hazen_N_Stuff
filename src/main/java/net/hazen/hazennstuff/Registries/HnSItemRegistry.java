@@ -215,6 +215,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -231,6 +232,24 @@ public class HnSItemRegistry {
     // Void wanderer
     public static final DeferredHolder<Item, Item> VOID_WANDERER_EGG = ITEMS.register
             ("void_wanderer_egg", SpawnVoidWanderer::new);
+
+    public static final DeferredItem<DeferredSpawnEggItem> THE_RECLUSE_EGG = ITEMS.register("the_recluse_egg",
+            () -> new DeferredSpawnEggItem(HnSEntityRegistry.THE_RECLUSE,
+                    1447446,
+                    0,
+                    ItemPropertiesHelper.material()
+                            .stacksTo(64)
+            )
+    );
+
+    public static final DeferredItem<DeferredSpawnEggItem> SERVANT_OF_ENDER_EGG = ITEMS.register("servant_of_ender_egg",
+            () -> new DeferredSpawnEggItem(HnSEntityRegistry.SERVANT_OF_ENDER,
+                    1447446,
+                    0,
+                    ItemPropertiesHelper.material()
+                            .stacksTo(64)
+            )
+    );
 
     /*
     *** [Blocks] **************************************************************************

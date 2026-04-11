@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.TheRecluse;
 
+import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
@@ -11,14 +12,21 @@ import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.Abstra
 import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.NeutralWizard;
 import io.redspace.ironsspellbooks.entity.mobs.goals.*;
 import io.redspace.ironsspellbooks.entity.mobs.wizards.IMerchantWizard;
+import io.redspace.ironsspellbooks.entity.mobs.wizards.priest.PriestEntity;
+import io.redspace.ironsspellbooks.item.FurledMapItem;
+import io.redspace.ironsspellbooks.item.InkItem;
 import io.redspace.ironsspellbooks.loot.SpellFilter;
 import io.redspace.ironsspellbooks.player.AdditionalWanderingTrades;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import io.redspace.ironsspellbooks.util.ModTags;
+import net.hazen.hazennstuff.Datagen.HnSTags;
+import net.hazen.hazennstuff.Entity.Mobs.Wizards.AbstractNeutralSpellcastingEnderman;
+import net.hazen.hazennstuff.Entity.Mobs.Wizards.AbstractSpellCastingEnderman;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -33,9 +41,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.goal.GoalSelector;
-import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal;
@@ -54,9 +60,11 @@ import net.minecraft.world.entity.npc.VillagerType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.item.trading.MerchantOffers;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.pathfinder.PathFinder;
@@ -68,7 +76,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-public class TheRecluseEntity extends NeutralWizard implements VillagerDataHolder, SupportMob, HomeOwner, IMerchantWizard {
+public class TheRecluseEntity extends AbstractNeutralSpellcastingEnderman implements VillagerDataHolder, SupportMob, HomeOwner, IMerchantWizard {
     private static final EntityDataAccessor<VillagerData> DATA_VILLAGER_DATA = SynchedEntityData.defineId(TheRecluseEntity.class, EntityDataSerializers.VILLAGER_DATA);
     private static final EntityDataAccessor<Boolean> DATA_VILLAGER_UNHAPPY = SynchedEntityData.defineId(TheRecluseEntity.class, EntityDataSerializers.BOOLEAN);
     public GoalSelector supportTargetSelector;
@@ -85,32 +93,43 @@ public class TheRecluseEntity extends NeutralWizard implements VillagerDataHolde
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new GustDefenseGoal(this));
-        this.goalSelector.addGoal(2, new SpellBarrageGoal(this, SpellRegistry.COUNTERSPELL_SPELL.get(), 3, 6, 100, 250, 1));
-        this.goalSelector.addGoal(3, new WizardAttackGoal(this, 1.25f, 35, 70)
+        this.goalSelector.addGoal(1, new AbstractNeutralSpellcastingEnderman.EndermanFreezeWhenLookedAt(this));
+        this.goalSelector.addGoal(1, new SpellBarrageGoal(this, SpellRegistry.COUNTERSPELL_SPELL.get(), 3, 6, 100, 250, 1));
+        this.goalSelector.addGoal(2, new WizardAttackGoal(this, 1.25f, 35, 70)
                 .setSpells(
-                        List.of(SpellRegistry.MAGIC_MISSILE_SPELL.get(), SpellRegistry.MAGIC_ARROW_SPELL.get()),
-                        List.of(SpellRegistry.ECHOING_STRIKES_SPELL.get()),
-                        List.of(),
-                        List.of(SpellRegistry.MAGIC_MISSILE_SPELL.get()))
+                        List.of(
+                                SpellRegistry.MAGIC_MISSILE_SPELL.get(),
+                                SpellRegistry.MAGIC_MISSILE_SPELL.get(),
+                                SpellRegistry.MAGIC_MISSILE_SPELL.get(),
+                                SpellRegistry.MAGIC_ARROW_SPELL.get()),
+                        List.of(
+                        ),
+                        List.of(
+
+                        ),
+                        List.of(
+                                SpellRegistry.ECHOING_STRIKES_SPELL.get()
+                        ))
                 .setSingleUseSpell(SpellRegistry.EVASION_SPELL.get(), 80, 400, 3, 4)
                 .setSpellQuality(0.3f, 0.5f)
                 .setDrinksPotions());
-        //this.goalSelector.addGoal(1, new EndermanFreezeWhenLookedAt(this));
+        this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, (double)1.0F, 0.0F));
         this.goalSelector.addGoal(7, new PatrolNearLocationGoal(this, 30, 1f));
         this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
-        this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(10, new WizardRecoverGoal(this));
+        this.goalSelector.addGoal(10, new RandomLookAroundGoal(this));
 
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, this::isHostileTowards));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (mob) -> mob instanceof Enemy && !(mob instanceof Endermite)));
         this.targetSelector.addGoal(5, new ResetUniversalAngerTargetGoal<>(this, true));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, true, (entity) -> !entity.getType().is(HnSTags.SPAWNS_OF_ENDER)));
+        this.targetSelector.addGoal(3,
+                new NearestAttackableTargetGoal<>(this, Mob.class, true,
+                        entity -> entity.getType().is(HnSTags.ASTRAL_CONSTRUCT)
+                ));
 
         this.supportTargetSelector = new GoalSelector(this.level().getProfilerSupplier());
-        this.supportTargetSelector.addGoal(0, new FindSupportableTargetGoal<>(this, LivingEntity.class, true,
-                (mob) -> !isAngryAt(mob) && mob.getHealth() * 1.25f < mob.getMaxHealth() && (mob.getType().is(ModTags.VILLAGE_ALLIES) || mob instanceof Player))
-        );
     }
 
     @Override
@@ -188,7 +207,6 @@ public class TheRecluseEntity extends NeutralWizard implements VillagerDataHolde
     }
 
     public void setVillagerData(VillagerData villagerdata) {
-        //VillagerData villagerdata = this.getVillagerData();
         villagerdata.setProfession(VillagerProfession.NONE);
         this.entityData.set(DATA_VILLAGER_DATA, villagerdata);
     }
@@ -235,28 +253,15 @@ public class TheRecluseEntity extends NeutralWizard implements VillagerDataHolde
                 }
             });
         }
-        //One game day = 24,000 ticks
 
         if (unhappyTimer > 0 && --unhappyTimer == 0) {
             this.entityData.set(DATA_VILLAGER_UNHAPPY, false);
         }
 
-//        this.getBrain().tick((ServerLevel) this.level, this);
-//        this.getBrain().setActiveActivityToFirstValid(ImmutableList.of(Activity.CORE));
-
     }
 
     @Override
     protected InteractionResult mobInteract(Player pPlayer, InteractionHand pHand) {
-//        if (!level.isClientSide) {
-//            pPlayer.sendSystemMessage(Component.literal(">Game Time: " + this.level.getGameTime()));
-//            pPlayer.sendSystemMessage(Component.literal(">Day Time: " + this.level.getDayTime()));
-//            pPlayer.sendSystemMessage(Component.literal(">Last Restock Game Time: " + this.lastRestockGameTime));
-//            pPlayer.sendSystemMessage(Component.literal(">Last Restock Day Time: " + this.lastRestockCheckDayTime));
-//            pPlayer.sendSystemMessage(Component.literal("delta game time: " + (this.level.getGameTime() - this.lastRestockGameTime)));
-//            pPlayer.sendSystemMessage(Component.literal("delta day time: " + (this.level.dayTime() - this.lastRestockCheckDayTime)));
-//            pPlayer.sendSystemMessage(Component.literal("restocks today: " + numberOfRestocksToday));
-//        }
 
         boolean preventTrade = (!this.level().isClientSide && this.getOffers().isEmpty()) || this.getTarget() != null || isAngryAt(pPlayer);
         if (pHand == InteractionHand.MAIN_HAND) {
@@ -328,41 +333,102 @@ public class TheRecluseEntity extends NeutralWizard implements VillagerDataHolde
     @Nullable
     protected MerchantOffers offers;
 
-    //Serialized
     private long lastRestockGameTime;
     private int numberOfRestocksToday;
-    //Not Serialized
     private long lastRestockCheckDayTime;
 
-    @Override
     public void setTradingPlayer(@Nullable Player pTradingPlayer) {
         this.tradingPlayer = pTradingPlayer;
     }
-
-    @Nullable
-    @Override
-    public Player getTradingPlayer() {
-        return tradingPlayer;
+    public @Nullable Player getTradingPlayer() {
+        return this.tradingPlayer;
     }
 
     @Override
+    protected boolean isImmobile() {
+        return super.isImmobile() || isTrading();
+    }
+
+    public void overrideOffers(MerchantOffers pOffers) {
+    }
+
+    public void notifyTrade(MerchantOffer pOffer) {
+        pOffer.increaseUses();
+        this.ambientSoundTime = -this.getAmbientSoundInterval();
+    }
+
+    @Override
+    public void notifyTradeUpdated(ItemStack itemStack) {
+
+    }
+
+    @Override
+    public SoundEvent getNotifyTradeSound() {
+        return SoundEvents.ENDERMAN_AMBIENT;
+    }
+
+    protected SoundEvent getTradeUpdatedSound(boolean pIsYesSound) {
+        return pIsYesSound ? SoundEvents.ENDERMAN_AMBIENT : SoundEvents.ENDERMAN_HURT;
+    }
+
+    private void startTrading(Player pPlayer) {
+        this.setTradingPlayer(pPlayer);
+        this.openTradingScreen(pPlayer, this.getDisplayName(), this.getVillagerData().getLevel());
+    }
+
+    public int getRestocksToday() {
+        return this.numberOfRestocksToday;
+    }
+
+    public void setRestocksToday(int restocks) {
+        this.numberOfRestocksToday = restocks;
+    }
+
+    public long getLastRestockGameTime() {
+        return this.lastRestockGameTime;
+    }
+
+    public void setLastRestockGameTime(long time) {
+        this.lastRestockGameTime = time;
+    }
+
+    public long getLastRestockCheckDayTime() {
+        return this.lastRestockCheckDayTime;
+    }
+
+    public void setLastRestockCheckDayTime(long time) {
+        this.lastRestockCheckDayTime = time;
+    }
+
     public MerchantOffers getOffers() {
         if (this.offers == null) {
             this.offers = new MerchantOffers();
             this.offers.add(new MerchantOffer(
-                    new ItemCost(Items.ENDER_PEARL),
-                    new ItemStack(Items.EMERALD, 1),
-                    64,
+                    new ItemCost(Items.EMERALD),
+                    new ItemStack(HnSItemRegistry.STARDUST.get(), 2),
+                    12,
                     0,
                     0.2F
             ));
             this.offers.add(new MerchantOffer(
-                    new ItemCost(Items.EMERALD, 28),
-                    new ItemStack(ItemRegistry.DRAGONSKIN.get(), 2),
+                    new ItemCost(Items.DIAMOND, 16),
+                    new ItemStack(ItemRegistry.ENDER_RUNE.get(), 1),
                     3,
                     0,
                     0.2F
             ));
+
+            if (this.random.nextFloat() < 0.25F) {
+                this.offers.add((new AdditionalWanderingTrades.InkBuyTrade((InkItem)ItemRegistry.INK_COMMON.get())).getOffer(this, this.random));
+            }
+
+            if (this.random.nextFloat() < 0.25F) {
+                this.offers.add((new AdditionalWanderingTrades.InkBuyTrade((InkItem)ItemRegistry.INK_UNCOMMON.get())).getOffer(this, this.random));
+            }
+
+            if (this.random.nextFloat() < 0.25F) {
+                this.offers.add((new AdditionalWanderingTrades.InkBuyTrade((InkItem)ItemRegistry.INK_RARE.get())).getOffer(this, this.random));
+            }
 
             this.offers.add((new AdditionalWanderingTrades.RandomScrollTrade(new SpellFilter((SchoolType) SchoolRegistry.ENDER.get()), 0.0F, 0.25F)).getOffer(this, this.random));
             if (this.random.nextFloat() < 0.8F) {
@@ -374,92 +440,20 @@ public class TheRecluseEntity extends NeutralWizard implements VillagerDataHolde
             }
 
             this.offers.add(new ObsidianClaymoreTrade().getOffer(this, this.random));
-
             this.offers.removeIf(Objects::isNull);
-            //We count the creation of our stock as a restock so that we do not immediately refresh trades the same day.
-            numberOfRestocksToday++;
+            ++this.numberOfRestocksToday;
         }
+
         return this.offers;
-    }
-
-    @Override
-    public void overrideOffers(MerchantOffers pOffers) {
-        //Not implemented by villagers. Might be only used client-side
-        //TODO: anyscroll trades???
-    }
-
-    @Override
-    protected boolean isImmobile() {
-        return super.isImmobile() || isTrading();
-    }
-
-    @Override
-    public void notifyTrade(MerchantOffer pOffer) {
-        pOffer.increaseUses();
-        this.ambientSoundTime = -this.getAmbientSoundInterval();
-        //this.rewardTradeXp(pOffer);
-    }
-
-    @Override
-    public void notifyTradeUpdated(ItemStack pStack) {
-        if (!this.level().isClientSide && this.ambientSoundTime > -this.getAmbientSoundInterval() + 20) {
-            this.ambientSoundTime = -this.getAmbientSoundInterval();
-            this.playSound(this.getTradeUpdatedSound(!pStack.isEmpty()), this.getSoundVolume(), this.getVoicePitch());
-        }
-    }
-
-    @Override
-    public SoundEvent getNotifyTradeSound() {
-        return SoundEvents.ENDERMAN_AMBIENT;
-    }
-
-    protected SoundEvent getTradeUpdatedSound(boolean pIsYesSound) {
-        return pIsYesSound ? SoundEvents.ENDERMAN_AMBIENT : SoundEvents.ENDERMAN_AMBIENT;
-    }
-
-    private void startTrading(Player pPlayer) {
-        this.setTradingPlayer(pPlayer);
-        this.lookControl.setLookAt(pPlayer);
-        this.openTradingScreen(pPlayer, this.getDisplayName(), this.getVillagerData().getLevel());
-    }
-
-    @Override
-    public int getRestocksToday() {
-        return numberOfRestocksToday;
-    }
-
-    @Override
-    public void setRestocksToday(int restocks) {
-        this.numberOfRestocksToday = restocks;
-    }
-
-    @Override
-    public long getLastRestockGameTime() {
-        return lastRestockGameTime;
-    }
-
-    @Override
-    public void setLastRestockGameTime(long time) {
-        this.lastRestockGameTime = time;
-    }
-
-    @Override
-    public long getLastRestockCheckDayTime() {
-        return lastRestockCheckDayTime;
-    }
-
-    @Override
-    public void setLastRestockCheckDayTime(long time) {
-        this.lastRestockCheckDayTime = time;
     }
 
     static class ObsidianClaymoreTrade extends AdditionalWanderingTrades.SimpleTrade {
         private ObsidianClaymoreTrade() {
             super((trader, random) -> {
                 if (!trader.level().isClientSide) {
-                    ItemStack cost = new ItemStack(HnSItemRegistry.STARFURY.get());
+                    ItemStack cost = new ItemStack(ItemRegistry.AMETHYST_RAPIER.get());
                     ItemStack forSale = new ItemStack(HnSItemRegistry.OBSIDIAN_CLAYMORE.get());
-                    return new MerchantOffer(new ItemCost(cost.getItem(), cost.getCount()), forSale, 1, 5, 0.5f);
+                    return new MerchantOffer(new ItemCost(cost.getItem(), cost.getCount()), forSale, 1, 25, 0.5f);
                 }
                 return null;
             });

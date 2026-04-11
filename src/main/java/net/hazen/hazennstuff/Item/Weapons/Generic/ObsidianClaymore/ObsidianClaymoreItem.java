@@ -29,7 +29,7 @@ public class ObsidianClaymoreItem extends MagicSwordItem implements GeoItem {
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.OBSIDIAN_CLAYMORE)
                         ),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(SpellRegistry.SHADOW_SLASH, 6)
+                        new SpellDataRegistryHolder(SpellRegistry.ECHOING_STRIKES_SPELL, 3)
                 )
         );
     }

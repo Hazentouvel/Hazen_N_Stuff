@@ -8,6 +8,7 @@ import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
 import io.redspace.ironsspellbooks.network.particles.FieryExplosionParticlesPacket;
 import net.hazen.hazennstuff.Entity.Spells.Ender.EndraconicMeteor.EndraconicBreath.EndraconicBreath;
+import net.hazen.hazennstuff.Particle.EnderExplosionParticlesPacket;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleHelper;
 import net.hazen.hazennstuff.Registries.HnSSounds;
@@ -135,6 +136,7 @@ public class EndraconicMeteor extends AbstractMagicProjectile implements GeoEnti
                 }
             }
 
+            PacketDistributor.sendToPlayersTrackingEntity(this, new EnderExplosionParticlesPacket(hitResult.getLocation().subtract(this.getDeltaMovement().scale((double)0.5F)), this.getExplosionRadius()), new CustomPacketPayload[0]);
             this.playSound((SoundEvent)HnSSounds.ENDRACONIC_METEOR_IMPACT.value(), 4.0F, (1.0F + (this.level.random.nextFloat() - this.level.random.nextFloat()) * 0.2F) * 0.7F);
             this.discard();
         }

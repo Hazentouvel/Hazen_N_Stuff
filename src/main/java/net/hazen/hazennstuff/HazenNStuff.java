@@ -61,7 +61,6 @@ import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(HazenNStuff.MOD_ID)
 public class HazenNStuff
 {

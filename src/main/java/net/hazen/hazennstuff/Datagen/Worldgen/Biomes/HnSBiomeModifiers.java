@@ -9,7 +9,6 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
-import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.common.world.BiomeModifiers;
@@ -40,7 +39,7 @@ public class HnSBiomeModifiers {
         ));
 
         context.register(ADD_ZENALITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(HnSTags.VOID_WANDERER_BIOMES),
+                biomes.getOrThrow(HnSTags.OUTER_END_BIOMES),
                 HolderSet.direct(placedFeatures.getOrThrow(HnSPlacedFeatures.ZENALITE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));

@@ -1,6 +1,7 @@
 package net.hazen.hazennstuff.Setup;
 
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Particle.EnderExplosionParticlesPacket;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
@@ -12,9 +13,8 @@ public class HnSPayloadHandler {
 
     @SubscribeEvent
     public static void register(final RegisterPayloadHandlersEvent event) {
-        final PayloadRegistrar payloadRegistrar = event.registrar(HazenNStuff.MOD_ID).versioned("1.3.3").optional();
-
-        //payloadRegistrar.playToClient(HnSRodOfDiscordParticlesPacket.TYPE, HnSRodOfDiscordParticlesPacket.STREAM_CODEC, HnSRodOfDiscordParticlesPacket::handle);
+        final PayloadRegistrar payloadRegistrar = event.registrar(HazenNStuff.MOD_ID).versioned("1.0.0").optional();
+        payloadRegistrar.playToClient(EnderExplosionParticlesPacket.TYPE, EnderExplosionParticlesPacket.STREAM_CODEC, EnderExplosionParticlesPacket::handle);
 
     }
 }

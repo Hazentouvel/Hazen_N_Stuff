@@ -7,22 +7,13 @@ import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.resources.ResourceLocation;
 
 public class ServantsOfEnderModel extends AbstractSpellCastingMobModel {
-    public static final ResourceLocation textureResource = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/mobs/enderman_spellcasting_mob.png");
-    public static final ResourceLocation modelResource = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/entities/mobs/enderman_spellcasting_mob.geo.json");
-    public static final ResourceLocation animationResource = ResourceLocation.fromNamespaceAndPath(IronsSpellbooks.MODID, "animations/casting_animation.json");
-
     @Override
-    public ResourceLocation getTextureResource(AbstractSpellCastingMob object) {
-        return textureResource;
+    public ResourceLocation getTextureResource(AbstractSpellCastingMob mob) {
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/mobs/enderman_spellcasting_mob.png");
     }
 
     @Override
-    public ResourceLocation getModelResource(AbstractSpellCastingMob object) {
-        return modelResource;
-    }
-
-    @Override
-    public ResourceLocation getAnimationResource(AbstractSpellCastingMob animatable) {
-        return animationResource;
+    public ResourceLocation getModelResource(AbstractSpellCastingMob animatable) {
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "geo/entities/mobs/enderman_spellcasting_mob.geo.json");
     }
 }

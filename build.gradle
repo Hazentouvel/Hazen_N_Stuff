@@ -234,8 +234,12 @@ dependencies {
     compileOnly "curse.maven:magic_from_the_east-1224162:6864551"
 
     //Familiar Lib
-    localRuntime "curse.maven:familiar_lib-1316458:6824093"
-    compileOnly "curse.maven:familiar_lib-1316458:6824093"
+    localRuntime "curse.maven:familiar_lib-1316458:7920235"
+    compileOnly "curse.maven:familiar_lib-1316458:7920235"
+
+    // Tunes 'n Tomes
+    localRuntime "curse.maven:tunes_n_tomes-1509193:7920232"
+    compileOnly "curse.maven:tunes_n_tomes-1509193:7920232"
 
     //Ender's Spells and Stuff
     localRuntime "curse.maven:enders_spells_and_stuff-1336977:7466777"

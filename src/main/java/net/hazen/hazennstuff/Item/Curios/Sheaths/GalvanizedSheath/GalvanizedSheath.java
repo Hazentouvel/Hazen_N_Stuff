@@ -26,6 +26,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import top.theillusivec4.curios.api.SlotContext;
 
@@ -52,19 +53,19 @@ public class GalvanizedSheath extends SheathCurioItem {
     }
 
     @SubscribeEvent
-    public static void handleAbility(LivingIncomingDamageEvent event) {
+    public static void handleAbility(LivingDamageEvent.Pre event) {
         GalvanizedSheath sheath = (GalvanizedSheath) HnSItemRegistry.GALVANIZED_SHEATH.get();
-        Entity attacker = event.getSource().getEntity();
+        Entity attacker = event.getSource().getDirectEntity();
         if (attacker instanceof ServerPlayer player) {
             if (sheath.isEquippedBy(player) && sheath.tryProcCooldown(player)) {
                 LivingEntity victim = event.getEntity();
                 if (victim != attacker) {
-                    float getBaseDamage = event.getOriginalAmount();
+                    float getBaseDamage = event.getNewDamage();
                     if (victim instanceof LivingEntity livingVictim && victim != attacker)
                     {
                         if (livingVictim.hasEffect(HnSEffects.ELECTROCUTED))
                         {
-                            event.setAmount(getBaseDamage * 1.5F);
+                            event.setNewDamage(getBaseDamage * 1.5F);
                         }
                         livingVictim.addEffect(new MobEffectInstance(HnSEffects.ELECTROCUTED, 100, 0));
                         spawnLightningLine(player.level(), player, livingVictim);

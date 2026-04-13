@@ -60,6 +60,6 @@ public class GabrielElytraArmorItem extends ImbuableHnSArmorItem implements IDis
 
     @Override
     public boolean elytraFlightTick(ItemStack stack, LivingEntity entity, int flightTicks) {
-        return true; // Needed to allow flight ticking
+        return true;
     }
 }

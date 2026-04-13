@@ -64,10 +64,10 @@ public class GabrielArmorItem extends ImbuableHnSArmorItem implements IDisableJa
         }
     }
     private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof CreakingSorcererArmorItem &&
-                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof CreakingSorcererArmorItem &&
-                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof CreakingSorcererArmorItem &&
-                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof CreakingSorcererArmorItem;
+        return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof GabrielArmorItem &&
+                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof GabrielElytraArmorItem &&
+                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof GabrielArmorItem &&
+                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof GabrielArmorItem;
     }
 
     @Override

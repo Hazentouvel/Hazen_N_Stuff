@@ -79,7 +79,7 @@ public class HazenNStuff
         CSCompat.init();
         DTECompat.init();
         ESSRCompat.init();
-        FLCompat.init();
+        TNTCompat.init();
         MFTECompat.init();
 
         HnSCreativeModeTabs.register(modEventBus);
@@ -100,7 +100,7 @@ public class HazenNStuff
 
         modEventBus.addListener(this::commonSetup);
 
-        modContainer.registerConfig(ModConfig.Type.COMMON, HnSConfig.SPEC);
+        modContainer.registerConfig(ModConfig.Type.COMMON, HnSConfig.SPEC, String.format("%s-common.toml", "hazennstuff"));
     }
 
 

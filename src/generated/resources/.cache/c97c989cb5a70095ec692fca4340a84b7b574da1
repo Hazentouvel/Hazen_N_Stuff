@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-11T12:58:39.715163	Tags for minecraft:item mod id hazennstuff
+// 1.21.1	2026-04-12T22:18:29.8900267	Tags for minecraft:item mod id hazennstuff
 740053467c0e6401606132b0ce14777e5339d91f data/c/tags/item/bones.json
 b0b8c453092e613b37ba2984e2833a3d9da1c237 data/c/tags/item/enchantables.json
 bc0fbf26094825cd60ac9937206fa609d2b71a25 data/c/tags/item/foods.json
@@ -19,14 +19,14 @@ c5225976e2c2c4284be8f9b9af32e124e37ae770 data/hazennstuff/tags/item/armors/hns_l
 2f17fea1836e9ddcf4b05485a366313a9b1d218c data/hazennstuff/tags/item/armors/netherite_battlemage/netherite_battlemage_chestplate.json
 b9954a780f37e2d30b2edd1085646f77332ff93c data/hazennstuff/tags/item/armors/netherite_battlemage/netherite_battlemage_helmet.json
 0fd9b110e434eb6e16384c3d1604c526e49c8648 data/hazennstuff/tags/item/armors/netherite_battlemage/netherite_battlemage_leggings.json
-af30f7ba4dce5ce233adfb8e4c04617a35939635 data/hazennstuff/tags/item/armors/pure/pure_boots.json
-77307d912d304b090731db910063ffecccb6fb3a data/hazennstuff/tags/item/armors/pure/pure_chestplate.json
-8c36a8b31e0c8d9e26ff4096c3e1a9fb65cf0230 data/hazennstuff/tags/item/armors/pure/pure_helmet.json
-91de6ded698d6c84022ea66d2c5a378414d0775e data/hazennstuff/tags/item/armors/pure/pure_leggings.json
-bd98b39d276c5032d7ac94bebcd060b1dc1c83f4 data/hazennstuff/tags/item/armors/school/school_boots.json
-e8937763f687af2b8dbcde632e63b74674eb9138 data/hazennstuff/tags/item/armors/school/school_chestplate.json
-262f8e13c2d60868b1f867e22d1aea3fa8c11a9c data/hazennstuff/tags/item/armors/school/school_helmet.json
-7a3b4c30294512f1dedfeac8a90fcb0ce7cb3110 data/hazennstuff/tags/item/armors/school/school_leggings.json
+1d54c14b1e2909429ef8575bf2a0325a2bf9cc7a data/hazennstuff/tags/item/armors/pure/pure_boots.json
+ac59809cca7abc5c852b76839ccca8d687204f0b data/hazennstuff/tags/item/armors/pure/pure_chestplate.json
+8641999a314108e7a7a0d791d6cdab3e575226e0 data/hazennstuff/tags/item/armors/pure/pure_helmet.json
+e35c93540a875778a5da9d5a8363df04199769c2 data/hazennstuff/tags/item/armors/pure/pure_leggings.json
+49a80a2b41f02221de7e7ffaf920ffb4ecda1efd data/hazennstuff/tags/item/armors/school/school_boots.json
+f3be895a20493453d97685e96655564c258f8b53 data/hazennstuff/tags/item/armors/school/school_chestplate.json
+3aedbf8d77c836925387f32e2cd2b56efd0595bc data/hazennstuff/tags/item/armors/school/school_helmet.json
+3a905a50249c4579bfb89f1cfe1d6f71e0200b25 data/hazennstuff/tags/item/armors/school/school_leggings.json
 cd8367c2634f001ba8713679900b76621a498cf6 data/hazennstuff/tags/item/cinderous_equipment.json
 a1c9233a7f31d2816e38def670e88f789a3c0006 data/hazennstuff/tags/item/harmonious_equipment.json
 b9b54010575eb78a6b943e2a567e0d4bfcbb51f8 data/hazennstuff/tags/item/ionic_splitter.json

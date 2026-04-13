@@ -5,7 +5,7 @@ import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
-import net.hazen.hazennstuff.Compat.FLCompat;
+import net.hazen.hazennstuff.Compat.TNTCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
@@ -35,7 +35,7 @@ public class ProjectSekaiArmorItem extends ImbuableGeckolibHnSArmorItem implemen
         var group = EquipmentSlotGroup.bySlot(getEquipmentSlot());
         ItemAttributeModifiers.Builder attributes = ItemAttributeModifiers.builder();
         MalumCompat.addArcaneResonance(attributes, group);
-        FLCompat.addSoundSpellPowerPure(attributes, group);
+        TNTCompat.addMelodySpellPowerPure(attributes, group);
         return attributes.build().modifiers();
     }
 

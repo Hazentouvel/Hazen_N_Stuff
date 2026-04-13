@@ -3,6 +3,8 @@ package net.hazen.hazennstuff.Item.Armor.ReignOfTyros.LegionnaireRuler;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
+import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
+import net.hazen.hazennstuff.Compat.FLCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
@@ -36,6 +38,9 @@ public class LegionnaireRulerArmorItem extends ImbuableGeckolibHnSArmorItem {
         var group = EquipmentSlotGroup.bySlot(getEquipmentSlot());
         ItemAttributeModifiers.Builder attributes = ItemAttributeModifiers.builder();
         MalumCompat.addScytheProfeciency(attributes, group);
+        ArsNoveauCompat.addMaxMana(attributes, group);
+        ArsNoveauCompat.addManaRegen(attributes, group);
+        FLCompat.addFamiliarDamagePure(attributes, group);
         return attributes.build().modifiers();
     }
 

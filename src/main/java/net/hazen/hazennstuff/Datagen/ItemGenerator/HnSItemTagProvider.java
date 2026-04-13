@@ -359,6 +359,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.NERU_HELMET.get())
                 .add(HnSItemRegistry.UTAU_HELMET.get())
                 .add(HnSItemRegistry.BOUNTY_HUNTER_HELMET.get())
+                .add(HnSItemRegistry.MYCELIUM_GUARDIAN_HELMET.get())
         ;
 
         tag(HnSTags.SCHOOL_CHESTPLATE)
@@ -381,6 +382,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.NERU_CHESTPLATE.get())
                 .add(HnSItemRegistry.UTAU_CHESTPLATE.get())
                 .add(HnSItemRegistry.BOUNTY_HUNTER_CHESTPLATE.get())
+                .add(HnSItemRegistry.MYCELIUM_GUARDIAN_CHESTPLATE.get())
         ;
 
         tag(HnSTags.SCHOOL_LEGGINGS)
@@ -403,6 +405,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.NERU_LEGGINGS.get())
                 .add(HnSItemRegistry.UTAU_LEGGINGS.get())
                 .add(HnSItemRegistry.BOUNTY_HUNTER_LEGGINGS.get())
+                .add(HnSItemRegistry.MYCELIUM_GUARDIAN_LEGGINGS.get())
         ;
 
         tag(HnSTags.SCHOOL_BOOTS)
@@ -425,6 +428,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.NERU_BOOTS.get())
                 .add(HnSItemRegistry.UTAU_BOOTS.get())
                 .add(HnSItemRegistry.BOUNTY_HUNTER_BOOTS.get())
+                .add(HnSItemRegistry.MYCELIUM_GUARDIAN_BOOTS.get())
         ;
 
 
@@ -482,7 +486,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.SUPREME_WITCH_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_SUPREME_WITCH_HELMET.get())
                 .add(HnSItemRegistry.ALCHEMIST_SUPREME_HELMET.get())
-                .add(HnSItemRegistry.MYCELIUM_GUARDIAN_HELMET.get())
                 .add(HnSItemRegistry.SHADOW_SCALE_HELMET.get())
                 .add(HnSItemRegistry.INFESTATION_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_INFESTATION_HELMET.get())
@@ -540,7 +543,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.SUPREME_WITCH_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_SUPREME_WITCH_CHESTPLATE.get())
                 .add(HnSItemRegistry.ALCHEMIST_SUPREME_CHESTPLATE.get())
-                .add(HnSItemRegistry.MYCELIUM_GUARDIAN_CHESTPLATE.get())
                 .add(HnSItemRegistry.SHADOW_SCALE_CHESTPLATE.get())
                 .add(HnSItemRegistry.INFESTATION_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_INFESTATION_CHESTPLATE.get())
@@ -591,7 +593,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.SUPREME_WITCH_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_SUPREME_WITCH_LEGGINGS.get())
                 .add(HnSItemRegistry.ALCHEMIST_SUPREME_LEGGINGS.get())
-                .add(HnSItemRegistry.MYCELIUM_GUARDIAN_LEGGINGS.get())
                 .add(HnSItemRegistry.SHADOW_SCALE_LEGGINGS.get())
                 .add(HnSItemRegistry.INFESTATION_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_INFESTATION_LEGGINGS.get())
@@ -642,7 +643,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.SUPREME_WITCH_BOOTS.get())
                 .add(HnSItemRegistry.GECKOLIB_SUPREME_WITCH_BOOTS.get())
                 .add(HnSItemRegistry.ALCHEMIST_SUPREME_BOOTS.get())
-                .add(HnSItemRegistry.MYCELIUM_GUARDIAN_BOOTS.get())
                 .add(HnSItemRegistry.SHADOW_SCALE_BOOTS.get())
                 .add(HnSItemRegistry.INFESTATION_BOOTS.get())
                 .add(HnSItemRegistry.GECKOLIB_INFESTATION_BOOTS.get())

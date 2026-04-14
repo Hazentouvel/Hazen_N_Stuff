@@ -45,4 +45,9 @@ public class AbstractCurio extends CurioBaseItem {
         attr.put(ALObjects.Attributes.ARROW_DAMAGE, new AttributeModifier(id, 1.0, AttributeModifier.Operation.ADD_VALUE));
         return attr;
     }
+
+    @Override
+    public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {
+        return true;
+    }
 }

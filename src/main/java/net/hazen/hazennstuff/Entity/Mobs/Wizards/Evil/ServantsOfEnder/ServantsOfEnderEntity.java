@@ -5,7 +5,7 @@ import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.entity.mobs.goals.*;
 import net.hazen.hazennstuff.Datagen.HnSTags;
-import net.hazen.hazennstuff.Entity.Mobs.Wizards.AbstractSpellCastingEnderman;
+import net.hazen.hazennstuff.Entity.Mobs.HnSEntityUtils.AbstractSpellCastingEnderman;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;

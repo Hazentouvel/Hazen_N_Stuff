@@ -29,4 +29,9 @@ public class RingOfEfficiencyCurio extends CurioBaseItem {
         attr.put(AttributeRegistry.CAST_TIME_REDUCTION, new AttributeModifier(id, 0.10, AttributeModifier.Operation.ADD_VALUE));
         return attr;
     }
+
+    @Override
+    public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {
+        return true;
+    }
 }

@@ -52,4 +52,9 @@ public class LegionnaireCurios extends SimpleDescriptiveCurio {
         lines.add(Component.translatable("item.hazennstuff.legionnaire_curios.description")
                 .withStyle(Style.EMPTY.withColor(15881518).withItalic(true)));
     }
+
+    @Override
+    public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {
+        return true;
+    }
 }

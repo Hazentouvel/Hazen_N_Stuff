@@ -124,4 +124,8 @@ public class GalvanizedSheath extends SheathCurioItem {
             dispatcher.idle(player, stack);
         }
     }
+    @Override
+    public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {
+        return true;
+    }
 }

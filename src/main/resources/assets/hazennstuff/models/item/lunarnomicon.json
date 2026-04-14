@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "hazennstuff:item/lunarnomicon_handheld"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "hazennstuff:item/lunarnomicon_gui"
+    },
+    "fixed": {
+      "parent": "hazennstuff:item/lunarnomicon_fixed"
+    }
+  }
+}

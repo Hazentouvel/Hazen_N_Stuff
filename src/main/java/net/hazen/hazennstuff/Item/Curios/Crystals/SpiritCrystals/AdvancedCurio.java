@@ -47,4 +47,9 @@ public class AdvancedCurio extends CurioBaseItem {
         attr.put(ALObjects.Attributes.ARROW_VELOCITY, new AttributeModifier(id, 0.05, AttributeModifier.Operation.ADD_VALUE));
         return attr;
     }
+
+    @Override
+    public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {
+        return true;
+    }
 }

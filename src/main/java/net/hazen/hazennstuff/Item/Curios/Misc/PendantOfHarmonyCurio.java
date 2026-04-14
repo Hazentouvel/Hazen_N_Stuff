@@ -77,4 +77,9 @@ public class PendantOfHarmonyCurio extends SimpleDescriptiveCurio {
         lines.add(Component.translatable("item.hazennstuff.pendant_of_harmony.description")
                 .withStyle(Style.EMPTY.withColor(0xe66af3).withItalic(true)));
     }
+
+    @Override
+    public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {
+        return true;
+    }
 }

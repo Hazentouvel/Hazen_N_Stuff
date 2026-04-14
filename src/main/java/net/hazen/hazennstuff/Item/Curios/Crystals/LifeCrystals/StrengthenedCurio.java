@@ -46,4 +46,9 @@ public class StrengthenedCurio extends CurioBaseItem {
         attr.put(Attributes.ARMOR, new AttributeModifier(id, 1.5, AttributeModifier.Operation.ADD_VALUE));
         return attr;
     }
+
+    @Override
+    public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {
+        return true;
+    }
 }

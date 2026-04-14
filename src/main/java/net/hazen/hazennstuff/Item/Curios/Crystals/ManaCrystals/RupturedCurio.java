@@ -44,4 +44,9 @@ public class RupturedCurio extends CurioBaseItem {
         attr.put(AttributeRegistry.MAX_MANA, new AttributeModifier(id, 100.0, AttributeModifier.Operation.ADD_VALUE));
         return attr;
     }
+
+    @Override
+    public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {
+        return true;
+    }
 }

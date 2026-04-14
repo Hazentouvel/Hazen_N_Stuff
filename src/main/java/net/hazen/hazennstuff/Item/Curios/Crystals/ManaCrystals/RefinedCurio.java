@@ -44,4 +44,9 @@ public class RefinedCurio extends CurioBaseItem {
         attr.put(AttributeRegistry.MANA_REGEN, new AttributeModifier(id, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
         return attr;
     }
+
+    @Override
+    public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {
+        return true;
+    }
 }

@@ -45,4 +45,9 @@ public class ShatteredCurio extends CurioBaseItem {
         attr.put(ALObjects.Attributes.HEALING_RECEIVED, new AttributeModifier(id, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
         return attr;
     }
+
+    @Override
+    public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {
+        return true;
+    }
 }

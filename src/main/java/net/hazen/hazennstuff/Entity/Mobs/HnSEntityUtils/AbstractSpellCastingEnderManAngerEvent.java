@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Entity.Mobs.Wizards;
+package net.hazen.hazennstuff.Entity.Mobs.HnSEntityUtils;
 
 import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.player.Player;

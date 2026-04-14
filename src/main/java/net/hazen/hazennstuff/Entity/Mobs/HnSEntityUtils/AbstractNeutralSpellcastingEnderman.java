@@ -1,7 +1,6 @@
-package net.hazen.hazennstuff.Entity.Mobs.Wizards;
+package net.hazen.hazennstuff.Entity.Mobs.HnSEntityUtils;
 
-import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.AbstractSpellCastingMob;
-import io.redspace.ironsspellbooks.util.ModTags;
+import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.NeutralWizard;
 import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -31,7 +30,6 @@ import net.minecraft.world.entity.ai.targeting.TargetingConditions;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.Level;
@@ -39,7 +37,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.EventHooks;
 import net.neoforged.neoforge.event.entity.EntityTeleportEvent;
 
@@ -48,7 +45,7 @@ import java.util.EnumSet;
 import java.util.UUID;
 import java.util.function.Predicate;
 
-public class AbstractSpellCastingEnderman extends AbstractSpellCastingMob implements NeutralMob {
+public class AbstractNeutralSpellcastingEnderman extends NeutralWizard {
     private static final ResourceLocation SPEED_MODIFIER_ATTACKING_ID = ResourceLocation.withDefaultNamespace("attacking");
     private static final AttributeModifier SPEED_MODIFIER_ATTACKING;
     private static final int DELAY_BETWEEN_CREEPY_STARE_SOUND = 400;
@@ -61,7 +58,7 @@ public class AbstractSpellCastingEnderman extends AbstractSpellCastingMob implem
     private int remainingPersistentAngerTime;
     @Nullable
     private UUID persistentAngerTarget;
-    protected AbstractSpellCastingEnderman(EntityType<? extends PathfinderMob> pEntityType, Level pLevel) {
+    protected AbstractNeutralSpellcastingEnderman(EntityType<? extends PathfinderMob> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
         this.setPathfindingMalus(PathType.WATER, -1.0F);
     }
@@ -76,8 +73,7 @@ public class AbstractSpellCastingEnderman extends AbstractSpellCastingMob implem
 
         this.targetSelector.addGoal(1, new EndermanLookForPlayerGoal(this, this::isAngryAt));
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this, new Class[0]));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractSpellCastingEnderman.class, true, false));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, true, (entity) -> !entity.getType().is(HnSTags.SPAWNS_OF_ENDER)));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractNeutralSpellcastingEnderman.class, true, false));
         this.targetSelector.addGoal(4, new ResetUniversalAngerTargetGoal<>(this, false));
     }
 
@@ -311,17 +307,17 @@ public class AbstractSpellCastingEnderman extends AbstractSpellCastingMob implem
 
     static {
         SPEED_MODIFIER_ATTACKING = new AttributeModifier(SPEED_MODIFIER_ATTACKING_ID, (double)0.15F, AttributeModifier.Operation.ADD_VALUE);
-        DATA_CREEPY = SynchedEntityData.defineId(AbstractSpellCastingEnderman.class, EntityDataSerializers.BOOLEAN);
-        DATA_STARED_AT = SynchedEntityData.defineId(AbstractSpellCastingEnderman.class, EntityDataSerializers.BOOLEAN);
+        DATA_CREEPY = SynchedEntityData.defineId(AbstractNeutralSpellcastingEnderman.class, EntityDataSerializers.BOOLEAN);
+        DATA_STARED_AT = SynchedEntityData.defineId(AbstractNeutralSpellcastingEnderman.class, EntityDataSerializers.BOOLEAN);
         PERSISTENT_ANGER_TIME = TimeUtil.rangeOfSeconds(20, 39);
     }
 
     public static class EndermanFreezeWhenLookedAt extends Goal {
-        private final AbstractSpellCastingEnderman enderman;
+        private final AbstractNeutralSpellcastingEnderman enderman;
         @Nullable
         private LivingEntity target;
 
-        public EndermanFreezeWhenLookedAt(AbstractSpellCastingEnderman enderman) {
+        public EndermanFreezeWhenLookedAt(AbstractNeutralSpellcastingEnderman enderman) {
             this.enderman = enderman;
             this.setFlags(EnumSet.of(Flag.JUMP, Flag.MOVE));
         }
@@ -346,7 +342,7 @@ public class AbstractSpellCastingEnderman extends AbstractSpellCastingMob implem
     }
 
     public static class EndermanLookForPlayerGoal extends NearestAttackableTargetGoal<Player> {
-        private final AbstractSpellCastingEnderman enderman;
+        private final AbstractNeutralSpellcastingEnderman enderman;
         @Nullable
         private Player pendingTarget;
         private int aggroTime;
@@ -355,7 +351,7 @@ public class AbstractSpellCastingEnderman extends AbstractSpellCastingMob implem
         private final TargetingConditions continueAggroTargetConditions = TargetingConditions.forCombat().ignoreLineOfSight();
         private final Predicate<LivingEntity> isAngerInducing;
 
-        public EndermanLookForPlayerGoal(AbstractSpellCastingEnderman enderman, @Nullable Predicate<LivingEntity> selectionPredicate) {
+        public EndermanLookForPlayerGoal(AbstractNeutralSpellcastingEnderman enderman, @Nullable Predicate<LivingEntity> selectionPredicate) {
             super(enderman, Player.class, 10, false, false, selectionPredicate);
             this.enderman = enderman;
             this.isAngerInducing = (p_325811_) -> (enderman.isLookingAtMe((Player)p_325811_) || enderman.isAngryAt(p_325811_)) && !enderman.hasIndirectPassenger(p_325811_);

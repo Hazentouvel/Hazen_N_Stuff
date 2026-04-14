@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "hazennstuff:item/radiant_crown_of_scrolls_handheld"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "hazennstuff:item/radiant_crown_of_scrolls_gui"
+    },
+    "fixed": {
+      "parent": "hazennstuff:item/radiant_crown_of_scrolls_fixed"
+    }
+  }
+}

@@ -85,7 +85,7 @@ public class HnSTags {
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure/pure_boots").toString()));
 
     public static final TagKey<Item> ARMORS_FOR_IDLE = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure/pure_boots").toString()));
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/armors_for_idle").toString()));
 
     public static final TagKey<Item> ELDRITCH_RUNES = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "items/eldritch_runes").toString()));

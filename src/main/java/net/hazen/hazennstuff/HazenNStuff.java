@@ -163,6 +163,11 @@ public class HazenNStuff
                 HnSItemRegistry.GABRIEL_ULTRAKILL_LEGGINGS.get(),
                 HnSItemRegistry.GABRIEL_ULTRAKILL_BOOTS.get(),
 
+                HnSItemRegistry.SLC_CAT_HELMET.get(),
+                HnSItemRegistry.SLC_CAT_CHESTPLATE.get(),
+                HnSItemRegistry.SLC_CAT_LEGGINGS.get(),
+                HnSItemRegistry.SLC_CAT_BOOTS.get(),
+
                 // Weapons
 
                 HnSItemRegistry.HAMMER_OF_JUSTICE.get(),

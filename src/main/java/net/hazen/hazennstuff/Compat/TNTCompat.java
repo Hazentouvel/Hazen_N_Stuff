@@ -10,7 +10,7 @@ import net.neoforged.fml.ModList;
 public class TNTCompat {
     public static boolean LOADED;
     public static void init() {
-        LOADED = ModList.get().isLoaded("familiarslib");
+        LOADED = ModList.get().isLoaded("tunes_n_tomes");
     }
 
     public static void addMelodySpellPowerPure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {

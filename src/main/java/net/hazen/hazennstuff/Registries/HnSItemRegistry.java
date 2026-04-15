@@ -548,12 +548,19 @@ public class HnSItemRegistry {
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
     );
 
-    //Divine Lemon
+    //Fried Ice Spider Egg
     public static final DeferredItem<Item> FRIED_ICE_SPIDER_EGG = ITEMS.register("fried_ice_spider_egg",
             () -> new Item(new Item
                     .Properties()
                     .food(HnSFoodProperties.FRIED_ICE_SPIDER_EGG)
                     .rarity(HnSRarities.ICE_RARITY.getValue())
+            ));
+
+    //Corn Beef
+    public static final DeferredItem<Item> CORN_BEEF = ITEMS.register("corn_beef",
+            () -> new Item(new Item
+                    .Properties()
+                    .food(HnSFoodProperties.CORN_BEEF)
             ));
 
 

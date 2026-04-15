@@ -392,5 +392,10 @@
     "sounds": [
       "hazennstuff:flesh_mound_bite"
     ]
+  },
+  "bone_impact": {
+    "sounds": [
+      "hazennstuff:bone_impact"
+    ]
   }
 }

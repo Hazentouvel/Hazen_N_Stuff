@@ -3,9 +3,9 @@ package net.hazen.hazennstuff.Setup;
 import io.redspace.ironsspellbooks.entity.mobs.keeper.KeeperRenderer;
 import io.redspace.ironsspellbooks.entity.spells.fiery_dagger.FieryDaggerRenderer;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.VoidWanderer.VoidWandererRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Blood.BoneBolt.BoneBoltRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshChunk.FleshChunkRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshChunk.FleshMound.FleshMoundRenderer;
-import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshPiece.FleshPiece;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshPiece.FleshPieceRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Cosmic.Evercomet.EvercometRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Cosmic.CosmicBolt.CosmicBoltRenderer;
@@ -47,7 +47,7 @@ import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.Dryad.DryadRenderer;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.TheRecluse.TheRecluseRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife.LifestealKnifeRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Eldritch.SoulSeeker.SoulSeekerRenderer;
-import net.hazen.hazennstuff.Entity.Spells.Evocation.SpectralAxe.SpectralRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Evocation.SpectralAxe.SpectralAxeRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Fire.BrimstoneHellblast.BrimstoneHellblastRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.IceArrowRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.EnergyBurst.EnergyBurstRenderer;
@@ -68,7 +68,6 @@ import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NatureSlash.NatureSl
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrike;
 import net.hazen.hazennstuff.Spells.Tooltips.LightningClientTooltipComponent;
 import net.minecraft.client.renderer.entity.NoopRenderer;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
@@ -93,7 +92,7 @@ public class HnSClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.ICE_CHUNK_A.get(), IceChunkARenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.ICE_CHUNK_B.get(), IceChunkBRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.ICE_CHUNK_C.get(), IceChunkCRenderer::new);
-        event.registerEntityRenderer(HnSEntityRegistry.SPECTRAL_AXE.get(), SpectralRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.SPECTRAL_AXE.get(), SpectralAxeRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.SOUL_SEEKER.get(), SoulSeekerRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.SPIDER_LILY.get(), SpiderLilyRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.DEATH_SENTENCE.get(), DeathSentenceRenderer::new);
@@ -122,6 +121,7 @@ public class HnSClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.FLESH_CHUNK.get(), FleshChunkRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.FLESH_PIECE.get(), FleshPieceRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.FLESH_MOUND.get(), FleshMoundRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.BONE_BOLT.get(), BoneBoltRenderer::new);
 
 
         /*

@@ -19,6 +19,12 @@ public class HnSFoodProperties {
             .saturationModifier(0.25f)
             .build();
 
+    public static final FoodProperties CORN_BEEF = new FoodProperties
+            .Builder()
+            .nutrition(8)
+            .saturationModifier(0.5f)
+            .build();
+
     public static final FoodProperties FRIED_ICE_SPIDER_EGG = new FoodProperties
             .Builder()
             .nutrition(8)

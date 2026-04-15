@@ -293,7 +293,7 @@
 				},
 				{
 					"name": "leftItem",
-					"parent": "bipedHandLeft",
+					"parent": "left_arm",
 					"pivot": [6, 12, 0],
 					"cubes": [
 						{

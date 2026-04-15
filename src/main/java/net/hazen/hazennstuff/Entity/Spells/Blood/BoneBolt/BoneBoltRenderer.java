@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Entity.Spells.Evocation.SpectralAxe;
+package net.hazen.hazennstuff.Entity.Spells.Blood.BoneBolt;
 
 
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -14,14 +14,14 @@ import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-public class SpectralRenderer extends GeoEntityRenderer<SpectralAxe> {
-    public SpectralRenderer(EntityRendererProvider.Context context) {
-        super(context, new SpectralAxeModel());
+public class BoneBoltRenderer extends GeoEntityRenderer<BoneBolt> {
+    public BoneBoltRenderer(EntityRendererProvider.Context context) {
+        super(context, new BoneBoltModel());
         this.shadowRadius = 0f;
     }
 
     @Override
-    public void preRender(PoseStack poseStack, SpectralAxe animatable, BakedGeoModel model,
+    public void preRender(PoseStack poseStack, BoneBolt animatable, BakedGeoModel model,
                           @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer,
                           boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
 
@@ -34,10 +34,5 @@ public class SpectralRenderer extends GeoEntityRenderer<SpectralAxe> {
         poseStack.mulPose(Axis.XP.rotationDegrees(xRot));
 
         super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, colour);
-    }
-
-    @Override
-    public RenderType getRenderType(SpectralAxe animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick) {
-        return RenderType.energySwirl(texture, 0, 0);
     }
 }

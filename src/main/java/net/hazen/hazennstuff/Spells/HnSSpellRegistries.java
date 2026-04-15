@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.Spells;
 
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Spells.Schools.Blood.BoneBoltSpell;
 import net.hazen.hazennstuff.Spells.Schools.Blood.ViolentRegurgitationSpell;
 import net.hazen.hazennstuff.Spells.Schools.Cosmic.CosmicBoltSpell;
 import net.hazen.hazennstuff.Spells.Schools.Cosmic.EvercometBarrageSpell;
@@ -54,8 +55,11 @@ public class HnSSpellRegistries {
      *** Blood
      */
 
-    // Endraconic Meteor
+    // Violent Regurgitation
     public static final Supplier<AbstractSpell> VIOLENT_REGURGITATION = registerSpell(new ViolentRegurgitationSpell());
+
+    // Bone Bolt
+    public static final Supplier<AbstractSpell> BONE_BOLT = registerSpell(new BoneBoltSpell());
 
 
     /*

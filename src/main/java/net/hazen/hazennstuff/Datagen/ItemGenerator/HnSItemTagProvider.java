@@ -117,6 +117,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         tag(Tags.Items.FOODS)
                 .add(HnSItemRegistry.LEMON.get())
                 .add(HnSItemRegistry.DIVINE_LEMON.get())
+                .add(HnSItemRegistry.CORN_BEEF.get())
                 .add(HnSItemRegistry.FRIED_ICE_SPIDER_EGG.get())
         ;
 

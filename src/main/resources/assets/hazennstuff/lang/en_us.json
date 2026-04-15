@@ -115,6 +115,8 @@
   "item.hazennstuff.divine_lemon.guide": "Delectable!",
   "item.hazennstuff.fried_ice_spider_egg": "Fried Ice Spider Egg",
   "item.hazennstuff.fried_ice_spider_egg.guide": "Mmm, I ate the baby.",
+  "item.hazennstuff.corn_beef": "Corn Beef",
+  "item.hazennstuff.corn_beef.guide": "Mmm, corn beef...",
 
 
   "item.hazennstuff.void_wanderer_egg": "Void Wanderer Egg",
@@ -1052,6 +1054,7 @@
   "spell.hazennstuff.endraconic_meteor": "Endraconic Meteor",
 
   "spell.hazennstuff.violent_regurgitation": "Violent Regurgitation",
+  "spell.hazennstuff.bone_bolt": "Bone Bolt",
 
   "spell.hazennstuff.golden_shower": "Golden Shower",
 
@@ -1103,6 +1106,7 @@
   "spell.hazennstuff.death_sentence.guide": "A Honkai Star-Rail Reference ''That paradise may be unreachable for me... Savor it in my place''",
 
   "spell.hazennstuff.violent_regurgitation.guide": "You regurgitate a chunk of flesh from your own body and vomit it out to hurt your foes... You will feel pain and hunger when hurling out your flesh, but you seem to have a hunger for the mound of flesh that lies after hitting the ground...",
+  "spell.hazennstuff.bone_bolt.guide": "I got a bone to pick with you. Fire a bone bolt to give your enemy a boo boo.",
 
   "spell.hazennstuff.endraconic_meteor.guide": "Fire out 3 Endraconic Meteors, once fired from the Elder Ender Dragons of old, and wreak havoc upon those that cross your path as you incinerate them with the breath and flames of ender...",
 
@@ -1242,6 +1246,7 @@
   "death.attack.endraconic_meteor": "%1$s was incernated by the flames of ender",
 
   "death.attack.violent_regurgitation": "%1$s was absorbed into the meat ball",
+  "death.attack.bone_bolt": "%1$s was bad to the bone",
 
   "death.attack.golden_shower": "%1$s was... oh-",
 

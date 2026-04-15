@@ -153,7 +153,8 @@ dependencies {
      */
 
     //Iron's Spells 'n Spellbooks
-    implementation "curse.maven:iss-855414:7402503"
+    implementation "curse.maven:iss-855414:7907341"
+    implementation "curse.maven:iss-1492763:7907336"
     implementation "curse.maven:geckolib-388172:6304958"
     implementation "curse.maven:player_animator-658587:6024462"
     implementation "curse.maven:curios-309927:6342656"

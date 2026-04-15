@@ -13,6 +13,12 @@ public class TNTCompat {
         LOADED = ModList.get().isLoaded("tunes_n_tomes");
     }
 
+    public static void addMelodySpellPowerSchool(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
+        if (LOADED) {
+            LoadedOnly.addMelodySpellPowerSchool(attributes, group);
+        }
+    }
+
     public static void addMelodySpellPowerPure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
         if (LOADED) {
             LoadedOnly.addMelodySpellPowerPure(attributes, group);
@@ -26,6 +32,12 @@ public class TNTCompat {
     }
 
     public static class LoadedOnly {
+
+        public static void addMelodySpellPowerSchool(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
+            attributes.add(TAttributeRegistry.MELODY_SPELL_POWER,
+                    new AttributeModifier(HazenNStuff.id("add_melody_spell_power_school"), 0.1f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                    group);
+        }
 
         public static void addMelodySpellPowerPure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
             attributes.add(TAttributeRegistry.MELODY_SPELL_POWER,

@@ -16,6 +16,7 @@ import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ReignOfTyros.Pyromus.Pyrom
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ServantsOfEnder.ServantsOfEnderEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.Dryad.DryadEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.TheRecluse.TheRecluseEntity;
+import net.hazen.hazennstuff.Entity.Spells.Blood.BoneBolt.BoneBolt;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshChunk.FleshChunk;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshChunk.FleshMound.FleshMound;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshPiece.FleshPiece;
@@ -371,6 +372,14 @@ public class HnSEntityRegistry {
                     .sized(2f, 1.5f)
                     .clientTrackingRange(4)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "flesh_mound").toString())
+            );
+
+    // Flesh Mound
+    public static final DeferredHolder<EntityType<?>, EntityType<BoneBolt>> BONE_BOLT =
+            ENTITIES.register("bone_bolt", () -> EntityType.Builder.<BoneBolt>of(BoneBolt::new, MobCategory.MISC)
+                    .sized(2f, 1.5f)
+                    .clientTrackingRange(4)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "bone_bolt").toString())
             );
 
 

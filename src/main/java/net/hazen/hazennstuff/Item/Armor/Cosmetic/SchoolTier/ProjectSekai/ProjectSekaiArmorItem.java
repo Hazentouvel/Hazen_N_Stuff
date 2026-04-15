@@ -35,7 +35,7 @@ public class ProjectSekaiArmorItem extends ImbuableGeckolibHnSArmorItem implemen
         var group = EquipmentSlotGroup.bySlot(getEquipmentSlot());
         ItemAttributeModifiers.Builder attributes = ItemAttributeModifiers.builder();
         MalumCompat.addArcaneResonance(attributes, group);
-        TNTCompat.addMelodySpellPowerPure(attributes, group);
+        TNTCompat.addMelodySpellPowerSchool(attributes, group);
         return attributes.build().modifiers();
     }
 

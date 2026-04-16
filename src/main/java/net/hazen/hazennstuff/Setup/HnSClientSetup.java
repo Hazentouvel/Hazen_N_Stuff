@@ -66,7 +66,6 @@ import net.hazen.hazennstuff.Particle.LeafParticle.LeafParticle;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSLash.IonicSlash;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NatureSlash.NatureSlash;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrike;
-import net.hazen.hazennstuff.Spells.Tooltips.LightningClientTooltipComponent;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -183,11 +182,6 @@ public class HnSClientSetup {
         event.registerSpriteSet(HnSParticleRegistry.NATURE_SLASH_PARTICLE.get(), NatureSlash.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.IONIC_SLASH.get(), IonicSlash.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.SCORCHING_SLASH.get(), ScorchingSlash.Provider::new);
-    }
-
-    @SubscribeEvent
-    public static void onRegisterTooltipComponents(RegisterClientTooltipComponentFactoriesEvent event) {
-        event.register(LightningClientTooltipComponent.LightningTooltipData.class, LightningClientTooltipComponent::new);
     }
 
 }

@@ -9,20 +9,26 @@ import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
+import io.redspace.ironsspellbooks.damage.DamageSources;
 import net.hazen.hazennstuff.Animations.HnSSpellAnimations;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshChunk.FleshChunk;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshPiece.FleshPiece;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Registries.HnSDamageTypes;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractCalamitasSpell;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,9 +37,30 @@ public class ViolentRegurgitationSpell extends AbstractSpell {
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(
-                Component.translatable("ui.irons_spellbooks.damage", Utils.stringTruncation(getDamage(spellLevel, caster), 2))
+        var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
+
+
+        li.addFirst(Component.literal("Hazen 'n Stuff")
+                .withStyle(ChatFormatting.GOLD)
+                .withStyle(ChatFormatting.ITALIC)
+                .withStyle(ChatFormatting.BOLD)
         );
+
+        li.addAll(List.of(
+                Component.translatable("ui.irons_spellbooks.damage",
+                        new Object[]{Utils.stringTruncation((double)this.getDamage(spellLevel, caster), 2)}
+                ),
+                Component.translatable("attribute.modifier.plus.1",
+                        Utils.stringTruncation(this.getHealthLoss(), 0),
+                        Component.translatable("attribute.hazennstuff.health_loss")
+                ),
+
+                Component.translatable("attribute.modifier.plus.1",
+                        Utils.stringTruncation((double)this.getHungerLoss(), 1),
+                        Component.translatable("attribute.hazennstuff.hunger_loss")
+                )
+        ));
+        return li;
     }
 
     public boolean allowLooting() {
@@ -95,10 +122,11 @@ public class ViolentRegurgitationSpell extends AbstractSpell {
 
         if (!world.isClientSide) {
             float currentHealth = entity.getHealth();
-            float healthCost = currentHealth * 0.25f;
-            entity.hurt(entity.damageSources().generic(), healthCost);
+            float healthCost = currentHealth * 0.4f;
+            DamageSource damageSource = new DamageSource(DamageSources.getHolderFromResource(entity, HnSDamageTypes.CORRUPT_MAGIC));
+            entity.hurt(damageSource, healthCost);
 
-            int hungerCost = Math.min(3, Math.max(0, spellLevel));
+            int hungerCost = Math.min(3, Math.max(8, spellLevel));
             if (entity instanceof net.minecraft.world.entity.player.Player player) {
                 int currentFood = player.getFoodData().getFoodLevel();
                 int newFood = Math.max(0, currentFood - hungerCost);
@@ -146,5 +174,13 @@ public class ViolentRegurgitationSpell extends AbstractSpell {
 
     public float getDamage(int spellLevel, LivingEntity caster) {
         return 5.0F + 5.0F * this.getSpellPower(spellLevel, caster);
+    }
+
+    public float getHealthLoss() {
+        return 40f;
+    }
+
+    public float getHungerLoss() {
+        return 3.0f;
     }
 }

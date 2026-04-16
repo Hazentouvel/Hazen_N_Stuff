@@ -22,8 +22,8 @@ public class BlazeborneArmorRenderer extends AzArmorRenderer {
         super(
                 AzArmorRendererConfig.builder(GEO, TEX)
                         .setAnimatorProvider(BlazeborneAnimator::new)
-                        .addRenderLayer(new AzAutoGlowingLayer<>())
                         .setPipelineContext(AzArmorLeggingTorsoLayerPipeline::new)
+                        .addRenderLayer(new AzAutoGlowingLayer<>())
                         .build()
         );
     }

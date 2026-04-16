@@ -1,4 +1,9 @@
 {
+  "tooltip.hazennstuff.shift": "Press §eShift§r for more",
+
+
+  "tooltip.hazennstuff.atlas_lore": "Sorrowful be the heart...",
+
   "spell.hazennstuff.ionic_splitter_ignition.description": "The Ionic Ignition has awakened the Ionic Splitter from its dormancy...",
 
   "curio.hazennstuff.scroll_sheath.description": "§sAll spell cooldowns have been refreshed!",
@@ -290,7 +295,7 @@
   "item.hazennstuff.fireblossom_rapier": "Fireblossom Rapier",
   "item.hazennstuff.firebrand": "Firebrand",
   "item.hazennstuff.draconic_splitter": "Draconic Splitter",
-  "item.hazennstuff.ravens_bane": "Raven's Bane",
+  "item.hazennstuff.\uE446 L ravens_bane": "Raven's Bane",
   "item.hazennstuff.ravens_bane.description": "Bare the weapon of a great infernal mage. This weapon resonates well with the scroll-forge...",
   "item.hazennstuff.volcano": "Volcano",
   "item.hazennstuff.war_flaming_lance": "War-Flaming Lance",
@@ -1202,6 +1207,9 @@
 
   "attribute.hazennstuff.cosmic_spell_power": "Cosmic Spell Power",
   "attribute.hazennstuff.cosmic_magic_resist": "Cosmic Magic Resistance",
+
+  "attribute.hazennstuff.health_loss": "Health Loss",
+  "attribute.hazennstuff.hunger_loss": "Hunger Loss",
 
   "material.hazennstuff.chlorophyte": "Chlorophyte",
   "material.hazennstuff.demonite": "Demonite",

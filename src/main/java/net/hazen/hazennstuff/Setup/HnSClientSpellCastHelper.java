@@ -10,7 +10,6 @@ import net.minecraft.world.phys.Vec3;
 import org.joml.Vector3f;
 
 public class HnSClientSpellCastHelper {
-    private static boolean suppressRightClicks;
 
     public HnSClientSpellCastHelper() {
     }

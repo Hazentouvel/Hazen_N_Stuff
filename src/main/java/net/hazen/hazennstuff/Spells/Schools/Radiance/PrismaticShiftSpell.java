@@ -165,9 +165,7 @@ public class PrismaticShiftSpell extends AbstractTaggedSpell {
             float maxHealth = entity.getMaxHealth();
             float damage = Math.max(1.0F, maxHealth * percentDamage);
 
-            DamageSource damageSource = new DamageSource(
-                    DamageSources.getHolderFromResource(entity, HnSDamageTypes.RADIANCE_MAGIC)
-            );
+            DamageSource damageSource = new DamageSource(DamageSources.getHolderFromResource(entity, HnSDamageTypes.CORRUPT_MAGIC));
 
             entity.hurt(damageSource, damage);
 

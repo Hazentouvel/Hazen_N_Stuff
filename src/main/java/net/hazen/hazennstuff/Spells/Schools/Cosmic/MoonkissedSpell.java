@@ -10,10 +10,12 @@ import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -25,22 +27,38 @@ public class MoonkissedSpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "moonkissed");
     private final DefaultConfig defaultConfig;
 
+    @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(
+        var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
+
+
+        li.addFirst(Component.literal("Hazen 'n Stuff")
+                .withStyle(ChatFormatting.GOLD)
+                .withStyle(ChatFormatting.ITALIC)
+                .withStyle(ChatFormatting.BOLD)
+        );
+        li.addAll(List.of(
                 Component.translatable("ui.irons_spellbooks.effect_length",
-                        new Object[]{Utils.timeFromTicks(this.getSpellPower(spellLevel, caster) * 20.0F, 1)}),
+                        Utils.timeFromTicks(this.getSpellPower(spellLevel, caster) * 20.0F, 1)),
+
                 Component.translatable("attribute.modifier.plus.1",
-                        new Object[]{Utils.stringTruncation((double)this.getPercentSpellPower(spellLevel, caster), 0),
-                                Component.translatable("attribute.hazennstuff.cosmic_spell_power")}),
+                        Utils.stringTruncation(this.getPercentSpellPower(spellLevel, caster), 0),
+                        Component.translatable("attribute.hazennstuff.cosmic_spell_power")),
+
                 Component.translatable("attribute.modifier.plus.1",
-                        new Object[]{Utils.stringTruncation((double)this.getPercentSpellPower(spellLevel, caster), 0),
-                                Component.translatable("attribute.aces_spell_utils.hydro_spell_power")}),
+                        Utils.stringTruncation(this.getPercentSpellPower(spellLevel, caster), 0),
+                        Component.translatable("attribute.aces_spell_utils.hydro_spell_power")),
+
                 Component.translatable("attribute.modifier.plus.1",
-                        new Object[]{Utils.stringTruncation((double)this.getWaterEfficiency(spellLevel, caster), 0),
-                                Component.translatable("attribute.name.generic.water_movement_efficiency")}),
+                        Utils.stringTruncation(this.getWaterEfficiency(spellLevel, caster), 0),
+                        Component.translatable("attribute.name.generic.water_movement_efficiency")),
+
                 Component.translatable("attribute.modifier.plus.1",
-                        new Object[]{Utils.stringTruncation((double)this.getWaterEfficiency(spellLevel, caster), 0),
-                                Component.translatable("attribute.name.player.submerged_mining_speed")}));
+                        Utils.stringTruncation(this.getWaterEfficiency(spellLevel, caster), 0),
+                        Component.translatable("attribute.name.player.submerged_mining_speed"))
+        ));
+
+        return li;
     }
 
     public MoonkissedSpell() {

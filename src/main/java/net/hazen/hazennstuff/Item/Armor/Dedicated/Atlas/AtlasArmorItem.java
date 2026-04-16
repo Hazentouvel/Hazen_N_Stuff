@@ -1,11 +1,13 @@
 package net.hazen.hazennstuff.Item.Armor.Dedicated.Atlas;
 
+import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.armor.ImbuableChestplateArmorItem;
 import io.redspace.ironsspellbooks.registries.ArmorMaterialRegistry;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -18,8 +20,7 @@ import java.util.List;
 
 public class AtlasArmorItem extends ImbuableChestplateArmorItem implements IDisableJacket, IDisableHat {
     public AtlasArmorItem(Type type, Properties settings) {
-        // Add in your armor tier + additional attributes for your item
-        super(ArmorMaterialRegistry.NETHERITE_BATTLEMAGE, type, settings, withManaAndSpellPowerAttribute(125, 0.05));
+        super(ArmorMaterialRegistry.SCHOOL, type, settings, schoolAttributes(AttributeRegistry.BLOOD_SPELL_POWER));
     }
 
     @Override
@@ -32,6 +33,12 @@ public class AtlasArmorItem extends ImbuableChestplateArmorItem implements IDisa
         // --- Custom item description section ---
         lines.add(Component.translatable("item.hazennstuff.atlas.description")
                 .withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
+
+        if(Screen.hasShiftDown()) {
+            lines.add(Component.translatable("tooltip.hazennstuff.atlas_lore"));
+        } else {
+            lines.add(Component.translatable("tooltip.hazennstuff.shift"));
+        }
     }
 
     // Just supply the armor model here; you don't have to worry about making a new renderer

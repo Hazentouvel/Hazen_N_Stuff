@@ -164,11 +164,13 @@ dependencies {
     compileOnly "curse.maven:apotheosis-${apotheosis_version}"
     //Ace Utils
     implementation "curse.maven:ace_utils-1299492:7787705"
+
     // Photon
     //implementation "curse.maven:photon-871522:6911487"
     //implementation "curse.maven:ldlib-626676:6911394"
+
     //AzureLib
-    implementation "curse.maven:azurelib-817423:7371539"
+    implementation "curse.maven:azurelib-817423:7797694"
 
     /*
     *** Runtime Only ***************************************************************************************************

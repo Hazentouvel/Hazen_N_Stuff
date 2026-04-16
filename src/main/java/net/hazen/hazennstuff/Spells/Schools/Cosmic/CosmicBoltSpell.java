@@ -8,10 +8,12 @@ import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import io.redspace.ironsspellbooks.api.util.Utils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import net.hazen.hazennstuff.Entity.Spells.Cosmic.CosmicBolt.CosmicBolt;
 import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -22,8 +24,21 @@ public class CosmicBoltSpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "cosmic_bolt");
     private final DefaultConfig defaultConfig;
 
+    @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(Component.translatable("ui.irons_spellbooks.damage", new Object[]{Utils.stringTruncation((double)this.getDamage(spellLevel, caster), 2)}));
+        var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
+
+
+        li.addFirst(Component.literal("Hazen 'n Stuff")
+                .withStyle(ChatFormatting.GOLD)
+                .withStyle(ChatFormatting.ITALIC)
+                .withStyle(ChatFormatting.BOLD)
+        );
+
+        li.add(Component.translatable("ui.irons_spellbooks.damage", new Object[]{Utils.stringTruncation((double)this.getDamage(spellLevel, caster), 2)}));
+
+        System.out.println(li.getFirst().toString()+"\n"+ li.getFirst().getStyle());
+        return li;
     }
 
     public CosmicBoltSpell() {

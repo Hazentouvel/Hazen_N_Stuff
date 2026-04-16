@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.HnSUtilities;
+package net.hazen.hazennstuff.HnSUtilities.Item;
 
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;

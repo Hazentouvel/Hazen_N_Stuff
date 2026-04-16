@@ -29,6 +29,7 @@ import net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Spade.SpadeRendere
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowDagger.ShadowDaggerRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowReaver.ShadowReaverRenderer;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.HnSUtilities.Tooltips.HnSSpellTooltip;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.HazelStatueRenderer;
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnaceRenderer;
@@ -184,4 +185,8 @@ public class HnSClientSetup {
         event.registerSpriteSet(HnSParticleRegistry.SCORCHING_SLASH.get(), ScorchingSlash.Provider::new);
     }
 
+    @SubscribeEvent
+    public static void onRegisterTooltipComponents(RegisterClientTooltipComponentFactoriesEvent event) {
+        event.register(HnSSpellTooltip.HnSSpellTooltipData.class, HnSSpellTooltip::new);
+    }
 }

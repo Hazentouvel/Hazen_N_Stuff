@@ -15,6 +15,7 @@ import net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Heart.Heart;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Spade.Spade;
 import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -26,6 +27,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -33,8 +35,19 @@ public class ArcaneCardsSpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "arcane_cards");
     private final DefaultConfig defaultConfig;
 
+    @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(Component.translatable("ui.irons_spellbooks.damage", new Object[]{Utils.stringTruncation((double)this.getDamage(spellLevel, caster), 2)}));
+        var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
+
+
+        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
+                .withStyle(ChatFormatting.GOLD)
+                .withStyle(ChatFormatting.BOLD)
+        );
+
+        li.add(Component.translatable("ui.irons_spellbooks.damage", new Object[]{Utils.stringTruncation((double)this.getDamage(spellLevel, caster), 2)}));
+
+        return li;
     }
 
     public ArcaneCardsSpell() {

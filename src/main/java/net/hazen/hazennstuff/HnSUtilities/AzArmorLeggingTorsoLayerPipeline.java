@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.HnSUtilities;
+package net.hazen.hazennstuff.HnSUtilities;
 
 import mod.azure.azurelib.common.model.AzBakedModel;
 import mod.azure.azurelib.common.model.AzBone;

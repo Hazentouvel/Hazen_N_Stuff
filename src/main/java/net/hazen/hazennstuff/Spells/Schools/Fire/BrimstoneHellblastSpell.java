@@ -10,6 +10,7 @@ import net.hazen.hazennstuff.Entity.Spells.Fire.BrimstoneHellblast.BrimstoneHell
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractCalamitasSpell;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -18,6 +19,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,10 +28,21 @@ public class BrimstoneHellblastSpell extends AbstractCalamitasSpell {
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(
-                Component.translatable("ui.irons_spellbooks.damage", Utils.stringTruncation(getDamage(spellLevel, caster), 2)),
-                Component.translatable("ui.irons_spellbooks.radius", getRadius(spellLevel, caster))
+        var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
+
+        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
+                .withStyle(ChatFormatting.GOLD)
+                .withStyle(ChatFormatting.BOLD)
         );
+
+        li.addAll(List.of(
+                Component.translatable("ui.irons_spellbooks.damage",
+                        new Object[]{Utils.stringTruncation((double)this.getDamage(spellLevel, caster), 2)}
+                ),
+
+                Component.translatable("ui.irons_spellbooks.radius", getRadius(spellLevel, caster))
+        ));
+        return li;
     }
 
     public boolean allowLooting() {

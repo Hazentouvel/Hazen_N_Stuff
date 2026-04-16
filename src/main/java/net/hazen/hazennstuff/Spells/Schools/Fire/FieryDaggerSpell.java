@@ -11,6 +11,7 @@ import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
 import net.hazen.hazennstuff.Animations.HnSSpellAnimations;
 import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractTaggedSpell;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -23,14 +24,26 @@ import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 import top.theillusivec4.curios.api.CuriosApi;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FieryDaggerSpell extends AbstractTaggedSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "fiery_dagger");
     private final DefaultConfig defaultConfig;
 
+    @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(Component.translatable("ui.irons_spellbooks.damage", new Object[]{Utils.stringTruncation((double)this.getDamage(spellLevel, caster), 2)}));
+        var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
+
+
+        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
+                .withStyle(ChatFormatting.GOLD)
+                .withStyle(ChatFormatting.BOLD)
+        );
+
+        li.add(Component.translatable("ui.irons_spellbooks.damage", new Object[]{Utils.stringTruncation((double)this.getDamage(spellLevel, caster), 2)}));
+
+        return li;
     }
 
     public boolean allowLooting() {
@@ -45,8 +58,8 @@ public class FieryDaggerSpell extends AbstractTaggedSpell {
                 .setCooldownSeconds(16.0F)
                 .setAllowCrafting(false)
                 .build();
-        this.manaCostPerLevel = 8;
-        this.baseSpellPower = 12;
+        this.manaCostPerLevel = 12;
+        this.baseSpellPower = 8;
         this.spellPowerPerLevel = 1;
         this.castTime = 0;
         this.baseManaCost = 24;
@@ -164,6 +177,6 @@ public class FieryDaggerSpell extends AbstractTaggedSpell {
     }
 
     private float getDamage(int spellLevel, LivingEntity entity) {
-        return this.getSpellPower(spellLevel, entity) * 0.3F;
+        return this.getSpellPower(spellLevel, entity) * 0.25F;
     }
 }

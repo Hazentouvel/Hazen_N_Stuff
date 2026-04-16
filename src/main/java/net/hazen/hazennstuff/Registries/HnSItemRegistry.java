@@ -141,7 +141,7 @@ import net.hazen.hazennstuff.Item.Curios.Sheaths.ScrollSheath.ScrollSheath;
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbook;
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.GoldenShowerSpellbook;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWings;
-import net.hazen.hazennstuff.Item.HnSUtilities.HnSFoodProperties;
+import net.hazen.hazennstuff.HnSUtilities.Item.HnSFoodProperties;
 import net.hazen.hazennstuff.Item.SpawnEggs.SpawnVoidWanderer;
 import net.hazen.hazennstuff.Item.Staves.BlossomOfTheEnchantress.BlossomOfTheEnchantress;
 import net.hazen.hazennstuff.Item.Staves.CeaselessVoid.CeaselessVoid;

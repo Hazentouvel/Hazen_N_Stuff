@@ -9,6 +9,7 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.*;
 import net.hazen.hazennstuff.Entity.Mobs.Summons.ReignOfTyros.Keeper.SummonKeeper;
 import net.hazen.hazennstuff.Registries.HnSSounds;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -23,6 +24,7 @@ import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.NeoForge;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,11 +32,27 @@ public class ReignOfTyrosSpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "reign_of_tyros");
     private final DefaultConfig defaultConfig;
 
+    @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(
-                Component.translatable("ui.irons_spellbooks.hp", new Object[]{Utils.stringTruncation((double)this.getKeeperHealth(spellLevel, caster), 1)}),
-                Component.translatable("ui.irons_spellbooks.damage", new Object[]{Utils.stringTruncation((double)this.getKeeperDamage(spellLevel, caster), 1)})
+        var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
+
+
+        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
+                .withStyle(ChatFormatting.GOLD)
+                .withStyle(ChatFormatting.BOLD)
         );
+
+        li.addAll(List.of(
+                Component.translatable("ui.irons_spellbooks.damage",
+                        new Object[]{Utils.stringTruncation((double)this.getKeeperDamage(spellLevel, caster), 1)}
+                ),
+                Component.translatable("ui.irons_spellbooks.hp",
+                        new Object[]{Utils.stringTruncation((double)this.getKeeperHealth(spellLevel, caster), 1)}
+                )
+        ));
+
+        System.out.println(li.getFirst().toString()+"\n"+ li.getFirst().getStyle());
+        return li;
     }
 
     public ReignOfTyrosSpell() {

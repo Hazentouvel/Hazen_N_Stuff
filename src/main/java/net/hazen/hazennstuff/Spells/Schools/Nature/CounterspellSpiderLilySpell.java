@@ -8,6 +8,7 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.hazen.hazennstuff.Entity.Spells.Nature.SpiderLily.SpiderLily;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -15,14 +16,26 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class CounterspellSpiderLilySpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "counterspell_spider_lily");
+
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(Component.translatable("ui.irons_spellbooks.damage", Utils.stringTruncation(getDamage(spellLevel, caster), 2)));
+        var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
+
+
+        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
+                .withStyle(ChatFormatting.GOLD)
+                .withStyle(ChatFormatting.BOLD)
+        );
+
+        li.add(Component.translatable("ui.irons_spellbooks.damage", new Object[]{Utils.stringTruncation((double)this.getDamage(spellLevel, caster), 2)}));
+
+        return li;
     }
 
     private final DefaultConfig defaultConfig = new DefaultConfig()

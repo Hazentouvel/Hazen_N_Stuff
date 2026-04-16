@@ -15,6 +15,7 @@ import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Registries.*;
 import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractTaggedSpell;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.commands.arguments.EntityAnchorArgument.Anchor;
 import net.minecraft.core.BlockPos;
@@ -41,6 +42,7 @@ import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.network.PacketDistributor;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -48,8 +50,27 @@ public class PrismaticShiftSpell extends AbstractTaggedSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "prismatic_shift");
     private final DefaultConfig defaultConfig;
 
+    @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(Component.translatable("ui.irons_spellbooks.distance", new Object[]{Utils.stringTruncation((double)this.getDistance(spellLevel, caster), 1)}));
+        var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
+
+
+        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
+                .withStyle(ChatFormatting.GOLD)
+                .withStyle(ChatFormatting.BOLD)
+        );
+
+        li.addAll(List.of(
+
+                Component.translatable("ui.irons_spellbooks.distance", getDistance(spellLevel, caster)),
+
+                Component.translatable("attribute.modifier.plus.1",
+                        Utils.stringTruncation(this.getHealthLoss(), 0),
+                        Component.translatable("attribute.hazennstuff.health_loss")
+                )
+        ));
+
+        return li;
     }
 
     public PrismaticShiftSpell() {
@@ -161,7 +182,7 @@ public class PrismaticShiftSpell extends AbstractTaggedSpell {
 
         if (entity.hasEffect(HnSEffects.CHAOS_STATE)) {
 
-            float percentDamage = 0.3F;
+            float percentDamage = 0.5F;
             float maxHealth = entity.getMaxHealth();
             float damage = Math.max(1.0F, maxHealth * percentDamage);
 
@@ -225,6 +246,10 @@ public class PrismaticShiftSpell extends AbstractTaggedSpell {
 
     private float getDistance(int spellLevel, LivingEntity sourceEntity) {
         return (float)(Utils.softCapFormula((double)this.getEntityPowerMultiplier(sourceEntity)) * (double)this.getSpellPower(spellLevel, (Entity)null));
+    }
+
+    public float getHealthLoss() {
+        return -50f;
     }
 
     public AnimationHolder getCastStartAnimation() {

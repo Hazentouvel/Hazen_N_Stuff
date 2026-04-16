@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.HnSUtilities;
+package net.hazen.hazennstuff.HnSUtilities.Item;
 
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import net.minecraft.world.effect.MobEffectInstance;

@@ -31,7 +31,7 @@ import net.hazen.hazennstuff.Item.Armor.Dedicated.SLCCat.SLCCatArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Seraph.AzureLib.SeraphArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.PureTier.SupremeWitch.AzureLib.SupremeWitchArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.PureTier.TheWither.AzureLib.TheWitherArmorRenderer;
-import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
+import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.GalvanizedSheath.GalvanizedSheathItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.ScrollSheath.ScrollSheathItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookRenderer;

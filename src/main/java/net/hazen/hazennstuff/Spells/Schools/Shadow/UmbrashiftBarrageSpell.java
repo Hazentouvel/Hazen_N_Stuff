@@ -9,6 +9,7 @@ import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import io.redspace.ironsspellbooks.particle.TraceParticleOptions;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,6 +17,7 @@ import io.redspace.ironsspellbooks.spells.ender.TeleportSpell;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowDagger.ShadowDagger;
 import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
+import net.minecraft.ChatFormatting;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -37,8 +39,26 @@ public class UmbrashiftBarrageSpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "umbrashift_barrage");
     private final DefaultConfig defaultConfig;
 
+    @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(Component.translatable("ui.irons_spellbooks.distance", new Object[]{Utils.stringTruncation((double)this.getDistance(spellLevel, caster), 1)}));
+        var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
+
+
+        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
+                .withStyle(ChatFormatting.GOLD)
+                .withStyle(ChatFormatting.BOLD)
+        );
+
+        li.addAll(List.of(
+
+                Component.translatable("ui.irons_spellbooks.distance", getDistance(spellLevel, caster)),
+
+                Component.translatable("ui.irons_spellbooks.damage", new Object[]{Utils.stringTruncation((double)this.getDamage(spellLevel, caster), 2)})
+
+
+        ));
+
+        return li;
     }
 
     public UmbrashiftBarrageSpell() {

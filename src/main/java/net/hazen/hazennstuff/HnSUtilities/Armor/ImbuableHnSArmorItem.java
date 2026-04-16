@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.HnSUtilities;
+package net.hazen.hazennstuff.HnSUtilities.Armor;
 
 import io.redspace.ironsspellbooks.api.spells.IPresetSpellContainer;
 import io.redspace.ironsspellbooks.api.spells.ISpellContainer;
@@ -9,8 +9,8 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 
-public class ImbuableGeckolibHnSArmorItem extends HnSGeckolibArmorItem implements IPresetSpellContainer {
-    public ImbuableGeckolibHnSArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties, AttributeContainer... attributeContainers) {
+public class ImbuableHnSArmorItem extends HnSArmorItem implements IPresetSpellContainer {
+    public ImbuableHnSArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties, AttributeContainer... attributeContainers) {
         super(material, type, properties, attributeContainers);
     }
 
@@ -21,8 +21,6 @@ public class ImbuableGeckolibHnSArmorItem extends HnSGeckolibArmorItem implement
             return;
         }
 
-        // This makes it so that helmets and chestplates can be imbued
-        // If you only want chestplates to be imbued, remove the || section of the if statement
         if (itemStack.getItem() instanceof ArmorItem armorItem)
         {
             if (armorItem.getType() == Type.CHESTPLATE)

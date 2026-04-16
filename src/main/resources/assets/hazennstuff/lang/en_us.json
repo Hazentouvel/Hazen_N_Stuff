@@ -1208,8 +1208,8 @@
   "attribute.hazennstuff.cosmic_spell_power": "Cosmic Spell Power",
   "attribute.hazennstuff.cosmic_magic_resist": "Cosmic Magic Resistance",
 
-  "attribute.hazennstuff.health_loss": "Health Loss",
-  "attribute.hazennstuff.hunger_loss": "Hunger Loss",
+  "attribute.hazennstuff.health_loss": "%d Health Loss",
+  "attribute.hazennstuff.hunger_loss": "%d Hunger Loss",
 
   "material.hazennstuff.chlorophyte": "Chlorophyte",
   "material.hazennstuff.demonite": "Demonite",

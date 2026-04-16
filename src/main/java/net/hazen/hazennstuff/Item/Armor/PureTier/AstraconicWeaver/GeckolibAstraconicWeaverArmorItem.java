@@ -1,13 +1,12 @@
 package net.hazen.hazennstuff.Item.Armor.PureTier.AstraconicWeaver;
 
-import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
-import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
-import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableGeckolibHnSArmorItem;
+import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.minecraft.world.effect.MobEffectInstance;

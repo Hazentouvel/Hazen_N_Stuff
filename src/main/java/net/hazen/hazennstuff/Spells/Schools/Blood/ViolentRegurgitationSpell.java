@@ -40,9 +40,8 @@ public class ViolentRegurgitationSpell extends AbstractSpell {
         var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
 
 
-        li.addFirst(Component.literal("Hazen 'n Stuff")
+        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
                 .withStyle(ChatFormatting.GOLD)
-                .withStyle(ChatFormatting.ITALIC)
                 .withStyle(ChatFormatting.BOLD)
         );
 
@@ -55,11 +54,10 @@ public class ViolentRegurgitationSpell extends AbstractSpell {
                         Component.translatable("attribute.hazennstuff.health_loss")
                 ),
 
-                Component.translatable("attribute.modifier.plus.1",
-                        Utils.stringTruncation((double)this.getHungerLoss(), 1),
-                        Component.translatable("attribute.hazennstuff.hunger_loss")
-                )
+                Component.translatable("attribute.hazennstuff.hunger_loss", getHungerLoss(spellLevel))
         ));
+
+        System.out.println(li.getFirst().toString()+"\n"+ li.getFirst().getStyle());
         return li;
     }
 
@@ -119,6 +117,7 @@ public class ViolentRegurgitationSpell extends AbstractSpell {
 
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         Vec3 origin = entity.getEyePosition();
+        int hungerCost = Math.min(3, Math.max(8, spellLevel));
 
         if (!world.isClientSide) {
             float currentHealth = entity.getHealth();
@@ -126,7 +125,6 @@ public class ViolentRegurgitationSpell extends AbstractSpell {
             DamageSource damageSource = new DamageSource(DamageSources.getHolderFromResource(entity, HnSDamageTypes.CORRUPT_MAGIC));
             entity.hurt(damageSource, healthCost);
 
-            int hungerCost = Math.min(3, Math.max(8, spellLevel));
             if (entity instanceof net.minecraft.world.entity.player.Player player) {
                 int currentFood = player.getFoodData().getFoodLevel();
                 int newFood = Math.max(0, currentFood - hungerCost);
@@ -177,10 +175,10 @@ public class ViolentRegurgitationSpell extends AbstractSpell {
     }
 
     public float getHealthLoss() {
-        return 40f;
+        return -40f;
     }
 
-    public float getHungerLoss() {
-        return 3.0f;
+    public int getHungerLoss(int spellLevel) {
+        return Math.min(8, Math.max(3, spellLevel));
     }
 }

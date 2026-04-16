@@ -4,7 +4,7 @@ import mod.azure.azurelib.common.render.armor.AzArmorRenderer;
 import mod.azure.azurelib.common.render.armor.AzArmorRendererConfig;
 import mod.azure.azurelib.common.render.layer.AzAutoGlowingLayer;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.Item.HnSUtilities.AzArmorLeggingTorsoLayerPipeline;
+import net.hazen.hazennstuff.HnSUtilities.AzArmorLeggingTorsoLayerPipeline;
 import net.minecraft.resources.ResourceLocation;
 
 public class BlazeborneArmorRenderer extends AzArmorRenderer {

@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.HnSUtilities;
+package net.hazen.hazennstuff.HnSUtilities.Armor;
 
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import net.hazen.hazennstuff.HazenNStuff;

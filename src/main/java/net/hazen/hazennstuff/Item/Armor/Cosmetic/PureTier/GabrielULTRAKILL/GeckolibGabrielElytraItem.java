@@ -7,7 +7,7 @@ import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.armor.ImbuableChestplateArmorItem;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
-import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
+import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -28,7 +28,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
 
-import static net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorItem.pureTier;
+import static net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorItem.pureTier;
 
 public class GeckolibGabrielElytraItem extends ImbuableChestplateArmorItem implements IDisableJacket, IDisableHat {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);

@@ -1,12 +1,14 @@
-package net.hazen.hazennstuff.Item.HnSUtilities;
+package net.hazen.hazennstuff.HnSUtilities.Armor;
 
 import com.google.common.base.Suppliers;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
-import net.hazen.hazennstuff.Animations.HnSDispatcher;
+import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -14,18 +16,27 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import software.bernie.geckolib.animatable.GeoItem;
+import software.bernie.geckolib.animatable.client.GeoRenderProvider;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.*;
+import software.bernie.geckolib.renderer.GeoArmorRenderer;
+import software.bernie.geckolib.util.GeckoLibUtil;
 
+import javax.annotation.Nullable;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class HnSArmorItem extends ArmorItem {
+public class HnSGeckolibArmorItem extends ArmorItem implements GeoItem {
+
+    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<ItemAttributeModifiers> defaultModifiers;
-    public final HnSDispatcher dispatcher;
 
-    public HnSArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties, AttributeContainer... attributeContainers) {
+    public HnSGeckolibArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties, AttributeContainer... attributeContainers) {
         super(material, type, properties);
-        this.dispatcher = new HnSDispatcher();
-
         this.defaultModifiers = Suppliers.memoize(() ->
         {
             int i = material.value().getDefense(type);
@@ -53,37 +64,33 @@ public class HnSArmorItem extends ArmorItem {
     public static AttributeContainer[] dormantTier(Holder<Attribute> school1) {
         return new AttributeContainer[]{
                 new AttributeContainer(school1, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.MAX_MANA, (double)50.0F, AttributeModifier.Operation.ADD_VALUE)
-        };
+                new AttributeContainer(AttributeRegistry.MAX_MANA, (double)50.0F, AttributeModifier.Operation.ADD_VALUE)};
     }
 
-    public static AttributeContainer[] dormantTierDual(Holder<Attribute> school1, Holder<Attribute> school2) {
+    public static AttributeContainer[] dormantTierMulti(Holder<Attribute> school1, Holder<Attribute> school2) {
         return new AttributeContainer[]{
                 new AttributeContainer(school1, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(school2, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.MAX_MANA, (double)50.0F, AttributeModifier.Operation.ADD_VALUE)
-        };
+                new AttributeContainer(AttributeRegistry.MAX_MANA, (double)50.0F, AttributeModifier.Operation.ADD_VALUE)};
     }
 
-    public static AttributeContainer[] dormantTierMulti(Holder<Attribute> school1, Holder<Attribute> school2, Holder<Attribute> school3) {
+    public static AttributeContainer[] dormantTierTri(Holder<Attribute> school1, Holder<Attribute> school2, Holder<Attribute> school3) {
         return new AttributeContainer[]{
                 new AttributeContainer(school1, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(school2, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(school3, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.MAX_MANA, (double)50.0F, AttributeModifier.Operation.ADD_VALUE)
-        };
+                new AttributeContainer(AttributeRegistry.MAX_MANA, (double)50.0F, AttributeModifier.Operation.ADD_VALUE)};
     }
 
-    public static AttributeContainer[] schoolTierDual(Holder<Attribute> school1, Holder<Attribute> school2) {
+    public static AttributeContainer[] schoolTierMulti(Holder<Attribute> school1, Holder<Attribute> school2) {
         return new AttributeContainer[]{
                 new AttributeContainer(school1, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(school2, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, (double)125.0F, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-        };
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)};
     }
 
-    public static AttributeContainer[] schoolTierMulti(Holder<Attribute> school1, Holder<Attribute> school2, Holder<Attribute> school3) {
+    public static AttributeContainer[] schoolTierTri(Holder<Attribute> school1, Holder<Attribute> school2, Holder<Attribute> school3) {
         return new AttributeContainer[]{
                 new AttributeContainer(school1, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(school2, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
@@ -112,12 +119,12 @@ public class HnSArmorItem extends ArmorItem {
         };
     }
 
-    public static AttributeContainer[] pureTierTri(Holder<Attribute> school1, Holder<Attribute> school2)
+    public static AttributeContainer[] pureTierTri(Holder<Attribute> school1, Holder<Attribute> school2, Holder<Attribute> school3)
     {
         return new AttributeContainer[]{
                 new AttributeContainer(school1, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(school2, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(school2, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(school3, 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 200, AttributeModifier.Operation.ADD_VALUE),
         };
@@ -181,5 +188,44 @@ public class HnSArmorItem extends ArmorItem {
         }
 
         return builder.build();
+    }
+
+    // Geckolib
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<HnSGeckolibArmorItem>(this, "controler", this::predicate));
+    }
+
+    private PlayState predicate(AnimationState<HnSGeckolibArmorItem> itemAnimationState)
+    {
+        itemAnimationState.getController().setAnimation(RawAnimation.begin().thenLoop("idle"));
+        return PlayState.CONTINUE;
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return cache;
+    }
+
+
+
+    @Override
+    public void createGeoRenderer(Consumer<GeoRenderProvider> consumer) {
+        consumer.accept(new GeoRenderProvider() {
+            private GeoArmorRenderer<?> renderer;
+
+            @Override
+            public <T extends LivingEntity> HumanoidModel<?> getGeoArmorRenderer(@Nullable T livingEntity, ItemStack itemStack, @Nullable EquipmentSlot equipmentSlot, @Nullable HumanoidModel<T> original) {
+                if (this.renderer == null) {
+                    this.renderer = supplyRenderer();
+                }
+                return this.renderer;
+            }
+        });
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public GeoArmorRenderer<?> supplyRenderer() {
+        return null;
     }
 }

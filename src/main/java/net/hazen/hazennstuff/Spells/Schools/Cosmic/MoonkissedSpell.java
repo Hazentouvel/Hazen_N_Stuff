@@ -32,11 +32,11 @@ public class MoonkissedSpell extends AbstractSpell {
         var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
 
 
-        li.addFirst(Component.literal("Hazen 'n Stuff")
+        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
                 .withStyle(ChatFormatting.GOLD)
-                .withStyle(ChatFormatting.ITALIC)
                 .withStyle(ChatFormatting.BOLD)
         );
+
         li.addAll(List.of(
                 Component.translatable("ui.irons_spellbooks.effect_length",
                         Utils.timeFromTicks(this.getSpellPower(spellLevel, caster) * 20.0F, 1)),
@@ -56,6 +56,7 @@ public class MoonkissedSpell extends AbstractSpell {
                 Component.translatable("attribute.modifier.plus.1",
                         Utils.stringTruncation(this.getWaterEfficiency(spellLevel, caster), 0),
                         Component.translatable("attribute.name.player.submerged_mining_speed"))
+
         ));
 
         return li;

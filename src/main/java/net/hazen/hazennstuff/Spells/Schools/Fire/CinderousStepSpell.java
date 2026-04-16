@@ -11,6 +11,7 @@ import io.redspace.ironsspellbooks.spells.ender.TeleportSpell;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.minecraft.ChatFormatting;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -28,6 +29,7 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -43,7 +45,29 @@ public class CinderousStepSpell extends AbstractSpell {
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(Component.translatable("ui.irons_spellbooks.distance", Utils.stringTruncation(getDistance(spellLevel, caster), 1)));
+        var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
+
+
+        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
+                .withStyle(ChatFormatting.GOLD)
+                .withStyle(ChatFormatting.BOLD)
+        );
+
+        li.addAll(List.of(
+
+                Component.translatable("ui.irons_spellbooks.distance", getDistance(spellLevel, caster)),
+
+                Component.translatable("attribute.modifier.plus.1",
+                        Utils.stringTruncation(this.getFlameKissed(spellLevel, caster), 0),
+                        Component.translatable("attribute.irons_spellbooks.fire_spell_power")),
+
+                Component.translatable("attribute.modifier.plus.1",
+                        Utils.stringTruncation(this.getFlameKissed(spellLevel, caster), 0),
+                        Component.translatable("apotheosis:fire_damage"))
+
+        ));
+
+        return li;
     }
 
     public CinderousStepSpell() {
@@ -130,6 +154,10 @@ public class CinderousStepSpell extends AbstractSpell {
 
     private float getDistance(int spellLevel, LivingEntity sourceEntity) {
         return (float) (Utils.softCapFormula(getEntityPowerMultiplier(sourceEntity)) * getSpellPower(spellLevel, null));
+    }
+
+    private float getFlameKissed(int spellLevel, LivingEntity entity) {
+        return (float)spellLevel * 0.03F * 100.0F;
     }
 
     @Override

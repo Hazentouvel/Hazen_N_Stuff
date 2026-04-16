@@ -2,8 +2,8 @@ package net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.SchoolTier.AzureL
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
-import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
-import net.hazen.hazennstuff.Item.HnSUtilities.ImbuableHnSArmorItem;
+import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableHnSArmorItem;
 
 public class FireblossomKnightArmor extends ImbuableHnSArmorItem implements IDisableHat {
 

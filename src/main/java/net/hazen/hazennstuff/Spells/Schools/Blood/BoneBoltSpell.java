@@ -32,9 +32,8 @@ public class BoneBoltSpell extends AbstractSpell {
         var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
 
 
-        li.addFirst(Component.literal("Hazen 'n Stuff")
+        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
                 .withStyle(ChatFormatting.GOLD)
-                .withStyle(ChatFormatting.ITALIC)
                 .withStyle(ChatFormatting.BOLD)
         );
 

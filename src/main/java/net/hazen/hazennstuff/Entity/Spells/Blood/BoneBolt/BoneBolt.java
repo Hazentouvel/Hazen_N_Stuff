@@ -30,7 +30,7 @@ public class BoneBolt extends AbstractMagicProjectile implements GeoEntity {
 
     public BoneBolt(EntityType<? extends Projectile> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
-        this.setNoGravity(true);
+        this.setNoGravity(false);
     }
 
     public BoneBolt(Level level, LivingEntity shooter)

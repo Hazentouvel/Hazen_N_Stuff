@@ -7,7 +7,7 @@ import io.redspace.ironsspellbooks.item.armor.ImbuableChestplateArmorItem;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
-import net.hazen.hazennstuff.Item.HnSUtilities.HnSArmorMaterials;
+import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;

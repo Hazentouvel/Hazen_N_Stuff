@@ -1,7 +1,7 @@
 package net.hazen.hazennstuff.Item.SpawnEggs;
 
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.VoidWanderer.VoidWanderer;
-import net.hazen.hazennstuff.Item.HnSUtilities.HnSSpawnEggs;
+import net.hazen.hazennstuff.HnSUtilities.Item.HnSSpawnEggs;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;

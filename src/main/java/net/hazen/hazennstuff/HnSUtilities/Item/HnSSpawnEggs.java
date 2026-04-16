@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.HnSUtilities;
+package net.hazen.hazennstuff.HnSUtilities.Item;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;

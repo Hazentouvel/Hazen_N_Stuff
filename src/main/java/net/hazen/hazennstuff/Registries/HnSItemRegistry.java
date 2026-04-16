@@ -6,8 +6,6 @@ import io.redspace.ironsspellbooks.render.CinderousRarity;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.AzureLib.ArbitriumRobesArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.AzureLib.ArbitriumRobesElytraArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.Ascended.AzureLib.AscendedArbitriumRobesArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.Ascended.AzureLib.AscendedArbitriumRobesElytraArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.DormantTier.AzureLib.FireblossomGownArmor;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.DormantTier.GeckoLibFireblossomGownArmor;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.PureTier.AzureLib.FireblossomBattlemageArmorItem;
@@ -28,7 +26,6 @@ import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.GabrielULTRAKILL.Azure
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.GabrielULTRAKILL.AzureLib.GabrielElytraArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Glassweaver.GlassweaverArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Infestation.AzureLib.InfestationArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Dedicated.LemonGod.Ascended.AzureLib.AscendedLemonGodArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.LemonGod.AzureLib.LemonGodArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.SLCCat.SLCCatArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Seraph.AzureLib.SeraphArmorItem;
@@ -37,8 +34,6 @@ import net.hazen.hazennstuff.Item.Armor.PureTier.SupremeWitch.AzureLib.SupremeWi
 import net.hazen.hazennstuff.Item.Armor.PureTier.TheWither.AzureLib.TheWitherArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.AbberantPredator.AbberantPredatorArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.AlchemistSupreme.AlchemistSupremeArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.Ascended.GeckolibAscendedArbitriumRobesArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.Ascended.GeckolibAscendedArbitriumRobesElytraItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.GeckolibArbitriumRobesArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.GeckolibArbitriumRobesElytraItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Atlas.AtlasArmorItem;
@@ -76,13 +71,11 @@ import net.hazen.hazennstuff.Item.Armor.Dedicated.Hazel.HazelArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Hazel.HazelHOLYMOLYArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.HertaPuppet.HertaPuppetArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Infestation.GeckolibInfestationArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Dedicated.Iron431.Ascended.AscendedIron431ArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Iron431.Iron431ArmorItem;
 import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.Legionnaire.OldLegionnaireArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Melee.LegionnaireCommander.LegionnaireCommanderArmorItem;
 import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.LegionnaireRuler.LegionnaireRulerArmorItem;
 import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.LegionnaireRuler.Soul.SoulLegionnaireRulerArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Dedicated.LemonGod.Ascended.GeckolibAscendedLemonGodArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.LemonGod.GeckolibLemonGodArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Battlemage.MageHunter.MageHunterArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Maverick.MaverickArmorItem;
@@ -100,7 +93,6 @@ import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.PyriumArmor.PyriumArmorItem
 import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.PyriumBattlemage.PyriumBattlemageArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Misc.PyromancerBrute.PyromancerBruteArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.RottenGirl.RottenGirlArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Dedicated.SacredRobes.Ascended.AscendedSacredRobesArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.SacredRobes.SacredRobesArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Seraph.GeckolibSeraphArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.ShadowScale.ShadowScaleArmorItem;
@@ -457,6 +449,14 @@ public class HnSItemRegistry {
                     .Properties()
                     .rarity(Rarity.RARE)
                     .fireResistant()
+                    .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
+    );
+
+    // Nether Star Fragment
+    public static final DeferredItem<Item> NETHER_STAR_FRAGMENT = ITEMS.register("nether_star_fragment",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(Rarity.EPIC)
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true))
     );
 
@@ -3466,35 +3466,6 @@ public class HnSItemRegistry {
             .durability(ArmorItem.Type.BOOTS.getDurability(128))
     ));
 
-    public static final DeferredHolder<Item, Item> ASCENDED_ARBITRIUM_ROBES_HELMET = ITEMS.register("ascended_arbitrium_robes_helmet", () -> new AscendedArbitriumRobesArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .fireResistant()
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-
-    public static final DeferredHolder<Item, Item> ASCENDED_ARBITRIUM_ROBES_CHESTPLATE = ITEMS.register("ascended_arbitrium_robes_chestplate", () -> new AscendedArbitriumRobesElytraArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-
-    public static final DeferredHolder<Item, Item> ASCENDED_ARBITRIUM_ROBES_LEGGINGS = ITEMS.register("ascended_arbitrium_robes_leggings", () -> new AscendedArbitriumRobesArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-
-    public static final DeferredHolder<Item, Item> ASCENDED_ARBITRIUM_ROBES_BOOTS = ITEMS.register("ascended_arbitrium_robes_boots", () -> new AscendedArbitriumRobesArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .fireResistant()
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-    ));
-
-
 
     //*** Geckolib ***
 
@@ -3527,32 +3498,6 @@ public class HnSItemRegistry {
     ));
 
 
-
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASCENDED_ARBITRIUM_ROBES_HELMET = ITEMS.register("geckolib_ascended_arbitrium_robes_helmet", () -> new GeckolibAscendedArbitriumRobesArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASCENDED_ARBITRIUM_ROBES_CHESTPLATE = ITEMS.register("geckolib_ascended_arbitrium_robes_chestplate", () -> new GeckolibAscendedArbitriumRobesElytraItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASCENDED_ARBITRIUM_ROBES_LEGGINGS = ITEMS.register("geckolib_ascended_arbitrium_robes_leggings", () -> new GeckolibAscendedArbitriumRobesArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASCENDED_ARBITRIUM_ROBES_BOOTS = ITEMS.register("geckolib_ascended_arbitrium_robes_boots", () -> new GeckolibAscendedArbitriumRobesArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-
-    ));
 
     //Hazel
 
@@ -3650,34 +3595,6 @@ public class HnSItemRegistry {
 
     ));
 
-
-
-    public static final DeferredHolder<Item, Item> ASCENDED_IRON431_HELMET = ITEMS.register("ascended_iron431_helmet", () -> new AscendedIron431ArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> ASCENDED_IRON431_CHESTPLATE = ITEMS.register("ascended_iron431_chestplate", () -> new AscendedIron431ArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> ASCENDED_IRON431_LEGGINGS = ITEMS.register("ascended_iron431_leggings", () -> new AscendedIron431ArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> ASCENDED_IRON431_BOOTS = ITEMS.register("ascended_iron431_boots", () -> new AscendedIron431ArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-
-    ));
-
     //Sacred Robes
 
     public static final DeferredHolder<Item, Item> SACRED_ROBES_HELMET = ITEMS.register("sacred_robes_helmet", () -> new SacredRobesArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
@@ -3699,34 +3616,6 @@ public class HnSItemRegistry {
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
     public static final DeferredHolder<Item, Item> SACRED_ROBES_BOOTS = ITEMS.register("sacred_robes_boots", () -> new SacredRobesArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .fireResistant()
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-
-    ));
-
-
-
-    public static final DeferredHolder<Item, Item> ASCENDED_SACRED_ROBES_HELMET = ITEMS.register("ascended_sacred_robes_helmet", () -> new AscendedSacredRobesArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> ASCENDED_SACRED_ROBES_CHESTPLATE = ITEMS.register("ascended_sacred_robes_chestplate", () -> new AscendedSacredRobesArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> ASCENDED_SACRED_ROBES_LEGGINGS = ITEMS.register("ascended_sacred_robes_leggings", () -> new AscendedSacredRobesArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .fireResistant()
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> ASCENDED_SACRED_ROBES_BOOTS = ITEMS.register("ascended_sacred_robes_boots", () -> new AscendedSacredRobesArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
             .fireResistant()
             .rarity(HnSRarities.DEUS_RARITY.getValue())
@@ -3766,36 +3655,6 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> ASCENDED_LEMON_GOD_HELMET = ITEMS.register("ascended_lemon_god_helmet", () -> new AscendedLemonGodArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-
-    public static final DeferredHolder<Item, Item> ASCENDED_LEMON_GOD_CHESTPLATE = ITEMS.register("ascended_lemon_god_chestplate", () -> new AscendedLemonGodArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-
-    public static final DeferredHolder<Item, Item> ASCENDED_LEMON_GOD_LEGGINGS = ITEMS.register("ascended_lemon_god_leggings", () -> new AscendedLemonGodArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-
-    public static final DeferredHolder<Item, Item> ASCENDED_LEMON_GOD_BOOTS = ITEMS.register("ascended_lemon_god_boots", () -> new AscendedLemonGodArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-    ));
-
-
-
     // *** GeckoLib ***
 
 
@@ -3819,32 +3678,6 @@ public class HnSItemRegistry {
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
     public static final DeferredHolder<Item, Item> GECKOLIB_LEMON_GOD_BOOTS = ITEMS.register("geckolib_lemon_god_boots", () -> new GeckolibLemonGodArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-
-    ));
-
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASCENDED_LEMON_GOD_HELMET = ITEMS.register("geckolib_ascended_lemon_god_helmet", () -> new GeckolibAscendedLemonGodArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASCENDED_LEMON_GOD_CHESTPLATE = ITEMS.register("geckolib_ascended_lemon_god_chestplate", () -> new GeckolibAscendedLemonGodArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASCENDED_LEMON_GOD_LEGGINGS = ITEMS.register("geckolib_ascended_lemon_god_leggings", () -> new GeckolibAscendedLemonGodArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.DEUS_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASCENDED_LEMON_GOD_BOOTS = ITEMS.register("geckolib_ascended_lemon_god_boots", () -> new GeckolibAscendedLemonGodArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
             .rarity(HnSRarities.DEUS_RARITY.getValue())
             .fireResistant()

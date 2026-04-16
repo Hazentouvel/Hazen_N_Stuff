@@ -1,6 +1,8 @@
     {   
-     "comment.hazennstuff.credit": "Credit to Gavv-Hopper",
-
+     "comment.hazennstuff.credit": "Credit to Gavv-Hopper",  
+     "tooltip.hazennstuff.shift": "按下§eShift§r以了解更多", 
+     "tooltip.hazennstuff.atlas_lore": "心怀忧伤。。。",
+     
     "spell.hazennstuff.ionic_splitter_ignition.description": "等离子光刃已从休眠中苏醒",
     "curio.hazennstuff.scroll_sheath.description": "§s所有法术冷却时间已刷新！",
     "ui.hazennstuff.staff_resonation": "此法术需以特定法杖进行施法。。。",
@@ -930,6 +932,8 @@
     "attribute.hazennstuff.shadow_magic_resist": "暗影魔法抗性",
     "attribute.hazennstuff.cosmic_spell_power": "寰宇法术强度",
     "attribute.hazennstuff.cosmic_magic_resist": "寰宇魔法抗性",
+    "attribute.hazennstuff.health_loss": "%d 失血过多",
+    "attribute.hazennstuff.hunger_loss": "%d 食欲不振",
     "material.hazennstuff.chlorophyte": "叶绿锭",
     "material.hazennstuff.demonite": "魔矿锭",
     "material.hazennstuff.dreadsteel": "惧钢",

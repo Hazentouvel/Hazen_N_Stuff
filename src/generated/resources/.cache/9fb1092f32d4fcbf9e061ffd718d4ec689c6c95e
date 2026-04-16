@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-08T11:03:00.6188491	Recipes
+// 1.21.1	2026-04-16T14:23:26.0482049	Recipes
 cd3eb4cd868f11a3c30e74ae13a4fccac5cb83dd data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_boots.json
 92bd0e35e8f7b7c6d0bb8f93326ff2e126cd8d36 data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_chestplate.json
 96a36bfd7dfb8a042b3c6c3c7d9513c8139abc06 data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_helmet.json
@@ -248,6 +248,7 @@ ff5f5e4ffde1a638739f033a98d668df2969fd1c data/hazennstuff/advancement/recipes/mi
 885943cad958cc85ac44c3a1dc846cd1890fae93 data/hazennstuff/advancement/recipes/misc/crafting/materials/glowing_mushroom.json
 bdc40a07c2cd588891e5ed1516bd6c5c45bdb1b1 data/hazennstuff/advancement/recipes/misc/crafting/materials/hallowed_ingot.json
 b5ec19a362b7f18013bca1992d96aecf39e3e3f2 data/hazennstuff/advancement/recipes/misc/crafting/materials/lemon.json
+0dc8dcf4ae23b72d81a26f244f83d117d37fb1bd data/hazennstuff/advancement/recipes/misc/crafting/materials/nether_star_fragment.json
 48a091302df530d11a60b889a755e71a953557c5 data/hazennstuff/advancement/recipes/misc/crafting/materials/prismatic_shard.json
 92f8cc2eafb03cd878a0bcaea14f12d39660e302 data/hazennstuff/advancement/recipes/misc/crafting/materials/rose_gold_ingot.json
 6b400275fd6ad9d24ffedf9eeb5246a45db1f410 data/hazennstuff/advancement/recipes/misc/crafting/materials/rose_quartz.json
@@ -372,6 +373,7 @@ a3527475ab3c931d4df3699e68327f18a3625d67 data/hazennstuff/recipe/crafting/materi
 e62eaa9763d3398b0c54ffa53906ff3c5922a244 data/hazennstuff/recipe/crafting/materials/glowing_mushroom.json
 ed0c658c66812267c17fbb68404ee88a1cec87db data/hazennstuff/recipe/crafting/materials/hallowed_ingot.json
 e820f652a2e4635b0634b4c416439a053571d292 data/hazennstuff/recipe/crafting/materials/lemon.json
+dd018363562d55b7cfb122e0e1e35dc45113fa22 data/hazennstuff/recipe/crafting/materials/nether_star_fragment.json
 a069b17d6269252ef0fb9f340cab6630df80eb06 data/hazennstuff/recipe/crafting/materials/prismatic_shard.json
 394933c726e718d9aab2f47c758845e783df0e14 data/hazennstuff/recipe/crafting/materials/rose_gold_ingot.json
 26a0c0050c1e0cb5d7986b043fdd010cc8997c50 data/hazennstuff/recipe/crafting/materials/rose_quartz.json

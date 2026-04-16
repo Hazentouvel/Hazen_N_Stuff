@@ -226,6 +226,13 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/steel_nugget")
                 );
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItemRegistry.NETHER_STAR_FRAGMENT.get(), 3)
+                .requires(Items.NETHER_STAR)
+                .unlockedBy("has_nether_star",
+                        has(Items.NETHER_STAR))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/nether_star_fragment")
+                );
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.STEEL_INGOT.get())
                 .pattern("SSS")
                 .pattern("SSS")

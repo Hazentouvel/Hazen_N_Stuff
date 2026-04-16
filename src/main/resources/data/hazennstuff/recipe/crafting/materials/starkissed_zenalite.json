@@ -3,14 +3,14 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "hazennstuff:deus_essence"
+      "item": "hazennstuff:nether_star_fragment"
     },
     {
       "item": "hazennstuff:raw_zenalite"
     }
   ],
   "result": {
-    "count": 4,
+    "count": 2,
     "id": "hazennstuff:starkissed_zenalite"
   }
 }

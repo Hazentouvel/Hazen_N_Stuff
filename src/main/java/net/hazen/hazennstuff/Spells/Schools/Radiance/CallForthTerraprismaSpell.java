@@ -15,6 +15,8 @@ import io.redspace.ironsspellbooks.capabilities.magic.RecastInstance;
 import io.redspace.ironsspellbooks.capabilities.magic.RecastResult;
 import io.redspace.ironsspellbooks.capabilities.magic.SummonManager;
 import io.redspace.ironsspellbooks.capabilities.magic.SummonedEntitiesCastData;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -27,6 +29,7 @@ import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprisma;
 import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -43,11 +46,28 @@ public class CallForthTerraprismaSpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "call_forth_terraprisma");
     private final DefaultConfig defaultConfig;
 
+
+    @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(
-                Component.translatable("ui.irons_spellbooks.hp", new Object[]{Utils.stringTruncation((double)this.getHealthBonus(spellLevel, caster), 1)}),
-                Component.translatable("ui.irons_spellbooks.damage", new Object[]{Utils.stringTruncation((double)this.getDamageBonus(spellLevel, caster), 1)})
+        var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
+
+
+        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
+                .withStyle(ChatFormatting.GOLD)
+                .withStyle(ChatFormatting.BOLD)
         );
+
+        li.addAll(List.of(
+                Component.translatable("ui.irons_spellbooks.damage",
+                        new Object[]{Utils.stringTruncation((double)this.getHealthBonus(spellLevel, caster), 1)}
+                ),
+                Component.translatable("ui.irons_spellbooks.hp",
+                        new Object[]{Utils.stringTruncation((double)this.getDamageBonus(spellLevel, caster), 1)}
+                )
+        ));
+
+        System.out.println(li.getFirst().toString()+"\n"+ li.getFirst().getStyle());
+        return li;
     }
 
     public CallForthTerraprismaSpell() {

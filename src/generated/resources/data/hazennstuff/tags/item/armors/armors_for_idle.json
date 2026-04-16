@@ -82,17 +82,9 @@
     "hazennstuff:lemon_god_chestplate",
     "hazennstuff:lemon_god_leggings",
     "hazennstuff:lemon_god_boots",
-    "hazennstuff:ascended_lemon_god_helmet",
-    "hazennstuff:ascended_lemon_god_chestplate",
-    "hazennstuff:ascended_lemon_god_leggings",
-    "hazennstuff:ascended_lemon_god_boots",
     "hazennstuff:geckolib_lemon_god_helmet",
     "hazennstuff:geckolib_lemon_god_chestplate",
     "hazennstuff:geckolib_lemon_god_leggings",
-    "hazennstuff:geckolib_lemon_god_boots",
-    "hazennstuff:geckolib_ascended_lemon_god_helmet",
-    "hazennstuff:geckolib_ascended_lemon_god_chestplate",
-    "hazennstuff:geckolib_ascended_lemon_god_leggings",
-    "hazennstuff:geckolib_ascended_lemon_god_boots"
+    "hazennstuff:geckolib_lemon_god_boots"
   ]
 }

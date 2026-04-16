@@ -121,10 +121,6 @@ public class HazenNStuff
                 HnSItemRegistry.ARBITRIUM_ROBES_CHESTPLATE.get(),
                 HnSItemRegistry.ARBITRIUM_ROBES_LEGGINGS.get(),
                 HnSItemRegistry.ARBITRIUM_ROBES_BOOTS.get(),
-                HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_HELMET.get(),
-                HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get(),
-                HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get(),
-                HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_BOOTS.get(),
 
                 HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET.get(),
                 HnSItemRegistry.LEGACY_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE.get(),
@@ -147,11 +143,6 @@ public class HazenNStuff
                 HnSItemRegistry.LEMON_GOD_CHESTPLATE.get(),
                 HnSItemRegistry.LEMON_GOD_LEGGINGS.get(),
                 HnSItemRegistry.LEMON_GOD_BOOTS.get(),
-
-                HnSItemRegistry.ASCENDED_LEMON_GOD_HELMET.get(),
-                HnSItemRegistry.ASCENDED_LEMON_GOD_CHESTPLATE.get(),
-                HnSItemRegistry.ASCENDED_LEMON_GOD_LEGGINGS.get(),
-                HnSItemRegistry.ASCENDED_LEMON_GOD_BOOTS.get(),
 
                 HnSItemRegistry.THE_WITHER_HELMET.get(),
                 HnSItemRegistry.THE_WITHER_CHESTPLATE.get(),
@@ -276,19 +267,12 @@ public class HazenNStuff
                     HnSItemRegistry.BLAZEBORNE_LEGGINGS.get(),
                     HnSItemRegistry.BLAZEBORNE_BOOTS.get());
 
-            //
+            //Lemon God
             AzArmorRendererRegistry.register(LemonGodArmorRenderer::new,
                     HnSItemRegistry.LEMON_GOD_HELMET.get(),
                     HnSItemRegistry.LEMON_GOD_CHESTPLATE.get(),
                     HnSItemRegistry.LEMON_GOD_LEGGINGS.get(),
                     HnSItemRegistry.LEMON_GOD_BOOTS.get());
-
-            // Ascended Lemon God
-            AzArmorRendererRegistry.register(LemonGodArmorRenderer::new,
-                    HnSItemRegistry.ASCENDED_LEMON_GOD_HELMET.get(),
-                    HnSItemRegistry.ASCENDED_LEMON_GOD_CHESTPLATE.get(),
-                    HnSItemRegistry.ASCENDED_LEMON_GOD_LEGGINGS.get(),
-                    HnSItemRegistry.ASCENDED_LEMON_GOD_BOOTS.get());
 
             // The Wither
             AzArmorRendererRegistry.register(TheWitherArmorRenderer::new,
@@ -297,12 +281,6 @@ public class HazenNStuff
                     HnSItemRegistry.THE_WITHER_LEGGINGS.get(),
                     HnSItemRegistry.THE_WITHER_BOOTS.get());
 
-            // Ascended Arbitrium Robes
-            AzArmorRendererRegistry.register(ArbitriumRobesArmorRenderer::new,
-                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_HELMET.get(),
-                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get(),
-                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get(),
-                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_BOOTS.get());
 
             // Cosmic Scholar
             AzArmorRendererRegistry.register(CosmicScholarArmorRenderer::new,
@@ -401,10 +379,6 @@ public class HazenNStuff
                     HnSItemRegistry.ARBITRIUM_ROBES_CHESTPLATE.get(),
                     HnSItemRegistry.ARBITRIUM_ROBES_LEGGINGS.get(),
                     HnSItemRegistry.ARBITRIUM_ROBES_BOOTS.get(),
-                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_HELMET.get(),
-                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get(),
-                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get(),
-                    HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_BOOTS.get(),
 
                     HnSItemRegistry.CREAKING_HELMET.get(),
                     HnSItemRegistry.CREAKING_CHESTPLATE.get(),
@@ -457,11 +431,6 @@ public class HazenNStuff
                     HnSItemRegistry.LEMON_GOD_CHESTPLATE.get(),
                     HnSItemRegistry.LEMON_GOD_LEGGINGS.get(),
                     HnSItemRegistry.LEMON_GOD_BOOTS.get(),
-
-                    HnSItemRegistry.ASCENDED_LEMON_GOD_HELMET.get(),
-                    HnSItemRegistry.ASCENDED_LEMON_GOD_CHESTPLATE.get(),
-                    HnSItemRegistry.ASCENDED_LEMON_GOD_LEGGINGS.get(),
-                    HnSItemRegistry.ASCENDED_LEMON_GOD_BOOTS.get(),
 
                     HnSItemRegistry.THE_WITHER_HELMET.get(),
                     HnSItemRegistry.THE_WITHER_CHESTPLATE.get(),

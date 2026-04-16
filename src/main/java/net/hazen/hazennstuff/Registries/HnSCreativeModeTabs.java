@@ -90,6 +90,7 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.ELDER_GUARDIAN_SPINE);
                         output.accept(HnSItemRegistry.ARCANE_SEA_SHELL);
                         output.accept(HnSItemRegistry.DEUS_ESSENCE);
+                        output.accept(HnSItemRegistry.NETHER_STAR_FRAGMENT);
                         output.accept(HnSItemRegistry.CATALYST);
 
                         //Food
@@ -700,11 +701,6 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.ARBITRIUM_ROBES_LEGGINGS.get());
                         output.accept(HnSItemRegistry.ARBITRIUM_ROBES_BOOTS.get());
 
-                        output.accept(HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_HELMET.get());
-                        output.accept(HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.ASCENDED_ARBITRIUM_ROBES_BOOTS.get());
-
                         // Atlas
                         output.accept(HnSItemRegistry.ATLAS_HELMET.get());
                         output.accept(HnSItemRegistry.ATLAS_CHESTPLATE.get());
@@ -735,35 +731,17 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.IRON431_LEGGINGS.get());
                         output.accept(HnSItemRegistry.IRON431_BOOTS.get());
 
-                        // Ascended Iron 431
-                        output.accept(HnSItemRegistry.ASCENDED_IRON431_HELMET.get());
-                        output.accept(HnSItemRegistry.ASCENDED_IRON431_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.ASCENDED_IRON431_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.ASCENDED_IRON431_BOOTS.get());
-
                         // Sacred Robes
                         output.accept(HnSItemRegistry.SACRED_ROBES_HELMET.get());
                         output.accept(HnSItemRegistry.SACRED_ROBES_CHESTPLATE.get());
                         output.accept(HnSItemRegistry.SACRED_ROBES_LEGGINGS.get());
                         output.accept(HnSItemRegistry.SACRED_ROBES_BOOTS.get());
 
-                        // Ascended Sacred Robes
-                        output.accept(HnSItemRegistry.ASCENDED_SACRED_ROBES_HELMET.get());
-                        output.accept(HnSItemRegistry.ASCENDED_SACRED_ROBES_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.ASCENDED_SACRED_ROBES_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.ASCENDED_SACRED_ROBES_BOOTS.get());
-
                         // Lemon God
                         output.accept(HnSItemRegistry.LEMON_GOD_HELMET.get());
                         output.accept(HnSItemRegistry.LEMON_GOD_CHESTPLATE.get());
                         output.accept(HnSItemRegistry.LEMON_GOD_LEGGINGS.get());
                         output.accept(HnSItemRegistry.LEMON_GOD_BOOTS.get());
-
-                        // Ascended Lemon God
-                        output.accept(HnSItemRegistry.ASCENDED_LEMON_GOD_HELMET.get());
-                        output.accept(HnSItemRegistry.ASCENDED_LEMON_GOD_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.ASCENDED_LEMON_GOD_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.ASCENDED_LEMON_GOD_BOOTS.get());
 
                     }).build());
 

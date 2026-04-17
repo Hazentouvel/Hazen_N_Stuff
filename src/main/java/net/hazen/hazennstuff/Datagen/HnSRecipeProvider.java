@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.Datagen;
 
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import io.redspace.ironsspellbooks.util.ModTags;
+import net.acetheeldritchking.aces_spell_utils.utils.ASTags;
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
@@ -54,6 +55,24 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/shadow_upgrade_orb"));
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.HYDRO_UPGRADE_ORB.get())
+                .pattern("RRR")
+                .pattern("ROR")
+                .pattern("RRR")
+                .define('R', HnSItemRegistry.HYDRO_RUNE.get())
+                .define('O', ItemRegistry.UPGRADE_ORB.get())
+                .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/hydro_upgrade_orb"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.COSMIC_UPGRADE_ORB.get())
+                .pattern("RRR")
+                .pattern("ROR")
+                .pattern("RRR")
+                .define('R', HnSItemRegistry.COSMIC_RUNE.get())
+                .define('O', ItemRegistry.UPGRADE_ORB.get())
+                .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/cosmic_upgrade_orb"));
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.MELEE_UPGRADE_ORB.get())
                 .pattern("RRR")
                 .pattern("ROR")
@@ -100,6 +119,24 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('O', ItemRegistry.BLANK_RUNE.get())
                 .unlockedBy("has_blank_rune", has(ItemRegistry.BLANK_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/runes/radiance_rune"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.HYDRO_RUNE.get())
+                .pattern("RRR")
+                .pattern("ROR")
+                .pattern("RRR")
+                .define('R', ASTags.HYDRO_FOCUS)
+                .define('O', ItemRegistry.BLANK_RUNE.get())
+                .unlockedBy("has_blank_rune", has(ItemRegistry.BLANK_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/runes/hydro_rune"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.COSMIC_RUNE.get())
+                .pattern("RRR")
+                .pattern("ROR")
+                .pattern("RRR")
+                .define('R', HnSTags.COSMIC_FOCUS)
+                .define('O', ItemRegistry.BLANK_RUNE.get())
+                .unlockedBy("has_blank_rune", has(ItemRegistry.BLANK_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/runes/cosmic_rune"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.SHADOW_RUNE.get())
                 .pattern("RRR")

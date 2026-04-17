@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.HnSUtilities.HnSExtras.MagicMace;
+package net.hazen.hazennstuff.HnSUtilities.HnSExtras.MagicMace.GenericItem;
 
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.spells.IPresetSpellContainer;

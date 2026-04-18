@@ -86,13 +86,10 @@ import net.hazen.hazennstuff.Item.Armor.Dedicated.MothicWitch.NerfedMothicWitchA
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.MyceliumGuardian.MyceliumGuardianArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Misc.NamelessOneArmor.NamelessOneArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Misc.NecromancerArmor.NecromancerArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.Neru.AkitaNeruArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Ranger.PermafrostPrince.PermafrostPrinceArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.ProjectSekai.ProjectSekaiArmorItem;
 import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.PyriumArmor.PyriumArmorItem;
 import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.PyriumBattlemage.PyriumBattlemageArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Misc.PyromancerBrute.PyromancerBruteArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.RottenGirl.RottenGirlArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.SacredRobes.SacredRobesArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Seraph.GeckolibSeraphArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.ShadowScale.ShadowScaleArmorItem;
@@ -101,10 +98,8 @@ import net.hazen.hazennstuff.Item.Armor.Misc.ShadowWalkerEnderman.ShadowwalkerEn
 import net.hazen.hazennstuff.Item.Armor.Misc.ShadowWalkerEnderman.ShadowwalkerEndermanHoodItem;
 import net.hazen.hazennstuff.Item.Armor.Misc.SpectralSpelunker.SpectralSpelunkerArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.SupremeWitch.GeckolibSupremeWitchArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.SynthesizerV.SynthesizerVArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.TheWither.GeckolibTheWitherArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.ThunderProwler.ThunderProwlerArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.Utau.UtauArmorItem;
 import net.hazen.hazennstuff.Item.Armor.SchoolTier.CosmicScholar.AzureLib.CosmicScholarArmorItem;
 import net.hazen.hazennstuff.Item.Armor.SchoolTier.CosmicScholar.GeckolibCosmicScholarArmorItem;
 import net.hazen.hazennstuff.Item.Armor.SchoolTier.MaskedFool.MaskedFoolArmorItem;
@@ -2864,82 +2859,6 @@ public class HnSItemRegistry {
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
     ));
 
-    //Project Sekai [Marked for Deletion]
-
-    public static final DeferredHolder<Item, Item> PROJECT_SEKAI_HELMET = ITEMS.register("project_sekai_helmet", () -> new ProjectSekaiArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> PROJECT_SEKAI_CHESTPLATE = ITEMS.register("project_sekai_chestplate", () -> new ProjectSekaiArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> PROJECT_SEKAI_LEGGINGS = ITEMS.register("project_sekai_leggings", () -> new ProjectSekaiArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> PROJECT_SEKAI_BOOTS = ITEMS.register("project_sekai_boots", () -> new ProjectSekaiArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-    ));
-
-    //Rotten Girl [Marked for Deletion]
-
-    public static final DeferredHolder<Item, Item> ROTTEN_GIRL_HELMET = ITEMS.register("rotten_girl_helmet", () -> new RottenGirlArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> ROTTEN_GIRL_CHESTPLATE = ITEMS.register("rotten_girl_chestplate", () -> new RottenGirlArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> ROTTEN_GIRL_LEGGINGS = ITEMS.register("rotten_girl_leggings", () -> new RottenGirlArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> ROTTEN_GIRL_BOOTS = ITEMS.register("rotten_girl_boots", () -> new RottenGirlArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-
-    //Synthesizer V [Marked for Deletion]
-
-    public static final DeferredHolder<Item, Item> SYNTHESIZER_V_HELMET = ITEMS.register("synthesizer_v_helmet", () -> new SynthesizerVArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> SYNTHESIZER_V_CHESTPLATE = ITEMS.register("synthesizer_v_chestplate", () -> new SynthesizerVArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> SYNTHESIZER_V_LEGGINGS = ITEMS.register("synthesizer_v_leggings", () -> new SynthesizerVArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> SYNTHESIZER_V_BOOTS = ITEMS.register("synthesizer_v_boots", () -> new SynthesizerVArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-    ));
-
-    //Utau [Marked for Deletion]
-
-    public static final DeferredHolder<Item, Item> UTAU_HELMET = ITEMS.register("utau_helmet", () -> new UtauArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> UTAU_CHESTPLATE = ITEMS.register("utau_chestplate", () -> new UtauArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> UTAU_LEGGINGS = ITEMS.register("utau_leggings", () -> new UtauArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> UTAU_BOOTS = ITEMS.register("utau_boots", () -> new UtauArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-    ));
-
     //Giorno Giovanna
 
     public static final DeferredHolder<Item, Item> GIORNO_GIOVANNA_HELMET = ITEMS.register("giorno_giovanna_helmet", () -> new GiornoGiovannaArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
@@ -2961,29 +2880,6 @@ public class HnSItemRegistry {
             .equipment(1)
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(37))
-    ));
-
-    //Neru [Marked for Deletion]
-
-    public static final DeferredHolder<Item, Item> NERU_HELMET = ITEMS.register("neru_helmet", () -> new AkitaNeruArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> NERU_CHESTPLATE = ITEMS.register("neru_chestplate", () -> new AkitaNeruArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> NERU_LEGGINGS = ITEMS.register("neru_leggings", () -> new AkitaNeruArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> NERU_BOOTS = ITEMS.register("neru_boots", () -> new AkitaNeruArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
     ));
 
     //Mithril Battlemage

@@ -130,6 +130,6 @@ public class GeckolibGabrielArmorItem extends ImbuableGeckolibHnSArmorItem imple
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "arbitrium_armor", 10, this::wings));
+        controllers.add(new AnimationController<>(this, "gabriel_ultrakill", 10, this::wings));
     }
 }

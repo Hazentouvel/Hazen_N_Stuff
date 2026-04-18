@@ -545,36 +545,6 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.FRIEREN_LEGGINGS.get());
                         output.accept(HnSItemRegistry.FRIEREN_BOOTS.get());
 
-                        // Synthesizer V
-                        output.accept(HnSItemRegistry.SYNTHESIZER_V_HELMET.get());
-                        output.accept(HnSItemRegistry.SYNTHESIZER_V_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.SYNTHESIZER_V_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.SYNTHESIZER_V_BOOTS.get());
-
-                        // Utau
-                        output.accept(HnSItemRegistry.UTAU_HELMET.get());
-                        output.accept(HnSItemRegistry.UTAU_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.UTAU_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.UTAU_BOOTS.get());
-
-                        // Project Sekai
-                        output.accept(HnSItemRegistry.PROJECT_SEKAI_HELMET.get());
-                        output.accept(HnSItemRegistry.PROJECT_SEKAI_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.PROJECT_SEKAI_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.PROJECT_SEKAI_BOOTS.get());
-
-                        // Rotten Girl
-                        output.accept(HnSItemRegistry.ROTTEN_GIRL_HELMET.get());
-                        output.accept(HnSItemRegistry.ROTTEN_GIRL_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.ROTTEN_GIRL_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.ROTTEN_GIRL_BOOTS.get());
-
-                        // Neru
-                        output.accept(HnSItemRegistry.NERU_HELMET.get());
-                        output.accept(HnSItemRegistry.NERU_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.NERU_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.NERU_BOOTS.get());
-
                         // Giorno Giovanna
                         output.accept(HnSItemRegistry.GIORNO_GIOVANNA_HELMET.get());
                         output.accept(HnSItemRegistry.GIORNO_GIOVANNA_CHESTPLATE.get());

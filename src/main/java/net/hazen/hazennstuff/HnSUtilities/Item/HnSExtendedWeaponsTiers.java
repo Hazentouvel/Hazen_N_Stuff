@@ -114,14 +114,13 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HnSExtendedWeaponsTiers RAVENS_BANE = new HnSExtendedWeaponsTiers(
             8064,
             13,
-            -2.6F,
+            -1.6F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.FIRE_DAMAGE, 5, AttributeModifier.Operation.ADD_VALUE),
-            new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 3, AttributeModifier.Operation.ADD_VALUE),
-            new AttributeContainer(Attributes.ATTACK_SPEED, -0.1, AttributeModifier.Operation.ADD_VALUE)
+            new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 3, AttributeModifier.Operation.ADD_VALUE)
     );
 
     /*

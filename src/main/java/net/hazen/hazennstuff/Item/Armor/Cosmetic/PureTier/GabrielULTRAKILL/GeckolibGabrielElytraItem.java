@@ -108,6 +108,6 @@ public class GeckolibGabrielElytraItem extends ImbuableChestplateArmorItem imple
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "ignis_armor_winged", 10, this::wings));
+        controllers.add(new AnimationController<>(this, "gabriel_ultrakill_wings", 10, this::wings));
     }
 }

@@ -27,7 +27,7 @@ import java.util.List;
 public class LemonGodArmorItem extends ImbuableHnSArmorItem implements IDisableJacket {
 
     public LemonGodArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)

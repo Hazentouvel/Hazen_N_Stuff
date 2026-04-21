@@ -66,9 +66,6 @@ public class HnSSpellRegistries {
      *** Fire
      */
 
-    //Brimstone Hellblast
-    public static final Supplier<AbstractSpell> BRIMSTONE_HELLBLAST = registerSpell(new BrimstoneHellblastSpell());
-
     //Cinderous Step
     public static final Supplier<AbstractSpell> CINDEROUS_STEP = registerSpell(new CinderousStepSpell());
 

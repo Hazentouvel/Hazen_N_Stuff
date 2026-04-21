@@ -31,21 +31,6 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:loot_table",
-          "value": "hazennstuff:misc/cinderous_curios"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:random_chance",
-          "chance": 0.5
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
           "type": "minecraft:item",
           "name": "hazennstuff:legionnaire_warlock_axe"
         }
@@ -54,6 +39,25 @@
         {
           "condition": "minecraft:random_chance",
           "chance": 0.1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "hazennstuff:cinderkissed"
+              ]
+            }
+          ]
         }
       ]
     }

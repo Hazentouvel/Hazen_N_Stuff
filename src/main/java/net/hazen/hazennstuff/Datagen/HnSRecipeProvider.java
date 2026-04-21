@@ -2465,45 +2465,6 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlocks("has_divine_mold", has(HnSItemRegistry.DIVINE_MOLD.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/fireblossom_battlemage/fireblossom_battlemage_boots"));
 
-
-        //Calamitas Armor
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSItemRegistry.BLAZEBORNE_HELMET.get()),
-                        Ingredient.of(HnSItemRegistry.FLESH_MASS_HELMET.get()),
-                        RecipeCategory.COMBAT,
-                        HnSItemRegistry.CALAMITAS_HELMET.get())
-                .unlocks("has_divine_mold", has(HnSItemRegistry.DIVINE_MOLD.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/calamitas/calamitas_helmet"));
-
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get()),
-                        Ingredient.of(HnSItemRegistry.FLESH_MASS_CHESTPLATE.get()),
-                        RecipeCategory.COMBAT,
-                        HnSItemRegistry.CALAMITAS_CHESTPLATE.get())
-                .unlocks("has_divine_mold", has(HnSItemRegistry.DIVINE_MOLD.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/calamitas/calamitas_chestplate"));
-
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get()),
-                        Ingredient.of(HnSItemRegistry.FLESH_MASS_LEGGINGS.get()),
-                        RecipeCategory.COMBAT,
-                        HnSItemRegistry.CALAMITAS_LEGGINGS.get())
-                .unlocks("has_divine_mold", has(HnSItemRegistry.DIVINE_MOLD.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/calamitas/calamitas_leggings"));
-
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSItemRegistry.BLAZEBORNE_BOOTS.get()),
-                        Ingredient.of(HnSItemRegistry.FLESH_MASS_BOOTS.get()),
-                        RecipeCategory.COMBAT,
-                        HnSItemRegistry.CALAMITAS_BOOTS.get())
-                .unlocks("has_divine_mold", has(HnSItemRegistry.DIVINE_MOLD.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/calamitas/calamitas_boots"));
-
-
         //Ice Spider Armor
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(ItemRegistry.ICE_VENOM_VIAL.get()),

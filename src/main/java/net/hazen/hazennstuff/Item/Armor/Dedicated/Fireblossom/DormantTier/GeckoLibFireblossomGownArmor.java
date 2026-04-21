@@ -4,6 +4,7 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
+import io.redspace.ironsspellbooks.registries.ArmorMaterialRegistry;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.neoforged.api.distmarker.Dist;
@@ -12,7 +13,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class GeckoLibFireblossomGownArmor extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public GeckoLibFireblossomGownArmor(Type type, Properties settings) {
-        super(HnSArmorMaterials.ADVANCED_BATTLEMAGE_MATERIAL, type, settings, dormantTierMulti(
+        super(ArmorMaterialRegistry.SCHOOL, type, settings, dormantTierMulti(
                 AttributeRegistry.FIRE_SPELL_POWER,
                 AttributeRegistry.NATURE_SPELL_POWER
         ));

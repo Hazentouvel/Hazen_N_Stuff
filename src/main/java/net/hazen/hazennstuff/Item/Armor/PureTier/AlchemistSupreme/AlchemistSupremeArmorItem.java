@@ -24,7 +24,7 @@ import java.util.List;
 
 public class AlchemistSupremeArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public AlchemistSupremeArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.SUPREME_WITCH_MATERIAL, type, settings, pureTier(
+        super(HnSArmorMaterials.ALCHEMIST_SUPREME_MATERIAL, type, settings, pureTier(
                 AttributeRegistry.EVOCATION_SPELL_POWER
         ));
     }

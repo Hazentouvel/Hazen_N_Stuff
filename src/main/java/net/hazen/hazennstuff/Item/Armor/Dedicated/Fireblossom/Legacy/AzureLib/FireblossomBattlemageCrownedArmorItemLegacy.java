@@ -27,7 +27,7 @@ import java.util.List;
 public class FireblossomBattlemageCrownedArmorItemLegacy extends ImbuableHnSArmorItem implements IDisableJacket {
 
     public FireblossomBattlemageCrownedArmorItemLegacy(Type type, Properties settings) {
-        super(HnSArmorMaterials.FIREBLOSSOM_MATERIAL, type, settings,
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),

@@ -37,7 +37,7 @@ public class GeckolibArbitriumRobesArmorItem extends ImbuableGeckolibHnSArmorIte
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     public GeckolibArbitriumRobesArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
-        super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 500.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
               );

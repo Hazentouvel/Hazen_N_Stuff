@@ -6,6 +6,7 @@ import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
+import io.redspace.ironsspellbooks.registries.ArmorMaterialRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import net.hazen.hazennstuff.Compat.ESSRCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
@@ -31,7 +32,7 @@ import java.util.Map;
 public class DreadsteelKnightArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public DreadsteelKnightArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
-        super(HnSArmorMaterials.CHAMPION_MATERIAL, type, settings,
+        super(ArmorMaterialRegistry.NETHERITE_BATTLEMAGE, type, settings,
                 new AttributeContainer(Attributes.ATTACK_SPEED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
                 new AttributeContainer(Attributes.ATTACK_DAMAGE, 1.5, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(Attributes.MAX_HEALTH, 2.5, AttributeModifier.Operation.ADD_VALUE)

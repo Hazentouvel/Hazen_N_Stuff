@@ -15,6 +15,19 @@
     "hazennstuff:entity_drops/cave_spider_modifiers",
     "hazennstuff:entity_drops/elder_guardian_modifiers",
 
+    "hazennstuff:attunement_enchantments/fire",
+    "hazennstuff:attunement_enchantments/ice",
+    "hazennstuff:attunement_enchantments/nature",
+    "hazennstuff:attunement_enchantments/lightning",
+    "hazennstuff:attunement_enchantments/ender",
+    "hazennstuff:attunement_enchantments/blood",
+    "hazennstuff:attunement_enchantments/evocation",
+    "hazennstuff:attunement_enchantments/holy",
+    "hazennstuff:attunement_enchantments/radiance",
+    "hazennstuff:attunement_enchantments/shadow",
+    "hazennstuff:attunement_enchantments/occult",
+    "hazennstuff:attunement_enchantments/eldritch",
+
 
     "hazennstuff:chests/nether_fortress_modifiers",
     "hazennstuff:chests/catacombs_modifiers",

@@ -33,7 +33,7 @@ import java.util.List;
 public class ChlorophyteHelmetArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public ChlorophyteHelmetArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
-        super(HnSArmorMaterials.CREAKING_SORCERER_MATERIAL, type, settings,
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,
                 new AttributeContainer(ALObjects.Attributes.ARROW_DAMAGE, 1.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(ALObjects.Attributes.ARROW_VELOCITY, 1.0, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)

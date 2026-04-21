@@ -30,7 +30,7 @@ import java.util.List;
 public class GeckolibFireblossomBattlemageCrownedArmorItemLegacy extends ImbuableGeckolibHnSArmorItem implements IDisableJacket {
     public GeckolibFireblossomBattlemageCrownedArmorItemLegacy(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
-        super(HnSArmorMaterials.FIREBLOSSOM_MATERIAL, type, settings,
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .2, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, .2, AttributeModifier.Operation.ADD_VALUE),

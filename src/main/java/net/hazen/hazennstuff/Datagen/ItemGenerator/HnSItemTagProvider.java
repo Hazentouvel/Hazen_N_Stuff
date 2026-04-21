@@ -88,6 +88,18 @@ public class HnSItemTagProvider extends ItemTagsProvider {
 
         ;
 
+        tag(HnSTags.ENCHANTED_SPELLBOOK)
+
+                .add(ItemRegistry.DIAMOND_SPELL_BOOK.get())
+
+        ;
+
+        tag(HnSTags.FIRE_SPELLBOOK)
+
+                .add(ItemRegistry.BLAZE_SPELL_BOOK.get())
+
+        ;
+
         tag(HnSTags.HARMONIOUS_EQUIPMENT)
 
                 .add(HnSItemRegistry.PENDANT_OF_HARMONY.get())
@@ -130,6 +142,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .addTag(HnSTags.HNS_CHESTPLATE)
                 .addTag(HnSTags.HNS_LEGGINGS)
                 .addTag(HnSTags.HNS_BOOTS)
+                .addTag(HnSTags.ENCHANTED_SPELLBOOK)
+                .addTag(HnSTags.FIRE_SPELLBOOK)
 
                 /*
                 *** Weapons
@@ -444,7 +458,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
 
 
         tag(HnSTags.PURE_HELMET)
-                .add(HnSItemRegistry.CALAMITAS_HELMET.get())
                 .add(HnSItemRegistry.BLAZEBORNE_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_HELMET.get())
                 .add(HnSItemRegistry.HAZEL_HELMET.get())
@@ -498,7 +511,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         ;
 
         tag(HnSTags.PURE_CHESTPLATE)
-                .add(HnSItemRegistry.CALAMITAS_CHESTPLATE.get())
                 .add(HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_CHESTPLATE.get())
                 .add(HnSItemRegistry.HAZEL_CHESTPLATE.get())
@@ -551,7 +563,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         ;
 
         tag(HnSTags.PURE_LEGGINGS)
-                .add(HnSItemRegistry.CALAMITAS_LEGGINGS.get())
                 .add(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_LEGGINGS.get())
                 .add(HnSItemRegistry.HAZEL_LEGGINGS.get())
@@ -601,7 +612,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         ;
 
         tag(HnSTags.PURE_BOOTS)
-                .add(HnSItemRegistry.CALAMITAS_BOOTS.get())
                 .add(HnSItemRegistry.BLAZEBORNE_BOOTS.get())
                 .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_BOOTS.get())
                 .add(HnSItemRegistry.HAZEL_BOOTS.get())
@@ -664,12 +674,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_BOOTS.get())
-
-                //Calamitas Armor
-                .add(HnSItemRegistry.CALAMITAS_HELMET.get())
-                .add(HnSItemRegistry.CALAMITAS_CHESTPLATE.get())
-                .add(HnSItemRegistry.CALAMITAS_LEGGINGS.get())
-                .add(HnSItemRegistry.CALAMITAS_BOOTS.get())
 
                 /*
                 *** Ice

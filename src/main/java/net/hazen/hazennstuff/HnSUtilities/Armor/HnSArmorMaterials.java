@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.HnSUtilities.Armor;
 
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.minecraft.Util;
 import net.minecraft.core.Holder;
@@ -27,228 +28,140 @@ public class HnSArmorMaterials {
     *** Pure Armor Sets
      */
 
+    public static DeferredHolder<ArmorMaterial, ArmorMaterial> BLAZEBORNE_MATERIAL = register("blazeborne",
+            pureArmorMap(),
+            20,
+            SoundEvents.ARMOR_EQUIP_NETHERITE,
+            () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
+            4,
+            0.15F);
+
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> CREAKING_SORCERER_MATERIAL = register("creaking",
             pureArmorMap(),
-            40,
+            20,
             HnSSounds.CREAKING_SORCERER_EQUIP,
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
+            4,
+            0.15F);
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> SERAPH_MATERIAL = register("seraph",
             pureArmorMap(),
-            40,
+            20,
             HnSSounds.SERAPH_EQUIP,
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
+            4,
+            0.15F);
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> CHARGED_SCOURGE_MATERIAL = register("scourge",
             pureArmorMap(),
-            40,
+            20,
             HnSSounds.CHARGED_SCOURGE_EQUIP,
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
+            4,
+            0.15F);
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> SOUL_FLAME_MATERIAL = register("soul_flame",
             pureArmorMap(),
-            40,
+            20,
             HnSSounds.SOUL_FLAME_EQUIP,
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
+            4,
+            0.15F);
 
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> SUPREME_WITCH_MATERIAL = register("supreme_witch",
+    public static DeferredHolder<ArmorMaterial, ArmorMaterial> ALCHEMIST_SUPREME_MATERIAL = register("alchemist_supreme",
             pureArmorMap(),
-            40,
+            20,
             HnSSounds.SUPREME_WITCH_EQUIP,
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
+            4,
+            0.15F);
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> CRYOGENIC_RULER_MATERIAL = register("cryogenic_ruler",
             pureArmorMap(),
-            40,
+            20,
             HnSSounds.CRYOGENIC_RULER_EQUIP,
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
+            4,
+            0.15F);
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> FLESH_MASS_MATERIAL = register("flesh_mass",
             pureArmorMap(),
-            40,
+            20,
             HnSSounds.FLESH_MASS_EQUIP,
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
+            4,
+            0.15F);
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> ENDER_DRAGON_MATERIAL = register("ender_dragon",
             pureArmorMap(),
-            40,
+            20,
             HnSSounds.ENDER_DRAGON_EQUIP,
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
+            4,
+            0.15F);
 
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> DARK_RITUAL_TEMPLAR_MATERIAL = register("dark_ritual_templar",
+    public static DeferredHolder<ArmorMaterial, ArmorMaterial> ELDRITCH_MATERIAL = register("eldritch",
             battlemageArmorMap(),
-            40,
+            20,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
-
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> FIREBLOSSOM_MATERIAL = register("fireblossom",
-            pureArmorMap(),
-            40,
-            SoundEvents.ARMOR_EQUIP_NETHERITE,
-            () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
+            4,
+            0.15F);
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> CALAMITAS_MATERIAL = register("calamitas",
             pureArmorMap(),
-            40,
+            20,
             HnSSounds.CALAMITAS_EQUIP,
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
-
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> MAVERICK_MATERIAL = register("maverick",
-            pureArmorMap(),
-            40,
-            SoundEvents.ARMOR_EQUIP_LEATHER,
-            () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
-
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> SLC_CAT_MATERIAL = register("slc_cat",
-            pureArmorMap(),
-            40,
-            SoundEvents.ARMOR_EQUIP_LEATHER,
-            () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
+            4,
+            0.15F);
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> PURE_ARMOR_TIER_MATERIAL = register("pure_armor_tier",
             pureArmorMap(),
-            40,
+            20,
             SoundEvents.ARMOR_EQUIP_LEATHER,
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
+            4,
+            0.15F);
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> INFESTATION_MATERIAL = register("infestation",
             pureArmorMap(),
-            40,
+            20,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
             () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
+            4,
+            0.15F);
 
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> BLAZEBORNE_MATERIAL = register("blazeborne",
-            pureArmorMap(),
-            40,
-            SoundEvents.ARMOR_EQUIP_NETHERITE,
-            () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
-
-
-
-    /*
-    *** Reign of Tyros Sets
-     */
-
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> LEGIONNAIRE_MATERIAL = register("legionnaire",
-            pureArmorMap(),
-            40,
-            SoundEvents.ARMOR_EQUIP_NETHERITE,
-            () -> Ingredient.of(Items.NETHERITE_INGOT),
-            2,
-            0.1F);
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> TYROS_MATERIAL = register("tyros",
-            pureArmorMap(),
-            40,
+            paragonArmorMap(),
+            30,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
-            () -> Ingredient.of(Items.NETHERITE_INGOT),
-            2,
-            0.1F);
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT),
+            5,
+            0.25F);
+
+    public static DeferredHolder<ArmorMaterial, ArmorMaterial> PARAGON_MATERIAL = register("paragon",
+            paragonArmorMap(),
+            30,
+            SoundEvents.ARMOR_EQUIP_NETHERITE,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT),
+            5,
+            0.25F);
 
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> PYRIUM_MATERIAL = register("pyrium",
             pyrium(),
-            40,
+            25,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
             () -> Ingredient.of(Items.NETHERITE_INGOT),
-            2,
-            0.1F);
+            4,
+            0.15F);
 
 
     /*
     *** Melee Armor Sets
      */
-
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> WARRIOR_MATERIAL = register("warrior",
-            pureArmorMap(),
-            40,
-            HnSSounds.SERAPH_EQUIP,
-            () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
-
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> CHAMPION_MATERIAL = register("champion",
-            pureArmorMap(),
-            40,
-            SoundEvents.ARMOR_EQUIP_NETHERITE,
-            () -> Ingredient.of(Items.NETHERITE_INGOT),
-            2,
-            0.1F);
-
-    /*
-     *** Archer Armor Sets
-     */
-
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> ARCHER_MATERIAL = register("archer",
-            battlemageArmorMap(),
-            40,
-            SoundEvents.ARMOR_EQUIP_LEATHER,
-            () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
-
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> HUNTER_MATERIAL = register("hunter",
-            pureArmorMap(),
-            40,
-            SoundEvents.ARMOR_EQUIP_LEATHER,
-            () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
-
-
-
-    /*
-    *** Deity Armor Sets
-     */
-
-
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> DEUS_MATERIAL = register("deus",
-            deityArmorMap(),
-            40,
-            HnSSounds.SERAPH_EQUIP,
-            () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
-
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> NERFED_DEUS_MATERIAL = register("nerfed_deus",
-            pureArmorMap(),
-            40,
-            HnSSounds.SERAPH_EQUIP,
-            () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
 
 
     /*
@@ -256,42 +169,13 @@ public class HnSArmorMaterials {
      */
 
 
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> BATTLEMAGE_MATERIAL = register("battlemage",
-            battlemageArmorMap(),
-            20,
-            SoundEvents.ARMOR_EQUIP_LEATHER,
-            () -> Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
-            2,
-            0F);
-
-
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> MAGEHUNTER_MATERIAL = register("magehunter",
-            battlemageArmorMap(),
-            20,
-            SoundEvents.ARMOR_EQUIP_NETHERITE,
-            () -> Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
-            2,
-            0F);
-
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> ADVANCED_BATTLEMAGE_MATERIAL = register("advanced_battlemage",
             advancedBattlemageArmorMap(),
-            20,
+            15,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
             () -> Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
             2,
             0F);
-
-    /***
-     * Compat Sets
-     */
-
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> AUTOMATON_MATERIAL = register("automaton",
-            pureArmorMap(),
-            40,
-            SoundEvents.ARMOR_EQUIP_LEATHER,
-            () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            2,
-            0.1F);
 
 
     private static DeferredHolder<ArmorMaterial, ArmorMaterial> register(
@@ -318,14 +202,22 @@ public class HnSArmorMaterials {
         });
     }
 
+    public static EnumMap<ArmorItem.Type, Integer> paragonArmorMap()
+    {
+        return makeArmorMap(6, 11, 9, 6);
+    }
+
     public static EnumMap<ArmorItem.Type, Integer> pureArmorMap()
     {
         return makeArmorMap(5, 10, 8, 5);
     }
 
-    public static EnumMap<ArmorItem.Type, Integer> battlemageArmorMap(){return makeArmorMap(3, 8, 6, 3);}
-    public static EnumMap<ArmorItem.Type, Integer> deityArmorMap(){return makeArmorMap(20, 20, 20, 20);}
-    public static EnumMap<ArmorItem.Type, Integer> advancedBattlemageArmorMap(){return makeArmorMap(4, 9, 6, 4);}
+    public static EnumMap<ArmorItem.Type, Integer> battlemageArmorMap(){
+        return makeArmorMap(3, 8, 6, 3);
+    }
+    public static EnumMap<ArmorItem.Type, Integer> advancedBattlemageArmorMap(){
+        return makeArmorMap(4, 9, 6, 4);
+    }
     public static EnumMap<ArmorItem.Type, Integer> pyrium(){return makeArmorMap(4, 9, 6, 4);}
 
     public static void register(IEventBus eventBus)

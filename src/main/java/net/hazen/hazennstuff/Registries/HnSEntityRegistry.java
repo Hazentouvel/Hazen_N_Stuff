@@ -27,7 +27,6 @@ import net.hazen.hazennstuff.Entity.Spells.Eldritch.SoulSeeker.SoulSeeker;
 import net.hazen.hazennstuff.Entity.Spells.Ender.EndraconicMeteor.EndraconicBreath.EndraconicBreath;
 import net.hazen.hazennstuff.Entity.Spells.Ender.EndraconicMeteor.EndraconicMeteor;
 import net.hazen.hazennstuff.Entity.Spells.Evocation.SpectralAxe.SpectralAxe;
-import net.hazen.hazennstuff.Entity.Spells.Fire.BrimstoneHellblast.BrimstoneHellblast;
 import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
 import net.hazen.hazennstuff.Entity.Spells.Fire.ScorchingSlash.ScorchingBlade;
 import net.hazen.hazennstuff.Entity.Spells.Holy.IchorStream.IchorStream;
@@ -75,13 +74,6 @@ public class HnSEntityRegistry {
     *** Spells
      */
 
-    // Brimstone Hellblast
-    public static final DeferredHolder<EntityType<?>, EntityType<BrimstoneHellblast>> BRIMSTONE_HELLBLAST =
-            ENTITIES.register("brimstone_hellblast", () -> EntityType.Builder.<BrimstoneHellblast>of(BrimstoneHellblast::new, MobCategory.MISC)
-                    .sized(1f, 1f)
-                    .clientTrackingRange(4)
-                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "brimstone_hellblast").toString())
-            );
 
     // Spark
     public static final DeferredHolder<EntityType<?>, EntityType<EnergyBurst>> ENERGY_BURST =

@@ -40,8 +40,6 @@ import net.hazen.hazennstuff.Item.Armor.Dedicated.Atlas.AtlasArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Misc.BishopOfDeceitArmor.BishopOfDeceitArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Blazeborne.GeckolibBlazeborneArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Ranger.BountyHunter.BountyHunterArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Calamitas.CalamitasArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Calamitas.CalamitasChestplateArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.ChargedScourge.GeckolibChargedScourgeArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Chlorophyte.ChlorophyteArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Chlorophyte.Headgear.ChlorophyteHeadgearArmorItem;
@@ -1252,32 +1250,6 @@ public class HnSItemRegistry {
             .equipment(1)
             .fireResistant()
             .rarity(HnSRarities.FIRE_RARITY.getValue())
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-    ));
-
-    // Calamitas
-
-    public static final DeferredHolder<Item, Item> CALAMITAS_HELMET = ITEMS.register("calamitas_helmet", () -> new CalamitasArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> CALAMITAS_CHESTPLATE = ITEMS.register("calamitas_chestplate", () -> new CalamitasChestplateArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> CALAMITAS_LEGGINGS = ITEMS.register("calamitas_leggings", () -> new CalamitasArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
-            .fireResistant()
-    ));
-    public static final DeferredHolder<Item, Item> CALAMITAS_BOOTS = ITEMS.register("calamitas_boots", () -> new CalamitasArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
-            .rarity(HnSRarities.FIRE_RARITY.getValue())
-            .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
     ));
 
@@ -2681,28 +2653,28 @@ public class HnSItemRegistry {
             .equipment(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
+            .durability(ArmorItem.Type.HELMET.getDurability(96))
     ));
 
     public static final DeferredHolder<Item, Item> TYROS_CHESTPLATE = ITEMS.register("garments_of_the_first_flamebearer_chestplate", () -> new GarmentsOfTheFirstFlamebearerChestplateArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(96))
     ));
 
     public static final DeferredHolder<Item, Item> TYROS_LEGGINGS = ITEMS.register("garments_of_the_first_flamebearer_leggings", () -> new GarmentsOfTheFirstFlamebearerArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(96))
     ));
 
     public static final DeferredHolder<Item, Item> TYROS_BOOTS = ITEMS.register("garments_of_the_first_flamebearer_boots", () -> new GarmentsOfTheFirstFlamebearerArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
+            .durability(ArmorItem.Type.BOOTS.getDurability(96))
 
     ));
 
@@ -2712,28 +2684,28 @@ public class HnSItemRegistry {
             .equipment(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
+            .durability(ArmorItem.Type.HELMET.getDurability(96))
     ));
 
     public static final DeferredHolder<Item, Item> TYROS_SOUL_CHESTPLATE = ITEMS.register("garments_of_the_first_flamebearer_soul_chestplate", () -> new GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(96))
     ));
 
     public static final DeferredHolder<Item, Item> TYROS_SOUL_LEGGINGS = ITEMS.register("garments_of_the_first_flamebearer_soul_leggings", () -> new GarmentsOfTheFirstFlamebearerSoulArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
             .equipment(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(96))
     ));
 
     public static final DeferredHolder<Item, Item> TYROS_SOUL_BOOTS = ITEMS.register("garments_of_the_first_flamebearer_soul_boots", () -> new GarmentsOfTheFirstFlamebearerSoulArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
             .equipment(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
+            .durability(ArmorItem.Type.BOOTS.getDurability(96))
 
     ));
 
@@ -2749,7 +2721,6 @@ public class HnSItemRegistry {
             .equipment(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
     public static final DeferredHolder<Item, Item> PYRIUM_LEGGINGS = ITEMS.register("pyrium_leggings", () -> new PyriumArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper

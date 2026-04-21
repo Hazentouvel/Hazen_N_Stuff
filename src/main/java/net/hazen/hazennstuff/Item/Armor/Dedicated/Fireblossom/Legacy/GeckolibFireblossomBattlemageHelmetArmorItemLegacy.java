@@ -28,7 +28,7 @@ import java.util.List;
 
 public class GeckolibFireblossomBattlemageHelmetArmorItemLegacy extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public GeckolibFireblossomBattlemageHelmetArmorItemLegacy(Type type, Properties settings) {
-        super(HnSArmorMaterials.FIREBLOSSOM_MATERIAL, type, settings, pureTierMulti(
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, pureTierMulti(
                 AttributeRegistry.FIRE_SPELL_POWER,
                 AttributeRegistry.NATURE_SPELL_POWER
         ));

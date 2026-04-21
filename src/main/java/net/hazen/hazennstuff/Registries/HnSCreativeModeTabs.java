@@ -233,7 +233,7 @@ public class HnSCreativeModeTabs {
                     }).build());
 
     public static final Supplier<CreativeModeTab> HAZEN_N_STUFF_EQUIPMENT = CREATIVE_MODE_TAB.register("hazennstuff_equipment",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItemRegistry.CALAMITAS_HELMET.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItemRegistry.MASKED_FOOL_HELMET.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "hazennstuff_materials"))
                     .title(Component.translatable("creativetab.hazennstuff.hazennstuff_equipment"))
                     .displayItems((itemDisplayParameters, output) -> {
@@ -247,12 +247,6 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get());
                         output.accept(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get());
                         output.accept(HnSItemRegistry.BLAZEBORNE_BOOTS.get());
-
-                        // Calamitas
-                        output.accept(HnSItemRegistry.CALAMITAS_HELMET.get());
-                        output.accept(HnSItemRegistry.CALAMITAS_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.CALAMITAS_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.CALAMITAS_BOOTS.get());
 
                         // Hazel
                         output.accept(HnSItemRegistry.HAZEL_HELMET.get());

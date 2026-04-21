@@ -1,0 +1,19 @@
+{
+  "type": "irons_spellbooks:append_loot",
+  "conditions": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/trial_chambers/reward_ominous_rare"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id":  "minecraft:chests/trial_chambers/reward_rare"
+        }
+      ]
+    }
+  ],
+  "key": "hazennstuff:chests/attunement_enchantments/lightning"
+}

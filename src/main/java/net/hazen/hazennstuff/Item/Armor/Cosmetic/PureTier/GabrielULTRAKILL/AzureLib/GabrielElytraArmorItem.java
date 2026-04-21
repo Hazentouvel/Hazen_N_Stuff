@@ -29,7 +29,7 @@ public class GabrielElytraArmorItem extends ImbuableHnSArmorItem implements IDis
     public final HnSDispatcher dispatcher;
 
     public GabrielElytraArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)

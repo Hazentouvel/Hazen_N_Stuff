@@ -1,6 +1,25 @@
 {
   "tooltip.hazennstuff.shift": "Press §eShift§r for more",
 
+  "enchantment.hazennstuff.fire_attunement": "Fire Attunement",
+  "enchantment.hazennstuff.ice_attunement": "Ice Attunement",
+  "enchantment.hazennstuff.nature_attunement": "Nature Attunement",
+  "enchantment.hazennstuff.lightning_attunement": "Lightning Attunement",
+  "enchantment.hazennstuff.ender_attunement": "Ender Attunement",
+  "enchantment.hazennstuff.blood_attunement": "Blood Attunement",
+  "enchantment.hazennstuff.evocation_attunement": "Evocation Attunement",
+  "enchantment.hazennstuff.holy_attunement": "Holy Attunement",
+  "enchantment.hazennstuff.radiance_attunement": "Radiant Attunement",
+  "enchantment.hazennstuff.shadow_attunement": "Shadow Attunement",
+  "enchantment.hazennstuff.cosmic_attunement": "Cosmic Attunement",
+  "enchantment.hazennstuff.hydro_attunement": "Hydro Attunement",
+  "enchantment.hazennstuff.technomancy_attunement": "Technomancy Attunement",
+  "enchantment.hazennstuff.occult_attunement": " Occult Attunement",
+  "enchantment.hazennstuff.eldritch_attunement": "Eldritch Attunement",
+
+  "enchantment.hazennstuff.arcane_affinity": "Arcane Affinity",
+  "enchantment.hazennstuff.cinderkissed": "Cinderkissed",
+
 
   "tooltip.hazennstuff.atlas_lore": "Sorrowful be the heart...",
 

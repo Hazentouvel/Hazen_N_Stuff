@@ -10,17 +10,23 @@ import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSSpellAnimations;
+import net.hazen.hazennstuff.HnSUtilities.HnSEnchantments;
 import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractTaggedSpell;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
+import top.theillusivec4.curios.api.CuriosApi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -101,8 +107,42 @@ public class FieryDaggerSpell extends AbstractTaggedSpell {
         Vec3 targetPos = hitResult.getLocation();
         Vec3 look = targetPos.subtract(eyePos).normalize();
 
-        boolean hasCinderousEquipment = hasTaggedItem(entity, HnSTags.CINDEROUS_EQUIPMENT);
-        hasCinderous = hasTaggedItem(entity, HnSTags.CINDEROUS_EQUIPMENT);
+        boolean hasCustomEnchant = false;
+
+        if (entity instanceof Player player) {
+            var curios = CuriosApi.getCuriosInventory(player);
+
+            if (curios.isPresent()) {
+                for (var stacksHandler : curios.get().getCurios().values()) {
+                    var handler = stacksHandler.getStacks();
+
+                    for (int i = 0; i < handler.getSlots(); i++) {
+                        ItemStack stack = handler.getStackInSlot(i);
+
+                        if (!stack.isEmpty() && stack.has(DataComponents.ENCHANTMENTS)) {
+                            ItemEnchantments enchantments = stack.get(DataComponents.ENCHANTMENTS);
+
+                            if (Utils.getEnchantmentLevel(entity.level(), HnSEnchantments.CINDERKISSED, enchantments) > 0) {
+                                hasCustomEnchant = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (hasCustomEnchant) {
+                        break;
+                    }
+                }
+            }
+        }
+
+        boolean hasCinderousEquipment =
+                hasTaggedItem(entity, HnSTags.CINDEROUS_EQUIPMENT) || hasCustomEnchant;
+
+        hasCinderous = hasCinderousEquipment;
+
+        //boolean hasCinderousEquipment = hasTaggedItem(entity, HnSTags.CINDEROUS_EQUIPMENT);
+        //hasCinderous = hasTaggedItem(entity, HnSTags.CINDEROUS_EQUIPMENT);
 
 
         if (hasCinderousEquipment) {

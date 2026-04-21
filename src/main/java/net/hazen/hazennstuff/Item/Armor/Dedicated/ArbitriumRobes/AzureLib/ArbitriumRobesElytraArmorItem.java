@@ -28,7 +28,7 @@ public class ArbitriumRobesElytraArmorItem extends ImbuableHnSArmorItem implemen
     public final HnSDispatcher dispatcher;
 
     public ArbitriumRobesElytraArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.NERFED_DEUS_MATERIAL, type, settings,
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 300.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );

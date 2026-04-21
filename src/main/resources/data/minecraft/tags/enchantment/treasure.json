@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "hazennstuff:fire_attunement",
+    "hazennstuff:ice_attunement",
+    "hazennstuff:nature_attunement",
+    "hazennstuff:lightning_attunement",
+    "hazennstuff:ender_attunement",
+    "hazennstuff:blood_attunement",
+    "hazennstuff:evocation_attunement",
+    "hazennstuff:holy_attunement",
+    "hazennstuff:radiant_attunement",
+    "hazennstuff:shadow_attunement",
+    "hazennstuff:hydro_attunement",
+    "hazennstuff:cosmic_attunement",
+    "hazennstuff:technomancy_attunement",
+    "hazennstuff:occult_attunement",
+    "hazennstuff:eldritch_attunement"
+  ]
+}

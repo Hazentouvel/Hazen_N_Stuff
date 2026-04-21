@@ -41,7 +41,9 @@ public class HnSTags {
     public static final TagKey<Item> ZENALITE = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ores/zenalite").toString()));
 
-    //Armor
+    /*
+    ***Armor
+     */
 
 
     public static final TagKey<Item> ENDER_MASK = ItemTags
@@ -102,6 +104,12 @@ public class HnSTags {
 
     public static final TagKey<Item> HARMONIOUS_EQUIPMENT = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "harmonious_equipment").toString()));
+
+    public static final TagKey<Item> ENCHANTED_SPELLBOOK = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "enchanted_spellbook").toString()));
+
+    public static final TagKey<Item> FIRE_SPELLBOOK = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "fire_spellbook").toString()));
 
 
     public static final TagKey<EntityType<?>> ASTRAL_CONSTRUCT = TagKey

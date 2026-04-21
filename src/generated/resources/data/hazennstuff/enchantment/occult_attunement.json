@@ -1,0 +1,35 @@
+{
+  "anvil_cost": 3,
+  "description": {
+    "translate": "enchantment.hazennstuff.occult_attunement"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.05,
+          "per_level_above_first": 0.05
+        },
+        "attribute": "aces_spell_utils:ritual_spell_power",
+        "id": "hazennstuff:occult_attunement",
+        "operation": "add_multiplied_base"
+      }
+    ]
+  },
+  "exclusive_set": "#hazennstuff:spellbook_exclusive",
+  "max_cost": {
+    "base": 25,
+    "per_level_above_first": 7
+  },
+  "max_level": 5,
+  "min_cost": {
+    "base": 5,
+    "per_level_above_first": 7
+  },
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#hazennstuff:enchanted_spellbook",
+  "weight": 1
+}

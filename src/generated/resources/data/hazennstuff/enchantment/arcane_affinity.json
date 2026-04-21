@@ -1,0 +1,45 @@
+{
+  "anvil_cost": 2,
+  "description": {
+    "translate": "enchantment.hazennstuff.arcane_affinity"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 75.0,
+          "per_level_above_first": 75.0
+        },
+        "attribute": "irons_spellbooks:max_mana",
+        "id": "hazennstuff:max_mana",
+        "operation": "add_value"
+      },
+      {
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.05,
+          "per_level_above_first": 0.05
+        },
+        "attribute": "irons_spellbooks:mana_regen",
+        "id": "hazennstuff:mana_regen",
+        "operation": "add_multiplied_base"
+      }
+    ]
+  },
+  "exclusive_set": "#hazennstuff:spellbook_exclusive",
+  "max_cost": {
+    "base": 25,
+    "per_level_above_first": 7
+  },
+  "max_level": 4,
+  "min_cost": {
+    "base": 5,
+    "per_level_above_first": 7
+  },
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#hazennstuff:enchanted_spellbook",
+  "weight": 3
+}

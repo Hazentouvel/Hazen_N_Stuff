@@ -13,7 +13,7 @@ import net.neoforged.neoforge.network.handling.IPayloadContext;
 public class EnderExplosionParticlesPacket implements CustomPacketPayload {
     private final Vec3 pos1;
     private final float radius;
-    public static final CustomPacketPayload.Type<EnderExplosionParticlesPacket> TYPE = new CustomPacketPayload.Type(ResourceLocation.fromNamespaceAndPath("hazennstuff", "fiery_explosion_particles"));
+    public static final CustomPacketPayload.Type<EnderExplosionParticlesPacket> TYPE = new CustomPacketPayload.Type(ResourceLocation.fromNamespaceAndPath("hazennstuff", "ender_explosion_particles"));
     public static final StreamCodec<RegistryFriendlyByteBuf, EnderExplosionParticlesPacket> STREAM_CODEC = CustomPacketPayload.codec(EnderExplosionParticlesPacket::write, EnderExplosionParticlesPacket::new);
 
     public EnderExplosionParticlesPacket(Vec3 pos1, float radius) {

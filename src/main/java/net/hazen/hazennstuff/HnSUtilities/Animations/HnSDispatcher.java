@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Animations;
+package net.hazen.hazennstuff.HnSUtilities.Animations;
 
 import mod.azure.azurelib.common.animation.dispatch.command.AzCommand;
 import mod.azure.azurelib.common.animation.play_behavior.AzPlayBehaviors;

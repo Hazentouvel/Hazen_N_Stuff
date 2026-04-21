@@ -7,7 +7,7 @@ import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import net.hazen.hazennstuff.Registries.HnSSounds;
-import net.hazen.hazennstuff.Animations.HnSSpellAnimations;
+import net.hazen.hazennstuff.HnSUtilities.Animations.HnSSpellAnimations;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

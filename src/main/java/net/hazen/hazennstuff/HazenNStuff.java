@@ -154,6 +154,11 @@ public class HazenNStuff
                 HnSItemRegistry.GABRIEL_ULTRAKILL_LEGGINGS.get(),
                 HnSItemRegistry.GABRIEL_ULTRAKILL_BOOTS.get(),
 
+                HnSItemRegistry.SERAPH_HELMET.get(),
+                HnSItemRegistry.SERAPH_CHESTPLATE.get(),
+                HnSItemRegistry.SERAPH_LEGGINGS.get(),
+                HnSItemRegistry.SERAPH_BOOTS.get(),
+
                 HnSItemRegistry.SLC_CAT_HELMET.get(),
                 HnSItemRegistry.SLC_CAT_CHESTPLATE.get(),
                 HnSItemRegistry.SLC_CAT_LEGGINGS.get(),

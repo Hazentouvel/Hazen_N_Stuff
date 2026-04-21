@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Animations;
+package net.hazen.hazennstuff.HnSUtilities.Animations;
 
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import net.hazen.hazennstuff.HazenNStuff;

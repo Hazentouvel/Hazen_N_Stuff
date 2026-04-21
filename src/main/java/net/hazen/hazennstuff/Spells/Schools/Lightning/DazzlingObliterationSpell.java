@@ -7,7 +7,7 @@ import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.RecastInstance;
-import net.hazen.hazennstuff.Animations.HnSSpellAnimations;
+import net.hazen.hazennstuff.HnSUtilities.Animations.HnSSpellAnimations;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.DazzlingObliteration.NinguDemonbanePetalblade;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.DazzlingObliteration.Shuriken.NinguDemonbanePetalbladeShuriken;
 import net.hazen.hazennstuff.HazenNStuff;

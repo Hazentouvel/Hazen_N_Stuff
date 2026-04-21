@@ -3,7 +3,7 @@ package net.hazen.hazennstuff.Item.Staves.InsaniaAeternus;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.Animations.HnSDispatcher;
+import net.hazen.hazennstuff.HnSUtilities.Animations.HnSDispatcher;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSStaffTier;
 import net.hazen.hazennstuff.Rarity.HnSRarities;
 import net.minecraft.world.entity.Entity;

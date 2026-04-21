@@ -1,27 +1,15 @@
 package net.hazen.hazennstuff.Item.Curios.Spellbooks.GrimoireOfFlight;
 
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
-import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
-import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.item.SpellBook;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
-import io.redspace.ironsspellbooks.util.TooltipsUtils;
-import net.hazen.hazennstuff.Animations.HnSDispatcher;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.Entity;
+import net.hazen.hazennstuff.HnSUtilities.Animations.HnSDispatcher;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.NotNull;
 import top.theillusivec4.curios.api.SlotContext;
-
-import java.util.List;
-import java.util.Map;
 
 public class GrimoireOfFlight extends SpellBook {
     public final HnSDispatcher dispatcher;

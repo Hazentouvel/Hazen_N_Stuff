@@ -867,8 +867,15 @@
 
   "item.hazennstuff.tyros.description": "Bear the garments of the first flambearer...",
   "item.hazennstuff.tyros_affinity.description": "+1 level to all Tyros related spells",
+
+  "item.hazennstuff.garments_of_the_first_flamebearer_helmet.desc": "Dealing Fire Spell Damage adds a stack of Immolation to the creature",
+  "item.hazennstuff.garments_of_the_first_flamebearer_helmet.immolate.desc": "At 3 Immolation stacks, cause an explosion (%s damage), spreading Immolation",
   "item.hazennstuff.garments_of_the_first_flamebearer_chestplate.desc": "Dealing Fire Spell Damage adds a stack of Immolation to the creature",
   "item.hazennstuff.garments_of_the_first_flamebearer_chestplate.immolate.desc": "At 3 Immolation stacks, cause an explosion (%s damage), spreading Immolation",
+  "item.hazennstuff.garments_of_the_first_flamebearer_leggings.desc": "Dealing Fire Spell Damage adds a stack of Immolation to the creature",
+  "item.hazennstuff.garments_of_the_first_flamebearer_leggings.immolate.desc": "At 3 Immolation stacks, cause an explosion (%s damage), spreading Immolation",
+  "item.hazennstuff.garments_of_the_first_flamebearer_boots.desc": "Dealing Fire Spell Damage adds a stack of Immolation to the creature",
+  "item.hazennstuff.garments_of_the_first_flamebearer_boots.immolate.desc": "At 3 Immolation stacks, cause an explosion (%s damage), spreading Immolation",
 
 
   "item.hazennstuff.garments_of_the_first_flamebearer_helmet": "Tyros Hood",

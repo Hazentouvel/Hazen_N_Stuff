@@ -8,8 +8,8 @@
       {
         "amount": {
           "type": "minecraft:linear",
-          "base": 0.05,
-          "per_level_above_first": 0.05
+          "base": 0.04,
+          "per_level_above_first": 0.04
         },
         "attribute": "aces_spell_utils:hydro_spell_power",
         "id": "hazennstuff:hydro_attunement",

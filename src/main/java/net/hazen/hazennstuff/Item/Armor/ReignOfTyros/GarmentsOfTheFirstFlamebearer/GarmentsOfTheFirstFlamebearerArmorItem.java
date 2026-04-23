@@ -8,6 +8,7 @@ import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
+import io.redspace.ironsspellbooks.spells.fire.RaiseHellSpell;
 import io.redspace.ironsspellbooks.util.MinecraftInstanceHelper;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
@@ -126,8 +127,8 @@ public class GarmentsOfTheFirstFlamebearerArmorItem extends ImbuableGeckolibHnSA
     public void onKeyPacket(Player player, ItemStack itemStack, int Type) {
         if (player != null) {
             if (Type == 5 && isWearingFullSet(player) && !player.getCooldowns().isOnCooldown((Item) HnSItemRegistry.TYROS_CHESTPLATE.get())) {
-                player.addEffect(new MobEffectInstance(HnSEffects.TYROS_SOUL_STATE, 800, 0, true, true, true));
-                player.getCooldowns().addCooldown((Item) HnSItemRegistry.TYROS_CHESTPLATE.get(), 100);
+                player.addEffect(new MobEffectInstance(HnSEffects.TYROS_SOUL_STATE, 1200, 0, true, true, true));
+                player.getCooldowns().addCooldown((Item) HnSItemRegistry.TYROS_CHESTPLATE.get(), 2400);
 
                 if (player.level() instanceof ServerLevel serverLevel) {
                     double x = player.getX();
@@ -143,24 +144,10 @@ public class GarmentsOfTheFirstFlamebearerArmorItem extends ImbuableGeckolibHnSA
                         double dx = Math.cos(angle);
                         double dz = Math.sin(angle);
 
-                        serverLevel.sendParticles(
-                                ParticleHelper.EMBERS,
-                                x, y, z,
-                                1,
-                                dx * speed,
-                                0.05,
-                                dz * speed,
-                                0.0
-                        );
+                        serverLevel.sendParticles(ParticleHelper.EMBERS, x, y, z, 1, dx * speed, 0.05, dz * speed, 0.0);
                     }
 
-                    serverLevel.sendParticles(
-                            HnSParticleHelper.FIRE_IMPACT,
-                            x, y, z,
-                            1,
-                            0.0, 0.0, 0.0,
-                            0.0
-                    );
+                    serverLevel.sendParticles(HnSParticleHelper.FIRE_IMPACT, x, y, z, 1, 0.0, 0.0, 0.0, 0.0);
 
                     try {
                         serverLevel.playSound(null, x, y, z, SoundRegistry.FIRE_CAST.get(), SoundSource.PLAYERS, 1.5F, 1.0F);
@@ -180,6 +167,8 @@ public class GarmentsOfTheFirstFlamebearerArmorItem extends ImbuableGeckolibHnSA
             if (caster == null) return;
 
             if (!(event.getSpell() instanceof TyrosSpells)) return;
+
+            if (!(event.getSpell() instanceof RaiseHellSpell)) return;
 
             boolean fullSet =
                     caster.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof GarmentsOfTheFirstFlamebearerArmorItem &&

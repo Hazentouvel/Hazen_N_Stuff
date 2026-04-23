@@ -73,7 +73,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "fire_attunement"),
                                 AttributeRegistry.FIRE_SPELL_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )
@@ -93,7 +93,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ice_attunement"),
                                 AttributeRegistry.ICE_SPELL_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )
@@ -113,7 +113,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "nature_attunement"),
                                 AttributeRegistry.NATURE_SPELL_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )
@@ -133,7 +133,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "lightning_attunement"),
                                 AttributeRegistry.LIGHTNING_SPELL_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )
@@ -153,7 +153,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ender_attunement"),
                                 AttributeRegistry.ENDER_SPELL_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )
@@ -173,7 +173,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "blood_attunement"),
                                 AttributeRegistry.BLOOD_SPELL_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )
@@ -193,7 +193,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "evocation_attunement"),
                                 AttributeRegistry.EVOCATION_SPELL_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )
@@ -213,7 +213,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "holy_attunement"),
                                 AttributeRegistry.HOLY_SPELL_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )
@@ -233,7 +233,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "radiance_attunement"),
                                 HnSAttributeRegistry.RADIANCE_SPELL_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )
@@ -253,7 +253,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "shadow_attunement"),
                                 HnSAttributeRegistry.SHADOW_SPELL_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )
@@ -273,7 +273,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "cosmic_attunement"),
                                 HnSAttributeRegistry.COSMIC_SPELL_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )
@@ -293,7 +293,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "hydro_attunement"),
                                 ASAttributeRegistry.HYDRO_MAGIC_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )
@@ -313,7 +313,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "technomancy_attunement"),
                                 ASAttributeRegistry.TECHNOMANCY_MAGIC_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )
@@ -333,7 +333,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "occult_attunement"),
                                 ASAttributeRegistry.RITUAL_MAGIC_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )
@@ -353,7 +353,7 @@ public class HnSEnchantments {
                         new EnchantmentAttributeEffect(
                                 ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "eldritch_attunement"),
                                 AttributeRegistry.ELDRITCH_SPELL_POWER,
-                                LevelBasedValue.perLevel(0.05F),
+                                LevelBasedValue.perLevel(0.04F),
                                 AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                         )
                 )

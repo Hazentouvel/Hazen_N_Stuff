@@ -248,7 +248,7 @@ public class HnSEffects {
 
 
 
-    public static final DeferredHolder<MobEffect, MobEffect> TYROS_SOUL_STATE = MOB_EFFECTS.register("soul_state",
+    public static final DeferredHolder<MobEffect, MobEffect> TYROS_SOUL_STATE = MOB_EFFECTS.register("tyros_soul_state",
             () -> new GenericHazenEffect(MobEffectCategory.BENEFICIAL, 0x2E2EFF));
 
 

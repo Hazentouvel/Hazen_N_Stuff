@@ -4,6 +4,7 @@ import io.redspace.ironsspellbooks.api.entity.IMagicEntity;
 import io.redspace.ironsspellbooks.damage.ISSDamageTypes;
 import io.redspace.ironsspellbooks.effect.ImmolateEffect;
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
+import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.server.level.ServerPlayer;
@@ -84,15 +85,42 @@ public class HnSServerPlayerEvents {
                 if (player.getCooldowns().isOnCooldown(head)) {
                     return;
                 }
-                player.getCooldowns().addCooldown(head, 80);
+                player.getCooldowns().addCooldown(head, 200);
+            }
+
+            int amplifier = 0;
+
+            try {
+                double attrVal = 0.0;
+                try {
+                    attrVal = attacker.getAttributeValue(AttributeRegistry.FIRE_SPELL_POWER);
+                } catch (IllegalArgumentException ex) {
+                    attrVal = 0.0;
+                }
+
+                double percent;
+                if (attrVal <= 0.0) {
+                    percent = 0.0;
+                } else if (attrVal < 10.0) {
+                    // Likely a multiplier (e.g. 1.0 == 100%)
+                    percent = attrVal * 100.0;
+                } else {
+                    // Likely already percent (e.g. 150.0 == 150%)
+                    percent = attrVal;
+                }
+
+                int fullHundreds = (int)Math.floor(percent / 100.0);
+                amplifier = Math.max(0, fullHundreds - 1);
+            } catch (Throwable t) {
+                amplifier = 0;
             }
 
             boolean inSoulState = attacker.hasEffect(HnSEffects.TYROS_SOUL_STATE);
 
             if (inSoulState) {
-                target.addEffect(new MobEffectInstance(MobEffectRegistry.REND, 160, 0, true, true, true));
+                target.addEffect(new MobEffectInstance(MobEffectRegistry.REND, 100, amplifier, false, true, true));
             } else {
-                target.addEffect(new MobEffectInstance(MobEffectRegistry.REND, 160, 0, true, true, true));
+                target.addEffect(new MobEffectInstance(MobEffectRegistry.REND, 200, amplifier, false, true, true));
             }
         }
     }

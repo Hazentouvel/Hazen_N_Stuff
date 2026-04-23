@@ -8,11 +8,11 @@ import net.minecraft.world.item.Item;
 
 import static net.acetheeldritchking.aces_spell_utils.utils.ASUtils.isValidUnlockItemInInventory;
 
-public abstract class AbstractRodOfDiscordSpell extends AbstractSpell {
+public abstract class RavensBaneSpell extends AbstractSpell {
 
     @Override
     public Component getLockedMessage() {
-        return Component.translatable("ui.hazennstuff.staff_resonation");
+        return Component.translatable("ui.hazennstuff.weapon_resonation");
     }
 
     @Override
@@ -22,7 +22,7 @@ public abstract class AbstractRodOfDiscordSpell extends AbstractSpell {
 
     @Override
     public boolean canBeCraftedBy(Player player) {
-        Item item = HnSItemRegistry.ROD_OF_DISCORD.get();
-        return isValidUnlockItemInInventory(item, player);
+        Item ravensBane = HnSItemRegistry.RAVENS_BANE.get();
+        return isValidUnlockItemInInventory(ravensBane, player);
     }
 }

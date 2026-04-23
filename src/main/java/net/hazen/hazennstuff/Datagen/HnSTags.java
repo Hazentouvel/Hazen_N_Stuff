@@ -86,6 +86,15 @@ public class HnSTags {
     public static final TagKey<Item> PURE_BOOTS = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/pure/pure_boots").toString()));
 
+    public static final TagKey<Item> PARAGON_HELMET = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/paragon/paragon_helmet").toString()));
+    public static final TagKey<Item> PARAGON_CHESTPLATE = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/paragon/paragon_chestplate").toString()));
+    public static final TagKey<Item> PARAGON_LEGGINGS = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/paragon/paragon_leggings").toString()));
+    public static final TagKey<Item> PARAGON_BOOTS = ItemTags
+            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/paragon/paragon_boots").toString()));
+
     public static final TagKey<Item> ARMORS_FOR_IDLE = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/armors_for_idle").toString()));
 

@@ -12,6 +12,7 @@ import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProj
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSSpellAnimations;
 import net.hazen.hazennstuff.HnSUtilities.HnSEnchantments;
 import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractTaggedSpell;
+import net.hazen.hazennstuff.Spells.AbstractSpells.TyrosSpells;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
@@ -31,7 +32,7 @@ import top.theillusivec4.curios.api.CuriosApi;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FieryDaggerSpell extends AbstractTaggedSpell {
+public class FieryDaggerSpell extends TyrosSpells {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "fiery_dagger");
     private final DefaultConfig defaultConfig;
 

@@ -6,13 +6,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 
 public class HnSDispatcher {
-    private static final AzCommand EQUIP_COMMAND = AzCommand.create(
-            "base_controller",
-            "equipping",
-            AzPlayBehaviors.PLAY_ONCE
-    );
-
-    private static final AzCommand IDLE_COMMAND = AzCommand.create(
+    private static final AzCommand IDLE = AzCommand.create(
             "base_controller",
             "idle",
             AzPlayBehaviors.LOOP
@@ -24,34 +18,52 @@ public class HnSDispatcher {
             AzPlayBehaviors.LOOP
     );
 
-    private static final AzCommand CASTING_SPELL_COMMAND = AzCommand.create(
+    private static final AzCommand DIVING = AzCommand.create(
             "base_controller",
-            "casting",
+            "diving",
             AzPlayBehaviors.LOOP
     );
 
-    private static final AzCommand DIVINE_SMITE_COMMAND = AzCommand.create(
+    private static final AzCommand INSTANT_CAST = AzCommand.create(
             "base_controller",
-            "overhead_two_handed_swing",
-            AzPlayBehaviors.HOLD_ON_LAST_FRAME
+            "instant_cast",
+            AzPlayBehaviors.LOOP
     );
 
-    public void equip(Entity entity, ItemStack itemStack) {
-        EQUIP_COMMAND.sendForItem(entity, itemStack);
+    private static final AzCommand LONG_CAST = AzCommand.create(
+            "base_controller",
+            "long_cast",
+            AzPlayBehaviors.LOOP
+    );
+
+    private static final AzCommand CONTINUOUS_CAST = AzCommand.create(
+            "base_controller",
+            "continuous_cast",
+            AzPlayBehaviors.LOOP
+    );
+
+    public void diving(Entity entity, ItemStack itemStack) {
+        DIVING.sendForItem(entity, itemStack);
     }
 
     public void idle(Entity entity, ItemStack itemStack) {
-        IDLE_COMMAND.sendForItem(entity, itemStack);
+        IDLE.sendForItem(entity, itemStack);
     }
 
     public void flight(Entity entity, ItemStack itemStack) {
         ELYTRA_FLIGHT_COMMAND.sendForItem(entity, itemStack);
     }
 
-    public void casting(Entity entity, ItemStack itemStack) {
-        CASTING_SPELL_COMMAND.sendForItem(entity, itemStack);
+    public void instantCast(Entity entity, ItemStack itemStack) {
+        INSTANT_CAST.sendForItem(entity, itemStack);
     }
 
-    public void overhead_two_handed_swing(Entity entity, ItemStack itemStack) { DIVINE_SMITE_COMMAND.sendForItem(entity, itemStack);
+    public void longCast(Entity entity, ItemStack itemStack) {
+        LONG_CAST.sendForItem(entity, itemStack);
     }
+
+    public void continuousCast(Entity entity, ItemStack itemStack) {
+        CONTINUOUS_CAST.sendForItem(entity, itemStack);
+    }
+
 }

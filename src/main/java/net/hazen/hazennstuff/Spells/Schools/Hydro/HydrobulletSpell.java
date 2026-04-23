@@ -2,14 +2,13 @@ package net.hazen.hazennstuff.Spells.Schools.Hydro;
 
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
-import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
 import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import net.acetheeldritchking.aces_spell_utils.registries.ASSchoolRegistry;
 import net.hazen.hazennstuff.Entity.Spells.Hydro.Hydrobullet.HydroBullet;
-import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractHydroSpell;
+import net.hazen.hazennstuff.Spells.AbstractSpells.HydroSpells;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -20,7 +19,7 @@ import net.minecraft.world.level.Level;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HydrobulletSpell extends AbstractHydroSpell {
+public class HydrobulletSpell extends HydroSpells {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "hydrobullet");
     private final DefaultConfig defaultConfig;
 

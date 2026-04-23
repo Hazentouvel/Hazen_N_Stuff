@@ -9,7 +9,7 @@ import net.minecraft.sounds.SoundEvent;
 
 import java.util.Optional;
 
-public class AbstractHydroSpell extends AbstractSpell {
+public class HydroSpells extends AbstractSpell {
 
     @Override
     public ResourceLocation getSpellResource() {

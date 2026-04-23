@@ -56,18 +56,14 @@ public class HnSSpellTooltip implements ClientTooltipComponent {
     public void renderText(Font font, int x, int y, Matrix4f matrix, MultiBufferSource.BufferSource buffer) {
         String rawString = text.getString();
         long timeMs = System.currentTimeMillis();
-
         float xOffset = x;
 
-        // Wave controls
+        // Smooth rainbow movement
+        float ticks = timeMs / 50f;
 
-        // Smoother speed control.
-        double timeSeconds = timeMs / 1000.0;
-        // How fast the wave is.
+        // Wave controls
         double waveSpeed = 7.0;
-        // Phase step between characters.
         double wavePhase = 0.65;
-        // Vertical wave in pixels.
         float amplitude = 1.8f;
 
         for (int i = 0; i < rawString.length(); i++) {
@@ -79,10 +75,21 @@ public class HnSSpellTooltip implements ClientTooltipComponent {
             float glintSwell = (float) Math.max(0, Math.sin((timeMs * 0.012) + (i * 0.5f)) - 0.7f) * 3.0f;
             int finalColor = applyGlint(baseColor, glintSwell);
 
-            double phase = (i * wavePhase) - (timeSeconds * waveSpeed);
+            double phase = (i * wavePhase) - ((timeMs / 1000.0) * waveSpeed);
             float yWave = (float) (Math.sin(phase) * amplitude);
 
-            font.drawInBatch(letter, xOffset, y + (int) yWave + 2, finalColor, true, matrix, buffer, Font.DisplayMode.NORMAL, 0, 15728880);
+            font.drawInBatch(
+                    letter,
+                    xOffset,
+                    y + yWave + 2,
+                    finalColor,
+                    true,
+                    matrix,
+                    buffer,
+                    Font.DisplayMode.NORMAL,
+                    0,
+                    15728880
+            );
             xOffset += font.width(letter);
         }
     }

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "hazennstuff:cloth_of_the_flamebearer"
+    },
+    "D": {
+      "item": "irons_spellbooks:decrepit_key"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "P": {
+      "item": "hazennstuff:pyrium_nugget"
+    },
+    "S": {
+      "item": "irons_spellbooks:divine_soulshard"
+    }
+  },
+  "pattern": [
+    "PSP",
+    "CDC",
+    "NCN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hazennstuff:tyros_loot_bag"
+  }
+}

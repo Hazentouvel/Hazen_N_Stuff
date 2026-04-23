@@ -2,7 +2,6 @@ package net.hazen.hazennstuff.Spells.Schools.Hydro;
 
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
-import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
 import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
@@ -11,7 +10,7 @@ import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import net.acetheeldritchking.aces_spell_utils.registries.ASSchoolRegistry;
 import net.hazen.hazennstuff.Entity.Spells.Hydro.RazorbladeTyphoon.RazorbladeTyphoon;
 import net.hazen.hazennstuff.Registries.HnSSounds;
-import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractHydroSpell;
+import net.hazen.hazennstuff.Spells.AbstractSpells.HydroSpells;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -26,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class RazorbladeTyphoonSpell extends AbstractHydroSpell {
+public class RazorbladeTyphoonSpell extends HydroSpells {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "razorblade_typhoon");
     private final DefaultConfig defaultConfig;
 

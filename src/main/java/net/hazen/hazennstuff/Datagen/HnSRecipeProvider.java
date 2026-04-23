@@ -30,6 +30,23 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(RecipeOutput recipeOutput) {
 
         //Items ----------------------------------------------------------------------------------------------------------------
+        /*
+        *** Lootbags
+         */
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.TYROS_LOOT_BAG.get())
+                .pattern("PSP")
+                .pattern("CDC")
+                .pattern("NCN")
+                .define('C', HnSItemRegistry.CLOTH_OF_THE_FLAMEBEARER.get())
+                .define('D', ItemRegistry.DECREPIT_KEY.get())
+                .define('S', ItemRegistry.DIVINE_SOULSHARD.get())
+                .define('N', Items.NETHERITE_INGOT)
+                .define('P', HnSItemRegistry.PYRIUM_NUGGET.get())
+                .unlockedBy("has_cloth_of_the_flamebearer", has(HnSItemRegistry.CLOTH_OF_THE_FLAMEBEARER.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/loot_bags/tyros_loot_bag"));
+
+
 
         /*
          *** Orbs and Runes
@@ -2350,41 +2367,40 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/tyros/tyros_boots"));
 
 
-        //Soul Legionnaire Commander Armor
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(ItemRegistry.TIMELESS_SLURRY.get()),
-                        Ingredient.of(HnSItemRegistry.TYROS_HELMET.get()),
-                        Ingredient.of(ItemRegistry.CINDER_ESSENCE.get()),
+                        Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
+                        Ingredient.of(HnSItemRegistry.TYROS_SOUL_HELMET.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
-                        HnSItemRegistry.TYROS_SOUL_HELMET.get())
-                .unlocks("has_timeless_slurry", has(ItemRegistry.TIMELESS_SLURRY.get()))
+                        HnSItemRegistry.TYROS_HELMET.get())
+                .unlocks("has_magic_cloth", has(ItemRegistry.MAGIC_CLOTH.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/tyros/tyros_soul_helmet"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(ItemRegistry.TIMELESS_SLURRY.get()),
-                        Ingredient.of(HnSItemRegistry.TYROS_CHESTPLATE.get()),
-                        Ingredient.of(ItemRegistry.CINDER_ESSENCE.get()),
+                        Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
+                        Ingredient.of(HnSItemRegistry.TYROS_SOUL_CHESTPLATE.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
-                        HnSItemRegistry.TYROS_SOUL_CHESTPLATE.get())
-                .unlocks("has_timeless_slurry", has(ItemRegistry.TIMELESS_SLURRY.get()))
+                        HnSItemRegistry.TYROS_CHESTPLATE.get())
+                .unlocks("has_magic_cloth", has(ItemRegistry.MAGIC_CLOTH.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/tyros/tyros_soul_chestplate"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(ItemRegistry.TIMELESS_SLURRY.get()),
-                        Ingredient.of(HnSItemRegistry.TYROS_LEGGINGS.get()),
-                        Ingredient.of(ItemRegistry.CINDER_ESSENCE.get()),
+                        Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
+                        Ingredient.of(HnSItemRegistry.TYROS_SOUL_LEGGINGS.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
-                        HnSItemRegistry.TYROS_SOUL_LEGGINGS.get())
-                .unlocks("has_timeless_slurry", has(ItemRegistry.TIMELESS_SLURRY.get()))
+                        HnSItemRegistry.TYROS_LEGGINGS.get())
+                .unlocks("has_magic_cloth", has(ItemRegistry.MAGIC_CLOTH.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/tyros/tyros_soul_leggings"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(ItemRegistry.TIMELESS_SLURRY.get()),
-                        Ingredient.of(HnSItemRegistry.TYROS_BOOTS.get()),
-                        Ingredient.of(ItemRegistry.CINDER_ESSENCE.get()),
+                        Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
+                        Ingredient.of(HnSItemRegistry.TYROS_SOUL_BOOTS.get()),
+                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
-                        HnSItemRegistry.TYROS_SOUL_BOOTS.get())
-                .unlocks("has_timeless_slurry", has(ItemRegistry.TIMELESS_SLURRY.get()))
+                        HnSItemRegistry.TYROS_BOOTS.get())
+                .unlocks("has_magic_cloth", has(ItemRegistry.MAGIC_CLOTH.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/tyros/tyros_soul_boots"));
 
 

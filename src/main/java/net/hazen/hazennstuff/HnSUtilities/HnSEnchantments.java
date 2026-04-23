@@ -62,7 +62,7 @@ public class HnSEnchantments {
         register(context, FIRE_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
@@ -82,7 +82,7 @@ public class HnSEnchantments {
         register(context, ICE_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
@@ -102,7 +102,7 @@ public class HnSEnchantments {
         register(context, NATURE_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
@@ -122,7 +122,7 @@ public class HnSEnchantments {
         register(context, LIGHTNING_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
@@ -142,7 +142,7 @@ public class HnSEnchantments {
         register(context, ENDER_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
@@ -162,7 +162,7 @@ public class HnSEnchantments {
         register(context, BLOOD_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
@@ -182,7 +182,7 @@ public class HnSEnchantments {
         register(context, EVOCATION_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
@@ -202,7 +202,7 @@ public class HnSEnchantments {
         register(context, HOLY_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
@@ -222,7 +222,7 @@ public class HnSEnchantments {
         register(context, RADIANCE_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
@@ -242,7 +242,7 @@ public class HnSEnchantments {
         register(context, SHADOW_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
@@ -262,7 +262,7 @@ public class HnSEnchantments {
         register(context, COSMIC_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
@@ -282,7 +282,7 @@ public class HnSEnchantments {
         register(context, HYDRO_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
@@ -302,7 +302,7 @@ public class HnSEnchantments {
         register(context, TECHNOMANCY_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
@@ -322,7 +322,7 @@ public class HnSEnchantments {
         register(context, OCCULT_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
@@ -342,7 +342,7 @@ public class HnSEnchantments {
         register(context, ELDRITCH_ATTUNEMENT, Enchantment.enchantment(Enchantment.definition(
                         items.getOrThrow(HnSTags.ENCHANTED_SPELLBOOK),
                         1,
-                        5,
+                        3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,

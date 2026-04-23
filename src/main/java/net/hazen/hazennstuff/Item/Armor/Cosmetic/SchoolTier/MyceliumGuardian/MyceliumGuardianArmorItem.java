@@ -13,7 +13,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class MyceliumGuardianArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public MyceliumGuardianArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, schoolTierMulti(
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, schoolTierDual(
                 HnSAttributeRegistry.RADIANCE_SPELL_POWER,
                 AttributeRegistry.NATURE_SPELL_POWER
         ));

@@ -1,15 +1,10 @@
 package net.hazen.hazennstuff.Spells.AbstractSpells;
 
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
-import net.hazen.hazennstuff.Registries.HnSItemRegistry;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import top.theillusivec4.curios.api.CuriosApi;
-
-import static net.acetheeldritchking.aces_spell_utils.utils.ASUtils.isValidUnlockItemInInventory;
 
 public abstract class AbstractTaggedSpell extends AbstractSpell {
 

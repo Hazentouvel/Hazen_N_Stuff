@@ -22,12 +22,6 @@
   ],
   "result": {
     "components": {
-      "irons_spellbooks:affinity_data": {
-        "bonuses": {
-          "hazennstuff:fiery_dagger": 1,
-          "irons_spellbooks:raise_hell": 1
-        }
-      },
       "irons_spellbooks:spell_container": {
         "data": [],
         "maxSpells": 1,

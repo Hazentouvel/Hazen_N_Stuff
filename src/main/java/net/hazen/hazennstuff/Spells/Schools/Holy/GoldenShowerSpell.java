@@ -8,7 +8,6 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import net.hazen.hazennstuff.Entity.Spells.Holy.IchorStream.IchorStream;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSSounds;
-import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractGoldenShowerSpell;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -23,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class GoldenShowerSpell extends AbstractGoldenShowerSpell {
+public class GoldenShowerSpell extends net.hazen.hazennstuff.Spells.AbstractSpells.GoldenShowerSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "golden_shower");
 
     @Override

@@ -17,7 +17,7 @@ import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.ScorchingSlash.ScorchingSlashOptions;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
-import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractRavensBaneSpell;
+import net.hazen.hazennstuff.Spells.AbstractSpells.RavensBaneSpell;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class ScorchingSlashSpell extends AbstractRavensBaneSpell {
+public class ScorchingSlashSpell extends RavensBaneSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "scorching_slash");
 
     @Override

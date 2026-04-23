@@ -61,7 +61,6 @@ import net.hazen.hazennstuff.Item.Armor.Melee.FrostbiteKnight.FrostbiteKnightArm
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.GabrielULTRAKILL.GeckolibGabrielArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.GabrielULTRAKILL.GeckolibGabrielElytraItem;
 import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.GarmentsOfTheFirstFlamebearer.GarmentsOfTheFirstFlamebearerArmorItem;
-import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.GarmentsOfTheFirstFlamebearer.GarmentsOfTheFirstFlamebearerChestplateArmorItem;
 import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.GarmentsOfTheFirstFlamebearer.SoulMode.GarmentsOfTheFirstFlamebearerSoulArmorItem;
 import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.GarmentsOfTheFirstFlamebearer.SoulMode.GarmentsOfTheFirstFlamebearerSoulChestplateArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.Battlemage.GiornoGiovanna.GiornoGiovannaArmorItem;
@@ -127,6 +126,7 @@ import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.Energ
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.GoldenShowerSpellbook;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWings;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSFoodProperties;
+import net.hazen.hazennstuff.Item.Lootbags.TyrosLootBag;
 import net.hazen.hazennstuff.Item.SpawnEggs.SpawnVoidWanderer;
 import net.hazen.hazennstuff.Item.Staves.BlossomOfTheEnchantress.BlossomOfTheEnchantress;
 import net.hazen.hazennstuff.Item.Staves.CeaselessVoid.CeaselessVoid;
@@ -209,6 +209,14 @@ import java.util.Collection;
 
 public class HnSItemRegistry {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(HazenNStuff.MOD_ID);
+
+    /*
+     *** [Lootbags] **********************************************************************
+     */
+
+    // Enhanced Fire Upgrade Orb
+    public static final DeferredHolder<Item, Item> TYROS_LOOT_BAG = ITEMS.register
+            ("tyros_loot_bag", TyrosLootBag::new);
 
     /*
     *** [Spawn Eggs] *********************************************************************
@@ -2656,7 +2664,7 @@ public class HnSItemRegistry {
             .durability(ArmorItem.Type.HELMET.getDurability(96))
     ));
 
-    public static final DeferredHolder<Item, Item> TYROS_CHESTPLATE = ITEMS.register("garments_of_the_first_flamebearer_chestplate", () -> new GarmentsOfTheFirstFlamebearerChestplateArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+    public static final DeferredHolder<Item, Item> TYROS_CHESTPLATE = ITEMS.register("garments_of_the_first_flamebearer_chestplate", () -> new GarmentsOfTheFirstFlamebearerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
             .equipment(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()

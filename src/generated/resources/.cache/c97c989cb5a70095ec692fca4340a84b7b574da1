@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-21T11:01:41.2032523	Tags for minecraft:item mod id hazennstuff
+// 1.21.1	2026-04-23T14:58:16.3646353	Tags for minecraft:item mod id hazennstuff
 740053467c0e6401606132b0ce14777e5339d91f data/c/tags/item/bones.json
 cf632719e93aea95dfff3d301acaed8261ecbace data/c/tags/item/enchantables.json
 52503413b4a1cfad51f295eac80bbbedd1ecb0a6 data/c/tags/item/foods.json
@@ -12,14 +12,18 @@ b7b1064eb4a3f14aed6cb5e487059a9c124cae9c data/c/tags/item/raw_materials.json
 68f33931873211ee1de5bcb19f7714e2082852f4 data/c/tags/item/tools/mace.json
 3a2d4c6a0dd25402a29b8a43537bf84ed084654c data/c/tags/item/tools/spear.json
 33ae00203031dc8940fd8c6a2b1109ed84c3113d data/hazennstuff/tags/item/armors/armors_for_idle.json
-4eeb165faad740d6ce6e13047986727d208af52e data/hazennstuff/tags/item/armors/hns_boots.json
-c652d5c5daf9bc92ae7772e0fd31d3f38f6fbfd1 data/hazennstuff/tags/item/armors/hns_chestplate.json
-0d5c37c431e2b107c748c4e7487f7187be235333 data/hazennstuff/tags/item/armors/hns_helmet.json
-a2b7bf958b856eefa43137ae8d54d40bac107180 data/hazennstuff/tags/item/armors/hns_leggings.json
+44b3f454450e2a53b97befb783ad5b9b8b353432 data/hazennstuff/tags/item/armors/hns_boots.json
+292c604589f67c319629513e415519c2e94fd802 data/hazennstuff/tags/item/armors/hns_chestplate.json
+1457672e9e448a867d15058187eea931c26b4588 data/hazennstuff/tags/item/armors/hns_helmet.json
+2ed39cd9a8e988f177b6c30cae6c93f7198b8db1 data/hazennstuff/tags/item/armors/hns_leggings.json
 56260625434a5e352a576c56c962db6d6d899e48 data/hazennstuff/tags/item/armors/netherite_battlemage/netherite_battlemage_boots.json
 2f17fea1836e9ddcf4b05485a366313a9b1d218c data/hazennstuff/tags/item/armors/netherite_battlemage/netherite_battlemage_chestplate.json
 b9954a780f37e2d30b2edd1085646f77332ff93c data/hazennstuff/tags/item/armors/netherite_battlemage/netherite_battlemage_helmet.json
 0fd9b110e434eb6e16384c3d1604c526e49c8648 data/hazennstuff/tags/item/armors/netherite_battlemage/netherite_battlemage_leggings.json
+10b8ca4c131b4109273c4e0f2efee38dfba6afd8 data/hazennstuff/tags/item/armors/paragon/paragon_boots.json
+faba68b4ca13be2d863985e76603464d5d62ec8b data/hazennstuff/tags/item/armors/paragon/paragon_chestplate.json
+c6b7d231266d82d01cd4a171b4d661c630105672 data/hazennstuff/tags/item/armors/paragon/paragon_helmet.json
+a07e7b0335890664e83b36dd665fd68302e9d727 data/hazennstuff/tags/item/armors/paragon/paragon_leggings.json
 e54f64a9384bc17bd74834d528920b5453154f93 data/hazennstuff/tags/item/armors/pure/pure_boots.json
 cc56a31b6fe6e5699db4a41e31de015f03423086 data/hazennstuff/tags/item/armors/pure/pure_chestplate.json
 c22949c6101ea00944a0339a184953d039e9eea3 data/hazennstuff/tags/item/armors/pure/pure_helmet.json

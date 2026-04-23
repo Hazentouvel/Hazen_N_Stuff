@@ -17,6 +17,7 @@ public class HnSParticleHelper {
     public static final ParticleOptions MUSHROOM_FOG = new FogParticleOptions(new Vector3f(0.036f, 0.27f, 0.72f), 0.7f);
     public static final ParticleOptions ICHOR_TRAIL = new SparkParticleOptions(new Vector3f(0.95F, 0.7F, 0.23F));
     public static final ParticleOptions NATURE_IMPACT = new BlastwaveParticleOptions(new Vector3f(0.95F, 0.7F, 0.23F), 1.0F);
+    public static final ParticleOptions FIRE_IMPACT = new BlastwaveParticleOptions(new Vector3f(1.0F, 0.6F, 0.3F), 4F);
     public static final ParticleOptions BLADE_PARTICLE = HnSParticleRegistry.BLADE_PARTICLES.get();
     public static final ParticleOptions MUSHROOM_PARTICLE = HnSParticleRegistry.MUSHROOM_PARTICLE.get();
     public static final ParticleOptions ELDRITCH_SOUL_PARTICLE = HnSParticleRegistry.ELDRITCH_SOUL_PARTICLE.get();

@@ -66,7 +66,6 @@ public class CallForthTerraprismaSpell extends AbstractSpell {
                 )
         ));
 
-        System.out.println(li.getFirst().toString()+"\n"+ li.getFirst().getStyle());
         return li;
     }
 

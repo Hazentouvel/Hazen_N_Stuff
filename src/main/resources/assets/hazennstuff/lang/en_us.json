@@ -1,4 +1,11 @@
 {
+
+  "key.hazennstuff.group": "Hazen 'n Stuff Abilities",
+  "key.hazennstuff.ability_1": "Armor Ability 1",
+  "key.hazennstuff.ability_2": "Armor Ability 2",
+
+
+
   "tooltip.hazennstuff.shift": "Press §eShift§r for more",
 
   "enchantment.hazennstuff.fire_attunement": "Fire Attunement",
@@ -43,7 +50,6 @@
 
   "item.hazennstuff.calamity_fables.description": "A Calamity Fables reference.",
   "item.hazennstuff.calamity.description": "A Calamity mod reference.",
-  "item.hazennstuff.tyros.description": "Bear the garments of the first flambearer...",
   "item.hazennstuff.jojo.description": "A Jojo's Bizarre Adventure Reference.",
   "item.hazennstuff.neru.description": "A reference to Neru Akita.",
   "item.hazennstuff.ultrakill.description": "An Ultrakill Reference.",
@@ -81,6 +87,10 @@
   "rarity.hazennstuff_rarity_deus.name": "Enlightened",
   "rarity.hazennstuff_rarity_hydro.name": "Aquatic",
   "rarity.hazennstuff_rarity_fireblossom.name": "Fireblossomed",
+
+  "item.hazennstuff.tyros_loot_bag": "Flamebearer's Goodie Bag",
+  "item.hazennstuff.tyros_loot_bag.desc": "Right-Click to open. Drops Citadel Vault loot.",
+
 
   "item.hazennstuff.excalibur_fragment": "Excalibur Fragment",
   "item.hazennstuff.deus_essence": "Deus Essence",
@@ -854,6 +864,13 @@
   "item.hazennstuff.soul_legionnaire_commander_leggings": "Soul Legionnaire Commander Leggings",
   "item.hazennstuff.soul_legionnaire_commander_boots": "Soul Legionnaire Commander Boots",
 
+
+  "item.hazennstuff.tyros.description": "Bear the garments of the first flambearer...",
+  "item.hazennstuff.tyros_affinity.description": "+1 level to all Tyros related spells",
+  "item.hazennstuff.garments_of_the_first_flamebearer_chestplate.desc": "Dealing Fire Spell Damage adds a stack of Immolation to the creature",
+  "item.hazennstuff.garments_of_the_first_flamebearer_chestplate.immolate.desc": "At 3 Immolation stacks, cause an explosion (%s damage), spreading Immolation",
+
+
   "item.hazennstuff.garments_of_the_first_flamebearer_helmet": "Tyros Hood",
   "item.hazennstuff.garments_of_the_first_flamebearer_chestplate": "Tyros Chestplate",
   "item.hazennstuff.garments_of_the_first_flamebearer_leggings": "Tyros Leggings",
@@ -1167,6 +1184,9 @@
 
 
 
+  "effect.hazennstuff.tyros_soul_state": "Soul State",
+
+
   "effect.hazennstuff.tyrants_grace": "Tyrant's Grace",
   "effect.hazennstuff.fireblossom_ruler": "Fireblossom Ruler",
   "effect.hazennstuff.fireblossom_warrior": "Fireblossom Warrior",
@@ -1186,6 +1206,9 @@
   "effect.hazennstuff.hexed": "Hexed",
   "effect.hazennstuff.chaos_state": "Chaos State",
   "effect.hazennstuff.gluttonous_hunger": "Gluttonous Hunger",
+
+  "effect.hazennstuff.tyros_soul_state.description": "Enhances your ability with the echo of tyros...",
+
 
   "effect.hazennstuff.tyrants_grace.description": "Recieve the Flamebearer's Tyrannical enhancement, increases your attack speed and damage by 1, and your cast movement speed by 20% and fire spellpower by 12%.",
   "effect.hazennstuff.fireblossom_ruler.description": "Reign over the lands as your cast movement speed increases by 15% and spell resist increases by 10%.",

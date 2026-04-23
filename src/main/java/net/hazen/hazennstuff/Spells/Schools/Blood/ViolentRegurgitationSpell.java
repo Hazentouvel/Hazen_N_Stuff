@@ -55,7 +55,6 @@ public class ViolentRegurgitationSpell extends AbstractSpell {
                 Component.translatable("attribute.hazennstuff.hunger_loss", getHungerLoss(spellLevel))
         ));
 
-        System.out.println(li.getFirst().toString()+"\n"+ li.getFirst().getStyle());
         return li;
     }
 

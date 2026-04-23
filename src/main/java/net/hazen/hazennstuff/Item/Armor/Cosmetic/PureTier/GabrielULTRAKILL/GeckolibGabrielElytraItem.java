@@ -28,7 +28,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
 
-import static net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorItem.pureTier;
+import static net.hazen.hazennstuff.HnSUtilities.Armor.HnSAzureLibArmorItem.pureTier;
 
 public class GeckolibGabrielElytraItem extends ImbuableChestplateArmorItem implements IDisableJacket, IDisableHat {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);

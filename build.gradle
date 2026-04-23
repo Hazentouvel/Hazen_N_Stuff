@@ -170,7 +170,7 @@ dependencies {
     //implementation "curse.maven:ldlib-626676:6911394"
 
     //AzureLib
-    implementation "curse.maven:azurelib-817423:7935743"
+    implementation "curse.maven:azurelib-817423:7371539"
 
     /*
     *** Runtime Only ***************************************************************************************************

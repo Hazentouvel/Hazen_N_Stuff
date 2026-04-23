@@ -81,6 +81,8 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSBlocks.FIREBLOSSOM);
 
                         //Misc
+                        output.accept(HnSItemRegistry.TYROS_LOOT_BAG.get());
+
                         output.accept(HnSItemRegistry.CLOTH_OF_THE_FLAMEBEARER);
                         output.accept(HnSItemRegistry.STORM_WEAVE);
                         output.accept(HnSItemRegistry.SPIDER_FANG);

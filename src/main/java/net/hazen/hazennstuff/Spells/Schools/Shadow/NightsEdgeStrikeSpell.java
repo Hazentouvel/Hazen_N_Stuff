@@ -17,7 +17,7 @@ import net.hazen.hazennstuff.Registries.HnSParticleHelper;
 import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrikeOptions;
-import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractNightsEdgeSpell;
+import net.hazen.hazennstuff.Spells.AbstractSpells.NightsEdgeSpell;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class NightsEdgeStrikeSpell extends AbstractNightsEdgeSpell {
+public class NightsEdgeStrikeSpell extends NightsEdgeSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "nights_edge_strike");
 
     @Override

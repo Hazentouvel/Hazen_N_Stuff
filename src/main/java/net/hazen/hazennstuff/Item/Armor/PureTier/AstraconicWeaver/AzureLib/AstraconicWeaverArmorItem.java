@@ -5,6 +5,7 @@ import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.HnSUtilities.Armor.HnSGeckolibArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
 import net.hazen.hazennstuff.Registries.HnSEffects;

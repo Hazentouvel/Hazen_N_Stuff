@@ -1,19 +1,13 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "irons_spellbooks:cinder_essence"
+    "item": "irons_spellbooks:arcane_essence"
   },
   "base": {
-    "item": "hazennstuff:garments_of_the_first_flamebearer_chestplate"
+    "item": "hazennstuff:garments_of_the_first_flamebearer_soul_chestplate"
   },
   "result": {
     "components": {
-      "irons_spellbooks:affinity_data": {
-        "bonuses": {
-          "hazennstuff:fiery_dagger": 1,
-          "irons_spellbooks:raise_hell": 1
-        }
-      },
       "irons_spellbooks:spell_container": {
         "data": [],
         "maxSpells": 1,
@@ -22,9 +16,9 @@
       }
     },
     "count": 1,
-    "id": "hazennstuff:garments_of_the_first_flamebearer_soul_chestplate"
+    "id": "hazennstuff:garments_of_the_first_flamebearer_chestplate"
   },
   "template": {
-    "item": "irons_spellbooks:timeless_slurry"
+    "item": "irons_spellbooks:magic_cloth"
   }
 }

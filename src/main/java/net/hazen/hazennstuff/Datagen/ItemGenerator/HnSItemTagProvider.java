@@ -456,6 +456,22 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.GIORNO_GIOVANNA_BOOTS.get())
         ;
 
+        tag(HnSTags.PARAGON_HELMET)
+                .add(HnSItemRegistry.TYROS_HELMET.get())
+        ;
+
+        tag(HnSTags.PARAGON_CHESTPLATE)
+                .add(HnSItemRegistry.TYROS_CHESTPLATE.get())
+        ;
+
+        tag(HnSTags.PARAGON_LEGGINGS)
+                .add(HnSItemRegistry.TYROS_LEGGINGS.get())
+        ;
+
+        tag(HnSTags.PARAGON_BOOTS)
+                .add(HnSItemRegistry.TYROS_BOOTS.get())
+        ;
+
 
         tag(HnSTags.PURE_HELMET)
                 .add(HnSItemRegistry.BLAZEBORNE_HELMET.get())
@@ -835,6 +851,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .addTag(HnSTags.SCHOOL_HELMET)
                 .addTag(HnSTags.NETHERITE_BATTLEMAGE_HELMET)
                 .addTag(HnSTags.PURE_HELMET)
+                .addTag(HnSTags.PARAGON_HELMET)
 
                 .add(HnSItemRegistry.MINER_HELMET.get())
                 .add(HnSItemRegistry.SPECTRAL_SPELUNKER_HELMET.get())
@@ -860,6 +877,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .addTag(HnSTags.SCHOOL_CHESTPLATE)
                 .addTag(HnSTags.NETHERITE_BATTLEMAGE_CHESTPLATE)
                 .addTag(HnSTags.PURE_CHESTPLATE)
+                .addTag(HnSTags.PARAGON_CHESTPLATE)
 
                 .add(HnSItemRegistry.MINER_CHESTPLATE.get())
                 .add(HnSItemRegistry.SPECTRAL_SPELUNKER_CHESTPLATE.get())
@@ -883,6 +901,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .addTag(HnSTags.SCHOOL_LEGGINGS)
                 .addTag(HnSTags.NETHERITE_BATTLEMAGE_LEGGINGS)
                 .addTag(HnSTags.PURE_LEGGINGS)
+                .addTag(HnSTags.PARAGON_LEGGINGS)
 
                 .add(HnSItemRegistry.MINER_LEGGINGS.get())
                 .add(HnSItemRegistry.SPECTRAL_SPELUNKER_LEGGINGS.get())
@@ -906,6 +925,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .addTag(HnSTags.SCHOOL_BOOTS)
                 .addTag(HnSTags.NETHERITE_BATTLEMAGE_BOOTS)
                 .addTag(HnSTags.PURE_BOOTS)
+                .addTag(HnSTags.PARAGON_BOOTS)
 
                 .add(HnSItemRegistry.MINER_BOOTS.get())
                 .add(HnSItemRegistry.SPECTRAL_SPELUNKER_BOOTS.get())

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cloth_of_the_flamebearer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hazennstuff:cloth_of_the_flamebearer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hazennstuff:crafting/loot_bags/tyros_loot_bag"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cloth_of_the_flamebearer"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hazennstuff:crafting/loot_bags/tyros_loot_bag"
+    ]
+  }
+}

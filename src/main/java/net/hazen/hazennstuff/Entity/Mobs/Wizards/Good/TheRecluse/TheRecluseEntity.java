@@ -15,8 +15,9 @@ import io.redspace.ironsspellbooks.loot.SpellFilter;
 import io.redspace.ironsspellbooks.player.AdditionalWanderingTrades;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import net.hazen.hazennstuff.Datagen.HnSTags;
-import net.hazen.hazennstuff.Entity.Mobs.HnSEntityUtils.AbstractNeutralSpellcastingEnderman;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
+import net.hazen.hazentouvelib.Datagen.HLTags;
+import net.hazen.hazentouvelib.Entities.AbstractNeutralSpellcastingEnderman;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -43,6 +44,7 @@ import net.minecraft.world.entity.ai.targeting.TargetingConditions;
 import net.minecraft.world.entity.ai.village.poi.PoiManager;
 import net.minecraft.world.entity.ai.village.poi.PoiTypes;
 import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.monster.Endermite;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.npc.VillagerData;
@@ -113,10 +115,10 @@ public class TheRecluseEntity extends AbstractNeutralSpellcastingEnderman implem
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, this::isHostileTowards));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (mob) -> mob instanceof Enemy && !(mob instanceof Endermite)));
         this.targetSelector.addGoal(5, new ResetUniversalAngerTargetGoal<>(this, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, true, (entity) -> !entity.getType().is(HnSTags.SPAWNS_OF_ENDER)));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, true, (entity) -> !entity.getType().is(HLTags.SPAWNS_OF_ENDER)));
         this.targetSelector.addGoal(3,
                 new NearestAttackableTargetGoal<>(this, Mob.class, true,
-                        entity -> entity.getType().is(HnSTags.ASTRAL_CONSTRUCT)
+                        entity -> entity.getType().is(HLTags.ASTRAL_CONSTRUCT)
                 ));
 
         this.supportTargetSelector = new GoalSelector(this.level().getProfilerSupplier());
@@ -237,7 +239,12 @@ public class TheRecluseEntity extends AbstractNeutralSpellcastingEnderman implem
             this.supportTargetSelector.tick();
         }
         if (this.tickCount % 60 == 0) {
-            this.level().getEntities(this, this.getBoundingBox().inflate(this.getAttributeValue(Attributes.FOLLOW_RANGE)), (entity) -> entity instanceof Enemy && !(entity instanceof Creeper || entity instanceof IMagicSummon || entity instanceof TamableAnimal)).forEach((enemy) -> {
+            this.level().getEntities(this, this.getBoundingBox().inflate(this.getAttributeValue(Attributes.FOLLOW_RANGE)), (entity) -> entity instanceof Enemy
+                    && !(entity instanceof Creeper
+                    || entity instanceof IMagicSummon
+                    || entity instanceof TamableAnimal
+                    || entity instanceof EnderMan
+                    || entity.getType().is(HLTags.SPAWNS_OF_ENDER))).forEach((enemy) -> {
                 if (enemy instanceof Mob mob && mob.getTarget() == null && TargetingConditions.forCombat().test(mob, this)) {
                     mob.setTarget(this);
                 }

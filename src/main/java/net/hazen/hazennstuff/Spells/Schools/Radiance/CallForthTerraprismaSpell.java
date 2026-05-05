@@ -27,7 +27,7 @@ import io.redspace.ironsspellbooks.entity.spells.summoned_weapons.SummonedSwordE
 import io.redspace.ironsspellbooks.entity.spells.summoned_weapons.SummonedWeaponEntity;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprisma;
-import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
+import net.hazen.hazentouvelib.Registries.HLSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -72,7 +72,7 @@ public class CallForthTerraprismaSpell extends AbstractSpell {
     public CallForthTerraprismaSpell() {
         this.defaultConfig = (new DefaultConfig())
                 .setMinRarity(SpellRarity.EPIC)
-                .setSchoolResource(HnSSchoolRegistry.RADIANCE_RESOURCE)
+                .setSchoolResource(HLSchoolRegistry.RADIANCE_RESOURCE)
                 .setMaxLevel(5)
                 .setCooldownSeconds(150.0F)
                 .build();

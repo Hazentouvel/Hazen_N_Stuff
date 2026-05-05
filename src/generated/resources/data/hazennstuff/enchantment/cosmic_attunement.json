@@ -11,7 +11,7 @@
           "base": 0.04,
           "per_level_above_first": 0.04
         },
-        "attribute": "hazennstuff:cosmic_spell_power",
+        "attribute": "hazentouvelib:cosmic_spell_power",
         "id": "hazennstuff:cosmic_attunement",
         "operation": "add_multiplied_base"
       }
@@ -30,6 +30,6 @@
   "slots": [
     "mainhand"
   ],
-  "supported_items": "#hazennstuff:enchanted_spellbook",
+  "supported_items": "#hazentouvelib:enchanted_spellbook",
   "weight": 1
 }

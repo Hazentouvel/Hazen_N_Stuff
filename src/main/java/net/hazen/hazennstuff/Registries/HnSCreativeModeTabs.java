@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.Registries;
 
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazentouvelib.Registries.HLItemRegistry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -103,9 +104,9 @@ public class HnSCreativeModeTabs {
                         /*
                         *** Upgrade Orbs
                          */
-                        output.accept(HnSItemRegistry.RADIANCE_UPGRADE_ORB.get());
-                        output.accept(HnSItemRegistry.SHADOW_UPGRADE_ORB.get());
-                        output.accept(HnSItemRegistry.COSMIC_UPGRADE_ORB.get());
+                        output.accept(HLItemRegistry.RADIANCE_UPGRADE_ORB.get());
+                        output.accept(HLItemRegistry.SHADOW_UPGRADE_ORB.get());
+                        output.accept(HLItemRegistry.COSMIC_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.HYDRO_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.ARCHERY_UPGRADE_ORB.get());
                         output.accept(HnSItemRegistry.MELEE_UPGRADE_ORB.get());
@@ -120,9 +121,9 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.MELEE_RUNE.get());
                         output.accept(HnSItemRegistry.ARCHERY_RUNE.get());
                         output.accept(HnSItemRegistry.HEALTH_RUNE.get());
-                        output.accept(HnSItemRegistry.SHADOW_RUNE.get());
-                        output.accept(HnSItemRegistry.RADIANCE_RUNE.get());
-                        output.accept(HnSItemRegistry.COSMIC_RUNE.get());
+                        output.accept(HLItemRegistry.SHADOW_RUNE.get());
+                        output.accept(HLItemRegistry.RADIANCE_RUNE.get());
+                        output.accept(HLItemRegistry.COSMIC_RUNE.get());
                         output.accept(HnSItemRegistry.HYDRO_RUNE.get());
                         output.accept(HnSItemRegistry.ELDRITCH_RUNE.get());
 
@@ -523,12 +524,6 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.TYROS_CHESTPLATE.get());
                         output.accept(HnSItemRegistry.TYROS_LEGGINGS.get());
                         output.accept(HnSItemRegistry.TYROS_BOOTS.get());
-
-                        // Tyros Soul
-                        output.accept(HnSItemRegistry.TYROS_SOUL_HELMET.get());
-                        output.accept(HnSItemRegistry.TYROS_SOUL_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.TYROS_SOUL_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.TYROS_SOUL_BOOTS.get());
 
 
                         /*

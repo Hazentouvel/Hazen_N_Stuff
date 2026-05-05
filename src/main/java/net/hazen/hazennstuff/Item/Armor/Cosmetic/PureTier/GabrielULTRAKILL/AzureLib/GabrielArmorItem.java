@@ -64,7 +64,7 @@ public class GabrielArmorItem extends ImbuableHnSArmorItem implements IDisableJa
     }
     private boolean isWearingFullSet(Player player) {
         return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof GabrielArmorItem &&
-                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof GabrielElytraArmorItem &&
+                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof GabrielArmorItem &&
                 player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof GabrielArmorItem &&
                 player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof GabrielArmorItem;
     }

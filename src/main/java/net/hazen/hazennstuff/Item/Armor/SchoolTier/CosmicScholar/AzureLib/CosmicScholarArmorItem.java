@@ -4,7 +4,7 @@ import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.registries.ArmorMaterialRegistry;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableHnSArmorItem;
-import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
+import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 
 import static io.redspace.ironsspellbooks.item.armor.ExtendedArmorItem.schoolAttributes;
 
@@ -12,7 +12,7 @@ public class CosmicScholarArmorItem extends ImbuableHnSArmorItem implements IDis
 
     public CosmicScholarArmorItem(Type type, Properties settings) {
         super(ArmorMaterialRegistry.SCHOOL, type, settings, schoolAttributes(
-                HnSAttributeRegistry.COSMIC_SPELL_POWER
+                HLAttributeRegistry.COSMIC_SPELL_POWER
         ));
     }
 }

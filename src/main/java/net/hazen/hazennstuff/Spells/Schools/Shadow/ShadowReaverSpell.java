@@ -14,7 +14,7 @@ import java.util.Optional;
 
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowReaver.ShadowReaver;
-import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
+import net.hazen.hazentouvelib.Registries.HLSchoolRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -46,7 +46,7 @@ public class ShadowReaverSpell extends AbstractSpell {
         this.defaultConfig = (
                 new DefaultConfig())
                 .setMinRarity(SpellRarity.EPIC)
-                .setSchoolResource(HnSSchoolRegistry.SHADOW_RESOURCE)
+                .setSchoolResource(HLSchoolRegistry.SHADOW_RESOURCE)
                 .setMaxLevel(6)
                 .setCooldownSeconds((double)4F)
                 .build();

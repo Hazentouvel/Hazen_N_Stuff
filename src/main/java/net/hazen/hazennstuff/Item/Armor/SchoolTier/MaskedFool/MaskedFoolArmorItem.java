@@ -5,7 +5,7 @@ import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.registries.ArmorMaterialRegistry;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
-import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
+import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
@@ -15,7 +15,7 @@ import static io.redspace.ironsspellbooks.item.armor.ExtendedArmorItem.schoolAtt
 public class MaskedFoolArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public MaskedFoolArmorItem(Type type, Properties settings) {
         super(ArmorMaterialRegistry.SCHOOL, type, settings, schoolAttributes(
-                HnSAttributeRegistry.SHADOW_SPELL_POWER
+                HLAttributeRegistry.SHADOW_SPELL_POWER
         ));
     }
     // Just supply the armor model here; you don't have to worry about making a new renderer

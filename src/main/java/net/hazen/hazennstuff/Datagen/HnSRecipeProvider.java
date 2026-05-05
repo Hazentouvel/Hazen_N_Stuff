@@ -6,6 +6,7 @@ import net.acetheeldritchking.aces_spell_utils.utils.ASTags;
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
+import net.hazen.hazentouvelib.Registries.HLItemRegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -52,44 +53,6 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
          *** Orbs and Runes
          */
 
-
-        //Upgrade Orbs
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.RADIANCE_UPGRADE_ORB.get())
-                .pattern("RRR")
-                .pattern("ROR")
-                .pattern("RRR")
-                .define('R', HnSItemRegistry.RADIANCE_RUNE.get())
-                .define('O', ItemRegistry.UPGRADE_ORB.get())
-                .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/radiance_upgrade_orb"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.SHADOW_UPGRADE_ORB.get())
-                .pattern("RRR")
-                .pattern("ROR")
-                .pattern("RRR")
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
-                .define('O', ItemRegistry.UPGRADE_ORB.get())
-                .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/shadow_upgrade_orb"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.HYDRO_UPGRADE_ORB.get())
-                .pattern("RRR")
-                .pattern("ROR")
-                .pattern("RRR")
-                .define('R', HnSItemRegistry.HYDRO_RUNE.get())
-                .define('O', ItemRegistry.UPGRADE_ORB.get())
-                .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/hydro_upgrade_orb"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.COSMIC_UPGRADE_ORB.get())
-                .pattern("RRR")
-                .pattern("ROR")
-                .pattern("RRR")
-                .define('R', HnSItemRegistry.COSMIC_RUNE.get())
-                .define('O', ItemRegistry.UPGRADE_ORB.get())
-                .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/cosmic_upgrade_orb"));
-
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.MELEE_UPGRADE_ORB.get())
                 .pattern("RRR")
                 .pattern("ROR")
@@ -125,44 +88,6 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('O', ItemRegistry.UPGRADE_ORB.get())
                 .unlockedBy("has_upgrade_orb", has(ItemRegistry.UPGRADE_ORB.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/upgrade_orbs/eldritch_upgrade_orb"));
-
-
-        //Runes
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.RADIANCE_RUNE.get())
-                .pattern("RRR")
-                .pattern("ROR")
-                .pattern("RRR")
-                .define('R', HnSTags.RADIANCE_FOCUS)
-                .define('O', ItemRegistry.BLANK_RUNE.get())
-                .unlockedBy("has_blank_rune", has(ItemRegistry.BLANK_RUNE.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/runes/radiance_rune"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.HYDRO_RUNE.get())
-                .pattern("RRR")
-                .pattern("ROR")
-                .pattern("RRR")
-                .define('R', ASTags.HYDRO_FOCUS)
-                .define('O', ItemRegistry.BLANK_RUNE.get())
-                .unlockedBy("has_blank_rune", has(ItemRegistry.BLANK_RUNE.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/runes/hydro_rune"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.COSMIC_RUNE.get())
-                .pattern("RRR")
-                .pattern("ROR")
-                .pattern("RRR")
-                .define('R', HnSTags.COSMIC_FOCUS)
-                .define('O', ItemRegistry.BLANK_RUNE.get())
-                .unlockedBy("has_blank_rune", has(ItemRegistry.BLANK_RUNE.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/runes/cosmic_rune"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.SHADOW_RUNE.get())
-                .pattern("RRR")
-                .pattern("ROR")
-                .pattern("RRR")
-                .define('R', HnSTags.SHADOW_FOCUS)
-                .define('O', ItemRegistry.BLANK_RUNE.get())
-                .unlockedBy("has_blank_rune", has(ItemRegistry.BLANK_RUNE.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/runes/shadow_rune"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.MELEE_RUNE.get())
                 .pattern("RRR")
@@ -493,7 +418,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('H', HnSItemRegistry.GLOWING_MUSHROOM.get())
                 .define('S', HnSItemRegistry.PRISMATIC_SHARD.get())
                 .define('Z', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.RADIANCE_RUNE.get())
+                .define('R', HLItemRegistry.RADIANCE_RUNE.get())
                 .define('W', ItemRegistry.WEAPON_PARTS.get())
                 .unlockedBy("has_glowing_mushroom", has(HnSItemRegistry.GLOWING_MUSHROOM.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/weapons/hammush"));
@@ -504,7 +429,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("WZ ")
                 .define('P', HnSItemRegistry.PRISMATIC_SHARD.get())
                 .define('Z', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.RADIANCE_RUNE.get())
+                .define('R', HLItemRegistry.RADIANCE_RUNE.get())
                 .define('W', ItemRegistry.WEAPON_PARTS.get())
                 .unlockedBy("has_prismatic_shard", has(HnSItemRegistry.PRISMATIC_SHARD.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/weapons/spectrum"));
@@ -591,7 +516,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("RWP")
                 .pattern("ER ")
                 .define('P', HnSItemRegistry.PRISMATIC_SHARD.get())
-                .define('R', HnSItemRegistry.RADIANCE_RUNE.get())
+                .define('R', HLItemRegistry.RADIANCE_RUNE.get())
                 .define('E', HnSItemRegistry.EXCALIBUR_FRAGMENT.get())
                 .define('D', ItemRegistry.DIVINE_SOULSHARD.get())
                 .define('W', ItemRegistry.WEAPON_PARTS.get())
@@ -613,7 +538,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("SSZ")
                 .pattern(" RZ")
                 .pattern("WRE")
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('R', HLItemRegistry.SHADOW_RUNE.get())
                 .define('E', HnSItemRegistry.EXCALIBUR_FRAGMENT.get())
                 .define('S', HnSItemRegistry.SHADESTONE.get())
                 .define('Z', HnSItemRegistry.ZENALITE_INGOT.get())
@@ -625,7 +550,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" GG")
                 .pattern("RZE")
                 .pattern("WR ")
-                .define('R', HnSItemRegistry.COSMIC_RUNE.get())
+                .define('R', HLItemRegistry.COSMIC_RUNE.get())
                 .define('G', HnSItemRegistry.COSMIC_GOLD_INGOT.get())
                 .define('Z', HnSItemRegistry.ZENALITE_INGOT.get())
                 .define('E', HnSItemRegistry.EXCALIBUR_FRAGMENT.get())
@@ -679,7 +604,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("ZRS")
                 .pattern("AZ ")
                 .define('A', ItemRegistry.ARTIFICER_STAFF.get())
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('R', HLItemRegistry.SHADOW_RUNE.get())
                 .define('Z', HnSItemRegistry.ZENALITE_INGOT.get())
                 .define('S', HnSItemRegistry.SHADESTONE.get())
                 .define('N', HnSItemRegistry.NIGHTMARE_FUEL.get())
@@ -691,7 +616,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("ZRP")
                 .pattern("AZ ")
                 .define('A', ItemRegistry.ARTIFICER_STAFF.get())
-                .define('R', HnSItemRegistry.RADIANCE_RUNE.get())
+                .define('R', HLItemRegistry.RADIANCE_RUNE.get())
                 .define('Z', HnSItemRegistry.ZENALITE_INGOT.get())
                 .define('P', HnSItemRegistry.PRISMATIC_SHARD.get())
                 .define('N', Items.AMETHYST_CLUSTER)
@@ -703,7 +628,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("ZRP")
                 .pattern("AZ ")
                 .define('A', ItemRegistry.ARTIFICER_STAFF.get())
-                .define('R', HnSItemRegistry.COSMIC_RUNE.get())
+                .define('R', HLItemRegistry.COSMIC_RUNE.get())
                 .define('Z', HnSItemRegistry.ZENALITE_INGOT.get())
                 .define('P', HnSItemRegistry.COSMIC_GOLD_INGOT.get())
                 .define('N', HnSItemRegistry.STARDUST.get())
@@ -1462,39 +1387,39 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
          */
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.RADIANCE_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.RADIANCE_RUNE.get()),
                         Ingredient.of(ItemRegistry.WIZARD_HELMET.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.RADIANT_CRYSTAL_HELMET.get())
-                .unlocks("has_radiance_rune", has(HnSItemRegistry.RADIANCE_RUNE.get()))
+                .unlocks("has_radiance_rune", has(HLItemRegistry.RADIANCE_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/bounty_hunter/radiant_crystal_helmet"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.RADIANCE_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.RADIANCE_RUNE.get()),
                         Ingredient.of(ItemRegistry.WIZARD_CHESTPLATE.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.RADIANT_CRYSTAL_CHESTPLATE.get())
-                .unlocks("has_radiance_rune", has(HnSItemRegistry.RADIANCE_RUNE.get()))
+                .unlocks("has_radiance_rune", has(HLItemRegistry.RADIANCE_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/radiant_crystal/radiant_crystal_chestplate"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.RADIANCE_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.RADIANCE_RUNE.get()),
                         Ingredient.of(ItemRegistry.WIZARD_LEGGINGS.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.RADIANT_CRYSTAL_LEGGINGS.get())
-                .unlocks("has_radiance_rune", has(HnSItemRegistry.RADIANCE_RUNE.get()))
+                .unlocks("has_radiance_rune", has(HLItemRegistry.RADIANCE_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/radiant_crystal/radiant_crystal_leggings"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.RADIANCE_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.RADIANCE_RUNE.get()),
                         Ingredient.of(ItemRegistry.WIZARD_BOOTS.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.RADIANT_CRYSTAL_BOOTS.get())
-                .unlocks("has_radiance_rune", has(HnSItemRegistry.RADIANCE_RUNE.get()))
+                .unlocks("has_radiance_rune", has(HLItemRegistry.RADIANCE_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/radiant_crystal/radiant_crystal_boots"));
 
 
@@ -1504,7 +1429,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern(" M ")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.RADIANCE_RUNE.get())
+                .define('R', HLItemRegistry.RADIANCE_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.RADIANT_CRYSTAL_HELMET.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1515,7 +1440,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("RMR")
                 .pattern("TTT")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.RADIANCE_RUNE.get())
+                .define('R', HLItemRegistry.RADIANCE_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.RADIANT_CRYSTAL_CHESTPLATE.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1526,7 +1451,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern("T T")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.RADIANCE_RUNE.get())
+                .define('R', HLItemRegistry.RADIANCE_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.RADIANT_CRYSTAL_LEGGINGS.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1537,7 +1462,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern("   ")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.RADIANCE_RUNE.get())
+                .define('R', HLItemRegistry.RADIANCE_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.RADIANT_CRYSTAL_BOOTS.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1550,39 +1475,39 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
          */
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.SHADOW_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.SHADOW_RUNE.get()),
                         Ingredient.of(ItemRegistry.WIZARD_HELMET.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.MASKED_FOOL_HELMET.get())
-                .unlocks("has_shadow_rune", has(HnSItemRegistry.SHADOW_RUNE.get()))
+                .unlocks("has_shadow_rune", has(HLItemRegistry.SHADOW_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/masked_fool/masked_fool_helmet"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.SHADOW_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.SHADOW_RUNE.get()),
                         Ingredient.of(ItemRegistry.WIZARD_CHESTPLATE.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.MASKED_FOOL_CHESTPLATE.get())
-                .unlocks("has_shadow_rune", has(HnSItemRegistry.SHADOW_RUNE.get()))
+                .unlocks("has_shadow_rune", has(HLItemRegistry.SHADOW_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/masked_fool/masked_fool_chestplate"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.SHADOW_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.SHADOW_RUNE.get()),
                         Ingredient.of(ItemRegistry.WIZARD_LEGGINGS.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.MASKED_FOOL_LEGGINGS.get())
-                .unlocks("has_shadow_rune", has(HnSItemRegistry.SHADOW_RUNE.get()))
+                .unlocks("has_shadow_rune", has(HLItemRegistry.SHADOW_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/masked_fool/masked_fool_leggings"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.SHADOW_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.SHADOW_RUNE.get()),
                         Ingredient.of(ItemRegistry.WIZARD_BOOTS.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.MASKED_FOOL_BOOTS.get())
-                .unlocks("has_shadow_rune", has(HnSItemRegistry.SHADOW_RUNE.get()))
+                .unlocks("has_shadow_rune", has(HLItemRegistry.SHADOW_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/masked_fool/masked_fool_boots"));
 
 
@@ -1593,7 +1518,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern("   ")
                 .define('T', HnSItemRegistry.DEMONITE_INGOT.get())
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('R', HLItemRegistry.SHADOW_RUNE.get())
                 .define('P', HnSItemRegistry.MASKED_FOOL_HELMET.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.DEMONITE_INGOT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_scale/shadow_scale_helmet"));
@@ -1603,7 +1528,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("RTR")
                 .pattern("TTT")
                 .define('T', HnSItemRegistry.DEMONITE_INGOT.get())
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('R', HLItemRegistry.SHADOW_RUNE.get())
                 .define('P', HnSItemRegistry.MASKED_FOOL_CHESTPLATE.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.DEMONITE_INGOT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_scale/shadow_scale_chestplate"));
@@ -1613,7 +1538,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern("T T")
                 .define('T', HnSItemRegistry.DEMONITE_INGOT.get())
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('R', HLItemRegistry.SHADOW_RUNE.get())
                 .define('P', HnSItemRegistry.MASKED_FOOL_LEGGINGS.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.DEMONITE_INGOT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_scale/shadow_scale_leggings"));
@@ -1623,7 +1548,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern("   ")
                 .define('T', HnSItemRegistry.DEMONITE_INGOT.get())
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('R', HLItemRegistry.SHADOW_RUNE.get())
                 .define('P', HnSItemRegistry.MASKED_FOOL_BOOTS.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.DEMONITE_INGOT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/shadow_scale/shadow_scale_boots"));
@@ -1635,7 +1560,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern(" M ")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('R', HLItemRegistry.SHADOW_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.MASKED_FOOL_HELMET.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1646,7 +1571,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("RMR")
                 .pattern("TTT")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('R', HLItemRegistry.SHADOW_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.MASKED_FOOL_CHESTPLATE.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1657,7 +1582,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern("T T")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('R', HLItemRegistry.SHADOW_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.MASKED_FOOL_LEGGINGS.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1668,7 +1593,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern("   ")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('R', HLItemRegistry.SHADOW_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.MASKED_FOOL_BOOTS.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1680,39 +1605,39 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
          */
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.COSMIC_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.COSMIC_RUNE.get()),
                         Ingredient.of(ItemRegistry.WIZARD_HELMET.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.COSMIC_SCHOLAR_HELMET.get())
-                .unlocks("has_cosmic_rune", has(HnSItemRegistry.COSMIC_RUNE.get()))
+                .unlocks("has_cosmic_rune", has(HLItemRegistry.COSMIC_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/cosmic_scholar/cosmic_scholar_helmet"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.COSMIC_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.COSMIC_RUNE.get()),
                         Ingredient.of(ItemRegistry.WIZARD_CHESTPLATE.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.COSMIC_SCHOLAR_CHESTPLATE.get())
-                .unlocks("has_cosmic_rune", has(HnSItemRegistry.COSMIC_RUNE.get()))
+                .unlocks("has_cosmic_rune", has(HLItemRegistry.COSMIC_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/cosmic_scholar/cosmic_scholar_chestplate"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.COSMIC_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.COSMIC_RUNE.get()),
                         Ingredient.of(ItemRegistry.WIZARD_LEGGINGS.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.COSMIC_SCHOLAR_LEGGINGS.get())
-                .unlocks("has_cosmic_rune", has(HnSItemRegistry.COSMIC_RUNE.get()))
+                .unlocks("has_cosmic_rune", has(HLItemRegistry.COSMIC_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/cosmic_scholar/cosmic_scholar_leggings"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.COSMIC_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.COSMIC_RUNE.get()),
                         Ingredient.of(ItemRegistry.WIZARD_BOOTS.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.COSMIC_SCHOLAR_BOOTS.get())
-                .unlocks("has_cosmic_rune", has(HnSItemRegistry.COSMIC_RUNE.get()))
+                .unlocks("has_cosmic_rune", has(HLItemRegistry.COSMIC_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/cosmic_scholar/cosmic_scholar_boots"));
 
 
@@ -1722,7 +1647,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern(" M ")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.COSMIC_RUNE.get())
+                .define('R', HLItemRegistry.COSMIC_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.COSMIC_SCHOLAR_HELMET.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1733,7 +1658,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("RMR")
                 .pattern("TTT")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.COSMIC_RUNE.get())
+                .define('R', HLItemRegistry.COSMIC_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.COSMIC_SCHOLAR_CHESTPLATE.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1744,7 +1669,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern("T T")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.COSMIC_RUNE.get())
+                .define('R', HLItemRegistry.COSMIC_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.COSMIC_SCHOLAR_LEGGINGS.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1755,7 +1680,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern("   ")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.COSMIC_RUNE.get())
+                .define('R', HLItemRegistry.COSMIC_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.COSMIC_SCHOLAR_BOOTS.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1809,7 +1734,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern(" M ")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('R', HLItemRegistry.SHADOW_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.NAUTILUS_KNIGHT_HELMET.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1820,7 +1745,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("RMR")
                 .pattern("TTT")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('R', HLItemRegistry.SHADOW_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.NAUTILUS_KNIGHT_CHESTPLATE.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1831,7 +1756,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern("T T")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('R', HLItemRegistry.SHADOW_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.NAUTILUS_KNIGHT_LEGGINGS.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -1842,7 +1767,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("TPT")
                 .pattern("   ")
                 .define('T', HnSItemRegistry.ZENALITE_INGOT.get())
-                .define('R', HnSItemRegistry.SHADOW_RUNE.get())
+                .define('R', HLItemRegistry.SHADOW_RUNE.get())
                 .define('M', HnSItemRegistry.DIVINE_MOLD.get())
                 .define('P', HnSItemRegistry.NAUTILUS_KNIGHT_BOOTS.get())
                 .unlockedBy("has_zenalite_ingot", has(HnSItemRegistry.ZENALITE_INGOT.get()))
@@ -2367,43 +2292,6 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/armor/tyros/tyros_boots"));
 
 
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
-                        Ingredient.of(HnSItemRegistry.TYROS_SOUL_HELMET.get()),
-                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
-                        RecipeCategory.COMBAT,
-                        HnSItemRegistry.TYROS_HELMET.get())
-                .unlocks("has_magic_cloth", has(ItemRegistry.MAGIC_CLOTH.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/tyros/tyros_soul_helmet"));
-
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
-                        Ingredient.of(HnSItemRegistry.TYROS_SOUL_CHESTPLATE.get()),
-                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
-                        RecipeCategory.COMBAT,
-                        HnSItemRegistry.TYROS_CHESTPLATE.get())
-                .unlocks("has_magic_cloth", has(ItemRegistry.MAGIC_CLOTH.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/tyros/tyros_soul_chestplate"));
-
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
-                        Ingredient.of(HnSItemRegistry.TYROS_SOUL_LEGGINGS.get()),
-                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
-                        RecipeCategory.COMBAT,
-                        HnSItemRegistry.TYROS_LEGGINGS.get())
-                .unlocks("has_magic_cloth", has(ItemRegistry.MAGIC_CLOTH.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/tyros/tyros_soul_leggings"));
-
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
-                        Ingredient.of(HnSItemRegistry.TYROS_SOUL_BOOTS.get()),
-                        Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
-                        RecipeCategory.COMBAT,
-                        HnSItemRegistry.TYROS_BOOTS.get())
-                .unlocks("has_magic_cloth", has(ItemRegistry.MAGIC_CLOTH.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/tyros/tyros_soul_boots"));
-
-
         // Armor Upgrading (Smithing Table)
 
         //Fireblossom Knight Armor
@@ -2693,39 +2581,39 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //Abberant Predator Armor
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.SHADOW_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.SHADOW_RUNE.get()),
                         Ingredient.of(HnSItemRegistry.INFESTATION_HELMET.get()),
                         Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.ABBERANT_PREDATOR_HELMET.get())
-                .unlocks("has_shadow_rune", has(HnSItemRegistry.SHADOW_RUNE.get()))
+                .unlocks("has_shadow_rune", has(HLItemRegistry.SHADOW_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/abberant_predator/abberant_predator_helmet"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.SHADOW_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.SHADOW_RUNE.get()),
                         Ingredient.of(HnSItemRegistry.INFESTATION_CHESTPLATE.get()),
                         Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.ABBERANT_PREDATOR_CHESTPLATE.get())
-                .unlocks("has_shadow_rune", has(HnSItemRegistry.SHADOW_RUNE.get()))
+                .unlocks("has_shadow_rune", has(HLItemRegistry.SHADOW_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/abberant_predator/abberant_predator_chestplate"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.SHADOW_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.SHADOW_RUNE.get()),
                         Ingredient.of(HnSItemRegistry.INFESTATION_LEGGINGS.get()),
                         Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.ABBERANT_PREDATOR_LEGGINGS.get())
-                .unlocks("has_shadow_rune", has(HnSItemRegistry.SHADOW_RUNE.get()))
+                .unlocks("has_shadow_rune", has(HLItemRegistry.SHADOW_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/abberant_predator/abberant_predator_leggings"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.SHADOW_RUNE.get()),
+                        Ingredient.of(HLItemRegistry.SHADOW_RUNE.get()),
                         Ingredient.of(HnSItemRegistry.INFESTATION_BOOTS.get()),
                         Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.ABBERANT_PREDATOR_BOOTS.get())
-                .unlocks("has_shadow_rune", has(HnSItemRegistry.SHADOW_RUNE.get()))
+                .unlocks("has_shadow_rune", has(HLItemRegistry.SHADOW_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/abberant_predator/abberant_predator_boots"));
 
 

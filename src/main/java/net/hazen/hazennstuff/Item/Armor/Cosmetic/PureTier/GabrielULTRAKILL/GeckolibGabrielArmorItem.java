@@ -84,7 +84,7 @@ public class GeckolibGabrielArmorItem extends ImbuableGeckolibHnSArmorItem imple
 
     private boolean isWearingFullSet(Player player) {
         return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof GeckolibGabrielArmorItem &&
-                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof GeckolibGabrielElytraItem &&
+                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof GeckolibGabrielArmorItem &&
                 player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof GeckolibGabrielArmorItem &&
                 player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof GeckolibGabrielArmorItem;
     }

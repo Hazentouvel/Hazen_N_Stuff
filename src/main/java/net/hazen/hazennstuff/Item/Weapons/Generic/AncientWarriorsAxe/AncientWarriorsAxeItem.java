@@ -9,8 +9,9 @@ import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Rarity.HnSRarities;
+import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
+import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
@@ -39,7 +40,7 @@ public class AncientWarriorsAxeItem extends MagicSwordItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(HnSRarities.EVOCATION_RARITY.getValue())
+                        .rarity(HLRarities.EVOCATION_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.ANCIENT_WARRIORS_AXE)
                         ),
                 SpellDataRegistryHolder.of(

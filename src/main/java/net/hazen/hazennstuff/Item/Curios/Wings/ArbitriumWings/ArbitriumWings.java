@@ -6,7 +6,7 @@ import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSDispatcher;
-import net.hazen.hazennstuff.Rarity.HnSRarities;
+import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
@@ -31,7 +31,7 @@ public class ArbitriumWings extends CurioBaseItem {
                 .equipment()
                 .stacksTo(1)
                 .fireResistant()
-                .rarity(HnSRarities.HOLY_RARITY.getValue())
+                .rarity(HLRarities.DEUS_RARITY.getValue())
         );
 
         this.dispatcher = new HnSDispatcher();

@@ -6,7 +6,7 @@ import io.redspace.ironsspellbooks.item.SpellBook;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSDispatcher;
-import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
+import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -23,7 +23,7 @@ public class EbonyScroll extends SpellBook {
     public EbonyScroll() {
         super(10);
         this.withSpellbookAttributes(new AttributeContainer[]{
-                new AttributeContainer(HnSAttributeRegistry.SHADOW_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(HLAttributeRegistry.SHADOW_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, (double)200.0F, AttributeModifier.Operation.ADD_VALUE)
 
         });

@@ -3,7 +3,8 @@ package net.hazen.hazennstuff.Item.Weapons.Ascended.Umbranova.T3;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Rarity.HnSRarities;
+import net.hazen.hazentouvelib.Rarities.HLRarities;
+import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
@@ -22,7 +23,7 @@ public class UmbranovaT3 extends ExtendedSwordItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(HnSRarities.ENDER_RARITY.getValue())
+                        .rarity(HLRarities.ENDER_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.UMBRANOVA_T3))
         );
     }

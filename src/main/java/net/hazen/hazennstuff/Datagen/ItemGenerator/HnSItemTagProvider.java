@@ -6,6 +6,8 @@ import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
+import net.hazen.hazentouvelib.Datagen.HLTags;
+import net.hazen.hazentouvelib.Registries.HLItemRegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -75,26 +77,19 @@ public class HnSItemTagProvider extends ItemTagsProvider {
 
         ;
 
-        tag(HnSTags.ZENALITE)
-
-                .add(HnSItemRegistry.RAW_ZENALITE.get())
-                .add(HnSItemRegistry.STARKISSED_ZENALITE.get())
-
-        ;
-
         tag(HnSTags.LIGHTNING_SHEATH)
 
                 .add(HnSItemRegistry.GALVANIZED_SHEATH.get())
 
         ;
 
-        tag(HnSTags.ENCHANTED_SPELLBOOK)
+        tag(HLTags.ENCHANTED_SPELLBOOK)
 
                 .add(ItemRegistry.DIAMOND_SPELL_BOOK.get())
 
         ;
 
-        tag(HnSTags.FIRE_SPELLBOOK)
+        tag(HLTags.FIRE_SPELLBOOK)
 
                 .add(ItemRegistry.BLAZE_SPELL_BOOK.get())
 
@@ -112,11 +107,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.TYROS_CHESTPLATE.get())
                 .add(HnSItemRegistry.TYROS_LEGGINGS.get())
                 .add(HnSItemRegistry.TYROS_BOOTS.get())
-
-                .add(HnSItemRegistry.TYROS_SOUL_HELMET.get())
-                .add(HnSItemRegistry.TYROS_SOUL_CHESTPLATE.get())
-                .add(HnSItemRegistry.TYROS_SOUL_LEGGINGS.get())
-                .add(HnSItemRegistry.TYROS_SOUL_BOOTS.get())
 
                 .add(HnSItemRegistry.SOULCALLING_SCEPTER.get())
 
@@ -142,8 +132,8 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .addTag(HnSTags.HNS_CHESTPLATE)
                 .addTag(HnSTags.HNS_LEGGINGS)
                 .addTag(HnSTags.HNS_BOOTS)
-                .addTag(HnSTags.ENCHANTED_SPELLBOOK)
-                .addTag(HnSTags.FIRE_SPELLBOOK)
+                .addTag(HLTags.ENCHANTED_SPELLBOOK)
+                .addTag(HLTags.FIRE_SPELLBOOK)
 
                 /*
                 *** Weapons
@@ -1296,13 +1286,13 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.ARCHERY_RUNE.get())
                 .add(HnSItemRegistry.HEALTH_RUNE.get())
                 .add(HnSItemRegistry.ELDRITCH_RUNE.get())
-                .add(HnSItemRegistry.SHADOW_RUNE.get())
-                .add(HnSItemRegistry.RADIANCE_RUNE.get())
-                .add(HnSItemRegistry.COSMIC_RUNE.get())
+                .add(HLItemRegistry.SHADOW_RUNE.get())
+                .add(HLItemRegistry.RADIANCE_RUNE.get())
+                .add(HLItemRegistry.COSMIC_RUNE.get())
                 .add(HnSItemRegistry.HYDRO_RUNE.get())
         ;
 
-        tag(HnSTags.ENDER_MASK)
+        tag(HLTags.ENDER_MASK)
                 .add(Items.CARVED_PUMPKIN)
         ;
 

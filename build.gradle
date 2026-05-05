@@ -153,7 +153,7 @@ dependencies {
      */
 
     //Iron's Spells 'n Spellbooks
-    implementation "curse.maven:iss-855414:7907341"
+    implementation "curse.maven:irons_spells_n_spellbooks-855414:7907341"
     implementation "curse.maven:iron_lib-1492763:7907336"
     implementation "curse.maven:geckolib-388172:6304958"
     implementation "curse.maven:player_animator-658587:6024462"
@@ -164,6 +164,8 @@ dependencies {
     compileOnly "curse.maven:apotheosis-${apotheosis_version}"
     //Ace Utils
     implementation "curse.maven:ace_utils-1299492:7787705"
+    //HazentouveLib
+    implementation "curse.maven:hazentouvelib-1528722:8015594"
 
     // Photon
     //implementation "curse.maven:photon-871522:6911487"

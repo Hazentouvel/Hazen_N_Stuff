@@ -2,12 +2,10 @@ package net.hazen.hazennstuff.Item.Curios.Misc;
 
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
-import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.curios.SimpleDescriptiveCurio;
-import io.redspace.ironsspellbooks.render.CinderousRarity;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.hazen.hazennstuff.Rarity.HnSRarities;
-import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
+import net.hazen.hazentouvelib.Rarities.HLRarities;
+import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
@@ -30,7 +28,7 @@ public class PendantOfHarmonyCurio extends SimpleDescriptiveCurio {
         super(ItemPropertiesHelper.equipment()
                 .stacksTo(1)
                 .fireResistant()
-                .rarity(HnSRarities.RADIANCE_RARITY.getValue())
+                .rarity(HLRarities.RADIANCE_RARITY.getValue())
         );
     }
 
@@ -62,8 +60,8 @@ public class PendantOfHarmonyCurio extends SimpleDescriptiveCurio {
     @Override
     public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {
         Multimap<Holder<Attribute>, AttributeModifier> attr = LinkedHashMultimap.create();
-        attr.put(HnSAttributeRegistry.RADIANCE_SPELL_POWER, new AttributeModifier(id, 0.1, AttributeModifier.Operation.ADD_VALUE));
-        attr.put(HnSAttributeRegistry.RADIANCE_SPELL_RESIST, new AttributeModifier(id, 0.05, AttributeModifier.Operation.ADD_VALUE));
+        attr.put(HLAttributeRegistry.RADIANCE_SPELL_POWER, new AttributeModifier(id, 0.1, AttributeModifier.Operation.ADD_VALUE));
+        attr.put(HLAttributeRegistry.RADIANCE_SPELL_RESIST, new AttributeModifier(id, 0.05, AttributeModifier.Operation.ADD_VALUE));
         return attr;
     }
 

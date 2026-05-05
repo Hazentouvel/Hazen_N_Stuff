@@ -89,7 +89,7 @@ public class ArbitriumRobesArmorItem extends ImbuableHnSArmorItem implements IDi
 
     private boolean isWearingFullSet(Player player) {
         return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof ArbitriumRobesArmorItem &&
-                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof ArbitriumRobesElytraArmorItem &&
+                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof ArbitriumRobesArmorItem &&
                 player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof ArbitriumRobesArmorItem &&
                 player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof ArbitriumRobesArmorItem;
     }

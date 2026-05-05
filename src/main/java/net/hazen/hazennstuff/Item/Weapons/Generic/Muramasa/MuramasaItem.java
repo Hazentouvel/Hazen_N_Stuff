@@ -3,7 +3,7 @@ package net.hazen.hazennstuff.Item.Weapons.Generic.Muramasa;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.hazen.hazentouvelib.Rarities.HLRarities;import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.world.item.Rarity;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;

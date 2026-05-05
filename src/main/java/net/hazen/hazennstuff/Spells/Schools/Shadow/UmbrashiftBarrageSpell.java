@@ -15,7 +15,7 @@ import java.util.Optional;
 
 import io.redspace.ironsspellbooks.spells.ender.TeleportSpell;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowDagger.ShadowDagger;
-import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
+import net.hazen.hazentouvelib.Registries.HLSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
@@ -64,7 +64,7 @@ public class UmbrashiftBarrageSpell extends AbstractSpell {
     public UmbrashiftBarrageSpell() {
         this.defaultConfig = (new DefaultConfig())
                 .setMinRarity(SpellRarity.RARE)
-                .setSchoolResource(HnSSchoolRegistry.SHADOW_RESOURCE)
+                .setSchoolResource(HLSchoolRegistry.SHADOW_RESOURCE)
                 .setMaxLevel(5)
                 .setCooldownSeconds((double)12.0F)
                 .build();

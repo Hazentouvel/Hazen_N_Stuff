@@ -11,8 +11,10 @@ import io.redspace.ironsspellbooks.particle.BlastwaveParticleOptions;
 import io.redspace.ironsspellbooks.spells.ender.TeleportSpell;
 import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Registries.*;
-import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractTaggedSpell;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
+import net.hazen.hazentouvelib.Registries.HLDamageTypes;
+import net.hazen.hazentouvelib.Registries.HLSchoolRegistry;
+import net.hazen.hazentouvelib.Spells.AbstractSpells.AbstractTaggedSpell;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.arguments.EntityAnchorArgument.Anchor;
 import net.minecraft.core.BlockPos;
@@ -70,7 +72,7 @@ public class PrismaticShiftSpell extends AbstractTaggedSpell {
     public PrismaticShiftSpell() {
         this.defaultConfig = (new DefaultConfig())
                 .setMinRarity(SpellRarity.UNCOMMON)
-                .setSchoolResource(HnSSchoolRegistry.RADIANCE_RESOURCE)
+                .setSchoolResource(HLSchoolRegistry.RADIANCE_RESOURCE)
                 .setMaxLevel(3)
                 .setCooldownSeconds((double)1.5F)
                 .build();
@@ -180,7 +182,7 @@ public class PrismaticShiftSpell extends AbstractTaggedSpell {
             float maxHealth = entity.getMaxHealth();
             float damage = Math.max(1.0F, maxHealth * percentDamage);
 
-            DamageSource damageSource = new DamageSource(DamageSources.getHolderFromResource(entity, HnSDamageTypes.CORRUPT_MAGIC));
+            DamageSource damageSource = new DamageSource(DamageSources.getHolderFromResource(entity, HLDamageTypes.CORRUPT_MAGIC));
 
             entity.hurt(damageSource, damage);
 

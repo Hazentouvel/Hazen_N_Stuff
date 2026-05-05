@@ -40,6 +40,6 @@
   "slots": [
     "mainhand"
   ],
-  "supported_items": "#hazennstuff:enchanted_spellbook",
+  "supported_items": "#hazentouvelib:enchanted_spellbook",
   "weight": 3
 }

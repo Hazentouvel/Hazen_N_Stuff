@@ -15,8 +15,8 @@ import java.util.List;
 import java.util.Optional;
 
 import net.hazen.hazennstuff.Entity.Spells.Cosmic.Evercomet.Evercomet;
-import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
-import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
+import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
+import net.hazen.hazentouvelib.Registries.HLSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -54,7 +54,7 @@ public class EvercometBarrageSpell extends AbstractSpell {
         this.defaultConfig = (
                 new DefaultConfig())
                 .setMinRarity(SpellRarity.RARE)
-                .setSchoolResource(HnSSchoolRegistry.COSMIC_RESOURCE)
+                .setSchoolResource(HLSchoolRegistry.COSMIC_RESOURCE)
                 .setMaxLevel(6)
                 .setCooldownSeconds((double)20.0F)
                 .build();
@@ -105,7 +105,7 @@ public class EvercometBarrageSpell extends AbstractSpell {
             return (float) getSpellPower(spellLevel, null) * 7;
         }
         double icePower = caster.getAttributeValue(AttributeRegistry.ICE_SPELL_POWER);
-        double cosmicPower = caster.getAttributeValue(HnSAttributeRegistry.COSMIC_SPELL_POWER);
+        double cosmicPower = caster.getAttributeValue(HLAttributeRegistry.COSMIC_SPELL_POWER);
         return (float)(4.0 + 4.0 * getSpellPower(spellLevel, caster) * (0.4 * icePower + 0.4 * cosmicPower));
     }
 

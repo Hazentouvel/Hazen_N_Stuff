@@ -69,7 +69,7 @@ public class HnSConfiguredFeatures {
         );
 
         register(context, SOLAR_CORE_ORE_KEY, Feature.ORE, new OreConfiguration(netherSolarCoreOres, 6));
-        register(context, RUNESTONE_SLAG_KEY, Feature.ORE, new OreConfiguration(overworldRunestoneSlag, 16));
+        register(context, RUNESTONE_SLAG_KEY, Feature.ORE, new OreConfiguration(overworldRunestoneSlag, 12));
         register(context, ZENALITE_ORE_KEY, Feature.ORE, new OreConfiguration(endZenaliteOres, 6));
         register(context, CHLOROPHYTE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldChlorophyteOres, 6));
         register(context, DREADSTONE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldDreadstoneOres, 6));

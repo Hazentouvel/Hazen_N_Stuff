@@ -108,14 +108,6 @@ public class HnSArmorMaterials {
             4,
             0.15F);
 
-    public static DeferredHolder<ArmorMaterial, ArmorMaterial> CALAMITAS_MATERIAL = register("calamitas",
-            pureArmorMap(),
-            20,
-            HnSSounds.CALAMITAS_EQUIP,
-            () -> Ingredient.of(ItemRegistry.MITHRIL_WEAVE.get()),
-            4,
-            0.15F);
-
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> PURE_ARMOR_TIER_MATERIAL = register("pure_armor_tier",
             pureArmorMap(),
             20,

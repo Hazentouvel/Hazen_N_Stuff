@@ -7,7 +7,7 @@ import io.redspace.ironsspellbooks.item.weapons.IronsWeaponTier;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.hazen.hazennstuff.Datagen.HnSTags;
-import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
+import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
@@ -405,7 +405,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.ARMOR_PIERCE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(HnSAttributeRegistry.COSMIC_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+            new AttributeContainer(HLAttributeRegistry.COSMIC_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
     public static HnSExtendedWeaponsTiers UMBRANOVA_DORMANT = new HnSExtendedWeaponsTiers(
@@ -535,7 +535,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(HnSAttributeRegistry.RADIANCE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(HLAttributeRegistry.RADIANCE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
@@ -547,7 +547,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(HnSAttributeRegistry.RADIANCE_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(HLAttributeRegistry.RADIANCE_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
@@ -562,7 +562,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(HnSAttributeRegistry.RADIANCE_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            new AttributeContainer(HLAttributeRegistry.RADIANCE_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
     public static HnSExtendedWeaponsTiers TERRAPRISMA = new HnSExtendedWeaponsTiers(
@@ -575,7 +575,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_PIERCE, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.PROT_SHRED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
-            new AttributeContainer(HnSAttributeRegistry.RADIANCE_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            new AttributeContainer(HLAttributeRegistry.RADIANCE_SPELL_POWER, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
     /*
@@ -589,7 +589,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
-            new AttributeContainer(HnSAttributeRegistry.SHADOW_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(HLAttributeRegistry.SHADOW_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ASAttributeRegistry.SPELL_RES_PENETRATION, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
@@ -600,7 +600,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
-            new AttributeContainer(HnSAttributeRegistry.SHADOW_SPELL_POWER, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            new AttributeContainer(HLAttributeRegistry.SHADOW_SPELL_POWER, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
     public static HnSExtendedWeaponsTiers NIGHTS_EDGE = new HnSExtendedWeaponsTiers(
@@ -638,7 +638,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
-            new AttributeContainer(HnSAttributeRegistry.COSMIC_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+            new AttributeContainer(HLAttributeRegistry.COSMIC_SPELL_POWER, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
             new AttributeContainer(ALObjects.Attributes.CRIT_CHANCE, .2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 

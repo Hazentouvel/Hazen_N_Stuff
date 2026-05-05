@@ -10,8 +10,8 @@ import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
-import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
 import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -36,7 +36,7 @@ public class ShadowScaleArmorItem extends ImbuableGeckolibHnSArmorItem implement
         // Add in your armor tier + additional attributes for your item
         super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(HnSAttributeRegistry.SHADOW_SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(HLAttributeRegistry.SHADOW_SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(ALObjects.Attributes.CRIT_CHANCE, .05, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );

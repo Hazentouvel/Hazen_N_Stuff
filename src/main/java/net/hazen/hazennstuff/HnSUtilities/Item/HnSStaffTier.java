@@ -5,7 +5,7 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.item.weapons.IronsWeaponTier;
 import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
-import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
+import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 
 public class HnSStaffTier implements IronsWeaponTier {
@@ -19,7 +19,7 @@ public class HnSStaffTier implements IronsWeaponTier {
     // RoD
     public static HnSStaffTier ROD_OF_DISCORD = new HnSStaffTier(3, -3,
             new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-            new AttributeContainer(HnSAttributeRegistry.SHADOW_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(HLAttributeRegistry.SHADOW_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
@@ -80,14 +80,14 @@ public class HnSStaffTier implements IronsWeaponTier {
 
     // Glassweaver Staff
     public static HnSStaffTier GLASSWEAVER_SCEPTER = new HnSStaffTier(3, -3,
-            new AttributeContainer(HnSAttributeRegistry.RADIANCE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(HLAttributeRegistry.RADIANCE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.COOLDOWN_REDUCTION, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
     // Ceaseless Void
     public static HnSStaffTier CEASELESS_VOID = new HnSStaffTier(3, -3,
-            new AttributeContainer(HnSAttributeRegistry.SHADOW_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(HLAttributeRegistry.SHADOW_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.CAST_TIME_REDUCTION, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
@@ -101,7 +101,7 @@ public class HnSStaffTier implements IronsWeaponTier {
 
     // Nexus
     public static HnSStaffTier NEXUS = new HnSStaffTier(3, -3,
-            new AttributeContainer(HnSAttributeRegistry.COSMIC_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(HLAttributeRegistry.COSMIC_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.CAST_TIME_REDUCTION, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );

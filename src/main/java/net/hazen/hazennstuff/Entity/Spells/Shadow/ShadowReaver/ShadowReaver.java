@@ -9,6 +9,7 @@ import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleHelper;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
+import net.hazen.hazentouvelib.Registries.HLEffects;
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -109,7 +110,7 @@ public class ShadowReaver extends AbstractMagicProjectile implements GeoEntity {
 
             DamageSources.applyDamage(target, damage, HnSSpellRegistries.SHADOW_REAVER.get().getDamageSource(this, owner));
 
-            target.addEffect(new MobEffectInstance(HnSEffects.HEXED, 100, 0));
+            target.addEffect(new MobEffectInstance(HLEffects.HEXED, 100, 0));
         }
 
         impactParticles(center.x, center.y, center.z);

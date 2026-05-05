@@ -29,7 +29,7 @@ import java.util.List;
 
 public class MaverickArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public MaverickArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, pureTierMulti(
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, pureTierDual(
                 AttributeRegistry.NATURE_SPELL_POWER,
                 AttributeRegistry.ELDRITCH_SPELL_POWER
         ));

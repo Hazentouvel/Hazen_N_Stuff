@@ -87,7 +87,7 @@ public class GeckolibArbitriumRobesArmorItem extends ImbuableGeckolibHnSArmorIte
 
     private boolean isWearingFullSet(Player player) {
         return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof GeckolibArbitriumRobesArmorItem &&
-                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof GeckolibArbitriumRobesElytraItem &&
+                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof GeckolibArbitriumRobesArmorItem &&
                 player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof GeckolibArbitriumRobesArmorItem &&
                 player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof GeckolibArbitriumRobesArmorItem;
     }

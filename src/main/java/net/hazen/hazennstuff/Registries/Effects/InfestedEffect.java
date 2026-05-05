@@ -5,7 +5,7 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.effect.ISyncedMobEffect;
 import io.redspace.ironsspellbooks.effect.MagicMobEffect;
-import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
+import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.hazen.hazennstuff.Registries.HnSParticleHelper;
 import net.minecraft.core.particles.ParticleOptions;
@@ -106,7 +106,7 @@ public class InfestedEffect extends MagicMobEffect implements ISyncedMobEffect {
     public static double damageFor(@Nullable Entity entity) {
         double baseDamage = 10.0;
         if (entity instanceof LivingEntity livingAttacker) {
-            baseDamage = baseDamage * livingAttacker.getAttributeValue(AttributeRegistry.SPELL_POWER) * livingAttacker.getAttributeValue(HnSAttributeRegistry.RADIANCE_SPELL_POWER);
+            baseDamage = baseDamage * livingAttacker.getAttributeValue(AttributeRegistry.SPELL_POWER) * livingAttacker.getAttributeValue(HLAttributeRegistry.RADIANCE_SPELL_POWER);
         }
         return baseDamage;
     }

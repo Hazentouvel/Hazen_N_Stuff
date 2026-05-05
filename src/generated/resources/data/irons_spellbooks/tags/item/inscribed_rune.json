@@ -4,9 +4,9 @@
     "hazennstuff:archery_rune",
     "hazennstuff:health_rune",
     "hazennstuff:eldritch_rune",
-    "hazennstuff:shadow_rune",
-    "hazennstuff:radiance_rune",
-    "hazennstuff:cosmic_rune",
+    "hazentouvelib:shadow_rune",
+    "hazentouvelib:radiance_rune",
+    "hazentouvelib:cosmic_rune",
     "hazennstuff:hydro_rune"
   ]
 }

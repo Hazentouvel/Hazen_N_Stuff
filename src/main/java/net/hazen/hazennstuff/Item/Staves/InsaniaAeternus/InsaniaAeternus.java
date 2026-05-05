@@ -5,7 +5,8 @@ import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSDispatcher;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSStaffTier;
-import net.hazen.hazennstuff.Rarity.HnSRarities;
+
+import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -19,7 +20,7 @@ public class InsaniaAeternus extends StaffItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(HnSRarities.ELDRITCH_RARITY.getValue())
+                        .rarity(HLRarities.ELDRITCH_RARITY.getValue())
                         .attributes(ExtendedSwordItem
                                 .createAttributes(HnSStaffTier.INSANIA_AETERNUS)
                         )

@@ -16,6 +16,7 @@ import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshPiece
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSDamageTypes;
 import net.hazen.hazennstuff.Registries.HnSSounds;
+import net.hazen.hazentouvelib.Registries.HLDamageTypes;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -119,7 +120,7 @@ public class ViolentRegurgitationSpell extends AbstractSpell {
         if (!world.isClientSide) {
             float currentHealth = entity.getHealth();
             float healthCost = currentHealth * 0.4f;
-            DamageSource damageSource = new DamageSource(DamageSources.getHolderFromResource(entity, HnSDamageTypes.CORRUPT_MAGIC));
+            DamageSource damageSource = new DamageSource(DamageSources.getHolderFromResource(entity, HLDamageTypes.CORRUPT_MAGIC));
             entity.hurt(damageSource, healthCost);
 
             if (entity instanceof net.minecraft.world.entity.player.Player player) {

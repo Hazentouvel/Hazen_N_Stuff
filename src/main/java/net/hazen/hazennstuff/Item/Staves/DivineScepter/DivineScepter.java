@@ -4,7 +4,8 @@ import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSStaffTier;
-import net.hazen.hazennstuff.Rarity.HnSRarities;
+
+import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
@@ -22,7 +23,7 @@ public class DivineScepter extends StaffItem implements GeoItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(HnSRarities.HOLY_RARITY.getValue())
+                        .rarity(HLRarities.HOLY_RARITY.getValue())
                         .attributes(ExtendedSwordItem
                                 .createAttributes(HnSStaffTier.DIVINE_SCEPTER)
                         )

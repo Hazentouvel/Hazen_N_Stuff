@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.hazen.hazennstuff.Entity.Spells.Cosmic.CosmicBolt.CosmicBolt;
-import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
+import net.hazen.hazentouvelib.Registries.HLSchoolRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -43,7 +43,7 @@ public class CosmicBoltSpell extends AbstractSpell {
         this.defaultConfig = (
                 new DefaultConfig())
                 .setMinRarity(SpellRarity.EPIC)
-                .setSchoolResource(HnSSchoolRegistry.COSMIC_RESOURCE)
+                .setSchoolResource(HLSchoolRegistry.COSMIC_RESOURCE)
                 .setMaxLevel(6)
                 .setCooldownSeconds((double)2.5F)
                 .build();

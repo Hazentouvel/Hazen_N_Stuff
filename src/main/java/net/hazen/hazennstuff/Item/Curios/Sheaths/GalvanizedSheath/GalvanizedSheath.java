@@ -7,9 +7,10 @@ import net.acetheeldritchking.aces_spell_utils.items.curios.SheathCurioItem;
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSDispatcher;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.InstantLightningStrike.LightningStrike;
 import net.hazen.hazennstuff.HnSConfig;
-import net.hazen.hazennstuff.Rarity.HnSRarities;
+
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
+import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
@@ -37,7 +38,7 @@ public class GalvanizedSheath extends SheathCurioItem {
     public GalvanizedSheath() {
         super(new Properties()
                 .stacksTo(1)
-                .rarity(HnSRarities.LIGHTNING_RARITY.getValue())
+                .rarity(HLRarities.LIGHTNING_RARITY.getValue())
                 .fireResistant(),
                 null);
         this.dispatcher = new HnSDispatcher();

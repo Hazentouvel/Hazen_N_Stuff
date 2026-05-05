@@ -96,8 +96,6 @@ public class HazenNStuff
         HnSEntityRegistry.register(modEventBus);
 
         HnSSpellRegistries.register(modEventBus);
-        HnSAttributeRegistry.register(modEventBus);
-        HnSSchoolRegistry.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

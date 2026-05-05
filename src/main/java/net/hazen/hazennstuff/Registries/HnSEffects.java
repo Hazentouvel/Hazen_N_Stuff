@@ -5,6 +5,7 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.Effects.*;
+import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -220,7 +221,7 @@ public class HnSEffects {
 
 
 
-            .addAttributeModifier(HnSAttributeRegistry.COSMIC_SPELL_POWER,
+            .addAttributeModifier(HLAttributeRegistry.COSMIC_SPELL_POWER,
                     HazenNStuff.id("moonkissed"),
                     MoonkissedEffect.SPELL_POWER_PER_LEVEL,
                     AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
@@ -243,11 +244,8 @@ public class HnSEffects {
     public static final DeferredHolder<MobEffect, MobEffect> ELECTROCUTED = MOB_EFFECTS.register("electrocuted",
             () -> new ElectrocutedEffect(MobEffectCategory.HARMFUL, 0x2E2EFF));
 
-    public static final DeferredHolder<MobEffect, MobEffect> HEXED = MOB_EFFECTS.register("hexed",
-            () -> new GenericHazenEffect(MobEffectCategory.HARMFUL, 0x2E2EFF));
 
-
-
+    
     public static final DeferredHolder<MobEffect, MobEffect> TYROS_SOUL_STATE = MOB_EFFECTS.register("tyros_soul_state",
             () -> new GenericHazenEffect(MobEffectCategory.BENEFICIAL, 0x2E2EFF));
 

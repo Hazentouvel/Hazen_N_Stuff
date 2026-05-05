@@ -8,6 +8,7 @@ import net.hazen.hazennstuff.HnSUtilities.Animations.HnSDispatcher;
 import net.hazen.hazennstuff.HnSConfig;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
+import net.hazen.hazentouvelib.Registries.HLEffects;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -67,11 +68,11 @@ public class ScrollSheath extends SheathCurioItem {
                         }
                         livingVictim.addEffect(new MobEffectInstance(HnSEffects.MANA_SICKNESS, 300, 0));
 
-                        if (livingVictim.hasEffect(HnSEffects.HEXED))
+                        if (livingVictim.hasEffect(HLEffects.HEXED))
                         {
                             event.setAmount(getBaseDamage * 1.5F);
                         }
-                        livingVictim.addEffect(new MobEffectInstance(HnSEffects.HEXED, 100, 0));
+                        livingVictim.addEffect(new MobEffectInstance(HLEffects.HEXED, 100, 0));
 
                         var magicData = io.redspace.ironsspellbooks.api.magic.MagicData.getPlayerMagicData(player);
                         magicData.getPlayerCooldowns().clearCooldowns();

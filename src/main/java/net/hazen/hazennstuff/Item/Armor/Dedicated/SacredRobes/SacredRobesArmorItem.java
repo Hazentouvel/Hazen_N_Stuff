@@ -7,7 +7,6 @@ import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
-import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.GeckolibArbitriumRobesElytraItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.Registries.HnSEffects;
@@ -83,7 +82,7 @@ public class SacredRobesArmorItem extends ImbuableGeckolibHnSArmorItem implement
 
     private boolean isWearingFullSet(Player player) {
         return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof SacredRobesArmorItem &&
-                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof GeckolibArbitriumRobesElytraItem &&
+                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof SacredRobesArmorItem &&
                 player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof SacredRobesArmorItem &&
                 player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof SacredRobesArmorItem;
     }

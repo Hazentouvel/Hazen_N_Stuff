@@ -6,7 +6,7 @@ import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
-import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
+import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
@@ -14,7 +14,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 public class MyceliumGuardianArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public MyceliumGuardianArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, schoolTierDual(
-                HnSAttributeRegistry.RADIANCE_SPELL_POWER,
+                HLAttributeRegistry.RADIANCE_SPELL_POWER,
                 AttributeRegistry.NATURE_SPELL_POWER
         ));
     }

@@ -11,7 +11,6 @@ import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSSpellAnimations;
 import net.hazen.hazennstuff.HnSUtilities.HnSEnchantments;
-import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractTaggedSpell;
 import net.hazen.hazennstuff.Spells.AbstractSpells.TyrosSpells;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;

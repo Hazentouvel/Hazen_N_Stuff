@@ -8,7 +8,7 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.Terraprisma;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
+import net.hazen.hazentouvelib.Registries.HLSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSSpellAnimations;
 import net.minecraft.ChatFormatting;
@@ -46,7 +46,7 @@ public class TerraprismicBarrageSpell extends AbstractSpell {
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.RARE)
-            .setSchoolResource(HnSSchoolRegistry.RADIANCE_RESOURCE)
+            .setSchoolResource(HLSchoolRegistry.RADIANCE_RESOURCE)
             .setMaxLevel(5)
             .setCooldownSeconds(2)
             .build();

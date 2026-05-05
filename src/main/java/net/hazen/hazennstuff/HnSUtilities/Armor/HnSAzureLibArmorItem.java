@@ -4,6 +4,7 @@ import com.google.common.base.Suppliers;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSDispatcher;
+import net.hazen.hazentouvelib.Items.Armor.HLArmorItem;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -18,7 +19,7 @@ import net.minecraft.world.item.component.ItemAttributeModifiers;
 import java.util.List;
 import java.util.function.Supplier;
 
-public class HnSAzureLibArmorItem extends HnSArmorItem {
+public class HnSAzureLibArmorItem extends HLArmorItem {
     private final Supplier<ItemAttributeModifiers> defaultModifiers;
     public final HnSDispatcher dispatcher;
 

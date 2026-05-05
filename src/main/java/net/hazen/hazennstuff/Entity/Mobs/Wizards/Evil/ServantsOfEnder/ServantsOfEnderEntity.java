@@ -5,8 +5,9 @@ import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.entity.mobs.goals.*;
 import net.hazen.hazennstuff.Datagen.HnSTags;
-import net.hazen.hazennstuff.Entity.Mobs.HnSEntityUtils.AbstractSpellCastingEnderman;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
+import net.hazen.hazentouvelib.Datagen.HLTags;
+import net.hazen.hazentouvelib.Entities.AbstractSpellCastingEnderman;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
@@ -69,10 +70,10 @@ public class ServantsOfEnderEntity extends AbstractSpellCastingEnderman implemen
         this.targetSelector.addGoal(1, new EndermanLookForPlayerGoal(this, this::isAngryAt));
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this, new Class[0]));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractSpellCastingEnderman.class, true, false));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, true, (entity) -> !entity.getType().is(HnSTags.SPAWNS_OF_ENDER)));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, true, (entity) -> !entity.getType().is(HLTags.SPAWNS_OF_ENDER)));
         this.targetSelector.addGoal(3,
                 new NearestAttackableTargetGoal<>(this, Mob.class, true,
-                        entity -> entity.getType().is(HnSTags.ASTRAL_CONSTRUCT)
+                        entity -> entity.getType().is(HLTags.ASTRAL_CONSTRUCT)
                 ));
         this.targetSelector.addGoal(4, new ResetUniversalAngerTargetGoal<>(this, false));
     }

@@ -13,15 +13,15 @@ import io.redspace.ironsspellbooks.util.MinecraftInstanceHelper;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
-import net.hazen.hazennstuff.HnSUtilities.Armor.HnSKeybindArmor;
-import net.hazen.hazennstuff.HnSUtilities.Armor.HnSMessageArmorKey;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
-import net.hazen.hazennstuff.HnSUtilities.HnSKeybinds;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleHelper;
 import net.hazen.hazennstuff.Spells.AbstractSpells.TyrosSpells;
+import net.hazen.hazentouvelib.Items.Armor.HLMessageArmorKey;
+import net.hazen.hazentouvelib.Items.Armor.HnSKeybindArmor;
+import net.hazen.hazentouvelib.Registries.HLKeybinds;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
@@ -99,8 +99,8 @@ public class GarmentsOfTheFirstFlamebearerArmorItem extends ImbuableGeckolibHnSA
 
         if (entity instanceof Player player) {
             if (level.isClientSide) {
-                if (this.type == Type.CHESTPLATE && player.getItemBySlot(EquipmentSlot.CHEST) == stack && HnSKeybinds.ABILITY_1.consumeClick()) {
-                    PacketDistributor.sendToServer(new HnSMessageArmorKey(EquipmentSlot.CHEST.ordinal(), player.getId(), 5), new CustomPacketPayload[0]);
+                if (this.type == Type.CHESTPLATE && player.getItemBySlot(EquipmentSlot.CHEST) == stack && HLKeybinds.ABILITY_1.consumeClick()) {
+                    PacketDistributor.sendToServer(new HLMessageArmorKey(EquipmentSlot.CHEST.ordinal(), player.getId(), 5), new CustomPacketPayload[0]);
                     this.onKeyPacket(player, stack, 5);
                 }
                 return;

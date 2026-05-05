@@ -13,7 +13,7 @@ import net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Club.Club;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Diamond.Diamond;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Heart.Heart;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Spade.Spade;
-import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
+import net.hazen.hazentouvelib.Registries.HLSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -54,7 +54,7 @@ public class ArcaneCardsSpell extends AbstractSpell {
         this.defaultConfig = (
                 new DefaultConfig())
                 .setMinRarity(SpellRarity.UNCOMMON)
-                .setSchoolResource(HnSSchoolRegistry.SHADOW_RESOURCE)
+                .setSchoolResource(HLSchoolRegistry.SHADOW_RESOURCE)
                 .setMaxLevel(10)
                 .setCooldownSeconds((double)2.5F)
                 .build();

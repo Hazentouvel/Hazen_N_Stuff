@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.hazen.hazennstuff.Registries.HnSEffects;
-import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
+import net.hazen.hazentouvelib.Registries.HLSchoolRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -65,7 +65,7 @@ public class MoonkissedSpell extends AbstractSpell {
     public MoonkissedSpell() {
         this.defaultConfig = (new DefaultConfig())
                 .setMinRarity(SpellRarity.RARE)
-                .setSchoolResource(HnSSchoolRegistry.COSMIC_RESOURCE)
+                .setSchoolResource(HLSchoolRegistry.COSMIC_RESOURCE)
                 .setMaxLevel(3)
                 .setCooldownSeconds((double)40.0F)
                 .build();

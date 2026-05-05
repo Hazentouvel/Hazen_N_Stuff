@@ -14,7 +14,7 @@ import net.hazen.hazennstuff.Entity.Spells.Shadow.NightsEdgeAfterSlash.NightsEdg
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleHelper;
-import net.hazen.hazennstuff.Registries.HnSSchoolRegistry;
+import net.hazen.hazentouvelib.Registries.HLSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrikeOptions;
 import net.hazen.hazennstuff.Spells.AbstractSpells.NightsEdgeSpell;
@@ -65,7 +65,7 @@ public class NightsEdgeStrikeSpell extends NightsEdgeSpell {
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.COMMON)
-            .setSchoolResource(HnSSchoolRegistry.SHADOW_RESOURCE)
+            .setSchoolResource(HLSchoolRegistry.SHADOW_RESOURCE)
             .setMaxLevel(5)
             .setCooldownSeconds(15)
             .build();

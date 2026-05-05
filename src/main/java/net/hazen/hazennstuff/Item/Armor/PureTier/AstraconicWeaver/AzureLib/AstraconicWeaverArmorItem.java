@@ -7,8 +7,8 @@ import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSGeckolibArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableHnSArmorItem;
-import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
 import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -24,7 +24,7 @@ public class AstraconicWeaverArmorItem extends ImbuableHnSArmorItem implements I
 
     public AstraconicWeaverArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, pureTier(
-                HnSAttributeRegistry.COSMIC_SPELL_POWER
+                HLAttributeRegistry.COSMIC_SPELL_POWER
         ));
     }
 

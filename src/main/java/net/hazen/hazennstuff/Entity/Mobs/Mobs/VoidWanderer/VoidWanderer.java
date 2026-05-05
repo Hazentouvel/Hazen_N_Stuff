@@ -17,6 +17,7 @@ import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
+import net.hazen.hazentouvelib.Datagen.HLTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.RandomSource;
@@ -152,10 +153,10 @@ public class VoidWanderer extends AbstractSpellCastingMob implements Enemy, IAni
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, true));
         this.goalSelector.addGoal(5, new PatrolNearLocationGoal(this, 30, .75f));
         this.goalSelector.addGoal(11, new LookAtPlayerGoal(this, Player.class, 8.0F));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, true, (entity) -> !entity.getType().is(HnSTags.ASTRAL_CONSTRUCT)));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, true, (entity) -> !entity.getType().is(HLTags.ASTRAL_CONSTRUCT)));
         this.targetSelector.addGoal(3,
                 new NearestAttackableTargetGoal<>(this, Mob.class, true,
-                        entity -> entity.getType().is(HnSTags.SPAWNS_OF_ENDER)
+                        entity -> entity.getType().is(HLTags.SPAWNS_OF_ENDER)
                 ));
     }
 
@@ -192,7 +193,7 @@ public class VoidWanderer extends AbstractSpellCastingMob implements Enemy, IAni
     }
 
     public boolean isAlliedTo(Entity pEntity) {
-        return super.isAlliedTo(pEntity) || pEntity.getType().is(HnSTags.ASTRAL_CONSTRUCT);
+        return super.isAlliedTo(pEntity) || pEntity.getType().is(HLTags.ASTRAL_CONSTRUCT);
     }
 
     @Override

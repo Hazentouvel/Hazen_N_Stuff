@@ -8,7 +8,7 @@ import io.redspace.ironsspellbooks.item.SpellBook;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSDispatcher;
-import net.hazen.hazennstuff.Registries.HnSAttributeRegistry;
+import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -26,35 +26,12 @@ public class Lunarnomicon extends SpellBook {
     public Lunarnomicon() {
         super(10);
         this.withSpellbookAttributes(new AttributeContainer[]{
-                new AttributeContainer(HnSAttributeRegistry.COSMIC_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(HLAttributeRegistry.COSMIC_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, (double)200.0F, AttributeModifier.Operation.ADD_VALUE)
 
         });
 
         this.dispatcher = new HnSDispatcher();
-    }
-
-    public void appendHoverText(@NotNull ItemStack itemStack, TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
-        super.appendHoverText(itemStack, context, lines, flag);
-        AffinityData affinityData = AffinityData.getAffinityData(itemStack);
-        if (!affinityData.affinityData().isEmpty()) {
-            int i = TooltipsUtils.indexOfComponent(lines, "tooltip.irons_spellbooks.spellbook_spell_count");
-            lines.addAll(i < 0 ? lines.size() : i + 1, affinityData.getDescriptionComponent());
-        }
-
-    }
-
-    public void initializeSpellContainer(ItemStack itemStack) {
-        if (itemStack != null) {
-            super.initializeSpellContainer(itemStack);
-            AffinityData.set(itemStack,
-                    new AffinityData(Map.of(
-                            ((AbstractSpell) SpellRegistry.THUNDERSTORM_SPELL.get()).getSpellResource(), 1,
-                            ((AbstractSpell)SpellRegistry.SHOCKWAVE_SPELL.get()).getSpellResource(), 1,
-                            ((AbstractSpell)SpellRegistry.VOLT_STRIKE_SPELL.get()).getSpellResource(), 1
-
-                    )));
-        }
     }
 
     @Override

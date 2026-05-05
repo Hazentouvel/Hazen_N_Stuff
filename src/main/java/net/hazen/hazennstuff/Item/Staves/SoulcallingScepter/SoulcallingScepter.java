@@ -6,6 +6,7 @@ import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSDispatcher;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSStaffTier;
+import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.sounds.SoundSource;
@@ -28,7 +29,7 @@ public class SoulcallingScepter extends StaffItem {
                 ItemPropertiesHelper
                         .equipment(1)
                         .fireResistant()
-                        .rarity(Rarity.EPIC)
+                        .rarity(HLRarities.FIRE_RARITY.getValue())
                         .attributes(ExtendedSwordItem
                                 .createAttributes(HnSStaffTier.SOULCALLING_SCEPTER)
                         )

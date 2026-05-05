@@ -16,6 +16,6 @@
   "slots": [
     "mainhand"
   ],
-  "supported_items": "#hazennstuff:fire_spellbook",
+  "supported_items": "#hazentouvelib:spellbooks/fire_spellbook",
   "weight": 1
 }

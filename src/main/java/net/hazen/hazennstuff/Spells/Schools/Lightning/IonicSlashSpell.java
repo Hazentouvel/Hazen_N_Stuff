@@ -24,7 +24,7 @@ import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSLash.IonicSlashOptions;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
-import net.hazen.hazennstuff.Spells.AbstractSpells.AbstractTaggedSpell;
+import net.hazen.hazentouvelib.Spells.AbstractSpells.AbstractTaggedSpell;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;

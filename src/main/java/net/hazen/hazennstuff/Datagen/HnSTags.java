@@ -17,16 +17,6 @@ public class HnSTags {
     /*
      *** Items
      */
-
-    // Radiance School Focus
-    public static final TagKey<Item> RADIANCE_FOCUS = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "focus/radiance_focus").toString()));
-    // Shadow School Focus
-    public static final TagKey<Item> SHADOW_FOCUS = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "focus/shadow_focus").toString()));
-    // Shadow School Focus
-    public static final TagKey<Item> COSMIC_FOCUS = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "focus/cosmic_focus").toString()));
     // Melee School Focus
     public static final TagKey<Item> MELEE_FOCUS = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "focus/melee_focus").toString()));
@@ -37,17 +27,10 @@ public class HnSTags {
     public static final TagKey<Item> HEALTH_FOCUS = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "focus/health_focus").toString()));
 
-    // Ores
-    public static final TagKey<Item> ZENALITE = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ores/zenalite").toString()));
 
     /*
     ***Armor
      */
-
-
-    public static final TagKey<Item> ENDER_MASK = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "misc/ender_mask").toString()));
 
     public static final TagKey<Item> HNS_HELMET = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "armors/hns_helmet").toString()));
@@ -114,25 +97,8 @@ public class HnSTags {
     public static final TagKey<Item> HARMONIOUS_EQUIPMENT = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "harmonious_equipment").toString()));
 
-    public static final TagKey<Item> ENCHANTED_SPELLBOOK = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "enchanted_spellbook").toString()));
-
-    public static final TagKey<Item> FIRE_SPELLBOOK = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "fire_spellbook").toString()));
-
-
-    public static final TagKey<EntityType<?>> ASTRAL_CONSTRUCT = TagKey
-            .create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "astral_construct"));
-
-    public static final TagKey<EntityType<?>> SPAWNS_OF_ENDER = TagKey
-            .create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "spawns_of_ender"));
-
-
     public static final TagKey<Item> IONIC_SPLITTER = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ionic_splitter").toString()));
-
-    public static final TagKey<Item> LIGHTNING_SPELLBOOK = ItemTags
-            .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "lightning_spellbook").toString()));
 
     public static final TagKey<Item> LIGHTNING_SHEATH = ItemTags
             .create(ResourceLocation.parse(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "lightning_sheath").toString()));

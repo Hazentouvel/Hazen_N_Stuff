@@ -10,6 +10,7 @@ import io.redspace.ironsspellbooks.entity.mobs.goals.*;
 import io.redspace.ironsspellbooks.entity.mobs.goals.melee.AttackAnimationData;
 import io.redspace.ironsspellbooks.entity.mobs.wizards.fire_boss.NotIdioticNavigation;
 import java.util.List;
+import io.redspace.ironsspellbooks.api.magic.MagicData;
 
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
@@ -54,8 +55,10 @@ public class VoidWanderer extends AbstractSpellCastingMob implements Enemy, IAni
     private SpellData castingSpell;
 
     private final AnimationController<VoidWanderer> attackAnimationController;
+    private final AnimationController<VoidWanderer> instantCastAnimationController;
     private final AnimationController<VoidWanderer> contCastAnimationController;
-    private final AnimationController<VoidWanderer> animationController;
+    private final AnimationController<VoidWanderer> idleAnimationController; // plays "idle" (body)
+    private final AnimationController<VoidWanderer> headAnimationController; // plays "idle_head"
 
     private int nextHeightOffsetChangeTick;
     private float allowedHeightOffset = 0.25F;
@@ -72,8 +75,10 @@ public class VoidWanderer extends AbstractSpellCastingMob implements Enemy, IAni
 
         // make attack controller check more often so animations start quickly
         this.attackAnimationController = new AnimationController<>(this, "attack_controller", 5, this::attackPredicate);
+        this.instantCastAnimationController = new AnimationController<>(this, "instant_cast_controller", 5, this::instantCastPredicate);
         this.contCastAnimationController = new AnimationController<>(this, "continuous_cast_controller", 5, this::continuousCastPredicate);
-        this.animationController = new AnimationController<>(this, "controller", 2, this::predicate);
+        this.idleAnimationController = new AnimationController<>(this, "idle_controller", 2, this::idlePredicate);
+        this.headAnimationController = new AnimationController<>(this, "head_controller", 2, this::headPredicate);
 
         this.xpReward = 0;
         this.lookControl = this.createLookControl();
@@ -117,7 +122,8 @@ public class VoidWanderer extends AbstractSpellCastingMob implements Enemy, IAni
     public void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(2, new SpellBarrageGoal(this,
-                HnSSpellRegistries.EVERCOMET_BARRAGE.get(), 3, 5, 250, 350, 1)
+                //HnSSpellRegistries.EVERCOMET_BARRAGE.get(), 3, 5, 250, 350, 1)
+                HnSSpellRegistries.COSMIC_BOLT.get(), 3, 5, 250, 350, 1)
         );
         this.goalSelector.addGoal(3, new VoidWandererAttackGoal(
                 this,
@@ -179,10 +185,10 @@ public class VoidWanderer extends AbstractSpellCastingMob implements Enemy, IAni
 
     public static AttributeSupplier.Builder prepareAttributes() {
         return LivingEntity.createLivingAttributes()
-                .add(Attributes.ATTACK_DAMAGE, 9.0)
+                .add(Attributes.ATTACK_DAMAGE, 8.0)
                 .add(Attributes.ATTACK_KNOCKBACK, 2.0)
-                .add(Attributes.MAX_HEALTH, 175.0)
-                .add(Attributes.ARMOR, 18.0)
+                .add(Attributes.MAX_HEALTH, 150.0)
+                .add(Attributes.ARMOR, 10.0)
                 .add(Attributes.ARMOR_TOUGHNESS, 15.0)
                 .add(AttributeRegistry.SPELL_RESIST, 15.0)
                 .add(ASAttributeRegistry.SPELL_RES_PENETRATION, 5.0)
@@ -244,25 +250,39 @@ public class VoidWanderer extends AbstractSpellCastingMob implements Enemy, IAni
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         super.registerControllers(controllers);
-
-        controllers.add(this.contCastAnimationController);
+        controllers.add(instantCastAnimationController);
+        controllers.add(contCastAnimationController);
         controllers.add(attackAnimationController);
-        controllers.add(animationController);
+        controllers.add(idleAnimationController);
+        controllers.add(headAnimationController);
     }
 
     private PlayState continuousCastPredicate(AnimationState<VoidWanderer> event) {
         AnimationController<VoidWanderer> controller = event.getController();
 
-        if (this.isCasting() && (this.castingSpell == null || this.castingSpell.getSpell().getCastType() == CastType.CONTINUOUS)) {
-
-            // Only set animation if not already playing
+        // read the current casting spell from MagicData so predicates see actual active spell
+        SpellData casting = MagicData.getPlayerMagicData(this).getCastingSpell();
+        if (this.isCasting() && (casting == null || casting.getSpell().getCastType() == CastType.CONTINUOUS)) {
             if (controller.getAnimationState() == State.STOPPED) {
                 controller.forceAnimationReset();
-                controller.setAnimation(
-                        RawAnimation.begin().then("continous_cast", Animation.LoopType.LOOP)
-                );
+                controller.setAnimation(RawAnimation.begin().then("continous_cast", Animation.LoopType.LOOP));
             }
+            return PlayState.CONTINUE;
+        }
 
+        return PlayState.STOP;
+    }
+
+    private PlayState instantCastPredicate(AnimationState<VoidWanderer> event) {
+        AnimationController<VoidWanderer> controller = event.getController();
+
+        // read the current casting spell from MagicData so instant casts are detected reliably
+        SpellData casting = MagicData.getPlayerMagicData(this).getCastingSpell();
+        if (this.isCasting() && casting != null && casting.getSpell().getCastType() == CastType.INSTANT) {
+            if (controller.getAnimationState() == State.STOPPED) {
+                controller.forceAnimationReset();
+                controller.setAnimation(RawAnimation.begin().thenPlay("instant_cast"));
+            }
             return PlayState.CONTINUE;
         }
 
@@ -288,11 +308,39 @@ public class VoidWanderer extends AbstractSpellCastingMob implements Enemy, IAni
         return PlayState.STOP;
     }
 
-    private PlayState predicate(AnimationState<VoidWanderer> event)
-    {
-        event.getController().setAnimation(
-                RawAnimation.begin().then("idle", Animation.LoopType.LOOP)
-        );
+    // Idle (body) controller — plays "idle" when no special controllers are active
+    private PlayState idlePredicate(AnimationState<VoidWanderer> event) {
+        var controller = event.getController();
+
+        // If a special controller is playing, don't run body idle (prevents idle overriding other animations)
+        if (this.attackAnimationController.getAnimationState() != State.STOPPED ||
+                this.instantCastAnimationController.getAnimationState() != State.STOPPED ||
+                this.contCastAnimationController.getAnimationState() != State.STOPPED) {
+            return PlayState.STOP;
+        }
+
+        if (controller.getAnimationState() == State.STOPPED) {
+            controller.forceAnimationReset();
+            controller.setAnimation(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
+        }
+
+        return PlayState.CONTINUE;
+    }
+
+    // Head idle controller — plays "idle_head" when no higher-priority controllers are active
+    private PlayState headPredicate(AnimationState<VoidWanderer> event) {
+        var controller = event.getController();
+
+        if (this.attackAnimationController.getAnimationState() != State.STOPPED ||
+                this.instantCastAnimationController.getAnimationState() != State.STOPPED ||
+                this.contCastAnimationController.getAnimationState() != State.STOPPED) {
+            return PlayState.STOP;
+        }
+
+        if (controller.getAnimationState() == State.STOPPED) {
+            controller.forceAnimationReset();
+            controller.setAnimation(RawAnimation.begin().then("idle_head", Animation.LoopType.LOOP));
+        }
 
         return PlayState.CONTINUE;
     }
@@ -307,7 +355,12 @@ public class VoidWanderer extends AbstractSpellCastingMob implements Enemy, IAni
     }
 
     public boolean isAnimating() {
-        return attackAnimationController.getAnimationState() != State.STOPPED || animationController.getAnimationState() != State.STOPPED || super.isAnimating();
+        return attackAnimationController.getAnimationState() != State.STOPPED
+                || instantCastAnimationController.getAnimationState() != State.STOPPED
+                || contCastAnimationController.getAnimationState() != State.STOPPED
+                || idleAnimationController.getAnimationState() != State.STOPPED
+                || headAnimationController.getAnimationState() != State.STOPPED
+                || super.isAnimating();
     }
 
     public AnimatableInstanceCache getAnimatableInstanceCache() {

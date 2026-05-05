@@ -20,7 +20,7 @@ import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleHelper;
 import net.hazen.hazennstuff.Spells.AbstractSpells.TyrosSpells;
 import net.hazen.hazentouvelib.Items.Armor.HLMessageArmorKey;
-import net.hazen.hazentouvelib.Items.Armor.HnSKeybindArmor;
+import net.hazen.hazentouvelib.Items.Armor.HLKeybindArmor;
 import net.hazen.hazentouvelib.Registries.HLKeybinds;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -49,7 +49,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import java.util.List;
 
-public class GarmentsOfTheFirstFlamebearerArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat, HnSKeybindArmor {
+public class GarmentsOfTheFirstFlamebearerArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat, HLKeybindArmor {
     public GarmentsOfTheFirstFlamebearerArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.TYROS_MATERIAL, type, settings, paragonTier(
                 AttributeRegistry.FIRE_SPELL_POWER

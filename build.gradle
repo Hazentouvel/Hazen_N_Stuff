@@ -165,7 +165,7 @@ dependencies {
     //Ace Utils
     implementation "curse.maven:ace_utils-1299492:7787705"
     //HazentouveLib
-    implementation "curse.maven:hazentouvelib-1528722:8015594"
+    implementation "curse.maven:hazentouvelib-1528722:8044060"
 
     // Photon
     //implementation "curse.maven:photon-871522:6911487"

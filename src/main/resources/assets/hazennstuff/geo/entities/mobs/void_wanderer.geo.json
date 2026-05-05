@@ -12,17 +12,17 @@
 			},
 			"bones": [
 				{
-					"name": "voidWanderer",
-					"pivot": [0, 18, 0]
-				},
-				{
-					"name": "torso",
-					"parent": "voidWanderer",
+					"name": "body",
 					"pivot": [0, 18, 0]
 				},
 				{
 					"name": "head",
-					"parent": "torso",
+					"parent": "body",
+					"pivot": [0, 18, 0]
+				},
+				{
+					"name": "headMovement",
+					"parent": "head",
 					"pivot": [0, 18, 0],
 					"cubes": [
 						{"origin": [-3, 19, -3], "size": [6, 6, 6], "uv": [0, 18]}
@@ -30,7 +30,7 @@
 				},
 				{
 					"name": "cosmicSigil",
-					"parent": "head",
+					"parent": "headMovement",
 					"pivot": [0, 22, 0],
 					"rotation": [45, 0, 0]
 				},
@@ -69,7 +69,7 @@
 				},
 				{
 					"name": "glow",
-					"parent": "head",
+					"parent": "headMovement",
 					"pivot": [3.5, 17.5, -3.5],
 					"cubes": [
 						{"origin": [-4.5, 17.5, -4.5], "size": [9, 0, 9], "uv": [-9, 0]},
@@ -79,6 +79,11 @@
 						{"origin": [4.5, 17.5, -4.5], "size": [0, 9, 9], "uv": [36, -9]},
 						{"origin": [-4.5, 17.5, -4.5], "size": [0, 9, 9], "uv": [18, -9]}
 					]
+				},
+				{
+					"name": "torso",
+					"parent": "body",
+					"pivot": [0, 18, 0]
 				},
 				{
 					"name": "armRight",

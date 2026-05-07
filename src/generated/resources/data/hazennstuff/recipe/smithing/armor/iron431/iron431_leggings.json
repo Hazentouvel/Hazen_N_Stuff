@@ -4,7 +4,7 @@
     "item": "minecraft:iron_ingot"
   },
   "base": {
-    "tag": "hazennstuff:armors/pure/pure_leggings"
+    "tag": "hazentouvelib:armors/pure/pure_leggings"
   },
   "result": {
     "count": 1,

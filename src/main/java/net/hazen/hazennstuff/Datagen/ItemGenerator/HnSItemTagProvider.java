@@ -77,6 +77,12 @@ public class HnSItemTagProvider extends ItemTagsProvider {
 
         ;
 
+        tag(HnSTags.HYDRO_RUNES)
+
+                .add(HnSItemRegistry.HYDRO_RUNE.get())
+
+        ;
+
         tag(HnSTags.LIGHTNING_SHEATH)
 
                 .add(HnSItemRegistry.GALVANIZED_SHEATH.get())
@@ -344,7 +350,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .addTag(HnSTags.HNS_BOOTS)
         ;
 
-        tag(HnSTags.SCHOOL_HELMET)
+        tag(HLTags.SCHOOL_HELMET)
                 .add(ItemRegistry.PYROMANCER_HELMET.get())
                 .add(ItemRegistry.PLAGUED_HELMET.get())
                 .add(ItemRegistry.ARCHEVOKER_HELMET.get())
@@ -362,7 +368,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.MYCELIUM_GUARDIAN_HELMET.get())
         ;
 
-        tag(HnSTags.SCHOOL_CHESTPLATE)
+        tag(HLTags.SCHOOL_CHESTPLATE)
                 .add(ItemRegistry.PYROMANCER_CHESTPLATE.get())
                 .add(ItemRegistry.PLAGUED_CHESTPLATE.get())
                 .add(ItemRegistry.ARCHEVOKER_CHESTPLATE.get())
@@ -380,7 +386,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.MYCELIUM_GUARDIAN_CHESTPLATE.get())
         ;
 
-        tag(HnSTags.SCHOOL_LEGGINGS)
+        tag(HLTags.SCHOOL_LEGGINGS)
                 .add(ItemRegistry.PYROMANCER_LEGGINGS.get())
                 .add(ItemRegistry.PLAGUED_LEGGINGS.get())
                 .add(ItemRegistry.ARCHEVOKER_LEGGINGS.get())
@@ -398,7 +404,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.MYCELIUM_GUARDIAN_LEGGINGS.get())
         ;
 
-        tag(HnSTags.SCHOOL_BOOTS)
+        tag(HLTags.SCHOOL_BOOTS)
                 .add(ItemRegistry.PYROMANCER_BOOTS.get())
                 .add(ItemRegistry.PLAGUED_BOOTS.get())
                 .add(ItemRegistry.ARCHEVOKER_BOOTS.get())
@@ -418,52 +424,52 @@ public class HnSItemTagProvider extends ItemTagsProvider {
 
 
 
-        tag(HnSTags.NETHERITE_BATTLEMAGE_HELMET)
+        tag(HLTags.NETHERITE_BATTLEMAGE_HELMET)
                 .add(ItemRegistry.NETHERITE_MAGE_HELMET.get())
                 .add(HnSItemRegistry.ATLAS_HELMET.get())
                 .add(HnSItemRegistry.FRIEREN_HELMET.get())
                 .add(HnSItemRegistry.GIORNO_GIOVANNA_HELMET.get())
         ;
 
-        tag(HnSTags.NETHERITE_BATTLEMAGE_CHESTPLATE)
+        tag(HLTags.NETHERITE_BATTLEMAGE_CHESTPLATE)
                 .add(ItemRegistry.NETHERITE_MAGE_CHESTPLATE.get())
                 .add(HnSItemRegistry.ATLAS_CHESTPLATE.get())
                 .add(HnSItemRegistry.FRIEREN_CHESTPLATE.get())
                 .add(HnSItemRegistry.GIORNO_GIOVANNA_CHESTPLATE.get())
         ;
 
-        tag(HnSTags.NETHERITE_BATTLEMAGE_LEGGINGS)
+        tag(HLTags.NETHERITE_BATTLEMAGE_LEGGINGS)
                 .add(ItemRegistry.NETHERITE_MAGE_LEGGINGS.get())
                 .add(HnSItemRegistry.ATLAS_LEGGINGS.get())
                 .add(HnSItemRegistry.FRIEREN_LEGGINGS.get())
                 .add(HnSItemRegistry.GIORNO_GIOVANNA_LEGGINGS.get())
         ;
 
-        tag(HnSTags.NETHERITE_BATTLEMAGE_BOOTS)
+        tag(HLTags.NETHERITE_BATTLEMAGE_BOOTS)
                 .add(ItemRegistry.NETHERITE_MAGE_BOOTS.get())
                 .add(HnSItemRegistry.ATLAS_BOOTS.get())
                 .add(HnSItemRegistry.FRIEREN_BOOTS.get())
                 .add(HnSItemRegistry.GIORNO_GIOVANNA_BOOTS.get())
         ;
 
-        tag(HnSTags.PARAGON_HELMET)
+        tag(HLTags.PARAGON_HELMET)
                 .add(HnSItemRegistry.TYROS_HELMET.get())
         ;
 
-        tag(HnSTags.PARAGON_CHESTPLATE)
+        tag(HLTags.PARAGON_CHESTPLATE)
                 .add(HnSItemRegistry.TYROS_CHESTPLATE.get())
         ;
 
-        tag(HnSTags.PARAGON_LEGGINGS)
+        tag(HLTags.PARAGON_LEGGINGS)
                 .add(HnSItemRegistry.TYROS_LEGGINGS.get())
         ;
 
-        tag(HnSTags.PARAGON_BOOTS)
+        tag(HLTags.PARAGON_BOOTS)
                 .add(HnSItemRegistry.TYROS_BOOTS.get())
         ;
 
 
-        tag(HnSTags.PURE_HELMET)
+        tag(HLTags.PURE_HELMET)
                 .add(HnSItemRegistry.BLAZEBORNE_HELMET.get())
                 .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_HELMET.get())
                 .add(HnSItemRegistry.HAZEL_HELMET.get())
@@ -514,7 +520,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.ABBERANT_PREDATOR_HELMET.get())
         ;
 
-        tag(HnSTags.PURE_CHESTPLATE)
+        tag(HLTags.PURE_CHESTPLATE)
                 .add(HnSItemRegistry.BLAZEBORNE_CHESTPLATE.get())
                 .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_CHESTPLATE.get())
                 .add(HnSItemRegistry.HAZEL_CHESTPLATE.get())
@@ -564,7 +570,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.ABBERANT_PREDATOR_CHESTPLATE.get())
         ;
 
-        tag(HnSTags.PURE_LEGGINGS)
+        tag(HLTags.PURE_LEGGINGS)
                 .add(HnSItemRegistry.BLAZEBORNE_LEGGINGS.get())
                 .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_LEGGINGS.get())
                 .add(HnSItemRegistry.HAZEL_LEGGINGS.get())
@@ -611,7 +617,7 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.ABBERANT_PREDATOR_LEGGINGS.get())
         ;
 
-        tag(HnSTags.PURE_BOOTS)
+        tag(HLTags.PURE_BOOTS)
                 .add(HnSItemRegistry.BLAZEBORNE_BOOTS.get())
                 .add(HnSItemRegistry.GECKOLIB_BLAZEBORNE_BOOTS.get())
                 .add(HnSItemRegistry.HAZEL_BOOTS.get())
@@ -830,10 +836,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         ;
 
         tag(HnSTags.HNS_HELMET)
-                .addTag(HnSTags.SCHOOL_HELMET)
-                .addTag(HnSTags.NETHERITE_BATTLEMAGE_HELMET)
-                .addTag(HnSTags.PURE_HELMET)
-                .addTag(HnSTags.PARAGON_HELMET)
+                .addTag(HLTags.SCHOOL_HELMET)
+                .addTag(HLTags.NETHERITE_BATTLEMAGE_HELMET)
+                .addTag(HLTags.PURE_HELMET)
+                .addTag(HLTags.PARAGON_HELMET)
 
                 .add(HnSItemRegistry.MINER_HELMET.get())
                 .add(HnSItemRegistry.SPECTRAL_SPELUNKER_HELMET.get())
@@ -856,10 +862,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         ;
 
         tag(HnSTags.HNS_CHESTPLATE)
-                .addTag(HnSTags.SCHOOL_CHESTPLATE)
-                .addTag(HnSTags.NETHERITE_BATTLEMAGE_CHESTPLATE)
-                .addTag(HnSTags.PURE_CHESTPLATE)
-                .addTag(HnSTags.PARAGON_CHESTPLATE)
+                .addTag(HLTags.SCHOOL_CHESTPLATE)
+                .addTag(HLTags.NETHERITE_BATTLEMAGE_CHESTPLATE)
+                .addTag(HLTags.PURE_CHESTPLATE)
+                .addTag(HLTags.PARAGON_CHESTPLATE)
 
                 .add(HnSItemRegistry.MINER_CHESTPLATE.get())
                 .add(HnSItemRegistry.SPECTRAL_SPELUNKER_CHESTPLATE.get())
@@ -880,10 +886,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         ;
 
         tag(HnSTags.HNS_LEGGINGS)
-                .addTag(HnSTags.SCHOOL_LEGGINGS)
-                .addTag(HnSTags.NETHERITE_BATTLEMAGE_LEGGINGS)
-                .addTag(HnSTags.PURE_LEGGINGS)
-                .addTag(HnSTags.PARAGON_LEGGINGS)
+                .addTag(HLTags.SCHOOL_LEGGINGS)
+                .addTag(HLTags.NETHERITE_BATTLEMAGE_LEGGINGS)
+                .addTag(HLTags.PURE_LEGGINGS)
+                .addTag(HLTags.PARAGON_LEGGINGS)
 
                 .add(HnSItemRegistry.MINER_LEGGINGS.get())
                 .add(HnSItemRegistry.SPECTRAL_SPELUNKER_LEGGINGS.get())
@@ -904,10 +910,10 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         ;
 
         tag(HnSTags.HNS_BOOTS)
-                .addTag(HnSTags.SCHOOL_BOOTS)
-                .addTag(HnSTags.NETHERITE_BATTLEMAGE_BOOTS)
-                .addTag(HnSTags.PURE_BOOTS)
-                .addTag(HnSTags.PARAGON_BOOTS)
+                .addTag(HLTags.SCHOOL_BOOTS)
+                .addTag(HLTags.NETHERITE_BATTLEMAGE_BOOTS)
+                .addTag(HLTags.PURE_BOOTS)
+                .addTag(HLTags.PARAGON_BOOTS)
 
                 .add(HnSItemRegistry.MINER_BOOTS.get())
                 .add(HnSItemRegistry.SPECTRAL_SPELUNKER_BOOTS.get())

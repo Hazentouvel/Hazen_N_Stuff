@@ -12,7 +12,7 @@
       "item": "minecraft:heart_of_the_sea"
     },
     "R": {
-      "item": "hazennstuff:hydro_rune"
+      "tag": "hazennstuff:items/hydro_runes"
     },
     "S": {
       "item": "irons_spellbooks:artificer_cane"

@@ -1,12 +1,17 @@
 package net.hazen.hazennstuff.Datagen;
 
+import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
+import io.redspace.ironsspellbooks.api.spells.SchoolType;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import io.redspace.ironsspellbooks.util.ModTags;
+import net.acetheeldritchking.aces_spell_utils.registries.ASSchoolRegistry;
 import net.acetheeldritchking.aces_spell_utils.utils.ASTags;
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
+import net.hazen.hazentouvelib.Datagen.HLTags;
 import net.hazen.hazentouvelib.Registries.HLItemRegistry;
+import net.hazen.hazentouvelib.Registries.HLSchoolRegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -124,6 +129,15 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('O', ItemRegistry.BLANK_RUNE.get())
                 .unlockedBy("has_blank_rune", has(ItemRegistry.BLANK_RUNE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/runes/eldritch_rune"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.HYDRO_RUNE.get())
+                .pattern("RRR")
+                .pattern("ROR")
+                .pattern("RRR")
+                .define('R', ASTags.HYDRO_FOCUS)
+                .define('O', ItemRegistry.BLANK_RUNE.get())
+                .unlockedBy("has_blank_rune", has(ItemRegistry.BLANK_RUNE.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/runes/hydro_rune"));
 
 
 
@@ -527,7 +541,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("  D")
                 .pattern("RE ")
                 .pattern("WR ")
-                .define('R', HnSItemRegistry.HYDRO_RUNE.get())
+                .define('R', HnSTags.HYDRO_RUNES)
                 .define('E', HnSItemRegistry.EXCALIBUR_FRAGMENT.get())
                 .define('D', Items.DIAMOND)
                 .define('W', ItemRegistry.WEAPON_PARTS.get())
@@ -595,7 +609,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('E', HnSItemRegistry.ELDER_GUARDIAN_SPINE)
                 .define('H', Items.HEART_OF_THE_SEA)
                 .define('A', HnSItemRegistry.ARCANE_SEA_SHELL.get())
-                .define('R', HnSItemRegistry.HYDRO_RUNE.get())
+                .define('R', HnSTags.HYDRO_RUNES)
                 .unlockedBy("has_artificer_staff", has(ItemRegistry.ARTIFICER_STAFF.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/staves/coralite_cane"));
 
@@ -1692,41 +1706,40 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
          */
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.HYDRO_RUNE.get()),
+                        Ingredient.of(HnSTags.HYDRO_RUNES),
                         Ingredient.of(ItemRegistry.WIZARD_HELMET.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.NAUTILUS_KNIGHT_HELMET.get())
-                .unlocks("has_hydro_rune", has(HnSItemRegistry.HYDRO_RUNE.get()))
+                .unlocks("has_hydro_rune", has(HnSTags.HYDRO_RUNES))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/nautilus_knight/nautilus_knight_helmet"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.HYDRO_RUNE.get()),
+                        Ingredient.of(HnSTags.HYDRO_RUNES),
                         Ingredient.of(ItemRegistry.WIZARD_CHESTPLATE.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.NAUTILUS_KNIGHT_CHESTPLATE.get())
-                .unlocks("has_hydro_rune", has(HnSItemRegistry.HYDRO_RUNE.get()))
+                .unlocks("has_hydro_rune", has(HnSTags.HYDRO_RUNES))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/nautilus_knight/nautilus_knight_chestplate"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.HYDRO_RUNE.get()),
+                        Ingredient.of(HnSTags.HYDRO_RUNES),
                         Ingredient.of(ItemRegistry.WIZARD_LEGGINGS.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.NAUTILUS_KNIGHT_LEGGINGS.get())
-                .unlocks("has_hydro_rune", has(HnSItemRegistry.HYDRO_RUNE.get()))
+                .unlocks("has_hydro_rune", has(HnSTags.HYDRO_RUNES))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/nautilus_knight/nautilus_knight_leggings"));
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(HnSItemRegistry.HYDRO_RUNE.get()),
+                        Ingredient.of(HnSTags.HYDRO_RUNES),
                         Ingredient.of(ItemRegistry.WIZARD_BOOTS.get()),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.NAUTILUS_KNIGHT_BOOTS.get())
-                .unlocks("has_hydro_rune", has(HnSItemRegistry.HYDRO_RUNE.get()))
+                .unlocks("has_hydro_rune", has(HnSTags.HYDRO_RUNES))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/nautilus_knight/nautilus_knight_boots"));
-
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, HnSItemRegistry.ELDER_GUARDIAN_HELMET.get())
@@ -2772,7 +2785,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
         //Arbitrium Armor
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_HELMET),
+                        Ingredient.of(HLTags.PURE_HELMET),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.ARBITRIUM_ROBES_HELMET.get())
@@ -2781,7 +2794,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_CHESTPLATE),
+                        Ingredient.of(HLTags.PURE_CHESTPLATE),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.ARBITRIUM_ROBES_CHESTPLATE.get())
@@ -2790,7 +2803,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_LEGGINGS),
+                        Ingredient.of(HLTags.PURE_LEGGINGS),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.ARBITRIUM_ROBES_LEGGINGS.get())
@@ -2799,7 +2812,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_BOOTS),
+                        Ingredient.of(HLTags.PURE_BOOTS),
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.ARBITRIUM_ROBES_BOOTS.get())
@@ -2810,7 +2823,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
         //Iron431 Armor
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_HELMET),
+                        Ingredient.of(HLTags.PURE_HELMET),
                         Ingredient.of(Items.IRON_INGOT),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.IRON431_HELMET.get())
@@ -2819,7 +2832,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_CHESTPLATE),
+                        Ingredient.of(HLTags.PURE_CHESTPLATE),
                         Ingredient.of(Items.IRON_INGOT),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.IRON431_CHESTPLATE.get())
@@ -2828,7 +2841,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_LEGGINGS),
+                        Ingredient.of(HLTags.PURE_LEGGINGS),
                         Ingredient.of(Items.IRON_INGOT),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.IRON431_LEGGINGS.get())
@@ -2837,7 +2850,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_BOOTS),
+                        Ingredient.of(HLTags.PURE_BOOTS),
                         Ingredient.of(Items.IRON_INGOT),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.IRON431_BOOTS.get())
@@ -2848,7 +2861,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
         // Sacred Robes
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_HELMET),
+                        Ingredient.of(HLTags.PURE_HELMET),
                         Ingredient.of(HnSItemRegistry.RUNESTONE_FRAGMENTS.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.SACRED_ROBES_HELMET.get())
@@ -2857,7 +2870,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_CHESTPLATE),
+                        Ingredient.of(HLTags.PURE_CHESTPLATE),
                         Ingredient.of(HnSItemRegistry.RUNESTONE_FRAGMENTS.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.SACRED_ROBES_CHESTPLATE.get())
@@ -2866,7 +2879,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_LEGGINGS),
+                        Ingredient.of(HLTags.PURE_LEGGINGS),
                         Ingredient.of(HnSItemRegistry.RUNESTONE_FRAGMENTS.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.SACRED_ROBES_LEGGINGS.get())
@@ -2875,7 +2888,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_BOOTS),
+                        Ingredient.of(HLTags.PURE_BOOTS),
                         Ingredient.of(HnSItemRegistry.RUNESTONE_FRAGMENTS.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.SACRED_ROBES_BOOTS.get())
@@ -2886,7 +2899,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
         //Lemon God Armor
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_HELMET),
+                        Ingredient.of(HLTags.PURE_HELMET),
                         Ingredient.of(HnSItemRegistry.DIVINE_LEMON.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.LEMON_GOD_HELMET.get())
@@ -2895,7 +2908,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_CHESTPLATE),
+                        Ingredient.of(HLTags.PURE_CHESTPLATE),
                         Ingredient.of(HnSItemRegistry.DIVINE_LEMON.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.LEMON_GOD_CHESTPLATE.get())
@@ -2904,7 +2917,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_LEGGINGS),
+                        Ingredient.of(HLTags.PURE_LEGGINGS),
                         Ingredient.of(HnSItemRegistry.DIVINE_LEMON.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.LEMON_GOD_LEGGINGS.get())
@@ -2913,7 +2926,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(HnSItemRegistry.DIVINE_MOLD.get()),
-                        Ingredient.of(HnSTags.PURE_BOOTS),
+                        Ingredient.of(HLTags.PURE_BOOTS),
                         Ingredient.of(HnSItemRegistry.DIVINE_LEMON.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.LEMON_GOD_BOOTS.get())

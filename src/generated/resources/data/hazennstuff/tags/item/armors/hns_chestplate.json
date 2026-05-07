@@ -1,9 +1,9 @@
 {
   "values": [
-    "#hazennstuff:armors/school/school_chestplate",
-    "#hazennstuff:armors/netherite_battlemage/netherite_battlemage_chestplate",
-    "#hazennstuff:armors/pure/pure_chestplate",
-    "#hazennstuff:armors/paragon/paragon_chestplate",
+    "#hazentouvelib:armors/school/school_chestplate",
+    "#hazentouvelib:armors/netherite_battlemage/netherite_battlemage_chestplate",
+    "#hazentouvelib:armors/pure/pure_chestplate",
+    "#hazentouvelib:armors/paragon/paragon_chestplate",
     "hazennstuff:miner_chestplate",
     "hazennstuff:spectral_spelunker_chestplate",
     "hazennstuff:frostbite_hunter_chestplate",

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "aces_spell_utils:hydro_focus",
+          "expand": true
+        }
+      ]
+    }
+  ]
+}

@@ -9,7 +9,7 @@
       "item": "hazennstuff:excalibur_fragment"
     },
     "R": {
-      "item": "hazennstuff:hydro_rune"
+      "tag": "hazennstuff:items/hydro_runes"
     },
     "W": {
       "item": "irons_spellbooks:weapon_parts"

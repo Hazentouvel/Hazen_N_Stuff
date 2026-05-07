@@ -4,7 +4,7 @@
     "item": "hazennstuff:runestone_fragments"
   },
   "base": {
-    "tag": "hazennstuff:armors/pure/pure_helmet"
+    "tag": "hazentouvelib:armors/pure/pure_helmet"
   },
   "result": {
     "count": 1,

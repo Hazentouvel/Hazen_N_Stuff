@@ -21,7 +21,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "hazennstuff:cosmic_rune"
+          "name": "hazentouvelib:cosmic_rune"
         }
       ],
       "rolls": 1

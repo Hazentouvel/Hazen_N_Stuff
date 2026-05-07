@@ -1,9 +1,9 @@
 {
   "values": [
-    "#hazennstuff:armors/school/school_helmet",
-    "#hazennstuff:armors/netherite_battlemage/netherite_battlemage_helmet",
-    "#hazennstuff:armors/pure/pure_helmet",
-    "#hazennstuff:armors/paragon/paragon_helmet",
+    "#hazentouvelib:armors/school/school_helmet",
+    "#hazentouvelib:armors/netherite_battlemage/netherite_battlemage_helmet",
+    "#hazentouvelib:armors/pure/pure_helmet",
+    "#hazentouvelib:armors/paragon/paragon_helmet",
     "hazennstuff:miner_helmet",
     "hazennstuff:spectral_spelunker_helmet",
     "hazennstuff:frostbite_hunter_helmet",

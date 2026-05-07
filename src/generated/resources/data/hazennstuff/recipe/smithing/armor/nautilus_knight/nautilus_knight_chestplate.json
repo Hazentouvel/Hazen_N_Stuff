@@ -19,6 +19,6 @@
     "id": "hazennstuff:nautilus_knight_chestplate"
   },
   "template": {
-    "item": "hazennstuff:hydro_rune"
+    "tag": "hazennstuff:items/hydro_runes"
   }
 }

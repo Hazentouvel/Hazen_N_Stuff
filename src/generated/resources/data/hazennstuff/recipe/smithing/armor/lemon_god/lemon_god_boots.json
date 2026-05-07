@@ -4,7 +4,7 @@
     "item": "hazennstuff:divine_lemon"
   },
   "base": {
-    "tag": "hazennstuff:armors/pure/pure_boots"
+    "tag": "hazentouvelib:armors/pure/pure_boots"
   },
   "result": {
     "count": 1,

@@ -981,6 +981,8 @@ public class HnSCreativeModeTabs {
 
                         //Wings
                         output.accept(HnSItemRegistry.ARBITRIUM_WINGS.get());
+                        output.accept(HnSItemRegistry.ANGEL_WINGS.get());
+                        output.accept(HnSItemRegistry.FALLEN_ANGEL_WINGS.get());
 
                         // Cinderous Curios
                         output.accept(HnSItemRegistry.BLADE_OF_THE_LEGATE.get());

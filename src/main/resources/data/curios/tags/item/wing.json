@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values" :[
-    "hazennstuff:arbitrium_wings"
+    "hazennstuff:arbitrium_wings",
+    "hazennstuff:angel_wings",
+    "hazennstuff:fallen_angel_wings"
   ]
 }

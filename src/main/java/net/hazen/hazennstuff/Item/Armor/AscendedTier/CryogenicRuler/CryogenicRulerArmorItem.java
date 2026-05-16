@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Armor.PureTier.CryogenicRuler;
+package net.hazen.hazennstuff.Item.Armor.AscendedTier.CryogenicRuler;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;

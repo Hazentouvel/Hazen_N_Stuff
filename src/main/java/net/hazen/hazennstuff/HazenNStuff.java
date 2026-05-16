@@ -34,9 +34,11 @@ import net.hazen.hazennstuff.Item.Armor.PureTier.TheWither.AzureLib.TheWitherArm
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.GalvanizedSheath.GalvanizedSheathItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.ScrollSheath.ScrollSheathItemRenderer;
+import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbook;
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioRenderer;
+import net.hazen.hazennstuff.Item.Curios.Wings.WingCurioItem;
 import net.hazen.hazennstuff.Item.Staves.CeaselessVoid.CeaselessVoidRenderer;
 import net.hazen.hazennstuff.Item.Staves.InsaniaAeternus.InsaniaAeternusRenderer;
 import net.hazen.hazennstuff.Item.Staves.SoulcallingScepter.SoulcallingScepterRenderer;
@@ -45,6 +47,9 @@ import net.hazen.hazennstuff.Item.Weapons.Generic.Terraprisma.TerraprismaRendere
 import net.hazen.hazennstuff.Item.Weapons.Generic.Volcano.VolcanoRenderer;
 import net.hazen.hazennstuff.Registries.*;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
+import net.hazen.hazentouvelib.Items.Curios.GenericCurioRenderer;
+import net.hazen.hazentouvelib.Items.Curios.WingCurioRenderer;
+import net.hazen.hazentouvelib.Registries.HLItemRegistry;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -194,7 +199,10 @@ public class HazenNStuff
 
             HnSItemRegistry.getHnSItems().stream().filter(item -> item.get() instanceof SpellBook).forEach((item) -> CuriosRendererRegistry.register(item.get(), SpellBookCurioRenderer::new));
             HnSItemRegistry.getHnSItems().stream().filter(item -> item.get() instanceof SheathCurioItem).forEach((item) -> CuriosRendererRegistry.register(item.get(), SheathCurioRenderer::new));
-
+            event.enqueueWork(() -> {
+                HnSItemRegistry.getHnSItems().stream().filter(item -> item.get() instanceof WingCurioItem).forEach((item) -> CuriosRendererRegistry.register(item.get(), WingCurioRenderer::new));
+                HnSItemRegistry.getHnSItems().stream().filter(item -> item.get() instanceof EnergizedCoreSpellbook).forEach((item) -> CuriosRendererRegistry.register(item.get(), GenericCurioRenderer::new));
+            });
 
             // Armor Rendering Registry
 

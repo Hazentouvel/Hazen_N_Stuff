@@ -42,6 +42,9 @@ public class HnSParticleRegistry {
     // Ender Ember Particle
     public static final Supplier<SimpleParticleType> ENDER_EMBER_PARTICLE = PARTICLE_TYPES.register("ender_ember_particle",
             () -> new SimpleParticleType(false));
+    // Ender Explosion Particle
+    public static final Supplier<SimpleParticleType> ENDER_EXPLOSION_PARTICLE = PARTICLE_TYPES.register("ender_explosion_particle",
+            () -> new SimpleParticleType(false));
 
     // Night's Edge Particle
     public static final Supplier<SimpleParticleType> NIGHTS_EDGE_PARTICLE = PARTICLE_TYPES.register("nights_edge_particle",

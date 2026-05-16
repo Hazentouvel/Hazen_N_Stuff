@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "hazennstuff:ice_cloud",
-    "hazennstuff:spores",
-    "hazennstuff:corrupt_magic"
+    "hazennstuff:spores"
   ]
 }

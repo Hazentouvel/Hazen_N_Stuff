@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Armor.PureTier.CryogenicRuler;
+package net.hazen.hazennstuff.Item.Armor.AscendedTier.CryogenicRuler;
 
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.resources.ResourceLocation;

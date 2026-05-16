@@ -11,7 +11,8 @@ import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.Item.Util.HnSToolTiers;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
-import net.hazen.hazentouvelib.Rarities.HLRarities;import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.hazen.hazentouvelib.Items.Utils.MagicPickaxe;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
@@ -34,7 +35,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
-public class SpectralPickaxeItem extends MagicSwordItem implements GeoItem {
+public class SpectralPickaxeItem extends MagicPickaxe implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public SpectralPickaxeItem() {
@@ -44,7 +45,7 @@ public class SpectralPickaxeItem extends MagicSwordItem implements GeoItem {
                         .equipment(1)
                         .fireResistant()
                         .rarity(Rarity.EPIC)
-                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.DIVINE_GREATSWORD))
+                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.SPECTRAL_PICKAXE))
                         .component(DataComponents.TOOL, HnSToolTiers.MITHRIL.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE)),
                 SpellDataRegistryHolder.of(
                         new SpellDataRegistryHolder(SpellRegistry.SPECTRAL_HAMMER_SPELL, 3))

@@ -1010,9 +1010,19 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         ;
 
         tag(ItemTags.PICKAXES)
-                .add(HnSItemRegistry.SPECTRAL_PICKAXE.get())
-                .add(HnSItemRegistry.PICKAXE_AXE.get())
-                .add(HnSItemRegistry.PICKAXE_AXE_DIVINE_GOLD.get())
+                .add(
+                        HnSItemRegistry.SPECTRAL_PICKAXE.get(),
+                        HnSItemRegistry.PICKAXE_AXE.get(),
+                        HnSItemRegistry.PICKAXE_AXE_DIVINE_GOLD.get()
+                )
+        ;
+
+        tag(ItemTags.CLUSTER_MAX_HARVESTABLES)
+                .add(
+                        HnSItemRegistry.SPECTRAL_PICKAXE.get(),
+                        HnSItemRegistry.PICKAXE_AXE.get(),
+                        HnSItemRegistry.PICKAXE_AXE_DIVINE_GOLD.get()
+                )
         ;
 
         tag(Tags.Items.TOOLS_MACE)

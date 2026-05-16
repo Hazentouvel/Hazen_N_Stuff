@@ -4,7 +4,7 @@
     "item": "minecraft:black_dye"
   },
   "base": {
-    "tag": "hazennstuff:armors/netherite_battlemage/netherite_battlemage_leggings"
+    "tag": "hazentouvelib:armors/netherite_battlemage/netherite_battlemage_leggings"
   },
   "result": {
     "count": 1,

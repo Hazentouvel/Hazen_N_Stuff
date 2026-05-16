@@ -4,6 +4,8 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.particle.BlastwaveParticleOptions;
 import io.redspace.ironsspellbooks.util.MinecraftInstanceHelper;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
+import net.hazen.hazennstuff.Registries.HnSParticleHelper;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
@@ -29,7 +31,7 @@ public class HnSClientSpellCastHelper {
                 Vec3 vec3 = (new Vec3((double)Mth.cos(step * (float)i), (double)0.0F, (double)Mth.sin(step * (float)i))).scale((double)speed);
                 Vec3 posOffset = Utils.getRandomVec3((double)0.5F).add(vec3.scale((double)10.0F));
                 vec3 = vec3.add(Utils.getRandomVec3(0.01));
-                level.addParticle(ParticleHelper.UNSTABLE_ENDER, x + posOffset.x, y + posOffset.y, z + posOffset.z, vec3.x, vec3.y, vec3.z);
+                level.addParticle(HnSParticleHelper.ENDER_EXPLOSION_PARTICLE, x + posOffset.x, y + posOffset.y, z + posOffset.z, vec3.x, vec3.y, vec3.z);
             }
 
             int cloudDensity = 50 + (int)(25.0F * radius);
@@ -39,7 +41,7 @@ public class HnSClientSpellCastHelper {
                 Vec3 motion = posOffset.normalize().scale((double)(speed * 0.5F));
                 posOffset = posOffset.add(motion.scale(Utils.getRandomScaled((double)1.0F)));
                 motion = motion.add(Utils.getRandomVec3((double)(speed * 0.1F)));
-                level.addParticle(ParticleHelper.UNSTABLE_ENDER, x + posOffset.x, y + posOffset.y, z + posOffset.z, motion.x, motion.y, motion.z);
+                level.addParticle(HnSParticleHelper.ENDER_EXPLOSION_PARTICLE, x + posOffset.x, y + posOffset.y, z + posOffset.z, motion.x, motion.y, motion.z);
             }
 
             for(int i = 0; i < cloudDensity; i += 2) {
@@ -54,7 +56,7 @@ public class HnSClientSpellCastHelper {
                 Vec3 posOffset = Utils.getRandomVec3((double)radius).scale((double)0.2F);
                 Vec3 motion = posOffset.normalize().scale(0.8);
                 motion = motion.add(Utils.getRandomVec3(0.18));
-                level.addParticle(ParticleHelper.UNSTABLE_ENDER, x + posOffset.x * (double)0.5F, y + posOffset.y * (double)0.5F, z + posOffset.z * (double)0.5F, motion.x, motion.y, motion.z);
+                level.addParticle(ParticleTypes.PORTAL, x + posOffset.x * (double)0.5F, y + posOffset.y * (double)0.5F, z + posOffset.z * (double)0.5F, motion.x, motion.y, motion.z);
             }
 
         });

@@ -25,6 +25,7 @@ public class HnSParticleHelper {
     public static final ParticleOptions STAR_IMPACT_PARTICLE = HnSParticleRegistry.STAR_IMPACT_PARTICLE.get();
     public static final ParticleOptions COSMIC_EMBER_PARTICLE = HnSParticleRegistry.COSMIC_EMBER_PARTICLE.get();
     public static final ParticleOptions ENDER_EMBER_PARTICLE = HnSParticleRegistry.ENDER_EMBER_PARTICLE.get();
+    public static final ParticleOptions ENDER_EXPLOSION_PARTICLE = HnSParticleRegistry.ENDER_EXPLOSION_PARTICLE.get();
     public static final ParticleOptions NIGHTS_EDGE_PARTICLE = HnSParticleRegistry.NIGHTS_EDGE_PARTICLE.get();
     public static final ParticleOptions ROD_OF_DISCORD_PARTICLE = HnSParticleRegistry.ROD_OF_DISCORD_PARTICLE.get();
 

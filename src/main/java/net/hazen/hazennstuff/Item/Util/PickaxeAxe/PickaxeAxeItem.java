@@ -4,14 +4,13 @@ import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Item.Util.HnSToolTiers;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
-import net.hazen.hazentouvelib.Rarities.HLRarities;import net.minecraft.ChatFormatting;
+import net.hazen.hazentouvelib.Items.Utils.PickaxeAxe;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoItem;
@@ -23,7 +22,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class PickaxeAxeItem extends ExtendedSwordItem implements GeoItem {
+public class PickaxeAxeItem extends PickaxeAxe implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public PickaxeAxeItem() {
@@ -35,25 +34,18 @@ public class PickaxeAxeItem extends ExtendedSwordItem implements GeoItem {
                         .rarity(Rarity.EPIC)
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.PICKAXE_AXE))
                         .component(DataComponents.TOOL, HnSToolTiers.MITHRIL.createToolProperties(BlockTags.MINEABLE_WITH_PICKAXE))
+                        .component(DataComponents.TOOL, HnSToolTiers.MITHRIL.createToolProperties(BlockTags.MINEABLE_WITH_AXE))
 
         );
     }
 
     @Override
-    public void appendHoverText(@NotNull ItemStack stack,
-                                @NotNull TooltipContext context,
-                                @NotNull List<Component> lines,
-                                @NotNull TooltipFlag flag) {
+    public void appendHoverText(@NotNull ItemStack stack, @NotNull TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, context, lines, flag);
 
         // Custom item description section
         lines.add(Component.translatable("item.hazennstuff.terraria.description")
                 .withStyle(ChatFormatting.AQUA, ChatFormatting.ITALIC));
-    }
-
-    @Override
-    public boolean isCorrectToolForDrops(ItemStack stack, BlockState state) {
-        return state.is(BlockTags.MINEABLE_WITH_PICKAXE) || state.is(BlockTags.MINEABLE_WITH_AXE);
     }
 
     @Override

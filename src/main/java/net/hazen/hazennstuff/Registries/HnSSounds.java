@@ -46,16 +46,9 @@ public class HnSSounds {
     public static DeferredHolder<SoundEvent, SoundEvent> ELECTRIC_CAST = registerSoundEvent("electric_cast");
 
     // Electric Impact
-    public static DeferredHolder<SoundEvent, SoundEvent> ELECTRIC_IMPACT_1 = registerSoundEvent("electric_impact_1");
-    public static DeferredHolder<SoundEvent, SoundEvent> ELECTRIC_IMPACT_2 = registerSoundEvent("electric_impact_2");
-
     public static final Holder<SoundEvent> ELECTRIC_IMPACT = registerSoundEvent("electric_impact");
 
     //Spark Cast
-    public static final Holder<SoundEvent> SPARK_CAST_1 = registerSoundEvent("spark_cast_1");
-    public static final Holder<SoundEvent> SPARK_CAST_2 = registerSoundEvent("spark_cast_2");
-    public static final Holder<SoundEvent> SPARK_CAST_3 = registerSoundEvent("spark_cast_3");
-
     public static final Holder<SoundEvent> SPARK_CAST = registerSoundEvent("spark_cast");
 
     public static final DeferredHolder<SoundEvent, SoundEvent> VIOLENT_REGURGITATION_CHARGING = registerSoundEvent("violent_regurgitation_charging");
@@ -83,10 +76,6 @@ public class HnSSounds {
     public static DeferredHolder<SoundEvent, SoundEvent> SYRINGE_BARRAGE_CAST = registerSoundEvent("syringe_barrage_cast");
 
     //Syringe Barrage Hit
-    public static final Holder<SoundEvent> SYRINGE_BARRAGE_HIT_1 = registerSoundEvent("syringe_barrage_hit_1");
-    public static final Holder<SoundEvent> SYRINGE_BARRAGE_HIT_2 = registerSoundEvent("syringe_barrage_hit_2");
-    public static final Holder<SoundEvent> SYRINGE_BARRAGE_HIT_3 = registerSoundEvent("syringe_barrage_hit_3");
-
     public static final Holder<SoundEvent> SYRINGE_BARRAGE_HIT = registerSoundEvent("syringe_barrage_hit");
 
     // Syringe Barrage Miss
@@ -112,11 +101,6 @@ public class HnSSounds {
     /*
     *** Umbrashift Barrage Sounds
      */
-
-    //Spark Cast
-    public static final Holder<SoundEvent> SHADOW_DAGGER_HIT_1 = registerSoundEvent("shadow_dagger_hit_1");
-    public static final Holder<SoundEvent> SHADOW_DAGGER_HIT_2 = registerSoundEvent("shadow_dagger_hit_2");
-    public static final Holder<SoundEvent> SHADOW_DAGGER_HIT_3 = registerSoundEvent("shadow_dagger_hit_3");
 
     public static final Holder<SoundEvent> SHADOW_DAGGER_HIT = registerSoundEvent("shadow_dagger_hit");
 
@@ -181,86 +165,31 @@ public class HnSSounds {
 
 
     //Soul Flame Equip
-    public static final Holder<SoundEvent> SOUL_FLAME_EQUIP_1 = registerSoundEvent("soul_flame_equip_1");
-    public static final Holder<SoundEvent> SOUL_FLAME_EQUIP_2 = registerSoundEvent("soul_flame_equip_2");
-    public static final Holder<SoundEvent> SOUL_FLAME_EQUIP_3 = registerSoundEvent("soul_flame_equip_3");
-    public static final Holder<SoundEvent> SOUL_FLAME_EQUIP_4 = registerSoundEvent("soul_flame_equip_4");
-
     public static final Holder<SoundEvent> SOUL_FLAME_EQUIP = registerSoundEvent("soul_flame_equip");
 
     //Supreme Witch Equip
-
-    public static final Holder<SoundEvent> SUPREME_WITCH_EQUIP_1 = registerSoundEvent("supreme_witch_equip_1");
-    public static final Holder<SoundEvent> SUPREME_WITCH_EQUIP_2 = registerSoundEvent("supreme_witch_equip_2");
-    public static final Holder<SoundEvent> SUPREME_WITCH_EQUIP_3 = registerSoundEvent("supreme_witch_equip_3");
-    public static final Holder<SoundEvent> SUPREME_WITCH_EQUIP_4 = registerSoundEvent("supreme_witch_equip_4");
-
     public static final Holder<SoundEvent> SUPREME_WITCH_EQUIP = registerSoundEvent("supreme_witch_equip");
 
     //Seraph Equip
-
-    public static final Holder<SoundEvent> SERAPH_EQUIP_1 = registerSoundEvent("seraph_equip_1");
-    public static final Holder<SoundEvent> SERAPH_EQUIP_2 = registerSoundEvent("seraph_equip_2");
-    public static final Holder<SoundEvent> SERAPH_EQUIP_3 = registerSoundEvent("seraph_equip_3");
-    public static final Holder<SoundEvent> SERAPH_EQUIP_4 = registerSoundEvent("seraph_equip_4");
-
     public static final Holder<SoundEvent> SERAPH_EQUIP = registerSoundEvent("seraph_equip");
 
     //Charged Scourge Equip
-
-    public static final Holder<SoundEvent> CHARGED_SCOURGE_EQUIP_1 = registerSoundEvent("charged_scourge_equip_1");
-    public static final Holder<SoundEvent> CHARGED_SCOURGE_EQUIP_2 = registerSoundEvent("charged_scourge_equip_2");
-    public static final Holder<SoundEvent> CHARGED_SCOURGE_EQUIP_3 = registerSoundEvent("charged_scourge_equip_3");
-    public static final Holder<SoundEvent> CHARGED_SCOURGE_EQUIP_4 = registerSoundEvent("charged_scourge_equip_4");
-
     public static final Holder<SoundEvent> CHARGED_SCOURGE_EQUIP = registerSoundEvent("charged_scourge_equip");
 
     //Creaking Sorcerer Equip
-
-    public static final Holder<SoundEvent> CREAKING_SORCERER_EQUIP_1 = registerSoundEvent("creaking_sorcerer_equip_1");
-    public static final Holder<SoundEvent> CREAKING_SORCERER_EQUIP_2 = registerSoundEvent("creaking_sorcerer_equip_2");
-    public static final Holder<SoundEvent> CREAKING_SORCERER_EQUIP_3 = registerSoundEvent("creaking_sorcerer_equip_3");
-    public static final Holder<SoundEvent> CREAKING_SORCERER_EQUIP_4 = registerSoundEvent("creaking_sorcerer_equip_4");
-
     public static final Holder<SoundEvent> CREAKING_SORCERER_EQUIP = registerSoundEvent("creaking_sorcerer_equip");
 
     //Flesh Mass Equip
-
-    public static final Holder<SoundEvent> FLESH_MASS_EQUIP_1 = registerSoundEvent("flesh_mass_equip_1");
-    public static final Holder<SoundEvent> FLESH_MASS_EQUIP_2 = registerSoundEvent("flesh_mass_equip_2");
-    public static final Holder<SoundEvent> FLESH_MASS_EQUIP_3 = registerSoundEvent("flesh_mass_equip_3");
-    public static final Holder<SoundEvent> FLESH_MASS_EQUIP_4 = registerSoundEvent("flesh_mass_equip_4");
-    public static final Holder<SoundEvent> FLESH_MASS_EQUIP_5 = registerSoundEvent("flesh_mass_equip_5");
-    public static final Holder<SoundEvent> FLESH_MASS_EQUIP_6 = registerSoundEvent("flesh_mass_equip_6");
-    public static final Holder<SoundEvent> FLESH_MASS_EQUIP_7 = registerSoundEvent("flesh_mass_equip_7");
-
     public static final Holder<SoundEvent> FLESH_MASS_EQUIP = registerSoundEvent("flesh_mass_equip");
 
     //Cryogenic Ruler Equip
-
-    public static final Holder<SoundEvent> CRYOGENIC_RULER_EQUIP_1 = registerSoundEvent("cryogenic_ruler_equip_1");
-    public static final Holder<SoundEvent> CRYOGENIC_RULER_EQUIP_2 = registerSoundEvent("cryogenic_ruler_equip_2");
-    public static final Holder<SoundEvent> CRYOGENIC_RULER_EQUIP_3 = registerSoundEvent("cryogenic_ruler_equip_3");
-    public static final Holder<SoundEvent> CRYOGENIC_RULER_EQUIP_4 = registerSoundEvent("cryogenic_ruler_equip_4");
-
     public static final Holder<SoundEvent> CRYOGENIC_RULER_EQUIP = registerSoundEvent("cryogenic_ruler_equip");
 
 
     //Ender Dragon Equip
-
-    public static final Holder<SoundEvent> ENDER_DRAGON_EQUIP_1 = registerSoundEvent("ender_dragon_equip_1");
-    public static final Holder<SoundEvent> ENDER_DRAGON_EQUIP_2 = registerSoundEvent("ender_dragon_equip_2");
-    public static final Holder<SoundEvent> ENDER_DRAGON_EQUIP_3 = registerSoundEvent("ender_dragon_equip_3");
-    public static final Holder<SoundEvent> ENDER_DRAGON_EQUIP_4 = registerSoundEvent("ender_dragon_equip_4");
-
     public static final Holder<SoundEvent> ENDER_DRAGON_EQUIP = registerSoundEvent("ender_dragon_equip");
 
     //Calamitas
-    public static final Holder<SoundEvent> CALAMITAS_EQUIP_1 = registerSoundEvent("calamitas_equip_1");
-    public static final Holder<SoundEvent> CALAMITAS_EQUIP_2 = registerSoundEvent("calamitas_equip_2");
-    public static final Holder<SoundEvent> CALAMITAS_EQUIP_3 = registerSoundEvent("calamitas_equip_3");
-    public static final Holder<SoundEvent> CALAMITAS_EQUIP_4 = registerSoundEvent("calamitas_equip_4");
-
     public static final Holder<SoundEvent> CALAMITAS_EQUIP = registerSoundEvent("calamitas_equip");
 
 

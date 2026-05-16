@@ -67,7 +67,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -87,7 +87,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -107,7 +107,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -127,7 +127,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -147,7 +147,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -167,7 +167,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -187,7 +187,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -207,7 +207,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -227,7 +227,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -247,7 +247,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -267,7 +267,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -287,7 +287,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -307,7 +307,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -327,7 +327,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -347,7 +347,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         3,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -368,7 +368,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         2,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -397,7 +397,7 @@ public class HnSEnchantments {
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
                         5,
-                        EquipmentSlotGroup.MAINHAND))
+                        EquipmentSlotGroup.ANY))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELL_ENHANCEMENT))
         );
     }

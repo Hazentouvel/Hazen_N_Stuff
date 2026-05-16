@@ -4,6 +4,8 @@ import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Item.Util.HnSToolTiers;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
+import net.hazen.hazennstuff.Item.Util.PickaxeAxe.PickaxeAxeItem;
+import net.hazen.hazentouvelib.Items.Utils.PickaxeAxe;
 import net.hazen.hazentouvelib.Rarities.HLRarities;import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.component.DataComponents;
@@ -23,7 +25,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class PickaxeAxeDivineGoldItem extends ExtendedSwordItem implements GeoItem {
+public class PickaxeAxeDivineGoldItem extends PickaxeAxe implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public PickaxeAxeDivineGoldItem() {
@@ -49,11 +51,6 @@ public class PickaxeAxeDivineGoldItem extends ExtendedSwordItem implements GeoIt
         // Custom item description section
         lines.add(Component.translatable("item.hazennstuff.terraria.description")
                 .withStyle(ChatFormatting.AQUA, ChatFormatting.ITALIC));
-    }
-
-    @Override
-    public boolean isCorrectToolForDrops(ItemStack stack, BlockState state) {
-        return state.is(BlockTags.MINEABLE_WITH_PICKAXE) || state.is(BlockTags.MINEABLE_WITH_AXE);
     }
 
     @Override

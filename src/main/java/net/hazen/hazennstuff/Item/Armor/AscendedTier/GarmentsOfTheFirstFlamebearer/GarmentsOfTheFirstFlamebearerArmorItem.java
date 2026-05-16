@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Armor.ReignOfTyros.GarmentsOfTheFirstFlamebearer;
+package net.hazen.hazennstuff.Item.Armor.AscendedTier.GarmentsOfTheFirstFlamebearer;
 
 import io.redspace.ironsspellbooks.api.events.ModifySpellLevelEvent;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
@@ -44,7 +44,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.network.PacketDistributor;
-import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 import java.util.List;

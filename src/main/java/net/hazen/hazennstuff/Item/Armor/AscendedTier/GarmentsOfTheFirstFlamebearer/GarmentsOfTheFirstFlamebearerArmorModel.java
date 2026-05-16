@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Armor.ReignOfTyros.GarmentsOfTheFirstFlamebearer;
+package net.hazen.hazennstuff.Item.Armor.AscendedTier.GarmentsOfTheFirstFlamebearer;
 
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import net.hazen.hazennstuff.HazenNStuff;

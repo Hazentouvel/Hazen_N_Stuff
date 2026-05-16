@@ -43,7 +43,7 @@ import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Chlorophyte.Headgear.C
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Chlorophyte.Helmet.ChlorophyteHelmetArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Chlorophyte.Mask.ChlorophyteMaskArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.CreakingSorcerer.GeckolibCreakingSorcererArmorItem;
-import net.hazen.hazennstuff.Item.Armor.PureTier.CryogenicRuler.CryogenicRulerArmorItem;
+import net.hazen.hazennstuff.Item.Armor.AscendedTier.CryogenicRuler.CryogenicRulerArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.CrystalArachnid.CrystalArachnidArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.DarkRitualTemplar.GeckolibDarkRitualTemplarArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Melee.DreadsteelKnight.DreadsteelKnightArmorItem;
@@ -56,7 +56,7 @@ import net.hazen.hazennstuff.Item.Armor.Cosmetic.Battlemage.Frieren.FrierenArmor
 import net.hazen.hazennstuff.Item.Armor.Ranger.FrostbiteHunter.FrostbiteHunterArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Melee.FrostbiteKnight.FrostbiteKnightArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.GabrielULTRAKILL.GeckolibGabrielArmorItem;
-import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.GarmentsOfTheFirstFlamebearer.GarmentsOfTheFirstFlamebearerArmorItem;
+import net.hazen.hazennstuff.Item.Armor.AscendedTier.GarmentsOfTheFirstFlamebearer.GarmentsOfTheFirstFlamebearerArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.Battlemage.GiornoGiovanna.GiornoGiovannaArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Hazel.HazelArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Hazel.HazelHOLYMOLYArmorItem;
@@ -118,8 +118,10 @@ import net.hazen.hazennstuff.Item.Curios.Sheaths.GalvanizedSheath.GalvanizedShea
 import net.hazen.hazennstuff.Item.Curios.Sheaths.ScrollSheath.ScrollSheath;
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbook;
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.GoldenShowerSpellbook;
+import net.hazen.hazennstuff.Item.Curios.Wings.AngelWings.AngelWings;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWings;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSFoodProperties;
+import net.hazen.hazennstuff.Item.Curios.Wings.FallenAngelWings.FallenAngelWings;
 import net.hazen.hazennstuff.Item.Lootbags.TyrosLootBag;
 import net.hazen.hazennstuff.Item.SpawnEggs.SpawnVoidWanderer;
 import net.hazen.hazennstuff.Item.Staves.BlossomOfTheEnchantress.BlossomOfTheEnchantress;
@@ -1123,6 +1125,14 @@ public class HnSItemRegistry {
 
     // Arbitrium Wings
     public static final DeferredItem<ArbitriumWings> ARBITRIUM_WINGS = ITEMS.register("arbitrium_wings", ArbitriumWings::new);
+
+
+    // Angel Wings
+    public static final DeferredItem<AngelWings> ANGEL_WINGS = ITEMS.register("angel_wings", AngelWings::new);
+
+
+    // Fallen Angel Wings
+    public static final DeferredItem<FallenAngelWings> FALLEN_ANGEL_WINGS = ITEMS.register("fallen_angel_wings", FallenAngelWings::new);
 
     /*
      *** Misc
@@ -3249,7 +3259,7 @@ public class HnSItemRegistry {
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
     ));
 
-    // Arbitrium Robes
+    // Arbitrium Robe
 
     public static final DeferredHolder<Item, Item> ARBITRIUM_ROBES_HELMET = ITEMS.register("arbitrium_robes_helmet", () -> new ArbitriumRobesArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
             .equipment(1)

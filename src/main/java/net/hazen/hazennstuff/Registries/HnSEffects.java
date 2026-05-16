@@ -63,24 +63,6 @@ public class HnSEffects {
                             ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "fireblossom_warrior"), 0.15f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
-    public static final Holder<MobEffect> SCORCH_BLOOMED_EFFECT = MOB_EFFECTS.register("scorch_bloomed",
-            () -> new GenericHazenEffect(MobEffectCategory.BENEFICIAL, 0xfbb741)
-                    .addAttributeModifier(AttributeRegistry.CASTING_MOVESPEED,
-                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "scorch_bloomed"), 0.15f,
-                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                    .addAttributeModifier(AttributeRegistry.SPELL_RESIST,
-                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "scorch_bloomed"), 0.1f,
-                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                    .addAttributeModifier(Attributes.ARMOR,
-                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "scorch_bloomed"), 2f,
-                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                    .addAttributeModifier(Attributes.ARMOR_TOUGHNESS,
-                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "scorch_bloomed"), 2f,
-                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                    .addAttributeModifier(ALObjects.Attributes.PROT_SHRED,
-                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "scorch_bloomed"), 0.15f,
-                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
-
     public static final Holder<MobEffect> MAGE_SET_BONUS = MOB_EFFECTS.register("mage_set_bonus",
             () -> new GenericHazenEffect(MobEffectCategory.BENEFICIAL, 0xfbb741)
                     .addAttributeModifier(AttributeRegistry.CASTING_MOVESPEED,

@@ -31,17 +31,6 @@ public class ParrySpell extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath("hazennstuff", "parry");
     private final DefaultConfig defaultConfig;
 
-    @Override
-    public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
-
-        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
-                .withStyle(ChatFormatting.GOLD)
-                .withStyle(ChatFormatting.BOLD)
-        );
-        return li;
-    }
-
     public ParrySpell() {
         this.defaultConfig = (new DefaultConfig())
                 .setMinRarity(SpellRarity.COMMON)

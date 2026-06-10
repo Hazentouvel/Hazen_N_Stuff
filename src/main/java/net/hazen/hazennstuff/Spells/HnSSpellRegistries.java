@@ -66,6 +66,12 @@ public class HnSSpellRegistries {
      *** Fire
      */
 
+    //Soul Flame Bolt
+    public static final Supplier<AbstractSpell> SOUL_FLAMING_STRIKE = registerSpell(new SoulFlamingStrikeSpell());
+
+    //Soul Flame Bolt
+    public static final Supplier<AbstractSpell> SOUL_FLAME_BOLT = registerSpell(new SoulflameBoltSpell());
+
     //Cinderous Step
     public static final Supplier<AbstractSpell> CINDEROUS_STEP = registerSpell(new CinderousStepSpell());
 

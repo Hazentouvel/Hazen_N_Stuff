@@ -29,6 +29,7 @@ import net.hazen.hazennstuff.Entity.Spells.Ender.EndraconicMeteor.EndraconicMete
 import net.hazen.hazennstuff.Entity.Spells.Evocation.SpectralAxe.SpectralAxe;
 import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
 import net.hazen.hazennstuff.Entity.Spells.Fire.ScorchingSlash.ScorchingBlade;
+import net.hazen.hazennstuff.Entity.Spells.Fire.SoulFlameBolt.SoulflameBolt;
 import net.hazen.hazennstuff.Entity.Spells.Holy.IchorStream.IchorStream;
 import net.hazen.hazennstuff.Entity.Spells.Hydro.HornShell.HornShell;
 import net.hazen.hazennstuff.Entity.Spells.Hydro.Hydrobullet.HydroBullet;
@@ -373,6 +374,14 @@ public class HnSEntityRegistry {
                     .clientTrackingRange(4)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "bone_bolt").toString())
             );
+
+    // Soulflame Bolt
+    public static final DeferredHolder<EntityType<?>, EntityType<SoulflameBolt>> SOUL_FLAME_BOLT =
+            ENTITIES.register("soul_flame_bolt", () -> EntityType.Builder.<SoulflameBolt>of(SoulflameBolt::new, MobCategory.MISC)
+                    .sized(.5f, .5f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "soul_flame_bolt").toString()));
+
 
 
 

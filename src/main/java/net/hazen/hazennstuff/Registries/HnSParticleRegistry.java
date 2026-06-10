@@ -7,6 +7,7 @@ import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSLash.IonicSlas
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NatureSlash.NatureSlashOptions;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrikeOptions;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.ScorchingSlash.ScorchingSlashOptions;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.SoulFlameStrike.SoulFlameStrikeOptions;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.Registries;
@@ -87,6 +88,17 @@ public class HnSParticleRegistry {
 
                 public StreamCodec<? super RegistryFriendlyByteBuf, NatureSlashOptions> streamCodec() {
                     return NatureSlashOptions.STREAM_CODEC;
+                }
+            });
+
+    public static final Supplier<ParticleType<SoulFlameStrikeOptions>> SOUL_FLAMING_STRIKE_PARTICLE =
+            PARTICLE_TYPES.register("soul_flaming_strike", () -> new ParticleType<SoulFlameStrikeOptions>(true) {
+                public MapCodec<SoulFlameStrikeOptions> codec() {
+                    return SoulFlameStrikeOptions.MAP_CODEC;
+                }
+
+                public StreamCodec<? super RegistryFriendlyByteBuf, SoulFlameStrikeOptions> streamCodec() {
+                    return SoulFlameStrikeOptions.STREAM_CODEC;
                 }
             });
 

@@ -31,11 +31,6 @@ public class IceArrowSpell extends AbstractSpell {
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
 
-        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
-                .withStyle(ChatFormatting.GOLD)
-                .withStyle(ChatFormatting.BOLD)
-        );
-
         li.addAll(List.of(
                 Component.translatable("ui.irons_spellbooks.damage", Utils.stringTruncation(getDamage(spellLevel, caster), 1)),
                 Component.translatable("ui.irons_spellbooks.radius", Utils.stringTruncation(getRadius(spellLevel, caster), 1)),

@@ -2789,7 +2789,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                         Ingredient.of(ItemRegistry.ARCANE_ESSENCE.get()),
                         RecipeCategory.COMBAT,
                         HnSItemRegistry.ARBITRIUM_ROBES_HELMET.get())
-                .unlocks("has_divine_mold", has(HnSItemRegistry.DIVINE_MOLD.get()))
+                .unlocks("has_divine_mold", has(HLTags.PURE_HELMET))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "smithing/armor/arbitrium_robes/arbitrium_robes_helmet"));
 
         SmithingTransformRecipeBuilder.smithing(

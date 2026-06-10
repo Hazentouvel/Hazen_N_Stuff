@@ -12,6 +12,7 @@ import net.hazen.hazennstuff.Entity.Spells.Cosmic.CosmicBolt.CosmicBoltRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ender.EndraconicMeteor.EndraconicBreath.EndraconicBreathRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ender.EndraconicMeteor.EndraconicMeteorRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Fire.ScorchingSlash.ScorchingBladeRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Fire.SoulFlameBolt.SoulflameBoltRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Hydro.HornShell.HornShellRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Hydro.Hydrobullet.HydroBulletRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Hydro.RazorbladeTyphoon.RazorbladeTyphoonRenderer;
@@ -59,6 +60,7 @@ import net.hazen.hazennstuff.Entity.Spells.Radiance.Syringe.SyringeRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.TerraprismaRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.NightsEdgeAfterSlash.NightsEdgeAfterSlashRenderer;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.ScorchingSlash.ScorchingSlash;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.SoulFlameStrike.SoulFlameStrike;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
 import net.hazen.hazennstuff.Particle.HnSGenericParticle;
@@ -120,6 +122,7 @@ public class HnSClientSetup {
         event.registerEntityRenderer(HnSEntityRegistry.FLESH_PIECE.get(), FleshPieceRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.FLESH_MOUND.get(), FleshMoundRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.BONE_BOLT.get(), BoneBoltRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.SOUL_FLAME_BOLT.get(), SoulflameBoltRenderer::new);
 
 
         /*
@@ -182,6 +185,7 @@ public class HnSClientSetup {
         event.registerSpriteSet(HnSParticleRegistry.NATURE_SLASH_PARTICLE.get(), NatureSlash.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.IONIC_SLASH.get(), IonicSlash.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.SCORCHING_SLASH.get(), ScorchingSlash.Provider::new);
+        event.registerSpriteSet(HnSParticleRegistry.SOUL_FLAMING_STRIKE_PARTICLE.get(), SoulFlameStrike.Provider::new);
     }
 
     @SubscribeEvent

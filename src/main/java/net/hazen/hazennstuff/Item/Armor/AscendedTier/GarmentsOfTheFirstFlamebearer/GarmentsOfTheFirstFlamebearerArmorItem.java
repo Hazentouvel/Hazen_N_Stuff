@@ -98,8 +98,8 @@ public class GarmentsOfTheFirstFlamebearerArmorItem extends ImbuableGeckolibHnSA
 
         if (entity instanceof Player player) {
             if (level.isClientSide) {
-                if (this.type == Type.CHESTPLATE && player.getItemBySlot(EquipmentSlot.CHEST) == stack && HLKeybinds.ABILITY_1.consumeClick()) {
-                    PacketDistributor.sendToServer(new HLMessageArmorKey(EquipmentSlot.CHEST.ordinal(), player.getId(), 5), new CustomPacketPayload[0]);
+                if (this.type == Type.BOOTS && player.getItemBySlot(EquipmentSlot.FEET) == stack && HLKeybinds.ABILITY_1.consumeClick()) {
+                    PacketDistributor.sendToServer(new HLMessageArmorKey(EquipmentSlot.FEET.ordinal(), player.getId(), 5), new CustomPacketPayload[0]);
                     this.onKeyPacket(player, stack, 5);
                 }
                 return;
@@ -125,9 +125,9 @@ public class GarmentsOfTheFirstFlamebearerArmorItem extends ImbuableGeckolibHnSA
 
     public void onKeyPacket(Player player, ItemStack itemStack, int Type) {
         if (player != null) {
-            if (Type == 5 && isWearingFullSet(player) && !player.getCooldowns().isOnCooldown((Item) HnSItemRegistry.TYROS_CHESTPLATE.get())) {
+            if (Type == 5 && isWearingFullSet(player) && !player.getCooldowns().isOnCooldown((Item) HnSItemRegistry.TYROS_BOOTS.get())) {
                 player.addEffect(new MobEffectInstance(HnSEffects.TYROS_SOUL_STATE, 1200, 0, true, true, true));
-                player.getCooldowns().addCooldown((Item) HnSItemRegistry.TYROS_CHESTPLATE.get(), 2400);
+                player.getCooldowns().addCooldown((Item) HnSItemRegistry.TYROS_BOOTS.get(), 2400);
 
                 if (player.level() instanceof ServerLevel serverLevel) {
                     double x = player.getX();

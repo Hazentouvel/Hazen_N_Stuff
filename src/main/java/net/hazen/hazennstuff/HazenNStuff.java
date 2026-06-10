@@ -82,7 +82,7 @@ public class HazenNStuff
         ArsNoveauCompat.init();
 
         //ISS Addons Compat
-        AACompat.init();
+        //AACompat.init();
         CSCompat.init();
         ESSRCompat.init();
         TNTCompat.init();

@@ -4,6 +4,7 @@ import io.redspace.ironsspellbooks.item.UpgradeOrbItem;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.render.CinderousRarity;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import net.hazen.hazennstuff.Item.Armor.AscendedTier.DeadKing.DeadKingArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.AzureLib.ArbitriumRobesArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.DormantTier.AzureLib.FireblossomGownArmor;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.DormantTier.GeckoLibFireblossomGownArmor;
@@ -1636,6 +1637,34 @@ public class HnSItemRegistry {
             .fireResistant()
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
+
+    ));
+
+
+
+    public static final DeferredHolder<Item, Item> DEAD_KING_HELMET = ITEMS.register("dead_king_helmet", () -> new DeadKingArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HLRarities.BLOOD_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.HELMET.getDurability(128))
+    ));
+    public static final DeferredHolder<Item, Item> DEAD_KING_CHESTPLATE = ITEMS.register("dead_king_chestplate", () -> new DeadKingArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+            .equipment(1)
+            .rarity(HLRarities.BLOOD_RARITY.getValue())
+            .fireResistant()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(128))
+    ));
+    public static final DeferredHolder<Item, Item> DEAD_KING_LEGGINGS = ITEMS.register("dead_king_leggings", () -> new DeadKingArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+            .equipment(1)
+            .fireResistant()
+            .rarity(HLRarities.BLOOD_RARITY.getValue())
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(128))
+    ));
+    public static final DeferredHolder<Item, Item> DEAD_KING_BOOTS = ITEMS.register("dead_king_boots", () -> new DeadKingArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+            .equipment(1)
+            .fireResistant()
+            .rarity(HLRarities.BLOOD_RARITY.getValue())
+            .durability(ArmorItem.Type.BOOTS.getDurability(128))
 
     ));
 

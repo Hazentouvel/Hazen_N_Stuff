@@ -328,6 +328,13 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.THE_WITHER_LEGGINGS.get());
                         output.accept(HnSItemRegistry.THE_WITHER_BOOTS.get());
 
+
+                        // Tyros
+                        output.accept(HnSItemRegistry.DEAD_KING_HELMET.get());
+                        output.accept(HnSItemRegistry.DEAD_KING_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.DEAD_KING_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.DEAD_KING_BOOTS.get());
+
                         /*
                         *** Ender
                          */

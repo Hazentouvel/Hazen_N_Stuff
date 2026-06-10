@@ -51,12 +51,6 @@ public class CallForthTerraprismaSpell extends AbstractSpell {
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
 
-
-        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
-                .withStyle(ChatFormatting.GOLD)
-                .withStyle(ChatFormatting.BOLD)
-        );
-
         li.addAll(List.of(
                 Component.translatable("ui.irons_spellbooks.damage",
                         new Object[]{Utils.stringTruncation((double)this.getHealthBonus(spellLevel, caster), 1)}

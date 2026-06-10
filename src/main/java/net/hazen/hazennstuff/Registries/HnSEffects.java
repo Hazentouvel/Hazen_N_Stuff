@@ -214,6 +214,28 @@ public class HnSEffects {
                     AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
+    public static final DeferredHolder<MobEffect, MobEffect> AWAKENING = MOB_EFFECTS.register("awakening", () -> new AwakenedEffect(MobEffectCategory.BENEFICIAL, 3311322)
+            .addAttributeModifier(AttributeRegistry.SUMMON_DAMAGE,
+                    HazenNStuff.id("awakening"),
+                    AwakenedEffect.JIMMY_PER_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+
+            .addAttributeModifier(AttributeRegistry.BLOOD_SPELL_POWER,
+                    HazenNStuff.id("awakening"),
+                    AwakenedEffect.JIMMY_PER_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+
+            .addAttributeModifier(AttributeRegistry.SPELL_RESIST,
+                    HazenNStuff.id("awakening"),
+                    AwakenedEffect.JIMMY_PER_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+
+            .addAttributeModifier(AttributeRegistry.SPELL_POWER,
+                    HazenNStuff.id("awakening"),
+                    AwakenedEffect.JIMMY_PER_LEVEL,
+                    AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+
     public static final DeferredHolder<MobEffect, MobEffect> INFESTED = MOB_EFFECTS.register("infested",
             () -> new InfestedEffect(MobEffectCategory.HARMFUL, 0x2E2EFF));
 
@@ -226,9 +248,15 @@ public class HnSEffects {
     public static final DeferredHolder<MobEffect, MobEffect> ELECTROCUTED = MOB_EFFECTS.register("electrocuted",
             () -> new ElectrocutedEffect(MobEffectCategory.HARMFUL, 0x2E2EFF));
 
+    public static final DeferredHolder<MobEffect, MobEffect> REVIVE_COOLDOWN = MOB_EFFECTS.register("revive_cooldown",
+            () -> new GenericHazenEffect(MobEffectCategory.NEUTRAL, 0x2E2EFF));
+
 
     
     public static final DeferredHolder<MobEffect, MobEffect> TYROS_SOUL_STATE = MOB_EFFECTS.register("tyros_soul_state",
+            () -> new GenericHazenEffect(MobEffectCategory.BENEFICIAL, 0x2E2EFF));
+
+    public static final DeferredHolder<MobEffect, MobEffect> DEAD_KING_SOUL_STATE = MOB_EFFECTS.register("dead_king_soul_state",
             () -> new GenericHazenEffect(MobEffectCategory.BENEFICIAL, 0x2E2EFF));
 
 

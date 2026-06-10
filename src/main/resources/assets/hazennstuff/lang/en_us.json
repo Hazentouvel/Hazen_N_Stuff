@@ -1,11 +1,4 @@
 {
-
-  "key.hazennstuff.group": "Hazen 'n Stuff Abilities",
-  "key.hazennstuff.ability_1": "Armor Ability 1",
-  "key.hazennstuff.ability_2": "Armor Ability 2",
-
-
-
   "tooltip.hazennstuff.shift": "Press §eShift§r for more",
 
   "enchantment.hazennstuff.fire_attunement": "Fire Attunement",
@@ -744,6 +737,11 @@
   "item.hazennstuff.geckolib_the_wither_leggings": "The Wither Leggings",
   "item.hazennstuff.geckolib_the_wither_boots": "The Wither Boots",
 
+  "item.hazennstuff.dead_king_helmet": "Dead King Skull",
+  "item.hazennstuff.dead_king_chestplate": "Dead King Pauldrons",
+  "item.hazennstuff.dead_king_leggings": "Dead King Leggings",
+  "item.hazennstuff.dead_king_boots": "Dead King Shackles",
+
   "item.hazennstuff.geckolib_gabriel_ultrakill_helmet": "Gabriel's Mask",
   "item.hazennstuff.geckolib_gabriel_ultrakill_chestplate": "Gabriel's Chestplate",
   "item.hazennstuff.geckolib_gabriel_ultrakill_leggings": "Gabriel's Leggings",
@@ -1087,6 +1085,8 @@
   "spell.hazennstuff.scorching_slash": "Scorching Slash",
   "spell.hazennstuff.fiery_dagger": "Fiery Dagger",
   "spell.hazennstuff.reign_of_tyros": "Reign of Tyros",
+  "spell.hazennstuff.soul_flame_bolt": "Soul Flame Bolt",
+  "spell.hazennstuff.soul_flaming_strike": "Soul Flaming Strike",
 
   "spell.hazennstuff.ice_arrow": "Ice Arrow",
   "spell.hazennstuff.hailstorm": "Hailstorm",
@@ -1141,6 +1141,8 @@
   "spell.hazennstuff.scorching_slash.guide": "The eternal flames burn brightly. Weild the blade ingulfed in flames and reduce your foes to nothing but ashes. This flame burns brighter than 10 stars to sever the threads of mana and arcana.",
   "spell.hazennstuff.fiery_dagger.guide": "A spell lost to time... conjure fiery daggers and unleash hell upon your opponents as you send a barrage of daggers at them... the flames seem to burn hotter when casting with certain equipment...",
   "spell.hazennstuff.reign_of_tyros.guide": "Call forth the legion once commanded by Tyros, the ancient flamebearer that sought to seek immortality. This spell evolves the more artifacts you bear that were once dawned on the legionnaires...",
+  "spell.hazennstuff.soul_flame_bolt.guide": "Shoot a small projectile of soul fire, igniting whatever it hits with soul flames.",
+  "spell.hazennstuff.soul_flaming_strike.guide": "Unleash a sweeping melee attack in the form of a wreath of soul flames. This spell is uninterruptible. The damage scales off of your held weapon's melee damage and enchantments.",
 
   "spell.hazennstuff.ice_arrow.guide": "Draw an arrow upon your foe and leave them pierced with an arrow of permafrost.",
   "spell.hazennstuff.hailstorm.guide": "Watch as your foes crumble under the weight of ice chunks that rain from the skies.",
@@ -1193,6 +1195,9 @@
 
   "effect.hazennstuff.tyros_soul_state": "Soul State",
 
+  "effect.hazennstuff.dead_king_soul_state": "Soul State",
+  "effect.hazennstuff.awakened": "Awakened",
+
 
   "effect.hazennstuff.tyrants_grace": "Tyrant's Grace",
   "effect.hazennstuff.fireblossom_ruler": "Fireblossom Ruler",
@@ -1214,7 +1219,8 @@
   "effect.hazennstuff.chaos_state": "Chaos State",
   "effect.hazennstuff.gluttonous_hunger": "Gluttonous Hunger",
 
-  "effect.hazennstuff.tyros_soul_state.description": "Enhances your ability with the echo of tyros...",
+  "effect.hazennstuff.tyros_soul_state.description": "Enhances your ability with the Echo of Tyros...",
+  "effect.hazennstuff.dead_king_soul_state.description": "Enhances your ability with the Dead King...",
 
 
   "effect.hazennstuff.tyrants_grace.description": "Recieve the Flamebearer's Tyrannical enhancement, increases your attack speed and damage by 1, and your cast movement speed by 20% and fire spellpower by 12%.",
@@ -1231,7 +1237,7 @@
   "effect.hazennstuff.spores.description": "You wither away as the spores in your body sap away at your health.",
   "effect.hazennstuff.electrocuted.description": "Your life zaps away at your health.",
   "effect.hazennstuff.ichor.description": "''Eww...'' Reduces your defence and spell resistance.",
-  "effect.hazennstuff.ionic_awakening.description": "Resets the cooldown of all of your spells.",
+  "effect.hazennstuff.ionic_awakening.description": "Awaken the Ionic Splitter.",
   "effect.hazennstuff.mana_sickness.description": "You feel the disconnect with the link with your arcana and soul...",
   "effect.hazennstuff.hexed.description": "You wither away with each spell cast...",
   "effect.hazennstuff.chaos_state.description": "Your body are in a chaotic state, wait until they stabilize before teleporting once more...",
@@ -1280,14 +1286,12 @@
   "material.hazennstuff.rune_cosmic": "Cosmic Rune",
   "material.hazennstuff.rune_hydro": "Hydro Rune",
 
-  "death.attack.shadow_magic": "%1$s was consumed by darkness",
-  "death.attack.cosmic_magic": "%1$s returned into cosmic dust...",
-  "death.attack.corrupt_magic": "%1$s shattered into fragments",
-
   "death.attack.brimstone_hellblast": "%1$s was slain by the brimstone flames of the hellblast",
   "death.attack.scorching_slash": "%1$s was split in half from a scorching slash",
   "death.attack.fiery_dagger": "%1$s was incernerated by the daggers of the flamebearer...",
   "death.attack.reign_of_tyros": "%1$s has faltered to the power of the legion...",
+  "death.attack.soul_flame_bolt": "%1$s was burnt into a crisp by the soul flames of the soul flame bolt",
+  "death.attack.soul_flaming_strike": "%1$s got something worst than a paper cut and was scorched to death by the soul flames of the soul flaming strike",
 
   "death.attack.ice_arrow": "%1$s was pierced by an ice arrow",
   "death.attack.hailstorm": "%1$s was lost amidst the raining chunks of ice",

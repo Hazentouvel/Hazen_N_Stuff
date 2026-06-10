@@ -28,11 +28,6 @@ public class HydrobulletSpell extends HydroSpells {
         var li = new ArrayList<>(super.getUniqueInfo(spellLevel, caster));
 
 
-        li.addFirst(Component.literal("\u2999 - Hazen 'n Stuff - \u2999")
-                .withStyle(ChatFormatting.GOLD)
-                .withStyle(ChatFormatting.BOLD)
-        );
-
         li.add(Component.translatable("ui.irons_spellbooks.damage", new Object[]{Utils.stringTruncation((double)this.getDamage(spellLevel, caster), 2)}));
 
         return li;

@@ -10,13 +10,12 @@ import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazentouvelib.Registries.HLSchoolRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 
 
 @EventBusSubscriber
-public class HnSServerEvents {
+public class HnSSpellEvents {
 
     @SubscribeEvent
     public static void modifyModNameDisplay(CustomizeScrollModNameEvent event) {

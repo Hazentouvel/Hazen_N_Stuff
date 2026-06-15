@@ -82,11 +82,7 @@ public class HazenNStuff
         ArsNoveauCompat.init();
 
         //ISS Addons Compat
-        //AACompat.init();
-        CSCompat.init();
-        ESSRCompat.init();
-        TNTCompat.init();
-        MFTECompat.init();
+        FLCompat.init();
 
         HnSCreativeModeTabs.register(modEventBus);
 

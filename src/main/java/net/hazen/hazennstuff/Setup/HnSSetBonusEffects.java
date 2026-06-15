@@ -34,8 +34,8 @@ import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
 
 @EventBusSubscriber
-public class HnSServerPlayerEvents {
-    public HnSServerPlayerEvents() {
+public class HnSSetBonusEffects {
+    public HnSSetBonusEffects() {
     }
 
     private static boolean isWearingFullTyrosSet(LivingEntity entity) {

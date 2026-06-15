@@ -135,7 +135,7 @@ public class HnSArmorMaterials {
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> PARAGON_MATERIAL = register("paragon",
             paragonArmorMap(),
-            30,
+            25,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT),
             5,
@@ -144,9 +144,9 @@ public class HnSArmorMaterials {
 
     public static DeferredHolder<ArmorMaterial, ArmorMaterial> PYRIUM_MATERIAL = register("pyrium",
             pyrium(),
-            25,
+            20,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
-            () -> Ingredient.of(Items.NETHERITE_INGOT),
+            () -> Ingredient.of(ItemRegistry.PYRIUM_INGOT.get()),
             4,
             0.15F);
 
@@ -154,6 +154,14 @@ public class HnSArmorMaterials {
     /*
     *** Melee Armor Sets
      */
+
+    public static DeferredHolder<ArmorMaterial, ArmorMaterial> DREADSTEEL_MATERIAL = register("dreadsteel",
+            pyrium(),
+            10,
+            SoundEvents.ARMOR_EQUIP_NETHERITE,
+            () -> Ingredient.of(HnSItemRegistry.DREADSTEEL_INGOT.get()),
+            2,
+            0.05F);
 
 
     /*
@@ -211,6 +219,7 @@ public class HnSArmorMaterials {
         return makeArmorMap(4, 9, 6, 4);
     }
     public static EnumMap<ArmorItem.Type, Integer> pyrium(){return makeArmorMap(4, 9, 6, 4);}
+    public static EnumMap<ArmorItem.Type, Integer> diamond(){return makeArmorMap(3, 6, 5, 3);}
 
     public static void register(IEventBus eventBus)
     {

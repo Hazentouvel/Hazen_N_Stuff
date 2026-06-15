@@ -8,7 +8,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.neoforged.fml.ModList;
 
-public class FLCompat {
+public class FLCompat extends ArmorCompat {
     public static boolean LOADED;
     public static void init() {
         LOADED = ModList.get().isLoaded("familiarslib");
@@ -41,27 +41,55 @@ public class FLCompat {
     public static class LoadedOnly {
 
         public static void addFamiliarDamagePure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
+            String armor = getArmorName(group);
+            if (armor == null) {
+                return;
+            }
+
             attributes.add(AttributeRegistry.FAMILIAR_DAMAGE,
-                    new AttributeModifier(HazenNStuff.id("add_familiar_damage_pure"), 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                    new AttributeModifier(HazenNStuff.id("add_familiar_damage_pure_" + armor),
+                            0.1f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                     group);
         }
 
         public static void addFamiliarDamageParagon(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
+            String armor = getArmorName(group);
+            if (armor == null) {
+                return;
+            }
+
             attributes.add(AttributeRegistry.FAMILIAR_DAMAGE,
-                    new AttributeModifier(HazenNStuff.id("add_familiar_damage_paragon"), 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                    group);
+                    new AttributeModifier(HazenNStuff.id("add_familiar_damage_paragon_" + armor),
+                            0.15f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE
+                    ), group);
         }
 
         public static void addFamiliarResistPure(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
+            String armor = getArmorName(group);
+            if (armor == null) {
+                return;
+            }
+
             attributes.add(AttributeRegistry.FAMILIAR_RESIST,
-                    new AttributeModifier(HazenNStuff.id("add_familiar_damage_pure"), 0.15f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                    group);
+                    new AttributeModifier(HazenNStuff.id("add_familiar_damage_pure_" + armor),
+                            0.1f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE
+                    ), group);
         }
 
         public static void addFamiliarResistParagon(ItemAttributeModifiers.Builder attributes, EquipmentSlotGroup group) {
+            String armor = getArmorName(group);
+            if (armor == null) {
+                return;
+            }
+
             attributes.add(AttributeRegistry.FAMILIAR_RESIST,
-                    new AttributeModifier(HazenNStuff.id("add_familiar_damage_paragon"), 0.2f, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                    group);
+                    new AttributeModifier(HazenNStuff.id("add_familiar_damage_paragon_" + armor),
+                            0.15f,
+                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE
+                    ), group);
         }
     }
 }

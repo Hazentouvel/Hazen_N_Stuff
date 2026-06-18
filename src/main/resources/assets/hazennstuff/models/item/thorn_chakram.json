@@ -1,0 +1,92 @@
+{
+  "credit": "Made by Hazen",
+  "parent": "builtin/entity",
+  "texture_size": [
+    128,
+    128
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        -180,
+        0,
+        90
+      ],
+      "translation": [
+        0.5,
+        -2,
+        0
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        -180,
+        0,
+        90
+      ],
+      "translation": [
+        0.5,
+        -2,
+        0
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        -180,
+        0,
+        135
+      ],
+      "translation": [
+        1.75,
+        0,
+        0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        -180,
+        0,
+        -45
+      ],
+      "translation": [
+        1.75,
+        0,
+        0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    "gui": {
+      "rotation": [
+        -90,
+        45,
+        0
+      ],
+      "translation": [
+        -0.75,
+        -1,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        -90,
+        -45,
+        0
+      ]
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": true,
+			"bones": {
+				"chainSegment1": {
+					"rotation": {
+						"vector": [0, 0, -22.5]
+					}
+				},
+				"chainSegment2": {
+					"rotation": {
+						"vector": [-43.44102, -8.42106, -20.94102]
+					}
+				},
+				"chainSegment3": {
+					"rotation": {
+						"vector": [-43.44102, -8.42106, -20.94102]
+					}
+				},
+				"chainSegment4": {
+					"rotation": {
+						"vector": [-20.94102, -8.42106, -20.94102]
+					}
+				},
+				"chainSegment5": {
+					"rotation": {
+						"vector": [-45, 0, -22.5]
+					}
+				},
+				"chainSegment6": {
+					"rotation": {
+						"vector": [-44.31282, 8.80348, 31.40928]
+					}
+				},
+				"chainSegment7": {
+					"rotation": {
+						"vector": [-22.5, 0, 0]
+					}
+				},
+				"chainSegment8": {
+					"rotation": {
+						"vector": [-45, 0, 0]
+					}
+				},
+				"chainSegment9": {
+					"rotation": {
+						"vector": [-45, 0, 0]
+					}
+				},
+				"chainSegment10": {
+					"rotation": {
+						"vector": [-45, 0, 0]
+					}
+				},
+				"chainSegment11": {
+					"rotation": {
+						"vector": [22.5, 0, 22.5]
+					}
+				},
+				"pocketWatch": {
+					"rotation": {
+						"vector": [25.02758, 30.37821, 32.12844]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

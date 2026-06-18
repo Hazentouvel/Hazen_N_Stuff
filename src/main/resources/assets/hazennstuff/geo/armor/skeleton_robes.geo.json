@@ -1,0 +1,136 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bipedHead",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "armorHead",
+					"parent": "bipedHead",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "hood",
+					"parent": "armorHead",
+					"pivot": [0, 22, 0],
+					"cubes": [
+						{"origin": [-4.5, 28, 1.5], "size": [9, 4, 4], "pivot": [0.5, 31, 4.5], "rotation": [70, 0, 0], "uv": [44, 69]},
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.25, "uv": [32, 32]}
+					]
+				},
+				{
+					"name": "crown",
+					"parent": "armorHead",
+					"pivot": [0, 31, 0],
+					"cubes": [
+						{"origin": [-4.5, 29, -4.475], "size": [9, 12, 0], "uv": [76, 79]},
+						{"origin": [-4.5, 29, 4.475], "size": [9, 12, 0], "uv": [82, 0]},
+						{"origin": [-4.475, 29, -4.5], "size": [0, 12, 9], "uv": [60, 48]},
+						{"origin": [4.475, 29, -4.5], "size": [0, 12, 9], "uv": [64, 0]},
+						{"origin": [-4.5, 41, -4.5], "size": [9, 0, 9], "uv": [0, 48]},
+						{"origin": [-2, 31, -5.775], "size": [4, 4, 1], "pivot": [0, 33, -5.275], "rotation": [0, 0, 45], "uv": [24, 57]},
+						{"origin": [-2, 31, -5.775], "size": [4, 4, 1], "inflate": 0.25, "pivot": [0, 33, -5.275], "rotation": [0, 0, 45], "uv": [44, 64]}
+					]
+				},
+				{
+					"name": "bipedBody",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "armorBody",
+					"parent": "bipedBody",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-10, 24, -3], "size": [6, 4, 6], "uv": [70, 69]},
+						{"origin": [4, 24, -3], "size": [6, 4, 6], "uv": [0, 73]},
+						{"origin": [-9.5, 22, -2.5], "size": [5, 2, 5], "uv": [78, 61]},
+						{"origin": [4.5, 22, -2.5], "size": [5, 2, 5], "uv": [82, 12]},
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "inflate": 0.3, "uv": [0, 57]}
+					]
+				},
+				{
+					"name": "cape",
+					"parent": "armorBody",
+					"pivot": [3, 14, 1],
+					"cubes": [
+						{"origin": [-12, 2, -1.75], "size": [24, 24, 8], "pivot": [0, 26, 6.25], "rotation": [10, 0, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "belt",
+					"parent": "armorBody",
+					"pivot": [0, 22, 0],
+					"cubes": [
+						{"origin": [-4.5, 11, -2.5], "size": [9, 4, 5], "uv": [64, 21]},
+						{"origin": [-1.5, 11.5, -3.25], "size": [3, 3, 1], "pivot": [0, 13, -2.25], "rotation": [0, 0, 45], "uv": [6, 83]},
+						{"origin": [-1.5, 11.5, -3.25], "size": [3, 3, 1], "inflate": 0.25, "pivot": [0, 13, -2.25], "rotation": [0, 0, 45], "uv": [14, 83]},
+						{"origin": [-1.5, 4, -3], "size": [3, 8, 0], "pivot": [0, 12, -3], "rotation": [-10, 0, 0], "uv": [0, 83]}
+					]
+				},
+				{
+					"name": "bipedRightArm",
+					"pivot": [-5, 22, 0]
+				},
+				{
+					"name": "armorRightArm",
+					"parent": "bipedRightArm",
+					"pivot": [-5, 22, 0]
+				},
+				{
+					"name": "bipedLeftArm",
+					"pivot": [5, 22, 0]
+				},
+				{
+					"name": "armorLeftArm",
+					"parent": "bipedLeftArm",
+					"pivot": [5, 22, 0]
+				},
+				{
+					"name": "bipedLeftLeg",
+					"pivot": [2, 12, 0]
+				},
+				{
+					"name": "armorLeftLeg",
+					"parent": "bipedLeftLeg",
+					"pivot": [2, 12, 0],
+					"cubes": [
+						{"origin": [-4.5, 2, -3], "size": [4, 9, 6], "pivot": [-0.5, 14, 0], "rotation": [0, 0, 5], "uv": [64, 30]}
+					]
+				},
+				{
+					"name": "armorLeftBoot",
+					"parent": "bipedLeftLeg",
+					"pivot": [2, 12, 0]
+				},
+				{
+					"name": "bipedRightLeg",
+					"pivot": [-2, 12, 0]
+				},
+				{
+					"name": "armorRightLeg",
+					"parent": "bipedRightLeg",
+					"pivot": [-2, 12, 0],
+					"cubes": [
+						{"origin": [0.5, 2, -3], "size": [4, 9, 6], "pivot": [0.5, 14, 0], "rotation": [0, 0, -5], "uv": [24, 64]}
+					]
+				},
+				{
+					"name": "armorRightBoot",
+					"parent": "bipedRightLeg",
+					"pivot": [-2, 12, 0]
+				}
+			]
+		}
+	]
+}

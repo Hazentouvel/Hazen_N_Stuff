@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hazennstuff:item/armors/bishop_of_deceit_helmet"
+  }
+}

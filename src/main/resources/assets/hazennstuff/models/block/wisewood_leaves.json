@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "hazennstuff:block/wisewood_leaves"
+  }
+}

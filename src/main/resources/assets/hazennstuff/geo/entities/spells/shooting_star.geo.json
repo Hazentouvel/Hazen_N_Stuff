@@ -1,0 +1,79 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-4, -3.5, 1], "size": [8, 8, 8], "pivot": [0, 0.5, 5], "rotation": [0, 0, 45], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "spin",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "star",
+					"parent": "spin",
+					"pivot": [0, -0.25, 0],
+					"cubes": [
+						{"origin": [-1, -2.75, -2.5], "size": [2, 5, 5], "pivot": [0, -0.25, 0], "rotation": [-45, 0, 0], "uv": [0, 16]},
+						{"origin": [-0.5, -2.95, -2.5], "size": [1, 5, 5], "uv": [14, 16]},
+						{"origin": [-0.5, 2.05, -1.5], "size": [1, 2, 3], "uv": [0, 26]},
+						{"origin": [-0.5, 4.05, -0.5], "size": [1, 2, 1], "uv": [8, 30]}
+					]
+				},
+				{
+					"name": "corner1",
+					"parent": "star",
+					"pivot": [0, 0.75, 2],
+					"rotation": [20, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, -0.25, 2], "size": [1, 2, 2], "inflate": 0.025, "uv": [8, 26]},
+						{"origin": [-0.5, 0.75, 4.05], "size": [1, 1, 2], "inflate": 0.025, "uv": [26, 20]}
+					]
+				},
+				{
+					"name": "corner2",
+					"parent": "star",
+					"pivot": [0, 0.75, -2],
+					"rotation": [-20, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, -0.25, -4], "size": [1, 2, 2], "inflate": 0.025, "uv": [14, 26]},
+						{"origin": [-0.5, 0.75, -6.05], "size": [1, 1, 2], "inflate": 0.025, "uv": [26, 23]}
+					]
+				},
+				{
+					"name": "corner3",
+					"parent": "star",
+					"pivot": [0, -1.75, 2],
+					"rotation": [-50, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, -2.75, 2], "size": [1, 2, 2], "inflate": 0.025, "uv": [26, 16]},
+						{"origin": [-0.5, -2.75, 4.05], "size": [1, 1, 2], "inflate": 0.025, "uv": [26, 26]}
+					]
+				},
+				{
+					"name": "corner4",
+					"parent": "star",
+					"pivot": [0, -1.75, -2],
+					"rotation": [47.5, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, -2.75, -4], "size": [1, 2, 2], "inflate": 0.025, "uv": [20, 26]},
+						{"origin": [-0.5, -2.75, -6.05], "size": [1, 1, 2], "inflate": 0.025, "uv": [26, 29]}
+					]
+				}
+			]
+		}
+	]
+}

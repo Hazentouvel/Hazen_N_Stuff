@@ -1,0 +1,125 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": true,
+			"animation_length": 4,
+			"bones": {
+				"soul_caller": {
+					"rotation": {
+						"0.0": {
+							"vector": [5, 0, 0]
+						},
+						"2.0": {
+							"pre": {
+								"vector": [-5, 0, 0]
+							},
+							"post": {
+								"vector": [-5, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"4.0": {
+							"post": {
+								"vector": [5, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"chain_1": {
+					"rotation": {
+						"0.0": {
+							"vector": [4, 0, 0]
+						},
+						"0.5": {
+							"pre": {
+								"vector": [4, 0, 0]
+							},
+							"post": {
+								"vector": [4, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"2.5": {
+							"post": {
+								"vector": [-5, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"4.0": {
+							"post": {
+								"vector": [4, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"chain_2": {
+					"rotation": {
+						"0.0": {
+							"vector": [4.17, 0, 0]
+						},
+						"1.0": {
+							"pre": {
+								"vector": [4.17, 0, 0]
+							},
+							"post": {
+								"vector": [4.17, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"3.0": {
+							"post": {
+								"vector": [-5, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"4.0": {
+							"post": {
+								"vector": [4.17, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"bell": {
+					"rotation": {
+						"0.0": {
+							"vector": [5, 0, 0]
+						},
+						"1.5": {
+							"pre": {
+								"vector": [-5, 0, 0]
+							},
+							"post": {
+								"vector": [-5, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"4.0": {
+							"post": {
+								"vector": [5, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"ball": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, -0.5]
+						},
+						"2.0": {
+							"vector": [0, 0, 0.5]
+						},
+						"4.0": {
+							"vector": [0, 0, -0.5]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

@@ -1,0 +1,109 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
+  "texture_size": [
+    128,
+    128
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        0,
+        -90,
+        0
+      ],
+      "translation": [
+        0,
+        -22.25,
+        1.25
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "translation": [
+        0,
+        -22.25,
+        1.25
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        -30,
+        -73,
+        -7
+      ],
+      "translation": [
+        3,
+        -29,
+        9.75
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        -30,
+        -73,
+        -7
+      ],
+      "translation": [
+        3,
+        -29,
+        9.75
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        -180
+      ],
+      "translation": [
+        0,
+        16.25,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        -45
+      ],
+      "translation": [
+        -7,
+        -7.5,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    "head": {
+      "translation": [
+        0,
+        -48,
+        0
+      ]
+    },
+    "fixed": {
+      "translation": [
+        0,
+        -31.5,
+        0
+      ]
+    }
+  },
+  "textures": {
+    "particle": "item/ice_pike"
+  }
+}

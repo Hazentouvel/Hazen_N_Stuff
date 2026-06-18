@@ -1,0 +1,145 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "rotate",
+					"pivot": [0, 4, 0]
+				},
+				{
+					"name": "1",
+					"parent": "rotate",
+					"pivot": [9, 8, 0],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{"origin": [8, 4, -1], "size": [2, 8, 2], "uv": [26, 8]},
+						{"origin": [7.5, 5, -1.5], "size": [3, 1, 3], "uv": [0, 28]},
+						{"origin": [7.5, 10, -1.5], "size": [3, 1, 3], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "2",
+					"parent": "rotate",
+					"pivot": [0, 8, -9],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{"origin": [-1, 4, -10], "size": [2, 8, 2], "uv": [26, 8]},
+						{"origin": [-1.5, 5, -10.5], "size": [3, 1, 3], "uv": [0, 28]},
+						{"origin": [-1.5, 10, -10.5], "size": [3, 1, 3], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "3",
+					"parent": "rotate",
+					"pivot": [-9, 8, 0],
+					"rotation": [0, 135, 0],
+					"cubes": [
+						{"origin": [-10, 4, -1], "size": [2, 8, 2], "uv": [26, 8]},
+						{"origin": [-10.5, 5, -1.5], "size": [3, 1, 3], "uv": [0, 28]},
+						{"origin": [-10.5, 10, -1.5], "size": [3, 1, 3], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "4",
+					"parent": "rotate",
+					"pivot": [0, 8, 9],
+					"rotation": [0, -135, 0],
+					"cubes": [
+						{"origin": [-1, 4, 8], "size": [2, 8, 2], "uv": [26, 8]},
+						{"origin": [-1.5, 5, 7.5], "size": [3, 1, 3], "uv": [0, 28]},
+						{"origin": [-1.5, 10, 7.5], "size": [3, 1, 3], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "5",
+					"parent": "rotate",
+					"pivot": [9, 14, -9],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{"origin": [8, 10, -10], "size": [2, 8, 2], "uv": [26, 8]},
+						{"origin": [7.5, 11, -10.5], "size": [3, 1, 3], "uv": [0, 28]},
+						{"origin": [7.5, 16, -10.5], "size": [3, 1, 3], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "6",
+					"parent": "rotate",
+					"pivot": [-9, 14, -9],
+					"rotation": [0, 135, 0],
+					"cubes": [
+						{"origin": [-10, 10, -10], "size": [2, 8, 2], "uv": [26, 8]},
+						{"origin": [-10.5, 11, -10.5], "size": [3, 1, 3], "uv": [0, 28]},
+						{"origin": [-10.5, 16, -10.5], "size": [3, 1, 3], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "7",
+					"parent": "rotate",
+					"pivot": [-9, 14, 9],
+					"rotation": [0, -135, 0],
+					"cubes": [
+						{"origin": [-10, 10, 8], "size": [2, 8, 2], "uv": [26, 8]},
+						{"origin": [-10.5, 11, 7.5], "size": [3, 1, 3], "uv": [0, 28]},
+						{"origin": [-10.5, 16, 7.5], "size": [3, 1, 3], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "8",
+					"parent": "rotate",
+					"pivot": [9, 14, 9],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{"origin": [8, 10, 8], "size": [2, 8, 2], "uv": [26, 8]},
+						{"origin": [7.5, 11, 7.5], "size": [3, 1, 3], "uv": [0, 28]},
+						{"origin": [7.5, 16, 7.5], "size": [3, 1, 3], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "radiantSpellbookCrown",
+					"pivot": [0, 12, 0.5],
+					"rotation": [22.5, 0, 0],
+					"cubes": [
+						{"origin": [-1, 12, -3.5], "size": [2, 2, 8], "inflate": 0.025, "uv": [0, 18]},
+						{"origin": [-1, 14, -0.5], "size": [2, 6, 2], "uv": [12, 28]},
+						{"origin": [-1, 14, -1.5], "size": [2, 6, 2], "inflate": 0.025, "pivot": [0, 14, -0.5], "rotation": [-45, 0, 0], "uv": [20, 32]},
+						{"origin": [-1, 14, -1.5], "size": [2, 4, 2], "inflate": 0.05, "pivot": [0, 14, -0.5], "rotation": [0, 0, 22.5], "uv": [28, 32]},
+						{"origin": [-1, 14, -1.5], "size": [2, 4, 2], "inflate": 0.025, "pivot": [0, 14, -0.5], "rotation": [0, 0, -22.5], "uv": [34, 8]}
+					]
+				},
+				{
+					"name": "sideA",
+					"parent": "radiantSpellbookCrown",
+					"pivot": [-1, 14, 0.5],
+					"rotation": [0, 0, 22.5],
+					"cubes": [
+						{"origin": [-5, 13, -3.5], "size": [5, 1, 8], "uv": [0, 0]},
+						{"origin": [-5, 13, -3.5], "size": [5, 1, 8], "inflate": 0.25, "uv": [38, 55]},
+						{"origin": [-4, 14, -2.5], "size": [4, 1, 6], "uv": [20, 18]},
+						{"origin": [-5.5, 12.5, -0.5], "size": [6, 2, 2], "uv": [26, 0]}
+					]
+				},
+				{
+					"name": "sideB",
+					"parent": "radiantSpellbookCrown",
+					"pivot": [1, 14, 0.5],
+					"rotation": [0, 0, -22.5],
+					"cubes": [
+						{"origin": [0, 13, -3.5], "size": [5, 1, 8], "uv": [0, 9]},
+						{"origin": [0, 13, -3.5], "size": [5, 1, 8], "inflate": 0.25, "uv": [0, 55]},
+						{"origin": [0, 14, -2.5], "size": [4, 1, 6], "uv": [20, 25]},
+						{"origin": [-0.5, 12.5, -0.5], "size": [6, 2, 2], "uv": [26, 4]}
+					]
+				}
+			]
+		}
+	]
+}

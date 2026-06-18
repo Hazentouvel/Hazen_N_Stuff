@@ -1,0 +1,92 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "tridentProjectile",
+					"pivot": [0, 3, 4]
+				},
+				{
+					"name": "tridentProjectileRotate",
+					"parent": "tridentProjectile",
+					"pivot": [-4, 3, 12],
+					"rotation": [90, 0, -90]
+				},
+				{
+					"name": "right_spike",
+					"parent": "tridentProjectileRotate",
+					"pivot": [-8, 27, 16],
+					"mirror": true,
+					"cubes": [
+						{"origin": [-2.5, 26, 7.5], "size": [1, 4, 1], "uv": [4, 3]}
+					]
+				},
+				{
+					"name": "middle_spike",
+					"parent": "tridentProjectileRotate",
+					"pivot": [-8, 27, 16],
+					"cubes": [
+						{"origin": [-4.5, 27, 7.5], "size": [1, 4, 1], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "left_spike",
+					"parent": "tridentProjectileRotate",
+					"pivot": [-8, 27, 16],
+					"cubes": [
+						{"origin": [-6.5, 26, 7.5], "size": [1, 4, 1], "uv": [4, 3]}
+					]
+				},
+				{
+					"name": "base",
+					"parent": "tridentProjectileRotate",
+					"pivot": [-8, 27, 16],
+					"cubes": [
+						{"origin": [-5.5, 25, 7.5], "size": [3, 2, 1], "uv": [4, 0]}
+					]
+				},
+				{
+					"name": "body",
+					"parent": "tridentProjectileRotate",
+					"pivot": [-8, 27, 16],
+					"cubes": [
+						{"origin": [-4.5, 0, 7.5], "size": [1, 25, 1], "uv": [0, 6]}
+					]
+				},
+				{
+					"name": "spinny1",
+					"parent": "tridentProjectile",
+					"pivot": [0, 3, -14],
+					"cubes": [
+						{"origin": [-3, 0, -18], "size": [6, 6, 8], "uv": [100, 28]}
+					]
+				},
+				{
+					"name": "spinny2",
+					"parent": "spinny1",
+					"pivot": [0, 3, -2],
+					"cubes": [
+						{"origin": [-5, -2, -10], "size": [10, 10, 12], "uv": [56, 28]}
+					]
+				},
+				{
+					"name": "spinny3",
+					"parent": "spinny2",
+					"pivot": [0, 3, 10],
+					"cubes": [
+						{"origin": [-6, -3, 2], "size": [12, 12, 16], "uv": [56, 0]}
+					]
+				}
+			]
+		}
+	]
+}

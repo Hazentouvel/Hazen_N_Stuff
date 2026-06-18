@@ -1,0 +1,73 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "chroniclesOfNeptune",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1, 0, -6], "size": [2, 2, 12], "inflate": 0.025, "uv": [0, 37]},
+						{"origin": [-2.5, -1, -1], "size": [5, 3, 2], "inflate": 0.025, "uv": [42, 6]}
+					]
+				},
+				{
+					"name": "sideA",
+					"parent": "chroniclesOfNeptune",
+					"pivot": [-1, 2, 0],
+					"rotation": [0, 0, 90],
+					"cubes": [
+						{"origin": [-9, 1, -6], "size": [9, 1, 12], "uv": [0, 0]},
+						{"origin": [-8, 2, -5], "size": [8, 1, 10], "uv": [0, 26]},
+						{"origin": [-9.5, 0.5, 3.5], "size": [3, 2, 3], "uv": [42, 11]},
+						{"origin": [-9.5, 0.5, -6.5], "size": [3, 2, 3], "uv": [42, 16]},
+						{"origin": [-2.5, 0.5, -6.5], "size": [3, 2, 3], "uv": [42, 21]},
+						{"origin": [-2.5, 0.5, 3.5], "size": [3, 2, 3], "uv": [28, 43]}
+					]
+				},
+				{
+					"name": "wotah2",
+					"parent": "sideA",
+					"pivot": [-4.5, 1, 0],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{"origin": [-4, 0, -2.5], "size": [2, 2, 2], "uv": [8, 51]},
+						{"origin": [-7, 0, -1.5], "size": [4, 2, 4], "inflate": 0.025, "uv": [42, 0]}
+					]
+				},
+				{
+					"name": "sideB",
+					"parent": "chroniclesOfNeptune",
+					"pivot": [1, 2, 0],
+					"rotation": [0, 0, -90],
+					"cubes": [
+						{"origin": [0, 1, -6], "size": [9, 1, 12], "uv": [0, 13]},
+						{"origin": [0, 2, -5], "size": [8, 1, 10], "uv": [36, 26]},
+						{"origin": [6.5, 0.5, 3.5], "size": [3, 2, 3], "uv": [40, 43]},
+						{"origin": [6.5, 0.5, -6.5], "size": [3, 2, 3], "uv": [44, 37]},
+						{"origin": [-0.5, 0.5, -6.5], "size": [3, 2, 3], "uv": [28, 48]},
+						{"origin": [-0.5, 0.5, 3.5], "size": [3, 2, 3], "uv": [40, 48]}
+					]
+				},
+				{
+					"name": "wotah",
+					"parent": "sideB",
+					"pivot": [4.5, 1, 0],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{"origin": [3, 0, -1.5], "size": [4, 2, 4], "inflate": 0.025, "uv": [28, 37]},
+						{"origin": [2, 0, -2.5], "size": [2, 2, 2], "uv": [0, 51]}
+					]
+				}
+			]
+		}
+	]
+}

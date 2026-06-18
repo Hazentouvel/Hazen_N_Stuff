@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "hazennstuff:item/galvanized_sheath_handheld"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "hazennstuff:item/galvanized_sheath_gui"
+    },
+    "fixed": {
+      "parent": "hazennstuff:item/galvanized_sheath_fixed"
+    }
+  }
+}

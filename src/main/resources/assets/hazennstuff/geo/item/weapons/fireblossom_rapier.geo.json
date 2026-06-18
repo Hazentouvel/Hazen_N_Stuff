@@ -1,0 +1,78 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "Handle",
+					"pivot": [0, 4, 0],
+					"rotation": [0, 90, 0],
+					"cubes": [
+						{"origin": [-2, 15, -2], "size": [4, 2, 4], "pivot": [0, 17, 0], "rotation": [0, 45, 0], "uv": [58, 21]},
+						{"origin": [0, -0.5, -10], "size": [0, 24, 20], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Stick",
+					"parent": "Handle",
+					"pivot": [0, 5, 0],
+					"rotation": [45, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, 4, -1], "size": [1, 2, 2], "uv": [58, 27]},
+						{"origin": [-0.5, 5, 0], "size": [1, 2, 2], "uv": [58, 31]},
+						{"origin": [-0.5, 6, 1], "size": [1, 2, 2], "uv": [0, 59]},
+						{"origin": [-0.5, 7, 2], "size": [1, 2, 2], "uv": [6, 59]},
+						{"origin": [-0.5, 8, 3], "size": [1, 2, 2], "uv": [12, 59]},
+						{"origin": [-0.5, 9, 4], "size": [1, 2, 2], "uv": [18, 59]},
+						{"origin": [-0.5, 10, 5], "size": [1, 2, 2], "uv": [24, 59]},
+						{"origin": [-0.5, 11, 6], "size": [1, 2, 2], "uv": [30, 59]},
+						{"origin": [-1, 2, -3], "size": [2, 3, 3], "uv": [30, 44]}
+					]
+				},
+				{
+					"name": "Hand Guard",
+					"parent": "Handle",
+					"pivot": [0, 16.5, 0]
+				},
+				{
+					"name": "A",
+					"parent": "Hand Guard",
+					"pivot": [0, 16.5, 0],
+					"cubes": [
+						{"origin": [-8.5, 15, -3.5], "size": [8, 0, 7], "pivot": [-0.5, 15, 0], "rotation": [0, 0, -35], "uv": [58, 7]},
+						{"origin": [0.5, 15, -3.5], "size": [8, 0, 7], "pivot": [0.5, 15, 0], "rotation": [0, 0, 35], "uv": [58, 14]},
+						{"origin": [-3.5, 15, -9], "size": [7, 0, 8], "pivot": [0, 15, -1], "rotation": [35, 0, 0], "uv": [0, 44]},
+						{"origin": [-3.5, 15, 1], "size": [7, 0, 8], "pivot": [0, 15, 1], "rotation": [-35, 0, 0], "uv": [30, 51]}
+					]
+				},
+				{
+					"name": "B",
+					"parent": "Hand Guard",
+					"pivot": [0, 16.5, 0],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{"origin": [-3.5, 15, 1], "size": [7, 0, 8], "pivot": [0, 15, 1], "rotation": [-35, 0, 0], "uv": [40, 35]},
+						{"origin": [-3.5, 15, -9], "size": [7, 0, 8], "pivot": [0, 15, -1], "rotation": [35, 0, 0], "uv": [40, 43]},
+						{"origin": [0.5, 15, -3.5], "size": [8, 0, 7], "pivot": [0.5, 15, 0], "rotation": [0, 0, 35], "uv": [0, 52]},
+						{"origin": [-8.5, 15, -3.5], "size": [8, 0, 7], "pivot": [-0.5, 15, 0], "rotation": [0, 0, -35], "uv": [58, 0]}
+					]
+				},
+				{
+					"name": "Blade",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-4.5, 16.5, 0], "size": [9, 35, 0], "uv": [40, 0]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,56 @@
+{
+  "credit": "Made by Hazen",
+  "parent": "builtin/entity",
+  "texture_size": [
+    128,
+    128
+  ],
+  "display": {
+    "ground": {
+      "rotation": [
+        -135,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        12.5,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "gui": {
+      "rotation": [
+        90,
+        -135,
+        90
+      ],
+      "translation": [
+        -1,
+        -1,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        -90,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        -1
+      ]
+    }
+  }
+}

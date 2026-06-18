@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "aces_spell_utils:item/example_loot_bag"
+  }
+}

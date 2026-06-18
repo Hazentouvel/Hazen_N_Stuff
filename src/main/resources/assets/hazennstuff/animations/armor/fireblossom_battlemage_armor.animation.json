@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": true,
+			"animation_length": 4,
+			"bones": {
+				"flowerRotate": {
+					"rotation": {
+						"0": [0, 0, 0],
+						"4": [0, -360, 0]
+					}
+				}
+			}
+		}
+	}
+}

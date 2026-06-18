@@ -7,7 +7,6 @@ import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife.VampireKnife;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
@@ -45,8 +44,9 @@ public class VampireKnivesItem extends MagicSwordItem implements GeoItem {
     public VampireKnivesItem() {
         super(
                 HnSExtendedWeaponsTiers.VAMPIRE_KNIVES,
-                ItemPropertiesHelper
-                        .equipment(1)
+                          new Item
+                        .Properties()
+                        .stacksTo(1)
                         .fireResistant()
                         .rarity(HLRarities.BLOOD_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.VAMPIRE_KNIVES)

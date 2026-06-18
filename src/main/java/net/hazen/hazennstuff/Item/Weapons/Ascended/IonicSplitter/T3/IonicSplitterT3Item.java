@@ -1,7 +1,6 @@
 package net.hazen.hazennstuff.Item.Weapons.Ascended.IonicSplitter.T3;
 
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.hazen.hazennstuff.Registries.HnSSounds;
@@ -9,6 +8,7 @@ import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
@@ -24,8 +24,9 @@ public class IonicSplitterT3Item extends ExtendedSwordItem implements GeoItem {
     public IonicSplitterT3Item() {
         super(
                 HnSExtendedWeaponsTiers.IONIC_SPLITTER_T3,
-                ItemPropertiesHelper
-                        .equipment(1)
+                new Item
+                        .Properties()
+                        .stacksTo(1)
                         .fireResistant()
                         .rarity(HLRarities.LIGHTNING_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.IONIC_SPLITTER_T3))

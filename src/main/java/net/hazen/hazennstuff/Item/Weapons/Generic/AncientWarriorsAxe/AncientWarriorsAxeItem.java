@@ -6,7 +6,6 @@ import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
@@ -15,6 +14,7 @@ import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.api.distmarker.Dist;
@@ -37,8 +37,9 @@ public class AncientWarriorsAxeItem extends MagicSwordItem implements GeoItem {
     public AncientWarriorsAxeItem() {
         super(
                 HnSExtendedWeaponsTiers.ANCIENT_WARRIORS_AXE,
-                ItemPropertiesHelper
-                        .equipment(1)
+                new Item
+                        .Properties()
+                        .stacksTo(1)
                         .fireResistant()
                         .rarity(HLRarities.EVOCATION_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.ANCIENT_WARRIORS_AXE)

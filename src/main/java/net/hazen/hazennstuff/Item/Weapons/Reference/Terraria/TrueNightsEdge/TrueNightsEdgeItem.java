@@ -6,7 +6,6 @@ import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
@@ -37,8 +36,9 @@ public class TrueNightsEdgeItem extends MagicSwordItem implements GeoItem {
     public TrueNightsEdgeItem() {
         super(
                 HnSExtendedWeaponsTiers.TRUE_NIGHTS_EDGE,
-                ItemPropertiesHelper
-                        .equipment(1)
+                          new Item
+                        .Properties()
+                        .stacksTo(1)
                         .fireResistant()
                         .rarity(HLRarities.SHADOW_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.TRUE_NIGHTS_EDGE)

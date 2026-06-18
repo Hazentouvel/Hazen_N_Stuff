@@ -1,11 +1,11 @@
 package net.hazen.hazennstuff.Item.Weapons.Ascended.OFortuna.Dormant;
 
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.world.item.Item;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -20,8 +20,9 @@ public class OFortuna extends ExtendedSwordItem implements GeoItem {
     public OFortuna() {
         super(
                 HnSExtendedWeaponsTiers.O_FORTUNA_DORMANT,
-                ItemPropertiesHelper
-                        .equipment(1)
+                new Item
+                        .Properties()
+                        .stacksTo(1)
                         .fireResistant()
                         .rarity(HLRarities.NATURE_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.O_FORTUNA_DORMANT))

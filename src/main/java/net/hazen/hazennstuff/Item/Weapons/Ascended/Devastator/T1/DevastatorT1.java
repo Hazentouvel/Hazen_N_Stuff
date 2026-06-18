@@ -1,11 +1,11 @@
 package net.hazen.hazennstuff.Item.Weapons.Ascended.Devastator.T1;
 
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.world.item.Item;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -20,8 +20,9 @@ public class DevastatorT1 extends ExtendedSwordItem implements GeoItem {
     public DevastatorT1() {
         super(
                 HnSExtendedWeaponsTiers.DEVESTATOR_T1,
-                ItemPropertiesHelper
-                        .equipment(1)
+                new Item
+                        .Properties()
+                        .stacksTo(1)
                         .fireResistant()
                         .rarity(HLRarities.BLOOD_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.DEVESTATOR_T1))

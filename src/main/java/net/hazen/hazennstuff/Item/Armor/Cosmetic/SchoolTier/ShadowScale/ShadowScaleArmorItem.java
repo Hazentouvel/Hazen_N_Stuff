@@ -1,6 +1,5 @@
 package net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.ShadowScale;
 
-import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;

@@ -3,7 +3,6 @@ package net.hazen.hazennstuff.Item.Curios.Misc;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 import io.redspace.ironsspellbooks.item.curios.SimpleDescriptiveCurio;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 import net.minecraft.client.Minecraft;

@@ -1,10 +1,10 @@
 package net.hazen.hazennstuff.Item.Weapons.Generic.TidalWave;
 
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.world.item.Item;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -19,8 +19,9 @@ public class TidalWave extends ExtendedSwordItem implements GeoItem {
     public TidalWave() {
         super(
                 HnSExtendedWeaponsTiers.TIDAL_WAVE,
-                ItemPropertiesHelper
-                        .equipment(1)
+                new Item
+                        .Properties()
+                        .stacksTo(1)
                         .fireResistant()
                         .rarity(HLRarities.HYDRO_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.TIDAL_WAVE)

@@ -1,7 +1,6 @@
 package net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Hammush;
 
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.ChatFormatting;
@@ -25,8 +24,9 @@ public class HammushItem extends ExtendedSwordItem implements GeoItem {
     public HammushItem() {
         super(
                 HnSExtendedWeaponsTiers.HAMMUSH,
-                ItemPropertiesHelper
-                        .equipment(1)
+                          new Item
+                        .Properties()
+                        .stacksTo(1)
                         .fireResistant()
                         .rarity(HLRarities.RADIANCE_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.HAMMUSH)

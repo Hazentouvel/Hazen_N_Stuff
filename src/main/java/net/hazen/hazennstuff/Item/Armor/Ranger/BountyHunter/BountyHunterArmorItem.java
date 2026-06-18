@@ -1,6 +1,5 @@
 package net.hazen.hazennstuff.Item.Armor.Ranger.BountyHunter;
 
-import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;

@@ -1,6 +1,5 @@
 package net.hazen.hazennstuff.Item.Curios.Wings.AngelWings;
 
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Item.Curios.Wings.WingCurioItem;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;

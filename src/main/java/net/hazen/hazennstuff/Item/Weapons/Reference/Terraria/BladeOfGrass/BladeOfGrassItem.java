@@ -1,7 +1,6 @@
 package net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.BladeOfGrass;
 
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.ChatFormatting;
@@ -25,8 +24,9 @@ public class BladeOfGrassItem extends ExtendedSwordItem implements GeoItem {
     public BladeOfGrassItem() {
         super(
                 HnSExtendedWeaponsTiers.BLADE_OF_GRASS,
-                ItemPropertiesHelper
-                        .equipment(1)
+                          new Item
+                        .Properties()
+                        .stacksTo(1)
                         .fireResistant()
                         .rarity(HLRarities.NATURE_RARITY.getValue())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.BLADE_OF_GRASS)

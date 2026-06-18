@@ -2,9 +2,7 @@ package net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings;
 
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
-import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSDispatcher;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.ChatFormatting;

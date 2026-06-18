@@ -1,7 +1,6 @@
 package net.hazen.hazennstuff.Item.Util.PickaxeAxe;
 
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Item.Util.HnSToolTiers;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
 import net.hazen.hazentouvelib.Items.Utils.PickaxeAxe;
@@ -28,8 +27,9 @@ public class PickaxeAxeItem extends PickaxeAxe implements GeoItem {
     public PickaxeAxeItem() {
         super(
                 HnSExtendedWeaponsTiers.PICKAXE_AXE,
-                ItemPropertiesHelper
-                        .equipment(1)
+                          new Item
+                        .Properties()
+                        .stacksTo(1)
                         .fireResistant()
                         .rarity(Rarity.EPIC)
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.PICKAXE_AXE))

@@ -1,6 +1,5 @@
 package net.hazen.hazennstuff.Registries;
 
-import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.hazen.hazennstuff.HazenNStuff;

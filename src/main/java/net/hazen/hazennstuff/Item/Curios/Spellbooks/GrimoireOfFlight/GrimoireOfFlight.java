@@ -1,6 +1,5 @@
 package net.hazen.hazennstuff.Item.Curios.Spellbooks.GrimoireOfFlight;
 
-import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.SpellBook;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;

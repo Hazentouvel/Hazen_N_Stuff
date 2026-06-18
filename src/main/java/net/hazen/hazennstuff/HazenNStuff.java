@@ -39,9 +39,9 @@ import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.Energ
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.WingCurioItem;
-import net.hazen.hazennstuff.Item.Staves.CeaselessVoid.CeaselessVoidRenderer;
-import net.hazen.hazennstuff.Item.Staves.InsaniaAeternus.InsaniaAeternusRenderer;
-import net.hazen.hazennstuff.Item.Staves.SoulcallingScepter.SoulcallingScepterRenderer;
+import net.hazen.hazennstuff.Item.Staves.Generic.CeaselessVoid.CeaselessVoidRenderer;
+import net.hazen.hazennstuff.Item.Staves.Generic.InsaniaAeternus.InsaniaAeternusRenderer;
+import net.hazen.hazennstuff.Item.Staves.Special.SoulcallingScepter.SoulcallingScepterRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Generic.HammerOfJustice.HammerOfJusticeRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Terraprisma.TerraprismaRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Volcano.VolcanoRenderer;

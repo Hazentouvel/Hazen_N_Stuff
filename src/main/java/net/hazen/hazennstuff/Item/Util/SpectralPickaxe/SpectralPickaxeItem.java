@@ -7,7 +7,6 @@ import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.hazen.hazennstuff.Item.Util.HnSToolTiers;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
@@ -41,8 +40,9 @@ public class SpectralPickaxeItem extends MagicPickaxe implements GeoItem {
     public SpectralPickaxeItem() {
         super(
                 HnSExtendedWeaponsTiers.SPECTRAL_PICKAXE,
-                ItemPropertiesHelper
-                        .equipment(1)
+                          new Item
+                        .Properties()
+                        .stacksTo(1)
                         .fireResistant()
                         .rarity(Rarity.EPIC)
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.SPECTRAL_PICKAXE))

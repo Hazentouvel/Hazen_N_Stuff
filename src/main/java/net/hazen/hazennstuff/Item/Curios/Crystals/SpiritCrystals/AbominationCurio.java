@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.Item.Curios.Crystals.SpiritCrystals;
 
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
+import io.redspace.ironslib.registry.IronsLibRegistries;
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
 
 import net.hazen.hazentouvelib.Rarities.HLRarities;
@@ -12,6 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import org.jetbrains.annotations.NotNull;
@@ -21,8 +23,7 @@ import java.util.List;
 
 public class AbominationCurio extends CurioBaseItem {
     public AbominationCurio() {
-        super(ItemPropertiesHelper
-                .equipment()
+        super(new Item.Properties()
                 .stacksTo(1)
                 .fireResistant()
                 .rarity(HLRarities.DEUS_RARITY.getValue()));
@@ -42,8 +43,8 @@ public class AbominationCurio extends CurioBaseItem {
         //The attributes of the curio
         attr.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(id, 3.0, AttributeModifier.Operation.ADD_VALUE));
         attr.put(Attributes.ATTACK_SPEED, new AttributeModifier(id, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
-        attr.put(ALObjects.Attributes.ARROW_DAMAGE, new AttributeModifier(id, 3.0, AttributeModifier.Operation.ADD_VALUE));
-        attr.put(ALObjects.Attributes.ARROW_VELOCITY, new AttributeModifier(id, 0.10, AttributeModifier.Operation.ADD_VALUE));
+        attr.put(IronsLibRegistries.AttributeRegistry.ARROW_DAMAGE, new AttributeModifier(id, 3.0, AttributeModifier.Operation.ADD_VALUE));
+        attr.put(IronsLibRegistries.AttributeRegistry.CRIT_DAMAGE, new AttributeModifier(id, 0.10, AttributeModifier.Operation.ADD_VALUE));
         return attr;
     }
 

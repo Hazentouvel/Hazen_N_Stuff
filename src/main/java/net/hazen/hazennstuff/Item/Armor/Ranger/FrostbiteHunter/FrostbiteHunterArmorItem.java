@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Item.Armor.Ranger.FrostbiteHunter;
 
+import io.redspace.ironslib.registry.IronsLibRegistries;
 import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
@@ -30,8 +31,7 @@ public class FrostbiteHunterArmorItem extends ImbuableGeckolibHnSArmorItem imple
         super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 100.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.ICE_SPELL_POWER, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(ALObjects.Attributes.ARROW_DAMAGE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(ALObjects.Attributes.ARROW_VELOCITY, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(IronsLibRegistries.AttributeRegistry.ARROW_DAMAGE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(Attributes.MOVEMENT_SPEED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
         );

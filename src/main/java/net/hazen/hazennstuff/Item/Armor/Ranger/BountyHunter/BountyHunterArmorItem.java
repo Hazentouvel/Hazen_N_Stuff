@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Item.Armor.Ranger.BountyHunter;
 
+import io.redspace.ironslib.registry.IronsLibRegistries;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
@@ -17,8 +18,7 @@ public class BountyHunterArmorItem extends ImbuableGeckolibHnSArmorItem implemen
     public BountyHunterArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
         super(ArmorMaterialRegistry.SCHOOL, type, settings,
-                new AttributeContainer(ALObjects.Attributes.ARROW_DAMAGE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(ALObjects.Attributes.ARROW_VELOCITY, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(IronsLibRegistries.AttributeRegistry.ARROW_DAMAGE, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(Attributes.MOVEMENT_SPEED, .05, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
         );
     }

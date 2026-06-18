@@ -25,7 +25,6 @@ public class LegionnaireCommanderArmorItem extends ImbuableGeckolibHnSArmorItem 
         super(HnSArmorMaterials.PYRIUM_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 100.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, .1, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(ALObjects.Attributes.FIRE_DAMAGE, 2, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(Attributes.ATTACK_SPEED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
                 new AttributeContainer(Attributes.ATTACK_DAMAGE, 1, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .05, AttributeModifier.Operation.ADD_VALUE)

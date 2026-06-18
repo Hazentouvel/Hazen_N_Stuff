@@ -35,7 +35,6 @@ public class FrostbiteKnightArmorItem extends ImbuableGeckolibHnSArmorItem imple
                 new AttributeContainer(AttributeRegistry.ICE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(Attributes.ATTACK_SPEED, .1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
                 new AttributeContainer(Attributes.ATTACK_DAMAGE, 1, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(ALObjects.Attributes.COLD_DAMAGE, 2, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
     }

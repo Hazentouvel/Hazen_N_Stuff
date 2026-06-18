@@ -27,7 +27,7 @@ public class PickaxeAxeItem extends PickaxeAxe implements GeoItem {
     public PickaxeAxeItem() {
         super(
                 HnSExtendedWeaponsTiers.PICKAXE_AXE,
-                          new Item
+                new Item
                         .Properties()
                         .stacksTo(1)
                         .fireResistant()

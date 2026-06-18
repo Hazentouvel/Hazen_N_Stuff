@@ -3,13 +3,13 @@ package net.hazen.hazennstuff.Item.Util.PickaxeAxe.DivineGold;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import net.hazen.hazennstuff.Item.Util.HnSToolTiers;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
-import net.hazen.hazennstuff.Item.Util.PickaxeAxe.PickaxeAxeItem;
 import net.hazen.hazentouvelib.Items.Utils.PickaxeAxe;
-import net.hazen.hazentouvelib.Rarities.HLRarities;import net.minecraft.ChatFormatting;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
@@ -30,7 +30,7 @@ public class PickaxeAxeDivineGoldItem extends PickaxeAxe implements GeoItem {
     public PickaxeAxeDivineGoldItem() {
         super(
                 HnSExtendedWeaponsTiers.PICKAXE_AXE,
-                          new Item
+                new Item
                         .Properties()
                         .stacksTo(1)
                         .fireResistant()

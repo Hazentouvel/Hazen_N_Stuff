@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -25,7 +26,7 @@ import java.util.List;
 public class LegionnaireCurios extends SimpleDescriptiveCurio {
 
     public LegionnaireCurios() {
-        super(ItemPropertiesHelper.equipment()
+        super(new Item.Properties()
                 .stacksTo(1)
                 .fireResistant()
                 .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())

@@ -1,8 +1,9 @@
 package net.hazen.hazennstuff.Item.Curios.Wings.AngelWings;
 
-import net.hazen.hazennstuff.Item.Curios.Wings.WingCurioItem;
+import net.hazen.hazentouvelib.Items.Curios.Wings.WingCurioItem;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.world.item.Item;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 
 import java.util.function.Consumer;
@@ -10,8 +11,7 @@ import java.util.function.Consumer;
 public class AngelWings extends WingCurioItem {
 
     public AngelWings() {
-        super(ItemPropertiesHelper
-                .equipment()
+        super(new Item.Properties()
                 .stacksTo(1)
                 .fireResistant()
                 .rarity(HLRarities.DEUS_RARITY.getValue())

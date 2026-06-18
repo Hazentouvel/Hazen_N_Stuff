@@ -1,10 +1,11 @@
 package net.hazen.hazennstuff.Item.Curios.Wings.FallenAngelWings;
 
-import net.hazen.hazennstuff.Item.Curios.Wings.WingCurioItem;
+import net.hazen.hazentouvelib.Items.Curios.Wings.WingCurioItem;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import top.theillusivec4.curios.api.SlotContext;
@@ -14,8 +15,7 @@ import java.util.function.Consumer;
 public class FallenAngelWings extends WingCurioItem {
 
     public FallenAngelWings() {
-        super(ItemPropertiesHelper
-                .equipment()
+        super(new Item.Properties()
                 .stacksTo(1)
                 .fireResistant()
                 .rarity(HLRarities.DEUS_RARITY.getValue())

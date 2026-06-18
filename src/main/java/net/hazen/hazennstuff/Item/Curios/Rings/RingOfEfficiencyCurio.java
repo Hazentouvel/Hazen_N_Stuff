@@ -9,13 +9,15 @@ import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import top.theillusivec4.curios.api.SlotContext;
 
 public class RingOfEfficiencyCurio extends CurioBaseItem {
     public RingOfEfficiencyCurio() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1)
+        super(new Item.Properties()
+                .stacksTo(1)
                 .fireResistant()
                 .rarity(Rarity.EPIC));
     }

@@ -14,6 +14,7 @@ import net.minecraft.network.chat.TextColor;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import org.jetbrains.annotations.NotNull;
@@ -24,7 +25,7 @@ import java.util.List;
 public class PendantOfHarmonyCurio extends SimpleDescriptiveCurio {
 
     public PendantOfHarmonyCurio() {
-        super(ItemPropertiesHelper.equipment()
+        super(new Item.Properties()
                 .stacksTo(1)
                 .fireResistant()
                 .rarity(HLRarities.RADIANCE_RARITY.getValue())

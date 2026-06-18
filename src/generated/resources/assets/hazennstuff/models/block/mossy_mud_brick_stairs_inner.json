@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "hazennstuff:block/mossy_mud_bricks",
-    "side": "hazennstuff:block/mossy_mud_bricks",
-    "top": "hazennstuff:block/mossy_mud_bricks"
-  }
-}

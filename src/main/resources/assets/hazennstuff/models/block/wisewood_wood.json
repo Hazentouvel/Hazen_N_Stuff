@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "hazennstuff:block/wisewood_log_side",
-    "side": "hazennstuff:block/wisewood_log_side"
-  }
-}

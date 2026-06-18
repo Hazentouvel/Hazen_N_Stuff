@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-  ],
-  "remove": [
-    "#hazennstuff:focus/cosmic_focus",
-    "hazennstuff:shadow_scale"
-  ]
-}

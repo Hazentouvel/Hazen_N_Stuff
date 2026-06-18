@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "hazennstuff:block/zenalite_bricks",
-    "side": "hazennstuff:block/zenalite_bricks",
-    "top": "hazennstuff:block/zenalite_bricks"
-  }
-}

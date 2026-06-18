@@ -3,7 +3,6 @@ package net.hazen.hazennstuff.Registries;
 import io.redspace.ironsspellbooks.item.UpgradeOrbItem;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.render.CinderousRarity;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.hazen.hazennstuff.Item.Armor.AscendedTier.DeadKing.DeadKingArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.AzureLib.ArbitriumRobesArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.DormantTier.AzureLib.FireblossomGownArmor;
@@ -157,38 +156,38 @@ import net.hazen.hazennstuff.Item.Weapons.Ascended.Umbranova.Dormant.Umbranova;
 import net.hazen.hazennstuff.Item.Weapons.Generic.AncientWarriorsAxe.AncientWarriorsAxeItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.AstraliteCleaver.AstraliteCleaver;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Beongae.BeongaeItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.BladeOfGrass.BladeOfGrassItem;
+import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.BladeOfGrass.BladeOfGrassItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.BountifulHarvest.BountifulHarvestItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Dawnmaker.DawnmakerItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.DivineGreatsword.DivineGreatswordItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Excalibur.HazenStyle.HazensExcaliburItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.Excalibur.ISSxTerraria.ISSExcaliburItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.Excalibur.Terraria.ExcaliburItem;
+import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.ISSxTerraria.ISSExcaliburItem;
+import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Terraria.ExcaliburItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.FireblossomRapier.FireblossomRapierItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Firebrand.FirebrandItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.FrostburnDagger.FrostburnDaggerItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.HammerOfJustice.HammerOfJusticeItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.Hammush.HammushItem;
+import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Hammush.HammushItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.IcePike.IcePikeItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.LegionnaireWarlockAxe.LegionnaireWarlockAxeItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.LightsBane.LightsBaneItem;
+import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.LightsBane.LightsBaneItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.MageBane.MageBaneItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Malice.MaliceItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.Meowmere.MeowmereItem;
+import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Meowmere.MeowmereItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Muramasa.MuramasaItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.NightsEdge.NightsEdgeItem;
+import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.NightsEdge.NightsEdgeItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.ObsidianClaymore.ObsidianClaymoreItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Skyscorcher.SkyscorcherItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.SoulReaper.SoulReaper;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Spectrum.SpectrumItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.Starfury.StarfuryItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.Terraprisma.TerraprismaItem;
+import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Starfury.StarfuryItem;
+import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Terraprisma.TerraprismaItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.TheDevourer.TheDevourerItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.ThornChakram.ThornChakramItem;
+import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.ThornChakram.ThornChakramItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.TidalWave.TidalWave;
-import net.hazen.hazennstuff.Item.Weapons.Generic.TrueNightsEdge.TrueNightsEdgeItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.VampireKnives.VampireKnivesItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.Volcano.VolcanoItem;
+import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.TrueNightsEdge.TrueNightsEdgeItem;
+import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.VampireKnives.VampireKnivesItem;
+import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Volcano.VolcanoItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.WarFlamingLance.WarFlamingLanceItem;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.core.component.DataComponents;
@@ -228,16 +227,16 @@ public class HnSItemRegistry {
             () -> new DeferredSpawnEggItem(HnSEntityRegistry.THE_RECLUSE,
                     1447446,
                     0,
-                    ItemPropertiesHelper.material()
+                    new Item.Properties()
                             .stacksTo(64)
             )
     );
 
     public static final DeferredItem<DeferredSpawnEggItem> SERVANT_OF_ENDER_EGG = ITEMS.register("servant_of_ender_egg",
-            () -> new DeferredSpawnEggItem(HnSEntityRegistry.SERVANT_OF_ENDER,
+            (properties) -> new DeferredSpawnEggItem(HnSEntityRegistry.SERVANT_OF_ENDER,
                     1447446,
                     0,
-                    ItemPropertiesHelper.material()
+                    new Item.Properties()
                             .stacksTo(64)
             )
     );
@@ -257,42 +256,36 @@ public class HnSItemRegistry {
      *** [Upgrade Orbs] **************************************************************************
      */
 
-    // Cosmic Upgrade Orb
     public static final DeferredHolder<Item, Item> HYDRO_UPGRADE_ORB = ITEMS.register("hydro_upgrade_orb",
-            () -> new UpgradeOrbItem(ItemPropertiesHelper
-                    .material()
+            () -> new UpgradeOrbItem(new Item.Properties()
                     .rarity(Rarity.UNCOMMON)
                     .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.HYDRO_SPELL_POWER))
     );
 
     // Eldritch Upgrade Orb
     public static final DeferredHolder<Item, Item> ELDRITCH_UPGRADE_ORB = ITEMS.register("eldritch_upgrade_orb",
-            () -> new UpgradeOrbItem(ItemPropertiesHelper
-                    .material()
+            () -> new UpgradeOrbItem(new Item.Properties()
                     .rarity(Rarity.UNCOMMON)
                     .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.ELDRITCH_SPELL_POWER))
     );
 
     // Melee Upgrade Orb
     public static final DeferredHolder<Item, Item> MELEE_UPGRADE_ORB = ITEMS.register("melee_upgrade_orb",
-            () -> new UpgradeOrbItem(ItemPropertiesHelper
-                    .material()
+            () -> new UpgradeOrbItem(new Item.Properties()
                     .rarity(Rarity.UNCOMMON)
                     .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.MELEE_POWER))
     );
 
     // Health Upgrade Orb
     public static final DeferredHolder<Item, Item> HEALTH_UPGRADE_ORB = ITEMS.register("health_upgrade_orb",
-            () -> new UpgradeOrbItem(ItemPropertiesHelper
-                    .material()
+            () -> new UpgradeOrbItem(new Item.Properties()
                     .rarity(Rarity.UNCOMMON)
                     .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.HEALTH_POWER))
     );
 
     // Archery Upgrade Orb
     public static final DeferredHolder<Item, Item> ARCHERY_UPGRADE_ORB = ITEMS.register("archery_upgrade_orb",
-            () -> new UpgradeOrbItem(ItemPropertiesHelper
-                    .material()
+            () -> new UpgradeOrbItem(new Item.Properties()
                     .rarity(Rarity.UNCOMMON)
                     .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.ARCHERY_POWER))
     );
@@ -319,27 +312,27 @@ public class HnSItemRegistry {
 
     //Melee Rune
     public static final DeferredHolder<Item, Item> MELEE_RUNE = ITEMS.register("melee_rune",
-            () -> new Item(ItemPropertiesHelper.material())
+            () -> new Item(new Item.Properties())
     );
 
     //Archery Rune
     public static final DeferredHolder<Item, Item> ARCHERY_RUNE = ITEMS.register("archery_rune",
-            () -> new Item(ItemPropertiesHelper.material())
+            () -> new Item(new Item.Properties())
     );
 
     //Health Rune
     public static final DeferredHolder<Item, Item> HEALTH_RUNE = ITEMS.register("health_rune",
-            () -> new Item(ItemPropertiesHelper.material())
+            () -> new Item(new Item.Properties())
     );
 
     //Eldritch Rune
     public static final DeferredHolder<Item, Item> ELDRITCH_RUNE = ITEMS.register("eldritch_rune",
-            () -> new Item(ItemPropertiesHelper.material())
+            () -> new Item(new Item.Properties())
     );
 
     //Hydro Rune
     public static final DeferredHolder<Item, Item> HYDRO_RUNE = ITEMS.register("hydro_rune",
-            () -> new Item(ItemPropertiesHelper.material())
+            () -> new Item(new Item.Properties())
     );
 
 
@@ -657,8 +650,7 @@ public class HnSItemRegistry {
 
     // Pyrium Nugget
     public static final DeferredItem<Item> PYRIUM_NUGGET = ITEMS.register("pyrium_nugget",
-            () -> new Item(
-                    ItemPropertiesHelper.material()
+            () -> new Item(new Item.Properties()
                             .rarity((Rarity) CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
                             .fireResistant())
     );
@@ -1166,29 +1158,29 @@ public class HnSItemRegistry {
 
     //Blazeborne Armor
 
-    public static final DeferredHolder<Item, Item> BLAZEBORNE_HELMET = ITEMS.register("blazeborne_helmet", () -> new BlazeborneArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> BLAZEBORNE_HELMET = ITEMS.register("blazeborne_helmet", () -> new BlazeborneArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.FIRE_RARITY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> BLAZEBORNE_CHESTPLATE = ITEMS.register("blazeborne_chestplate", () -> new BlazeborneArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> BLAZEBORNE_CHESTPLATE = ITEMS.register("blazeborne_chestplate", () -> new BlazeborneArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> BLAZEBORNE_LEGGINGS = ITEMS.register("blazeborne_leggings", () -> new BlazeborneArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> BLAZEBORNE_LEGGINGS = ITEMS.register("blazeborne_leggings", () -> new BlazeborneArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> BLAZEBORNE_BOOTS = ITEMS.register("blazeborne_boots", () -> new BlazeborneArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> BLAZEBORNE_BOOTS = ITEMS.register("blazeborne_boots", () -> new BlazeborneArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.FIRE_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1200,29 +1192,29 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_BLAZEBORNE_HELMET = ITEMS.register("geckolib_blazeborne_helmet", () -> new GeckolibBlazeborneArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_BLAZEBORNE_HELMET = ITEMS.register("geckolib_blazeborne_helmet", () -> new GeckolibBlazeborneArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.FIRE_RARITY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_BLAZEBORNE_CHESTPLATE = ITEMS.register("geckolib_blazeborne_chestplate", () -> new GeckolibBlazeborneArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_BLAZEBORNE_CHESTPLATE = ITEMS.register("geckolib_blazeborne_chestplate", () -> new GeckolibBlazeborneArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_BLAZEBORNE_LEGGINGS = ITEMS.register("geckolib_blazeborne_leggings", () -> new GeckolibBlazeborneArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_BLAZEBORNE_LEGGINGS = ITEMS.register("geckolib_blazeborne_leggings", () -> new GeckolibBlazeborneArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_BLAZEBORNE_BOOTS = ITEMS.register("geckolib_blazeborne_boots", () -> new GeckolibBlazeborneArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_BLAZEBORNE_BOOTS = ITEMS.register("geckolib_blazeborne_boots", () -> new GeckolibBlazeborneArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.FIRE_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1235,26 +1227,26 @@ public class HnSItemRegistry {
 
     //Cryogenic Ruler
 
-    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_HELMET = ITEMS.register("cryogenic_ruler_helmet", () -> new CryogenicRulerArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_HELMET = ITEMS.register("cryogenic_ruler_helmet", () -> new CryogenicRulerArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_CHESTPLATE = ITEMS.register("cryogenic_ruler_chestplate", () -> new CryogenicRulerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_CHESTPLATE = ITEMS.register("cryogenic_ruler_chestplate", () -> new CryogenicRulerArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_LEGGINGS = ITEMS.register("cryogenic_ruler_leggings", () -> new CryogenicRulerArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_LEGGINGS = ITEMS.register("cryogenic_ruler_leggings", () -> new CryogenicRulerArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_BOOTS = ITEMS.register("cryogenic_ruler_boots", () -> new CryogenicRulerArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_BOOTS = ITEMS.register("cryogenic_ruler_boots", () -> new CryogenicRulerArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1263,26 +1255,26 @@ public class HnSItemRegistry {
 
     //Crystal Arachnid
 
-    public static final DeferredHolder<Item, Item> CRYSTAL_ARACHNID_HELMET = ITEMS.register("crystal_arachnid_helmet", () -> new CrystalArachnidArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CRYSTAL_ARACHNID_HELMET = ITEMS.register("crystal_arachnid_helmet", () -> new CrystalArachnidArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> CRYSTAL_ARACHNID_CHESTPLATE = ITEMS.register("crystal_arachnid_chestplate", () -> new CrystalArachnidArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CRYSTAL_ARACHNID_CHESTPLATE = ITEMS.register("crystal_arachnid_chestplate", () -> new CrystalArachnidArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> CRYSTAL_ARACHNID_LEGGINGS = ITEMS.register("crystal_arachnid_leggings", () -> new CrystalArachnidArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CRYSTAL_ARACHNID_LEGGINGS = ITEMS.register("crystal_arachnid_leggings", () -> new CrystalArachnidArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> CRYSTAL_ARACHNID_BOOTS = ITEMS.register("crystal_arachnid_boots", () -> new CrystalArachnidArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CRYSTAL_ARACHNID_BOOTS = ITEMS.register("crystal_arachnid_boots", () -> new CrystalArachnidArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1291,26 +1283,26 @@ public class HnSItemRegistry {
 
     //Herta Puppet
 
-    public static final DeferredHolder<Item, Item> HERTA_PUPPET_HELMET = ITEMS.register("herta_puppet_helmet", () -> new HertaPuppetArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> HERTA_PUPPET_HELMET = ITEMS.register("herta_puppet_helmet", () -> new HertaPuppetArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> HERTA_PUPPET_CHESTPLATE = ITEMS.register("herta_puppet_chestplate", () -> new HertaPuppetArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> HERTA_PUPPET_CHESTPLATE = ITEMS.register("herta_puppet_chestplate", () -> new HertaPuppetArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> HERTA_PUPPET_LEGGINGS = ITEMS.register("herta_puppet_leggings", () -> new HertaPuppetArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> HERTA_PUPPET_LEGGINGS = ITEMS.register("herta_puppet_leggings", () -> new HertaPuppetArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> HERTA_PUPPET_BOOTS = ITEMS.register("herta_puppet_boots", () -> new HertaPuppetArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> HERTA_PUPPET_BOOTS = ITEMS.register("herta_puppet_boots", () -> new HertaPuppetArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1324,29 +1316,29 @@ public class HnSItemRegistry {
 
     //Creaking
 
-    public static final DeferredHolder<Item, Item> CREAKING_HELMET = ITEMS.register("creaking_helmet", () -> new CreakingSorcererArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CREAKING_HELMET = ITEMS.register("creaking_helmet", () -> new CreakingSorcererArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> CREAKING_CHESTPLATE = ITEMS.register("creaking_chestplate", () -> new CreakingSorcererArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CREAKING_CHESTPLATE = ITEMS.register("creaking_chestplate", () -> new CreakingSorcererArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> CREAKING_LEGGINGS = ITEMS.register("creaking_leggings", () -> new CreakingSorcererArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CREAKING_LEGGINGS = ITEMS.register("creaking_leggings", () -> new CreakingSorcererArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> CREAKING_BOOTS = ITEMS.register("creaking_boots", () -> new CreakingSorcererArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CREAKING_BOOTS = ITEMS.register("creaking_boots", () -> new CreakingSorcererArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1358,26 +1350,26 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_CREAKING_HELMET = ITEMS.register("geckolib_creaking_helmet", () -> new GeckolibCreakingSorcererArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_CREAKING_HELMET = ITEMS.register("geckolib_creaking_helmet", () -> new GeckolibCreakingSorcererArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_CREAKING_CHESTPLATE = ITEMS.register("geckolib_creaking_chestplate", () -> new GeckolibCreakingSorcererArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_CREAKING_CHESTPLATE = ITEMS.register("geckolib_creaking_chestplate", () -> new GeckolibCreakingSorcererArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_CREAKING_LEGGINGS = ITEMS.register("geckolib_creaking_leggings", () -> new GeckolibCreakingSorcererArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_CREAKING_LEGGINGS = ITEMS.register("geckolib_creaking_leggings", () -> new GeckolibCreakingSorcererArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_CREAKING_BOOTS = ITEMS.register("geckolib_creaking_boots", () -> new GeckolibCreakingSorcererArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_CREAKING_BOOTS = ITEMS.register("geckolib_creaking_boots", () -> new GeckolibCreakingSorcererArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1385,38 +1377,38 @@ public class HnSItemRegistry {
 
     //Chlorophyte
 
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_HELMET = ITEMS.register("chlorophyte_helmet", () -> new ChlorophyteHelmetArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_HELMET = ITEMS.register("chlorophyte_helmet", () -> new ChlorophyteHelmetArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_MASK = ITEMS.register("chlorophyte_mask", () -> new ChlorophyteMaskArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_MASK = ITEMS.register("chlorophyte_mask", () -> new ChlorophyteMaskArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_HEADGEAR = ITEMS.register("chlorophyte_headgear", () -> new ChlorophyteHeadgearArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_HEADGEAR = ITEMS.register("chlorophyte_headgear", () -> new ChlorophyteHeadgearArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_CHESTPLATE = ITEMS.register("chlorophyte_chestplate", () -> new ChlorophyteArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_CHESTPLATE = ITEMS.register("chlorophyte_chestplate", () -> new ChlorophyteArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_LEGGINGS = ITEMS.register("chlorophyte_leggings", () -> new ChlorophyteArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_LEGGINGS = ITEMS.register("chlorophyte_leggings", () -> new ChlorophyteArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_BOOTS = ITEMS.register("chlorophyte_boots", () -> new ChlorophyteArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_BOOTS = ITEMS.register("chlorophyte_boots", () -> new ChlorophyteArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1430,26 +1422,26 @@ public class HnSItemRegistry {
 
     //Charged Scourge
 
-    public static final DeferredHolder<Item, Item> CHARGED_SCOURGE_HELMET = ITEMS.register("charged_scourge_helmet", () -> new GeckolibChargedScourgeArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CHARGED_SCOURGE_HELMET = ITEMS.register("charged_scourge_helmet", () -> new GeckolibChargedScourgeArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.LIGHTNING_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> CHARGED_SCOURGE_CHESTPLATE = ITEMS.register("charged_scourge_chestplate", () -> new GeckolibChargedScourgeArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CHARGED_SCOURGE_CHESTPLATE = ITEMS.register("charged_scourge_chestplate", () -> new GeckolibChargedScourgeArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.LIGHTNING_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> CHARGED_SCOURGE_LEGGINGS = ITEMS.register("charged_scourge_leggings", () -> new GeckolibChargedScourgeArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CHARGED_SCOURGE_LEGGINGS = ITEMS.register("charged_scourge_leggings", () -> new GeckolibChargedScourgeArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.LIGHTNING_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> CHARGED_SCOURGE_BOOTS = ITEMS.register("charged_scourge_boots", () -> new GeckolibChargedScourgeArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> CHARGED_SCOURGE_BOOTS = ITEMS.register("charged_scourge_boots", () -> new GeckolibChargedScourgeArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.LIGHTNING_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1458,26 +1450,26 @@ public class HnSItemRegistry {
 
     //Thunder Prowler
 
-    public static final DeferredHolder<Item, Item> THUNDER_PROWLER_HELMET = ITEMS.register("thunder_prowler_helmet", () -> new ThunderProwlerArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> THUNDER_PROWLER_HELMET = ITEMS.register("thunder_prowler_helmet", () -> new ThunderProwlerArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.LIGHTNING_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> THUNDER_PROWLER_CHESTPLATE = ITEMS.register("thunder_prowler_chestplate", () -> new ThunderProwlerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> THUNDER_PROWLER_CHESTPLATE = ITEMS.register("thunder_prowler_chestplate", () -> new ThunderProwlerArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.LIGHTNING_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> THUNDER_PROWLER_LEGGINGS = ITEMS.register("thunder_prowler_leggings", () -> new ThunderProwlerArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> THUNDER_PROWLER_LEGGINGS = ITEMS.register("thunder_prowler_leggings", () -> new ThunderProwlerArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.LIGHTNING_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> THUNDER_PROWLER_BOOTS = ITEMS.register("thunder_prowler_boots", () -> new ThunderProwlerArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> THUNDER_PROWLER_BOOTS = ITEMS.register("thunder_prowler_boots", () -> new ThunderProwlerArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.LIGHTNING_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1490,29 +1482,29 @@ public class HnSItemRegistry {
 
     //Ender Dragon
 
-    public static final DeferredHolder<Item, Item> ENDER_DRAGON_HELMET = ITEMS.register("ender_dragon_helmet", () -> new EnderDragonArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ENDER_DRAGON_HELMET = ITEMS.register("ender_dragon_helmet", () -> new EnderDragonArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ENDER_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> ENDER_DRAGON_CHESTPLATE = ITEMS.register("ender_dragon_chestplate", () -> new EnderDragonArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ENDER_DRAGON_CHESTPLATE = ITEMS.register("ender_dragon_chestplate", () -> new EnderDragonArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ENDER_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> ENDER_DRAGON_LEGGINGS = ITEMS.register("ender_dragon_leggings", () -> new EnderDragonArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ENDER_DRAGON_LEGGINGS = ITEMS.register("ender_dragon_leggings", () -> new EnderDragonArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ENDER_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> ENDER_DRAGON_BOOTS = ITEMS.register("ender_dragon_boots", () -> new EnderDragonArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ENDER_DRAGON_BOOTS = ITEMS.register("ender_dragon_boots", () -> new EnderDragonArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ENDER_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1520,26 +1512,26 @@ public class HnSItemRegistry {
 
     //*** GeckoLib ***
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_ENDER_DRAGON_HELMET = ITEMS.register("geckolib_ender_dragon_helmet", () -> new GeckolibEnderDragonArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_ENDER_DRAGON_HELMET = ITEMS.register("geckolib_ender_dragon_helmet", () -> new GeckolibEnderDragonArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ENDER_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ENDER_DRAGON_CHESTPLATE = ITEMS.register("geckolib_ender_dragon_chestplate", () -> new GeckolibEnderDragonArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_ENDER_DRAGON_CHESTPLATE = ITEMS.register("geckolib_ender_dragon_chestplate", () -> new GeckolibEnderDragonArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ENDER_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ENDER_DRAGON_LEGGINGS = ITEMS.register("geckolib_ender_dragon_leggings", () -> new GeckolibEnderDragonArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_ENDER_DRAGON_LEGGINGS = ITEMS.register("geckolib_ender_dragon_leggings", () -> new GeckolibEnderDragonArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ENDER_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ENDER_DRAGON_BOOTS = ITEMS.register("geckolib_ender_dragon_boots", () -> new GeckolibEnderDragonArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_ENDER_DRAGON_BOOTS = ITEMS.register("geckolib_ender_dragon_boots", () -> new GeckolibEnderDragonArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ENDER_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1552,26 +1544,26 @@ public class HnSItemRegistry {
 
     //Flesh Mass
 
-    public static final DeferredHolder<Item, Item> FLESH_MASS_HELMET = ITEMS.register("flesh_mass_helmet", () -> new FleshMassArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FLESH_MASS_HELMET = ITEMS.register("flesh_mass_helmet", () -> new FleshMassArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> FLESH_MASS_CHESTPLATE = ITEMS.register("flesh_mass_chestplate", () -> new FleshMassArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FLESH_MASS_CHESTPLATE = ITEMS.register("flesh_mass_chestplate", () -> new FleshMassArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> FLESH_MASS_LEGGINGS = ITEMS.register("flesh_mass_leggings", () -> new FleshMassArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FLESH_MASS_LEGGINGS = ITEMS.register("flesh_mass_leggings", () -> new FleshMassArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> FLESH_MASS_BOOTS = ITEMS.register("flesh_mass_boots", () -> new FleshMassArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FLESH_MASS_BOOTS = ITEMS.register("flesh_mass_boots", () -> new FleshMassArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1580,29 +1572,29 @@ public class HnSItemRegistry {
 
     //The Wither
 
-    public static final DeferredHolder<Item, Item> THE_WITHER_HELMET = ITEMS.register("the_wither_helmet", () -> new TheWitherArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> THE_WITHER_HELMET = ITEMS.register("the_wither_helmet", () -> new TheWitherArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> THE_WITHER_CHESTPLATE = ITEMS.register("the_wither_chestplate", () -> new TheWitherArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> THE_WITHER_CHESTPLATE = ITEMS.register("the_wither_chestplate", () -> new TheWitherArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> THE_WITHER_LEGGINGS = ITEMS.register("the_wither_leggings", () -> new TheWitherArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> THE_WITHER_LEGGINGS = ITEMS.register("the_wither_leggings", () -> new TheWitherArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> THE_WITHER_BOOTS = ITEMS.register("the_wither_boots", () -> new TheWitherArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> THE_WITHER_BOOTS = ITEMS.register("the_wither_boots", () -> new TheWitherArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1614,26 +1606,26 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_THE_WITHER_HELMET = ITEMS.register("geckolib_the_wither_helmet", () -> new GeckolibTheWitherArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_THE_WITHER_HELMET = ITEMS.register("geckolib_the_wither_helmet", () -> new GeckolibTheWitherArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_THE_WITHER_CHESTPLATE = ITEMS.register("geckolib_the_wither_chestplate", () -> new GeckolibTheWitherArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_THE_WITHER_CHESTPLATE = ITEMS.register("geckolib_the_wither_chestplate", () -> new GeckolibTheWitherArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_THE_WITHER_LEGGINGS = ITEMS.register("geckolib_the_wither_leggings", () -> new GeckolibTheWitherArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_THE_WITHER_LEGGINGS = ITEMS.register("geckolib_the_wither_leggings", () -> new GeckolibTheWitherArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_THE_WITHER_BOOTS = ITEMS.register("geckolib_the_wither_boots", () -> new GeckolibTheWitherArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_THE_WITHER_BOOTS = ITEMS.register("geckolib_the_wither_boots", () -> new GeckolibTheWitherArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1642,26 +1634,26 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> DEAD_KING_HELMET = ITEMS.register("dead_king_helmet", () -> new DeadKingArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> DEAD_KING_HELMET = ITEMS.register("dead_king_helmet", () -> new DeadKingArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(128))
     ));
-    public static final DeferredHolder<Item, Item> DEAD_KING_CHESTPLATE = ITEMS.register("dead_king_chestplate", () -> new DeadKingArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> DEAD_KING_CHESTPLATE = ITEMS.register("dead_king_chestplate", () -> new DeadKingArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(128))
     ));
-    public static final DeferredHolder<Item, Item> DEAD_KING_LEGGINGS = ITEMS.register("dead_king_leggings", () -> new DeadKingArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> DEAD_KING_LEGGINGS = ITEMS.register("dead_king_leggings", () -> new DeadKingArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .durability(ArmorItem.Type.LEGGINGS.getDurability(128))
     ));
-    public static final DeferredHolder<Item, Item> DEAD_KING_BOOTS = ITEMS.register("dead_king_boots", () -> new DeadKingArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> DEAD_KING_BOOTS = ITEMS.register("dead_king_boots", () -> new DeadKingArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.BLOOD_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(128))
@@ -1674,29 +1666,29 @@ public class HnSItemRegistry {
 
     //Supreme Witch
 
-    public static final DeferredHolder<Item, Item> SUPREME_WITCH_HELMET = ITEMS.register("supreme_witch_helmet", () -> new SupremeWitchArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SUPREME_WITCH_HELMET = ITEMS.register("supreme_witch_helmet", () -> new SupremeWitchArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> SUPREME_WITCH_CHESTPLATE = ITEMS.register("supreme_witch_chestplate", () -> new SupremeWitchArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SUPREME_WITCH_CHESTPLATE = ITEMS.register("supreme_witch_chestplate", () -> new SupremeWitchArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> SUPREME_WITCH_LEGGINGS = ITEMS.register("supreme_witch_leggings", () -> new SupremeWitchArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SUPREME_WITCH_LEGGINGS = ITEMS.register("supreme_witch_leggings", () -> new SupremeWitchArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> SUPREME_WITCH_BOOTS = ITEMS.register("supreme_witch_boots", () -> new SupremeWitchArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SUPREME_WITCH_BOOTS = ITEMS.register("supreme_witch_boots", () -> new SupremeWitchArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1708,27 +1700,27 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_SUPREME_WITCH_HELMET = ITEMS.register("geckolib_supreme_witch_helmet", () -> new GeckolibSupremeWitchArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_SUPREME_WITCH_HELMET = ITEMS.register("geckolib_supreme_witch_helmet", () -> new GeckolibSupremeWitchArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_SUPREME_WITCH_CHESTPLATE = ITEMS.register("geckolib_supreme_witch_chestplate", () -> new GeckolibSupremeWitchArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_SUPREME_WITCH_CHESTPLATE = ITEMS.register("geckolib_supreme_witch_chestplate", () -> new GeckolibSupremeWitchArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_SUPREME_WITCH_LEGGINGS = ITEMS.register("geckolib_supreme_witch_leggings", () -> new GeckolibSupremeWitchArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_SUPREME_WITCH_LEGGINGS = ITEMS.register("geckolib_supreme_witch_leggings", () -> new GeckolibSupremeWitchArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
 
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_SUPREME_WITCH_BOOTS = ITEMS.register("geckolib_supreme_witch_boots", () -> new GeckolibSupremeWitchArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_SUPREME_WITCH_BOOTS = ITEMS.register("geckolib_supreme_witch_boots", () -> new GeckolibSupremeWitchArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1737,26 +1729,26 @@ public class HnSItemRegistry {
 
     //Alchemist Supreme
 
-    public static final DeferredHolder<Item, Item> ALCHEMIST_SUPREME_HELMET = ITEMS.register("alchemist_supreme_helmet", () -> new AlchemistSupremeArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ALCHEMIST_SUPREME_HELMET = ITEMS.register("alchemist_supreme_helmet", () -> new AlchemistSupremeArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> ALCHEMIST_SUPREME_CHESTPLATE = ITEMS.register("alchemist_supreme_chestplate", () -> new AlchemistSupremeArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ALCHEMIST_SUPREME_CHESTPLATE = ITEMS.register("alchemist_supreme_chestplate", () -> new AlchemistSupremeArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> ALCHEMIST_SUPREME_LEGGINGS = ITEMS.register("alchemist_supreme_leggings", () -> new AlchemistSupremeArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ALCHEMIST_SUPREME_LEGGINGS = ITEMS.register("alchemist_supreme_leggings", () -> new AlchemistSupremeArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> ALCHEMIST_SUPREME_BOOTS = ITEMS.register("alchemist_supreme_boots", () -> new AlchemistSupremeArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ALCHEMIST_SUPREME_BOOTS = ITEMS.register("alchemist_supreme_boots", () -> new AlchemistSupremeArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1769,29 +1761,29 @@ public class HnSItemRegistry {
 
     //Seraph
 
-    public static final DeferredHolder<Item, Item> SERAPH_HELMET = ITEMS.register("seraph_helmet", () -> new SeraphArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SERAPH_HELMET = ITEMS.register("seraph_helmet", () -> new SeraphArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> SERAPH_CHESTPLATE = ITEMS.register("seraph_chestplate", () -> new SeraphArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SERAPH_CHESTPLATE = ITEMS.register("seraph_chestplate", () -> new SeraphArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> SERAPH_LEGGINGS = ITEMS.register("seraph_leggings", () -> new SeraphArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SERAPH_LEGGINGS = ITEMS.register("seraph_leggings", () -> new SeraphArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> SERAPH_BOOTS = ITEMS.register("seraph_boots", () -> new SeraphArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SERAPH_BOOTS = ITEMS.register("seraph_boots", () -> new SeraphArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1801,26 +1793,26 @@ public class HnSItemRegistry {
 
     //*** GeckoLib ***
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_SERAPH_HELMET = ITEMS.register("geckolib_seraph_helmet", () -> new GeckolibSeraphArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_SERAPH_HELMET = ITEMS.register("geckolib_seraph_helmet", () -> new GeckolibSeraphArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_SERAPH_CHESTPLATE = ITEMS.register("geckolib_seraph_chestplate", () -> new GeckolibSeraphArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_SERAPH_CHESTPLATE = ITEMS.register("geckolib_seraph_chestplate", () -> new GeckolibSeraphArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_SERAPH_LEGGINGS = ITEMS.register("geckolib_seraph_leggings", () -> new GeckolibSeraphArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_SERAPH_LEGGINGS = ITEMS.register("geckolib_seraph_leggings", () -> new GeckolibSeraphArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_SERAPH_BOOTS = ITEMS.register("geckolib_seraph_boots", () -> new GeckolibSeraphArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_SERAPH_BOOTS = ITEMS.register("geckolib_seraph_boots", () -> new GeckolibSeraphArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1829,26 +1821,26 @@ public class HnSItemRegistry {
 
     //Gabriel ULTRAKILL
 
-    public static final DeferredHolder<Item, Item> GABRIEL_ULTRAKILL_HELMET = ITEMS.register("gabriel_ultrakill_helmet", () -> new GabrielArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GABRIEL_ULTRAKILL_HELMET = ITEMS.register("gabriel_ultrakill_helmet", () -> new GabrielArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GABRIEL_ULTRAKILL_CHESTPLATE = ITEMS.register("gabriel_ultrakill_chestplate", () -> new GabrielArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GABRIEL_ULTRAKILL_CHESTPLATE = ITEMS.register("gabriel_ultrakill_chestplate", () -> new GabrielArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GABRIEL_ULTRAKILL_LEGGINGS = ITEMS.register("gabriel_ultrakill_leggings", () -> new GabrielArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GABRIEL_ULTRAKILL_LEGGINGS = ITEMS.register("gabriel_ultrakill_leggings", () -> new GabrielArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GABRIEL_ULTRAKILL_BOOTS = ITEMS.register("gabriel_ultrakill_boots", () -> new GabrielArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GABRIEL_ULTRAKILL_BOOTS = ITEMS.register("gabriel_ultrakill_boots", () -> new GabrielArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1860,26 +1852,26 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_GABRIEL_ULTRAKILL_HELMET = ITEMS.register("geckolib_gabriel_ultrakill_helmet", () -> new GeckolibGabrielArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_GABRIEL_ULTRAKILL_HELMET = ITEMS.register("geckolib_gabriel_ultrakill_helmet", () -> new GeckolibGabrielArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_GABRIEL_ULTRAKILL_CHESTPLATE = ITEMS.register("geckolib_gabriel_ultrakill_chestplate", () -> new GeckolibGabrielArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_GABRIEL_ULTRAKILL_CHESTPLATE = ITEMS.register("geckolib_gabriel_ultrakill_chestplate", () -> new GeckolibGabrielArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_GABRIEL_ULTRAKILL_LEGGINGS = ITEMS.register("geckolib_gabriel_ultrakill_leggings", () -> new GeckolibGabrielArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_GABRIEL_ULTRAKILL_LEGGINGS = ITEMS.register("geckolib_gabriel_ultrakill_leggings", () -> new GeckolibGabrielArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_GABRIEL_ULTRAKILL_BOOTS = ITEMS.register("geckolib_gabriel_ultrakill_boots", () -> new GeckolibGabrielArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_GABRIEL_ULTRAKILL_BOOTS = ITEMS.register("geckolib_gabriel_ultrakill_boots", () -> new GeckolibGabrielArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1893,26 +1885,26 @@ public class HnSItemRegistry {
 
     //Abberant Predator
 
-    public static final DeferredHolder<Item, Item> ABBERANT_PREDATOR_HELMET = ITEMS.register("abberant_predator_helmet", () -> new AbberantPredatorArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ABBERANT_PREDATOR_HELMET = ITEMS.register("abberant_predator_helmet", () -> new AbberantPredatorArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> ABBERANT_PREDATOR_CHESTPLATE = ITEMS.register("abberant_predator_chestplate", () -> new AbberantPredatorArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ABBERANT_PREDATOR_CHESTPLATE = ITEMS.register("abberant_predator_chestplate", () -> new AbberantPredatorArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> ABBERANT_PREDATOR_LEGGINGS = ITEMS.register("abberant_predator_leggings", () -> new AbberantPredatorArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ABBERANT_PREDATOR_LEGGINGS = ITEMS.register("abberant_predator_leggings", () -> new AbberantPredatorArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> ABBERANT_PREDATOR_BOOTS = ITEMS.register("abberant_predator_boots", () -> new AbberantPredatorArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ABBERANT_PREDATOR_BOOTS = ITEMS.register("abberant_predator_boots", () -> new AbberantPredatorArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1921,26 +1913,26 @@ public class HnSItemRegistry {
 
     //Shadow Scale
 
-    public static final DeferredHolder<Item, Item> SHADOW_SCALE_HELMET = ITEMS.register("shadow_scale_helmet", () -> new ShadowScaleArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SHADOW_SCALE_HELMET = ITEMS.register("shadow_scale_helmet", () -> new ShadowScaleArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> SHADOW_SCALE_CHESTPLATE = ITEMS.register("shadow_scale_chestplate", () -> new ShadowScaleArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SHADOW_SCALE_CHESTPLATE = ITEMS.register("shadow_scale_chestplate", () -> new ShadowScaleArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> SHADOW_SCALE_LEGGINGS = ITEMS.register("shadow_scale_leggings", () -> new ShadowScaleArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SHADOW_SCALE_LEGGINGS = ITEMS.register("shadow_scale_leggings", () -> new ShadowScaleArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> SHADOW_SCALE_BOOTS = ITEMS.register("shadow_scale_boots", () -> new ShadowScaleArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SHADOW_SCALE_BOOTS = ITEMS.register("shadow_scale_boots", () -> new ShadowScaleArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -1949,55 +1941,55 @@ public class HnSItemRegistry {
 
     // Masked Fool
 
-    public static final DeferredHolder<Item, Item> MASKED_FOOL_HELMET = ITEMS.register("masked_fool_helmet", () -> new MaskedFoolArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MASKED_FOOL_HELMET = ITEMS.register("masked_fool_helmet", () -> new MaskedFoolArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> MASKED_FOOL_CHESTPLATE = ITEMS.register("masked_fool_chestplate", () -> new MaskedFoolArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MASKED_FOOL_CHESTPLATE = ITEMS.register("masked_fool_chestplate", () -> new MaskedFoolArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> MASKED_FOOL_LEGGINGS = ITEMS.register("masked_fool_leggings", () -> new MaskedFoolArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MASKED_FOOL_LEGGINGS = ITEMS.register("masked_fool_leggings", () -> new MaskedFoolArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> MASKED_FOOL_BOOTS = ITEMS.register("masked_fool_boots", () -> new MaskedFoolArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MASKED_FOOL_BOOTS = ITEMS.register("masked_fool_boots", () -> new MaskedFoolArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(32))
     ));
 
     // Shadow Jester
 
-    public static final DeferredHolder<Item, Item> SHADOW_JESTER_HELMET = ITEMS.register("shadow_jester_helmet", () -> new ShadowJesterArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SHADOW_JESTER_HELMET = ITEMS.register("shadow_jester_helmet", () -> new ShadowJesterArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
-    public static final DeferredHolder<Item, Item> SHADOW_JESTER_CHESTPLATE = ITEMS.register("shadow_jester_chestplate", () -> new ShadowJesterArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SHADOW_JESTER_CHESTPLATE = ITEMS.register("shadow_jester_chestplate", () -> new ShadowJesterArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
-    public static final DeferredHolder<Item, Item> SHADOW_JESTER_LEGGINGS = ITEMS.register("shadow_jester_leggings", () -> new ShadowJesterArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SHADOW_JESTER_LEGGINGS = ITEMS.register("shadow_jester_leggings", () -> new ShadowJesterArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
-    public static final DeferredHolder<Item, Item> SHADOW_JESTER_BOOTS = ITEMS.register("shadow_jester_boots", () -> new ShadowJesterArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SHADOW_JESTER_BOOTS = ITEMS.register("shadow_jester_boots", () -> new ShadowJesterArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.SHADOW_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2011,26 +2003,26 @@ public class HnSItemRegistry {
 
     //Mycelium Guardian
 
-    public static final DeferredHolder<Item, Item> MYCELIUM_GUARDIAN_HELMET = ITEMS.register("mycelium_guardian_helmet", () -> new MyceliumGuardianArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MYCELIUM_GUARDIAN_HELMET = ITEMS.register("mycelium_guardian_helmet", () -> new MyceliumGuardianArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MYCELIUM_GUARDIAN_CHESTPLATE = ITEMS.register("mycelium_guardian_chestplate", () -> new MyceliumGuardianArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MYCELIUM_GUARDIAN_CHESTPLATE = ITEMS.register("mycelium_guardian_chestplate", () -> new MyceliumGuardianArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MYCELIUM_GUARDIAN_LEGGINGS = ITEMS.register("mycelium_guardian_leggings", () -> new MyceliumGuardianArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MYCELIUM_GUARDIAN_LEGGINGS = ITEMS.register("mycelium_guardian_leggings", () -> new MyceliumGuardianArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MYCELIUM_GUARDIAN_BOOTS = ITEMS.register("mycelium_guardian_boots", () -> new MyceliumGuardianArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MYCELIUM_GUARDIAN_BOOTS = ITEMS.register("mycelium_guardian_boots", () -> new MyceliumGuardianArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2039,26 +2031,26 @@ public class HnSItemRegistry {
 
     // Radiant Crystal
 
-    public static final DeferredHolder<Item, Item> RADIANT_CRYSTAL_HELMET = ITEMS.register("radiant_crystal_helmet", () -> new RadiantCrystalArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> RADIANT_CRYSTAL_HELMET = ITEMS.register("radiant_crystal_helmet", () -> new RadiantCrystalArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> RADIANT_CRYSTAL_CHESTPLATE = ITEMS.register("radiant_crystal_chestplate", () -> new RadiantCrystalArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> RADIANT_CRYSTAL_CHESTPLATE = ITEMS.register("radiant_crystal_chestplate", () -> new RadiantCrystalArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> RADIANT_CRYSTAL_LEGGINGS = ITEMS.register("radiant_crystal_leggings", () -> new RadiantCrystalArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> RADIANT_CRYSTAL_LEGGINGS = ITEMS.register("radiant_crystal_leggings", () -> new RadiantCrystalArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> RADIANT_CRYSTAL_BOOTS = ITEMS.register("radiant_crystal_boots", () -> new RadiantCrystalArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> RADIANT_CRYSTAL_BOOTS = ITEMS.register("radiant_crystal_boots", () -> new RadiantCrystalArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(32))
@@ -2069,26 +2061,26 @@ public class HnSItemRegistry {
     *** GeckoLib
      */
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_RADIANT_CRYSTAL_HELMET = ITEMS.register("geckolib_radiant_crystal_helmet", () -> new GeckolibRadiantCrystalArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_RADIANT_CRYSTAL_HELMET = ITEMS.register("geckolib_radiant_crystal_helmet", () -> new GeckolibRadiantCrystalArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_RADIANT_CRYSTAL_CHESTPLATE = ITEMS.register("geckolib_radiant_crystal_chestplate", () -> new GeckolibRadiantCrystalArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_RADIANT_CRYSTAL_CHESTPLATE = ITEMS.register("geckolib_radiant_crystal_chestplate", () -> new GeckolibRadiantCrystalArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_RADIANT_CRYSTAL_LEGGINGS = ITEMS.register("geckolib_radiant_crystal_leggings", () -> new GeckolibRadiantCrystalArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_RADIANT_CRYSTAL_LEGGINGS = ITEMS.register("geckolib_radiant_crystal_leggings", () -> new GeckolibRadiantCrystalArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_RADIANT_CRYSTAL_BOOTS = ITEMS.register("geckolib_radiant_crystal_boots", () -> new GeckolibRadiantCrystalArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_RADIANT_CRYSTAL_BOOTS = ITEMS.register("geckolib_radiant_crystal_boots", () -> new GeckolibRadiantCrystalArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(32))
@@ -2097,29 +2089,29 @@ public class HnSItemRegistry {
 
     // Glassweaver Helmet
 
-    public static final DeferredHolder<Item, Item> GLASSWEAVER_HELMET = ITEMS.register("glassweaver_helmet", () -> new GlassweaverArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GLASSWEAVER_HELMET = ITEMS.register("glassweaver_helmet", () -> new GlassweaverArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
-    public static final DeferredHolder<Item, Item> GLASSWEAVER_CHESTPLATE = ITEMS.register("glassweaver_chestplate", () -> new GlassweaverArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GLASSWEAVER_CHESTPLATE = ITEMS.register("glassweaver_chestplate", () -> new GlassweaverArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
-    public static final DeferredHolder<Item, Item> GLASSWEAVER_LEGGINGS = ITEMS.register("glassweaver_leggings", () -> new GlassweaverArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GLASSWEAVER_LEGGINGS = ITEMS.register("glassweaver_leggings", () -> new GlassweaverArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
-    public static final DeferredHolder<Item, Item> GLASSWEAVER_BOOTS = ITEMS.register("glassweaver_boots", () -> new GlassweaverArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GLASSWEAVER_BOOTS = ITEMS.register("glassweaver_boots", () -> new GlassweaverArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2132,26 +2124,26 @@ public class HnSItemRegistry {
 
     // Cosmic Scholar
 
-    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_HELMET = ITEMS.register("cosmic_scholar_helmet", () -> new CosmicScholarArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_HELMET = ITEMS.register("cosmic_scholar_helmet", () -> new CosmicScholarArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_CHESTPLATE = ITEMS.register("cosmic_scholar_chestplate", () -> new CosmicScholarArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_CHESTPLATE = ITEMS.register("cosmic_scholar_chestplate", () -> new CosmicScholarArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_LEGGINGS = ITEMS.register("cosmic_scholar_leggings", () -> new CosmicScholarArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_LEGGINGS = ITEMS.register("cosmic_scholar_leggings", () -> new CosmicScholarArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_BOOTS = ITEMS.register("cosmic_scholar_boots", () -> new CosmicScholarArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_BOOTS = ITEMS.register("cosmic_scholar_boots", () -> new CosmicScholarArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(32))
@@ -2164,26 +2156,26 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_HELMET = ITEMS.register("geckolib_cosmic_scholar_helmet", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_HELMET = ITEMS.register("geckolib_cosmic_scholar_helmet", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_CHESTPLATE = ITEMS.register("geckolib_cosmic_scholar_chestplate", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_CHESTPLATE = ITEMS.register("geckolib_cosmic_scholar_chestplate", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_LEGGINGS = ITEMS.register("geckolib_cosmic_scholar_leggings", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_LEGGINGS = ITEMS.register("geckolib_cosmic_scholar_leggings", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_BOOTS = ITEMS.register("geckolib_cosmic_scholar_boots", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_BOOTS = ITEMS.register("geckolib_cosmic_scholar_boots", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(32))
@@ -2196,29 +2188,29 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_HELMET = ITEMS.register("astraconic_weaver_helmet", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_HELMET = ITEMS.register("astraconic_weaver_helmet", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
-    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_CHESTPLATE = ITEMS.register("astraconic_weaver_chestplate", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_CHESTPLATE = ITEMS.register("astraconic_weaver_chestplate", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
-    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_LEGGINGS = ITEMS.register("astraconic_weaver_leggings", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_LEGGINGS = ITEMS.register("astraconic_weaver_leggings", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
-    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_BOOTS = ITEMS.register("astraconic_weaver_boots", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_BOOTS = ITEMS.register("astraconic_weaver_boots", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2231,27 +2223,27 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_HELMET = ITEMS.register("geckolib_astraconic_weaver_helmet", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_HELMET = ITEMS.register("geckolib_astraconic_weaver_helmet", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_CHESTPLATE = ITEMS.register("geckolib_astraconic_weaver_chestplate", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_CHESTPLATE = ITEMS.register("geckolib_astraconic_weaver_chestplate", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_LEGGINGS = ITEMS.register("geckolib_astraconic_weaver_leggings", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_LEGGINGS = ITEMS.register("geckolib_astraconic_weaver_leggings", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_BOOTS = ITEMS.register("geckolib_astraconic_weaver_boots", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_BOOTS = ITEMS.register("geckolib_astraconic_weaver_boots", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2268,26 +2260,26 @@ public class HnSItemRegistry {
 
     // Nautilus Knight
 
-    public static final DeferredHolder<Item, Item> NAUTILUS_KNIGHT_HELMET = ITEMS.register("nautilus_knight_helmet", () -> new NautilusKnightArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> NAUTILUS_KNIGHT_HELMET = ITEMS.register("nautilus_knight_helmet", () -> new NautilusKnightArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> NAUTILUS_KNIGHT_CHESTPLATE = ITEMS.register("nautilus_knight_chestplate", () -> new NautilusKnightArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> NAUTILUS_KNIGHT_CHESTPLATE = ITEMS.register("nautilus_knight_chestplate", () -> new NautilusKnightArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> NAUTILUS_KNIGHT_LEGGINGS = ITEMS.register("nautilus_knight_leggings", () -> new NautilusKnightArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> NAUTILUS_KNIGHT_LEGGINGS = ITEMS.register("nautilus_knight_leggings", () -> new NautilusKnightArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> NAUTILUS_KNIGHT_BOOTS = ITEMS.register("nautilus_knight_boots", () -> new NautilusKnightArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> NAUTILUS_KNIGHT_BOOTS = ITEMS.register("nautilus_knight_boots", () -> new NautilusKnightArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.RADIANCE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(32))
@@ -2297,29 +2289,29 @@ public class HnSItemRegistry {
 
     // Elder Guardian
 
-    public static final DeferredHolder<Item, Item> ELDER_GUARDIAN_HELMET = ITEMS.register("elder_guardian_helmet", () -> new ElderGuardianArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ELDER_GUARDIAN_HELMET = ITEMS.register("elder_guardian_helmet", () -> new ElderGuardianArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.HYDRO_RARITY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> ELDER_GUARDIAN_CHESTPLATE = ITEMS.register("elder_guardian_chestplate", () -> new ElderGuardianArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ELDER_GUARDIAN_CHESTPLATE = ITEMS.register("elder_guardian_chestplate", () -> new ElderGuardianArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HYDRO_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> ELDER_GUARDIAN_LEGGINGS = ITEMS.register("elder_guardian_leggings", () -> new ElderGuardianArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ELDER_GUARDIAN_LEGGINGS = ITEMS.register("elder_guardian_leggings", () -> new ElderGuardianArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HYDRO_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> ELDER_GUARDIAN_BOOTS = ITEMS.register("elder_guardian_boots", () -> new ElderGuardianArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ELDER_GUARDIAN_BOOTS = ITEMS.register("elder_guardian_boots", () -> new ElderGuardianArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.HYDRO_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2332,29 +2324,29 @@ public class HnSItemRegistry {
 
     //Infestation
 
-    public static final DeferredHolder<Item, Item> INFESTATION_HELMET = ITEMS.register("infestation_helmet", () -> new InfestationArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> INFESTATION_HELMET = ITEMS.register("infestation_helmet", () -> new InfestationArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> INFESTATION_CHESTPLATE = ITEMS.register("infestation_chestplate", () -> new InfestationArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> INFESTATION_CHESTPLATE = ITEMS.register("infestation_chestplate", () -> new InfestationArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> INFESTATION_LEGGINGS = ITEMS.register("infestation_leggings", () -> new InfestationArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> INFESTATION_LEGGINGS = ITEMS.register("infestation_leggings", () -> new InfestationArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> INFESTATION_BOOTS = ITEMS.register("infestation_boots", () -> new InfestationArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> INFESTATION_BOOTS = ITEMS.register("infestation_boots", () -> new InfestationArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2366,28 +2358,28 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_INFESTATION_HELMET = ITEMS.register("geckolib_infestation_helmet", () -> new GeckolibInfestationArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_INFESTATION_HELMET = ITEMS.register("geckolib_infestation_helmet", () -> new GeckolibInfestationArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_INFESTATION_CHESTPLATE = ITEMS.register("geckolib_infestation_chestplate", () -> new GeckolibInfestationArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_INFESTATION_CHESTPLATE = ITEMS.register("geckolib_infestation_chestplate", () -> new GeckolibInfestationArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_INFESTATION_LEGGINGS = ITEMS.register("geckolib_infestation_leggings", () -> new GeckolibInfestationArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_INFESTATION_LEGGINGS = ITEMS.register("geckolib_infestation_leggings", () -> new GeckolibInfestationArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .fireResistant()
     ));
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_INFESTATION_BOOTS = ITEMS.register("geckolib_infestation_boots", () -> new GeckolibInfestationArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_INFESTATION_BOOTS = ITEMS.register("geckolib_infestation_boots", () -> new GeckolibInfestationArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2399,26 +2391,26 @@ public class HnSItemRegistry {
 
     //Bounty Hunter
 
-    public static final DeferredHolder<Item, Item> BOUNTY_HUNTER_HELMET = ITEMS.register("bounty_hunter_helmet", () -> new BountyHunterArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> BOUNTY_HUNTER_HELMET = ITEMS.register("bounty_hunter_helmet", () -> new BountyHunterArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> BOUNTY_HUNTER_CHESTPLATE = ITEMS.register("bounty_hunter_chestplate", () -> new BountyHunterArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> BOUNTY_HUNTER_CHESTPLATE = ITEMS.register("bounty_hunter_chestplate", () -> new BountyHunterArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> BOUNTY_HUNTER_LEGGINGS = ITEMS.register("bounty_hunter_leggings", () -> new BountyHunterArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> BOUNTY_HUNTER_LEGGINGS = ITEMS.register("bounty_hunter_leggings", () -> new BountyHunterArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> BOUNTY_HUNTER_BOOTS = ITEMS.register("bounty_hunter_boots", () -> new BountyHunterArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> BOUNTY_HUNTER_BOOTS = ITEMS.register("bounty_hunter_boots", () -> new BountyHunterArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(37))
@@ -2426,26 +2418,26 @@ public class HnSItemRegistry {
 
     //Frostbite Hunter
 
-    public static final DeferredHolder<Item, Item> FROSTBITE_HUNTER_HELMET = ITEMS.register("frostbite_hunter_helmet", () -> new FrostbiteHunterArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FROSTBITE_HUNTER_HELMET = ITEMS.register("frostbite_hunter_helmet", () -> new FrostbiteHunterArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> FROSTBITE_HUNTER_CHESTPLATE = ITEMS.register("frostbite_hunter_chestplate", () -> new FrostbiteHunterArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FROSTBITE_HUNTER_CHESTPLATE = ITEMS.register("frostbite_hunter_chestplate", () -> new FrostbiteHunterArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> FROSTBITE_HUNTER_LEGGINGS = ITEMS.register("frostbite_hunter_leggings", () -> new FrostbiteHunterArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FROSTBITE_HUNTER_LEGGINGS = ITEMS.register("frostbite_hunter_leggings", () -> new FrostbiteHunterArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> FROSTBITE_HUNTER_BOOTS = ITEMS.register("frostbite_hunter_boots", () -> new FrostbiteHunterArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FROSTBITE_HUNTER_BOOTS = ITEMS.register("frostbite_hunter_boots", () -> new FrostbiteHunterArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2454,26 +2446,26 @@ public class HnSItemRegistry {
 
     //Permafrost Prince
 
-    public static final DeferredHolder<Item, Item> PERMAFROST_PRINCE_HELMET = ITEMS.register("permafrost_prince_helmet", () -> new PermafrostPrinceArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> PERMAFROST_PRINCE_HELMET = ITEMS.register("permafrost_prince_helmet", () -> new PermafrostPrinceArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> PERMAFROST_PRINCE_CHESTPLATE = ITEMS.register("permafrost_prince_chestplate", () -> new PermafrostPrinceArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> PERMAFROST_PRINCE_CHESTPLATE = ITEMS.register("permafrost_prince_chestplate", () -> new PermafrostPrinceArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> PERMAFROST_PRINCE_LEGGINGS = ITEMS.register("permafrost_prince_leggings", () -> new PermafrostPrinceArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> PERMAFROST_PRINCE_LEGGINGS = ITEMS.register("permafrost_prince_leggings", () -> new PermafrostPrinceArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> PERMAFROST_PRINCE_BOOTS = ITEMS.register("permafrost_prince_boots", () -> new PermafrostPrinceArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> PERMAFROST_PRINCE_BOOTS = ITEMS.register("permafrost_prince_boots", () -> new PermafrostPrinceArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2488,26 +2480,26 @@ public class HnSItemRegistry {
 
     //Frostbite Knight
 
-    public static final DeferredHolder<Item, Item> FROSTBITE_KNIGHT_HELMET = ITEMS.register("frostbite_knight_helmet", () -> new FrostbiteKnightArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FROSTBITE_KNIGHT_HELMET = ITEMS.register("frostbite_knight_helmet", () -> new FrostbiteKnightArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> FROSTBITE_KNIGHT_CHESTPLATE = ITEMS.register("frostbite_knight_chestplate", () -> new FrostbiteKnightArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FROSTBITE_KNIGHT_CHESTPLATE = ITEMS.register("frostbite_knight_chestplate", () -> new FrostbiteKnightArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> FROSTBITE_KNIGHT_LEGGINGS = ITEMS.register("frostbite_knight_leggings", () -> new FrostbiteKnightArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FROSTBITE_KNIGHT_LEGGINGS = ITEMS.register("frostbite_knight_leggings", () -> new FrostbiteKnightArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> FROSTBITE_KNIGHT_BOOTS = ITEMS.register("frostbite_knight_boots", () -> new FrostbiteKnightArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FROSTBITE_KNIGHT_BOOTS = ITEMS.register("frostbite_knight_boots", () -> new FrostbiteKnightArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ICE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2516,26 +2508,26 @@ public class HnSItemRegistry {
 
     //Dreadsteel Knight
 
-    public static final DeferredHolder<Item, Item> DREADSTEEL_KNIGHT_HELMET = ITEMS.register("dreadsteel_knight_helmet", () -> new DreadsteelKnightArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> DREADSTEEL_KNIGHT_HELMET = ITEMS.register("dreadsteel_knight_helmet", () -> new DreadsteelKnightArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> DREADSTEEL_KNIGHT_CHESTPLATE = ITEMS.register("dreadsteel_knight_chestplate", () -> new DreadsteelKnightArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> DREADSTEEL_KNIGHT_CHESTPLATE = ITEMS.register("dreadsteel_knight_chestplate", () -> new DreadsteelKnightArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> DREADSTEEL_KNIGHT_LEGGINGS = ITEMS.register("dreadsteel_knight_leggings", () -> new DreadsteelKnightArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> DREADSTEEL_KNIGHT_LEGGINGS = ITEMS.register("dreadsteel_knight_leggings", () -> new DreadsteelKnightArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> DREADSTEEL_KNIGHT_BOOTS = ITEMS.register("dreadsteel_knight_boots", () -> new DreadsteelKnightArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> DREADSTEEL_KNIGHT_BOOTS = ITEMS.register("dreadsteel_knight_boots", () -> new DreadsteelKnightArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2548,25 +2540,25 @@ public class HnSItemRegistry {
 
     //Legacy Legionnaire
 
-    public static final DeferredHolder<Item, Item> LEGACY_LEGIONNAIRE_HELMET = ITEMS.register("legionnaire_helmet", () -> new OldLegionnaireArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGACY_LEGIONNAIRE_HELMET = ITEMS.register("legionnaire_helmet", () -> new OldLegionnaireArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> LEGACY_LEGIONNAIRE_CHESTPLATE = ITEMS.register("legionnaire_chestplate", () -> new OldLegionnaireArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGACY_LEGIONNAIRE_CHESTPLATE = ITEMS.register("legionnaire_chestplate", () -> new OldLegionnaireArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> LEGACY_LEGIONNAIRE_LEGGINGS = ITEMS.register("legionnaire_leggings", () -> new OldLegionnaireArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGACY_LEGIONNAIRE_LEGGINGS = ITEMS.register("legionnaire_leggings", () -> new OldLegionnaireArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
     ));
-    public static final DeferredHolder<Item, Item> LEGACY_LEGIONNAIRE_BOOTS = ITEMS.register("legionnaire_boots", () -> new OldLegionnaireArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGACY_LEGIONNAIRE_BOOTS = ITEMS.register("legionnaire_boots", () -> new OldLegionnaireArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2574,26 +2566,26 @@ public class HnSItemRegistry {
 
     //Legionnaire Ruler
 
-    public static final DeferredHolder<Item, Item> LEGIONNAIRE_RULER_HELMET = ITEMS.register("legionnaire_ruler_helmet", () -> new LegionnaireRulerArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGIONNAIRE_RULER_HELMET = ITEMS.register("legionnaire_ruler_helmet", () -> new LegionnaireRulerArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> LEGIONNAIRE_RULER_CHESTPLATE = ITEMS.register("legionnaire_ruler_chestplate", () -> new LegionnaireRulerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGIONNAIRE_RULER_CHESTPLATE = ITEMS.register("legionnaire_ruler_chestplate", () -> new LegionnaireRulerArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> LEGIONNAIRE_RULER_LEGGINGS = ITEMS.register("legionnaire_ruler_leggings", () -> new LegionnaireRulerArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGIONNAIRE_RULER_LEGGINGS = ITEMS.register("legionnaire_ruler_leggings", () -> new LegionnaireRulerArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> LEGIONNAIRE_RULER_BOOTS = ITEMS.register("legionnaire_ruler_boots", () -> new LegionnaireRulerArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGIONNAIRE_RULER_BOOTS = ITEMS.register("legionnaire_ruler_boots", () -> new LegionnaireRulerArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2602,29 +2594,29 @@ public class HnSItemRegistry {
 
     //Soul Legionnaire Ruler
 
-    public static final DeferredHolder<Item, Item> SOUL_LEGIONNAIRE_RULER_HELMET = ITEMS.register("soul_legionnaire_ruler_helmet", () -> new SoulLegionnaireRulerArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SOUL_LEGIONNAIRE_RULER_HELMET = ITEMS.register("soul_legionnaire_ruler_helmet", () -> new SoulLegionnaireRulerArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> SOUL_LEGIONNAIRE_RULER_CHESTPLATE = ITEMS.register("soul_legionnaire_ruler_chestplate", () -> new SoulLegionnaireRulerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SOUL_LEGIONNAIRE_RULER_CHESTPLATE = ITEMS.register("soul_legionnaire_ruler_chestplate", () -> new SoulLegionnaireRulerArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> SOUL_LEGIONNAIRE_RULER_LEGGINGS = ITEMS.register("soul_legionnaire_ruler_leggings", () -> new SoulLegionnaireRulerArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SOUL_LEGIONNAIRE_RULER_LEGGINGS = ITEMS.register("soul_legionnaire_ruler_leggings", () -> new SoulLegionnaireRulerArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> SOUL_LEGIONNAIRE_RULER_BOOTS = ITEMS.register("soul_legionnaire_ruler_boots", () -> new SoulLegionnaireRulerArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SOUL_LEGIONNAIRE_RULER_BOOTS = ITEMS.register("soul_legionnaire_ruler_boots", () -> new SoulLegionnaireRulerArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2633,29 +2625,29 @@ public class HnSItemRegistry {
 
     //Legionnaire Commander
 
-    public static final DeferredHolder<Item, Item> LEGIONNAIRE_COMMANDER_HELMET = ITEMS.register("legionnaire_commander_helmet", () -> new LegionnaireCommanderArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGIONNAIRE_COMMANDER_HELMET = ITEMS.register("legionnaire_commander_helmet", () -> new LegionnaireCommanderArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> LEGIONNAIRE_COMMANDER_CHESTPLATE = ITEMS.register("legionnaire_commander_chestplate", () -> new LegionnaireCommanderArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGIONNAIRE_COMMANDER_CHESTPLATE = ITEMS.register("legionnaire_commander_chestplate", () -> new LegionnaireCommanderArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> LEGIONNAIRE_COMMANDER_LEGGINGS = ITEMS.register("legionnaire_commander_leggings", () -> new LegionnaireCommanderArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGIONNAIRE_COMMANDER_LEGGINGS = ITEMS.register("legionnaire_commander_leggings", () -> new LegionnaireCommanderArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> LEGIONNAIRE_COMMANDER_BOOTS = ITEMS.register("legionnaire_commander_boots", () -> new LegionnaireCommanderArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGIONNAIRE_COMMANDER_BOOTS = ITEMS.register("legionnaire_commander_boots", () -> new LegionnaireCommanderArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2664,29 +2656,29 @@ public class HnSItemRegistry {
 
     //Tyros
 
-    public static final DeferredHolder<Item, Item> TYROS_HELMET = ITEMS.register("garments_of_the_first_flamebearer_helmet", () -> new GarmentsOfTheFirstFlamebearerArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> TYROS_HELMET = ITEMS.register("garments_of_the_first_flamebearer_helmet", () -> new GarmentsOfTheFirstFlamebearerArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(96))
     ));
 
-    public static final DeferredHolder<Item, Item> TYROS_CHESTPLATE = ITEMS.register("garments_of_the_first_flamebearer_chestplate", () -> new GarmentsOfTheFirstFlamebearerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> TYROS_CHESTPLATE = ITEMS.register("garments_of_the_first_flamebearer_chestplate", () -> new GarmentsOfTheFirstFlamebearerArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(96))
     ));
 
-    public static final DeferredHolder<Item, Item> TYROS_LEGGINGS = ITEMS.register("garments_of_the_first_flamebearer_leggings", () -> new GarmentsOfTheFirstFlamebearerArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> TYROS_LEGGINGS = ITEMS.register("garments_of_the_first_flamebearer_leggings", () -> new GarmentsOfTheFirstFlamebearerArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(96))
     ));
 
-    public static final DeferredHolder<Item, Item> TYROS_BOOTS = ITEMS.register("garments_of_the_first_flamebearer_boots", () -> new GarmentsOfTheFirstFlamebearerArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> TYROS_BOOTS = ITEMS.register("garments_of_the_first_flamebearer_boots", () -> new GarmentsOfTheFirstFlamebearerArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(96))
@@ -2696,26 +2688,26 @@ public class HnSItemRegistry {
 
     //Pyrium
 
-    public static final DeferredHolder<Item, Item> PYRIUM_HELMET = ITEMS.register("pyrium_helmet", () -> new PyriumArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> PYRIUM_HELMET = ITEMS.register("pyrium_helmet", () -> new PyriumArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> PYRIUM_CHESTPLATE = ITEMS.register("pyrium_chestplate", () -> new PyriumArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> PYRIUM_CHESTPLATE = ITEMS.register("pyrium_chestplate", () -> new PyriumArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> PYRIUM_LEGGINGS = ITEMS.register("pyrium_leggings", () -> new PyriumArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> PYRIUM_LEGGINGS = ITEMS.register("pyrium_leggings", () -> new PyriumArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> PYRIUM_BOOTS = ITEMS.register("pyrium_boots", () -> new PyriumArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> PYRIUM_BOOTS = ITEMS.register("pyrium_boots", () -> new PyriumArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2723,26 +2715,26 @@ public class HnSItemRegistry {
 
     //Pyrium Battlemage
 
-    public static final DeferredHolder<Item, Item> PYRIUM_BATTLEMAGE_HELMET = ITEMS.register("pyrium_battlemage_helmet", () -> new PyriumBattlemageArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> PYRIUM_BATTLEMAGE_HELMET = ITEMS.register("pyrium_battlemage_helmet", () -> new PyriumBattlemageArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> PYRIUM_BATTLEMAGE_CHESTPLATE = ITEMS.register("pyrium_battlemage_chestplate", () -> new PyriumBattlemageArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> PYRIUM_BATTLEMAGE_CHESTPLATE = ITEMS.register("pyrium_battlemage_chestplate", () -> new PyriumBattlemageArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> PYRIUM_BATTLEMAGE_LEGGINGS = ITEMS.register("pyrium_battlemage_leggings", () -> new PyriumBattlemageArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> PYRIUM_BATTLEMAGE_LEGGINGS = ITEMS.register("pyrium_battlemage_leggings", () -> new PyriumBattlemageArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> PYRIUM_BATTLEMAGE_BOOTS = ITEMS.register("pyrium_battlemage_boots", () -> new PyriumBattlemageArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> PYRIUM_BATTLEMAGE_BOOTS = ITEMS.register("pyrium_battlemage_boots", () -> new PyriumBattlemageArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(CinderousRarity.CINDEROUS_RARITY_PROXY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2756,110 +2748,110 @@ public class HnSItemRegistry {
 
     //Frieren
 
-    public static final DeferredHolder<Item, Item> FRIEREN_HELMET = ITEMS.register("frieren_helmet", () -> new FrierenArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FRIEREN_HELMET = ITEMS.register("frieren_helmet", () -> new FrierenArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.HELMET.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> FRIEREN_CHESTPLATE = ITEMS.register("frieren_chestplate", () -> new FrierenArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FRIEREN_CHESTPLATE = ITEMS.register("frieren_chestplate", () -> new FrierenArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> FRIEREN_LEGGINGS = ITEMS.register("frieren_leggings", () -> new FrierenArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FRIEREN_LEGGINGS = ITEMS.register("frieren_leggings", () -> new FrierenArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.LEGGINGS.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> FRIEREN_BOOTS = ITEMS.register("frieren_boots", () -> new FrierenArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FRIEREN_BOOTS = ITEMS.register("frieren_boots", () -> new FrierenArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.BOOTS.getDurability(37))
     ));
 
     //Miner
 
-    public static final DeferredHolder<Item, Item> MINER_HELMET = ITEMS.register("miner_helmet", () -> new MinerArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MINER_HELMET = ITEMS.register("miner_helmet", () -> new MinerArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.HELMET.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> MINER_CHESTPLATE = ITEMS.register("miner_chestplate", () -> new MinerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MINER_CHESTPLATE = ITEMS.register("miner_chestplate", () -> new MinerArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> MINER_LEGGINGS = ITEMS.register("miner_leggings", () -> new MinerArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MINER_LEGGINGS = ITEMS.register("miner_leggings", () -> new MinerArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.LEGGINGS.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> MINER_BOOTS = ITEMS.register("miner_boots", () -> new MinerArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MINER_BOOTS = ITEMS.register("miner_boots", () -> new MinerArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.BOOTS.getDurability(37))
     ));
 
     //Spectral Spelunker
 
-    public static final DeferredHolder<Item, Item> SPECTRAL_SPELUNKER_HELMET = ITEMS.register("spectral_spelunker_helmet", () -> new SpectralSpelunkerArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SPECTRAL_SPELUNKER_HELMET = ITEMS.register("spectral_spelunker_helmet", () -> new SpectralSpelunkerArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> SPECTRAL_SPELUNKER_CHESTPLATE = ITEMS.register("spectral_spelunker_chestplate", () -> new SpectralSpelunkerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SPECTRAL_SPELUNKER_CHESTPLATE = ITEMS.register("spectral_spelunker_chestplate", () -> new SpectralSpelunkerArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> SPECTRAL_SPELUNKER_LEGGINGS = ITEMS.register("spectral_spelunker_leggings", () -> new SpectralSpelunkerArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SPECTRAL_SPELUNKER_LEGGINGS = ITEMS.register("spectral_spelunker_leggings", () -> new SpectralSpelunkerArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> SPECTRAL_SPELUNKER_BOOTS = ITEMS.register("spectral_spelunker_boots", () -> new SpectralSpelunkerArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SPECTRAL_SPELUNKER_BOOTS = ITEMS.register("spectral_spelunker_boots", () -> new SpectralSpelunkerArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
     ));
 
     //Giorno Giovanna
 
-    public static final DeferredHolder<Item, Item> GIORNO_GIOVANNA_HELMET = ITEMS.register("giorno_giovanna_helmet", () -> new GiornoGiovannaArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GIORNO_GIOVANNA_HELMET = ITEMS.register("giorno_giovanna_helmet", () -> new GiornoGiovannaArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> GIORNO_GIOVANNA_CHESTPLATE = ITEMS.register("giorno_giovanna_chestplate", () -> new GiornoGiovannaArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GIORNO_GIOVANNA_CHESTPLATE = ITEMS.register("giorno_giovanna_chestplate", () -> new GiornoGiovannaArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> GIORNO_GIOVANNA_LEGGINGS = ITEMS.register("giorno_giovanna_leggings", () -> new GiornoGiovannaArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GIORNO_GIOVANNA_LEGGINGS = ITEMS.register("giorno_giovanna_leggings", () -> new GiornoGiovannaArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> GIORNO_GIOVANNA_BOOTS = ITEMS.register("giorno_giovanna_boots", () -> new GiornoGiovannaArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GIORNO_GIOVANNA_BOOTS = ITEMS.register("giorno_giovanna_boots", () -> new GiornoGiovannaArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(37))
     ));
 
     //Mithril Battlemage
 
-    public static final DeferredHolder<Item, Item> MITHRIL_BATTLEMAGE_HELMET = ITEMS.register("mithril_battlemage_helmet", () -> new MithrilBattlemageArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MITHRIL_BATTLEMAGE_HELMET = ITEMS.register("mithril_battlemage_helmet", () -> new MithrilBattlemageArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MITHRIL_BATTLEMAGE_CHESTPLATE = ITEMS.register("mithril_battlemage_chestplate", () -> new MithrilBattlemageArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MITHRIL_BATTLEMAGE_CHESTPLATE = ITEMS.register("mithril_battlemage_chestplate", () -> new MithrilBattlemageArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MITHRIL_BATTLEMAGE_LEGGINGS = ITEMS.register("mithril_battlemage_leggings", () -> new MithrilBattlemageArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MITHRIL_BATTLEMAGE_LEGGINGS = ITEMS.register("mithril_battlemage_leggings", () -> new MithrilBattlemageArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MITHRIL_BATTLEMAGE_BOOTS = ITEMS.register("mithril_battlemage_boots", () -> new MithrilBattlemageArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MITHRIL_BATTLEMAGE_BOOTS = ITEMS.register("mithril_battlemage_boots", () -> new MithrilBattlemageArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2868,26 +2860,26 @@ public class HnSItemRegistry {
 
     //Mage Hunter
 
-    public static final DeferredHolder<Item, Item> MAGEHUNTER_HELMET = ITEMS.register("magehunter_helmet", () -> new MageHunterArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MAGEHUNTER_HELMET = ITEMS.register("magehunter_helmet", () -> new MageHunterArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MAGEHUNTER_CHESTPLATE = ITEMS.register("magehunter_chestplate", () -> new MageHunterArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MAGEHUNTER_CHESTPLATE = ITEMS.register("magehunter_chestplate", () -> new MageHunterArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MAGEHUNTER_LEGGINGS = ITEMS.register("magehunter_leggings", () -> new MageHunterArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MAGEHUNTER_LEGGINGS = ITEMS.register("magehunter_leggings", () -> new MageHunterArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MAGEHUNTER_BOOTS = ITEMS.register("magehunter_boots", () -> new MageHunterArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MAGEHUNTER_BOOTS = ITEMS.register("magehunter_boots", () -> new MageHunterArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2900,44 +2892,44 @@ public class HnSItemRegistry {
 
     //Atlas
 
-    public static final DeferredHolder<Item, Item> ATLAS_HELMET = ITEMS.register("atlas_helmet", () -> new AtlasArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ATLAS_HELMET = ITEMS.register("atlas_helmet", () -> new AtlasArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.HELMET.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> ATLAS_CHESTPLATE = ITEMS.register("atlas_chestplate", () -> new AtlasArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ATLAS_CHESTPLATE = ITEMS.register("atlas_chestplate", () -> new AtlasArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> ATLAS_LEGGINGS = ITEMS.register("atlas_leggings", () -> new AtlasArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ATLAS_LEGGINGS = ITEMS.register("atlas_leggings", () -> new AtlasArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.LEGGINGS.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> ATLAS_BOOTS = ITEMS.register("atlas_boots", () -> new AtlasArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ATLAS_BOOTS = ITEMS.register("atlas_boots", () -> new AtlasArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.BOOTS.getDurability(37))
     ));
 
     //Maverick
 
-    public static final DeferredHolder<Item, Item> MAVERICK_HELMET = ITEMS.register("maverick_helmet", () -> new MaverickArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MAVERICK_HELMET = ITEMS.register("maverick_helmet", () -> new MaverickArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MAVERICK_CHESTPLATE = ITEMS.register("maverick_chestplate", () -> new MaverickArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MAVERICK_CHESTPLATE = ITEMS.register("maverick_chestplate", () -> new MaverickArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MAVERICK_LEGGINGS = ITEMS.register("maverick_leggings", () -> new MaverickArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MAVERICK_LEGGINGS = ITEMS.register("maverick_leggings", () -> new MaverickArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
     ));
-    public static final DeferredHolder<Item, Item> MAVERICK_BOOTS = ITEMS.register("maverick_boots", () -> new MaverickArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MAVERICK_BOOTS = ITEMS.register("maverick_boots", () -> new MaverickArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2945,28 +2937,28 @@ public class HnSItemRegistry {
 
     //Dark Ritual Templar
 
-    public static final DeferredHolder<Item, Item> DARK_RITUAL_TEMPLAR_HELMET = ITEMS.register("dark_ritual_templar_helmet", () -> new DarkRitualTemplarArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> DARK_RITUAL_TEMPLAR_HELMET = ITEMS.register("dark_ritual_templar_helmet", () -> new DarkRitualTemplarArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> DARK_RITUAL_TEMPLAR_CHESTPLATE = ITEMS.register("dark_ritual_templar_chestplate", () -> new DarkRitualTemplarArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> DARK_RITUAL_TEMPLAR_CHESTPLATE = ITEMS.register("dark_ritual_templar_chestplate", () -> new DarkRitualTemplarArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> DARK_RITUAL_TEMPLAR_LEGGINGS = ITEMS.register("dark_ritual_templar_leggings", () -> new DarkRitualTemplarArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> DARK_RITUAL_TEMPLAR_LEGGINGS = ITEMS.register("dark_ritual_templar_leggings", () -> new DarkRitualTemplarArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .fireResistant()
     ));
 
-    public static final DeferredHolder<Item, Item> DARK_RITUAL_TEMPLAR_BOOTS = ITEMS.register("dark_ritual_templar_boots", () -> new DarkRitualTemplarArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> DARK_RITUAL_TEMPLAR_BOOTS = ITEMS.register("dark_ritual_templar_boots", () -> new DarkRitualTemplarArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -2978,25 +2970,25 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_DARK_RITUAL_TEMPLAR_HELMET = ITEMS.register("geckolib_dark_ritual_templar_helmet", () -> new GeckolibDarkRitualTemplarArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_DARK_RITUAL_TEMPLAR_HELMET = ITEMS.register("geckolib_dark_ritual_templar_helmet", () -> new GeckolibDarkRitualTemplarArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_DARK_RITUAL_TEMPLAR_CHESTPLATE = ITEMS.register("geckolib_dark_ritual_templar_chestplate", () -> new GeckolibDarkRitualTemplarArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_DARK_RITUAL_TEMPLAR_CHESTPLATE = ITEMS.register("geckolib_dark_ritual_templar_chestplate", () -> new GeckolibDarkRitualTemplarArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_DARK_RITUAL_TEMPLAR_LEGGINGS = ITEMS.register("geckolib_dark_ritual_templar_leggings", () -> new GeckolibDarkRitualTemplarArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_DARK_RITUAL_TEMPLAR_LEGGINGS = ITEMS.register("geckolib_dark_ritual_templar_leggings", () -> new GeckolibDarkRitualTemplarArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .fireResistant()
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_DARK_RITUAL_TEMPLAR_BOOTS = ITEMS.register("geckolib_dark_ritual_templar_boots", () -> new GeckolibDarkRitualTemplarArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_DARK_RITUAL_TEMPLAR_BOOTS = ITEMS.register("geckolib_dark_ritual_templar_boots", () -> new GeckolibDarkRitualTemplarArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.ELDRITCH_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -3008,26 +3000,26 @@ public class HnSItemRegistry {
 
     // Gown
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_GOWN_HELMET = ITEMS.register("fireblossom_gown_helmet", () -> new FireblossomGownArmor(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_GOWN_HELMET = ITEMS.register("fireblossom_gown_helmet", () -> new FireblossomGownArmor(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(16))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_GOWN_CHESTPLATE = ITEMS.register("fireblossom_gown_chestplate", () -> new FireblossomGownArmor(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_GOWN_CHESTPLATE = ITEMS.register("fireblossom_gown_chestplate", () -> new FireblossomGownArmor(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(16))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_GOWN_LEGGINGS = ITEMS.register("fireblossom_gown_leggings", () -> new FireblossomGownArmor(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_GOWN_LEGGINGS = ITEMS.register("fireblossom_gown_leggings", () -> new FireblossomGownArmor(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .durability(ArmorItem.Type.LEGGINGS.getDurability(16))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_GOWN_BOOTS = ITEMS.register("fireblossom_gown_boots", () -> new FireblossomGownArmor(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_GOWN_BOOTS = ITEMS.register("fireblossom_gown_boots", () -> new FireblossomGownArmor(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(16))
     ));
@@ -3038,23 +3030,23 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_GOWN_HELMET = ITEMS.register("geckolib_fireblossom_gown_helmet", () -> new GeckoLibFireblossomGownArmor(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_GOWN_HELMET = ITEMS.register("geckolib_fireblossom_gown_helmet", () -> new GeckoLibFireblossomGownArmor(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(16))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_GOWN_CHESTPLATE = ITEMS.register("geckolib_fireblossom_gown_chestplate", () -> new GeckoLibFireblossomGownArmor(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_GOWN_CHESTPLATE = ITEMS.register("geckolib_fireblossom_gown_chestplate", () -> new GeckoLibFireblossomGownArmor(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(16))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_GOWN_LEGGINGS = ITEMS.register("geckolib_fireblossom_gown_leggings", () -> new GeckoLibFireblossomGownArmor(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_GOWN_LEGGINGS = ITEMS.register("geckolib_fireblossom_gown_leggings", () -> new GeckoLibFireblossomGownArmor(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .durability(ArmorItem.Type.LEGGINGS.getDurability(16))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_GOWN_BOOTS = ITEMS.register("geckolib_fireblossom_gown_boots", () -> new GeckoLibFireblossomGownArmor(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_GOWN_BOOTS = ITEMS.register("geckolib_fireblossom_gown_boots", () -> new GeckoLibFireblossomGownArmor(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(16))
 
@@ -3062,29 +3054,29 @@ public class HnSItemRegistry {
 
     // Fireblossom Knight
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_KNIGHT_HELMET = ITEMS.register("fireblossom_knight_helmet", () -> new FireblossomKnightArmor(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_KNIGHT_HELMET = ITEMS.register("fireblossom_knight_helmet", () -> new FireblossomKnightArmor(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(32))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_KNIGHT_CHESTPLATE = ITEMS.register("fireblossom_knight_chestplate", () -> new FireblossomKnightArmor(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_KNIGHT_CHESTPLATE = ITEMS.register("fireblossom_knight_chestplate", () -> new FireblossomKnightArmor(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_KNIGHT_LEGGINGS = ITEMS.register("fireblossom_knight_leggings", () -> new FireblossomKnightArmor(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_KNIGHT_LEGGINGS = ITEMS.register("fireblossom_knight_leggings", () -> new FireblossomKnightArmor(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_KNIGHT_BOOTS = ITEMS.register("fireblossom_knight_boots", () -> new FireblossomKnightArmor(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_KNIGHT_BOOTS = ITEMS.register("fireblossom_knight_boots", () -> new FireblossomKnightArmor(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(32))
@@ -3096,26 +3088,26 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_KNIGHT_HELMET = ITEMS.register("geckolib_fireblossom_knight_helmet", () -> new GeckoLibFireblossomKnightArmor(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_KNIGHT_HELMET = ITEMS.register("geckolib_fireblossom_knight_helmet", () -> new GeckoLibFireblossomKnightArmor(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_KNIGHT_CHESTPLATE = ITEMS.register("geckolib_fireblossom_knight_chestplate", () -> new GeckoLibFireblossomKnightArmor(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_KNIGHT_CHESTPLATE = ITEMS.register("geckolib_fireblossom_knight_chestplate", () -> new GeckoLibFireblossomKnightArmor(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_KNIGHT_LEGGINGS = ITEMS.register("geckolib_fireblossom_knight_leggings", () -> new GeckoLibFireblossomKnightArmor(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_KNIGHT_LEGGINGS = ITEMS.register("geckolib_fireblossom_knight_leggings", () -> new GeckoLibFireblossomKnightArmor(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(3216))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_KNIGHT_BOOTS = ITEMS.register("geckolib_fireblossom_knight_boots", () -> new GeckoLibFireblossomKnightArmor(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_KNIGHT_BOOTS = ITEMS.register("geckolib_fireblossom_knight_boots", () -> new GeckoLibFireblossomKnightArmor(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(32))
@@ -3124,29 +3116,29 @@ public class HnSItemRegistry {
 
     // Fireblossom Knight
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("fireblossom_battlemage_helmet", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("fireblossom_battlemage_helmet", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(32))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("fireblossom_battlemage_chestplate", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("fireblossom_battlemage_chestplate", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("fireblossom_battlemage_leggings", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("fireblossom_battlemage_leggings", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
     ));
 
-    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("fireblossom_battlemage_boots", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("fireblossom_battlemage_boots", () -> new FireblossomBattlemageArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(32))
@@ -3158,26 +3150,26 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("geckolib_fireblossom_battlemage_helmet", () -> new GeckoLibFireblossomBattlemageArmor(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("geckolib_fireblossom_battlemage_helmet", () -> new GeckoLibFireblossomBattlemageArmor(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("geckolib_fireblossom_battlemage_chestplate", () -> new GeckoLibFireblossomBattlemageArmor(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("geckolib_fireblossom_battlemage_chestplate", () -> new GeckoLibFireblossomBattlemageArmor(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("geckolib_fireblossom_battlemage_leggings", () -> new GeckoLibFireblossomBattlemageArmor(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("geckolib_fireblossom_battlemage_leggings", () -> new GeckoLibFireblossomBattlemageArmor(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(3216))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("geckolib_fireblossom_battlemage_boots", () -> new GeckoLibFireblossomBattlemageArmor(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("geckolib_fireblossom_battlemage_boots", () -> new GeckoLibFireblossomBattlemageArmor(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(32))
@@ -3186,36 +3178,36 @@ public class HnSItemRegistry {
 
     // Legacy
 
-    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_CROWN = ITEMS.register("legacy_fireblossom_crown", () -> new FireblossomBattlemageCrownedArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_CROWN = ITEMS.register("legacy_fireblossom_crown", () -> new FireblossomBattlemageCrownedArmorItemLegacy(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("legacy_fireblossom_helmet", () -> new FireblossomBattlemageHelmetArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("legacy_fireblossom_helmet", () -> new FireblossomBattlemageHelmetArmorItemLegacy(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("legacy_fireblossom_chestplate", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("legacy_fireblossom_chestplate", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("legacy_fireblossom_leggings", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("legacy_fireblossom_leggings", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("legacy_fireblossom_boots", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGACY_FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("legacy_fireblossom_boots", () -> new FireblossomBattlemageArmorItemLegacy(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -3227,31 +3219,31 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN = ITEMS.register("legacy_geckolib_fireblossom_crown", () -> new GeckolibFireblossomBattlemageCrownedArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CROWN = ITEMS.register("legacy_geckolib_fireblossom_crown", () -> new GeckolibFireblossomBattlemageCrownedArmorItemLegacy(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
     ));
-    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("legacy_geckolib_fireblossom_helmet", () -> new GeckolibFireblossomBattlemageHelmetArmorItemLegacy(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_HELMET = ITEMS.register("legacy_geckolib_fireblossom_helmet", () -> new GeckolibFireblossomBattlemageHelmetArmorItemLegacy(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("legacy_geckolib_fireblossom_chestplate", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_CHESTPLATE = ITEMS.register("legacy_geckolib_fireblossom_chestplate", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("legacy_geckolib_fireblossom_leggings", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_LEGGINGS = ITEMS.register("legacy_geckolib_fireblossom_leggings", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("legacy_geckolib_fireblossom_boots", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEGACY_GECKOLIB_FIREBLOSSOM_BATTLEMAGE_BOOTS = ITEMS.register("legacy_geckolib_fireblossom_boots", () -> new GeckolibFireblossomBattlemageArmorItemLegacy(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIREBLOSSOM_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -3260,29 +3252,29 @@ public class HnSItemRegistry {
 
     //SLC!Cat
 
-    public static final DeferredHolder<Item, Item> SLC_CAT_HELMET = ITEMS.register("slc_cat_helmet", () -> new SLCCatArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SLC_CAT_HELMET = ITEMS.register("slc_cat_helmet", () -> new SLCCatArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> SLC_CAT_CHESTPLATE = ITEMS.register("slc_cat_chestplate", () -> new SLCCatArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SLC_CAT_CHESTPLATE = ITEMS.register("slc_cat_chestplate", () -> new SLCCatArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> SLC_CAT_LEGGINGS = ITEMS.register("slc_cat_leggings", () -> new SLCCatArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SLC_CAT_LEGGINGS = ITEMS.register("slc_cat_leggings", () -> new SLCCatArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> SLC_CAT_BOOTS = ITEMS.register("slc_cat_boots", () -> new SLCCatArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SLC_CAT_BOOTS = ITEMS.register("slc_cat_boots", () -> new SLCCatArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -3290,29 +3282,29 @@ public class HnSItemRegistry {
 
     // Arbitrium Robe
 
-    public static final DeferredHolder<Item, Item> ARBITRIUM_ROBES_HELMET = ITEMS.register("arbitrium_robes_helmet", () -> new ArbitriumRobesArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ARBITRIUM_ROBES_HELMET = ITEMS.register("arbitrium_robes_helmet", () -> new ArbitriumRobesArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> ARBITRIUM_ROBES_CHESTPLATE = ITEMS.register("arbitrium_robes_chestplate", () -> new ArbitriumRobesArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ARBITRIUM_ROBES_CHESTPLATE = ITEMS.register("arbitrium_robes_chestplate", () -> new ArbitriumRobesArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> ARBITRIUM_ROBES_LEGGINGS = ITEMS.register("arbitrium_robes_leggings", () -> new ArbitriumRobesArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ARBITRIUM_ROBES_LEGGINGS = ITEMS.register("arbitrium_robes_leggings", () -> new ArbitriumRobesArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> ARBITRIUM_ROBES_BOOTS = ITEMS.register("arbitrium_robes_boots", () -> new ArbitriumRobesArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ARBITRIUM_ROBES_BOOTS = ITEMS.register("arbitrium_robes_boots", () -> new ArbitriumRobesArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(128))
@@ -3323,26 +3315,26 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_ARBITRIUM_ROBES_HELMET = ITEMS.register("geckolib_arbitrium_robes_helmet", () -> new GeckolibArbitriumRobesArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_ARBITRIUM_ROBES_HELMET = ITEMS.register("geckolib_arbitrium_robes_helmet", () -> new GeckolibArbitriumRobesArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ARBITRIUM_ROBES_CHESTPLATE = ITEMS.register("geckolib_arbitrium_robes_chestplate", () -> new GeckolibArbitriumRobesArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_ARBITRIUM_ROBES_CHESTPLATE = ITEMS.register("geckolib_arbitrium_robes_chestplate", () -> new GeckolibArbitriumRobesArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ARBITRIUM_ROBES_LEGGINGS = ITEMS.register("geckolib_arbitrium_robes_leggings", () -> new GeckolibArbitriumRobesArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_ARBITRIUM_ROBES_LEGGINGS = ITEMS.register("geckolib_arbitrium_robes_leggings", () -> new GeckolibArbitriumRobesArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ARBITRIUM_ROBES_BOOTS = ITEMS.register("geckolib_arbitrium_robes_boots", () -> new GeckolibArbitriumRobesArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_ARBITRIUM_ROBES_BOOTS = ITEMS.register("geckolib_arbitrium_robes_boots", () -> new GeckolibArbitriumRobesArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -3353,32 +3345,32 @@ public class HnSItemRegistry {
 
     //Hazel
 
-    public static final DeferredHolder<Item, Item> HAZEL_HELMET = ITEMS.register("hazel_helmet", () -> new HazelArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> HAZEL_HELMET = ITEMS.register("hazel_helmet", () -> new HazelArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> HAZEL_CHESTPLATE = ITEMS.register("hazel_chestplate", () -> new HazelArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> HAZEL_CHESTPLATE = ITEMS.register("hazel_chestplate", () -> new HazelArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> HAZEL_HOLY_MOLLY_CHESTPLATE = ITEMS.register("how_did_you_find_the_hazel_chestplate", () -> new HazelHOLYMOLYArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> HAZEL_HOLY_MOLLY_CHESTPLATE = ITEMS.register("how_did_you_find_the_hazel_chestplate", () -> new HazelHOLYMOLYArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> HAZEL_LEGGINGS = ITEMS.register("hazel_leggings", () -> new HazelArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> HAZEL_LEGGINGS = ITEMS.register("hazel_leggings", () -> new HazelArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> HAZEL_BOOTS = ITEMS.register("hazel_boots", () -> new HazelArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> HAZEL_BOOTS = ITEMS.register("hazel_boots", () -> new HazelArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.FIRE_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -3387,32 +3379,32 @@ public class HnSItemRegistry {
 
     //Mothic Witch
 
-    public static final DeferredHolder<Item, Item> MOTHIC_WITCH_HELMET = ITEMS.register("mothic_witch_helmet", () -> new MothicWitchArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MOTHIC_WITCH_HELMET = ITEMS.register("mothic_witch_helmet", () -> new MothicWitchArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MOTHIC_WITCH_CHESTPLATE = ITEMS.register("mothic_witch_chestplate", () -> new NerfedMothicWitchArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MOTHIC_WITCH_CHESTPLATE = ITEMS.register("mothic_witch_chestplate", () -> new NerfedMothicWitchArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MOTHIC_WITCH_SECRET_CHESTPLATE = ITEMS.register("how_did_you_find_the_mothic_witch_chestplate", () -> new MothicWitchArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MOTHIC_WITCH_SECRET_CHESTPLATE = ITEMS.register("how_did_you_find_the_mothic_witch_chestplate", () -> new MothicWitchArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MOTHIC_WITCH_LEGGINGS = ITEMS.register("mothic_witch_leggings", () -> new MothicWitchArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MOTHIC_WITCH_LEGGINGS = ITEMS.register("mothic_witch_leggings", () -> new MothicWitchArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> MOTHIC_WITCH_BOOTS = ITEMS.register("mothic_witch_boots", () -> new MothicWitchArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> MOTHIC_WITCH_BOOTS = ITEMS.register("mothic_witch_boots", () -> new MothicWitchArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.HOLY_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -3421,26 +3413,26 @@ public class HnSItemRegistry {
 
     //Iron431
 
-    public static final DeferredHolder<Item, Item> IRON431_HELMET = ITEMS.register("iron431_helmet", () -> new Iron431ArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> IRON431_HELMET = ITEMS.register("iron431_helmet", () -> new Iron431ArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> IRON431_CHESTPLATE = ITEMS.register("iron431_chestplate", () -> new Iron431ArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> IRON431_CHESTPLATE = ITEMS.register("iron431_chestplate", () -> new Iron431ArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> IRON431_LEGGINGS = ITEMS.register("iron431_leggings", () -> new Iron431ArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> IRON431_LEGGINGS = ITEMS.register("iron431_leggings", () -> new Iron431ArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> IRON431_BOOTS = ITEMS.register("iron431_boots", () -> new Iron431ArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> IRON431_BOOTS = ITEMS.register("iron431_boots", () -> new Iron431ArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -3449,26 +3441,26 @@ public class HnSItemRegistry {
 
     //Sacred Robes
 
-    public static final DeferredHolder<Item, Item> SACRED_ROBES_HELMET = ITEMS.register("sacred_robes_helmet", () -> new SacredRobesArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SACRED_ROBES_HELMET = ITEMS.register("sacred_robes_helmet", () -> new SacredRobesArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> SACRED_ROBES_CHESTPLATE = ITEMS.register("sacred_robes_chestplate", () -> new SacredRobesArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SACRED_ROBES_CHESTPLATE = ITEMS.register("sacred_robes_chestplate", () -> new SacredRobesArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> SACRED_ROBES_LEGGINGS = ITEMS.register("sacred_robes_leggings", () -> new SacredRobesArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SACRED_ROBES_LEGGINGS = ITEMS.register("sacred_robes_leggings", () -> new SacredRobesArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> SACRED_ROBES_BOOTS = ITEMS.register("sacred_robes_boots", () -> new SacredRobesArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> SACRED_ROBES_BOOTS = ITEMS.register("sacred_robes_boots", () -> new SacredRobesArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .fireResistant()
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -3477,29 +3469,29 @@ public class HnSItemRegistry {
 
     //Lemon God
 
-    public static final DeferredHolder<Item, Item> LEMON_GOD_HELMET = ITEMS.register("lemon_god_helmet", () -> new LemonGodArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEMON_GOD_HELMET = ITEMS.register("lemon_god_helmet", () -> new LemonGodArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> LEMON_GOD_CHESTPLATE = ITEMS.register("lemon_god_chestplate", () -> new LemonGodArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEMON_GOD_CHESTPLATE = ITEMS.register("lemon_god_chestplate", () -> new LemonGodArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> LEMON_GOD_LEGGINGS = ITEMS.register("lemon_god_leggings", () -> new LemonGodArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEMON_GOD_LEGGINGS = ITEMS.register("lemon_god_leggings", () -> new LemonGodArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
 
-    public static final DeferredHolder<Item, Item> LEMON_GOD_BOOTS = ITEMS.register("lemon_god_boots", () -> new LemonGodArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> LEMON_GOD_BOOTS = ITEMS.register("lemon_god_boots", () -> new LemonGodArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -3511,26 +3503,26 @@ public class HnSItemRegistry {
 
 
 
-    public static final DeferredHolder<Item, Item> GECKOLIB_LEMON_GOD_HELMET = ITEMS.register("geckolib_lemon_god_helmet", () -> new GeckolibLemonGodArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_LEMON_GOD_HELMET = ITEMS.register("geckolib_lemon_god_helmet", () -> new GeckolibLemonGodArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_LEMON_GOD_CHESTPLATE = ITEMS.register("geckolib_lemon_god_chestplate", () -> new GeckolibLemonGodArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_LEMON_GOD_CHESTPLATE = ITEMS.register("geckolib_lemon_god_chestplate", () -> new GeckolibLemonGodArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_LEMON_GOD_LEGGINGS = ITEMS.register("geckolib_lemon_god_leggings", () -> new GeckolibLemonGodArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_LEMON_GOD_LEGGINGS = ITEMS.register("geckolib_lemon_god_leggings", () -> new GeckolibLemonGodArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_LEMON_GOD_BOOTS = ITEMS.register("geckolib_lemon_god_boots", () -> new GeckolibLemonGodArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> GECKOLIB_LEMON_GOD_BOOTS = ITEMS.register("geckolib_lemon_god_boots", () -> new GeckolibLemonGodArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .rarity(HLRarities.DEUS_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
@@ -3543,90 +3535,90 @@ public class HnSItemRegistry {
 
     //Shadowwalker Enderman
 
-    public static final DeferredHolder<Item, Item> ENDERMAN_BLINDFOLD = ITEMS.register("shadowwalker_enderman_blindfold", () -> new ShadowwalkerEndermanBlindfoldItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ENDERMAN_BLINDFOLD = ITEMS.register("shadowwalker_enderman_blindfold", () -> new ShadowwalkerEndermanBlindfoldItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.HELMET.getDurability(37))
     ));
 
-    public static final DeferredHolder<Item, Item> ENDERMAN_HOOD = ITEMS.register("shadowwalker_enderman_hood", () -> new ShadowwalkerEndermanHoodItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ENDERMAN_HOOD = ITEMS.register("shadowwalker_enderman_hood", () -> new ShadowwalkerEndermanHoodItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.HELMET.getDurability(37))
     ));
 
-    public static final DeferredHolder<Item, Item> ENDERMAN_MASKED = ITEMS.register("shadowwalker_enderman_masked", () -> new ShadowwalkerEndermanArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ENDERMAN_MASKED = ITEMS.register("shadowwalker_enderman_masked", () -> new ShadowwalkerEndermanArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.HELMET.getDurability(37))
     ));
 
-    public static final DeferredHolder<Item, Item> ENDERMAN_CHESTPLATE = ITEMS.register("shadowwalker_enderman_chestplate", () -> new ShadowwalkerEndermanArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ENDERMAN_CHESTPLATE = ITEMS.register("shadowwalker_enderman_chestplate", () -> new ShadowwalkerEndermanArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> ENDERMAN_LEGGINGS = ITEMS.register("shadowwalker_enderman_leggings", () -> new ShadowwalkerEndermanArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ENDERMAN_LEGGINGS = ITEMS.register("shadowwalker_enderman_leggings", () -> new ShadowwalkerEndermanArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.LEGGINGS.getDurability(37))
     ));
-    public static final DeferredHolder<Item, Item> ENDERMAN_BOOTS = ITEMS.register("shadowwalker_enderman_boots", () -> new ShadowwalkerEndermanArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> ENDERMAN_BOOTS = ITEMS.register("shadowwalker_enderman_boots", () -> new ShadowwalkerEndermanArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.BOOTS.getDurability(37))
     ));
 
     //Pyromancer Brute
 
-    public static final DeferredHolder<Item, Item> PYROMANCER_BRUTE_HELMET = ITEMS.register("pyromancer_brute_helmet", () -> new PyromancerBruteArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> PYROMANCER_BRUTE_HELMET = ITEMS.register("pyromancer_brute_helmet", () -> new PyromancerBruteArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.HELMET.getDurability(37))
     ));
 
-    public static final DeferredHolder<Item, Item> PYROMANCER_BRUTE_CHESTPLATE = ITEMS.register("pyromancer_brute_chestplate", () -> new PyromancerBruteArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> PYROMANCER_BRUTE_CHESTPLATE = ITEMS.register("pyromancer_brute_chestplate", () -> new PyromancerBruteArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .rarity(Rarity.EPIC)
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))
     ));
 
     //Bishop of Deceit
 
-    public static final DeferredHolder<Item, Item> BISHOP_OF_DECEIT_HELMET = ITEMS.register("bishop_of_deceit_helmet", () -> new BishopOfDeceitArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> BISHOP_OF_DECEIT_HELMET = ITEMS.register("bishop_of_deceit_helmet", () -> new BishopOfDeceitArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.HELMET.getDurability(37))
     ));
 
-    public static final DeferredHolder<Item, Item> BISHOP_OF_DECEIT_CHESTPLATE = ITEMS.register("bishop_of_deceit_chestplate", () -> new BishopOfDeceitArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> BISHOP_OF_DECEIT_CHESTPLATE = ITEMS.register("bishop_of_deceit_chestplate", () -> new BishopOfDeceitArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))
     ));
 
     //Necromancer
 
-    public static final DeferredHolder<Item, Item> NECROMANCER_HELMET = ITEMS.register("necromancer_helmet", () -> new NecromancerArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> NECROMANCER_HELMET = ITEMS.register("necromancer_helmet", () -> new NecromancerArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.HELMET.getDurability(37))
     ));
 
-    public static final DeferredHolder<Item, Item> NECROMANCER_CHESTPLATE = ITEMS.register("necromancer_chestplate", () -> new NecromancerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> NECROMANCER_CHESTPLATE = ITEMS.register("necromancer_chestplate", () -> new NecromancerArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))
     ));
 
-    public static final DeferredHolder<Item, Item> NECROMANCER_LEGGINGS = ITEMS.register("necromancer_leggings", () -> new NecromancerArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> NECROMANCER_LEGGINGS = ITEMS.register("necromancer_leggings", () -> new NecromancerArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.LEGGINGS.getDurability(37))
     ));
 
     //Nameless One
 
-    public static final DeferredHolder<Item, Item> NAMELESS_ONE_HELMET = ITEMS.register("nameless_one_helmet", () -> new NamelessOneArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> NAMELESS_ONE_HELMET = ITEMS.register("nameless_one_helmet", () -> new NamelessOneArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.HELMET.getDurability(37))
     ));
 
-    public static final DeferredHolder<Item, Item> NAMELESS_ONE_CHESTPLATE = ITEMS.register("nameless_one_chestplate", () -> new NamelessOneArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> NAMELESS_ONE_CHESTPLATE = ITEMS.register("nameless_one_chestplate", () -> new NamelessOneArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))
     ));
 
-    public static final DeferredHolder<Item, Item> NAMELESS_ONE_LEGGINGS = ITEMS.register("nameless_one_leggings", () -> new NamelessOneArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
-            .equipment(1)
+    public static final DeferredHolder<Item, Item> NAMELESS_ONE_LEGGINGS = ITEMS.register("nameless_one_leggings", () -> new NamelessOneArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .stacksTo(1)
             .durability(ArmorItem.Type.LEGGINGS.getDurability(37))
     ));
 

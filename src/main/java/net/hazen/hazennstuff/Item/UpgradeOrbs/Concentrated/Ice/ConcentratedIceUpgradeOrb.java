@@ -2,11 +2,11 @@ package net.hazen.hazennstuff.Item.UpgradeOrbs.Concentrated.Ice;
 
 import io.redspace.ironsspellbooks.item.UpgradeOrbItem;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 
 import net.hazen.hazennstuff.Registries.HnSUpgradeOrbTypeRegistry;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.world.item.Item;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -19,11 +19,9 @@ public class ConcentratedIceUpgradeOrb extends UpgradeOrbItem implements GeoItem
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public ConcentratedIceUpgradeOrb() {
-        super(
-                ItemPropertiesHelper
-                        .material()
-                        .rarity(HLRarities.ICE_RARITY.getValue())
-                        .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.ENHANCED_ICE)
+        super(new Item.Properties()
+                .rarity(HLRarities.ICE_RARITY.getValue())
+                .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.ENHANCED_ICE)
         );
     }
 

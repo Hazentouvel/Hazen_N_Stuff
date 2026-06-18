@@ -2,11 +2,12 @@ package net.hazen.hazennstuff.Item.UpgradeOrbs.Concentrated.Fire;
 
 import io.redspace.ironsspellbooks.item.UpgradeOrbItem;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 
 import net.hazen.hazennstuff.Registries.HnSUpgradeOrbTypeRegistry;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -19,9 +20,8 @@ public class ConcentratedFireUpgradeOrb extends UpgradeOrbItem implements GeoIte
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public ConcentratedFireUpgradeOrb() {
-        super(
-                ItemPropertiesHelper
-                        .material()
+        super(new Item.Properties()
+                        .rarity(Rarity.UNCOMMON)
                         .rarity(HLRarities.FIRE_RARITY.getValue())
                         .component(ComponentRegistry.UPGRADE_ORB_TYPE, HnSUpgradeOrbTypeRegistry.ENHANCED_FIRE)
         );

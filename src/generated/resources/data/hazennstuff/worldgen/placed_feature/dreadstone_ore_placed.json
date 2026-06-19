@@ -2,8 +2,8 @@
   "feature": "hazennstuff:dreadstone_ore",
   "placement": [
     {
-      "type": "minecraft:rarity_filter",
-      "chance": 12
+      "type": "minecraft:count",
+      "count": 9
     },
     {
       "type": "minecraft:in_square"

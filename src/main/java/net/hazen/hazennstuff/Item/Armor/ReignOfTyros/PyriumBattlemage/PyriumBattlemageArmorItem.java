@@ -30,7 +30,6 @@ public class PyriumBattlemageArmorItem extends ImbuableGeckolibHnSArmorItem impl
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(ASAttributeRegistry.MANA_STEAL, .1, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(ALObjects.Attributes.FIRE_DAMAGE, 2, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE)
         );
     }

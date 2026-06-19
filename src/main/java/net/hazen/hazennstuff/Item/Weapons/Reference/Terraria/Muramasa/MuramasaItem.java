@@ -3,6 +3,7 @@ package net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Muramasa;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
@@ -18,7 +19,7 @@ public class MuramasaItem extends ExtendedSwordItem implements GeoItem {
     public MuramasaItem() {
         super(
                 HnSExtendedWeaponsTiers.MURAMASA,
-                          new Item
+                new Item
                         .Properties()
                         .stacksTo(1)
                         .fireResistant()

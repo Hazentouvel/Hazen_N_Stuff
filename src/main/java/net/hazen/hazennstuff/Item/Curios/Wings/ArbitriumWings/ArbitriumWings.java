@@ -2,6 +2,7 @@ package net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings;
 
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
+import com.illusivesoulworks.caelus.api.CaelusApi;
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSDispatcher;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
@@ -13,6 +14,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import org.jetbrains.annotations.NotNull;
@@ -25,8 +27,7 @@ public class ArbitriumWings extends CurioBaseItem {
 
 
     public ArbitriumWings() {
-        super(ItemPropertiesHelper
-                .equipment()
+        super(new Item.Properties()
                 .stacksTo(1)
                 .fireResistant()
                 .rarity(HLRarities.DEUS_RARITY.getValue())
@@ -52,7 +53,7 @@ public class ArbitriumWings extends CurioBaseItem {
     @Override
     public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {
         Multimap<Holder<Attribute>, AttributeModifier> attr = LinkedHashMultimap.create();
-        attr.put(ALObjects.Attributes.ELYTRA_FLIGHT, new AttributeModifier(id, 1f, AttributeModifier.Operation.ADD_VALUE));
+        CaelusApi.getInstance().getFallFlyingAttribute();
         return attr;
     }
 

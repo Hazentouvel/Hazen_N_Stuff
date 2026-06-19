@@ -221,40 +221,40 @@ dependencies {
     localRuntime "curse.maven:atlas_api-1145462:6880789"
 
     //Cataclysm Spellbooks
-    localRuntime "curse.maven:cataclysm_spellbooks-1099461:7358841"
-    compileOnly "curse.maven:cataclysm_spellbooks-1099461:7358841"
-    localRuntime "curse.maven:l_enders_cataclysm-551586:6906997"
-    compileOnly "curse.maven:l_enders_cataclysm-551586:6906997"
-    localRuntime "curse.maven:lionfish-1001614:6168249"
-    compileOnly "curse.maven:lionfish-1001614:6168249"
+    //localRuntime "curse.maven:cataclysm_spellbooks-1099461:7358841"
+    //compileOnly "curse.maven:cataclysm_spellbooks-1099461:7358841"
+    //localRuntime "curse.maven:l_enders_cataclysm-551586:6906997"
+    //compileOnly "curse.maven:l_enders_cataclysm-551586:6906997"
+    //localRuntime "curse.maven:lionfish-1001614:6168249"
+    //compileOnly "curse.maven:lionfish-1001614:6168249"
 
     //SnackPirate's Aeromancy Additions
     //localRuntime "curse.maven:snackpirates_aeromancy_additions-1160104:6781033"
     //compileOnly "curse.maven:snackpirates_aeromancy_additions-1160104:6781033"
-    localRuntime "curse.maven:expandability-465066:5428824"
-    compileOnly "curse.maven:expandability-465066:5428824"
+    //localRuntime "curse.maven:expandability-465066:5428824"
+    //compileOnly "curse.maven:expandability-465066:5428824"
 
     //Magic From The East
-    localRuntime "curse.maven:magic_from_the_east-1224162:6864551"
-    compileOnly "curse.maven:magic_from_the_east-1224162:6864551"
+    //localRuntime "curse.maven:magic_from_the_east-1224162:6864551"
+    //compileOnly "curse.maven:magic_from_the_east-1224162:6864551"
 
     //Familiar Lib
     localRuntime "curse.maven:familiar_lib-1316458:7920235"
     compileOnly "curse.maven:familiar_lib-1316458:7920235"
 
     // Tunes 'n Tomes
-    localRuntime "curse.maven:tunes_n_tomes-1509193:7920232"
-    compileOnly "curse.maven:tunes_n_tomes-1509193:7920232"
+    //localRuntime "curse.maven:tunes_n_tomes-1509193:7920232"
+    //compileOnly "curse.maven:tunes_n_tomes-1509193:7920232"
 
     //Ender's Spells and Stuff
-    localRuntime "curse.maven:enders_spells_and_stuff-1336977:7466777"
-    compileOnly "curse.maven:enders_spells_and_stuff-1336977:7466777"
+    //localRuntime "curse.maven:enders_spells_and_stuff-1336977:7466777"
+    //compileOnly "curse.maven:enders_spells_and_stuff-1336977:7466777"
     localRuntime "curse.maven:gtbcs-spelllib-1194714:7385455"
     compileOnly "curse.maven:gtbcs-spelllib-1194714:7385455"
 
     //Discerning the Eldritch
-    localRuntime "curse.maven:discerning_the_eldritch-1143065:7469786"
-    compileOnly "curse.maven:discerning_the_eldritch-1143065:7469786"
+    //localRuntime "curse.maven:discerning_the_eldritch-1143065:7469786"
+    //compileOnly "curse.maven:discerning_the_eldritch-1143065:7469786"
 
 }
 

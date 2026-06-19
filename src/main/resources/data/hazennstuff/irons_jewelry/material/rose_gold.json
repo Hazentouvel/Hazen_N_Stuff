@@ -3,10 +3,6 @@
   "ingredient": {
     "tag": "c:ingots/rose_gold"
   },
-  "materialType": [
-    "metal",
-    "gold"
-  ],
   "paletteLocation": "hazennstuff:palettes/rose_gold",
   "quality": 3,
   "bonusParameters": {

@@ -3,9 +3,6 @@
   "ingredient": {
     "item": "hazennstuff:volt_core"
   },
-  "materialType": [
-    "gem"
-  ],
   "paletteLocation": "hazennstuff:palettes/volt_core",
   "quality": 1,
   "bonusParameters": {

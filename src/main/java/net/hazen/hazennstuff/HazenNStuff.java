@@ -38,7 +38,6 @@ import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.Energ
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbookRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioItemRenderer;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWingsCurioRenderer;
-import net.hazen.hazennstuff.Item.Curios.Wings.WingCurioItem;
 import net.hazen.hazennstuff.Item.Staves.Generic.CeaselessVoid.CeaselessVoidRenderer;
 import net.hazen.hazennstuff.Item.Staves.Generic.InsaniaAeternus.InsaniaAeternusRenderer;
 import net.hazen.hazennstuff.Item.Staves.Special.SoulcallingScepter.SoulcallingScepterRenderer;
@@ -48,7 +47,8 @@ import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Volcano.VolcanoRend
 import net.hazen.hazennstuff.Registries.*;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.hazen.hazentouvelib.Items.Curios.GenericCurioRenderer;
-import net.hazen.hazentouvelib.Items.Curios.WingCurioRenderer;
+import net.hazen.hazentouvelib.Items.Curios.Wings.WingCurioItem;
+import net.hazen.hazentouvelib.Items.Curios.Wings.WingCurioRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;

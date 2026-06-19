@@ -3,14 +3,11 @@
   "ingredient": {
     "item": "hazennstuff:archery_rune"
   },
-  "materialType": [
-    "spellbooks_rune"
-  ],
   "paletteLocation": "hazennstuff:palettes/rune_archery",
   "quality": 1.5,
   "bonusParameters": {
     "irons_jewelry:attribute": {
-      "attribute": "apothic_attributes:draw_speed",
+      "attribute": "irons_lib:arrow_damage",
       "amount": 0.75,
       "operation": "add_multiplied_total"
     }

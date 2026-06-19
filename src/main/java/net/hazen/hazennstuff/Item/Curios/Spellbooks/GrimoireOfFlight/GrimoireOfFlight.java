@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Item.Curios.Spellbooks.GrimoireOfFlight;
 
+import com.illusivesoulworks.caelus.api.CaelusApi;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.SpellBook;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
@@ -15,7 +16,7 @@ public class GrimoireOfFlight extends SpellBook {
     public GrimoireOfFlight() {
         super(10);
         this.withSpellbookAttributes(new AttributeContainer[]{
-                new AttributeContainer(ALObjects.Attributes.ELYTRA_FLIGHT, 1, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(CaelusApi.getInstance().getFallFlyingAttribute(), 1, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, (double)200.0F, AttributeModifier.Operation.ADD_VALUE)
 

@@ -3,9 +3,6 @@
   "ingredient": {
     "item": "hazennstuff:eldritch_rune"
   },
-  "materialType": [
-    "spellbooks_rune"
-  ],
   "paletteLocation": "hazennstuff:palettes/rune_eldritch",
   "quality": 1.5,
   "bonusParameters": {

@@ -1,6 +1,6 @@
 {
   "amount": 0.05,
-  "attribute": "apothic_attributes:draw_speed",
+  "attribute": "irons_lib:arrow_damage",
   "containerItem": {
     "count": 1,
     "id": "hazennstuff:archery_upgrade_orb"

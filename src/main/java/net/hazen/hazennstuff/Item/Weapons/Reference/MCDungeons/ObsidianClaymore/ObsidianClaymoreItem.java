@@ -7,6 +7,7 @@ import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.world.item.Item;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -21,7 +22,7 @@ public class ObsidianClaymoreItem extends MagicSwordItem implements GeoItem {
     public ObsidianClaymoreItem() {
         super(
                 HnSExtendedWeaponsTiers.OBSIDIAN_CLAYMORE,
-                          new Item
+                new Item
                         .Properties()
                         .stacksTo(1)
                         .fireResistant()

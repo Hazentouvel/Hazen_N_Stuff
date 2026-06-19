@@ -3,14 +3,11 @@
   "ingredient": {
     "item": "irons_spellbooks:permafrost_shard"
   },
-  "materialType": [
-    "gem"
-  ],
   "paletteLocation": "hazennstuff:palettes/permafrost_shard",
   "quality": 1,
   "bonusParameters": {
     "irons_jewelry:attribute": {
-      "attribute": "apothic_attributes:cold_damage",
+      "attribute": "irons_lib:crit_damage",
       "amount": 1.5,
       "operation": "add_value"
     },

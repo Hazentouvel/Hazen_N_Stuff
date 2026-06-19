@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Registries;
 
+import io.redspace.ironslib.registry.IronsLibRegistries;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.hazen.hazennstuff.HazenNStuff;
@@ -36,7 +37,7 @@ public class HnSEffects {
                     .addAttributeModifier(Attributes.ATTACK_SPEED,
                             ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "tyrants_grace"), 1.0f,
                             AttributeModifier.Operation.ADD_VALUE)
-                    .addAttributeModifier(ALObjects.Attributes.ARROW_DAMAGE,
+                    .addAttributeModifier(IronsLibRegistries.AttributeRegistry.ARROW_DAMAGE,
                             ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "tyrants_grace"), 1.0f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
@@ -57,9 +58,6 @@ public class HnSEffects {
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
                     .addAttributeModifier(Attributes.ARMOR_TOUGHNESS,
                             ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "fireblossom_warrior"), 2f,
-                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                    .addAttributeModifier(ALObjects.Attributes.PROT_SHRED,
-                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "fireblossom_warrior"), 0.15f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
     public static final Holder<MobEffect> MAGE_SET_BONUS = MOB_EFFECTS.register("mage_set_bonus",
@@ -77,9 +75,6 @@ public class HnSEffects {
                     .addAttributeModifier(Attributes.ATTACK_SPEED,
                             ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "swordmaster_set_bonus"), 0.15f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                    .addAttributeModifier(ALObjects.Attributes.PROT_SHRED,
-                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "swordmaster_set_bonus"), 0.1f,
-                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
 
     public static final Holder<MobEffect> ARCHER_SET_BONUS = MOB_EFFECTS.register("archer_set_bonus",
@@ -87,10 +82,7 @@ public class HnSEffects {
                     .addAttributeModifier(Attributes.MOVEMENT_SPEED,
                             ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "archer_set_bonus"), 0.15f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                    .addAttributeModifier(ALObjects.Attributes.ARROW_DAMAGE,
-                            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "archer_set_bonus"), 0.1f,
-                            AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                    .addAttributeModifier(ALObjects.Attributes.ARROW_VELOCITY,
+                    .addAttributeModifier(IronsLibRegistries.AttributeRegistry.ARROW_DAMAGE,
                             ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "archer_set_bonus"), 0.1f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
     );
@@ -110,20 +102,15 @@ public class HnSEffects {
                     HazenNStuff.id("flame_kissed"),
                     FlameKissedEffect.FIRE_SPELL_POWER_PER_LEVEL,
                     AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
-
-            .addAttributeModifier(ALObjects.Attributes.FIRE_DAMAGE,
-                    HazenNStuff.id("flame_kissed"),
-                    FlameKissedEffect.FIRE_DAMAGE_PER_LEVEL,
-                    AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
     public static final DeferredHolder<MobEffect, MobEffect> HARMONIZED = MOB_EFFECTS.register("harmonized", () -> new HarmonizedEffect(MobEffectCategory.BENEFICIAL, 3311322)
-            .addAttributeModifier(ALObjects.Attributes.CRIT_DAMAGE,
+            .addAttributeModifier(IronsLibRegistries.AttributeRegistry.CRIT_DAMAGE,
                     HazenNStuff.id("harmonized"),
                     HarmonizedEffect.CRIT_PER_LEVEL,
                     AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
 
-            .addAttributeModifier(ALObjects.Attributes.CRIT_DAMAGE,
+            .addAttributeModifier(IronsLibRegistries.AttributeRegistry.CRIT_DAMAGE,
                     HazenNStuff.id("harmonized"),
                     HarmonizedEffect.CRIT_PER_LEVEL,
                     AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
@@ -152,12 +139,7 @@ public class HnSEffects {
                     DryadsBlessingEffect.ARMOR_PER_LEVEL,
                     AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
 
-            .addAttributeModifier(ALObjects.Attributes.OVERHEAL,
-                    HazenNStuff.id("dryads_blessing"),
-                    DryadsBlessingEffect.OVERHEAL_PER_LEVEL,
-                    AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
-
-            .addAttributeModifier(ALObjects.Attributes.HEALING_RECEIVED,
+            .addAttributeModifier(IronsLibRegistries.AttributeRegistry.HEALING_RECEIVED,
                     HazenNStuff.id("dryads_blessing"),
                     DryadsBlessingEffect.HEALING_RECIEVED_PER_LEVEL,
                     AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)

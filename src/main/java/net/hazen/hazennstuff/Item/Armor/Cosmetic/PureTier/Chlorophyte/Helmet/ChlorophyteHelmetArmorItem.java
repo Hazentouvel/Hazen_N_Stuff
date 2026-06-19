@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Chlorophyte.Helmet;
 
+import io.redspace.ironslib.registry.IronsLibRegistries;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
@@ -33,8 +34,8 @@ public class ChlorophyteHelmetArmorItem extends ImbuableGeckolibHnSArmorItem imp
     public ChlorophyteHelmetArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
         super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,
-                new AttributeContainer(ALObjects.Attributes.ARROW_DAMAGE, 1.0, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(ALObjects.Attributes.ARROW_VELOCITY, 1.0, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+                new AttributeContainer(IronsLibRegistries.AttributeRegistry.ARROW_DAMAGE, 1.0, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(IronsLibRegistries.AttributeRegistry.CRIT_DAMAGE, 1.0, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
     }

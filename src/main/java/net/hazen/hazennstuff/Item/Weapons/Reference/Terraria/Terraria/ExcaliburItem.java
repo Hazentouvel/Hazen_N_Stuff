@@ -9,6 +9,7 @@ import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import org.jetbrains.annotations.NotNull;
@@ -27,7 +28,7 @@ public class ExcaliburItem extends MagicSwordItem implements GeoItem {
     public ExcaliburItem() {
         super(
                 HnSExtendedWeaponsTiers.EXCALIBUR,
-                          new Item
+                new Item
                         .Properties()
                         .stacksTo(1)
                         .fireResistant()

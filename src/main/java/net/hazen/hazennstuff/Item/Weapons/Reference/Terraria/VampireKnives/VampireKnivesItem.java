@@ -20,6 +20,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
@@ -44,7 +45,7 @@ public class VampireKnivesItem extends MagicSwordItem implements GeoItem {
     public VampireKnivesItem() {
         super(
                 HnSExtendedWeaponsTiers.VAMPIRE_KNIVES,
-                          new Item
+                new Item
                         .Properties()
                         .stacksTo(1)
                         .fireResistant()

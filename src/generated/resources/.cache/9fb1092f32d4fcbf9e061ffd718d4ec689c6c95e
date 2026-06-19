@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-06T15:17:24.3146439	Recipes
+// 1.21.1	2026-06-18T22:36:09.9723487	Recipes
 cd3eb4cd868f11a3c30e74ae13a4fccac5cb83dd data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_boots.json
 92bd0e35e8f7b7c6d0bb8f93326ff2e126cd8d36 data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_chestplate.json
 96a36bfd7dfb8a042b3c6c3c7d9513c8139abc06 data/hazennstuff/advancement/recipes/combat/crafting/armor/alchemist_supreme/alchemist_supreme_helmet.json
@@ -118,7 +118,7 @@ de5db6e8b6da4c2b2e507ffd315e5334166bdb69 data/hazennstuff/advancement/recipes/co
 ce8dd8794af4edd91d6cf20c09c705ad8b6f7c23 data/hazennstuff/advancement/recipes/combat/smithing/armor/abberant_predator/abberant_predator_leggings.json
 7c5c5c66471a247552a41c9001f4a819a0084f53 data/hazennstuff/advancement/recipes/combat/smithing/armor/arbitrium_robes/arbitrium_robes_boots.json
 0aa3f116e392848631c0d38f9dd9f4d1f44cd806 data/hazennstuff/advancement/recipes/combat/smithing/armor/arbitrium_robes/arbitrium_robes_chestplate.json
-aa57991952651a30e104eaec4d0da04dd9b05962 data/hazennstuff/advancement/recipes/combat/smithing/armor/arbitrium_robes/arbitrium_robes_helmet.json
+9b9ac36e663637be63c293ea9158f81d1b052ecb data/hazennstuff/advancement/recipes/combat/smithing/armor/arbitrium_robes/arbitrium_robes_helmet.json
 cf26a173ec0e132e7cf64b8cb4b4d09300ecde80 data/hazennstuff/advancement/recipes/combat/smithing/armor/arbitrium_robes/arbitrium_robes_leggings.json
 3ac95f2c5f1bad2cbc2dc7ae6093864e0c8ff7c9 data/hazennstuff/advancement/recipes/combat/smithing/armor/bounty_hunter/bounty_hunter_boots.json
 448b598aef9269c404351646e9bcbf94a3d83e2e data/hazennstuff/advancement/recipes/combat/smithing/armor/bounty_hunter/bounty_hunter_chestplate.json
@@ -531,7 +531,7 @@ c02b504a220bdea66f14360694cadebff4e4b5ac data/hazennstuff/recipe/smithing/armor/
 cc9a46b6de5f89c1f45d2ff2e61bfe67b2c0b828 data/hazennstuff/recipe/smithing/armor/the_wither/the_wither_helmet.json
 e04d99188e6cc1a2d8a131d392028b99cfea2063 data/hazennstuff/recipe/smithing/armor/the_wither/the_wither_leggings.json
 98dd24f61a0fbeeb27866f99002f14f1445219a0 data/hazennstuff/recipe/smithing/tools/iss_to_terraria.json
-04ee1e8c8da1502bcd50e559d6e5cc8b4cd9d2b3 data/hazennstuff/recipe/smithing/tools/spectral_pickaxe.json
+caf93f7946e1049f14f77525007447c592cd45d9 data/hazennstuff/recipe/smithing/tools/spectral_pickaxe.json
 5d72858348718a311215cb9c5005e04c4c4fab54 data/hazennstuff/recipe/smithing/tools/terraria_to_iss.json
 a0c1d5cd8f8bdef4983f2378068d89391c44da9e data/hazennstuff/recipe/smithing/weapons/divine_greatsword.json
 4591b4de6e305045ec4fbc4ce98e2cbbf54bbda5 data/hazennstuff/recipe/smithing/weapons/iss_to_terraria.json

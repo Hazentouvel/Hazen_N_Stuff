@@ -1297,17 +1297,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.MOTHIC_WITCH_SECRET_CHESTPLATE.get())
         ;
 
-        tag(ModTags.INSCRIBED_RUNES)
-                .add(HnSItemRegistry.MELEE_RUNE.get())
-                .add(HnSItemRegistry.ARCHERY_RUNE.get())
-                .add(HnSItemRegistry.HEALTH_RUNE.get())
-                .add(HnSItemRegistry.ELDRITCH_RUNE.get())
-                .add(HLItemRegistry.SHADOW_RUNE.get())
-                .add(HLItemRegistry.RADIANCE_RUNE.get())
-                .add(HLItemRegistry.COSMIC_RUNE.get())
-                .add(HnSItemRegistry.HYDRO_RUNE.get())
-        ;
-
         tag(HLTags.ENDER_MASK)
                 .add(Items.CARVED_PUMPKIN)
         ;

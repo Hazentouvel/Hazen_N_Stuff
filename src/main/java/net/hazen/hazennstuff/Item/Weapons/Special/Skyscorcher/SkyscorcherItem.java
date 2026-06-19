@@ -16,6 +16,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.MaceItem;
 import net.minecraft.world.item.TooltipFlag;
@@ -39,7 +40,7 @@ public class SkyscorcherItem extends MagicMaceItem implements GeoItem {
     public SkyscorcherItem() {
         super(
                 HnSExtendedWeaponsTiers.SKYSCORCHER,
-                          new Item
+                new Item
                         .Properties()
                         .stacksTo(1)
                         .fireResistant()

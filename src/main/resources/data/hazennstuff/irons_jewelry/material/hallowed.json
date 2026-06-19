@@ -3,9 +3,6 @@
   "ingredient": {
     "tag": "c:ingots/hallowed"
   },
-  "materialType": [
-    "metal"
-  ],
   "paletteLocation": "hazennstuff:palettes/hallowed",
   "quality": 3,
   "bonusParameters": {

@@ -29,14 +29,14 @@ public class HnSPlacedFeatures {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, ZENALITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.ZENALITE_ORE_KEY),
-                HnSOrePlacement.commonOrePlacement(4,
+                HnSOrePlacement.commonOrePlacement(8,
                         HeightRangePlacement
                                 .uniform(VerticalAnchor.absolute(-64),
                                         VerticalAnchor.absolute(80))
                 ));
 
         register(context, SOLAR_CORE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.SOLAR_CORE_ORE_KEY),
-                HnSOrePlacement.commonOrePlacement(4,
+                HnSOrePlacement.commonOrePlacement(8,
                         HeightRangePlacement
                                 .uniform(VerticalAnchor.absolute(-64),
                                         VerticalAnchor.absolute(80))
@@ -44,14 +44,14 @@ public class HnSPlacedFeatures {
 
         register(context, RUNESTONE_SLAG_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.RUNESTONE_SLAG_KEY),
                 HnSOrePlacement
-                        .rareOrePlacement(16, HeightRangePlacement
+                        .commonOrePlacement(11, HeightRangePlacement
                                 .uniform(VerticalAnchor.absolute(0),
                                         VerticalAnchor.top()))
         );
 
         register(context, CHLOROPHYTE_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.CHLOROPHYTE_ORE_KEY),
                 HnSOrePlacement
-                        .commonOrePlacement(5, HeightRangePlacement
+                        .commonOrePlacement(8, HeightRangePlacement
                                 .uniform(VerticalAnchor
                                                 .absolute(0),
                                         VerticalAnchor.top()))
@@ -59,7 +59,7 @@ public class HnSPlacedFeatures {
 
         register(context, DREADSTONE_PLACED_KEY, configuredFeatures.getOrThrow(HnSConfiguredFeatures.DREADSTONE_ORE_KEY),
                 HnSOrePlacement
-                        .rareOrePlacement(12, HeightRangePlacement
+                        .commonOrePlacement(9, HeightRangePlacement
                                 .uniform(VerticalAnchor
                                         .absolute(-64), VerticalAnchor
                                         .absolute(0)))

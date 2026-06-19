@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.ShadowScale;
 
+import io.redspace.ironslib.registry.IronsLibRegistries;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
@@ -36,7 +37,7 @@ public class ShadowScaleArmorItem extends ImbuableGeckolibHnSArmorItem implement
         super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(HLAttributeRegistry.SHADOW_SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(ALObjects.Attributes.CRIT_CHANCE, .05, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(IronsLibRegistries.AttributeRegistry.CRIT_DAMAGE, .05, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
     }

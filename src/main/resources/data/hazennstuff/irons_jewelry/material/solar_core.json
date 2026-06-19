@@ -3,14 +3,11 @@
   "ingredient": {
     "item": "hazennstuff:solar_core"
   },
-  "materialType": [
-    "gem"
-  ],
   "paletteLocation": "hazennstuff:palettes/solar_core",
   "quality": 1,
   "bonusParameters": {
     "irons_jewelry:attribute": {
-      "attribute": "apothic_attributes:fire_damage",
+      "attribute": "irons_lib:crit_damage",
       "amount": 1.5,
       "operation": "add_value"
     },

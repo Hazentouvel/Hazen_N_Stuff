@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-06T15:17:24.2976905	Tags for minecraft:item mod id hazennstuff
+// 1.21.1	2026-06-18T22:36:09.9602245	Tags for minecraft:item mod id hazennstuff
 740053467c0e6401606132b0ce14777e5339d91f data/c/tags/item/bones.json
 3d1820efd62e232ea7ffc4ee6e98de54e2e10e5a data/c/tags/item/enchantables.json
 52503413b4a1cfad51f295eac80bbbedd1ecb0a6 data/c/tags/item/foods.json
@@ -40,9 +40,9 @@ d29973e8decbe56beecb86f4903d6c052ff94da5 data/hazentouvelib/tags/item/armors/sch
 58c04b9133c18bbc99fc5c87aeb0831579b6a8be data/hazentouvelib/tags/item/enchanted_spellbook.json
 578f235e3df08e5c68d3647fdf1a664eb602e533 data/hazentouvelib/tags/item/misc/ender_mask.json
 ad6421ce3ee25e7bc093dc8c14cf749a2c6bf7c4 data/hazentouvelib/tags/item/spellbooks/fire_spellbook.json
-c04f9409d24522c588e1d3a730ea78e6e36477ee data/irons_spellbooks/tags/item/inscribed_rune.json
 f551afd2077ca15213570bee683ca4bd6e1179c0 data/minecraft/tags/item/axes.json
 2c11c904434323cf45066dc9449dbfb1169bdcdc data/minecraft/tags/item/chest_armor.json
+eb246ec29a19a160da18d2e464bfb9abcf33cc72 data/minecraft/tags/item/cluster_max_harvestables.json
 a823f3237a2a08d8f4f5d6c9d92a8252a8b6b487 data/minecraft/tags/item/doors.json
 2c11c904434323cf45066dc9449dbfb1169bdcdc data/minecraft/tags/item/enchantable/chest_armor.json
 b0b8c453092e613b37ba2984e2833a3d9da1c237 data/minecraft/tags/item/enchantable/durability.json

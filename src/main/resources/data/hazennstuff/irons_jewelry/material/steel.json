@@ -3,9 +3,6 @@
   "ingredient": {
     "tag": "c:ingots/steel"
   },
-  "materialType": [
-    "metal"
-  ],
   "paletteLocation": "hazennstuff:palettes/steel",
   "quality": 2,
   "bonusParameters": {

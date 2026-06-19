@@ -3,10 +3,6 @@
   "ingredient": {
     "tag": "c:ingots/dreadsteel"
   },
-  "materialType": [
-    "metal",
-    "gold"
-  ],
   "paletteLocation": "hazennstuff:palettes/dreadsteel",
   "quality": 3,
   "bonusParameters": {

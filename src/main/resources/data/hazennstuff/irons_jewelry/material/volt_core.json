@@ -4,7 +4,7 @@
     "item": "hazennstuff:volt_core"
   },
   "paletteLocation": "hazennstuff:palettes/volt_core",
-  "quality": 1,
+  "quality": 1.5,
   "bonusParameters": {
     "irons_jewelry:attribute": {
       "attribute": "aces_spell_utils:mana_rend",

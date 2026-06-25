@@ -4,7 +4,7 @@
     "tag": "c:ingots/rose_gold"
   },
   "paletteLocation": "hazennstuff:palettes/rose_gold",
-  "quality": 3,
+  "quality": 2,
   "bonusParameters": {
     "irons_jewelry:attribute": {
       "attribute": "minecraft:generic.max_health",

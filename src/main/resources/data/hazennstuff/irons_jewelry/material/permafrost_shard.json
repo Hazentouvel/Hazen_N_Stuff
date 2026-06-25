@@ -4,7 +4,7 @@
     "item": "irons_spellbooks:permafrost_shard"
   },
   "paletteLocation": "hazennstuff:palettes/permafrost_shard",
-  "quality": 1,
+  "quality": 2.5,
   "bonusParameters": {
     "irons_jewelry:attribute": {
       "attribute": "irons_lib:crit_damage",

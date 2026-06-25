@@ -4,7 +4,7 @@
     "tag": "c:ingots/steel"
   },
   "paletteLocation": "hazennstuff:palettes/steel",
-  "quality": 2,
+  "quality": 1,
   "bonusParameters": {
     "irons_jewelry:attribute": {
       "attribute": "minecraft:generic.armor",

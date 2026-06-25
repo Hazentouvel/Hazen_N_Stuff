@@ -4,7 +4,7 @@
     "item": "hazennstuff:solar_core"
   },
   "paletteLocation": "hazennstuff:palettes/solar_core",
-  "quality": 1,
+  "quality": 1.5,
   "bonusParameters": {
     "irons_jewelry:attribute": {
       "attribute": "irons_lib:crit_damage",

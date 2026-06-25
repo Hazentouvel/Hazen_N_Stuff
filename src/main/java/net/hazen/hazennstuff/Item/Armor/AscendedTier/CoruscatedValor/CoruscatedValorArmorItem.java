@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Armor.AscendedTier.DeadKing;
+package net.hazen.hazennstuff.Item.Armor.AscendedTier.CoruscatedValor;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
@@ -25,10 +25,10 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.List;
 
-public class DeadKingArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
-    public DeadKingArmorItem(Type type, Properties settings) {
+public class CoruscatedValorArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
+    public CoruscatedValorArmorItem(Type type, Properties settings) {
         super(HnSArmorMaterials.PARAGON_MATERIAL, type, settings, paragonTier(
-                AttributeRegistry.SUMMON_DAMAGE
+                AttributeRegistry.LIGHTNING_SPELL_POWER
         ));
     }
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
@@ -49,7 +49,7 @@ public class DeadKingArmorItem extends ImbuableGeckolibHnSArmorItem implements I
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new DeadKingArmorRenderer(new DeadKingArmorModel());
+        return new CoruscatedValorArmorRenderer(new CoruscatedValorArmorModel());
     }
 
     @Override
@@ -64,10 +64,11 @@ public class DeadKingArmorItem extends ImbuableGeckolibHnSArmorItem implements I
             player.addEffect(new MobEffectInstance(HnSEffects.MAGE_SET_BONUS, 320, 0, false, false, false));
         }
     }
+
     private boolean isWearingFullSet(Player player) {
-        return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof DeadKingArmorItem &&
-                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof DeadKingArmorItem &&
-                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof DeadKingArmorItem &&
-                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof DeadKingArmorItem;
+        return player.getItemBySlot(Type.HELMET.getSlot()).getItem() instanceof CoruscatedValorArmorItem &&
+                player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof CoruscatedValorArmorItem &&
+                player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof CoruscatedValorArmorItem &&
+                player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof CoruscatedValorArmorItem;
     }
 }

@@ -130,7 +130,7 @@ public class StarForgeMenu extends AbstractContainerMenu {
         if (stack.is(ARTIFACTS)) {
             return moveItemStackTo(stack, FORGE_FIRST_SLOT + SLOT_ARTIFACT, FORGE_FIRST_SLOT + SLOT_ARTIFACT + 1, false);
         }
-        if (stack.getBurnTime(null) > 0) {
+        if (StarForgeBlockEntity.isFuel(stack)) {
             if (moveItemStackTo(stack, FORGE_FIRST_SLOT + SLOT_FUEL, FORGE_FIRST_SLOT + SLOT_FUEL + 1, false)) {
                 return true;
             }

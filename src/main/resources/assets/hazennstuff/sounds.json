@@ -397,5 +397,17 @@
     "sounds": [
       "hazennstuff:bone_impact"
     ]
+  },
+  "starforge_activate": {
+    "stream": false,
+    "sounds": [
+      "hazennstuff:starforge_activate"
+    ]
+  },
+  "starforge_loop": {
+    "stream": false,
+    "sounds": [
+      "hazennstuff:starforge_loop"
+    ]
   }
 }

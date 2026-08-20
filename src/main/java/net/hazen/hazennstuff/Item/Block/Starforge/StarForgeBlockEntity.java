@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Item.Block.Starforge;
 
+import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
@@ -17,6 +18,8 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.TagKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
@@ -55,21 +58,35 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
     public static final int SLOT_OUTPUT = 5;
     public static final int SLOT_COUNT = 6;
 
-    /** Capacity of the fuel tank, in ticks of smelting. 24000 = 20 minutes. */
-    public static final int MAX_FUEL = 24000;
+    /** One partial-fuel item is exactly a ninth of the tank, so nine of them fill it. */
+    public static final int FUEL_PER_ITEM = 2700;
+    public static final int MAX_FUEL = FUEL_PER_ITEM * 9;
 
     public static final TagKey<Item> ARTIFACTS = TagKey.create(Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath("hazennstuff", "items/artifacts"));
+            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "items/artifacts"));
 
     public static final TagKey<Item> POTENT_ARTIFACTS = TagKey.create(Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath("hazennstuff", "items/potent_artifacts"));
+            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "items/potent_artifacts"));
 
     public static final TagKey<Item> FULL_RECHARGE_FUEL = TagKey.create(Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath("hazennstuff", "items/full_recharge_fuel"));
+            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "items/full_recharge_fuel"));
+
+    public static final TagKey<Item> PARTIAL_FUEL = TagKey.create(Registries.ITEM,
+            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "items/partial_fuel"));
 
     public static boolean isFuel(ItemStack stack) {
-        return stack.is(FULL_RECHARGE_FUEL) || stack.getBurnTime(null) > 0;
+        return stack.is(FULL_RECHARGE_FUEL) || stack.is(PARTIAL_FUEL);
     }
+
+    public static final float STAR_HEIGHT = 2.5f;
+    private static final float BEAM_TARGET_HEIGHT = 1.0f;
+    private static final int STAR_RESPAWN = 20;
+
+    /** 8 seconds of activation sound before the loop takes over. */
+    private static final int ACTIVATE_TICKS = 40;
+    private static final int LOOP_TICKS = 110;
+
+    private int loopTimer = 0;
 
     private final ItemStackHandler items = new ItemStackHandler(SLOT_COUNT) {
         @Override
@@ -107,7 +124,7 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
      * What the artifact in the artifact slot does to the running craft.
      *
      * @param speedMultiplier >1 smelts faster, <1 slower
-     * @param fuelPerTick fuel drained per tick of progress
+     * @param fuelPerTick     fuel drained per tick of progress
      */
     public record ArtifactModifiers(float speedMultiplier, int fuelPerTick) {
         public static final ArtifactModifiers NONE = new ArtifactModifiers(1.0f, 1);
@@ -115,14 +132,19 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
 
     public ArtifactModifiers artifactModifiers() {
         ItemStack artifact = items.getStackInSlot(SLOT_ARTIFACT);
-        if (artifact.is(POTENT_ARTIFACTS)) return new ArtifactModifiers(2.0f, 3);
         if (artifact.isEmpty()) return ArtifactModifiers.NONE;
+        if (artifact.is(POTENT_ARTIFACTS)) return new ArtifactModifiers(2.0f, 3);
         return ArtifactModifiers.NONE;
     }
 
     private int progress = 0;
     private int maxProgress = StarForgeRecipe.DEFAULT_SMELT_TIME;
     private int fuel = 0;
+    private boolean crafting = false;
+
+    private int craftingTicks = 0;
+    private int starTimer = 0;
+    private boolean clientTicked = false;
 
     /** Caches the last matching recipe so we're not scanning the whole list every tick. */
     private final RecipeManager.CachedCheck<StarForgeRecipe.Input, StarForgeRecipe> quickCheck =
@@ -163,10 +185,12 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
         return this.fuel;
     }
 
-    private boolean crafting = false;
-
     public boolean isCrafting() {
         return this.crafting;
+    }
+
+    public float getCraftingTicks(float partialTick) {
+        return craftingTicks + (craftingTicks > 0 ? partialTick : 0f);
     }
 
     // Animations
@@ -220,56 +244,10 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
         return new StarForgeMenu(containerId, inventory, this, this.data);
     }
 
-    private int craftingTicks = 0;
-
-    public float getCraftingTicks(float partialTick) {
-        return craftingTicks + (craftingTicks > 0 ? partialTick : 0f);
-    }
-
-    private static final float STAR_HEIGHT = 2.5f;
-    private static final float BEAM_TARGET_HEIGHT = 1.0f;
-    private static final int STAR_RESPAWN = 20;
-
-    private int starTimer = 0;
-
-    public static void clientTick(Level level, BlockPos pos, BlockState state, StarForgeBlockEntity be) {
-        if (!be.hasFuel()) {
-            be.starTimer = 0;
-            return;
-        }
-
-        double cx = pos.getX() + 0.5;
-        double cz = pos.getZ() + 0.5;
-
-        if (be.starTimer <= 0) {
-            level.addParticle(HnSParticleRegistry.STARFORGE_STAR.get(),
-                    cx, pos.getY() + STAR_HEIGHT, cz, 0.0, 0.0, 0.0);
-            be.starTimer = STAR_RESPAWN;
-        }
-        be.starTimer--;
-
-        if (be.isCrafting()) {
-            be.craftingTicks++;
-        } else {
-            be.craftingTicks = 0;
-        }
-
-        if (!be.isCrafting()) return;
-
-        RandomSource random = level.random;
-        for (int i = 0; i < 1; i++) {
-            level.addParticle(ParticleTypes.ENCHANT,
-                    cx, pos.getY() + BEAM_TARGET_HEIGHT, cz,
-                    (random.nextDouble() - 0.5) * 0.9,
-                    STAR_HEIGHT - BEAM_TARGET_HEIGHT,
-                    (random.nextDouble() - 0.5) * 0.9);
-        }
-    }
-
     public static void serverTick(Level level, BlockPos pos, BlockState state, StarForgeBlockEntity be) {
-        // Two separate flags on purpose. saveDirty is cheap bookkeeping; itemsDirty triggers a block-update packet for the floating-item renderer.
-        // Fuel and progress change every single tick, and firing sendBlockUpdated that often would flood the
-        // network -- the open GUI already gets those numbers through the ContainerData.
+        // Two separate flags on purpose. saveDirty is cheap bookkeeping; itemsDirty triggers a block-update packet for the renderer.
+        // Fuel and progress change every single tick, and firing sendBlockUpdated that often would flood the network -- the open GUI
+        // already gets those numbers through the ContainerData.
         boolean saveDirty = false;
         boolean itemsDirty = false;
 
@@ -330,6 +308,57 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
         if (itemsDirty) be.sync();
     }
 
+    public static void clientTick(Level level, BlockPos pos, BlockState state, StarForgeBlockEntity be) {
+        boolean firstTick = !be.clientTicked;
+        be.clientTicked = true;
+
+        if (be.crafting) {
+            if (firstTick) {
+                be.craftingTicks = ACTIVATE_TICKS;
+                StarForgeSoundInstance.playLoop(be);
+                be.loopTimer = LOOP_TICKS;
+            } else {
+                be.craftingTicks++;
+                if (be.craftingTicks == 1) {
+                    StarForgeSoundInstance.playActivate(be);
+                } else if (be.craftingTicks == ACTIVATE_TICKS) {
+                    StarForgeSoundInstance.playLoop(be);
+                    be.loopTimer = LOOP_TICKS;
+                } else if (be.craftingTicks > ACTIVATE_TICKS && --be.loopTimer <= 0) {
+                    StarForgeSoundInstance.playLoop(be);
+                    be.loopTimer = LOOP_TICKS;
+                }
+            }
+        } else {
+            be.craftingTicks = 0;
+            be.loopTimer = 0;
+        }
+
+        if (!be.hasFuel()) {
+            be.starTimer = 0;   // reappear immediately once refuelled
+            return;
+        }
+
+        double cx = pos.getX() + 0.5;
+        double cz = pos.getZ() + 0.5;
+
+        if (be.starTimer <= 0) {
+            level.addParticle(HnSParticleRegistry.STARFORGE_STAR.get(),
+                    cx, pos.getY() + STAR_HEIGHT, cz, 0.0, 0.0, 0.0);
+            be.starTimer = STAR_RESPAWN;
+        }
+        be.starTimer--;
+
+        if (!be.crafting) return;
+
+        RandomSource random = level.random;
+        level.addParticle(ParticleTypes.ENCHANT,
+                cx, pos.getY() + BEAM_TARGET_HEIGHT, cz,
+                (random.nextDouble() - 0.5) * 0.9,
+                STAR_HEIGHT - BEAM_TARGET_HEIGHT,
+                (random.nextDouble() - 0.5) * 0.9);
+    }
+
     public StarForgeRecipe.Input createRecipeInput() {
         return new StarForgeRecipe.Input(List.of(
                 items.getStackInSlot(SLOT_MAIN_1),
@@ -345,11 +374,11 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
 
         if (stack.is(FULL_RECHARGE_FUEL)) {
             fuel = MAX_FUEL;
+        } else if (stack.is(PARTIAL_FUEL)) {
+            if (fuel + FUEL_PER_ITEM > MAX_FUEL) return false;
+            fuel += FUEL_PER_ITEM;
         } else {
-            int value = stack.getBurnTime(null);
-            if (value <= 0) return false;
-            if (fuel + value > MAX_FUEL) return false;
-            fuel += value;
+            return false;
         }
 
         ItemStack remainder = stack.getCraftingRemainingItem();
@@ -380,6 +409,11 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
             items.setStackInSlot(SLOT_OUTPUT, result.copy());
         } else {
             out.grow(result.getCount());
+        }
+
+        if (level != null) {
+            level.playSound(null, worldPosition, SoundEvents.EXPERIENCE_ORB_PICKUP,
+                    SoundSource.BLOCKS, 1.0f, 1.0f);
         }
     }
 

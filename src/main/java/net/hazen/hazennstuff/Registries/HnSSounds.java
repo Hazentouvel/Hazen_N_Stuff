@@ -203,6 +203,8 @@ public class HnSSounds {
     public static final Supplier<SoundEvent> SPECIAL_ORE_PLACE = registerSoundEvent("special_ore_place");
     public static final Supplier<SoundEvent> SPECIAL_ORE_HIT = registerSoundEvent("special_ore_hit");
     public static final Supplier<SoundEvent> SPECIAL_ORE_FALL = registerSoundEvent("special_ore_fall");
+    public static final Supplier<SoundEvent> STARFORGE_ACTIVATE = registerSoundEvent("starforge_activate");
+    public static final Supplier<SoundEvent> STARFORGE_LOOP = registerSoundEvent("starforge_loop");
 
     public static final DeferredSoundType SPECIAL_ORE = new DeferredSoundType(1f, 1f,
             HnSSounds.SPECIAL_ORE_BREAK, HnSSounds.SPECIAL_ORE_STEP, HnSSounds.SPECIAL_ORE_PLACE,

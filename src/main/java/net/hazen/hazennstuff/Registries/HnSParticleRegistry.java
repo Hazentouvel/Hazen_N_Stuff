@@ -14,6 +14,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -54,6 +55,10 @@ public class HnSParticleRegistry {
     // Rod of Discord Particle
     public static final Supplier<SimpleParticleType> ROD_OF_DISCORD_PARTICLE = PARTICLE_TYPES.register("rod_of_discord_particle",
             () -> new SimpleParticleType(false));
+
+    //Starforge Star
+    public static final DeferredHolder<ParticleType<?>, SimpleParticleType> STARFORGE_STAR =
+            PARTICLE_TYPES.register("starforge_star", () -> new SimpleParticleType(true));
 
     // Leaf Particle
     public static final Supplier<ParticleType<LeafParticleOptions>> LEAF_PARTICLE =

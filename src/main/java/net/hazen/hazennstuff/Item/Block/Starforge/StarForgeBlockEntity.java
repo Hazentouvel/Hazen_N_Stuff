@@ -2,11 +2,13 @@ package net.hazen.hazennstuff.Item.Block.Starforge;
 
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
+import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
 import net.hazen.hazennstuff.Registries.HnSRecipes;
 import net.hazen.hazennstuff.Screens.StarForgeMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.Connection;
@@ -16,6 +18,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -215,6 +218,52 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
     @Override
     public AbstractContainerMenu createMenu(int containerId, Inventory inventory, Player player) {
         return new StarForgeMenu(containerId, inventory, this, this.data);
+    }
+
+    private int craftingTicks = 0;
+
+    public float getCraftingTicks(float partialTick) {
+        return craftingTicks + (craftingTicks > 0 ? partialTick : 0f);
+    }
+
+    private static final float STAR_HEIGHT = 2.5f;
+    private static final float BEAM_TARGET_HEIGHT = 1.0f;
+    private static final int STAR_RESPAWN = 20;
+
+    private int starTimer = 0;
+
+    public static void clientTick(Level level, BlockPos pos, BlockState state, StarForgeBlockEntity be) {
+        if (!be.hasFuel()) {
+            be.starTimer = 0;
+            return;
+        }
+
+        double cx = pos.getX() + 0.5;
+        double cz = pos.getZ() + 0.5;
+
+        if (be.starTimer <= 0) {
+            level.addParticle(HnSParticleRegistry.STARFORGE_STAR.get(),
+                    cx, pos.getY() + STAR_HEIGHT, cz, 0.0, 0.0, 0.0);
+            be.starTimer = STAR_RESPAWN;
+        }
+        be.starTimer--;
+
+        if (be.isCrafting()) {
+            be.craftingTicks++;
+        } else {
+            be.craftingTicks = 0;
+        }
+
+        if (!be.isCrafting()) return;
+
+        RandomSource random = level.random;
+        for (int i = 0; i < 1; i++) {
+            level.addParticle(ParticleTypes.ENCHANT,
+                    cx, pos.getY() + BEAM_TARGET_HEIGHT, cz,
+                    (random.nextDouble() - 0.5) * 0.9,
+                    STAR_HEIGHT - BEAM_TARGET_HEIGHT,
+                    (random.nextDouble() - 0.5) * 0.9);
+        }
     }
 
     public static void serverTick(Level level, BlockPos pos, BlockState state, StarForgeBlockEntity be) {

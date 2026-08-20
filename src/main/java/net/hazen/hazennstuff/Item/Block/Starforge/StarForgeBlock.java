@@ -106,8 +106,10 @@ public class StarForgeBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        if (level.isClientSide) return null;
-        return createTickerHelper(type, HnSBlockEntities.STARFORGE.get(), StarForgeBlockEntity::serverTick);
+        return createTickerHelper(type, HnSBlockEntities.STARFORGE.get(),
+                level.isClientSide
+                        ? StarForgeBlockEntity::clientTick
+                        : StarForgeBlockEntity::serverTick);
     }
 
     @Override

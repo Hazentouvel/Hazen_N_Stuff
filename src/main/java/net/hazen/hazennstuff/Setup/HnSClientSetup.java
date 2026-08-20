@@ -62,6 +62,7 @@ import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.TerraprismaRende
 import net.hazen.hazennstuff.Entity.Spells.Shadow.NightsEdgeAfterSlash.NightsEdgeAfterSlashRenderer;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.ScorchingSlash.ScorchingSlash;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.SoulFlameStrike.SoulFlameStrike;
+import net.hazen.hazennstuff.Particle.StarForgeStarParticle;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
 import net.hazen.hazennstuff.Particle.HnSGenericParticle;
@@ -188,6 +189,7 @@ public class HnSClientSetup {
         event.registerSpriteSet(HnSParticleRegistry.IONIC_SLASH.get(), IonicSlash.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.SCORCHING_SLASH.get(), ScorchingSlash.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.SOUL_FLAMING_STRIKE_PARTICLE.get(), SoulFlameStrike.Provider::new);
+        event.registerSpriteSet(HnSParticleRegistry.STARFORGE_STAR.get(), StarForgeStarParticle.Provider::new);
     }
 
     @SubscribeEvent

@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Item.Block;
 
+import net.hazen.hazennstuff.Item.Block.Starforge.StarForgeBlock;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.HazelStatue;
 import net.hazen.hazennstuff.Datagen.Worldgen.Biomes.Trees.HnSTreeGrower;
 import net.hazen.hazennstuff.HazenNStuff;
@@ -630,6 +631,15 @@ public class HnSBlocks {
                         .sound(SoundType.METAL)
                 ));
 
+        public static final DeferredBlock<Block> STARFORGE = registerBlock("starforge",
+                () -> new StarForgeBlock(BlockBehaviour
+                        .Properties.of()
+                        .strength(4f)
+                        .requiresCorrectToolForDrops()
+                        .sound(SoundType.METAL)
+                        .noOcclusion()
+                        .pushReaction(PushReaction.BLOCK)
+                ));
 
         private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
                 DeferredBlock<T> toReturn = BLOCKS.register(name, block);

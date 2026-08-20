@@ -233,6 +233,9 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSBlocks.COBBLED_VOIDSTONE);
                         output.accept(HnSBlocks.VOIDSTONE);
 
+
+                        output.accept(HnSBlocks.STARFORGE);
+
                     }).build());
 
     public static final Supplier<CreativeModeTab> HAZEN_N_STUFF_EQUIPMENT = CREATIVE_MODE_TAB.register("hazennstuff_equipment",

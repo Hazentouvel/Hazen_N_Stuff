@@ -1,6 +1,8 @@
 package net.hazen.hazennstuff.Item.Block.Starforge;
 
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
+import net.hazen.hazennstuff.Registries.HnSItemRegistry;
+import net.hazen.hazennstuff.Registries.HnSRecipes;
 import net.hazen.hazennstuff.Screens.StarForgeMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -23,6 +25,9 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -34,6 +39,8 @@ import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import javax.annotation.Nullable;
+import java.util.List;
+import java.util.Optional;
 
 public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity, MenuProvider {
 
@@ -45,8 +52,21 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
     public static final int SLOT_OUTPUT = 5;
     public static final int SLOT_COUNT = 6;
 
+    /** Capacity of the fuel tank, in ticks of smelting. 24000 = 20 minutes. */
+    public static final int MAX_FUEL = 24000;
+
     public static final TagKey<Item> ARTIFACTS = TagKey.create(Registries.ITEM,
             ResourceLocation.fromNamespaceAndPath("hazennstuff", "items/artifacts"));
+
+    public static final TagKey<Item> POTENT_ARTIFACTS = TagKey.create(Registries.ITEM,
+            ResourceLocation.fromNamespaceAndPath("hazennstuff", "items/potent_artifacts"));
+
+    public static final TagKey<Item> FULL_RECHARGE_FUEL = TagKey.create(Registries.ITEM,
+            ResourceLocation.fromNamespaceAndPath("hazennstuff", "items/full_recharge_fuel"));
+
+    public static boolean isFuel(ItemStack stack) {
+        return stack.is(FULL_RECHARGE_FUEL) || stack.getBurnTime(null) > 0;
+    }
 
     private final ItemStackHandler items = new ItemStackHandler(SLOT_COUNT) {
         @Override
@@ -58,7 +78,7 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
         @Override
         public boolean isItemValid(int slot, ItemStack stack) {
             return switch (slot) {
-                case SLOT_FUEL -> stack.getBurnTime(null) > 0;
+                case SLOT_FUEL -> isFuel(stack);
                 case SLOT_ARTIFACT -> stack.is(ARTIFACTS);
                 case SLOT_OUTPUT -> false;
                 default -> true;
@@ -80,10 +100,30 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
         return this.items;
     }
 
+    /**
+     * What the artifact in the artifact slot does to the running craft.
+     *
+     * @param speedMultiplier >1 smelts faster, <1 slower
+     * @param fuelPerTick fuel drained per tick of progress
+     */
+    public record ArtifactModifiers(float speedMultiplier, int fuelPerTick) {
+        public static final ArtifactModifiers NONE = new ArtifactModifiers(1.0f, 1);
+    }
+
+    public ArtifactModifiers artifactModifiers() {
+        ItemStack artifact = items.getStackInSlot(SLOT_ARTIFACT);
+        if (artifact.is(POTENT_ARTIFACTS)) return new ArtifactModifiers(2.0f, 3);
+        if (artifact.isEmpty()) return ArtifactModifiers.NONE;
+        return ArtifactModifiers.NONE;
+    }
+
     private int progress = 0;
-    private int maxProgress = 200;
-    private int burnTime = 0;
-    private int burnDuration = 0;
+    private int maxProgress = StarForgeRecipe.DEFAULT_SMELT_TIME;
+    private int fuel = 0;
+
+    /** Caches the last matching recipe so we're not scanning the whole list every tick. */
+    private final RecipeManager.CachedCheck<StarForgeRecipe.Input, StarForgeRecipe> quickCheck =
+            RecipeManager.createCheck(HnSRecipes.STARFORGE_TYPE.get());
 
     public final ContainerData data = new ContainerData() {
         @Override
@@ -91,8 +131,8 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
             return switch (index) {
                 case 0 -> progress;
                 case 1 -> maxProgress;
-                case 2 -> burnTime;
-                case 3 -> burnDuration;
+                case 2 -> fuel;
+                case 3 -> MAX_FUEL;
                 default -> 0;
             };
         }
@@ -102,8 +142,7 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
             switch (index) {
                 case 0 -> progress = value;
                 case 1 -> maxProgress = value;
-                case 2 -> burnTime = value;
-                case 3 -> burnDuration = value;
+                case 2 -> fuel = value;
             }
         }
 
@@ -113,24 +152,27 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
         }
     };
 
-    public boolean isBurning() {
-        return this.burnTime > 0;
+    public boolean hasFuel() {
+        return this.fuel > 0;
     }
 
-    private static final RawAnimation IDLE_NO_ITEMS =
-            RawAnimation.begin()
-                    .thenLoop("idle_without_items");
+    public int getFuel() {
+        return this.fuel;
+    }
 
-    private static final RawAnimation IDLE_WITH_ITEMS =
-            RawAnimation.begin()
-                    .thenLoop("idle_with_items");
+    private boolean crafting = false;
 
-    private static final RawAnimation SMELTING =
-            RawAnimation.begin()
-                    .thenLoop("smelting");
+    public boolean isCrafting() {
+        return this.crafting;
+    }
 
-    private final AnimatableInstanceCache cache =
-            GeckoLibUtil.createInstanceCache(this);
+    // Animations
+
+    private static final RawAnimation IDLE_NO_ITEMS = RawAnimation.begin().thenLoop("idle_without_items");
+    private static final RawAnimation IDLE_WITH_ITEMS = RawAnimation.begin().thenLoop("idle_with_items");
+    private static final RawAnimation SMELTING = RawAnimation.begin().thenLoop("smelting");
+
+    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public StarForgeBlockEntity(BlockPos pos, BlockState blockState) {
         super(HnSBlockEntities.STARFORGE.get(), pos, blockState);
@@ -138,16 +180,11 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(
-                this,
-                "controller",
-                0,
-                this::animationController
-        ));
+        controllers.add(new AnimationController<>(this, "controller", 5, this::animationController));
     }
 
     private PlayState animationController(AnimationState<StarForgeBlockEntity> state) {
-        if (isBurning() && progress > 0) {
+        if (crafting) {
             state.setAndContinue(SMELTING);
         } else if (hasAnyMainItem()) {
             state.setAndContinue(IDLE_WITH_ITEMS);
@@ -181,55 +218,94 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
     }
 
     public static void serverTick(Level level, BlockPos pos, BlockState state, StarForgeBlockEntity be) {
-        boolean wasBurning = be.isBurning();
-        boolean dirty = false;
+        // Two separate flags on purpose. saveDirty is cheap bookkeeping; itemsDirty triggers a block-update packet for the floating-item renderer.
+        // Fuel and progress change every single tick, and firing sendBlockUpdated that often would flood the
+        // network -- the open GUI already gets those numbers through the ContainerData.
+        boolean saveDirty = false;
+        boolean itemsDirty = false;
 
-        if (be.isBurning()) {
-            be.burnTime--;
+        if (be.tryRefuel()) {
+            saveDirty = true;
+            itemsDirty = true;
         }
 
-        ItemStack result = be.assembleResult();
-        boolean canWork = !result.isEmpty() && be.canOutput(result);
+        StarForgeRecipe.Input input = be.createRecipeInput();
+        Optional<RecipeHolder<StarForgeRecipe>> match = input.isEmpty()
+                ? Optional.empty()
+                : be.quickCheck.getRecipeFor(input, level);
 
-        if (canWork) {
-            if (!be.isBurning()) {
-                dirty |= be.consumeFuel();
-            }
+        boolean working = false;
 
-            if (be.isBurning()) {
-                be.progress++;
-                if (be.progress >= be.maxProgress) {
-                    be.craft(result);
-                    be.progress = 0;
-                    dirty = true;
+        if (match.isPresent()) {
+            StarForgeRecipe recipe = match.get().value();
+            ItemStack result = recipe.assemble(input, level.registryAccess());
+
+            if (be.canOutput(result)) {
+                ArtifactModifiers mods = be.artifactModifiers();
+
+                int target = Math.max(1, Math.round(recipe.smeltTime() / mods.speedMultiplier()));
+                if (be.maxProgress != target) {
+                    be.maxProgress = target;
+                    saveDirty = true;
                 }
-            } else {
-                be.progress = Math.max(0, be.progress - 2);
+
+                if (be.fuel > 0) {
+                    working = true;
+                    be.fuel = Math.max(0, be.fuel - mods.fuelPerTick());
+                    be.progress++;
+                    saveDirty = true;
+
+                    if (be.progress >= be.maxProgress) {
+                        be.craft(recipe, input, result);
+                        be.progress = 0;
+                        itemsDirty = true;
+                    }
+                }
             }
-        } else if (be.progress != 0) {
-            be.progress = 0;
-            dirty = true;
         }
 
-        if (wasBurning != be.isBurning()) dirty = true;
-
-        if (dirty) {
-            be.setChanged();
-            be.sync();
+        // No fuel, or nothing valid in the slots: unwind rather than snap to zero.
+        if (!working && be.progress > 0) {
+            be.progress = Math.max(0, be.progress - 2);
+            saveDirty = true;
         }
+
+        // One packet when a craft starts and one when it stops.
+        if (be.crafting != working) {
+            be.crafting = working;
+            saveDirty = true;
+            itemsDirty = true;
+        }
+
+        if (saveDirty) be.setChanged();
+        if (itemsDirty) be.sync();
     }
 
-    private boolean consumeFuel() {
-        ItemStack fuel = items.getStackInSlot(SLOT_FUEL);
-        int burn = fuel.getBurnTime(null);
-        if (burn <= 0) return false;
+    public StarForgeRecipe.Input createRecipeInput() {
+        return new StarForgeRecipe.Input(List.of(
+                items.getStackInSlot(SLOT_MAIN_1),
+                items.getStackInSlot(SLOT_MAIN_2),
+                items.getStackInSlot(SLOT_MAIN_3)));
+    }
 
-        this.burnTime = burn;
-        this.burnDuration = burn;
+    private boolean tryRefuel() {
+        if (fuel >= MAX_FUEL) return false;
 
-        ItemStack remainder = fuel.getCraftingRemainingItem();
-        fuel.shrink(1);
-        if (fuel.isEmpty() && !remainder.isEmpty()) {
+        ItemStack stack = items.getStackInSlot(SLOT_FUEL);
+        if (stack.isEmpty()) return false;
+
+        if (stack.is(FULL_RECHARGE_FUEL)) {
+            fuel = MAX_FUEL;
+        } else {
+            int value = stack.getBurnTime(null);
+            if (value <= 0) return false;
+            if (fuel + value > MAX_FUEL) return false;
+            fuel += value;
+        }
+
+        ItemStack remainder = stack.getCraftingRemainingItem();
+        stack.shrink(1);
+        if (stack.isEmpty() && !remainder.isEmpty()) {
             items.setStackInSlot(SLOT_FUEL, remainder);
         }
         return true;
@@ -242,10 +318,12 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
         return out.getCount() + result.getCount() <= out.getMaxStackSize();
     }
 
-    private void craft(ItemStack result) {
-        for (int i = SLOT_MAIN_1; i <= SLOT_MAIN_3; i++) {
-            ItemStack in = items.getStackInSlot(i);
-            if (!in.isEmpty()) in.shrink(1);
+    private void craft(StarForgeRecipe recipe, StarForgeRecipe.Input input, ItemStack result) {
+        int[] assignment = recipe.findAssignment(input);
+        if (assignment == null) return;
+
+        for (int i = 0; i < assignment.length; i++) {
+            items.getStackInSlot(assignment[i]).shrink(recipe.countFor(i));
         }
 
         ItemStack out = items.getStackInSlot(SLOT_OUTPUT);
@@ -256,18 +334,14 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
         }
     }
 
-    private ItemStack assembleResult() {
-        return ItemStack.EMPTY;
-    }
-
     @Override
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);
         tag.put("Items", items.serializeNBT(registries));
         tag.putInt("Progress", progress);
         tag.putInt("MaxProgress", maxProgress);
-        tag.putInt("BurnTime", burnTime);
-        tag.putInt("BurnDuration", burnDuration);
+        tag.putInt("Fuel", fuel);
+        tag.putBoolean("Crafting", crafting);
     }
 
     @Override
@@ -275,9 +349,11 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
         super.loadAdditional(tag, registries);
         if (tag.contains("Items")) items.deserializeNBT(registries, tag.getCompound("Items"));
         progress = tag.getInt("Progress");
-        maxProgress = tag.contains("MaxProgress") ? tag.getInt("MaxProgress") : 200;
-        burnTime = tag.getInt("BurnTime");
-        burnDuration = tag.getInt("BurnDuration");
+        maxProgress = tag.contains("MaxProgress")
+                ? tag.getInt("MaxProgress")
+                : StarForgeRecipe.DEFAULT_SMELT_TIME;
+        fuel = tag.getInt("Fuel");
+        crafting = tag.getBoolean("Crafting");
     }
 
     public void sync() {

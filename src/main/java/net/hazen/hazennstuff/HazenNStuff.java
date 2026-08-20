@@ -98,6 +98,7 @@ public class HazenNStuff
         HnSSounds.register(modEventBus);
         HnSEntityRegistry.register(modEventBus);
         HnSMenus.register(modEventBus);
+        HnSRecipes.register(modEventBus);
 
         HnSSpellRegistries.register(modEventBus);
 

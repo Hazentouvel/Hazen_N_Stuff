@@ -31,15 +31,11 @@ public class StarForgeBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     private static final VoxelShape SHAPE_NORTH = Shapes.or(
-            Block.box(0, 4, 0, 16, 12, 16),
-            Block.box(-3, 0, -3, 19, 2, 19),
-            Block.box(-1, 2, -1, 17, 4, 17),
-            Block.box(0, 2, 5, 8, 10, 11),
-            Block.box(8, 2, 5, 16, 10, 11),
-            Block.box(0, 8, 4, 9, 14, 12),
-            Block.box(7, 8, 4, 16, 14, 12),
-            Block.box(-4, 6, 5, 4, 12, 11),
-            Block.box(12, 6, 5, 20, 12, 11)
+            Block.box(-3, 0, -3, 19,  2, 19),
+            Block.box(-1, 2, -1, 17,  4, 17),
+            Block.box( 0, 4,  0, 16, 12, 16),
+            Block.box(-4, 6,  5,  4, 12, 11),
+            Block.box(12, 6,  5, 20, 12, 11)
     );
 
     public StarForgeBlock(Properties properties) {

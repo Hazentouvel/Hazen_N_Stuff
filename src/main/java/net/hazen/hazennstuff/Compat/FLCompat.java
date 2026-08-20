@@ -1,7 +1,6 @@
 package net.hazen.hazennstuff.Compat;
 
 import net.alshanex.familiarslib.registry.AttributeRegistry;
-import net.alshanex.tunes_n_tomes.registry.TAttributeRegistry;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;

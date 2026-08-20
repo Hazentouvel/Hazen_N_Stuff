@@ -31,6 +31,7 @@ import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowDagger.ShadowDaggerRende
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowReaver.ShadowReaverRenderer;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.HnSUtilities.Tooltips.HnSSpellTooltip;
+import net.hazen.hazennstuff.Item.Block.Starforge.StarForgeBlockRenderer;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.HazelStatueRenderer;
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnaceRenderer;
@@ -161,6 +162,7 @@ public class HnSClientSetup {
          */
 
         event.registerBlockEntityRenderer(HnSBlockEntities.HAZEL_STATUE.get(), HazelStatueRenderer::new);
+        event.registerBlockEntityRenderer(HnSBlockEntities.STARFORGE.get(), StarForgeBlockRenderer::new);
     }
 
     @SubscribeEvent

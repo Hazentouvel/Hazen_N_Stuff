@@ -45,6 +45,7 @@ import net.hazen.hazennstuff.Item.Weapons.Generic.HammerOfJustice.HammerOfJustic
 import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Terraprisma.TerraprismaRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Volcano.VolcanoRenderer;
 import net.hazen.hazennstuff.Registries.*;
+import net.hazen.hazennstuff.Screens.StarForgeScreen;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.hazen.hazentouvelib.Items.Curios.GenericCurioRenderer;
 import net.hazen.hazentouvelib.Items.Curios.Wings.WingCurioItem;
@@ -59,6 +60,9 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.jetbrains.annotations.NotNull;
@@ -93,10 +97,12 @@ public class HazenNStuff
         HnSParticleRegistry.register(modEventBus);
         HnSSounds.register(modEventBus);
         HnSEntityRegistry.register(modEventBus);
+        HnSMenus.register(modEventBus);
 
         HnSSpellRegistries.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::registerCapabilities);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, HnSConfig.SPEC, String.format("%s-common.toml", "hazennstuff"));
     }
@@ -187,6 +193,11 @@ public class HazenNStuff
     @EventBusSubscriber(value = Dist.CLIENT)
     public static class ClientModEvents
     {
+        @SubscribeEvent
+        public static void onRegisterScreens(RegisterMenuScreensEvent event) {
+            event.register(HnSMenus.STARFORGE.get(), StarForgeScreen::new);
+        }
+
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
@@ -485,6 +496,12 @@ public class HazenNStuff
 
             );
         }
+    }
+
+    public void registerCapabilities(RegisterCapabilitiesEvent event) {
+        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK,
+                HnSBlockEntities.STARFORGE.get(),
+                (be, side) -> be.getItemHandler(side));
     }
 
     public static ResourceLocation id(@NotNull String path)

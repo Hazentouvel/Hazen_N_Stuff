@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Item.Block;
 
+import net.hazen.hazennstuff.Item.Block.Starforge.StarForgeBlockEntity;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.HazelStatueBlockEntity;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -16,6 +17,10 @@ public class HnSBlockEntities {
     public static final Supplier<BlockEntityType<HazelStatueBlockEntity>> HAZEL_STATUE =
             BLOCK_ENTITIES.register("hazel_statue", () -> BlockEntityType.Builder.of(
                     HazelStatueBlockEntity::new, HnSBlocks.HAZEL_STATUE.get()).build(null));
+
+    public static final Supplier<BlockEntityType<StarForgeBlockEntity>> STARFORGE =
+            BLOCK_ENTITIES.register("starforge", () -> BlockEntityType.Builder.of(
+                    StarForgeBlockEntity::new, HnSBlocks.STARFORGE.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

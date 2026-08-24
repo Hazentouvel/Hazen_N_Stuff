@@ -8,11 +8,11 @@ import io.redspace.ironsspellbooks.particle.FlameStrikeParticleOptions;
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
-import it.crystalnest.prometheus.api.FireManager;
 import net.hazen.hazennstuff.Item.Armor.AscendedTier.DeadKing.DeadKingArmorItem;
 import net.hazen.hazennstuff.Item.Armor.AscendedTier.GarmentsOfTheFirstFlamebearer.GarmentsOfTheFirstFlamebearerArmorItem;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.SoulFlameStrike.SoulFlameStrikeOptions;
 import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.hazen.hazentouvelib.Blocks.SoulFire.SoulFireData;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -173,7 +173,7 @@ public class HnSSetBonusEffects {
             Vec3 hitLocation = target.getBoundingBox().getCenter();
 
             if (attacker.hasEffect(HnSEffects.TYROS_SOUL_STATE)) {
-                FireManager.setOnFire(target, fireTicks / 20f, FireManager.SOUL_FIRE_TYPE);
+                SoulFireData.setSoulFireTicks(target, fireTicks);
                 MagicManager.spawnParticles(attacker.level(), new SoulFlameStrikeOptions((float) forward.x, (float) forward.y, (float) forward.z, mirrored, false, 1.0F), hitLocation.x, hitLocation.y, hitLocation.z, 1, 0, 0, 0, 0, true);
 
             } else {

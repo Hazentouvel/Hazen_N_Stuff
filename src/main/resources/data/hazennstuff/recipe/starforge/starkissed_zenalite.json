@@ -1,0 +1,29 @@
+{
+  "type": "hazennstuff:starforge",
+  "ingredients": [
+    {
+      "ingredient":
+      {
+        "item": "hazennstuff:raw_zenalite"
+      },
+      "count": 2
+    },
+    {
+      "ingredient": {
+        "item": "hazennstuff:steel_ingot"
+      },
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "item": "irons_spellbooks:arcane_essence"
+      },
+      "count": 3
+    }
+  ],
+  "result": {
+    "id": "hazennstuff:starkissed_zenalite",
+    "count": 1
+  },
+  "smelt_time": 300
+}

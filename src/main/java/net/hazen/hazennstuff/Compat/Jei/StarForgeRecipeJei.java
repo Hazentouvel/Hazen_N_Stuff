@@ -1,5 +1,6 @@
-package net.hazen.hazennstuff.Item.Block.Starforge;
+package net.hazen.hazennstuff.Compat.Jei;
 
+import net.hazen.hazennstuff.Item.Block.Starforge.StarForgeRecipe;
 import net.hazen.hazennstuff.Registries.HnSRecipes;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;

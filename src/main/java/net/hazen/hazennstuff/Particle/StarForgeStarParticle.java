@@ -26,7 +26,7 @@ public class StarForgeStarParticle extends TextureSheetParticle {
         this.hasPhysics = false;
 
         this.lifetime = LIFETIME;
-        this.quadSize = 0.3f;
+        this.quadSize = 0.75f;
 
         this.pickSprite(sprites);
     }

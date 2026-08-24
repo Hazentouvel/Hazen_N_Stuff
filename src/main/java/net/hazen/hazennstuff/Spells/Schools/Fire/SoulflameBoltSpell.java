@@ -13,8 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.hazen.hazennstuff.Entity.Spells.Fire.SoulFlameBolt.SoulflameBolt;
-import net.hazen.hazennstuff.HnSUtilities.Spells.HnSSpellDamageSource;
-import net.minecraft.ChatFormatting;
+import net.hazen.hazentouvelib.Spells.HLSpellDamageSource;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -74,8 +73,8 @@ public class SoulflameBoltSpell extends AbstractSpell {
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
 
-    public HnSSpellDamageSource getDamageSource(@Nullable Entity projectile, Entity attacker) {
-        return HnSSpellDamageSource.source(projectile == null ? attacker : projectile, attacker, this).setSoulFireTicks(60);
+    public HLSpellDamageSource getDamageSource(@Nullable Entity projectile, Entity attacker) {
+        return HLSpellDamageSource.source(projectile == null ? attacker : projectile, attacker, this).setSoulFireTicks(60);
     }
 
     private float getDamage(int spellLevel, LivingEntity entity) {

@@ -11,8 +11,10 @@ import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
+import net.hazen.hazennstuff.Compat.Jei.StarForgeRecipeJei;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
+import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
@@ -51,10 +53,8 @@ public class StarForgeRecipeCategory implements IRecipeCategory<StarForgeRecipeJ
     private static final int ANIMATION_TICKS = 60;
 
     private static final List<ItemStack> FUEL_EXAMPLES = List.of(
-            new ItemStack(Items.COAL),
-            new ItemStack(Items.CHARCOAL),
-            new ItemStack(Items.BLAZE_ROD),
-            new ItemStack(Items.LAVA_BUCKET),
+            new ItemStack(HnSItemRegistry.STARDUST.asItem()),
+            new ItemStack(HnSItemRegistry.NETHER_STAR_FRAGMENT.asItem()),
             new ItemStack(Items.NETHER_STAR)
     );
 

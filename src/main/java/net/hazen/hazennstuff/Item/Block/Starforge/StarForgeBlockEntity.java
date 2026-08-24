@@ -1,11 +1,13 @@
 package net.hazen.hazennstuff.Item.Block.Starforge;
 
+import com.google.common.collect.Lists;
+import it.unimi.dsi.fastutil.objects.Object2IntMap;
+import it.unimi.dsi.fastutil.objects.ObjectIterator;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
-import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
 import net.hazen.hazennstuff.Registries.HnSRecipes;
-import net.hazen.hazennstuff.Screens.StarForgeMenu;
+import net.hazen.hazennstuff.Screens.Starforge.StarForgeMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -18,6 +20,8 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.TagKey;
@@ -31,13 +35,14 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import software.bernie.geckolib.animatable.GeoBlockEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -67,6 +72,12 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
 
     public static final TagKey<Item> POTENT_ARTIFACTS = TagKey.create(Registries.ITEM,
             ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "items/potent_artifacts"));
+
+    public static final TagKey<Item> EXPERIENCE_ARTIFACTS = TagKey.create(Registries.ITEM,
+            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "items/experience_artifacts"));
+
+    public static final TagKey<Item> NONCONSUMABLE_ARTIFACTS = TagKey.create(Registries.ITEM,
+            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "items/nonconsumable_artifacts"));
 
     public static final TagKey<Item> FULL_RECHARGE_FUEL = TagKey.create(Registries.ITEM,
             ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "items/full_recharge_fuel"));
@@ -136,6 +147,8 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
         if (artifact.is(POTENT_ARTIFACTS)) return new ArtifactModifiers(2.0f, 3);
         return ArtifactModifiers.NONE;
     }
+
+
 
     private int progress = 0;
     private int maxProgress = StarForgeRecipe.DEFAULT_SMELT_TIME;

@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Screens;
+package net.hazen.hazennstuff.Screens.Starforge;
 
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.Item.Block.Starforge.StarForgeBlockEntity;

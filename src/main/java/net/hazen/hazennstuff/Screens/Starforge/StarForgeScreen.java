@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Screens;
+package net.hazen.hazennstuff.Screens.Starforge;
 
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -17,6 +17,9 @@ public class StarForgeScreen extends AbstractContainerScreen<StarForgeMenu> {
     private static final int FUEL_U = 179, FUEL_V = 3;
     private static final int FUEL_W = 13, FUEL_H = 55;
     private static final int FUEL_X = 28, FUEL_Y = 28;
+
+    private static final int FUEL_RIGHT_X = 135;
+    private static final int FUEL_RIGHT_Y = 28;
 
     private static final int PROG_U = 196, PROG_V = 2;
     private static final int PROG_W = 56, PROG_H = 123;
@@ -38,6 +41,9 @@ public class StarForgeScreen extends AbstractContainerScreen<StarForgeMenu> {
                 this.imageWidth, this.imageHeight, TEX, TEX);
 
         blitPartial(guiGraphics, FUEL_U, FUEL_V, FUEL_X, FUEL_Y, FUEL_W, FUEL_H,
+                menu.getFuelFraction(), Fill.UP);
+
+        blitPartial(guiGraphics, FUEL_U, FUEL_V, FUEL_RIGHT_X, FUEL_RIGHT_Y, FUEL_W, FUEL_H,
                 menu.getFuelFraction(), Fill.UP);
 
         blitPartial(guiGraphics, PROG_U, PROG_V, PROG_X, PROG_Y, PROG_W, PROG_H,

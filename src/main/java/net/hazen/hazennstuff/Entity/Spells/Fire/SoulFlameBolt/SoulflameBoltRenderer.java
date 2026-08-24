@@ -19,7 +19,7 @@ import net.minecraft.world.entity.projectile.Projectile;
 
 public class SoulflameBoltRenderer extends EntityRenderer<Projectile> {
     public static final ModelLayerLocation MODEL_LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("irons_spellbooks", "firebolt_model"), "main");
-    private static ResourceLocation TEXTURE = HazenNStuff.id("textures/spells/soulflame_bolt.png");
+    private static ResourceLocation TEXTURE = HazenNStuff.id("textures/spells/soul_flame_bolt.png");
     private final ModelPart body;
 
     public SoulflameBoltRenderer(EntityRendererProvider.Context context) {

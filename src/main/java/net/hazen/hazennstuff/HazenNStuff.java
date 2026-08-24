@@ -45,7 +45,7 @@ import net.hazen.hazennstuff.Item.Weapons.Generic.HammerOfJustice.HammerOfJustic
 import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Terraprisma.TerraprismaRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Volcano.VolcanoRenderer;
 import net.hazen.hazennstuff.Registries.*;
-import net.hazen.hazennstuff.Screens.StarForgeScreen;
+import net.hazen.hazennstuff.Screens.Starforge.StarForgeScreen;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.hazen.hazentouvelib.Items.Curios.GenericCurioRenderer;
 import net.hazen.hazentouvelib.Items.Curios.Wings.WingCurioItem;

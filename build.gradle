@@ -155,7 +155,7 @@ dependencies {
     //Iron's Spells 'n Spellbooks
     implementation "curse.maven:irons_spells_n_spellbooks-855414:8237097"
     implementation "curse.maven:iron_lib-1492763:8207094"
-    implementation "curse.maven:geckolib-388172:6304958"
+    implementation "curse.maven:geckolib-388172:8350073"
     implementation "curse.maven:player_animator-658587:6024462"
     implementation "curse.maven:curios-309927:6342656"
     implementation "curse.maven:caelus-308989:5694215"
@@ -166,11 +166,7 @@ dependencies {
     //Ace Utils
     implementation "curse.maven:ace_utils-1299492:7787705"
     //HazentouveLib
-    implementation "curse.maven:hazentouvelib-1528722:8275040"
-    //Soul Fire'd
-    implementation "curse.maven:soul_fire_d-662413:7364962"
-    implementation "curse.maven:prometheus-1365195:7364871"
-    implementation "curse.maven:cobweb-968456:7186943"
+    implementation "curse.maven:hazentouvelib-1528722:8666581"
     //AzureLib
     implementation "curse.maven:azurelib-817423:7371539"
 
@@ -192,6 +188,10 @@ dependencies {
     // MmmMmmMmm
     localRuntime "curse.maven:mmm-225738:7206981"
     localRuntime "curse.maven:moonlight_lib-499980:7669172"
+
+    // Aquamirae **************************************************************************************************
+    //localRuntime "curse.maven:aquamirae-536254:8724151"
+    //localRuntime "curse.maven:fragmentum-1123977:8707553"
 
     /*
     *** Optional Dependencies ******************************************************************************************

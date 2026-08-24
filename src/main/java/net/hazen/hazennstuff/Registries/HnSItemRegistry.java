@@ -358,6 +358,34 @@ public class HnSItemRegistry {
     );
 
     /*
+    *** Artifacts
+     */
+
+
+    // Artifact
+    public static final DeferredItem<Item> ENCHANTED_ARTIFACT = ITEMS.register("enchanted_artifact",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(Rarity.RARE))
+    );
+
+
+    // Artifact
+    public static final DeferredItem<Item> SMITHERS_ARTIFACT = ITEMS.register("smithers_artifact",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(Rarity.RARE))
+    );
+
+
+    // Artifact
+    public static final DeferredItem<Item> DIVINE_ARTIFACT = ITEMS.register("divine_artifact",
+            () -> new Item(new Item
+                    .Properties()
+                    .rarity(Rarity.RARE))
+    );
+
+    /*
      *** Crafting Materials
      */
 

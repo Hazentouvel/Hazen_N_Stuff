@@ -1,9 +1,0 @@
-{
-  "type": "hazennstuff:starforge",
-  "ingredients": [
-    { "ingredient": { "item": "minecraft:netherite_ingot" }, "count": 2 },
-    { "item": "minecraft:diamond" }
-  ],
-  "result": { "id": "minecraft:nether_star", "count": 1 },
-  "smelt_time": 600
-}

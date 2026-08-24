@@ -19,8 +19,8 @@ import io.redspace.ironsspellbooks.util.ParticleHelper;
 import java.util.List;
 import java.util.Optional;
 
-import net.hazen.hazennstuff.HnSUtilities.Spells.HnSSpellDamageSource;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.SoulFlameStrike.SoulFlameStrikeOptions;
+import net.hazen.hazentouvelib.Spells.HLSpellDamageSource;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -112,8 +112,8 @@ public class SoulFlamingStrikeSpell extends AbstractSpell {
         super.onCast(level, spellLevel, entity, castSource, playerMagicData);
     }
 
-    public HnSSpellDamageSource getDamageSource(@Nullable Entity projectile, Entity attacker) {
-        return HnSSpellDamageSource.source(projectile == null ? attacker : projectile, attacker, this).setSoulFireTicks(60);
+    public HLSpellDamageSource getDamageSource(@Nullable Entity projectile, Entity attacker) {
+        return HLSpellDamageSource.source(projectile == null ? attacker : projectile, attacker, this).setSoulFireTicks(60);
     }
 
     private float getDamage(int spellLevel, LivingEntity entity) {

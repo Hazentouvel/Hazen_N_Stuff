@@ -1,7 +1,7 @@
 package net.hazen.hazennstuff.Registries;
 
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.Screens.StarForgeMenu;
+import net.hazen.hazennstuff.Screens.Starforge.StarForgeMenu;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.inventory.MenuType;
 import net.neoforged.bus.api.IEventBus;

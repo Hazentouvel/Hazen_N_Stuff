@@ -4,6 +4,7 @@ import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 import com.illusivesoulworks.caelus.api.CaelusApi;
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
+import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSDispatcher;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.ChatFormatting;
@@ -23,8 +24,11 @@ import top.theillusivec4.curios.api.SlotContext;
 import java.util.List;
 
 public class ArbitriumWings extends CurioBaseItem {
+
     public final HnSDispatcher dispatcher;
 
+    private static final Holder<Attribute> FALL_FLY_ATTRIBUTE = CaelusApi.getInstance().getFallFlyingAttribute();
+    private static final ResourceLocation ARBITRIUM_WINGS = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "arbitrium_wings_flight");
 
     public ArbitriumWings() {
         super(new Item.Properties()
@@ -37,32 +41,22 @@ public class ArbitriumWings extends CurioBaseItem {
     }
 
     @Override
-    public void appendHoverText(@NotNull ItemStack stack,
-                                @NotNull TooltipContext context,
-                                @NotNull List<Component> lines,
-                                @NotNull TooltipFlag flag) {
+    public void appendHoverText(@NotNull ItemStack stack, @NotNull TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, context, lines, flag);
 
-        // Custom item description section
-        lines.add(Component.translatable("item.hazennstuff.arbitrium_robes.description")
-                .withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC));
+        lines.add(
+                Component.translatable("item.hazennstuff.arbitrium_robes.description")
+                        .withStyle(ChatFormatting.WHITE, ChatFormatting.ITALIC)
+        );
     }
-
-
 
     @Override
     public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {
-        Multimap<Holder<Attribute>, AttributeModifier> attr = LinkedHashMultimap.create();
-        CaelusApi.getInstance().getFallFlyingAttribute();
-        return attr;
-    }
+        Multimap<Holder<Attribute>, AttributeModifier> attributes = LinkedHashMultimap.create();
 
-    private static final int GLIDE_ANIMATION = 0;
+        attributes.put(FALL_FLY_ATTRIBUTE, new AttributeModifier(ARBITRIUM_WINGS, 1.0D, AttributeModifier.Operation.ADD_VALUE));
 
-    private void handleFlightState(Player player, ItemStack stack) {
-        if (GLIDE_ANIMATION == 0) {
-            dispatcher.flight(player, stack);
-        }
+        return attributes;
     }
 
     @Override
@@ -80,6 +74,15 @@ public class ArbitriumWings extends CurioBaseItem {
             dispatcher.idle(player, stack);
         }
     }
+
+    private static final int GLIDE_ANIMATION = 0;
+
+    private void handleFlightState(Player player, ItemStack stack) {
+        if (GLIDE_ANIMATION == 0) {
+            dispatcher.flight(player, stack);
+        }
+    }
+
 
     @Override
     public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {

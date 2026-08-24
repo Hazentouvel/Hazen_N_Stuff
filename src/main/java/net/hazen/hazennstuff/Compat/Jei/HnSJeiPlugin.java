@@ -7,7 +7,6 @@ import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
-import net.hazen.hazennstuff.Item.Block.Starforge.StarForgeRecipeCategory;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;

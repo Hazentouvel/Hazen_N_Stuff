@@ -24,7 +24,7 @@ public class StarForgeMenu extends AbstractContainerMenu {
     private static final int MAIN_1_X = 68, MAIN_1_Y = 36;
     private static final int MAIN_2_X = 92, MAIN_2_Y = 36;
     private static final int MAIN_3_X = 80, MAIN_3_Y = 58;
-    private static final int FUEL_X = 27, FUEL_Y = 98;
+    private static final int FUEL_X = 28, FUEL_Y = 97;
     private static final int OUTPUT_X = 80, OUTPUT_Y = 98;
     private static final int ARTIFACT_X = 133, ARTIFACT_Y = 98;
 

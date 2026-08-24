@@ -29,6 +29,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -148,7 +149,13 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
         return ArtifactModifiers.NONE;
     }
 
+    private boolean hasExperienceArtifact() {
+        return items.getStackInSlot(SLOT_ARTIFACT).is(EXPERIENCE_ARTIFACTS);
+    }
 
+    private boolean hasNonConsumableArtifact() {
+        return items.getStackInSlot(SLOT_ARTIFACT).is(NONCONSUMABLE_ARTIFACTS);
+    }
 
     private int progress = 0;
     private int maxProgress = StarForgeRecipe.DEFAULT_SMELT_TIME;
@@ -412,9 +419,19 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
     private void craft(StarForgeRecipe recipe, StarForgeRecipe.Input input, ItemStack result) {
         int[] assignment = recipe.findAssignment(input);
         if (assignment == null) return;
+        boolean nonConsumable = hasNonConsumableArtifact();
 
         for (int i = 0; i < assignment.length; i++) {
-            items.getStackInSlot(assignment[i]).shrink(recipe.countFor(i));
+            ItemStack stack = items.getStackInSlot(assignment[i]);
+            int count = recipe.countFor(i);
+
+            if (nonConsumable) {
+                for (int j = 0; j < count; j++) {
+                    if (level.random.nextFloat() >= 0.15f) stack.shrink(1);
+                }
+            } else {
+                stack.shrink(count);
+            }
         }
 
         ItemStack out = items.getStackInSlot(SLOT_OUTPUT);
@@ -424,9 +441,21 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
             out.grow(result.getCount());
         }
 
+        if (level instanceof ServerLevel serverLevel && hasExperienceArtifact() && recipe.experience() > 0.0f) {
+            awardExperience(serverLevel, recipe.experience());
+        }
+
+
         if (level != null) {
             level.playSound(null, worldPosition, SoundEvents.EXPERIENCE_ORB_PICKUP,
                     SoundSource.BLOCKS, 1.0f, 1.0f);
+        }
+    }
+
+    private void awardExperience(ServerLevel level, float experience) {
+        int xp = Math.round(experience);
+        if (xp > 0) {
+            ExperienceOrb.award(level, Vec3.atCenterOf(worldPosition), xp);
         }
     }
 

@@ -25,5 +25,6 @@
     "id": "hazennstuff:starkissed_zenalite",
     "count": 1
   },
-  "smelt_time": 300
+  "smelt_time": 300,
+  "experience": 14
 }

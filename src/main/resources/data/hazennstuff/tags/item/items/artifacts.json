@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "#hazennstuff:items/potent_artifacts"
+    "#hazennstuff:items/potent_artifacts",
+    "#hazennstuff:items/nonconsumable_artifacts",
+    "#hazennstuff:items/experience_artifacts"
   ]
 }

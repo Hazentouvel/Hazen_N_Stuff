@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Block.Starforge;
+package net.hazen.hazennstuff.Compat.Jei;
 
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
@@ -11,9 +11,9 @@ import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
-import net.hazen.hazennstuff.Compat.Jei.StarForgeRecipeJei;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
+import net.hazen.hazennstuff.Item.Block.Starforge.StarForgeRecipe;
 import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;

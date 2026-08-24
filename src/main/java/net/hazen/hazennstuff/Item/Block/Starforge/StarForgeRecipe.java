@@ -26,11 +26,13 @@ import java.util.List;
 public record StarForgeRecipe(
         List<SizedInput> ingredients,
         ItemStack result,
-        int smeltTime
+        int smeltTime,
+        float experience
 ) implements Recipe<StarForgeRecipe.Input> {
 
     public static final int MAX_INGREDIENTS = 3;
     public static final int DEFAULT_SMELT_TIME = 200;
+    public static final float DEFAULT_EXPERIENCE = 0.0f;
 
     public record SizedInput(Ingredient ingredient, int count) {
 
@@ -177,7 +179,18 @@ public record StarForgeRecipe(
                 Codec.INT.optionalFieldOf("smelt_time", DEFAULT_SMELT_TIME).flatXmap(time ->
                                 time > 0 ? DataResult.success(time)
                                         : DataResult.error(() -> "smelt_time must be positive"),
-                        DataResult::success).forGetter(StarForgeRecipe::smeltTime)
+                        DataResult::success).forGetter(StarForgeRecipe::smeltTime),
+
+                Codec.FLOAT.optionalFieldOf("experience", DEFAULT_EXPERIENCE)
+                        .flatXmap(
+                                experience -> experience >= 0.0f
+                                        ? DataResult.success(experience)
+                                        : DataResult.error(() ->
+                                        "experience must not be negative"),
+                                DataResult::success
+                        )
+                        .forGetter(StarForgeRecipe::experience)
+
         ).apply(builder, StarForgeRecipe::new));
 
         public static final StreamCodec<RegistryFriendlyByteBuf, StarForgeRecipe> STREAM_CODEC =
@@ -185,6 +198,7 @@ public record StarForgeRecipe(
                         SizedInput.STREAM_CODEC.apply(ByteBufCodecs.list()), StarForgeRecipe::ingredients,
                         ItemStack.STREAM_CODEC, StarForgeRecipe::result,
                         ByteBufCodecs.VAR_INT, StarForgeRecipe::smeltTime,
+                        ByteBufCodecs.FLOAT, StarForgeRecipe::experience,
                         StarForgeRecipe::new
                 );
 

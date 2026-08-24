@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.ObjectIterator;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Item.Block.GeckolibBlockEntity;
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
 import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
 import net.hazen.hazennstuff.Registries.HnSRecipes;
@@ -54,7 +55,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Optional;
 
-public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity, MenuProvider {
+public class StarForgeBlockEntity extends GeckolibBlockEntity implements GeoBlockEntity, MenuProvider {
 
     public static final int SLOT_MAIN_1 = 0;
     public static final int SLOT_MAIN_2 = 1;
@@ -79,6 +80,10 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
 
     public static final TagKey<Item> NONCONSUMABLE_ARTIFACTS = TagKey.create(Registries.ITEM,
             ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "items/nonconsumable_artifacts"));
+
+    public static final TagKey<Item> ALWAYS_CONSUMABLE = TagKey.create(Registries.ITEM,
+            ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "items/always_consumable"));
+
 
     public static final TagKey<Item> FULL_RECHARGE_FUEL = TagKey.create(Registries.ITEM,
             ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "items/full_recharge_fuel"));
@@ -393,6 +398,10 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
         if (stack.isEmpty()) return false;
 
         if (stack.is(FULL_RECHARGE_FUEL)) {
+            if (fuel >= MAX_FUEL / 10) {
+                return false;
+            }
+
             fuel = MAX_FUEL;
         } else if (stack.is(PARTIAL_FUEL)) {
             if (fuel + FUEL_PER_ITEM > MAX_FUEL) return false;
@@ -425,6 +434,11 @@ public class StarForgeBlockEntity extends BlockEntity implements GeoBlockEntity,
             ItemStack stack = items.getStackInSlot(assignment[i]);
             int count = recipe.countFor(i);
 
+
+            if (stack.is(ALWAYS_CONSUMABLE)) {
+                stack.shrink(count);
+                continue;
+            }
             if (nonConsumable) {
                 for (int j = 0; j < count; j++) {
                     if (level.random.nextFloat() >= 0.15f) stack.shrink(1);

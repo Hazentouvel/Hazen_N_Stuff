@@ -6,7 +6,7 @@
 				"identifier": "geometry.unknown",
 				"texture_width": 256,
 				"texture_height": 256,
-				"visible_bounds_width": 4,
+				"visible_bounds_width": 5,
 				"visible_bounds_height": 3.5,
 				"visible_bounds_offset": [0, 1.25, 0]
 			},
@@ -148,7 +148,7 @@
 					"parent": "magicCircle",
 					"pivot": [0, 15, 0],
 					"cubes": [
-						{"origin": [-24, 15, -24], "size": [48, 0, 48], "uv": [112, 208]}
+						{"origin": [-24, 15, -24], "size": [48, 0, 48], "inflate": 0.025, "uv": [112, 208]}
 					]
 				},
 				{
@@ -156,8 +156,8 @@
 					"parent": "magicCircle",
 					"pivot": [0, 1, 0],
 					"cubes": [
-						{"origin": [-16, 1, -16], "size": [32, 0, 32], "uv": [160, 175]},
-						{"origin": [-16, 1.2, -16], "size": [32, 0, 32], "pivot": [0, 1.2, 0], "rotation": [0, 45, 0], "uv": [160, 175]}
+						{"origin": [-16, 1, -16], "size": [32, 0, 32], "inflate": 0.025, "uv": [160, 175]},
+						{"origin": [-16, 1.2, -16], "size": [32, 0, 32], "inflate": 0.025, "pivot": [0, 1.2, 0], "rotation": [0, 45, 0], "uv": [160, 175]}
 					]
 				},
 				{
@@ -166,7 +166,7 @@
 					"pivot": [0, 27, 0],
 					"rotation": [0, 45, 0],
 					"cubes": [
-						{"origin": [-12, 27, -12], "size": [24, 0, 24], "uv": [184, 151]}
+						{"origin": [-12, 27, -12], "size": [24, 0, 24], "inflate": 0.025, "uv": [184, 151]}
 					]
 				}
 			]

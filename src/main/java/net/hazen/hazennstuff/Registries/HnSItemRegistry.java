@@ -196,6 +196,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.Unbreakable;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -3710,6 +3711,326 @@ public class HnSItemRegistry {
     public static final DeferredHolder<Item, Item> NAMELESS_ONE_LEGGINGS = ITEMS.register("nameless_one_leggings", () -> new NamelessOneArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
             .stacksTo(1)
             .durability(ArmorItem.Type.LEGGINGS.getDurability(37))
+    ));
+
+    /*
+    *** Blocks
+     */
+
+    public static final DeferredHolder<Item, Item> RUNESTONE_SLAG = ITEMS.register("runestone_slag", () -> new BlockItem((Block)
+            HnSBlocks.RUNESTONE_SLAG.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> AQUASTONE = ITEMS.register("aquastone", () -> new BlockItem((Block)
+            HnSBlocks.AQUASTONE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    //Nether Blocks
+
+    public static final DeferredHolder<Item, Item> FIREBLOSSOM = ITEMS.register("fireblossom", () -> new BlockItem((Block)
+            HnSBlocks.FIREBLOSSOM.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    //End Blocks
+
+    public static final DeferredHolder<Item, Item> ABYSSLATE = ITEMS.register("abysslate", () -> new BlockItem((Block)
+            HnSBlocks.ABYSSLATE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> PHANTASMIUM = ITEMS.register("phantasmium", () -> new BlockItem((Block)
+            HnSBlocks.PHANTASMIUM.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> VOIDSTONE = ITEMS.register("voidstone", () -> new BlockItem((Block)
+            HnSBlocks.VOIDSTONE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> COBBLED_VOIDSTONE = ITEMS.register("cobbled_voidstone", () -> new BlockItem((Block)
+            HnSBlocks.COBBLED_VOIDSTONE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    // Zenalite Set
+
+    public static final DeferredHolder<Item, Item> ZENALITE_BRICKS = ITEMS.register("zenalite_bricks", () -> new BlockItem((Block)
+            HnSBlocks.ZENALITE_BRICKS.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> ZENALITE_BRICK_STAIRS = ITEMS.register("zenalite_brick_stairs", () -> new BlockItem((Block)
+            HnSBlocks.ZENALITE_BRICK_STAIRS.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> ZENALITE_BRICK_SLAB = ITEMS.register("zenalite_brick_slab", () -> new BlockItem((Block)
+            HnSBlocks.ZENALITE_BRICK_SLAB.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> ZENALITE_BRICK_WALL = ITEMS.register("zenalite_brick_wall", () -> new BlockItem((Block)
+            HnSBlocks.ZENALITE_BRICK_WALL.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    // Mossy Mud Brick Set
+
+    public static final DeferredHolder<Item, Item> MOSSY_MUD_BRICKS = ITEMS.register("mossy_mud_bricks", () -> new BlockItem((Block)
+            HnSBlocks.MOSSY_MUD_BRICKS.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> MOSSY_MUD_BRICK_STAIRS = ITEMS.register("mossy_mud_brick_stairs", () -> new BlockItem((Block)
+            HnSBlocks.MOSSY_MUD_BRICK_STAIRS.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> MOSSY_MUD_BRICK_SLAB = ITEMS.register("mossy_mud_brick_slab", () -> new BlockItem((Block)
+            HnSBlocks.MOSSY_MUD_BRICK_SLAB.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> MOSSY_MUD_BRICK_WALL = ITEMS.register("mossy_mud_brick_wall", () -> new BlockItem((Block)
+            HnSBlocks.MOSSY_MUD_BRICK_WALL.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    // Wisewood Set
+
+    public static final DeferredHolder<Item, Item> WISEWOOD_PLANKS = ITEMS.register("wisewood_planks", () -> new BlockItem((Block)
+            HnSBlocks.WISEWOOD_PLANKS.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> WISEWOOD_LOG = ITEMS.register("wisewood_log", () -> new BlockItem((Block)
+            HnSBlocks.WISEWOOD_LOG.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> WISEWOOD_WOOD = ITEMS.register("wisewood_wood", () -> new BlockItem((Block)
+            HnSBlocks.WISEWOOD_WOOD.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> STRIPPED_WISEWOOD_LOG = ITEMS.register("stripped_wisewood_log", () -> new BlockItem((Block)
+            HnSBlocks.STRIPPED_WISEWOOD_LOG.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> STRIPPED_WISEWOOD_WOOD = ITEMS.register("stripped_wisewood_wood", () -> new BlockItem((Block)
+            HnSBlocks.STRIPPED_WISEWOOD_WOOD.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> WISEWOOD_LEAVES = ITEMS.register("wisewood_leaves", () -> new BlockItem((Block)
+            HnSBlocks.WISEWOOD_LEAVES.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> WISEWOOD_STAIRS = ITEMS.register("wisewood_stairs", () -> new BlockItem((Block)
+            HnSBlocks.WISEWOOD_STAIRS.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> WISEWOOD_SLAB = ITEMS.register("wisewood_slab", () -> new BlockItem((Block)
+            HnSBlocks.WISEWOOD_SLAB.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> WISEWOOD_FENCE_GATE = ITEMS.register("wisewood_fence_gate", () -> new BlockItem((Block)
+            HnSBlocks.WISEWOOD_FENCE_GATE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> WISEWOOD_FENCE = ITEMS.register("wisewood_fence", () -> new BlockItem((Block)
+            HnSBlocks.WISEWOOD_FENCE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> WISEWOOD_DOOR = ITEMS.register("wisewood_door", () -> new BlockItem((Block)
+            HnSBlocks.WISEWOOD_DOOR.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> WISEWOOD_TRAPDOOR = ITEMS.register("wisewood_trapdoor", () -> new BlockItem((Block)
+            HnSBlocks.WISEWOOD_TRAPDOOR.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> WISEWOOD_PRESSURE_PLATE = ITEMS.register("wisewood_pressure_plate", () -> new BlockItem((Block)
+            HnSBlocks.WISEWOOD_PRESSURE_PLATE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> WISEWOOD_BUTTON = ITEMS.register("wisewood_button", () -> new BlockItem((Block)
+            HnSBlocks.WISEWOOD_BUTTON.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> WISEWOOD_SAPLING = ITEMS.register("wisewood_sapling", () -> new BlockItem((Block)
+            HnSBlocks.WISEWOOD_SAPLING.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    // Frostbite Birch Set
+
+    public static final DeferredHolder<Item, Item> FROSTBITE_BIRCH_PLANKS = ITEMS.register("frostbite_birch_planks", () -> new BlockItem((Block)
+            HnSBlocks.FROSTBITE_BIRCH_PLANKS.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> FROSTBITE_BIRCH_NAILED_PLANKS = ITEMS.register("frostbite_birch_nailed_planks", () -> new BlockItem((Block)
+            HnSBlocks.FROSTBITE_BIRCH_NAILED_PLANKS.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> FROSTBITE_BIRCH_LOG = ITEMS.register("frostbite_birch_log", () -> new BlockItem((Block)
+            HnSBlocks.FROSTBITE_BIRCH_LOG.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> FROSTBITE_BIRCH_WOOD = ITEMS.register("frostbite_birch_wood", () -> new BlockItem((Block)
+            HnSBlocks.FROSTBITE_BIRCH_WOOD.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> STRIPPED_FROSTBITE_BIRCH_LOG = ITEMS.register("stripped_frostbite_birch_log", () -> new BlockItem((Block)
+            HnSBlocks.STRIPPED_FROSTBITE_BIRCH_LOG.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> STRIPPED_FROSTBITE_BIRCH_WOOD = ITEMS.register("stripped_frostbite_birch_wood", () -> new BlockItem((Block)
+            HnSBlocks.STRIPPED_FROSTBITE_BIRCH_WOOD.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> PERMAFROST_LEAVES = ITEMS.register("permafrost_leaves", () -> new BlockItem((Block)
+            HnSBlocks.PERMAFROST_LEAVES.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> FROSTBITE_BIRCH_STAIRS = ITEMS.register("frostbite_birch_stairs", () -> new BlockItem((Block)
+            HnSBlocks.FROSTBITE_BIRCH_STAIRS.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> FROSTBITE_BIRCH_SLAB = ITEMS.register("frostbite_birch_slab", () -> new BlockItem((Block)
+            HnSBlocks.FROSTBITE_BIRCH_SLAB.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> FROSTBITE_BIRCH_FENCE_GATE = ITEMS.register("frostbite_birch_fence_gate", () -> new BlockItem((Block)
+            HnSBlocks.FROSTBITE_BIRCH_FENCE_GATE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> FROSTBITE_BIRCH_FENCE = ITEMS.register("frostbite_birch_fence", () -> new BlockItem((Block)
+            HnSBlocks.FROSTBITE_BIRCH_FENCE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+//    public static final DeferredHolder<Item, Item> FROSTBITE_BIRCH_DOOR = ITEMS.register("frostbite_birch_door", () -> new BlockItem((Block)
+//            HnSBlocks.FROSTBITE_BIRCH_DOOR.get(), new Item.Properties()
+//            //.rarity(Rarity.UNCOMMON)
+//    ));
+//
+//    public static final DeferredHolder<Item, Item> FROSTBITE_BIRCH_TRAPDOOR = ITEMS.register("frostbite_birch_trapdoor", () -> new BlockItem((Block)
+//            HnSBlocks.FROSTBITE_BIRCH_TRAPDOOR.get(), new Item.Properties()
+//            //.rarity(Rarity.UNCOMMON)
+//    ));
+
+    public static final DeferredHolder<Item, Item> FROSTBITE_BIRCH_PRESSURE_PLATE = ITEMS.register("frostbite_birch_pressure_plate", () -> new BlockItem((Block)
+            HnSBlocks.FROSTBITE_BIRCH_PRESSURE_PLATE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> FROSTBITE_BIRCH_BUTTON = ITEMS.register("frostbite_birch_button", () -> new BlockItem((Block)
+            HnSBlocks.FROSTBITE_BIRCH_BUTTON.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> FROSTBITE_BIRCH_SAPLING = ITEMS.register("frostbite_birch_sapling", () -> new BlockItem((Block)
+            HnSBlocks.FROSTBITE_BIRCH_SAPLING.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    // Ores
+
+    public static final DeferredHolder<Item, Item> ZENALITE_STONE_ORE = ITEMS.register("zenalite_stone_ore", () -> new BlockItem((Block)
+            HnSBlocks.ZENALITE_STONE_ORE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> ZENALITE_DEEPSLATE_ORE = ITEMS.register("zenalite_deepslate_ore", () -> new BlockItem((Block)
+            HnSBlocks.ZENALITE_DEEPSLATE_ORE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> ZENALITE_END_STONE_ORE = ITEMS.register("zenalite_end_stone_ore", () -> new BlockItem((Block)
+            HnSBlocks.ZENALITE_END_STONE_ORE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> ZENALITE_ABYSSLATE_ORE = ITEMS.register("zenalite_abysslate_ore", () -> new BlockItem((Block)
+            HnSBlocks.ZENALITE_ABYSSLATE_ORE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> ZENALITE_VOIDSTONE_ORE = ITEMS.register("zenalite_voidstone_ore", () -> new BlockItem((Block)
+            HnSBlocks.ZENALITE_VOIDSTONE_ORE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> SOLAR_CORE_BLACKSTONE_ORE = ITEMS.register("solar_core_blackstone_ore", () -> new BlockItem((Block)
+            HnSBlocks.SOLAR_CORE_BLACKSTONE_ORE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> SOLAR_CORE_NETHERACK_ORE = ITEMS.register("solar_core_netherack_ore", () -> new BlockItem((Block)
+            HnSBlocks.SOLAR_CORE_NETHERACK_ORE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> DREADSTONE_ORE = ITEMS.register("dreadstone_ore", () -> new BlockItem((Block)
+            HnSBlocks.DREADSTONE_ORE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> CHLOROPHYTE_ORE = ITEMS.register("chlorophyte_ore", () -> new BlockItem((Block)
+            HnSBlocks.CHLOROPHYTE_ORE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    // Compact Blocks
+
+    public static final DeferredHolder<Item, Item> ZENALITE_BLOCK = ITEMS.register("zenalite_block", () -> new BlockItem((Block)
+            HnSBlocks.ZENALITE_BLOCK.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> PYRIUM_BLOCK = ITEMS.register("pyrium_block", () -> new BlockItem((Block)
+            HnSBlocks.PYRIUM_BLOCK.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> MITHRIL_BLOCK = ITEMS.register("mithril_block", () -> new BlockItem((Block)
+            HnSBlocks.MITHRIL_BLOCK.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> ARCANE_STEEL_BLOCK = ITEMS.register("arcane_steel_block", () -> new BlockItem((Block)
+            HnSBlocks.ARCANE_STEEL_BLOCK.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> STARFORGE = ITEMS.register("starforge", () -> new BlockItem((Block)
+            HnSBlocks.STARFORGE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
     ));
 
     public static Collection<DeferredHolder<Item, ? extends Item>> getHnSItems()

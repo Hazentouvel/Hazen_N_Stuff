@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Item.Block.Statues.HazelStatue;
 
+import net.hazen.hazennstuff.Item.Block.GeckolibBlockEntity;
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -9,7 +10,7 @@ import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-public class HazelStatueBlockEntity extends BlockEntity implements GeoBlockEntity {
+public class HazelStatueBlockEntity extends GeckolibBlockEntity implements GeoBlockEntity {
 
     private static final RawAnimation DEPLOY_ANIM =
             RawAnimation.begin()

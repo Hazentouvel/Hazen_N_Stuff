@@ -47,6 +47,8 @@ public class StarForgeBlockRenderer extends GeoBlockRenderer<StarForgeBlockEntit
 
     public StarForgeBlockRenderer(BlockEntityRendererProvider.Context context) {
         super(new StarForgeBlockModel());
+
+        this.addRenderLayer(new StarForgeEmissiveLayer(this));
     }
 
     @Override

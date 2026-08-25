@@ -1,9 +1,8 @@
-package net.hazen.hazennstuff.Item.Block.Statues.HazelStatue;
+package net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose1;
 
 import net.hazen.hazennstuff.Item.Block.GeckolibBlockEntity;
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import software.bernie.geckolib.animatable.GeoBlockEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;

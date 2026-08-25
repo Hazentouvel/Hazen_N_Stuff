@@ -1,17 +1,16 @@
 package net.hazen.hazennstuff.Item.Block;
 
 import net.hazen.hazennstuff.Item.Block.Starforge.StarForgeBlock;
-import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.HazelStatue;
+import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose1.HazelStatue;
 import net.hazen.hazennstuff.Datagen.Worldgen.Biomes.Trees.HnSTreeGrower;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -29,13 +28,7 @@ public class HnSBlocks {
         public static final DeferredRegister.Blocks BLOCKS =
                 DeferredRegister.createBlocks(HazenNStuff.MOD_ID);
 
-        //Statues
-        public static final DeferredBlock<Block> HAZEL_STATUE = registerBlock("hazel_statue",
-                () -> new HazelStatue(BlockBehaviour
-                        .Properties.of()
-                        .noOcclusion())
-        );
-
+        public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, HazenNStuff.MOD_ID);
 
 
         //Overworld Blocks
@@ -640,6 +633,13 @@ public class HnSBlocks {
                         .noOcclusion()
                         .pushReaction(PushReaction.BLOCK)
                 ));
+
+        //Statues
+        public static final DeferredBlock<Block> HAZEL_STATUE = registerBlock("hazel_statue",
+                () -> new HazelStatue(BlockBehaviour
+                        .Properties.of()
+                        .noOcclusion())
+        );
 
         private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
                 DeferredBlock<T> toReturn = BLOCKS.register(name, block);

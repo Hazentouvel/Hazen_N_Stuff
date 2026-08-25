@@ -1,7 +1,7 @@
 package net.hazen.hazennstuff.Item.Block;
 
 import net.hazen.hazennstuff.Item.Block.Starforge.StarForgeBlockEntity;
-import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.HazelStatueBlockEntity;
+import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose1.HazelStatueBlockEntity;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;

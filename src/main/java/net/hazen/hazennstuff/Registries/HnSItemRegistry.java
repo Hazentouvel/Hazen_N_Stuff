@@ -99,6 +99,8 @@ import net.hazen.hazennstuff.Item.Armor.SchoolTier.RadiantCrystal.AzureLib.Radia
 import net.hazen.hazennstuff.Item.Armor.SchoolTier.RadiantCrystal.GeckolibRadiantCrystalArmorItem;
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Item.Block.Starforge.Item.StarForgeItem;
+import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose1.Item.HazelStatueItem;
 import net.hazen.hazennstuff.Item.Curios.Crystals.LifeCrystals.SacredCurio;
 import net.hazen.hazennstuff.Item.Curios.Crystals.LifeCrystals.ShatteredCurio;
 import net.hazen.hazennstuff.Item.Curios.Crystals.LifeCrystals.SingularityCurio;
@@ -245,13 +247,6 @@ public class HnSItemRegistry {
     /*
     *** [Blocks] **************************************************************************
      */
-
-
-    // Statues
-
-    public static final DeferredHolder<Item, Item> HAZEL_STATUE = ITEMS.register("hazel_statue_model",
-            () -> new BlockItem(HnSBlocks.HAZEL_STATUE.get(), new Item.Properties())
-    );
 
     /*
      *** [Upgrade Orbs] **************************************************************************
@@ -4028,8 +4023,13 @@ public class HnSItemRegistry {
             //.rarity(Rarity.UNCOMMON)
     ));
 
-    public static final DeferredHolder<Item, Item> STARFORGE = ITEMS.register("starforge", () -> new BlockItem((Block)
+    public static final DeferredHolder<Item, Item> STARFORGE = ITEMS.register("starforge", () -> new StarForgeItem((Block)
             HnSBlocks.STARFORGE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> HAZEL_STATUE = ITEMS.register("hazel_statue", () -> new HazelStatueItem((Block)
+            HnSBlocks.HAZEL_STATUE.get(), new Item.Properties()
             //.rarity(Rarity.UNCOMMON)
     ));
 

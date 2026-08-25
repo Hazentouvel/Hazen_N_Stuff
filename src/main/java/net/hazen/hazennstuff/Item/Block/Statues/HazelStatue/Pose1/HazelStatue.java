@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Block.Statues.HazelStatue;
+package net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose1;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;

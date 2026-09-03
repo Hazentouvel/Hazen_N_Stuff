@@ -6,6 +6,5 @@ import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
 public class HazelStatueItemRenderer extends GeoItemRenderer<HazelStatueItem> {
     public HazelStatueItemRenderer() {
         super(new HazelStatueItemModel());
-        addRenderLayer(new AutoGlowingGeoLayer<>(this));
     }
 }

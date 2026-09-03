@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Weapons.Generic.FrostburnDagger;
+package net.hazen.hazennstuff.Item.Weapons.Special.FrostburnDagger;
 
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 

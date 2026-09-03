@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife;
+package net.hazen.hazennstuff.Entity.Projectiles.LifestealKnife;
 
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.resources.ResourceLocation;

@@ -8,7 +8,7 @@ import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
-import net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife.VampireKnife;
+import net.hazen.hazennstuff.Entity.Projectiles.LifestealKnife.VampireKnife;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.hazen.hazennstuff.Registries.HnSSounds;

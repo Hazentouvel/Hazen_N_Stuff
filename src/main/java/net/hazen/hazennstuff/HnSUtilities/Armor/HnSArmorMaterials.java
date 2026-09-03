@@ -174,7 +174,7 @@ public class HnSArmorMaterials {
             15,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
             () -> Ingredient.of(ItemRegistry.MAGIC_CLOTH.get()),
-            2,
+            4,
             0F);
 
 

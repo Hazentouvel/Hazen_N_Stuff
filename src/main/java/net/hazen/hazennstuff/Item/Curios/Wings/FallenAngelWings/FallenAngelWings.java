@@ -1,9 +1,17 @@
 package net.hazen.hazennstuff.Item.Curios.Wings.FallenAngelWings;
 
+import com.google.common.collect.LinkedHashMultimap;
+import com.google.common.collect.Multimap;
+import com.illusivesoulworks.caelus.api.CaelusApi;
+import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazentouvelib.Items.Curios.Wings.WingCurioItem;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.core.Holder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -21,6 +29,9 @@ public class FallenAngelWings extends WingCurioItem {
                 .rarity(HLRarities.DEUS_RARITY.getValue())
         );
     }
+
+    private static final Holder<Attribute> FALL_FLY_ATTRIBUTE = CaelusApi.getInstance().getFallFlyingAttribute();
+    private static final ResourceLocation FALLEN_ANGEL_WINGS = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "fallen_angel_wings_flight");
 
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
@@ -58,6 +69,15 @@ public class FallenAngelWings extends WingCurioItem {
                 player.startFallFlying();
             }
         }
+    }
+
+    @Override
+    public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {
+        Multimap<Holder<Attribute>, AttributeModifier> attributes = LinkedHashMultimap.create();
+
+        attributes.put(FALL_FLY_ATTRIBUTE, new AttributeModifier(FALLEN_ANGEL_WINGS, 1.0D, AttributeModifier.Operation.ADD_VALUE));
+
+        return attributes;
     }
 
     @Override

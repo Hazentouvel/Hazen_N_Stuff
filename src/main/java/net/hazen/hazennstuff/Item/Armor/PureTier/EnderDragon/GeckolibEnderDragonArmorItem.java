@@ -5,6 +5,8 @@ import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
+import net.hazen.hazennstuff.Compat.CelestisynthCompat;
+import net.hazen.hazennstuff.Compat.GoetyCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
@@ -35,6 +37,10 @@ public class GeckolibEnderDragonArmorItem extends ImbuableGeckolibHnSArmorItem i
         MalumCompat.addArcaneResonance(attributes, group);
         ArsNoveauCompat.addMaxMana(attributes, group);
         ArsNoveauCompat.addManaRegen(attributes, group);
+        CelestisynthCompat.addCelestialDamage(attributes, group);
+        GoetyCompat.addSpellPotency(attributes, group);
+        GoetyCompat.addCastingSpeed(attributes, group);
+        GoetyCompat.addVoidPotency(attributes, group);
         return attributes.build().modifiers();
     }
 

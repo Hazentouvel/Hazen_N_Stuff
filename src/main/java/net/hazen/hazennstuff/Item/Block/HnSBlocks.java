@@ -4,6 +4,9 @@ import net.hazen.hazennstuff.Item.Block.Starforge.StarForgeBlock;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose1.HazelStatue;
 import net.hazen.hazennstuff.Datagen.Worldgen.Biomes.Trees.HnSTreeGrower;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose2.HazelStatuePose1;
+import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose3.HazelStatuePose2;
+import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose4.HazelStatuePose3;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
@@ -637,6 +640,24 @@ public class HnSBlocks {
         //Statues
         public static final DeferredBlock<Block> HAZEL_STATUE = registerBlock("hazel_statue",
                 () -> new HazelStatue(BlockBehaviour
+                        .Properties.of()
+                        .noOcclusion())
+        );
+
+        public static final DeferredBlock<Block> HAZEL_STATUE_POSE_1 = registerBlock("hazel_statue_pose_1",
+                () -> new HazelStatuePose1(BlockBehaviour
+                        .Properties.of()
+                        .noOcclusion())
+        );
+
+        public static final DeferredBlock<Block> HAZEL_STATUE_POSE_2 = registerBlock("hazel_statue_pose_2",
+                () -> new HazelStatuePose2(BlockBehaviour
+                        .Properties.of()
+                        .noOcclusion())
+        );
+
+        public static final DeferredBlock<Block> HAZEL_STATUE_POSE_3 = registerBlock("hazel_statue_pose_3",
+                () -> new HazelStatuePose3(BlockBehaviour
                         .Properties.of()
                         .noOcclusion())
         );

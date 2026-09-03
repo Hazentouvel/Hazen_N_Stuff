@@ -12,6 +12,8 @@ import io.redspace.ironsspellbooks.spells.fire.RaiseHellSpell;
 import io.redspace.ironsspellbooks.util.MinecraftInstanceHelper;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
+import net.hazen.hazennstuff.Compat.CelestisynthCompat;
+import net.hazen.hazennstuff.Compat.GoetyCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
@@ -61,6 +63,11 @@ public class GarmentsOfTheFirstFlamebearerArmorItem extends ImbuableGeckolibHnSA
         MalumCompat.addArcaneResonance(attributes, group);
         ArsNoveauCompat.addMaxMana(attributes, group);
         ArsNoveauCompat.addManaRegen(attributes, group);
+        CelestisynthCompat.addCelestialDamageParagon(attributes, group);
+        CelestisynthCompat.addCelestialResParagon(attributes, group);
+        GoetyCompat.addSpellPotency(attributes, group);
+        GoetyCompat.addNetherPotency(attributes, group);
+        GoetyCompat.addSpellBurning(attributes, group);
         return attributes.build().modifiers();
     }
 

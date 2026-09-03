@@ -233,6 +233,8 @@ public class HnSEffects {
             () -> new GenericHazenEffect(MobEffectCategory.NEUTRAL, 0x2E2EFF));
 
 
+    public static final DeferredHolder<MobEffect, MobEffect> CHARGED_STATE = MOB_EFFECTS.register("charged_state",
+            () -> new ChargeEffect(MobEffectCategory.BENEFICIAL, 0x2E2EFF));
     
     public static final DeferredHolder<MobEffect, MobEffect> TYROS_SOUL_STATE = MOB_EFFECTS.register("tyros_soul_state",
             () -> new GenericHazenEffect(MobEffectCategory.BENEFICIAL, 0x2E2EFF));

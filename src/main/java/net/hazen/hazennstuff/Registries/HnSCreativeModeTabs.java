@@ -128,19 +128,25 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.ELDRITCH_RUNE.get());
 
 
+                        // Artifacts
+                        output.accept(HnSItemRegistry.ENCHANTED_ARTIFACT.get());
+                        output.accept(HnSItemRegistry.SMITHERS_ARTIFACT.get());
+                        output.accept(HnSItemRegistry.DIVINE_ARTIFACT.get());
+
+
 
                     }).build());
 
     public static final Supplier<CreativeModeTab> HAZEN_N_STUFF_BLOCKS = CREATIVE_MODE_TAB.register("hazennstuff_blocks",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSBlocks.WISEWOOD_PLANKS.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(HnSItemRegistry.HAZEL_STATUE.get()))
                     .title(Component.translatable("creativetab.hazennstuff.hazennstuff_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
 
                         //Compact Blocks
-                        output.accept(HnSBlocks.ZENALITE_BLOCK);
-                        output.accept(HnSBlocks.PYRIUM_BLOCK);
-                        output.accept(HnSBlocks.MITHRIL_BLOCK);
-                        output.accept(HnSBlocks.ARCANE_STEEL_BLOCK);
+                        output.accept(HnSItemRegistry.ZENALITE_BLOCK.get());
+                        output.accept(HnSItemRegistry.PYRIUM_BLOCK.get());
+                        output.accept(HnSItemRegistry.MITHRIL_BLOCK.get());
+                        output.accept(HnSItemRegistry.ARCANE_STEEL_BLOCK.get());
 
 
                         /*
@@ -148,50 +154,50 @@ public class HnSCreativeModeTabs {
                          */
 
                         // Zenalite Brick
-                        output.accept(HnSBlocks.ZENALITE_BRICKS);
-                        output.accept(HnSBlocks.ZENALITE_BRICK_SLAB);
-                        output.accept(HnSBlocks.ZENALITE_BRICK_STAIRS);
-                        output.accept(HnSBlocks.ZENALITE_BRICK_WALL);
+                        output.accept(HnSItemRegistry.ZENALITE_BRICKS.get());
+                        output.accept(HnSItemRegistry.ZENALITE_BRICK_SLAB.get());
+                        output.accept(HnSItemRegistry.ZENALITE_BRICK_STAIRS.get());
+                        output.accept(HnSItemRegistry.ZENALITE_BRICK_WALL.get());
 
                         // Mossy Mud Bricks
-                        output.accept(HnSBlocks.MOSSY_MUD_BRICKS);
-                        output.accept(HnSBlocks.MOSSY_MUD_BRICK_STAIRS);
-                        output.accept(HnSBlocks.MOSSY_MUD_BRICK_SLAB);
-                        output.accept(HnSBlocks.MOSSY_MUD_BRICK_WALL);
+                        output.accept(HnSItemRegistry.MOSSY_MUD_BRICKS.get());
+                        output.accept(HnSItemRegistry.MOSSY_MUD_BRICK_STAIRS.get());
+                        output.accept(HnSItemRegistry.MOSSY_MUD_BRICK_SLAB.get());
+                        output.accept(HnSItemRegistry.MOSSY_MUD_BRICK_WALL.get());
 
                         //Wisewood Set
-                        output.accept(HnSBlocks.WISEWOOD_PLANKS);
-                        output.accept(HnSBlocks.WISEWOOD_DOOR);
-                        output.accept(HnSBlocks.WISEWOOD_TRAPDOOR);
-                        output.accept(HnSBlocks.WISEWOOD_SLAB);
-                        output.accept(HnSBlocks.WISEWOOD_FENCE);
-                        output.accept(HnSBlocks.WISEWOOD_FENCE_GATE);
-                        output.accept(HnSBlocks.WISEWOOD_STAIRS);
-                        output.accept(HnSBlocks.WISEWOOD_LEAVES);
-                        output.accept(HnSBlocks.WISEWOOD_LOG);
-                        output.accept(HnSBlocks.WISEWOOD_WOOD);
-                        output.accept(HnSBlocks.STRIPPED_WISEWOOD_LOG);
-                        output.accept(HnSBlocks.STRIPPED_WISEWOOD_WOOD);
-                        output.accept(HnSBlocks.WISEWOOD_BUTTON);
-                        output.accept(HnSBlocks.WISEWOOD_PRESSURE_PLATE);
+                        output.accept(HnSItemRegistry.WISEWOOD_PLANKS.get());
+                        output.accept(HnSItemRegistry.WISEWOOD_DOOR.get());
+                        output.accept(HnSItemRegistry.WISEWOOD_TRAPDOOR.get());
+                        output.accept(HnSItemRegistry.WISEWOOD_SLAB.get());
+                        output.accept(HnSItemRegistry.WISEWOOD_FENCE.get());
+                        output.accept(HnSItemRegistry.WISEWOOD_FENCE_GATE.get());
+                        output.accept(HnSItemRegistry.WISEWOOD_STAIRS.get());
+                        output.accept(HnSItemRegistry.WISEWOOD_LEAVES.get());
+                        output.accept(HnSItemRegistry.WISEWOOD_LOG.get());
+                        output.accept(HnSItemRegistry.WISEWOOD_WOOD.get());
+                        output.accept(HnSItemRegistry.STRIPPED_WISEWOOD_LOG.get());
+                        output.accept(HnSItemRegistry.STRIPPED_WISEWOOD_WOOD.get());
+                        output.accept(HnSItemRegistry.WISEWOOD_BUTTON.get());
+                        output.accept(HnSItemRegistry.WISEWOOD_PRESSURE_PLATE.get());
 
-                        output.accept(HnSBlocks.WISEWOOD_SAPLING);
+                        output.accept(HnSItemRegistry.WISEWOOD_SAPLING.get());
 
                         //Wisewood Set
-                        output.accept(HnSBlocks.FROSTBITE_BIRCH_PLANKS);
-                        output.accept(HnSBlocks.FROSTBITE_BIRCH_NAILED_PLANKS);
-                        output.accept(HnSBlocks.FROSTBITE_BIRCH_STAIRS);
-                        output.accept(HnSBlocks.FROSTBITE_BIRCH_SLAB);
-                        output.accept(HnSBlocks.FROSTBITE_BIRCH_LOG);
-                        output.accept(HnSBlocks.FROSTBITE_BIRCH_WOOD);
-                        output.accept(HnSBlocks.STRIPPED_FROSTBITE_BIRCH_LOG);
-                        output.accept(HnSBlocks.STRIPPED_FROSTBITE_BIRCH_WOOD);
-                        output.accept(HnSBlocks.FROSTBITE_BIRCH_FENCE_GATE);
-                        output.accept(HnSBlocks.FROSTBITE_BIRCH_FENCE);
-                        output.accept(HnSBlocks.FROSTBITE_BIRCH_BUTTON);
-                        output.accept(HnSBlocks.FROSTBITE_BIRCH_PRESSURE_PLATE);
+                        output.accept(HnSItemRegistry.FROSTBITE_BIRCH_PLANKS.get());
+                        output.accept(HnSItemRegistry.FROSTBITE_BIRCH_NAILED_PLANKS.get());
+                        output.accept(HnSItemRegistry.FROSTBITE_BIRCH_STAIRS.get());
+                        output.accept(HnSItemRegistry.FROSTBITE_BIRCH_SLAB.get());
+                        output.accept(HnSItemRegistry.FROSTBITE_BIRCH_LOG.get());
+                        output.accept(HnSItemRegistry.FROSTBITE_BIRCH_WOOD.get());
+                        output.accept(HnSItemRegistry.STRIPPED_FROSTBITE_BIRCH_LOG.get());
+                        output.accept(HnSItemRegistry.STRIPPED_FROSTBITE_BIRCH_WOOD.get());
+                        output.accept(HnSItemRegistry.FROSTBITE_BIRCH_FENCE_GATE.get());
+                        output.accept(HnSItemRegistry.FROSTBITE_BIRCH_FENCE.get());
+                        output.accept(HnSItemRegistry.FROSTBITE_BIRCH_BUTTON.get());
+                        output.accept(HnSItemRegistry.FROSTBITE_BIRCH_PRESSURE_PLATE.get());
 
-                        output.accept(HnSBlocks.FROSTBITE_BIRCH_SAPLING);
+                        output.accept(HnSItemRegistry.FROSTBITE_BIRCH_SAPLING.get());
 
 
                         /*
@@ -199,26 +205,26 @@ public class HnSCreativeModeTabs {
                          */
 
                         // Zenalite
-                        output.accept(HnSBlocks.ZENALITE_DEEPSLATE_ORE);
-                        output.accept(HnSBlocks.ZENALITE_STONE_ORE);
-                        output.accept(HnSBlocks.ZENALITE_END_STONE_ORE);
-                        output.accept(HnSBlocks.ZENALITE_ABYSSLATE_ORE);
-                        output.accept(HnSBlocks.ZENALITE_VOIDSTONE_ORE);
+                        output.accept(HnSItemRegistry.ZENALITE_DEEPSLATE_ORE.get());
+                        output.accept(HnSItemRegistry.ZENALITE_STONE_ORE.get());
+                        output.accept(HnSItemRegistry.ZENALITE_END_STONE_ORE.get());
+                        output.accept(HnSItemRegistry.ZENALITE_ABYSSLATE_ORE.get());
+                        output.accept(HnSItemRegistry.ZENALITE_VOIDSTONE_ORE.get());
 
-                        output.accept(HnSBlocks.SOLAR_CORE_BLACKSTONE_ORE);
-                        output.accept(HnSBlocks.SOLAR_CORE_NETHERACK_ORE);
+                        output.accept(HnSItemRegistry.SOLAR_CORE_BLACKSTONE_ORE.get());
+                        output.accept(HnSItemRegistry.SOLAR_CORE_NETHERACK_ORE.get());
 
-                        output.accept(HnSBlocks.DREADSTONE_ORE);
+                        output.accept(HnSItemRegistry.DREADSTONE_ORE.get());
 
-                        output.accept(HnSBlocks.CHLOROPHYTE_ORE);
+                        output.accept(HnSItemRegistry.CHLOROPHYTE_ORE.get());
 
 
 
                         /*
                         *** Overworld Blocks
                          */
-                        output.accept(HnSBlocks.RUNESTONE_SLAG);
-                        output.accept(HnSBlocks.AQUASTONE);
+                        output.accept(HnSItemRegistry.RUNESTONE_SLAG.get());
+                        output.accept(HnSItemRegistry.AQUASTONE.get());
 
                         /*
                         *** Nether Blocks
@@ -228,13 +234,23 @@ public class HnSCreativeModeTabs {
                         ***End Blocks
                          */
 
-                        output.accept(HnSBlocks.ABYSSLATE);
-                        output.accept(HnSBlocks.PHANTASMIUM);
-                        output.accept(HnSBlocks.COBBLED_VOIDSTONE);
-                        output.accept(HnSBlocks.VOIDSTONE);
+                        output.accept(HnSItemRegistry.ABYSSLATE.get());
+                        output.accept(HnSItemRegistry.PHANTASMIUM.get());
+                        output.accept(HnSItemRegistry.COBBLED_VOIDSTONE.get());
+                        output.accept(HnSItemRegistry.VOIDSTONE.get());
 
+                        /*
+                        *** Work Stations
+                         */
+                        output.accept(HnSItemRegistry.STARFORGE.get());
 
-                        output.accept(HnSBlocks.STARFORGE);
+                        /*
+                        *** Statues
+                         */
+                        output.accept(HnSItemRegistry.HAZEL_STATUE.get());
+                        output.accept(HnSItemRegistry.HAZEL_STATUE_POSE_1.get());
+                        output.accept(HnSItemRegistry.HAZEL_STATUE_POSE_2.get());
+                        output.accept(HnSItemRegistry.HAZEL_STATUE_POSE_3.get());
 
                     }).build());
 
@@ -297,9 +313,20 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.THUNDER_PROWLER_LEGGINGS.get());
                         output.accept(HnSItemRegistry.THUNDER_PROWLER_BOOTS.get());
 
+                        output.accept(HnSItemRegistry.ANCIENT_DRUID_HELMET.get());
+                        output.accept(HnSItemRegistry.ANCIENT_DRUID_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.ANCIENT_DRUID_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.ANCIENT_DRUID_BOOTS.get());
+
                         /*
                         *** Nature
                          */
+
+                        // Creaking
+                        output.accept(HnSItemRegistry.CREAKING_HELMET.get());
+                        output.accept(HnSItemRegistry.CREAKING_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.CREAKING_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.CREAKING_BOOTS.get());
 
                         // Creaking
                         output.accept(HnSItemRegistry.CREAKING_HELMET.get());

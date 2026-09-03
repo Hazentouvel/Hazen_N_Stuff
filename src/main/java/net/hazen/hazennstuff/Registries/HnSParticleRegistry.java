@@ -56,6 +56,10 @@ public class HnSParticleRegistry {
     public static final Supplier<SimpleParticleType> ROD_OF_DISCORD_PARTICLE = PARTICLE_TYPES.register("rod_of_discord_particle",
             () -> new SimpleParticleType(false));
 
+    // Soul Particle
+    public static final Supplier<SimpleParticleType> SOUL_PARTICLE = PARTICLE_TYPES.register("soul_particle",
+            () -> new SimpleParticleType(false));
+
     //Starforge Star
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> STARFORGE_STAR =
             PARTICLE_TYPES.register("starforge_star", () -> new SimpleParticleType(true));

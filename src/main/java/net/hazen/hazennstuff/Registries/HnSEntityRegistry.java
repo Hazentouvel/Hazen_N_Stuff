@@ -16,13 +16,14 @@ import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ReignOfTyros.Pyromus.Pyrom
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ServantsOfEnder.ServantsOfEnderEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.Dryad.DryadEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.TheRecluse.TheRecluseEntity;
+import net.hazen.hazennstuff.Entity.Projectiles.FrostburnDagger.FrostburnDaggerProjectile;
 import net.hazen.hazennstuff.Entity.Spells.Blood.BoneBolt.BoneBolt;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshChunk.FleshChunk;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshChunk.FleshMound.FleshMound;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshPiece.FleshPiece;
 import net.hazen.hazennstuff.Entity.Spells.Cosmic.CosmicBolt.CosmicBolt;
 import net.hazen.hazennstuff.Entity.Spells.Cosmic.Evercomet.Evercomet;
-import net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife.VampireKnife;
+import net.hazen.hazennstuff.Entity.Projectiles.LifestealKnife.VampireKnife;
 import net.hazen.hazennstuff.Entity.Spells.Eldritch.SoulSeeker.SoulSeeker;
 import net.hazen.hazennstuff.Entity.Spells.Ender.EndraconicMeteor.EndraconicBreath.EndraconicBreath;
 import net.hazen.hazennstuff.Entity.Spells.Ender.EndraconicMeteor.EndraconicMeteor;
@@ -98,6 +99,14 @@ public class HnSEntityRegistry {
                     .sized(1f, 1f)
                     .clientTrackingRange(4)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "lifesteal_knife").toString())
+            );
+
+    // Frostburn Dagger
+    public static final DeferredHolder<EntityType<?>, EntityType<FrostburnDaggerProjectile>> FROSTBURN_DAGGER =
+            ENTITIES.register("frostburn_dagger_projectile", () -> EntityType.Builder.<FrostburnDaggerProjectile>of(FrostburnDaggerProjectile::new, MobCategory.MISC)
+                    .sized(1f, 1f)
+                    .clientTrackingRange(4)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "frostburn_dagger_projectile").toString())
             );
 
     // Thorn Chakram

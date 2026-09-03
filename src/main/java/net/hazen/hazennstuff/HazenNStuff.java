@@ -79,12 +79,12 @@ public class HazenNStuff
     {
         NeoForge.EVENT_BUS.register(this);
 
-        //Magic Mod Compat
+        //Mod Compat
         MalumCompat.init();
         ArsNoveauCompat.init();
-
-        //ISS Addons Compat
+        CelestisynthCompat.init();
         FLCompat.init();
+        GoetyCompat.init();
 
         HnSCreativeModeTabs.register(modEventBus);
 

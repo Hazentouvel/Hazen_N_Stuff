@@ -3,6 +3,7 @@ package net.hazen.hazennstuff.Setup;
 import io.redspace.ironsspellbooks.entity.mobs.keeper.KeeperRenderer;
 import io.redspace.ironsspellbooks.entity.spells.fiery_dagger.FieryDaggerRenderer;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.VoidWanderer.VoidWandererRenderer;
+import net.hazen.hazennstuff.Entity.Projectiles.FrostburnDagger.FrostburnDaggerProjectileRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Blood.BoneBolt.BoneBoltRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshChunk.FleshChunkRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshChunk.FleshMound.FleshMoundRenderer;
@@ -48,7 +49,7 @@ import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ReignOfTyros.Pyromus.Pyrom
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ServantsOfEnder.ServantsOfEnderRenderer;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.Dryad.DryadRenderer;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.TheRecluse.TheRecluseRenderer;
-import net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife.LifestealKnifeRenderer;
+import net.hazen.hazennstuff.Entity.Projectiles.LifestealKnife.LifestealKnifeRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Eldritch.SoulSeeker.SoulSeekerRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Evocation.SpectralAxe.SpectralAxeRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.IceArrowRenderer;
@@ -60,8 +61,12 @@ import net.hazen.hazennstuff.Entity.Spells.Cosmic.ShootingStar.ShootingStarRende
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Syringe.SyringeRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.TerraprismaRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.NightsEdgeAfterSlash.NightsEdgeAfterSlashRenderer;
+import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose2.HazelStatueRendererPose1;
+import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose3.HazelStatueRendererPose2;
+import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose4.HazelStatueRendererPose3;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.ScorchingSlash.ScorchingSlash;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.SoulFlameStrike.SoulFlameStrike;
+import net.hazen.hazennstuff.Particle.SoulParticle;
 import net.hazen.hazennstuff.Particle.StarForgeStarParticle;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
@@ -84,11 +89,16 @@ public class HnSClientSetup {
     public static void registerRenderer(EntityRenderersEvent.RegisterRenderers event) {
 
         /*
+        *** Projectiles
+         */
+        event.registerEntityRenderer(HnSEntityRegistry.LIFESTEAL_KNIFE.get(), LifestealKnifeRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.FROSTBURN_DAGGER.get(), FrostburnDaggerProjectileRenderer::new);
+
+        /*
         *** Spells
          */
         event.registerEntityRenderer(HnSEntityRegistry.ENERGY_BURST.get(), EnergyBurstRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.SYRINGE.get(), SyringeRenderer::new);
-        event.registerEntityRenderer(HnSEntityRegistry.LIFESTEAL_KNIFE.get(), LifestealKnifeRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.THORN_CHAKRAM.get(), ThornChakramRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.ICE_ARROW.get(), IceArrowRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.ICE_CHUNK_A.get(), IceChunkARenderer::new);
@@ -163,6 +173,9 @@ public class HnSClientSetup {
          */
 
         event.registerBlockEntityRenderer(HnSBlockEntities.HAZEL_STATUE.get(), HazelStatueRenderer::new);
+        event.registerBlockEntityRenderer(HnSBlockEntities.HAZEL_STATUE_POSE_1.get(), HazelStatueRendererPose1::new);
+        event.registerBlockEntityRenderer(HnSBlockEntities.HAZEL_STATUE_POSE_2.get(), HazelStatueRendererPose2::new);
+        event.registerBlockEntityRenderer(HnSBlockEntities.HAZEL_STATUE_POSE_3.get(), HazelStatueRendererPose3::new);
         event.registerBlockEntityRenderer(HnSBlockEntities.STARFORGE.get(), StarForgeBlockRenderer::new);
     }
 
@@ -190,6 +203,7 @@ public class HnSClientSetup {
         event.registerSpriteSet(HnSParticleRegistry.SCORCHING_SLASH.get(), ScorchingSlash.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.SOUL_FLAMING_STRIKE_PARTICLE.get(), SoulFlameStrike.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.STARFORGE_STAR.get(), StarForgeStarParticle.Provider::new);
+        event.registerSpriteSet(HnSParticleRegistry.SOUL_PARTICLE.get(), SoulParticle.Provider::new);
     }
 
     @SubscribeEvent

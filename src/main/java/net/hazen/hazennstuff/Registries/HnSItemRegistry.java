@@ -3,6 +3,7 @@ package net.hazen.hazennstuff.Registries;
 import io.redspace.ironsspellbooks.item.UpgradeOrbItem;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.render.CinderousRarity;
+import net.hazen.hazennstuff.Item.Armor.AscendedTier.AncientDruid.AncientDruidArmorItem;
 import net.hazen.hazennstuff.Item.Armor.AscendedTier.DeadKing.DeadKingArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.AzureLib.ArbitriumRobesArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.DormantTier.AzureLib.FireblossomGownArmor;
@@ -167,7 +168,7 @@ import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.ISSxTerraria.ISSExc
 import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Terraria.ExcaliburItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.FireblossomRapier.FireblossomRapierItem;
 import net.hazen.hazennstuff.Item.Weapons.Reference.MCDungeons.Firebrand.FirebrandItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.FrostburnDagger.FrostburnDaggerItem;
+import net.hazen.hazennstuff.Item.Weapons.Special.FrostburnDagger.FrostburnDaggerItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.HammerOfJustice.HammerOfJusticeItem;
 import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Hammush.HammushItem;
 import net.hazen.hazennstuff.Item.Weapons.Ascended.IcePike.IcePikeItem;
@@ -1459,6 +1460,22 @@ public class HnSItemRegistry {
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
+    ));
+
+
+    //Ancient Druid Armor
+
+    public static final DeferredHolder<Item, Item> ANCIENT_DRUID_HELMET = ITEMS.register("ancient_druid_helmet", () -> new AncientDruidArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+            .durability(ArmorItem.Type.HELMET.getDurability(96))
+    ));
+    public static final DeferredHolder<Item, Item> ANCIENT_DRUID_CHESTPLATE = ITEMS.register("ancient_druid_chestplate", () -> new AncientDruidArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            .durability(ArmorItem.Type.CHESTPLATE.getDurability(96))
+    ));
+    public static final DeferredHolder<Item, Item> ANCIENT_DRUID_LEGGINGS = ITEMS.register("ancient_druid_leggings", () -> new AncientDruidArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+            .durability(ArmorItem.Type.LEGGINGS.getDurability(96))
+    ));
+    public static final DeferredHolder<Item, Item> ANCIENT_DRUID_BOOTS = ITEMS.register("ancient_druid_boots", () -> new AncientDruidArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+            .durability(ArmorItem.Type.BOOTS.getDurability(96))
     ));
 
 
@@ -4030,6 +4047,21 @@ public class HnSItemRegistry {
 
     public static final DeferredHolder<Item, Item> HAZEL_STATUE = ITEMS.register("hazel_statue", () -> new HazelStatueItem((Block)
             HnSBlocks.HAZEL_STATUE.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> HAZEL_STATUE_POSE_1 = ITEMS.register("hazel_statue_pose_1", () -> new HazelStatueItem((Block)
+            HnSBlocks.HAZEL_STATUE_POSE_1.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> HAZEL_STATUE_POSE_2 = ITEMS.register("hazel_statue_pose_2", () -> new HazelStatueItem((Block)
+            HnSBlocks.HAZEL_STATUE_POSE_2.get(), new Item.Properties()
+            //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> HAZEL_STATUE_POSE_3 = ITEMS.register("hazel_statue_pose_3", () -> new HazelStatueItem((Block)
+            HnSBlocks.HAZEL_STATUE_POSE_3.get(), new Item.Properties()
             //.rarity(Rarity.UNCOMMON)
     ));
 

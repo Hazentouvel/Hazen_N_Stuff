@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Weapons.Generic.FrostburnDagger;
+package net.hazen.hazennstuff.Item.Weapons.Special.FrostburnDagger;
 
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import net.hazen.hazennstuff.HazenNStuff;

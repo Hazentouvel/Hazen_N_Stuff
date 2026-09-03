@@ -38,7 +38,10 @@ repositories {
             includeGroup("software.bernie.geckolib")
         }
     }
-    maven { url = "https://maven.theillusivec4.top" }
+    maven {
+        name = "Illusive Soulworks maven"
+        url = "https://maven.theillusivec4.top/"
+    }
     maven { url = "https://cursemaven.com" }
     maven { url = "https://maven.blamejared.com" }
     maven { url = "https://maven.kosmx.dev/" }
@@ -157,14 +160,14 @@ dependencies {
     implementation "curse.maven:iron_lib-1492763:8207094"
     implementation "curse.maven:geckolib-388172:8350073"
     implementation "curse.maven:player_animator-658587:6024462"
-    implementation "curse.maven:curios-309927:6342656"
+    implementation "curse.maven:curios-309927:6529130"
     implementation "curse.maven:caelus-308989:5694215"
     //Apothic Attributes
     //implementation "curse.maven:apothic-attributes-898963:6302334"
     //implementation "curse.maven:placebo-283644:6337156"
     //compileOnly "curse.maven:apotheosis-${apotheosis_version}"
     //Ace Utils
-    implementation "curse.maven:ace_utils-1299492:7787705"
+    implementation "curse.maven:ace_utils-1299492:8789930"
     //HazentouveLib
     implementation "curse.maven:hazentouvelib-1528722:8666581"
     //AzureLib
@@ -255,6 +258,14 @@ dependencies {
     //Discerning the Eldritch
     //localRuntime "curse.maven:discerning_the_eldritch-1143065:7469786"
     //compileOnly "curse.maven:discerning_the_eldritch-1143065:7469786"
+
+    //Celestisynth
+    localRuntime "curse.maven:celestisynth-1672331:8793088"
+    compileOnly "curse.maven:celestisynth-1672331:8793088"
+
+    //Goety
+    localRuntime "curse.maven:goety-586095:8689429"
+    compileOnly "curse.maven:goety-586095:8689429"
 
 }
 

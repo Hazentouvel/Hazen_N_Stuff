@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Entity.Spells.Blood.LifestealKnife;
+package net.hazen.hazennstuff.Entity.Projectiles.FrostburnDagger;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.util.Utils;
@@ -27,16 +27,16 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.Optional;
 
-public class VampireKnife extends AbstractMagicProjectile implements GeoEntity {
+public class FrostburnDaggerProjectile extends AbstractMagicProjectile implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    public VampireKnife(EntityType<? extends Projectile> pEntityType, Level pLevel) {
+    public FrostburnDaggerProjectile(EntityType<? extends Projectile> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
-    public VampireKnife(Level level, LivingEntity shooter)
+    public FrostburnDaggerProjectile(Level level, LivingEntity shooter)
     {
-        this(HnSEntityRegistry.LIFESTEAL_KNIFE.get(), level);
+        this(HnSEntityRegistry.FROSTBURN_DAGGER.get(), level);
         setOwner(shooter);
     }
 
@@ -102,16 +102,20 @@ public class VampireKnife extends AbstractMagicProjectile implements GeoEntity {
             Entity target = result.getEntity();
 
             if (getOwner() instanceof LivingEntity caster) {
-                double bloodPower = caster.getAttributeValue(AttributeRegistry.BLOOD_SPELL_POWER);
+                double icePower = caster.getAttributeValue(AttributeRegistry.ICE_SPELL_POWER);
                 double spellPower = caster.getAttributeValue(AttributeRegistry.SPELL_POWER);
 
-                float damage = (float)(2 + 2 * (bloodPower + spellPower));
+                float damage = (float)(2 + 2 * (icePower + spellPower));
 
                 DamageSource source = level.damageSources().indirectMagic(this, caster);
 
                 target.hurt(source, damage);
 
-                caster.heal(damage * 0.075f);
+                int additionalFreezeTicks = 100;
+
+                if (target instanceof LivingEntity livingTarget) {
+                    livingTarget.setTicksFrozen(Math.min(livingTarget.getTicksRequiredToFreeze(), livingTarget.getTicksFrozen() + additionalFreezeTicks));
+                }
             }
 
             level.playSound(null, getX(), getY(), getZ(),

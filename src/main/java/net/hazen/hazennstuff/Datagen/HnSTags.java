@@ -78,6 +78,7 @@ public class HnSTags {
     }
 
     public static final TagKey<Biome> OUTER_END_BIOMES = TagKey.create(Registries.BIOME, HazenNStuff.id("outer_end_biomes"));
+    public static final TagKey<Biome> VOID_WANDERER_BIOMES = TagKey.create(Registries.BIOME, HazenNStuff.id("void_wanderer_biomes"));
 
     public static ResourceKey<Biome> create(String name) {
         return ResourceKey.create(Registries.BIOME, HazenNStuff.id(name));

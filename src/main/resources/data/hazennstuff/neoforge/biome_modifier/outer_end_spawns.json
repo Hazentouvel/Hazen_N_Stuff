@@ -3,12 +3,6 @@
   "biomes": "#hazennstuff:outer_end_biomes",
   "spawners": [
     {
-      "type": "hazennstuff:void_wanderer",
-      "weight": 1,
-      "minCount": 1,
-      "maxCount": 1
-    },
-    {
       "type": "hazennstuff:the_recluse",
       "weight": 1,
       "minCount": 1,

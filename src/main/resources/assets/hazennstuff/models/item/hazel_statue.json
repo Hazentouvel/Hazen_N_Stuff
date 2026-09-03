@@ -1,5 +1,5 @@
 {
-  "credit": "Made with Blockbench",
+  "credit": "Made by Hazen",
   "parent": "builtin/entity",
   "texture_size": [
     256,
@@ -8,90 +8,88 @@
   "display": {
     "thirdperson_righthand": {
       "scale": [
-        0.25,
-        0.25,
-        0.25
+        0.3,
+        0.3,
+        0.3
       ]
     },
     "thirdperson_lefthand": {
       "scale": [
-        0.25,
-        0.25,
-        0.25
+        0.3,
+        0.3,
+        0.3
       ]
     },
     "firstperson_righthand": {
       "rotation": [
         0,
-        130,
+        125,
+        0
+      ],
+      "translation": [
+        3,
+        -0.5,
         0
       ],
       "scale": [
-        0.25,
-        0.25,
-        0.25
+        0.3,
+        0.3,
+        0.3
       ]
     },
     "firstperson_lefthand": {
       "rotation": [
         0,
-        130,
-        0
-      ],
-      "scale": [
-        0.25,
-        0.25,
-        0.25
-      ]
-    },
-    "ground": {
-      "scale": [
-        0.25,
-        0.25,
-        0.25
-      ]
-    },
-    "gui": {
-      "rotation": [
-        0,
-        -180,
+        125,
         0
       ],
       "translation": [
         0,
-        -10,
+        -0.5,
         0
       ],
       "scale": [
-        0.5,
-        0.5,
-        0.5
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    "ground": {
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    "gui": {
+      "rotation": [
+        20,
+        150,
+        0
+      ],
+      "translation": [
+        0,
+        -6.75,
+        0
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
       ]
     },
     "head": {
       "translation": [
         0,
-        6.25,
+        6.5,
         0
       ]
     },
     "fixed": {
       "translation": [
         0,
-        -20,
-        -7
-      ]
-    },
-    "on_shelf": {
-      "rotation": [
-        0,
-        -180,
-        0
-      ],
-      "scale": [
-        0.5,
-        0.5,
-        0.5
+        -24,
+        -3.5
       ]
     }
   }

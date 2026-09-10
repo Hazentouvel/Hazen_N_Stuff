@@ -22,6 +22,7 @@ import net.hazen.hazennstuff.Entity.Spells.Hydro.WaterBolt.WaterBoltRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkA.IceChunkARenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkB.IceChunkBRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkC.IceChunkCRenderer;
+import net.hazen.hazennstuff.Entity.Spells.Lightning.CoruscatedDischarge.CoruscatedDischargeRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.DazzlingObliteration.NinguDemonbanePetalbladeRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.DazzlingObliteration.Shuriken.NinguDemonbanePetalbladeShurikenRenderer;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Club.ClubRenderer;
@@ -98,6 +99,7 @@ public class HnSClientSetup {
         *** Spells
          */
         event.registerEntityRenderer(HnSEntityRegistry.ENERGY_BURST.get(), EnergyBurstRenderer::new);
+        event.registerEntityRenderer(HnSEntityRegistry.CORUSCATED_DISCHARGE.get(), CoruscatedDischargeRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.SYRINGE.get(), SyringeRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.THORN_CHAKRAM.get(), ThornChakramRenderer::new);
         event.registerEntityRenderer(HnSEntityRegistry.ICE_ARROW.get(), IceArrowRenderer::new);

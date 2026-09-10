@@ -106,6 +106,12 @@ public class HnSBlockLootTableProvider extends BlockLootSubProvider {
 
         // Statues
         dropSelf(HnSBlocks.HAZEL_STATUE.get());
+        dropSelf(HnSBlocks.HAZEL_STATUE_POSE_1.get());
+        dropSelf(HnSBlocks.HAZEL_STATUE_POSE_2.get());
+        dropSelf(HnSBlocks.HAZEL_STATUE_POSE_3.get());
+
+        //Workstations
+        dropSelf(HnSBlocks.STARFORGE.get());
 
         /*
         *** Ore

@@ -64,13 +64,13 @@ public class FrostburnDaggerProjectile extends AbstractMagicProjectile implement
             double dx = Utils.random.nextDouble() * 2 * speed - speed;
             double dy = Utils.random.nextDouble() * 2 * speed - speed;
             double dz = Utils.random.nextDouble() * 2 * speed - speed;
-            level.addParticle(ParticleHelper.BLOOD, this.getX() + dx, this.getY() + dy, this.getZ() + dz, dx, dy, dz);
+            level.addParticle(ParticleHelper.SNOWFLAKE, this.getX() + dx, this.getY() + dy, this.getZ() + dz, dx, dy, dz);
         }
     }
 
     @Override
     public void impactParticles(double x, double y, double z) {
-        MagicManager.spawnParticles(this.level, ParticleHelper.BLOOD, x, y, z, 5, .1, .1, .1, .25, true);
+        MagicManager.spawnParticles(this.level, ParticleHelper.SNOWFLAKE, x, y, z, 5, .1, .1, .1, .25, true);
     }
 
     @Override

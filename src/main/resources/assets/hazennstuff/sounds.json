@@ -398,6 +398,21 @@
       "hazennstuff:bone_impact"
     ]
   },
+  "coruscated_discharge_cast": {
+    "sounds": [
+      "hazennstuff:coruscated_discharge_cast"
+    ]
+  },
+  "coruscated_discharge_charge": {
+    "sounds": [
+      "hazennstuff:coruscated_discharge_charge"
+    ]
+  },
+  "coruscated_discharge_impact": {
+    "sounds": [
+      "hazennstuff:coruscated_discharge_impact"
+    ]
+  },
   "starforge_activate": {
     "stream": false,
     "sounds": [

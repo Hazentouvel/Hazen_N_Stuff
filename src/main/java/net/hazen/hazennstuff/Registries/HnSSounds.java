@@ -45,6 +45,11 @@ public class HnSSounds {
     // Electric Cast
     public static DeferredHolder<SoundEvent, SoundEvent> ELECTRIC_CAST = registerSoundEvent("electric_cast");
 
+    // Coruscated Discharge
+    public static DeferredHolder<SoundEvent, SoundEvent> CORUSCATED_DISCHARGE_CAST = registerSoundEvent("coruscated_discharge_cast");
+    public static DeferredHolder<SoundEvent, SoundEvent> CORUSCATED_DISCHARGE_CHARGE = registerSoundEvent("coruscated_discharge_charge");
+    public static DeferredHolder<SoundEvent, SoundEvent> CORUSCATED_DISCHARGE_IMPACT = registerSoundEvent("coruscated_discharge_impact");
+
     // Electric Impact
     public static final Holder<SoundEvent> ELECTRIC_IMPACT = registerSoundEvent("electric_impact");
 

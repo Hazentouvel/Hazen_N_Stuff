@@ -313,10 +313,11 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.THUNDER_PROWLER_LEGGINGS.get());
                         output.accept(HnSItemRegistry.THUNDER_PROWLER_BOOTS.get());
 
-                        output.accept(HnSItemRegistry.ANCIENT_DRUID_HELMET.get());
-                        output.accept(HnSItemRegistry.ANCIENT_DRUID_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.ANCIENT_DRUID_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.ANCIENT_DRUID_BOOTS.get());
+                        // Coruscated Valor
+                        output.accept(HnSItemRegistry.CORUSCATED_VALOR_HELMET.get());
+                        output.accept(HnSItemRegistry.CORUSCATED_VALOR_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.CORUSCATED_VALOR_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.CORUSCATED_VALOR_BOOTS.get());
 
                         /*
                         *** Nature
@@ -328,12 +329,11 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.CREAKING_LEGGINGS.get());
                         output.accept(HnSItemRegistry.CREAKING_BOOTS.get());
 
-                        // Creaking
-                        output.accept(HnSItemRegistry.CREAKING_HELMET.get());
-                        output.accept(HnSItemRegistry.CREAKING_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.CREAKING_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.CREAKING_BOOTS.get());
-
+                        // Ancient Druid
+                        output.accept(HnSItemRegistry.ANCIENT_DRUID_HELMET.get());
+                        output.accept(HnSItemRegistry.ANCIENT_DRUID_CHESTPLATE.get());
+                        output.accept(HnSItemRegistry.ANCIENT_DRUID_LEGGINGS.get());
+                        output.accept(HnSItemRegistry.ANCIENT_DRUID_BOOTS.get());
                         // Chlorophyte
                         output.accept(HnSItemRegistry.CHLOROPHYTE_HELMET.get());
                         output.accept(HnSItemRegistry.CHLOROPHYTE_HEADGEAR.get());

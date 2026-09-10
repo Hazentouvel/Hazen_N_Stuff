@@ -4,6 +4,7 @@ import io.redspace.ironsspellbooks.item.UpgradeOrbItem;
 import io.redspace.ironsspellbooks.registries.ComponentRegistry;
 import io.redspace.ironsspellbooks.render.CinderousRarity;
 import net.hazen.hazennstuff.Item.Armor.AscendedTier.AncientDruid.AncientDruidArmorItem;
+import net.hazen.hazennstuff.Item.Armor.AscendedTier.CoruscatedValor.CoruscatedValorArmorItem;
 import net.hazen.hazennstuff.Item.Armor.AscendedTier.DeadKing.DeadKingArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.ArbitriumRobes.AzureLib.ArbitriumRobesArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.DormantTier.AzureLib.FireblossomGownArmor;
@@ -1547,28 +1548,28 @@ public class HnSItemRegistry {
 
     //Coruscated Valor
 
-    public static final DeferredHolder<Item, Item> CORUSCATED_VALOR_HELMET = ITEMS.register("coruscated_valor_helmet", () -> new ThunderProwlerArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+    public static final DeferredHolder<Item, Item> CORUSCATED_VALOR_HELMET = ITEMS.register("coruscated_valor_helmet", () -> new CoruscatedValorArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
             .stacksTo(1)
             .rarity(HLRarities.LIGHTNING_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(96))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
-    public static final DeferredHolder<Item, Item> CORUSCATED_VALOR_CHESTPLATE = ITEMS.register("coruscated_valor_chestplate", () -> new ThunderProwlerArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+    public static final DeferredHolder<Item, Item> CORUSCATED_VALOR_CHESTPLATE = ITEMS.register("coruscated_valor_chestplate", () -> new CoruscatedValorArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
             .stacksTo(1)
             .rarity(HLRarities.LIGHTNING_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(96))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
-    public static final DeferredHolder<Item, Item> CORUSCATED_VALOR_LEGGINGS = ITEMS.register("coruscated_valor_leggings", () -> new ThunderProwlerArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+    public static final DeferredHolder<Item, Item> CORUSCATED_VALOR_LEGGINGS = ITEMS.register("coruscated_valor_leggings", () -> new CoruscatedValorArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
             .stacksTo(1)
             .rarity(HLRarities.LIGHTNING_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(96))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
-    public static final DeferredHolder<Item, Item> CORUSCATED_VALOR_BOOTS = ITEMS.register("coruscated_valor_boots", () -> new ThunderProwlerArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+    public static final DeferredHolder<Item, Item> CORUSCATED_VALOR_BOOTS = ITEMS.register("coruscated_valor_boots", () -> new CoruscatedValorArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
             .stacksTo(1)
             .rarity(HLRarities.LIGHTNING_RARITY.getValue())
             .fireResistant()

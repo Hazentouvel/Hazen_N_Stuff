@@ -1,0 +1,54 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "coruscatedDischarge",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-4, -4, -4], "size": [8, 8, 8], "uv": [216, 0]},
+						{"origin": [-18, -18, 0], "size": [36, 36, 0], "inflate": 0.025, "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [72, 220]},
+						{"origin": [-18, -18, 0], "size": [36, 36, 0], "inflate": 0.025, "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 220]},
+						{"origin": [-18, 2, -18], "size": [36, 0, 36], "inflate": 0.025, "pivot": [0, 2, 0], "rotation": [45, 0, 0], "uv": [-36, 72]},
+						{"origin": [-18, 0, -18], "size": [36, 0, 36], "inflate": 0.025, "pivot": [0, 0, 0], "rotation": [-45, 0, 0], "uv": [-36, 108]}
+					]
+				},
+				{
+					"name": "glowmask",
+					"parent": "coruscatedDischarge",
+					"pivot": [11, -12, -11],
+					"cubes": [
+						{"origin": [-12, -12, -12], "size": [24, 0, 24], "pivot": [0, -12, 0], "rotation": [0, 0, -180], "uv": [-24, 144]},
+						{"origin": [-12, 12, -12], "size": [24, 0, 24], "uv": [-24, 144]},
+						{"origin": [12, -12, -12], "size": [0, 24, 24], "pivot": [12, 0, 0], "rotation": [0, 180, 0], "uv": [0, 120]},
+						{"origin": [-12, -12, -12], "size": [0, 24, 24], "uv": [0, 120]},
+						{"origin": [-12, -12, -12], "size": [24, 24, 0], "uv": [0, 144]},
+						{"origin": [-12, -12, 12], "size": [24, 24, 0], "pivot": [0, 0, 12], "rotation": [0, 180, 0], "uv": [0, 144]}
+					]
+				},
+				{
+					"name": "glowmask2",
+					"parent": "glowmask",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-18, -18, -18], "size": [36, 0, 36], "pivot": [0, -18, 0], "rotation": [0, 0, -180], "uv": [-36, 0]},
+						{"origin": [-18, 18, -18], "size": [36, 0, 36], "uv": [-36, 0]},
+						{"origin": [-18, -18, -18], "size": [36, 36, 0], "uv": [0, 0]},
+						{"origin": [-18, -18, 18], "size": [36, 36, 0], "pivot": [0, 0, 18], "rotation": [0, 180, 0], "uv": [0, 0]},
+						{"origin": [18, -18, -18], "size": [0, 36, 36], "pivot": [18, 0, 0], "rotation": [0, 180, 0], "uv": [0, -36]},
+						{"origin": [-18, -18, -18], "size": [0, 36, 36], "uv": [0, -36]}
+					]
+				}
+			]
+		}
+	]
+}

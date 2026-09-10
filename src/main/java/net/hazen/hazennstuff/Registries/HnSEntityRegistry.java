@@ -42,6 +42,7 @@ import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkB.IceChunkB;
 import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkC.IceChunkC;
 import net.hazen.hazennstuff.Entity.Spells.Ice.IceArrow.IceArrow;
 import net.hazen.hazennstuff.Entity.Spells.Ice.IceCloud.IceCloud;
+import net.hazen.hazennstuff.Entity.Spells.Lightning.CoruscatedDischarge.CoruscatedDischarge;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.EnergyBurst.EnergyBurst;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.InstantLightningStrike.LightningStrike;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.DazzlingObliteration.NinguDemonbanePetalblade;
@@ -83,6 +84,15 @@ public class HnSEntityRegistry {
                     .sized(1f, 1f)
                     .clientTrackingRange(4)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "energy_burst").toString())
+            );
+
+
+    // Coruscated Discharge
+    public static final DeferredHolder<EntityType<?>, EntityType<CoruscatedDischarge>> CORUSCATED_DISCHARGE =
+            ENTITIES.register("coruscated_discharge", () -> EntityType.Builder.<CoruscatedDischarge>of(CoruscatedDischarge::new, MobCategory.MISC)
+                    .sized(2.5f, 2.5f)
+                    .clientTrackingRange(4)
+                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "coruscated_discharge").toString())
             );
 
     // Syringe

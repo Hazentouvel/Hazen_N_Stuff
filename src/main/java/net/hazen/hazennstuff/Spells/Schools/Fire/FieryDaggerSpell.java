@@ -5,6 +5,7 @@ import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
+import io.redspace.ironsspellbooks.api.util.RaycastBuilder;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import net.hazen.hazennstuff.Datagen.HnSTags;
@@ -24,6 +25,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 import top.theillusivec4.curios.api.CuriosApi;
@@ -90,15 +93,16 @@ public class FieryDaggerSpell extends TyrosSpells {
         if (world.isClientSide) return;
 
         Vec3 eyePos = entity.getEyePosition();
-        Vec3 lookVec = entity.getLookAngle();
-        double range = 40.0;
-
-        Vec3 end = eyePos.add(lookVec.scale(range));
-        var hitResult = entity
-                .level()
-                .clip(new ClipContext(eyePos, end, ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity));
-
-        Vec3 targetPos = hitResult.getLocation();
+        HitResult hitResult = RaycastBuilder.begin(world, entity)
+                .range(40.0F)
+                .checkForBlocks(true)
+                .build();
+        Vec3 targetPos;
+        if (hitResult.getType() == HitResult.Type.ENTITY) {
+            targetPos = ((EntityHitResult) hitResult).getLocation();
+        } else {
+            targetPos = hitResult.getLocation();
+        }
         Vec3 look = targetPos.subtract(eyePos).normalize();
 
         boolean hasCustomEnchant = false;

@@ -17,6 +17,7 @@ import net.hazen.hazennstuff.Spells.Schools.Holy.GoldenShowerSpell;
 import net.hazen.hazennstuff.Spells.Schools.Hydro.*;
 import net.hazen.hazennstuff.Spells.Schools.Ice.HailstormSpell;
 import net.hazen.hazennstuff.Spells.Schools.Ice.IceArrowSpell;
+import net.hazen.hazennstuff.Spells.Schools.Lightning.CoruscatedDischargeSpell;
 import net.hazen.hazennstuff.Spells.Schools.Lightning.EnergyBurstSpell;
 import net.hazen.hazennstuff.Spells.Schools.Lightning.IonicSlashSpell;
 import net.hazen.hazennstuff.Spells.Schools.Lightning.DazzlingObliterationSpell;
@@ -98,13 +99,16 @@ public class HnSSpellRegistries {
      *** Lightning
      */
 
-    //Energy Burst
+    // Energy Burst
     public static final Supplier<AbstractSpell> ENERGY_BURST = registerSpell(new EnergyBurstSpell());
 
-    //Ionic Slash
+    // Coruscated Discharge
+    public static final Supplier<AbstractSpell> CORUSCATED_DISCHARGE = registerSpell(new CoruscatedDischargeSpell());
+
+    // Ionic Slash
     public static final Supplier<AbstractSpell> IONIC_SLASH = registerSpell(new IonicSlashSpell());
 
-    //Dazzling Obliteration
+    // Dazzling Obliteration
     public static final Supplier<AbstractSpell> DAZZLING_OBLITERATION = registerSpell(new DazzlingObliterationSpell());
 
 

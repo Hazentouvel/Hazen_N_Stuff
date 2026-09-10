@@ -205,8 +205,8 @@ dependencies {
     //localRuntime "curse.maven:fragmentum-1123977:7315935"
 
     //Better Combat
-    localRuntime "curse.maven:better-combat-by-daedelus-639842:7348161"
-    localRuntime "curse.maven:cloth-config-348521:5623420"
+    //localRuntime "curse.maven:better-combat-by-daedelus-639842:7348161"
+    //localRuntime "curse.maven:cloth-config-348521:5623420"
 
     //Ars Nouveau
     localRuntime "curse.maven:ars_nouveau-401955:6827634"

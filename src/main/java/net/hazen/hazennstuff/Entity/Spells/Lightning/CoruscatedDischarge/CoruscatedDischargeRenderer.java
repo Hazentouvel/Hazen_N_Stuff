@@ -1,10 +1,9 @@
-package net.hazen.hazennstuff.Entity.Projectiles.FrostburnDagger;
+package net.hazen.hazennstuff.Entity.Spells.Lightning.CoruscatedDischarge;
 
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
-import net.hazen.hazennstuff.Entity.Spells.Blood.BoneBolt.BoneBolt;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -15,14 +14,16 @@ import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-public class FrostburnDaggerProjectileRenderer extends GeoEntityRenderer<FrostburnDaggerProjectile> {
-    public FrostburnDaggerProjectileRenderer(EntityRendererProvider.Context context) {
-        super(context, new FrostburnDaggerProjectileModel());
+public class CoruscatedDischargeRenderer extends GeoEntityRenderer<CoruscatedDischarge> {
+    public CoruscatedDischargeRenderer(EntityRendererProvider.Context context) {
+        super(context, new CoruscatedDischargeModel());
         this.shadowRadius = 0f;
+
+        this.addRenderLayer(new CoruscatedDischargeEmissiveLayer(this));
     }
 
     @Override
-    public void preRender(PoseStack poseStack, FrostburnDaggerProjectile animatable, BakedGeoModel model,
+    public void preRender(PoseStack poseStack, CoruscatedDischarge animatable, BakedGeoModel model,
                           @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer,
                           boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
 
@@ -35,5 +36,10 @@ public class FrostburnDaggerProjectileRenderer extends GeoEntityRenderer<Frostbu
         poseStack.mulPose(Axis.XP.rotationDegrees(xRot));
 
         super.preRender(poseStack, animatable, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, colour);
+    }
+
+    @Override
+    public RenderType getRenderType(CoruscatedDischarge animatable, ResourceLocation texture, @Nullable MultiBufferSource bufferSource, float partialTick) {
+        return RenderType.entityCutout(texture);
     }
 }

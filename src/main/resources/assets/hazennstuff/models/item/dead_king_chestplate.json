@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/armors/dead_king_chestplate"
+    "layer0": "hazennstuff:item/armor_icons/dead_king_chestplate"
   }
 }

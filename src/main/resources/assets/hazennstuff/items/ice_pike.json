@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "hazennstuff:item/ice_pike",
+    "model": {
+      "type": "geckolib:geckolib"
+    }
+  }
+}

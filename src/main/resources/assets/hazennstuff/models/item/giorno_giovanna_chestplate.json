@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/armors/giorno_giovanna_chestplate"
+    "layer0": "hazennstuff:item/armor_icons/giorno_giovanna_chestplate"
   }
 }

@@ -24,10 +24,19 @@ public class HnSCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
 
                         /*
-                        *** Weapons
+                        *** Equipment
                          */
 
+                        // Generic
+                        output.accept(HnSItemRegistry.STEEL_SWORD);
+                        output.accept(HnSItemRegistry.STEEL_SPEAR);
+                        output.accept(HnSItemRegistry.STEEL_PICKAXE);
+                        output.accept(HnSItemRegistry.STEEL_SHOVEL);
+                        output.accept(HnSItemRegistry.STEEL_AXE);
+                        output.accept(HnSItemRegistry.STEEL_HOE);
+
                         // Fire
+                        output.accept(HnSItemRegistry.RAVENS_BANE);
 
                         // Ice
                         output.accept(HnSItemRegistry.ICE_PIKE);

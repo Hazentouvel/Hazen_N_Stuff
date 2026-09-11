@@ -10,7 +10,7 @@ import net.minecraft.resources.Identifier;
 
 public final class SkyscorcherRenderer<R extends HumanoidRenderState & GeoRenderState> extends GeoItemRenderer<SkyscorcherItem> {
 	public SkyscorcherRenderer() {
-		super(new DefaultedItemGeoModel<>(Identifier.fromNamespaceAndPath(HazenNStuff.MOD_ID, "weapons/skyscorcher")));
+		super(new DefaultedItemGeoModel<>(Identifier.fromNamespaceAndPath(HazenNStuff.MOD_ID, "equipment/weapons/skyscorcher")));
 		withRenderLayer(AutoGlowingGeoLayer::new);
 	}
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/armors/cosmic_scholar_boots"
+    "layer0": "hazennstuff:item/armor_icons/cosmic_scholar_boots"
   }
 }

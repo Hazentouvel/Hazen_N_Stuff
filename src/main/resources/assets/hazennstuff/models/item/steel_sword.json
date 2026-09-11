@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "hazennstuff:item/weapons/steel_sword"
+    "layer0": "hazennstuff:item/equipment/weapons/steel_sword"
   }
 }

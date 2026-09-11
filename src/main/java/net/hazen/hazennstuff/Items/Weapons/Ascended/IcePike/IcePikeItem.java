@@ -39,24 +39,6 @@ public class IcePikeItem extends MaceItem implements GeoItem {
 
 
     @Override
-    public void hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        if (!attacker.level().isClientSide()) {
-            attacker.level().playSound(
-                    null,
-                    target.getX(),
-                    target.getY(),
-                    target.getZ(),
-                    SoundEvents.TRIDENT_THUNDER,
-                    SoundSource.PLAYERS,
-                    1.0f,
-                    1.0f
-            );
-        }
-
-        super.hurtEnemy(stack, target, attacker);
-    }
-
-    @Override
     public void registerControllers(final AnimatableManager.ControllerRegistrar controllers) {
     }
 

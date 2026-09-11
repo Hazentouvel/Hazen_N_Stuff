@@ -315,6 +315,13 @@
 
 
 
+  "item.hazennstuff.steel_sword": "Steel Sword",
+  "item.hazennstuff.steel_spear": "Steel Spear",
+  "item.hazennstuff.steel_pickaxe": "Steel Pickaxe",
+  "item.hazennstuff.steel_shovel": "Steel Shovel",
+  "item.hazennstuff.steel_axe": "Steel Axe",
+  "item.hazennstuff.steel_hoe": "Steel Hoe",
+
   "item.hazennstuff.fireblossom_rapier": "Fireblossom Rapier",
   "item.hazennstuff.firebrand": "Firebrand",
   "item.hazennstuff.draconic_splitter": "Draconic Splitter",
@@ -463,6 +470,13 @@
   "item.hazennstuff.frieren_staff": "Frieren's Staff",
   "item.hazennstuff.wisewood_cane": "Wisewood Cane",
 
+
+  "item.hazennstuff.stalwart_helmet": "Stalwart Helmet",
+  "item.hazennstuff.stalwart_chestplate": "Stalwart Chestplate",
+  "item.hazennstuff.steel_helmet": "Steel Helmet",
+  "item.hazennstuff.steel_chestplate": "Steel Chestplate",
+  "item.hazennstuff.steel_leggings": "Steel Leggings",
+  "item.hazennstuff.steel_boots": "Steel Boots",
 
   "item.hazennstuff.geckolib_creaking_helmet": "Creaking Mask",
   "item.hazennstuff.geckolib_creaking_chestplate": "Creaking Chestplate",
@@ -885,6 +899,16 @@
   "item.hazennstuff.garments_of_the_first_flamebearer_soul_chestplate": "Soul Tyros Chestplate",
   "item.hazennstuff.garments_of_the_first_flamebearer_soul_leggings": "Soul Tyros Leggings",
   "item.hazennstuff.garments_of_the_first_flamebearer_soul_boots": "Soul Tyros Boots",
+
+  "item.hazennstuff.coruscated_valor_helmet": "Coruscated Valor Helmet",
+  "item.hazennstuff.coruscated_valor_chestplate": "Coruscated Valor Chestplate",
+  "item.hazennstuff.coruscated_valor_leggings": "Coruscated Valor Leggings",
+  "item.hazennstuff.coruscated_valor_boots": "Coruscated Valor Boots",
+
+  "item.hazennstuff.ancient_druid_helmet": "Ancient Druid Mask",
+  "item.hazennstuff.ancient_druid_chestplate": "Ancient Druid Chestplate",
+  "item.hazennstuff.ancient_druid_leggings": "Ancient Druid Leggings",
+  "item.hazennstuff.ancient_druid_boots": "Ancient Druid Boots",
 
   "item.hazennstuff.neru_helmet": "Neru's Hair",
   "item.hazennstuff.neru_chestplate": "Neru's Dress",

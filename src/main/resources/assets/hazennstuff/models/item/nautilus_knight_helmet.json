@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/armors/nautilus_knight_helmet"
+    "layer0": "hazennstuff:item/armor_icons/nautilus_knight_helmet"
   }
 }

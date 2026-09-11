@@ -1,5 +1,7 @@
 package net.hazen.hazennstuff;
 
+import net.hazen.hazennstuff.Registries.HnSCreativeModeTabs;
+import net.hazen.hazennstuff.Registries.HnSItemRegistry;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -20,7 +22,8 @@ public class HazenNStuff {
     public HazenNStuff(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
-
+        HnSItemRegistry.register(modEventBus);
+        HnSCreativeModeTabs.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
     }

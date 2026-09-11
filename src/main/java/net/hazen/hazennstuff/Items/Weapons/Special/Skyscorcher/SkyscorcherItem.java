@@ -23,9 +23,9 @@ public class SkyscorcherItem extends MaceItem implements GeoItem {
 
     public SkyscorcherItem(Properties properties) {
         super(properties
-                .sword(HnSToolTiers.ZENALITE,
-                9,
-                1.6f)
+                .axe(HnSToolTiers.ZENALITE,
+                4,
+                0.8f)
                 .stacksTo(1)
         );
     }

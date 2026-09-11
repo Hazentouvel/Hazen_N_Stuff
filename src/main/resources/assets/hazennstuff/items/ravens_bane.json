@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "hazennstuff:item/ravens_bane",
+    "model": {
+      "type": "geckolib:geckolib"
+    }
+  }
+}

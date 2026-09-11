@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/armors/frostbite_hunter_boots"
+    "layer0": "hazennstuff:item/armor_icons/frostbite_hunter_boots"
   }
 }

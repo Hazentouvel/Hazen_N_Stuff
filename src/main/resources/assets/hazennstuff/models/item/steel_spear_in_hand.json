@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/spear_in_hand",
   "textures": {
-    "layer0": "hazennstuff:weapons/steel_spear_in_hand"
+    "layer0": "hazennstuff:item/equipment/weapons/steel_spear_in_hand"
   }
 }

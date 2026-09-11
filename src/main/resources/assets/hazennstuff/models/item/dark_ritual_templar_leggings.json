@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/armors/dark_ritual_templar_leggings"
+    "layer0": "hazennstuff:item/armor_icons/dark_ritual_templar_leggings"
   }
 }

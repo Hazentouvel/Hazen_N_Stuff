@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hazennstuff:item/armors/frostbite_knight_leggings"
+    "layer0": "hazennstuff:item/armor_icons/frostbite_knight_leggings"
   }
 }

@@ -136,16 +136,10 @@ configurations {
 }
 
 dependencies {
-
     // Required
-    implementation  "curse.maven:iron_lib-1492763:8243189"
-    implementation  "curse.maven:geckolib-388172:7913641"
-
-    // Optional
-
-    // Runtime
-    runtimeOnly  "curse.maven:atlas_api-1145462:8237338"
-    runtimeOnly  "curse.maven:sodium-394468:8254009"
+    implementation "com.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+    implementation "curse.maven:irons-lib-1492763:8678532"
+    implementation "curse.maven:hazentouvelib-1528722:8847664"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

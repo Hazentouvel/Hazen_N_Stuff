@@ -1,11 +1,16 @@
 package net.hazen.hazennstuff.Items.Weapons.Special.Skyscorcher;
 
+import com.geckolib.model.DefaultedItemGeoModel;
+import com.geckolib.renderer.GeoItemRenderer;
+import com.geckolib.renderer.base.GeoRenderState;
+import com.geckolib.renderer.layer.builtin.AutoGlowingGeoLayer;
+import net.hazen.hazennstuff.HazenNStuff;
+import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
+import net.minecraft.resources.Identifier;
 
-public class SkyscorcherRenderer extends GeoItemRenderer<SkyscorcherItem> {
-    public SkyscorcherRenderer() {
-        super(new SkyscorcherModel());
-        //addRenderLayer(new AutoGlowingGeoLayer<>(this));
-
-        addRenderLayer(new AutoGlowingGeoLayer<>(this));
-    }
+public final class SkyscorcherRenderer<R extends HumanoidRenderState & GeoRenderState> extends GeoItemRenderer<SkyscorcherItem> {
+	public SkyscorcherRenderer() {
+		super(new DefaultedItemGeoModel<>(Identifier.fromNamespaceAndPath(HazenNStuff.MOD_ID, "weapons/skyscorcher")));
+		withRenderLayer(AutoGlowingGeoLayer::new);
+	}
 }

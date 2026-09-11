@@ -4,65 +4,78 @@ import com.geckolib.animatable.GeoItem;
 import com.geckolib.animatable.client.GeoRenderProvider;
 import com.geckolib.animatable.instance.AnimatableInstanceCache;
 import com.geckolib.animatable.manager.AnimatableManager;
-import com.geckolib.animation.AnimationController;
-import com.geckolib.animation.RawAnimation;
-import com.geckolib.animation.object.PlayState;
+import com.geckolib.renderer.GeoItemRenderer;
 import com.geckolib.util.GeckoLibUtil;
-import net.hazen.hazennstuff.HLUtils.Items.HnSExtendedWeaponsTiers;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
+import com.google.common.base.Suppliers;
+import net.hazen.hazennstuff.Items.Utils.HnSToolTiers;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.MaceItem;
+
+import javax.annotation.Nullable;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
-public class IcePikeItem extends Item implements GeoItem {
-    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+public class IcePikeItem extends MaceItem implements GeoItem {
+    private final AnimatableInstanceCache geoCache = GeckoLibUtil.createInstanceCache(this);
 
-    public IcePikeItem() {
-        super(
-                HnSExtendedWeaponsTiers.ICE_PIKE,
-                Item.Properties
-                        .equipment(1)
-                        .fireResistant()
-                        .rarity(Rarity.EPIC)
-                        .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.ICE_PIKE))
+    public IcePikeItem(Properties properties) {
+        super(properties
+                .spear(HnSToolTiers.ZENALITE,
+                        0.95f,
+                        0.7f,
+                        0.5f,
+                        3.5f,
+                        13f,
+                        8.5f,
+                        5.1f,
+                        13.37f,
+                        4.67f)
+                .stacksTo(1)
         );
     }
 
+
     @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
-        //controllerRegistrar.add(animationController);
+    public void hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        if (!attacker.level().isClientSide()) {
+            attacker.level().playSound(
+                    null,
+                    target.getX(),
+                    target.getY(),
+                    target.getZ(),
+                    SoundEvents.TRIDENT_THUNDER,
+                    SoundSource.PLAYERS,
+                    1.0f,
+                    1.0f
+            );
+        }
+
+        super.hurtEnemy(stack, target, attacker);
     }
 
-    // Animations and stuff
-    private static final RawAnimation IDLE_ANIMATION = RawAnimation.begin().thenLoop("idle");
-
-    private final AnimationController<IcePikeItem> animationController = new AnimationController<>(this, "controller", 0, this::predicate);
-
-    // Make your animations in this predicate
-    private PlayState predicate(AnimationState<IcePikeItem> event)
-    {
-        event.getController().setAnimation(IDLE_ANIMATION);
-
-        return PlayState.CONTINUE;
+    @Override
+    public void registerControllers(final AnimatableManager.ControllerRegistrar controllers) {
     }
 
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
-        return cache;
+        return geoCache;
     }
 
-    // Your renderer for items
     @Override
     public void createGeoRenderer(Consumer<GeoRenderProvider> consumer) {
         consumer.accept(new GeoRenderProvider() {
-            private IcePikeRenderer renderer;
+            private final Supplier<IcePikeRenderer<?>> renderer =
+                    Suppliers.memoize(IcePikeRenderer::new);
 
             @Override
-            public BlockEntityWithoutLevelRenderer getGeoItemRenderer() {
-                if (this.renderer == null)
-                    this.renderer = new IcePikeRenderer();
-
-                return this.renderer;
+            public @Nullable GeoItemRenderer<IcePikeItem> getGeoItemRenderer() {
+                return this.renderer.get();
             }
         });
     }
+
 }

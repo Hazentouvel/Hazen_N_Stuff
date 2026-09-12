@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "steel",
+  "key": {
+    "D": "minecraft:diamond_chestplate",
+    "S": "hazentouvelib:steel_ingot"
+  },
+  "pattern": [
+    "S S",
+    "SDS",
+    "SSS"
+  ],
+  "result": {
+    "id": "hazennstuff:steel_chestplate"
+  }
+}

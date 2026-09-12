@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "hazennstuff:item/ancient_warriors_axe",
+    "model": {
+      "type": "geckolib:geckolib"
+    }
+  }
+}

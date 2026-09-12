@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "steel",
+  "key": {
+    "D": "minecraft:diamond_boots",
+    "S": "hazentouvelib:steel_ingot"
+  },
+  "pattern": [
+    "   ",
+    "S S",
+    "SDS"
+  ],
+  "result": {
+    "id": "hazennstuff:steel_boots"
+  }
+}

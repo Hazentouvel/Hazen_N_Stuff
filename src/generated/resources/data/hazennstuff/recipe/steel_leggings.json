@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "steel",
+  "key": {
+    "D": "minecraft:diamond_leggings",
+    "S": "hazentouvelib:steel_ingot"
+  },
+  "pattern": [
+    "SSS",
+    "SDS",
+    "S S"
+  ],
+  "result": {
+    "id": "hazennstuff:steel_leggings"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "stalwart",
+  "key": {
+    "D": "hazennstuff:steel_helmet",
+    "S": "hazentouvelib:steel_ingot"
+  },
+  "pattern": [
+    "SDS",
+    "S S",
+    "   "
+  ],
+  "result": {
+    "id": "hazennstuff:stalwart_helmet"
+  }
+}

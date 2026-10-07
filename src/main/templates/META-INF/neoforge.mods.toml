@@ -14,6 +14,9 @@ displayName="${mod_name}" #mandatory
 authors="${mod_authors}" #optional
 description='''${mod_description}'''
 
+[[mixins]]
+config="hazennstuff.mixins.json"
+
 [[dependencies.${mod_id}]] #optional
     # the modid of the dependency
     modId="neoforge" #mandatory

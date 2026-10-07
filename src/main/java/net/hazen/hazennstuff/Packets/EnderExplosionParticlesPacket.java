@@ -1,6 +1,5 @@
-package net.hazen.hazennstuff.Particle;
+package net.hazen.hazennstuff.Packets;
 
-import io.redspace.ironsspellbooks.player.ClientSpellCastHelper;
 import net.hazen.hazennstuff.Setup.HnSClientSpellCastHelper;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.RegistryFriendlyByteBuf;

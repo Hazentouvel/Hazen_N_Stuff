@@ -83,7 +83,7 @@ public class HnSSpellRegistries {
     public static final Supplier<AbstractSpell> FIERY_DAGGER = registerSpell(new FieryDaggerSpell());
 
     //Reign of Tyros
-    //public static final Supplier<AbstractSpell> REIGN_OF_TYROS = registerSpell(new ReignOfTyrosSpell());
+    public static final Supplier<AbstractSpell> REIGN_OF_TYROS = registerSpell(new ReignOfTyrosSpell());
 
     /*
     *** Ice

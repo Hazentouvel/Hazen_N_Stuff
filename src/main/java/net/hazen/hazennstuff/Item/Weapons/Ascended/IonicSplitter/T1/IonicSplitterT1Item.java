@@ -1,15 +1,24 @@
 package net.hazen.hazennstuff.Item.Weapons.Ascended.IonicSplitter.T1;
 
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
+import io.redspace.ironsspellbooks.render.animation.AnimationHelper;
+import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.HnSUtilities.Animations.HnSSpellAnimations;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.client.GeoRenderProvider;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -20,6 +29,10 @@ import java.util.function.Consumer;
 
 public class IonicSplitterT1Item extends ExtendedSwordItem implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+
+    private static int comboTimer = 0;
+    private static boolean wasAttackDown = false;
+    private static boolean nextSlashRight = false;
 
     public IonicSplitterT1Item() {
         super(
@@ -101,4 +114,5 @@ public class IonicSplitterT1Item extends ExtendedSwordItem implements GeoItem {
 //        lines.add(Component.translatable("item.hazennstuff.skyscorcher.description")
 //                .withStyle(ChatFormatting.AQUA, ChatFormatting.ITALIC));
 //    }
+
 }

@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.hazen.hazennstuff.Mixins",
+  "refmap": "hazennstuff.refmap.json",
+  "plugin": "net.hazen.hazennstuff.Mixins.HnSMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+
+    "ScrollModel.ScrollModelMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

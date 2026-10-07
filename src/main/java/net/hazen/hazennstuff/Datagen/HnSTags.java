@@ -1,5 +1,7 @@
 package net.hazen.hazennstuff.Datagen;
 
+import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
+import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -89,6 +91,18 @@ public class HnSTags {
 
         private static TagKey<Item> createTag (String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, name));
+        }
+    }
+
+    public static class Spells {
+
+        public static final TagKey<AbstractSpell> TYROS_SPELLS = TagKey.create(SpellRegistry.SPELL_REGISTRY_KEY, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "tyros_spells"));
+        public static final TagKey<AbstractSpell> SOUL_FLAME_SPELLS = TagKey.create(SpellRegistry.SPELL_REGISTRY_KEY, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "soul_flame_spells"));
+
+        public static boolean isSpellInTag(AbstractSpell spell, TagKey<AbstractSpell> tag) {
+            return SpellRegistry.REGISTRY.getTag(tag)
+                    .map(holderSet -> holderSet.contains(SpellRegistry.REGISTRY.wrapAsHolder(spell)))
+                    .orElse(false);
         }
     }
 

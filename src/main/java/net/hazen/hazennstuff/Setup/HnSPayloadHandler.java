@@ -1,7 +1,7 @@
 package net.hazen.hazennstuff.Setup;
 
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.Particle.EnderExplosionParticlesPacket;
+import net.hazen.hazennstuff.Packets.EnderExplosionParticlesPacket;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;

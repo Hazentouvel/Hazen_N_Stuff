@@ -10,10 +10,9 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
-import net.hazen.hazennstuff.HnSUtilities.Animations.HnSSpellAnimations;
+import net.hazen.hazennstuff.HnSUtilities.Animations.HnSPlayerAnimations;
 import net.hazen.hazennstuff.HnSUtilities.HnSEnchantments;
 import net.hazen.hazennstuff.Spells.AbstractSpells.TyrosSpells;
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -23,7 +22,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
-import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
@@ -73,9 +71,9 @@ public class FieryDaggerSpell extends TyrosSpells {
     @Override
     public AnimationHolder getCastStartAnimation() {
         if (hasCinderous)
-            return HnSSpellAnimations.FIERY_DAGGER_CAST;
+            return HnSPlayerAnimations.FIERY_DAGGER_CAST;
         else
-            return HnSSpellAnimations.FIERY_DAGGER_SUMMON;
+            return HnSPlayerAnimations.FIERY_DAGGER_SUMMON;
     }
 
 

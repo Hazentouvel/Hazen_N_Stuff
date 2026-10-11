@@ -10,8 +10,7 @@ import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.Terraprisma;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazentouvelib.Registries.HLSchoolRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
-import net.hazen.hazennstuff.HnSUtilities.Animations.HnSSpellAnimations;
-import net.minecraft.ChatFormatting;
+import net.hazen.hazennstuff.HnSUtilities.Animations.HnSPlayerAnimations;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -66,11 +65,11 @@ public class TerraprismicBarrageSpell extends AbstractSpell {
     }
 
     public AnimationHolder getCastStartAnimation() {
-        return HnSSpellAnimations.COMMAND_CHARGE;
+        return HnSPlayerAnimations.COMMAND_CHARGE;
     }
 
     public AnimationHolder getCastFinishAnimation() {
-        return HnSSpellAnimations.COMMAND_CAST;
+        return HnSPlayerAnimations.COMMAND_CAST;
     }
 
     public DefaultConfig getDefaultConfig() {

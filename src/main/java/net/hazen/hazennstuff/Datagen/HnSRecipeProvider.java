@@ -162,7 +162,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("SDS")
                 .pattern(" S ")
                 .define('D', HnSItemRegistry.DREADSTONE.get())
-                .define('S', HnSItemRegistry.STEEL_INGOT.get())
+                .define('S', HLItemRegistry.STEEL_INGOT.get())
                 .unlockedBy("has_dreadstone", has(HnSItemRegistry.DREADSTONE.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/dreadsteel_ingot"));
 
@@ -171,19 +171,10 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("DSD")
                 .pattern(" DM")
                 .define('D', ItemRegistry.DIVINE_PEARL.get())
-                .define('S', HnSItemRegistry.STEEL_INGOT.get())
+                .define('S', HLItemRegistry.STEEL_INGOT.get())
                 .define('M', ItemRegistry.MITHRIL_SCRAP.get())
                 .unlockedBy("has_zenalite", has(HnSItemRegistry.ZENALITE_INGOT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/hallowed_ingot"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.CRUDE_METAL.get())
-                .pattern("CIC")
-                .pattern("ICI")
-                .pattern("CIC")
-                .define('I', Items.IRON_INGOT)
-                .define('C', Items.COAL)
-                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/crude_metal"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.SHADESTONE.get())
                 .pattern(" C ")
@@ -212,27 +203,12 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_stardust", has(HnSItemRegistry.STARDUST.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/cosmic_gold_ingot"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItemRegistry.STEEL_NUGGET.get(), 9)
-                .requires(HnSItemRegistry.STEEL_INGOT)
-                .unlockedBy("has_steel",
-                        has(HnSItemRegistry.STEEL_INGOT))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/steel_nugget")
-                );
-
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, HnSItemRegistry.NETHER_STAR_FRAGMENT.get(), 3)
                 .requires(Items.NETHER_STAR)
                 .unlockedBy("has_nether_star",
                         has(Items.NETHER_STAR))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/nether_star_fragment")
                 );
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.STEEL_INGOT.get())
-                .pattern("SSS")
-                .pattern("SSS")
-                .pattern("SSS")
-                .define('S', HnSItemRegistry.STEEL_NUGGET.get())
-                .unlockedBy("has_steel", has(HnSItemRegistry.STEEL_NUGGET.get()))
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "crafting/materials/steel_ingot"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, HnSItemRegistry.STORM_WEAVE.get())
                 .pattern("LLL")
@@ -518,7 +494,7 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" IS")
                 .pattern(" MI")
                 .pattern("W  ")
-                .define('S', HnSItemRegistry.STEEL_INGOT.get())
+                .define('S', HLItemRegistry.STEEL_INGOT.get())
                 .define('I', ItemRegistry.MITHRIL_INGOT.get())
                 .define('M', ItemRegistry.MAGEHUNTER.get())
                 .define('W', ItemRegistry.WEAPON_PARTS.get())
@@ -2947,8 +2923,6 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
 
         List<ItemLike> CHLOROPHYTE_SMELTABLES = List.of(
                 HnSItemRegistry.CHLOROPHYTE_CHUNK);
-        List<ItemLike> STEEL_SMELTABLES = List.of(
-                HnSItemRegistry.CRUDE_METAL);
         List<ItemLike> DEMONITE_SMELTABLES = List.of(
                 HnSItemRegistry.SHADESTONE);
         List<ItemLike> DREADSTONE_ORE_SMELTABLES = List.of(
@@ -2991,22 +2965,6 @@ public class HnSRecipeProvider extends RecipeProvider implements IConditionBuild
                 0.25f,
                 100,
                 "demonite_ingot");
-
-        oreSmelting(recipeOutput,
-                STEEL_SMELTABLES,
-                RecipeCategory.MISC,
-                HnSItemRegistry.STEEL_INGOT.get(),
-                0.25f,
-                200,
-                "steel_ingot");
-
-        oreBlasting(recipeOutput,
-                STEEL_SMELTABLES,
-                RecipeCategory.MISC,
-                HnSItemRegistry.STEEL_INGOT.get(),
-                0.25f,
-                100,
-                "steel_ingot");
 
         oreSmelting(recipeOutput,
                 DREADSTONE_ORE_SMELTABLES,

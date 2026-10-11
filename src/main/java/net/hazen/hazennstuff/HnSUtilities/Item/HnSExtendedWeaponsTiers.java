@@ -396,7 +396,7 @@ public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
     public static HnSExtendedWeaponsTiers UMBRANOVA_T1 = new HnSExtendedWeaponsTiers(
             8064,
             7,
-            -2F,
+            -2.4F,
             10,
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),

@@ -3,7 +3,8 @@ package net.hazen.hazennstuff.Registries;
 import com.mojang.serialization.MapCodec;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Particle.LeafParticle.LeafParticleOptions;
-import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSLash.IonicSlashOptions;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.EnderThrust.EnderThrustOptions;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSlash.IonicSlashOptions;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NatureSlash.NatureSlashOptions;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrikeOptions;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.ScorchingSlash.ScorchingSlashOptions;
@@ -120,6 +121,18 @@ public class HnSParticleRegistry {
 
                 public StreamCodec<? super RegistryFriendlyByteBuf, IonicSlashOptions> streamCodec() {
                     return IonicSlashOptions.STREAM_CODEC;
+                }
+            });
+
+
+    public static final Supplier<ParticleType<EnderThrustOptions>> ENDER_THRUST =
+            PARTICLE_TYPES.register("ender_thrust_particle", () -> new ParticleType<EnderThrustOptions>(true) {
+                public MapCodec<EnderThrustOptions> codec() {
+                    return EnderThrustOptions.MAP_CODEC;
+                }
+
+                public StreamCodec<? super RegistryFriendlyByteBuf, EnderThrustOptions> streamCodec() {
+                    return EnderThrustOptions.STREAM_CODEC;
                 }
             });
 

@@ -5,6 +5,7 @@ import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.registries.ArmorMaterialRegistry;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
+import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
@@ -14,7 +15,11 @@ import static io.redspace.ironsspellbooks.item.armor.ExtendedArmorItem.schoolAtt
 
 public class GeckolibCosmicScholarArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public GeckolibCosmicScholarArmorItem(Type type, Properties settings) {
-        super(ArmorMaterialRegistry.SCHOOL, type, settings, schoolAttributes(
+        super(ArmorMaterialRegistry.SCHOOL, type, settings
+                .stacksTo(1)
+                .rarity(HLRarities.COSMIC_RARITY.getValue())
+                .fireResistant()
+                , schoolAttributes(
                 HLAttributeRegistry.COSMIC_SPELL_POWER
         ));
     }
@@ -23,6 +28,6 @@ public class GeckolibCosmicScholarArmorItem extends ImbuableGeckolibHnSArmorItem
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new GeckolibCosmicScholarArmorModel());
+        return new GeckolibCosmicScholarArmorRenderer(new GeckolibCosmicScholarArmorModel());
     }
 }

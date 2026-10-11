@@ -7,12 +7,11 @@ import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.RecastInstance;
-import net.hazen.hazennstuff.HnSUtilities.Animations.HnSSpellAnimations;
+import net.hazen.hazennstuff.HnSUtilities.Animations.HnSPlayerAnimations;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.DazzlingObliteration.NinguDemonbanePetalblade;
 import net.hazen.hazennstuff.Entity.Spells.Lightning.DazzlingObliteration.Shuriken.NinguDemonbanePetalbladeShuriken;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSSounds;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -74,11 +73,11 @@ public class DazzlingObliterationSpell extends AbstractSpell {
     @Override
     public AnimationHolder getCastStartAnimation() {
         if (recastStage == 1) {
-            return HnSSpellAnimations.RAPPA_RECAST_1;
+            return HnSPlayerAnimations.RAPPA_RECAST_1;
         } else if (recastStage == 2) {
-            return HnSSpellAnimations.RAPPA_RECAST_2;
+            return HnSPlayerAnimations.RAPPA_RECAST_2;
         } else {
-            return HnSSpellAnimations.RAPPA_RECAST_3;
+            return HnSPlayerAnimations.RAPPA_RECAST_3;
         }
     }
 

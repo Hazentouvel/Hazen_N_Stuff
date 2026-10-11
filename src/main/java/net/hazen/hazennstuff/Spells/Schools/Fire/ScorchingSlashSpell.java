@@ -11,14 +11,13 @@ import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
-import net.hazen.hazennstuff.HnSUtilities.Animations.HnSSpellAnimations;
+import net.hazen.hazennstuff.HnSUtilities.Animations.HnSPlayerAnimations;
 import net.hazen.hazennstuff.Entity.Spells.Fire.ScorchingSlash.ScorchingBlade;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.ScorchingSlash.ScorchingSlashOptions;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazennstuff.Spells.AbstractSpells.RavensBaneSpell;
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -97,11 +96,11 @@ public class ScorchingSlashSpell extends RavensBaneSpell {
     }
 
     public AnimationHolder getCastStartAnimation() {
-        return HnSSpellAnimations.SCORCHING_SLASH_STANCE;
+        return HnSPlayerAnimations.SCORCHING_SLASH_STANCE;
     }
 
     public AnimationHolder getCastFinishAnimation() {
-        return HnSSpellAnimations.SCORCHING_SLASH_SLASH;
+        return HnSPlayerAnimations.SCORCHING_SLASH_SLASH;
     }
 
     public int getEffectiveCastTime(int spellLevel, @Nullable LivingEntity entity) {

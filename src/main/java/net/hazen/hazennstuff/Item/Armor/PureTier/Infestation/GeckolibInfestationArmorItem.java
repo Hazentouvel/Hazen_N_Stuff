@@ -1,17 +1,23 @@
 package net.hazen.hazennstuff.Item.Armor.PureTier.Infestation;
 
+import io.redspace.ironslib.transmog.client.TransmogArmorRenderer;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
+import net.acetheeldritchking.aces_spell_utils.entity.render.armor.EmissiveTransmogArmorRenderer;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.CelestisynthCompat;
 import net.hazen.hazennstuff.Compat.GoetyCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
+import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.Item.Armor.SchoolTier.CosmicScholar.GeckolibCosmicScholarArmorModel;
+import net.hazen.hazennstuff.Item.Armor.SchoolTier.CosmicScholar.GeckolibCosmicScholarArmorRenderer;
 import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -20,6 +26,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
@@ -49,12 +56,10 @@ public class GeckolibInfestationArmorItem extends ImbuableGeckolibHnSArmorItem i
         return attributes.build().modifiers();
     }
 
-    // Just supply the armor model here; you don't have to worry about making a new renderer
-    // ISS already has a custom renderer used for armor models
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new GeckolibInfestationArmorModel());
+        return new GeckolibInfestationArmorRenderer(new GeckolibInfestationArmorModel());
     }
 
     @Override

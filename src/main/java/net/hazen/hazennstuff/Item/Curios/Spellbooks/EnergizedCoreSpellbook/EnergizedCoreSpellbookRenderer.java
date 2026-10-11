@@ -5,6 +5,7 @@ import mod.azure.azurelib.common.render.item.AzItemRendererConfig;
 import mod.azure.azurelib.common.render.layer.AzAutoGlowingLayer;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemDisplayContext;
 
 public class EnergizedCoreSpellbookRenderer extends AzItemRenderer {
     public static final ResourceLocation GEO = ResourceLocation.fromNamespaceAndPath(
@@ -22,6 +23,7 @@ public class EnergizedCoreSpellbookRenderer extends AzItemRenderer {
                 AzItemRendererConfig.builder(GEO, TEX)
                         .setAnimatorProvider(EnergizedCoreSpellbookAnimator::new)
                         .addRenderLayer(new AzAutoGlowingLayer<>())
+                        .disableAnimationInContexts(ItemDisplayContext.GUI, ItemDisplayContext.FIRST_PERSON_LEFT_HAND, ItemDisplayContext.FIRST_PERSON_RIGHT_HAND, ItemDisplayContext.GROUND)
                         .build()
         );
     }

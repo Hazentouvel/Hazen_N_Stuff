@@ -10,13 +10,16 @@ import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.component.Unbreakable;
 import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
@@ -26,7 +29,12 @@ import java.util.List;
 
 public class GeckolibAstraconicWeaverArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public GeckolibAstraconicWeaverArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings, pureTier(
+        super(HnSArmorMaterials.PURE_ARMOR_TIER_MATERIAL, type, settings
+                        .stacksTo(1)
+                        .rarity(HLRarities.COSMIC_RARITY.getValue())
+                        .fireResistant()
+                        .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
+                , pureTier(
                 HLAttributeRegistry.COSMIC_SPELL_POWER
         ));
     }
@@ -47,7 +55,7 @@ public class GeckolibAstraconicWeaverArmorItem extends ImbuableGeckolibHnSArmorI
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new GeckolibAstraconicWeaverArmorModel());
+        return new GeckolibAstraconicWeaverArmorRenderer(new GeckolibAstraconicWeaverArmorModel());
     }
 
     @Override

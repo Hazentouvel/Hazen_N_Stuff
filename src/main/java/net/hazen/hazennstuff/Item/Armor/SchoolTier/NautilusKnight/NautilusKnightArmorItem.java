@@ -23,6 +23,6 @@ public class NautilusKnightArmorItem extends ImbuableGeckolibHnSArmorItem implem
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new NautilusKnightArmorModel());
+        return new NautilusKnightArmorRenderer(new NautilusKnightArmorModel());
     }
 }

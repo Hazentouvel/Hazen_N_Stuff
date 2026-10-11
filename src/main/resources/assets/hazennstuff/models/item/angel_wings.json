@@ -2,14 +2,14 @@
   "parent": "minecraft:item/handheld",
   "loader": "neoforge:separate_transforms",
   "base": {
-    "parent": "hazentouvelib:item/wing_base"
+    "parent": "hazennstuff:item/wing_base"
   },
   "perspectives": {
     "gui": {
-      "parent": "hazentouvelib:item/wing_base"
+      "parent": "hazennstuff:item/wing_base"
     },
     "fixed": {
-      "parent": "hazentouvelib:item/wing_base"
+      "parent": "hazennstuff:item/wing_base"
     }
   }
 }

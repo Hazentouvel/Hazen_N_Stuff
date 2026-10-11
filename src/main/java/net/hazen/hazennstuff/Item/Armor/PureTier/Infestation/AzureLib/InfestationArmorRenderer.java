@@ -15,7 +15,7 @@ public class InfestationArmorRenderer extends AzArmorRenderer {
 
     private static final ResourceLocation TEX = ResourceLocation.fromNamespaceAndPath(
             HazenNStuff.MOD_ID,
-            "textures/armor/infestation_armor_azurelib.png"
+            "textures/armor/infestation_armor.png"
     );
 
     public InfestationArmorRenderer() {

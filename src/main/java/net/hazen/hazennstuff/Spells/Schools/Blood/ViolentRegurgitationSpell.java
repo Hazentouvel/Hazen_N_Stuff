@@ -10,14 +10,12 @@ import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.damage.DamageSources;
-import net.hazen.hazennstuff.HnSUtilities.Animations.HnSSpellAnimations;
+import net.hazen.hazennstuff.HnSUtilities.Animations.HnSPlayerAnimations;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshChunk.FleshChunk;
 import net.hazen.hazennstuff.Entity.Spells.Blood.ViolentRegurgitation.FleshPiece.FleshPiece;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.Registries.HnSDamageTypes;
 import net.hazen.hazennstuff.Registries.HnSSounds;
 import net.hazen.hazentouvelib.Registries.HLDamageTypes;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -90,12 +88,12 @@ public class ViolentRegurgitationSpell extends AbstractSpell {
 
     @Override
     public AnimationHolder getCastStartAnimation() {
-        return HnSSpellAnimations.VIOLENT_REGURGITATION_CHARGING;
+        return HnSPlayerAnimations.VIOLENT_REGURGITATION_CHARGING;
     }
 
     @Override
     public AnimationHolder getCastFinishAnimation() {
-        return HnSSpellAnimations.VIOLENT_REGURGITATION_CAST;
+        return HnSPlayerAnimations.VIOLENT_REGURGITATION_CAST;
     }
 
     @Override

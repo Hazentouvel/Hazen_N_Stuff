@@ -16,6 +16,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.MaceItem;
@@ -52,23 +53,28 @@ public class SkyscorcherItem extends MagicMaceItem implements GeoItem {
         );
     }
 
-
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        boolean result = super.hurtEnemy(stack, target, attacker);
+
         if (!attacker.level().isClientSide) {
-            attacker.level().playSound(
-                    null,
-                    target.getX(),
-                    target.getY(),
-                    target.getZ(),
-                    SoundRegistry.SPEAR_CHANNELING_STRIKE,
-                    SoundSource.PLAYERS,
-                    1.0f,
-                    1.0f
-            );
+            boolean isCrit = false;
+
+            if (attacker instanceof Player player) {
+                isCrit = player.fallDistance > 0.0F && !player.onGround() && !player.isInWater() && !player.hasEffect(net.minecraft.world.effect.MobEffects.BLINDNESS) && !player.isPassenger() && !player.isSprinting() && player.getMainHandItem() == stack;
+            }
+
+            if (isCrit) {
+                attacker.level().playSound(null, target.getX(), target.getY(), target.getZ(),
+                        SoundRegistry.SPEAR_CHANNELING_STRIKE,
+                        SoundSource.PLAYERS,
+                        0.5f,
+                        1.0f
+                );
+            }
         }
 
-        return super.hurtEnemy(stack, target, attacker);
+        return result;
     }
 
 

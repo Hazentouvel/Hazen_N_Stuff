@@ -53,25 +53,14 @@ public class SoulcallingScepter extends StaffItem {
             boolean isCrit = false;
 
             if (attacker instanceof Player player) {
-                isCrit =
-                        player.fallDistance > 0.0F &&
-                                !player.onGround() &&
-                                !player.isInWater() &&
-                                !player.hasEffect(net.minecraft.world.effect.MobEffects.BLINDNESS) &&
-                                !player.isPassenger() &&
-                                !player.isSprinting() &&
-                                player.getMainHandItem() == stack;
+                isCrit = player.fallDistance > 0.0F && !player.onGround() && !player.isInWater() && !player.hasEffect(net.minecraft.world.effect.MobEffects.BLINDNESS) && !player.isPassenger() && !player.isSprinting() && player.getMainHandItem() == stack;
             }
 
             if (isCrit) {
-                attacker.level().playSound(
-                        null,
-                        target.getX(),
-                        target.getY(),
-                        target.getZ(),
+                attacker.level().playSound(null, target.getX(), target.getY(), target.getZ(),
                         SoundRegistry.SOULCALLER_TOLL_SUCCESS,
                         SoundSource.PLAYERS,
-                        0.5f,
+                        0.25f,
                         1.0f
                 );
             }

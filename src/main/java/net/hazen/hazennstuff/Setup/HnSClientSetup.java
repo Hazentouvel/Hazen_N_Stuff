@@ -65,6 +65,7 @@ import net.hazen.hazennstuff.Entity.Spells.Shadow.NightsEdgeAfterSlash.NightsEdg
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose2.HazelStatueRendererPose1;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose3.HazelStatueRendererPose2;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose4.HazelStatueRendererPose3;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.EnderThrust.EnderThrust;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.ScorchingSlash.ScorchingSlash;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.SoulFlameStrike.SoulFlameStrike;
 import net.hazen.hazennstuff.Particle.SoulParticle;
@@ -73,7 +74,7 @@ import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
 import net.hazen.hazennstuff.Particle.HnSGenericParticle;
 import net.hazen.hazennstuff.Particle.LeafParticle.LeafParticle;
-import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSLash.IonicSlash;
+import net.hazen.hazennstuff.Particle.SlashParticles.Spells.IonicSlash.IonicSlash;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NatureSlash.NatureSlash;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.NightsEdgeStrike.NightsEdgeStrike;
 import net.minecraft.client.renderer.entity.NoopRenderer;
@@ -202,6 +203,7 @@ public class HnSClientSetup {
         event.registerSpriteSet(HnSParticleRegistry.NIGHTS_EDGE_STRIKE_PARTICLE.get(), NightsEdgeStrike.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.NATURE_SLASH_PARTICLE.get(), NatureSlash.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.IONIC_SLASH.get(), IonicSlash.Provider::new);
+        event.registerSpriteSet(HnSParticleRegistry.ENDER_THRUST.get(), EnderThrust.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.SCORCHING_SLASH.get(), ScorchingSlash.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.SOUL_FLAMING_STRIKE_PARTICLE.get(), SoulFlameStrike.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.STARFORGE_STAR.get(), StarForgeStarParticle.Provider::new);

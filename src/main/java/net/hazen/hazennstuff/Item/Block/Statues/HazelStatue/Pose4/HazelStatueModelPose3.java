@@ -16,7 +16,7 @@ public class HazelStatueModelPose3 extends DefaultedBlockGeoModel<HazelStatueBlo
 
     @Override
     public ResourceLocation getTextureResource(HazelStatueBlockEntityPose3 animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/block/statue/hazel_statue.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/block/statue/hazel_statue_w_ravens_bane.png");
     }
 
     @Override

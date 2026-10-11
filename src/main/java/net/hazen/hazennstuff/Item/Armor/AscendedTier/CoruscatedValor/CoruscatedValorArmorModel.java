@@ -17,7 +17,7 @@ public class CoruscatedValorArmorModel extends DefaultedEntityGeoModel<Coruscate
 
     @Override
     public ResourceLocation getTextureResource(CoruscatedValorArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/coruscated_valor_armor_alt.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/armor/coruscated_valor_armor.png");
     }
 
     @Override

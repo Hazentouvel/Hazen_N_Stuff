@@ -836,7 +836,7 @@ public class HnSCreativeModeTabs {
                         /*
                         *** Umbranova
                          */
-                        output.accept(HnSItemRegistry.UMBRANOVA_DORMANT.get());
+                        output.accept(HnSItemRegistry.UMBRANOVA_T1.get());
 
 
                         //Holy

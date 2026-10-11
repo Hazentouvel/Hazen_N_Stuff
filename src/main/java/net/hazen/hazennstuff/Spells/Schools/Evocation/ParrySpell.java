@@ -6,12 +6,11 @@ import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
+import net.acetheeldritchking.aces_spell_utils.utils.ImpactFrameHandler;
 import net.hazen.hazennstuff.Registries.HnSSounds;
-import net.hazen.hazennstuff.HnSUtilities.Animations.HnSSpellAnimations;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
+import net.hazen.hazennstuff.HnSUtilities.Animations.HnSPlayerAnimations;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -22,7 +21,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
@@ -93,6 +91,7 @@ public class ParrySpell extends AbstractSpell {
                         projectile.setOwner(entity);
                         projectile.shoot(forward.x, forward.y, forward.z, (float) projectile.getDeltaMovement().length(), 0.0F);
 
+                        triggerImpactFrame(entity);
                         level.playSound((Player) null, projectile.getX(), projectile.getY(), projectile.getZ(), HnSSounds.PARRY.get(), entity.getSoundSource());
                     }
                 }
@@ -102,8 +101,14 @@ public class ParrySpell extends AbstractSpell {
         super.onCast(level, spellLevel, entity, castSource, playerMagicData);
     }
 
+    private void triggerImpactFrame(LivingEntity entity) {
+        if (entity instanceof ServerPlayer serverPlayer) {
+            ImpactFrameHandler.trigger(serverPlayer, 0xffffff, 0x000000, 0.5f, ImpactFrameHandler.DEFAULT_THRESHOLD, 5, 1, 0.1f);
+        }
+    }
+
     public AnimationHolder getCastStartAnimation() {
-        return HnSSpellAnimations.PARRY;
+        return HnSPlayerAnimations.PARRY;
     }
 }
 

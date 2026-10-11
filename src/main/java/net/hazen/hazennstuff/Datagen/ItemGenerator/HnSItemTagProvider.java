@@ -32,7 +32,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
         //Ores and Ingots
         tag(Tags.Items.INGOTS)
                 .add(HnSItemRegistry.ZENALITE_INGOT.get())
-                .add(HnSItemRegistry.STEEL_INGOT.get())
                 .add(HnSItemRegistry.ROSE_GOLD_INGOT.get())
                 .add(HnSItemRegistry.DREADSTEEL_INGOT.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_INGOT.get())
@@ -60,7 +59,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
                 .add(HnSItemRegistry.RAW_ZENALITE.get())
                 .add(HnSItemRegistry.CHLOROPHYTE_CHUNK.get())
                 .add(HnSItemRegistry.DREADSTONE.get())
-                .add(HnSItemRegistry.CRUDE_METAL.get())
 
         ;
 
@@ -1086,7 +1084,6 @@ public class HnSItemTagProvider extends ItemTagsProvider {
 
                 //Ender
                 .add(HnSItemRegistry.OBSIDIAN_CLAYMORE.get())
-                .add(HnSItemRegistry.UMBRANOVA_DORMANT.get())
                 //.add(HnSItemRegistry.UMBRANOVA_T1.get())
 
                 //Radiance

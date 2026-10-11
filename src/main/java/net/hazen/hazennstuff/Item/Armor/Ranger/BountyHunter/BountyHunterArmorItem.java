@@ -28,6 +28,6 @@ public class BountyHunterArmorItem extends ImbuableGeckolibHnSArmorItem implemen
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new BountyHunterArmorModel());
+        return new BountyHunterArmorRenderer(new BountyHunterArmorModel());
     }
 }

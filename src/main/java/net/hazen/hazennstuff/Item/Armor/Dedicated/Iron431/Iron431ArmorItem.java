@@ -64,7 +64,7 @@ public class Iron431ArmorItem extends ImbuableGeckolibHnSArmorItem implements ID
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new Iron431ArmorModel());
+        return new Iron431ArmorRenderer(new Iron431ArmorModel());
     }
 
     @Override

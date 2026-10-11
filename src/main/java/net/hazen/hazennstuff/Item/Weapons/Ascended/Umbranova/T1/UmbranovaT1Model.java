@@ -17,7 +17,7 @@ public class UmbranovaT1Model extends DefaultedItemGeoModel<UmbranovaT1> {
 
     @Override
     public ResourceLocation getTextureResource(UmbranovaT1 animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/umbranova.png");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "textures/item/weapons/umbranova_1.png");
     }
 
     @Override

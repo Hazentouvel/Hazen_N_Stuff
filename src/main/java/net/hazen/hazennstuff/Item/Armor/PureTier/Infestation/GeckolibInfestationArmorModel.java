@@ -22,7 +22,7 @@ public class GeckolibInfestationArmorModel extends DefaultedEntityGeoModel<Gecko
 
     @Override
     public ResourceLocation getAnimationResource(GeckolibInfestationArmorItem animatable) {
-        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/armor/infestation_armor_animation.json");
+        return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/armor/infestation_armor.animation.json");
     }
 }
 

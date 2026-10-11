@@ -4,13 +4,19 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.armor.IDisableHat;
 import io.redspace.ironsspellbooks.item.armor.IDisableJacket;
+import net.acetheeldritchking.aces_spell_utils.entity.render.armor.EmissiveTransmogArmorRenderer;
 import net.hazen.hazennstuff.Compat.ArsNoveauCompat;
 import net.hazen.hazennstuff.Compat.CelestisynthCompat;
 import net.hazen.hazennstuff.Compat.GoetyCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
+import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.Item.Armor.PureTier.Infestation.GeckolibInfestationArmorModel;
+import net.hazen.hazennstuff.Item.Armor.PureTier.Infestation.GeckolibInfestationArmorRenderer;
 import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -46,10 +52,11 @@ public class GeckolibTheWitherArmorItem extends ImbuableGeckolibHnSArmorItem imp
 
     // Just supply the armor model here; you don't have to worry about making a new renderer
     // ISS already has a custom renderer used for armor models
+
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new GeckolibTheWitherArmorModel());
+        return new GeckolibTheWitherArmorRenderer(new GeckolibTheWitherArmorModel());
     }
 
     @Override

@@ -1,6 +1,7 @@
 package net.hazen.hazennstuff.Item.Armor.AscendedTier.DeadKing;
 
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Item.Armor.PureTier.FleshMass.FleshMassArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
@@ -43,5 +44,6 @@ public class DeadKingArmorModel extends DefaultedEntityGeoModel<DeadKingArmorIte
     public ResourceLocation getAnimationResource(DeadKingArmorItem animatable) {
         return ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "animations/armor/dead_king_armor.animation.json");
     }
+
 }
 

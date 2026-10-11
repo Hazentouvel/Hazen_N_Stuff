@@ -64,7 +64,7 @@ public class SacredRobesArmorItem extends ImbuableGeckolibHnSArmorItem implement
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new SacredRobesArmorModel());
+        return new SacredRobesArmorRenderer(new SacredRobesArmorModel());
     }
 
     @Override

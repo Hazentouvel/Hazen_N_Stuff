@@ -35,25 +35,6 @@ public class IonicSplitterT2Item extends ExtendedSwordItem implements GeoItem {
 
 
     @Override
-    public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        if (!attacker.level().isClientSide) {
-            attacker.level().playSound(
-                    null,
-                    target.getX(),
-                    target.getY(),
-                    target.getZ(),
-                    HnSSounds.ELECTRIC_IMPACT,
-                    SoundSource.PLAYERS,
-                    1.0f,
-                    1.0f
-            );
-        }
-
-        return super.hurtEnemy(stack, target, attacker);
-    }
-
-
-    @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
         //controllerRegistrar.add(animationController);
     }

@@ -1,5 +1,5 @@
 {
-  "credit": "Made by Hazen",
+  "credit": "Made with Blockbench",
   "parent": "builtin/entity",
   "texture_size": [
     128,
@@ -9,36 +9,36 @@
     "firstperson_righthand": {
       "translation": [
         4,
-        7.5,
+        0,
         0
       ],
       "scale": [
-        0.5,
-        0.5,
-        0.5
+        0.7,
+        0.7,
+        0.7
       ]
     },
     "firstperson_lefthand": {
       "translation": [
         4,
-        7.5,
+        0,
         0
       ],
       "scale": [
-        0.5,
-        0.5,
-        0.5
+        0.7,
+        0.7,
+        0.7
       ]
     },
     "ground": {
       "rotation": [
-        -112,
-        -79,
+        45,
+        0,
         0
       ],
       "translation": [
         0,
-        5.25,
+        8.5,
         0
       ],
       "scale": [
@@ -54,14 +54,14 @@
         -90
       ],
       "translation": [
-        -1.5,
-        -1.5,
+        -4.5,
+        -1,
         0
       ],
       "scale": [
-        0.4,
-        0.4,
-        0.4
+        0.5,
+        0.5,
+        0.5
       ]
     },
     "fixed": {

@@ -94,7 +94,7 @@ public class GarmentsOfTheFirstFlamebearerArmorItem extends ImbuableGeckolibHnSA
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new GarmentsOfTheFirstFlamebearerArmorModel());
+        return new GarmentsOfTheFirstFlamebearerArmorRenderer(new GarmentsOfTheFirstFlamebearerArmorModel());
     }
 
     @Override

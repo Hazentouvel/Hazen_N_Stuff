@@ -13,7 +13,6 @@ import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.PureTier.AzureLib.
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.PureTier.GeckoLibFireblossomBattlemageArmor;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.SchoolTier.AzureLib.FireblossomKnightArmor;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.SchoolTier.GeckoLibFireblossomKnightArmor;
-import net.hazen.hazennstuff.Item.Armor.PureTier.AstraconicWeaver.AzureLib.AstraconicWeaverArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.AstraconicWeaver.GeckolibAstraconicWeaverArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Blazeborne.AzureLib.BlazeborneArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.CreakingSorcerer.AzureLib.CreakingSorcererArmorItem;
@@ -93,7 +92,6 @@ import net.hazen.hazennstuff.Item.Armor.Misc.SpectralSpelunker.SpectralSpelunker
 import net.hazen.hazennstuff.Item.Armor.PureTier.SupremeWitch.GeckolibSupremeWitchArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.TheWither.GeckolibTheWitherArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.ThunderProwler.ThunderProwlerArmorItem;
-import net.hazen.hazennstuff.Item.Armor.SchoolTier.CosmicScholar.AzureLib.CosmicScholarArmorItem;
 import net.hazen.hazennstuff.Item.Armor.SchoolTier.CosmicScholar.GeckolibCosmicScholarArmorItem;
 import net.hazen.hazennstuff.Item.Armor.SchoolTier.MaskedFool.MaskedFoolArmorItem;
 import net.hazen.hazennstuff.Item.Armor.SchoolTier.NautilusKnight.NautilusKnightArmorItem;
@@ -156,7 +154,9 @@ import net.hazen.hazennstuff.Item.Weapons.Ascended.IonicSplitter.T3.IonicSplitte
 import net.hazen.hazennstuff.Item.Weapons.Ascended.OFortuna.Dormant.OFortuna;
 import net.hazen.hazennstuff.Item.Weapons.Ascended.Provocation.Dormant.Provocation;
 import net.hazen.hazennstuff.Item.Weapons.Ascended.RavensBane.RavensBaneItem;
-import net.hazen.hazennstuff.Item.Weapons.Ascended.Umbranova.Dormant.Umbranova;
+import net.hazen.hazennstuff.Item.Weapons.Ascended.Umbranova.T1.UmbranovaT1;
+import net.hazen.hazennstuff.Item.Weapons.Ascended.Umbranova.T2.UmbranovaT2;
+import net.hazen.hazennstuff.Item.Weapons.Ascended.Umbranova.T3.UmbranovaT3;
 import net.hazen.hazennstuff.Item.Weapons.Generic.AncientWarriorsAxe.AncientWarriorsAxeItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.AstraliteCleaver.AstraliteCleaver;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Beongae.BeongaeItem;
@@ -699,7 +699,7 @@ public class HnSItemRegistry {
                     .rarity(HLRarities.HYDRO_RARITY.getValue()))
     );
 
-    // Arcane Sea Shell
+    // Elder Guardian Spine
     public static final DeferredItem<Item> ELDER_GUARDIAN_SPINE = ITEMS.register("elder_guardian_spine",
             () -> new Item(new Item.Properties()
                     .rarity(HLRarities.HYDRO_RARITY.getValue()))
@@ -836,8 +836,12 @@ public class HnSItemRegistry {
     /*
     Umbranova
      */
-    public static final DeferredHolder<Item, Item> UMBRANOVA_DORMANT = ITEMS.register
-            ("umbranova_dormant", Umbranova::new);
+    public static final DeferredHolder<Item, Item> UMBRANOVA_T1 = ITEMS.register
+            ("umbranova_t1", UmbranovaT1::new);
+    public static final DeferredHolder<Item, Item> UMBRANOVA_T2 = ITEMS.register
+            ("umbranova_t2", UmbranovaT2::new);
+    public static final DeferredHolder<Item, Item> UMBRANOVA_T3 = ITEMS.register
+            ("umbranova_t3", UmbranovaT3::new);
 
     /*
      *** Radiance
@@ -2225,130 +2229,51 @@ public class HnSItemRegistry {
 
     // Cosmic Scholar
 
-    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_HELMET = ITEMS.register("cosmic_scholar_helmet", () -> new CosmicScholarArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.COSMIC_RARITY.getValue())
-            .fireResistant()
+    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_HELMET = ITEMS.register("cosmic_scholar_helmet", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
             .durability(ArmorItem.Type.HELMET.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_CHESTPLATE = ITEMS.register("cosmic_scholar_chestplate", () -> new CosmicScholarArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.COSMIC_RARITY.getValue())
-            .fireResistant()
+    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_CHESTPLATE = ITEMS.register("cosmic_scholar_chestplate", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_LEGGINGS = ITEMS.register("cosmic_scholar_leggings", () -> new CosmicScholarArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.COSMIC_RARITY.getValue())
-            .fireResistant()
+    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_LEGGINGS = ITEMS.register("cosmic_scholar_leggings", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
     ));
-    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_BOOTS = ITEMS.register("cosmic_scholar_boots", () -> new CosmicScholarArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.COSMIC_RARITY.getValue())
-            .fireResistant()
+    public static final DeferredHolder<Item, Item> COSMIC_SCHOLAR_BOOTS = ITEMS.register("cosmic_scholar_boots", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
             .durability(ArmorItem.Type.BOOTS.getDurability(32))
-
     ));
-
-
-
-    // GeckoLib
-
-
-
-    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_HELMET = ITEMS.register("geckolib_cosmic_scholar_helmet", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.COSMIC_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(32))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_CHESTPLATE = ITEMS.register("geckolib_cosmic_scholar_chestplate", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.COSMIC_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(32))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_LEGGINGS = ITEMS.register("geckolib_cosmic_scholar_leggings", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.COSMIC_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(32))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_COSMIC_SCHOLAR_BOOTS = ITEMS.register("geckolib_cosmic_scholar_boots", () -> new GeckolibCosmicScholarArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.COSMIC_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(32))
-
-    ));
-
 
 
     // Astraconic Weaver
 
 
 
-    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_HELMET = ITEMS.register("astraconic_weaver_helmet", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
+    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_HELMET = ITEMS.register("astraconic_weaver_helmet", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
             .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
-    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_CHESTPLATE = ITEMS.register("astraconic_weaver_chestplate", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
+    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_CHESTPLATE = ITEMS.register("astraconic_weaver_chestplate", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
             .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
-    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_LEGGINGS = ITEMS.register("astraconic_weaver_leggings", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
+    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_LEGGINGS = ITEMS.register("astraconic_weaver_leggings", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
             .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
-    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_BOOTS = ITEMS.register("astraconic_weaver_boots", () -> new AstraconicWeaverArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
+    public static final DeferredHolder<Item, Item> ASTRACONIC_WEAVER_BOOTS = ITEMS.register("astraconic_weaver_boots", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
             .stacksTo(1)
             .rarity(HLRarities.COSMIC_RARITY.getValue())
             .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
-    ));
-
-
-
-    // Geckolib
-
-
-
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_HELMET = ITEMS.register("geckolib_astraconic_weaver_helmet", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.COSMIC_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_CHESTPLATE = ITEMS.register("geckolib_astraconic_weaver_chestplate", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.COSMIC_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_LEGGINGS = ITEMS.register("geckolib_astraconic_weaver_leggings", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.COSMIC_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> GECKOLIB_ASTRACONIC_WEAVER_BOOTS = ITEMS.register("geckolib_astraconic_weaver_boots", () -> new GeckolibAstraconicWeaverArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.COSMIC_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-
     ));
 
 

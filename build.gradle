@@ -156,10 +156,10 @@ dependencies {
      */
 
     //Iron's Spells 'n Spellbooks
-    implementation "curse.maven:irons_spells_n_spellbooks-855414:8237097"
-    implementation "curse.maven:iron_lib-1492763:8207094"
+    implementation "curse.maven:irons_spells_n_spellbooks-855414:8680204"
+    implementation "curse.maven:iron_lib-1492763:8973642"
     implementation "curse.maven:geckolib-388172:8350073"
-    implementation "curse.maven:player_animator-658587:6024462"
+    implementation "curse.maven:player_animator-658587:7389814"
     implementation "curse.maven:curios-309927:6529130"
     implementation "curse.maven:caelus-308989:5694215"
     //Apothic Attributes
@@ -167,11 +167,11 @@ dependencies {
     //implementation "curse.maven:placebo-283644:6337156"
     //compileOnly "curse.maven:apotheosis-${apotheosis_version}"
     //Ace Utils
-    implementation "curse.maven:ace_utils-1299492:8789930"
+    implementation "curse.maven:ace_utils-1299492:9073632"
     //HazentouveLib
-    implementation "curse.maven:hazentouvelib-1528722:8666581"
+    implementation "curse.maven:hazentouvelib-1528722:8977077"
     //AzureLib
-    implementation "curse.maven:azurelib-817423:7371539"
+    implementation "curse.maven:azurelib-817423:9107208"
 
     /*
     *** Runtime Only ***************************************************************************************************
@@ -220,7 +220,7 @@ dependencies {
     compileOnly "curse.maven:lodestone-616457:7264731"
 
     // Iron's Gems 'n Jewelry
-    localRuntime "curse.maven:irons_gems_n_jewelry-1101111:8237157"
+    localRuntime "curse.maven:irons_gems_n_jewelry-1101111:8365016"
     localRuntime "curse.maven:atlas_api-1145462:6880789"
 
     //Cataclysm Spellbooks

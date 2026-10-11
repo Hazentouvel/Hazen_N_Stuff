@@ -9,6 +9,7 @@ import net.hazen.hazennstuff.Compat.CelestisynthCompat;
 import net.hazen.hazennstuff.Compat.GoetyCompat;
 import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
+import net.hazen.hazennstuff.HnSUtilities.Armor.HnSGeckolibArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -22,6 +23,7 @@ import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
@@ -76,5 +78,21 @@ public class DeadKingArmorItem extends ImbuableGeckolibHnSArmorItem implements I
                 player.getItemBySlot(Type.CHESTPLATE.getSlot()).getItem() instanceof DeadKingArmorItem &&
                 player.getItemBySlot(Type.LEGGINGS.getSlot()).getItem() instanceof DeadKingArmorItem &&
                 player.getItemBySlot(Type.BOOTS.getSlot()).getItem() instanceof DeadKingArmorItem;
+    }
+
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<HnSGeckolibArmorItem>(this, "controller", this::predicate));
+    }
+
+    private PlayState predicate(AnimationState<HnSGeckolibArmorItem> itemAnimationState)
+    {
+        itemAnimationState.getController().setAnimation(RawAnimation.begin().thenLoop("idle"));
+        return PlayState.CONTINUE;
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return cache;
     }
 }

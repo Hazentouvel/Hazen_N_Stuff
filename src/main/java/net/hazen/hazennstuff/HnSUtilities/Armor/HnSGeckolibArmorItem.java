@@ -92,7 +92,7 @@ public class HnSGeckolibArmorItem extends HLArmorItem implements GeoItem {
     // Geckolib
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<HnSGeckolibArmorItem>(this, "controler", this::predicate));
+        controllers.add(new AnimationController<HnSGeckolibArmorItem>(this, "controller", this::predicate));
     }
 
     private PlayState predicate(AnimationState<HnSGeckolibArmorItem> itemAnimationState)

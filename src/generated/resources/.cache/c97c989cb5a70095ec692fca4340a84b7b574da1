@@ -1,14 +1,14 @@
-// 1.21.1	2026-06-18T22:36:09.9602245	Tags for minecraft:item mod id hazennstuff
+// 1.21.1	2026-10-11T10:49:03.6324075	Tags for minecraft:item mod id hazennstuff
 740053467c0e6401606132b0ce14777e5339d91f data/c/tags/item/bones.json
 3d1820efd62e232ea7ffc4ee6e98de54e2e10e5a data/c/tags/item/enchantables.json
 52503413b4a1cfad51f295eac80bbbedd1ecb0a6 data/c/tags/item/foods.json
 7aa24cfa00593b4dbd92d0e19b403da85cb4cda6 data/c/tags/item/gems.json
 c9b72b0f8fc707a84546851029c3a9cef2cb6b32 data/c/tags/item/gems/quartz.json
 689293c1724f58bcc49e08e20b600fab23258396 data/c/tags/item/hidden_from_recipe_viewers.json
-812bad28b65980e59cb3b4f118cf1d13c2eb5bb4 data/c/tags/item/ingots.json
+c0cf0b370bd35efa1c8af108f6bc6cb2eca9a9e3 data/c/tags/item/ingots.json
 7ed8f9f4762dd472736bcb50536975105d7c4be2 data/c/tags/item/nuggets.json
 12b419c133477a0ca92e1ebf742537aa34dac07a data/c/tags/item/ores.json
-b7b1064eb4a3f14aed6cb5e487059a9c124cae9c data/c/tags/item/raw_materials.json
+53d83bb94e369daaf0a9d257c966ba7c230c3188 data/c/tags/item/raw_materials.json
 68f33931873211ee1de5bcb19f7714e2082852f4 data/c/tags/item/tools/mace.json
 3a2d4c6a0dd25402a29b8a43537bf84ed084654c data/c/tags/item/tools/spear.json
 33ae00203031dc8940fd8c6a2b1109ed84c3113d data/hazennstuff/tags/item/armors/armors_for_idle.json
@@ -52,7 +52,7 @@ c2df6288b8d4c2c01c6eca2a36ea6c9541623cf9 data/minecraft/tags/item/enchantable/eq
 1d968c022640546eb906e194c3c5fb3ca754c69c data/minecraft/tags/item/enchantable/leg_armor.json
 68f33931873211ee1de5bcb19f7714e2082852f4 data/minecraft/tags/item/enchantable/mace.json
 eb246ec29a19a160da18d2e464bfb9abcf33cc72 data/minecraft/tags/item/enchantable/mining.json
-6cac58f537854ebd9d06a9fc9b2ae509a9e76ef4 data/minecraft/tags/item/enchantable/sharp_weapon.json
+e066d0c70e4ad9a8877ce6c2690e85c2e4c17bc9 data/minecraft/tags/item/enchantable/sharp_weapon.json
 8997331671aa7cba8a9cb970be783438fe63873e data/minecraft/tags/item/fences.json
 7747a657bf35c413736b2132fc993249218293e2 data/minecraft/tags/item/fence_gates.json
 64e39217ced5f983e4809d5b5e67b516f8929ef2 data/minecraft/tags/item/foot_armor.json

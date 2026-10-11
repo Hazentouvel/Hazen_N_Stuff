@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Item.Weapons.Reference.HonkaiStarRail.WarFlamingLance;
 
+import io.redspace.ironslib.registry.IronsLibRegistries;
 import io.redspace.ironsspellbooks.api.events.ModifySpellLevelEvent;
 import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
@@ -12,11 +13,13 @@ import net.hazen.hazennstuff.HnSUtilities.Item.HnSExtendedWeaponsTiers;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.Unbreakable;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -42,6 +45,7 @@ public class WarFlamingLanceItem extends MagicSwordItem implements GeoItem {
                         .stacksTo(1)
                         .fireResistant()
                         .rarity(HLRarities.FIRE_RARITY.getValue())
+                        //.component(IronsLibRegistries.ComponentRegistry.KINETIC_WEAPON.get())
                         .attributes(ExtendedSwordItem.createAttributes(HnSExtendedWeaponsTiers.WARFLAMING_LANCE)
                         ),
                 SpellDataRegistryHolder.of(

@@ -12,8 +12,6 @@ import net.hazen.hazennstuff.Events.HnSScrollModelEvents;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.DormantTier.AzureLib.FireblossomGownArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.PureTier.AzureLib.FireblossomBattlemageArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.SchoolTier.AzureLib.FireblossomKnightArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.PureTier.AstraconicWeaver.AzureLib.AstraconicWeaverArmorRenderer;
-import net.hazen.hazennstuff.Item.Armor.SchoolTier.CosmicScholar.AzureLib.CosmicScholarArmorRenderer;
 import net.hazen.hazennstuff.Item.Armor.SchoolTier.RadiantCrystal.AzureLib.RadiantCrystalArmorRenderer;
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
@@ -300,21 +298,6 @@ public class HazenNStuff
                     HnSItemRegistry.THE_WITHER_CHESTPLATE.get(),
                     HnSItemRegistry.THE_WITHER_LEGGINGS.get(),
                     HnSItemRegistry.THE_WITHER_BOOTS.get());
-
-
-            // Cosmic Scholar
-            AzArmorRendererRegistry.register(CosmicScholarArmorRenderer::new,
-                    HnSItemRegistry.COSMIC_SCHOLAR_HELMET.get(),
-                    HnSItemRegistry.COSMIC_SCHOLAR_CHESTPLATE.get(),
-                    HnSItemRegistry.COSMIC_SCHOLAR_LEGGINGS.get(),
-                    HnSItemRegistry.COSMIC_SCHOLAR_BOOTS.get());
-
-            // Astraconic Weaver
-            AzArmorRendererRegistry.register(AstraconicWeaverArmorRenderer::new,
-                    HnSItemRegistry.ASTRACONIC_WEAVER_HELMET.get(),
-                    HnSItemRegistry.ASTRACONIC_WEAVER_CHESTPLATE.get(),
-                    HnSItemRegistry.ASTRACONIC_WEAVER_LEGGINGS.get(),
-                    HnSItemRegistry.ASTRACONIC_WEAVER_BOOTS.get());
 
             // Radiant Crystal
             AzArmorRendererRegistry.register(RadiantCrystalArmorRenderer::new,

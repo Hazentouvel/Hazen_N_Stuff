@@ -196,9 +196,6 @@ public class FieryDaggerSpell extends TyrosSpells {
                     aimDirection = forward;
                 }
                 dagger.launchDir = aimDirection.normalize();
-                if (hitResult instanceof EntityHitResult entityHit) {
-                    dagger.setTarget(entityHit.getEntity());
-                }
                 dagger.ownerTrack = spawnPos.subtract(entity.position());
                 dagger.setDeltaMovement(forward.scale(dagger.getSpeed()));
                 dagger.deltaMovementOld = dagger.getDeltaMovement();

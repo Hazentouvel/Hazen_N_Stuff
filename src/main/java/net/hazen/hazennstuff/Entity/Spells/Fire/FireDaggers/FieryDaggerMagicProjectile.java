@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers;
 
+import io.redspace.ironsspellbooks.api.util.RaycastBuilder;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
@@ -20,6 +21,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
@@ -174,7 +176,6 @@ public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
 
         if (this.age++ < this.delay) {
             Entity owner = this.getOwner();
-            float strength = 0.5F;
 
             if (owner != null && this.isTrackingOwner()) {
                 // follow owner movement
@@ -182,46 +183,24 @@ public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
                 this.setPos(this.position().add(ownerMotion));
             }
 
-            // Always update visual rotation each tick so dagger faces the owner's current yaw/pitch
-            if (owner != null) {
-                // Use owner's yaw/pitch directly to ensure model orientation matches the player
-                float yRot = owner.getYRot();
-                float xRot = owner.getXRot();
-                this.setYRot(yRot);
-                this.setXRot(xRot);
-                this.yRotO = yRot;
-                this.xRotO = xRot;
-            }
-
-            Entity target = this.getTargetEntity();
-            if (target != null) {
-                Vec3 targetPos = target.getBoundingBox().getCenter();
-                Vec3 targetMotion = targetPos.subtract(this.position()).normalize().scale((double)this.getSpeed());
-                Vec3 currentMotion = this.getDeltaMovement();
-                this.deltaMovementOld = currentMotion;
-                this.setDeltaMovement(currentMotion.add(targetMotion.subtract(currentMotion).scale((double)strength)));
-                if (this.tickCount == 1) {
-                    this.deltaMovementOld = this.getDeltaMovement();
+            if (owner instanceof LivingEntity livingOwner && this.isTrackingOwner()) {
+                HitResult aimResult = RaycastBuilder.begin(this.level, livingOwner)
+                        .range(40.0F)
+                        .checkForBlocks(true)
+                        .build();
+                Vec3 aimDirection = aimResult.getLocation().subtract(this.position());
+                if (aimDirection.lengthSqr() < 1.0E-7) {
+                    aimDirection = owner.getLookAngle();
                 }
-            }
-
-            if (owner != null) {
-                Vec3 lookDirection = owner.getLookAngle();
-                if (lookDirection.lengthSqr() > 1.0E-7) {
-                    Vec3 visualMotion = lookDirection.normalize().scale(this.getSpeed());
+                if (aimDirection.lengthSqr() > 1.0E-7) {
+                    this.launchDir = aimDirection.normalize();
+                    Vec3 visualMotion = this.launchDir.scale(this.getSpeed());
                     this.setDeltaMovement(visualMotion);
                     this.deltaMovementOld = visualMotion;
                 }
             }
 
             if (this.age == this.delay) {
-                if (target != null) {
-                    Vec3 targetDirection = target.getBoundingBox().getCenter().subtract(this.position());
-                    if (targetDirection.lengthSqr() > 1.0E-7) {
-                        this.launchDir = targetDirection;
-                    }
-                }
-
                 // If this projectile was following an owner and no fixed launchDir was stored,
                 // sample the owner's current look direction now so it fires where the player is facing at launch time.
                 if (this.launchDir == null && owner != null) {

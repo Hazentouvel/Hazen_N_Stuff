@@ -2,60 +2,36 @@
   "credit": "Made by Hazen",
   "parent": "builtin/entity",
   "texture_size": [
-    256,
-    256
+    128,
+    128
   ],
   "display": {
-    "thirdperson_righthand": {
-      "rotation": [
-        0,
-        -90,
-        0
-      ],
-      "translation": [
-        0,
-        -15.5,
-        0
-      ]
-    },
-    "thirdperson_lefthand": {
-      "rotation": [
-        0,
-        90,
-        0
-      ],
-      "translation": [
-        0,
-        -15.5,
-        0
-      ]
-    },
     "firstperson_righthand": {
       "rotation": [
         0,
-        -90,
+        10,
         0
       ],
       "translation": [
         3,
-        -7.75,
+        1.5,
         0
       ],
       "scale": [
-        0.51,
-        0.51,
-        0.51
+        0.5,
+        0.5,
+        0.5
       ]
     },
     "firstperson_lefthand": {
       "rotation": [
         0,
-        90,
+        10,
         0
       ],
       "translation": [
         3,
-        -7.75,
+        1.5,
         0
       ],
       "scale": [
@@ -66,30 +42,30 @@
     },
     "ground": {
       "rotation": [
-        -105.86999999999989,
-        -62.11999999999989,
-        -1.150000000000091
+        -150,
+        45,
+        15
       ],
       "translation": [
         0,
-        5.75,
-        6
+        8,
+        0
       ],
       "scale": [
-        0.3,
-        0.3,
-        0.3
+        0.4,
+        0.4,
+        0.4
       ]
     },
     "gui": {
       "rotation": [
-        0,
-        -180,
-        45
+        90,
+        -135,
+        90
       ],
       "translation": [
-        -7,
-        -6.5,
+        -1.5,
+        -1.5,
         0
       ],
       "scale": [
@@ -99,10 +75,22 @@
       ]
     },
     "fixed": {
-      "translation": [
+      "rotation": [
         0,
-        -25.5,
-        -0.5
+        90,
+        0
+      ]
+    },
+    "on_shelf": {
+      "rotation": [
+        0,
+        -90,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
       ]
     }
   }

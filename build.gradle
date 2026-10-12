@@ -260,8 +260,8 @@ dependencies {
     //compileOnly "curse.maven:discerning_the_eldritch-1143065:7469786"
 
     //Celestisynth
-    localRuntime "curse.maven:celestisynth-1672331:8793088"
-    compileOnly "curse.maven:celestisynth-1672331:8793088"
+    localRuntime "curse.maven:celestisynth-1672331:8867800"
+    compileOnly "curse.maven:celestisynth-1672331:8867800"
 
     //Goety
     localRuntime "curse.maven:goety-586095:8689429"

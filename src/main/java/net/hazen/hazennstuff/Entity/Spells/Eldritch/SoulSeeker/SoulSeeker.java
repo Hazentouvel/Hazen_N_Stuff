@@ -14,6 +14,11 @@ import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
 import io.redspace.ironsspellbooks.particle.ZapParticleOption;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
 import mod.azure.azurelib.core.utils.MathHelper;
+import net.acetheeldritchking.aces_spell_utils.utils.RibbonHandler;
+import net.acetheeldritchking.aces_spell_utils.vfx.ribbon.ColorRamp;
+import net.acetheeldritchking.aces_spell_utils.vfx.ribbon.Curve;
+import net.acetheeldritchking.aces_spell_utils.vfx.ribbon.Easing;
+import net.acetheeldritchking.aces_spell_utils.vfx.ribbon.RibbonConfig;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleHelper;
 import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
@@ -98,6 +103,9 @@ public class SoulSeeker extends AbstractMagicProjectile implements GeoEntity {
         super.tick();
 
         if (!level.isClientSide) {
+            if (tickCount == 1) {
+                trail();
+            }
             if (this.tickCount > 10) {
                 if (lockedTarget == null || !lockedTarget.isAlive()) {
                     lockedTarget = findNearestTarget();
@@ -123,6 +131,20 @@ public class SoulSeeker extends AbstractMagicProjectile implements GeoEntity {
         }
     }
 
+    private void trail() {
+        if (!level.isClientSide && !RibbonHandler.isAttached(this)) {
+            RibbonHandler.attach(this, new RibbonConfig(
+                    new ColorRamp(
+                            new int[]{0x000000, 0xc20088, 0xff8edd},
+                            Easing.LINEAR
+                    ),
+                    new Curve(0.18F, 0.0F, Easing.EASE_OUT_QUAD),
+                    new Curve(1.0F, 0.0F, Easing.LINEAR),
+                    24,
+                    true
+            ));
+        }
+    }
 
     @Override
     public void trailParticles() {

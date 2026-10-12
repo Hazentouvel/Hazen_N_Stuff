@@ -3,6 +3,11 @@ package net.hazen.hazennstuff.Entity.Spells.Holy.IchorStream;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
+import net.acetheeldritchking.aces_spell_utils.utils.RibbonHandler;
+import net.acetheeldritchking.aces_spell_utils.vfx.ribbon.ColorRamp;
+import net.acetheeldritchking.aces_spell_utils.vfx.ribbon.Curve;
+import net.acetheeldritchking.aces_spell_utils.vfx.ribbon.Easing;
+import net.acetheeldritchking.aces_spell_utils.vfx.ribbon.RibbonConfig;
 import net.hazen.hazennstuff.Registries.HnSEffects;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleHelper;
@@ -43,7 +48,6 @@ public class IchorStream extends AbstractMagicProjectile {
 
     @Override
     public void trailParticles() {
-        level.addParticle(HnSParticleHelper.ICHOR_TRAIL, getX(), getY(), getZ(), 0, 0, 0);
     }
 
     @Override
@@ -65,13 +69,28 @@ public class IchorStream extends AbstractMagicProjectile {
     @Override
     public void tick() {
         super.tick();
-        if (this.level.isClientSide) {
-            level.addParticle(HnSParticleHelper.ICHOR_TRAIL,
-                    this.getX(), this.getY(), this.getZ(),
-                    0, 0, 0);
+
+        if (tickCount == 1 && !level.isClientSide) {
+            pissParticles();
         }
+
         if (this.tickCount > 20) {
             this.discard();
+        }
+    }
+
+    private void pissParticles() {
+        if (!level.isClientSide && !RibbonHandler.isAttached(this)) {
+            RibbonHandler.attach(this, new RibbonConfig(
+                    new ColorRamp(
+                            new int[]{0xfd9800, 0xfeca50, 0xfffba6},
+                            Easing.LINEAR
+                    ),
+                    new Curve(0.18F, 0.0F, Easing.EASE_OUT_QUAD),
+                    new Curve(1.0F, 0.0F, Easing.LINEAR),
+                    24,
+                    true
+            ));
         }
     }
 

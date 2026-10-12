@@ -46,13 +46,6 @@ public class SoulParticle extends TextureSheetParticle {
         this.yd += this.random.nextFloat() / 100.0F;
         this.zd += this.random.nextFloat() / 500.0F * (float) (this.random.nextBoolean() ? 1 : -1);
         this.setSpriteFromAge(this.sprites);
-
-        if (!this.removed) {
-            float f = (float)this.age / (float)this.lifetime;
-            if (this.random.nextFloat() > f) {
-                this.level.addParticle((ParticleOptions) ASParticleRegistry.TRAIL, this.x, this.y, this.z, this.xd, this.yd, this.zd);
-            }
-        }
     }
 
     @Override

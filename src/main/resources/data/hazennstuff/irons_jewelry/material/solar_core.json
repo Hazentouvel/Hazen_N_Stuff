@@ -8,8 +8,8 @@
   "bonusParameters": {
     "irons_jewelry:attribute": {
       "attribute": "irons_lib:crit_damage",
-      "amount": 1.5,
-      "operation": "add_value"
+      "amount": 0.15,
+      "operation": "add_multiplied_total"
     },
     "irons_jewelry:negative_effect": {
       "effect": "irons_spellbooks:rend"

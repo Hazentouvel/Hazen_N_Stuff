@@ -41,7 +41,7 @@ public class AbstractCurio extends CurioBaseItem {
         Multimap<Holder<Attribute>, AttributeModifier> attr = LinkedHashMultimap.create();
         //The attributes of the curio
         attr.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(id, 1.0, AttributeModifier.Operation.ADD_VALUE));
-        attr.put(IronsLibRegistries.AttributeRegistry.ARROW_DAMAGE, new AttributeModifier(id, 1.0, AttributeModifier.Operation.ADD_VALUE));
+        attr.put(IronsLibRegistries.AttributeRegistry.ARROW_DAMAGE, new AttributeModifier(id, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
         return attr;
     }
 

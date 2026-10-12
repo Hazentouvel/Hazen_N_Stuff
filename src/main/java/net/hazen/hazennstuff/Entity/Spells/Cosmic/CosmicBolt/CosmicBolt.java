@@ -32,7 +32,7 @@ public class CosmicBolt extends AbstractMagicProjectile implements GeoEntity {
     private boolean hasHitOnce = false;
     private LivingEntity currentTarget = null;
     private int getMaxHits() {
-        return 0 + spellLevel;
+        return 1 + spellLevel;
     }
     private int hitCount = 0;
     private int spellLevel = 1;
@@ -95,16 +95,19 @@ public class CosmicBolt extends AbstractMagicProjectile implements GeoEntity {
         super.tick();
 
         if (currentTarget != null && currentTarget.isAlive()) {
-            Vec3 direction = currentTarget.position().add(0, currentTarget.getBbHeight() * 0.5, 0).subtract(this.position()).normalize();
+            Vec3 direction = currentTarget.getBoundingBox()
+                    .getCenter()
+                    .subtract(this.position())
+                    .normalize();
+
             double speed = this.getDeltaMovement().length();
             this.setDeltaMovement(direction.scale(speed));
         }
-
-        this.handleHitDetection();
     }
 
     @Override
     public void handleHitDetection() {
+        super.handleHitDetection();
         Vec3 vec3 = this.getDeltaMovement();
         Vec3 pos = this.position();
         Vec3 vec32 = pos.add(vec3);
@@ -145,19 +148,20 @@ public class CosmicBolt extends AbstractMagicProjectile implements GeoEntity {
     }
 
     protected void onHitEntity(EntityHitResult pResult) {
-        super.onHitEntity(pResult);
+        Entity target = pResult.getEntity();
 
-        var target = pResult.getEntity();
-        if (target instanceof LivingEntity livingEntity) {DamageSources.ignoreNextKnockback(livingEntity);}
+        if (!(target instanceof LivingEntity livingEntity)) {
+            return;
+        }
 
+        DamageSources.ignoreNextKnockback(livingEntity);
         DamageSources.applyDamage(target, getDamage(), HnSSpellRegistries.COSMIC_BOLT.get().getDamageSource(this, getOwner()));
-        victims.put(target.getUUID(), target.tickCount);
 
+        victims.put(target.getUUID(), target.tickCount);
         hitCount++;
 
         if (hitCount >= getMaxHits()) {
             discard();
-            return;
         }
     }
 

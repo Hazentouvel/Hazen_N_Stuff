@@ -65,7 +65,7 @@ public class FieryDaggerSpell extends TyrosSpells {
     }
 
     public CastType getCastType() {
-            return CastType.INSTANT;
+        return CastType.INSTANT;
     }
 
     @Override
@@ -191,9 +191,17 @@ public class FieryDaggerSpell extends TyrosSpells {
                 dagger.setExplosionRadius(0f);
                 dagger.setPos(spawnPos);
 
-                dagger.launchDir = null;
+                Vec3 aimDirection = targetPos.subtract(spawnPos);
+                if (aimDirection.lengthSqr() < 1.0E-7) {
+                    aimDirection = forward;
+                }
+                dagger.launchDir = aimDirection.normalize();
+                if (hitResult instanceof EntityHitResult entityHit) {
+                    dagger.setTarget(entityHit.getEntity());
+                }
                 dagger.ownerTrack = spawnPos.subtract(entity.position());
-                dagger.setDeltaMovement(0, 0, 0);
+                dagger.setDeltaMovement(forward.scale(dagger.getSpeed()));
+                dagger.deltaMovementOld = dagger.getDeltaMovement();
                 dagger.delay = baseDelay + i * delayBetween;
 
                 world.addFreshEntity(dagger);

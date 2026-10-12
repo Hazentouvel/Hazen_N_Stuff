@@ -205,7 +205,23 @@ public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
                 }
             }
 
+            if (owner != null) {
+                Vec3 lookDirection = owner.getLookAngle();
+                if (lookDirection.lengthSqr() > 1.0E-7) {
+                    Vec3 visualMotion = lookDirection.normalize().scale(this.getSpeed());
+                    this.setDeltaMovement(visualMotion);
+                    this.deltaMovementOld = visualMotion;
+                }
+            }
+
             if (this.age == this.delay) {
+                if (target != null) {
+                    Vec3 targetDirection = target.getBoundingBox().getCenter().subtract(this.position());
+                    if (targetDirection.lengthSqr() > 1.0E-7) {
+                        this.launchDir = targetDirection;
+                    }
+                }
+
                 // If this projectile was following an owner and no fixed launchDir was stored,
                 // sample the owner's current look direction now so it fires where the player is facing at launch time.
                 if (this.launchDir == null && owner != null) {

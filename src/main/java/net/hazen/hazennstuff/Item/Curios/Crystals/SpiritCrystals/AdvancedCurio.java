@@ -42,7 +42,7 @@ public class AdvancedCurio extends CurioBaseItem {
         //The attributes of the curio
         attr.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(id, 4.0, AttributeModifier.Operation.ADD_VALUE));
         attr.put(Attributes.ATTACK_SPEED, new AttributeModifier(id, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
-        attr.put(IronsLibRegistries.AttributeRegistry.ARROW_DAMAGE, new AttributeModifier(id, 1.0, AttributeModifier.Operation.ADD_VALUE));
+        attr.put(IronsLibRegistries.AttributeRegistry.ARROW_DAMAGE, new AttributeModifier(id, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
         attr.put(IronsLibRegistries.AttributeRegistry.CRIT_DAMAGE, new AttributeModifier(id, 0.05, AttributeModifier.Operation.ADD_VALUE));
         return attr;
     }

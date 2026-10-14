@@ -8,7 +8,7 @@ public class HazelArmorModel extends GeoModel<HazelArmorItem> {
     }
 
     public ResourceLocation getModelResource(HazelArmorItem object) {
-        return ResourceLocation.fromNamespaceAndPath("hazennstuff", "geo/armor/hazel_reprised.geo.json");
+        return ResourceLocation.fromNamespaceAndPath("hazennstuff", "geo/armor/nerfed_hazel_reprised_armor.geo.json");
     }
 
     public ResourceLocation getTextureResource(HazelArmorItem object) {

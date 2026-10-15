@@ -1,10 +1,10 @@
-{
+lib{
   "type": "minecraft:smithing_transform",
   "addition": {
     "item": "irons_spellbooks:magic_cloth"
   },
   "base": {
-    "tag": "hazennstuff:armors/school/school_boots"
+    "tag": "hazentouvelib:armors/school/school_boots"
   },
   "result": {
     "count": 1,

@@ -1,4 +1,4 @@
-lib{
+{
   "type": "minecraft:smithing_transform",
   "addition": {
     "item": "irons_spellbooks:magic_cloth"

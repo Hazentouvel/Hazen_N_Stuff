@@ -11,12 +11,15 @@ import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.hazen.hazentouvelib.Rarities.HLRarities;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.component.Unbreakable;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
@@ -24,7 +27,12 @@ import java.util.List;
 public class CreakingSorcererArmorItem extends ImbuableHnSArmorItem implements IDisableJacket, IDisableHat {
 
     public CreakingSorcererArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.CREAKING_SORCERER_MATERIAL, type, settings, pureTier(
+        super(HnSArmorMaterials.CREAKING_SORCERER_MATERIAL, type, settings
+                        .stacksTo(1)
+                        .rarity(HLRarities.NATURE_RARITY.getValue())
+                        .fireResistant()
+                        .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
+                , pureTier(
                 AttributeRegistry.NATURE_SPELL_POWER
         ));
     }

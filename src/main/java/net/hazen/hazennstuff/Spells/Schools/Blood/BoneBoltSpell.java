@@ -64,7 +64,7 @@ public class BoneBoltSpell extends AbstractSpell {
 
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         BoneBolt boneBolt = new BoneBolt(world, entity);
-        boneBolt.setPos(entity.position().add((double)0.0F, (double)entity.getEyeHeight() - boneBolt.getBoundingBox().getYsize() * (double)0.5F, (double)0.0F));
+        boneBolt.setPos(entity.position().add((double)0.0F, (double)entity.getEyeHeight() - boneBolt.getBoundingBox().getYsize() * (double)0.25F, (double)0.0F));
         boneBolt.shoot(entity.getLookAngle());
         boneBolt.setDamage(this.getDamage(spellLevel, entity));
         world.addFreshEntity(boneBolt);

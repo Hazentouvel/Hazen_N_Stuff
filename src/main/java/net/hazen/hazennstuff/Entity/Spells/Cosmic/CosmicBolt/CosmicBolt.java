@@ -107,7 +107,6 @@ public class CosmicBolt extends AbstractMagicProjectile implements GeoEntity {
 
     @Override
     public void handleHitDetection() {
-        super.handleHitDetection();
         Vec3 vec3 = this.getDeltaMovement();
         Vec3 pos = this.position();
         Vec3 vec32 = pos.add(vec3);

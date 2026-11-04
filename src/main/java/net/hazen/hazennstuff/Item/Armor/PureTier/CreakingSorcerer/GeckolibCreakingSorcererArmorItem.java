@@ -11,12 +11,15 @@ import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.hazen.hazentouvelib.Rarities.HLRarities;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.component.Unbreakable;
 import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
@@ -26,7 +29,12 @@ import java.util.List;
 
 public class GeckolibCreakingSorcererArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public GeckolibCreakingSorcererArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.CREAKING_SORCERER_MATERIAL, type, settings, pureTier(
+        super(HnSArmorMaterials.CREAKING_SORCERER_MATERIAL, type, settings
+                        .stacksTo(1)
+                        .rarity(HLRarities.NATURE_RARITY.getValue())
+                        .fireResistant()
+                        .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
+                , pureTier(
                 AttributeRegistry.NATURE_SPELL_POWER
         ));
     }
@@ -49,7 +57,7 @@ public class GeckolibCreakingSorcererArmorItem extends ImbuableGeckolibHnSArmorI
     @Override
     @OnlyIn(Dist.CLIENT)
     public GeoArmorRenderer<?> supplyRenderer() {
-        return new GenericCustomArmorRenderer<>(new GeckolibCreakingSorcererArmorModel());
+        return new GeckolibCreakingSorcererArmorRenderer(new GeckolibCreakingSorcererArmorModel());
     }
 
     @Override

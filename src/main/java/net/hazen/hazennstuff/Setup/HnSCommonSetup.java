@@ -2,11 +2,9 @@ package net.hazen.hazennstuff.Setup;
 
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.entity.mobs.keeper.KeeperEntity;
-import io.redspace.ironsspellbooks.registries.EntityRegistry;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousFurnace;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.TheInferno.TheInferno;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.VoidWanderer.VoidWanderer;
-import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprisma;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.BishopOfDeciet.BishopOfDeceitEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Electromancer.ElectromancerEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Necromancers.NamelessOne.NamelessOneEntity;
@@ -19,10 +17,8 @@ import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.ServantsOfEnder.ServantsOf
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.Dryad.DryadEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Good.TheRecluse.TheRecluseEntity;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
@@ -44,7 +40,6 @@ public class HnSCommonSetup {
         event.put(HnSEntityRegistry.DRYAD.get(), DryadEntity.prepareAttributes().build());
         event.put(HnSEntityRegistry.NAMELESS_ONE.get(), NamelessOneEntity.prepareAttributes().build());
         event.put(HnSEntityRegistry.NECROMANCER.get(), NecromancerEntity.prepareAttributes().build());
-        event.put(HnSEntityRegistry.TERRAPRISMA.get(), SummonedTerraprisma.prepareAttributes().build());
         event.put(HnSEntityRegistry.CINDEROUS_FURNACE.get(), CinderousFurnace.prepareAttributes().build());
         event.put(HnSEntityRegistry.THE_INFERNO.get(), TheInferno.prepareAttributes().build());
         event.put(HnSEntityRegistry.SUMMON_KEEPER.get(), KeeperEntity.prepareAttributes().build());

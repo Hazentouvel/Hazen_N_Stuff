@@ -41,8 +41,6 @@ import net.hazen.hazennstuff.Item.Staves.Generic.CeaselessVoid.CeaselessVoidRend
 import net.hazen.hazennstuff.Item.Staves.Generic.InsaniaAeternus.InsaniaAeternusRenderer;
 import net.hazen.hazennstuff.Item.Staves.Special.SoulcallingScepter.SoulcallingScepterRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Generic.HammerOfJustice.HammerOfJusticeRenderer;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Terraprisma.TerraprismaRenderer;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Volcano.VolcanoRenderer;
 import net.hazen.hazennstuff.Registries.*;
 import net.hazen.hazennstuff.Screens.Starforge.StarForgeScreen;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
@@ -172,9 +170,6 @@ public class HazenNStuff
                 // Weapons
 
                 HnSItemRegistry.HAMMER_OF_JUSTICE.get(),
-                HnSItemRegistry.VOLCANO.get(),
-                HnSItemRegistry.TERRAPRISMA.get(),
-
                 // Staves
                 HnSItemRegistry.SOULCALLING_SCEPTER.get(),
                 HnSItemRegistry.INSANIA_AETERNUS.get(),
@@ -338,8 +333,6 @@ public class HazenNStuff
 
             // Item Rendering Registry
             AzItemRendererRegistry.register(HammerOfJusticeRenderer::new, HnSItemRegistry.HAMMER_OF_JUSTICE.get());
-            AzItemRendererRegistry.register(VolcanoRenderer::new, HnSItemRegistry.VOLCANO.get());
-            AzItemRendererRegistry.register(TerraprismaRenderer::new, HnSItemRegistry.TERRAPRISMA.get());
 
 
             AzItemRendererRegistry.register(SoulcallingScepterRenderer::new, HnSItemRegistry.SOULCALLING_SCEPTER.get());
@@ -463,8 +456,6 @@ public class HazenNStuff
                     // Weapons
 
                     HnSItemRegistry.HAMMER_OF_JUSTICE.get(),
-                    HnSItemRegistry.VOLCANO.get(),
-                    HnSItemRegistry.TERRAPRISMA.get(),
 
                     // Staves
                     HnSItemRegistry.SOULCALLING_SCEPTER.get(),

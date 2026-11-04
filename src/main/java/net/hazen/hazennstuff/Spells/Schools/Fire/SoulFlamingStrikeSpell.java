@@ -49,7 +49,7 @@ public class SoulFlamingStrikeSpell extends AbstractSpell {
 
     public SoulFlamingStrikeSpell() {
         this.defaultConfig = (new DefaultConfig())
-                .setMinRarity(SpellRarity.RARE)
+                .setMinRarity(SpellRarity.EPIC)
                 .setSchoolResource(SchoolRegistry.FIRE_RESOURCE)
                 .setMaxLevel(5)
                 .setCooldownSeconds((double)15.0F)

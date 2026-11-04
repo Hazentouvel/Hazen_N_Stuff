@@ -11,12 +11,15 @@ import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.hazen.hazentouvelib.Rarities.HLRarities;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.component.Unbreakable;
 import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
@@ -26,7 +29,12 @@ import java.util.List;
 
 public class CrystalArachnidArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public CrystalArachnidArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.CRYOGENIC_RULER_MATERIAL, type, settings, pureTier(
+        super(HnSArmorMaterials.CRYOGENIC_RULER_MATERIAL, type, settings
+                        .stacksTo(1)
+                        .rarity(HLRarities.ICE_RARITY.getValue())
+                        .fireResistant()
+                        .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
+                , pureTier(
                 AttributeRegistry.ICE_SPELL_POWER
         ));
     }

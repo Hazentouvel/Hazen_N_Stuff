@@ -147,13 +147,10 @@ public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
                 dagger.deltaMovementOld = dagger.getDeltaMovement();
                 dagger.moveTo(pos);
                 dagger.isGrounded = true;
-                dagger.setNoGravity(false); // <-- crucial: allow it to fall to ground
+                dagger.setNoGravity(false);
 
-                // per-dagger extra randomized delay before launch (relative to this dagger's delay)
                 int extra = Utils.random.nextIntBetweenInclusive(SPAWN_LAUNCH_EXTRA_MIN, SPAWN_LAUNCH_EXTRA_MAX);
                 dagger.delay = this.delay + extra;
-
-                // Ensure spawn-zone daggers have a default upward launch direction so they fire upwards when their delay expires.
                 dagger.launchDir = new Vec3(0.0D, 1.0D, 0.0D);
 
                 this.level.addFreshEntity(dagger);
@@ -166,13 +163,6 @@ public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
     // java
     @Override
     public void tick() {
-        /*
-         * Unified waiting/launch handling:
-         * - While age < delay we update owner-tracking position and always update visual rotation to face
-         *   the owner's current yaw/pitch (so the dagger points pommel->tip toward the player).
-         * - When age == delay we sample an owner look if needed and launch using `launchDir` if present.
-         * - After delay we fall back to super.tick() for normal projectile movement/cleanup.
-         */
 
         if (this.age++ < this.delay) {
             Entity owner = this.getOwner();
@@ -201,16 +191,12 @@ public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
             }
 
             if (this.age == this.delay) {
-                // If this projectile was following an owner and no fixed launchDir was stored,
-                // sample the owner's current look direction now so it fires where the player is facing at launch time.
                 if (this.launchDir == null && owner != null) {
                     Vec3 ownerLook = owner.getLookAngle();
                     if (ownerLook != null) {
                         this.launchDir = ownerLook;
                     }
                 }
-
-                // If we have a launchDir, launch now (applies to both spawn and non-spawn daggers)
                 if (this.launchDir != null) {
                     if (!this.level.isClientSide) {
                         this.isGrounded = false;
@@ -220,7 +206,6 @@ public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
                         this.deltaMovementOld = this.getDeltaMovement();
                     }
                     this.ownerTrack = null;
-                    // Keep launchDir for consistent movement direction
 
                     if (Utils.random.nextFloat() < 0.25F) {
                         this.playSound(SoundRegistry.FIERY_DAGGER_THROW.get(), 0.75F, (float)Utils.random.nextIntBetweenInclusive(90, 110) * 0.01F);
@@ -228,7 +213,6 @@ public class FieryDaggerMagicProjectile extends FieryDaggerEntity {
                         this.playSound(SoundRegistry.FIERY_DAGGER_THROW.get(), 2.0F, (float)Utils.random.nextIntBetweenInclusive(90, 110) * 0.01F);
                     }
                 } else {
-                    // Fallback launch behavior when no launchDir present (preserve prior behavior)
                     if (this.isGrounded) {
                         if (!this.level.isClientSide) {
                             this.isGrounded = false;

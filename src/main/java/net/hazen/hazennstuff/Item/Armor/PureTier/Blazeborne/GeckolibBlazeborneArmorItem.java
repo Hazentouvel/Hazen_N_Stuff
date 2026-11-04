@@ -11,6 +11,8 @@ import net.hazen.hazennstuff.Compat.MalumCompat;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.hazen.hazentouvelib.Rarities.HLRarities;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -18,6 +20,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.component.Unbreakable;
 import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
@@ -29,13 +32,14 @@ import java.util.List;
 
 public class GeckolibBlazeborneArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public GeckolibBlazeborneArmorItem(Type type, Properties settings) {
-        // Add in your armor tier + additional attributes for your item
-        super(HnSArmorMaterials.BLAZEBORNE_MATERIAL, type, settings,
-                new AttributeContainer(AttributeRegistry.MAX_MANA, 150.0, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.ELDRITCH_SPELL_POWER, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-        );
+        super(HnSArmorMaterials.BLAZEBORNE_MATERIAL, type, settings
+                        .stacksTo(1)
+                        .rarity(HLRarities.FIRE_RARITY.getValue())
+                        .fireResistant()
+                        .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
+                , pureTier(
+                        AttributeRegistry.FIRE_SPELL_POWER
+                ));
     }
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 

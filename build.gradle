@@ -22,6 +22,11 @@ repositories {
     }
 
     maven {
+        url = "https://cursemaven.com"
+    }
+
+
+    maven {
         name = "Iron's Maven - Release"
         url = "https://code.redspace.io/releases"
     }
@@ -42,7 +47,6 @@ repositories {
         name = "Illusive Soulworks maven"
         url = "https://maven.theillusivec4.top/"
     }
-    maven { url = "https://cursemaven.com" }
     maven { url = "https://maven.blamejared.com" }
     maven { url = "https://maven.kosmx.dev/" }
     maven { url = 'https://maven.azuredoom.com/mods'}
@@ -157,19 +161,18 @@ dependencies {
 
     //Iron's Spells 'n Spellbooks
     implementation "curse.maven:irons_spells_n_spellbooks-855414:8680204"
-    implementation "curse.maven:iron_lib-1492763:8973642"
+    implementation "curse.maven:iron_lib-1492763:9328060"
     implementation "curse.maven:geckolib-388172:8350073"
     implementation "curse.maven:player_animator-658587:7389814"
     implementation "curse.maven:curios-309927:6529130"
     implementation "curse.maven:caelus-308989:5694215"
-    //Apothic Attributes
-    //implementation "curse.maven:apothic-attributes-898963:6302334"
-    //implementation "curse.maven:placebo-283644:6337156"
-    //compileOnly "curse.maven:apotheosis-${apotheosis_version}"
+
     //Ace Utils
-    implementation "curse.maven:ace_utils-1299492:9073632"
+    implementation "curse.maven:ace_utils-1299492:9300944"
+
     //HazentouveLib
     implementation "curse.maven:hazentouvelib-1528722:8977077"
+
     //AzureLib
     implementation "curse.maven:azurelib-817423:9107208"
 
@@ -192,10 +195,6 @@ dependencies {
     localRuntime "curse.maven:mmm-225738:7206981"
     localRuntime "curse.maven:moonlight_lib-499980:7669172"
 
-    // Aquamirae **************************************************************************************************
-    //localRuntime "curse.maven:aquamirae-536254:8724151"
-    //localRuntime "curse.maven:fragmentum-1123977:8707553"
-
     /*
     *** Optional Dependencies ******************************************************************************************
      */
@@ -207,6 +206,30 @@ dependencies {
     //Better Combat
     //localRuntime "curse.maven:better-combat-by-daedelus-639842:7348161"
     //localRuntime "curse.maven:cloth-config-348521:5623420"
+
+
+    // Artifex *********************************************************************************************************
+    localRuntime "curse.maven:artifex-1515507:9396871"
+    compileOnly "curse.maven:artifex-1515507:9396871"
+
+    // Rogues & Warriors ***********************************************************************************************
+    localRuntime "curse.maven:rogues_and_warriors-1048409:8982142"
+    compileOnly "curse.maven:rogues_and_warriors-1048409:8982142"
+
+    localRuntime "curse.maven:spell_attributes-771265:8634104"
+    compileOnly "curse.maven:spell_attributes-771265:8634104"
+
+    localRuntime "curse.maven:spell_engine-807653:9011566"
+    compileOnly "curse.maven:spell_engine-807653:9011566"
+
+    localRuntime "curse.maven:structure_pool_api-927915:7145227"
+    compileOnly "curse.maven:structure_pool_api-927915:7145227"
+
+    localRuntime "curse.maven:armor_model_api-1659764:8793923"
+    compileOnly "curse.maven:armor_model_api-1659764:8793923"
+
+    localRuntime "curse.maven:cloth_config-348521:5729127"
+    compileOnly "curse.maven:cloth_config-348521:5729127"
 
     //Ars Nouveau
     localRuntime "curse.maven:ars_nouveau-401955:6827634"

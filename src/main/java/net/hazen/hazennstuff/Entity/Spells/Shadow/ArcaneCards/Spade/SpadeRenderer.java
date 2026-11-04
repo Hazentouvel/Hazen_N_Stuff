@@ -4,7 +4,6 @@ package net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Spade;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
-import net.hazen.hazennstuff.Entity.Spells.Hydro.WaterBolt.WaterBolt;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.util.Mth;

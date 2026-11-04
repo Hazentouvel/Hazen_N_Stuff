@@ -1,6 +1,7 @@
 package net.hazen.hazennstuff.Entity.Spells.Ender.EndraconicMeteor;
 
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
+import io.redspace.ironsspellbooks.api.util.RaycastBuilder;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.config.ServerConfigs;
@@ -195,6 +196,21 @@ public class EndraconicMeteor extends AbstractMagicProjectile implements GeoEnti
                 this.setPos(this.position().add(ownerMotion));
             }
 
+            if (owner instanceof LivingEntity livingOwner && this.ownerTrack != null) {
+                HitResult aimResult = RaycastBuilder.begin(this.level, livingOwner)
+                        .range(40.0F)
+                        .checkForBlocks(true)
+                        .build();
+                Vec3 aimDirection = aimResult.getLocation().subtract(this.position());
+                if (aimDirection.lengthSqr() < 1.0E-7) {
+                    aimDirection = owner.getLookAngle();
+                }
+                if (aimDirection.lengthSqr() > 1.0E-7) {
+                    this.launchDir = aimDirection.normalize();
+                    this.setDeltaMovement(this.launchDir.scale(this.getSpeed()));
+                }
+            }
+
             if (owner != null) {
                 float yRot = owner.getYRot();
                 float xRot = owner.getXRot();
@@ -205,7 +221,6 @@ public class EndraconicMeteor extends AbstractMagicProjectile implements GeoEnti
             }
 
             if (this.age == this.delay) {
-                // Sample owner's look if no preset launchDir
                 if (this.launchDir == null && owner instanceof LivingEntity) {
                     this.launchDir = owner.getLookAngle();
                 }

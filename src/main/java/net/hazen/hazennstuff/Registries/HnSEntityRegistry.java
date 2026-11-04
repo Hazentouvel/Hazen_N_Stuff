@@ -4,7 +4,6 @@ import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.CinderousFurnace.CinderousF
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.Blazes.TheInferno.TheInferno;
 import net.hazen.hazennstuff.Entity.Mobs.Mobs.VoidWanderer.VoidWanderer;
 import net.hazen.hazennstuff.Entity.Mobs.Summons.ReignOfTyros.Keeper.SummonKeeper;
-import net.hazen.hazennstuff.Entity.Mobs.Summons.SummonTerraprisma.SummonedTerraprisma;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.BishopOfDeciet.BishopOfDeceitEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Electromancer.ElectromancerEntity;
 import net.hazen.hazennstuff.Entity.Mobs.Wizards.Evil.Necromancers.NamelessOne.NamelessOneEntity;
@@ -31,12 +30,9 @@ import net.hazen.hazennstuff.Entity.Spells.Evocation.SpectralAxe.SpectralAxe;
 import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
 import net.hazen.hazennstuff.Entity.Spells.Fire.ScorchingSlash.ScorchingBlade;
 import net.hazen.hazennstuff.Entity.Spells.Fire.SoulFlameBolt.SoulflameBolt;
-import net.hazen.hazennstuff.Entity.Spells.Holy.IchorStream.IchorStream;
 import net.hazen.hazennstuff.Entity.Spells.Hydro.HornShell.HornShell;
 import net.hazen.hazennstuff.Entity.Spells.Hydro.Hydrobullet.HydroBullet;
-import net.hazen.hazennstuff.Entity.Spells.Hydro.RazorbladeTyphoon.RazorbladeTyphoon;
 import net.hazen.hazennstuff.Entity.Spells.Hydro.TridentBarrage.TridentJetstream;
-import net.hazen.hazennstuff.Entity.Spells.Hydro.WaterBolt.WaterBolt;
 import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkA.IceChunkA;
 import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkB.IceChunkB;
 import net.hazen.hazennstuff.Entity.Spells.Ice.Hailstorm.IceChunkC.IceChunkC;
@@ -50,14 +46,10 @@ import net.hazen.hazennstuff.Entity.Spells.Lightning.DazzlingObliteration.Shurik
 import net.hazen.hazennstuff.Entity.Spells.Nature.DeathSentence.DeathSentence;
 import net.hazen.hazennstuff.Entity.Spells.Nature.SpiderLily.SpiderLily;
 import net.hazen.hazennstuff.Entity.Spells.Nature.ThornChakram.ThornChakram;
-import net.hazen.hazennstuff.Entity.Spells.Cosmic.ShootingStar.ShootingStar;
-import net.hazen.hazennstuff.Entity.Spells.Radiance.Syringe.Syringe;
-import net.hazen.hazennstuff.Entity.Spells.Radiance.Terraprisma.Terraprisma;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Club.Club;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Diamond.Diamond;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Heart.Heart;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ArcaneCards.Spade.Spade;
-import net.hazen.hazennstuff.Entity.Spells.Shadow.NightsEdgeAfterSlash.NightsEdgeAfterSlash;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowDagger.ShadowDagger;
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowReaver.ShadowReaver;
 import net.hazen.hazennstuff.HazenNStuff;
@@ -93,14 +85,6 @@ public class HnSEntityRegistry {
                     .sized(2.5f, 2.5f)
                     .clientTrackingRange(4)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "coruscated_discharge").toString())
-            );
-
-    // Syringe
-    public static final DeferredHolder<EntityType<?>, EntityType<Syringe>> SYRINGE =
-            ENTITIES.register("syringe", () -> EntityType.Builder.<Syringe>of(Syringe::new, MobCategory.MISC)
-                    .sized(1f, 1f)
-                    .clientTrackingRange(4)
-                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "syringe").toString())
             );
 
     // Lifesteal Knife
@@ -196,36 +180,12 @@ public class HnSEntityRegistry {
                     .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "death_sentence").toString())
             );
 
-    // Night's Edge After Slash
-    public static final DeferredHolder<EntityType<?>, EntityType<NightsEdgeAfterSlash>> NIGHTS_EDGE_AFTER_SLASH =
-            ENTITIES.register("nights_edge_after_slash", () -> EntityType.Builder.<NightsEdgeAfterSlash>of(NightsEdgeAfterSlash::new, MobCategory.MISC)
-                    .sized(4f, 1f)
-                    .clientTrackingRange(64)
-                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "nights_edge_after_slash").toString())
-            );
-
     // Scorching Blade
     public static final DeferredHolder<EntityType<?>, EntityType<ScorchingBlade>> SCORCHING_SLASH =
             ENTITIES.register("scorching_blade", () -> EntityType.Builder.<ScorchingBlade>of(ScorchingBlade::new, MobCategory.MISC)
                     .sized(4f, 1f)
                     .clientTrackingRange(64)
                     .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "scorching_blade").toString())
-            );
-
-    // Shooting Star
-    public static final DeferredHolder<EntityType<?>, EntityType<ShootingStar>> SHOOTING_STAR =
-            ENTITIES.register("shooting_star", () -> EntityType.Builder.<ShootingStar>of(ShootingStar::new, MobCategory.MISC)
-                    .sized(1f, 1f)
-                    .clientTrackingRange(64)
-                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "shooting_star").toString())
-            );
-
-    // Terraprisma
-    public static final DeferredHolder<EntityType<?>, EntityType<Terraprisma>> TERRAPRISMA_PROJECTILE =
-            ENTITIES.register("terraprisma_projectile", () -> EntityType.Builder.<Terraprisma>of(Terraprisma::new, MobCategory.MISC)
-                    .sized(1f, 1f)
-                    .clientTrackingRange(64)
-                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "terraprisma_projectile").toString())
             );
 
     // Fiery Dagger Magic Projectile
@@ -276,14 +236,6 @@ public class HnSEntityRegistry {
                     .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "hydrobullet").toString())
             );
 
-    // Water Bolt
-    public static final DeferredHolder<EntityType<?>, EntityType<WaterBolt>> WATER_BOLT =
-            ENTITIES.register("water_bolt", () -> EntityType.Builder.<WaterBolt>of(WaterBolt::new, MobCategory.MISC)
-                    .sized(0.75f, 0.75f)
-                    .clientTrackingRange(64)
-                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "water_bolt").toString())
-            );
-
     // Club
     public static final DeferredHolder<EntityType<?>, EntityType<Spade>> SPADE =
             ENTITIES.register("spade", () -> EntityType.Builder.<Spade>of(Spade::new, MobCategory.MISC)
@@ -314,14 +266,6 @@ public class HnSEntityRegistry {
                     .sized(0.75f, 0.75f)
                     .clientTrackingRange(64)
                     .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "diamond").toString())
-            );
-
-    // Razorblade Typhoon
-    public static final DeferredHolder<EntityType<?>, EntityType<RazorbladeTyphoon>> RAZORBLADE_TYPHOON =
-            ENTITIES.register("razorblade_typhoon", () -> EntityType.Builder.<RazorbladeTyphoon>of(RazorbladeTyphoon::new, MobCategory.MISC)
-                    .sized(4f, 1f)
-                    .clientTrackingRange(64)
-                    .build( ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "razorblade_typhoon").toString())
             );
 
     // Trident Jetstream
@@ -496,14 +440,6 @@ public class HnSEntityRegistry {
                     .eyeHeight(3f)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "necromancer").toString()));
 
-    // Terraprisma
-    public static final DeferredHolder<EntityType<?>, EntityType<SummonedTerraprisma>> TERRAPRISMA =
-            ENTITIES.register("terraprisma", () -> EntityType.Builder.<SummonedTerraprisma>of(SummonedTerraprisma::new, MobCategory.MONSTER)
-                    .sized(.6f, 1.8f)
-                    .clientTrackingRange(64)
-                    .eyeHeight(1.6f)
-                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "terraprisma").toString()));
-
     // Cinderous Furnace
     public static final DeferredHolder<EntityType<?>, EntityType<CinderousFurnace>> CINDEROUS_FURNACE =
             ENTITIES.register("cinderous_furnace", () -> EntityType.Builder.<CinderousFurnace>of(CinderousFurnace::new, MobCategory.MONSTER)
@@ -558,12 +494,6 @@ public class HnSEntityRegistry {
                     .sized(4f, 1.2f)
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "endraconic_breath").toString()));
-
-    public static final DeferredHolder<EntityType<?>, EntityType<IchorStream>> ICHOR_STREAM =
-            ENTITIES.register("ichor_stream", () -> EntityType.Builder.<IchorStream>of(IchorStream::new, MobCategory.MISC)
-                    .sized(1.2f, 1.2f)
-                    .clientTrackingRange(64)
-                    .build(ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "ichor_stream").toString()));
 
     public static final DeferredHolder<EntityType<?>, EntityType<LightningStrike>> LIGHTNING_STRIKE =
             ENTITIES.register("lightning_strike", () -> EntityType.Builder.<LightningStrike>of(LightningStrike::new, MobCategory.MISC)

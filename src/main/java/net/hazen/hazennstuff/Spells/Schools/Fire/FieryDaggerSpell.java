@@ -137,12 +137,7 @@ public class FieryDaggerSpell extends TyrosSpells {
 
         hasCinderous = hasCinderousEquipment;
 
-        //boolean hasCinderousEquipment = hasTaggedItem(entity, HnSTags.CINDEROUS_EQUIPMENT);
-        //hasCinderous = hasTaggedItem(entity, HnSTags.CINDEROUS_EQUIPMENT);
-
-
         if (hasCinderousEquipment) {
-            // Fiery Zone with Cinderous Equipment
             float explosionRadius = 1.0F + spellLevel * 0.25F;
             int[] angles = {0, -15, 15};
             for (int angle : angles) {

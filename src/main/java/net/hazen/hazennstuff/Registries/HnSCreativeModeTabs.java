@@ -293,12 +293,6 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.CRYSTAL_ARACHNID_LEGGINGS.get());
                         output.accept(HnSItemRegistry.CRYSTAL_ARACHNID_BOOTS.get());
 
-                        // Herta Puppet
-                        output.accept(HnSItemRegistry.HERTA_PUPPET_HELMET.get());
-                        output.accept(HnSItemRegistry.HERTA_PUPPET_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.HERTA_PUPPET_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.HERTA_PUPPET_BOOTS.get());
-
                         /*
                         *** Lightning
                          */
@@ -334,13 +328,6 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.ANCIENT_DRUID_CHESTPLATE.get());
                         output.accept(HnSItemRegistry.ANCIENT_DRUID_LEGGINGS.get());
                         output.accept(HnSItemRegistry.ANCIENT_DRUID_BOOTS.get());
-                        // Chlorophyte
-                        output.accept(HnSItemRegistry.CHLOROPHYTE_HELMET.get());
-                        output.accept(HnSItemRegistry.CHLOROPHYTE_HEADGEAR.get());
-                        output.accept(HnSItemRegistry.CHLOROPHYTE_MASK.get());
-                        output.accept(HnSItemRegistry.CHLOROPHYTE_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.CHLOROPHYTE_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.CHLOROPHYTE_BOOTS.get());
 
                         /*
                         *** Blood
@@ -418,14 +405,6 @@ public class HnSCreativeModeTabs {
                         *** Radiance
                          */
 
-
-
-                        // Mycelium Guardian
-                        output.accept(HnSItemRegistry.MYCELIUM_GUARDIAN_HELMET.get());
-                        output.accept(HnSItemRegistry.MYCELIUM_GUARDIAN_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.MYCELIUM_GUARDIAN_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.MYCELIUM_GUARDIAN_BOOTS.get());
-
                         // Radiant Crystal
                         output.accept(HnSItemRegistry.RADIANT_CRYSTAL_HELMET.get());
                         output.accept(HnSItemRegistry.RADIANT_CRYSTAL_CHESTPLATE.get());
@@ -443,13 +422,6 @@ public class HnSCreativeModeTabs {
                         /*
                          *** Shadow
                          */
-
-
-                        // Shadow Scale
-                        output.accept(HnSItemRegistry.SHADOW_SCALE_HELMET.get());
-                        output.accept(HnSItemRegistry.SHADOW_SCALE_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.SHADOW_SCALE_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.SHADOW_SCALE_BOOTS.get());
 
                         // Masked Fool
                         output.accept(HnSItemRegistry.MASKED_FOOL_HELMET.get());
@@ -566,18 +538,6 @@ public class HnSCreativeModeTabs {
                         /*
                          *** Cosmetic Battlemage
                          */
-
-                        // Frieren
-                        output.accept(HnSItemRegistry.FRIEREN_HELMET.get());
-                        output.accept(HnSItemRegistry.FRIEREN_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.FRIEREN_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.FRIEREN_BOOTS.get());
-
-                        // Giorno Giovanna
-                        output.accept(HnSItemRegistry.GIORNO_GIOVANNA_HELMET.get());
-                        output.accept(HnSItemRegistry.GIORNO_GIOVANNA_CHESTPLATE.get());
-                        output.accept(HnSItemRegistry.GIORNO_GIOVANNA_LEGGINGS.get());
-                        output.accept(HnSItemRegistry.GIORNO_GIOVANNA_BOOTS.get());
 
 
                         /*
@@ -765,10 +725,6 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.DRACONIC_SPLITTER.get());
                         //Ravens Bane
                         output.accept(HnSItemRegistry.RAVENS_BANE.get());
-                        // War-Flaming Lance
-                        output.accept(HnSItemRegistry.WARFLAMING_LANCE.get());
-                        // Volcano
-                        output.accept(HnSItemRegistry.VOLCANO.get());
 
 
                         //Ice
@@ -802,10 +758,6 @@ public class HnSCreativeModeTabs {
 
                         //Bountiful Harvest
                         output.accept(HnSItemRegistry.BOUNTIFUL_HARVEST.get());
-                        //Thorn Chakram
-                        output.accept(HnSItemRegistry.THORN_CHAKRAM.get());
-                        //Blade of Grass
-                        output.accept(HnSItemRegistry.BLADE_OF_GRASS.get());
 
                         /*
                         *** O' Fortuna
@@ -814,10 +766,6 @@ public class HnSCreativeModeTabs {
 
 
                         //Blood
-
-
-                        //Vampire Knives
-                        output.accept(HnSItemRegistry.VAMPIRE_KNIVES.get());
 
                         /*
                         *** Devastator
@@ -830,8 +778,6 @@ public class HnSCreativeModeTabs {
 
                         // Obsidian Claymore
                         output.accept(HnSItemRegistry.OBSIDIAN_CLAYMORE.get());
-                        // Star Fury
-                        output.accept(HnSItemRegistry.STARFURY.get());
 
                         /*
                         *** Umbranova
@@ -846,25 +792,16 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.HAMMER_OF_JUSTICE.get());
                         // Excalibur
                         output.accept(HnSItemRegistry.EXCALIBUR.get());
-                        // Excalibur Divine Gold
-                        output.accept(HnSItemRegistry.ISS_EXCALIBUR.get());
                         // Hazen's Excalibur
-                        output.accept(HnSItemRegistry.HAZENS_EXCALIBUR.get());
+                        output.accept(HnSItemRegistry.EXCALIBUR.get());
                         // Divine Greatsword
                         output.accept(HnSItemRegistry.DIVINE_GREATSWORD.get());
 
 
                         //Radiance
 
-
-                        //Hammush
-                        output.accept(HnSItemRegistry.HAMMUSH.get());
-                        //Meowmere
-                        output.accept(HnSItemRegistry.MEOWMERE.get());
                         //Spectrum
                         output.accept(HnSItemRegistry.SPECTRUM.get());
-                        //Terraprisma
-                        output.accept(HnSItemRegistry.TERRAPRISMA.get());
 
 
                         //Evocation
@@ -886,12 +823,6 @@ public class HnSCreativeModeTabs {
 
                         // Soul Reaper
                         output.accept(HnSItemRegistry.SOUL_REAPER.get());
-                        //Lights Bane
-                        output.accept(HnSItemRegistry.LIGHTS_BANE.get());
-                        //Nights Edge
-                        output.accept(HnSItemRegistry.NIGHTS_EDGE.get());
-                        //True Nights Edge
-                        output.accept(HnSItemRegistry.TRUE_NIGHTS_EDGE.get());
 
 
                         // Cosmic
@@ -923,12 +854,6 @@ public class HnSCreativeModeTabs {
                         //Legionnaire Warlock Axe
                         output.accept(HnSItemRegistry.LEGIONNAIRE_WARLOCK_AXE.get());
 
-                        //Flame Reaver
-                        output.accept(HnSItemRegistry.DAWNMAKER.get());
-
-                        //Muramasa
-                        output.accept(HnSItemRegistry.MURAMASA.get());
-
 
                         /*
                         ***Staves
@@ -939,9 +864,6 @@ public class HnSCreativeModeTabs {
 
                         //Frieren Staff
                         output.accept(HnSItemRegistry.FRIEREN_STAFF.get());
-
-                        //Rod of Discord
-                        output.accept(HnSItemRegistry.ROD_OF_DISCORD.get());
 
                         //White Lily Staff
                         output.accept(HnSItemRegistry.WHITE_LILY_STAFF.get());
@@ -983,8 +905,6 @@ public class HnSCreativeModeTabs {
 
                         //Pickaxes
                         output.accept(HnSItemRegistry.SPECTRAL_PICKAXE.get());
-                        output.accept(HnSItemRegistry.PICKAXE_AXE.get());
-                        output.accept(HnSItemRegistry.PICKAXE_AXE_DIVINE_GOLD.get());
 
                         /*
                         ***Curios
@@ -1009,7 +929,6 @@ public class HnSCreativeModeTabs {
                         output.accept(HnSItemRegistry.ABSOLUTE.get());
 
                         //Spellbooks
-                        output.accept(HnSItemRegistry.GOLDEN_SHOWER_SPELLBOOK.get());
                         output.accept(HnSItemRegistry.ENERGIZED_CORE_SPELLBOOK.get());
 
                         //Sheath
@@ -1028,7 +947,6 @@ public class HnSCreativeModeTabs {
 
                         //Misc
                         output.accept(HnSItemRegistry.RING_OF_EFFICIENCY.get());
-                        output.accept(HnSItemRegistry.PENDANT_OF_HARMONY.get());
 
 
 

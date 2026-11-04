@@ -141,6 +141,6 @@ public class EndraconicMeteorSpell extends AbstractSpell {
     }
 
     public int getRadius(int spellLevel, LivingEntity caster) {
-        return 2 + (int) getSpellPower(spellLevel, caster);
+        return 1 + (int) getSpellPower(spellLevel, caster);
     }
 }

@@ -40,7 +40,7 @@ public class SoulflameBoltSpell extends AbstractSpell {
 
     public SoulflameBoltSpell() {
         this.defaultConfig = (new DefaultConfig())
-                .setMinRarity(SpellRarity.COMMON)
+                .setMinRarity(SpellRarity.RARE)
                 .setSchoolResource(SchoolRegistry.FIRE_RESOURCE)
                 .setMaxLevel(10)
                 .setCooldownSeconds((double)1.0F)

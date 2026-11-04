@@ -50,7 +50,7 @@ public class SummonKeeper extends KeeperEntity implements IMagicSummon {
 
     public boolean doHurtTarget(Entity pEntity) {
         return Utils.doMeleeAttack(this, pEntity,
-                (HnSSpellRegistries.CALL_FORTH_TERRAPRISMA
+                (HnSSpellRegistries.REIGN_OF_TYROS
                         .get())
                         .getDamageSource(this, this.getSummoner()
                 ));

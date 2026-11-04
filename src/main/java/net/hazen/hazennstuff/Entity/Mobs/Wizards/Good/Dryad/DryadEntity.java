@@ -334,7 +334,7 @@ public class DryadEntity extends NeutralWizard implements VillagerDataHolder, Su
             this.offers.add(new MerchantOffer(
                     new ItemCost(Items.EMERALD, 32),
                     Optional.of(new ItemCost(HnSItemRegistry.EXCALIBUR_FRAGMENT, 1)),
-                    new ItemStack(HnSItemRegistry.THORN_CHAKRAM.get()),
+                    new ItemStack(HnSItemRegistry.BOUNTIFUL_HARVEST.get()),
                     3,
                     0,
                     0.2F

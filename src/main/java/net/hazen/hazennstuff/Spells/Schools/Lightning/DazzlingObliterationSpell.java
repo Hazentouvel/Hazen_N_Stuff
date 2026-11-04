@@ -92,6 +92,10 @@ public class DazzlingObliterationSpell extends AbstractSpell {
         }
     }
 
+    public Optional<SoundEvent> getCastFinishSound() {
+        return Optional.empty();
+    }
+
     @Override
     public int getRecastCount(int spellLevel, @Nullable LivingEntity entity) {
         return 3;

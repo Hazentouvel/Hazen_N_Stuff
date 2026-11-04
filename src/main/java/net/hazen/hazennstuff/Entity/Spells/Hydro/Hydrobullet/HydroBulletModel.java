@@ -1,6 +1,5 @@
 package net.hazen.hazennstuff.Entity.Spells.Hydro.Hydrobullet;
 
-import net.hazen.hazennstuff.Entity.Spells.Hydro.WaterBolt.WaterBolt;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.GeoModel;

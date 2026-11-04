@@ -4,7 +4,6 @@ import net.hazen.hazennstuff.Datagen.Worldgen.Biomes.HnSBiomeModifiers;
 import net.hazen.hazennstuff.Datagen.Worldgen.HnSConfiguredFeatures;
 import net.hazen.hazennstuff.Datagen.Worldgen.PlacementFeatures.HnSPlacedFeatures;
 import net.hazen.hazennstuff.HazenNStuff;
-import net.hazen.hazennstuff.HnSUtilities.HnSEnchantments;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;

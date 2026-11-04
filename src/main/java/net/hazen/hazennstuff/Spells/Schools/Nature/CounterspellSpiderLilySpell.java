@@ -35,8 +35,8 @@ public class CounterspellSpiderLilySpell extends AbstractSpell {
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.COMMON)
             .setSchoolResource(SchoolRegistry.NATURE_RESOURCE)
-            .setMaxLevel(5)
-            .setCooldownSeconds(4)
+            .setMaxLevel(3)
+            .setCooldownSeconds(10)
             .build();
 
     public CounterspellSpiderLilySpell() {

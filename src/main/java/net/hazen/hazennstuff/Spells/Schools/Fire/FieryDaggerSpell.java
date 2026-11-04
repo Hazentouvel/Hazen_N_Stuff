@@ -11,7 +11,7 @@ import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.Entity.Spells.Fire.FireDaggers.FieryDaggerMagicProjectile;
 import net.hazen.hazennstuff.HnSUtilities.Animations.HnSPlayerAnimations;
-import net.hazen.hazennstuff.HnSUtilities.HnSEnchantments;
+import net.hazen.hazennstuff.Datagen.HnSEnchantments;
 import net.hazen.hazennstuff.Spells.AbstractSpells.TyrosSpells;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
@@ -137,12 +137,7 @@ public class FieryDaggerSpell extends TyrosSpells {
 
         hasCinderous = hasCinderousEquipment;
 
-        //boolean hasCinderousEquipment = hasTaggedItem(entity, HnSTags.CINDEROUS_EQUIPMENT);
-        //hasCinderous = hasTaggedItem(entity, HnSTags.CINDEROUS_EQUIPMENT);
-
-
         if (hasCinderousEquipment) {
-            // Fiery Zone with Cinderous Equipment
             float explosionRadius = 1.0F + spellLevel * 0.25F;
             int[] angles = {0, -15, 15};
             for (int angle : angles) {

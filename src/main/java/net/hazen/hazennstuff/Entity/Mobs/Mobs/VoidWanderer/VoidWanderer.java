@@ -133,9 +133,7 @@ public class VoidWanderer extends AbstractSpellCastingMob implements Enemy, IAni
                 .setSpells(
                         List.of(
                                 HnSSpellRegistries.COSMIC_BOLT.get(),
-                                HnSSpellRegistries.COSMIC_BOLT.get(),
-                                HnSSpellRegistries.SHOOTING_STAR.get(),
-                                HnSSpellRegistries.SHOOTING_STAR.get()
+                                HnSSpellRegistries.COSMIC_BOLT.get()
                         ),
                         List.of(
 

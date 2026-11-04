@@ -77,7 +77,7 @@ public class ParrySpell extends AbstractSpell {
         if (!targetableEntities.isEmpty() && targetableEntities.get(0).distanceToSqr(entity) < (double)(distance * distance)) {
             Entity closestEntity = targetableEntities.get(0);
 
-            float radius = 6.0F;
+            float radius = 3.0F;
             AABB damageBox = AABB.ofSize(closestEntity.getBoundingBox().getCenter(), (double)radius, (double)(radius + 1.0F), (double)radius).move(forward.scale((double)(radius / 2.0F)));
             List<Entity> damageEntities = level.getEntities(entity, damageBox);
             boolean projectileEffects = false;

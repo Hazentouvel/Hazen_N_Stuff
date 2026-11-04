@@ -39,10 +39,6 @@ import net.hazen.hazennstuff.Item.Armor.Misc.BishopOfDeceitArmor.BishopOfDeceitA
 import net.hazen.hazennstuff.Item.Armor.PureTier.Blazeborne.GeckolibBlazeborneArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Ranger.BountyHunter.BountyHunterArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.ChargedScourge.GeckolibChargedScourgeArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Chlorophyte.ChlorophyteArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Chlorophyte.Headgear.ChlorophyteHeadgearArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Chlorophyte.Helmet.ChlorophyteHelmetArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.Chlorophyte.Mask.ChlorophyteMaskArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.CreakingSorcerer.GeckolibCreakingSorcererArmorItem;
 import net.hazen.hazennstuff.Item.Armor.AscendedTier.CryogenicRuler.CryogenicRulerArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.CrystalArachnid.CrystalArachnidArmorItem;
@@ -53,15 +49,12 @@ import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.Legacy.GeckolibFir
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.Legacy.GeckolibFireblossomBattlemageCrownedArmorItemLegacy;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Fireblossom.Legacy.GeckolibFireblossomBattlemageHelmetArmorItemLegacy;
 import net.hazen.hazennstuff.Item.Armor.PureTier.FleshMass.FleshMassArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.Battlemage.Frieren.FrierenArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Ranger.FrostbiteHunter.FrostbiteHunterArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Melee.FrostbiteKnight.FrostbiteKnightArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.GabrielULTRAKILL.GeckolibGabrielArmorItem;
 import net.hazen.hazennstuff.Item.Armor.AscendedTier.GarmentsOfTheFirstFlamebearer.GarmentsOfTheFirstFlamebearerArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.Battlemage.GiornoGiovanna.GiornoGiovannaArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Hazel.HazelArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Hazel.HazelHOLYMOLYArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.PureTier.HertaPuppet.HertaPuppetArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Infestation.GeckolibInfestationArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.Iron431.Iron431ArmorItem;
 import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.Legionnaire.OldLegionnaireArmorItem;
@@ -75,7 +68,6 @@ import net.hazen.hazennstuff.Item.Armor.Misc.Miner.MinerArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Battlemage.MithrilBattlemage.MithrilBattlemageArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.MothicWitch.MothicWitchArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.MothicWitch.NerfedMothicWitchArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.MyceliumGuardian.MyceliumGuardianArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Misc.NamelessOneArmor.NamelessOneArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Misc.NecromancerArmor.NecromancerArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Ranger.PermafrostPrince.PermafrostPrinceArmorItem;
@@ -84,7 +76,6 @@ import net.hazen.hazennstuff.Item.Armor.ReignOfTyros.PyriumBattlemage.PyriumBatt
 import net.hazen.hazennstuff.Item.Armor.Misc.PyromancerBrute.PyromancerBruteArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Dedicated.SacredRobes.SacredRobesArmorItem;
 import net.hazen.hazennstuff.Item.Armor.PureTier.Seraph.GeckolibSeraphArmorItem;
-import net.hazen.hazennstuff.Item.Armor.Cosmetic.SchoolTier.ShadowScale.ShadowScaleArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Misc.ShadowWalkerEnderman.ShadowwalkerEndermanArmorItem;
 import net.hazen.hazennstuff.Item.Armor.Misc.ShadowWalkerEnderman.ShadowwalkerEndermanBlindfoldItem;
 import net.hazen.hazennstuff.Item.Armor.Misc.ShadowWalkerEnderman.ShadowwalkerEndermanHoodItem;
@@ -114,12 +105,10 @@ import net.hazen.hazennstuff.Item.Curios.Crystals.SpiritCrystals.AbsoluteCurio;
 import net.hazen.hazennstuff.Item.Curios.Crystals.SpiritCrystals.AbstractCurio;
 import net.hazen.hazennstuff.Item.Curios.Crystals.SpiritCrystals.AdvancedCurio;
 import net.hazen.hazennstuff.Item.Curios.Misc.LegionnaireCurios;
-import net.hazen.hazennstuff.Item.Curios.Misc.PendantOfHarmonyCurio;
 import net.hazen.hazennstuff.Item.Curios.Rings.RingOfEfficiencyCurio;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.GalvanizedSheath.GalvanizedSheath;
 import net.hazen.hazennstuff.Item.Curios.Sheaths.ScrollSheath.ScrollSheath;
 import net.hazen.hazennstuff.Item.Curios.Spellbooks.EnergizedCoreSpellbook.EnergizedCoreSpellbook;
-import net.hazen.hazennstuff.Item.Curios.Spellbooks.GoldenShowerSpellbook;
 import net.hazen.hazennstuff.Item.Curios.Wings.AngelWings.AngelWings;
 import net.hazen.hazennstuff.Item.Curios.Wings.ArbitriumWings.ArbitriumWings;
 import net.hazen.hazennstuff.HnSUtilities.Item.HnSFoodProperties;
@@ -136,14 +125,11 @@ import net.hazen.hazennstuff.Item.Staves.Generic.GlassweaverStaff.GlassweaverSce
 import net.hazen.hazennstuff.Item.Staves.Generic.GrimoireStaff.GrimoireStaff;
 import net.hazen.hazennstuff.Item.Staves.Generic.InsaniaAeternus.InsaniaAeternus;
 import net.hazen.hazennstuff.Item.Staves.Generic.Nexus.Nexus;
-import net.hazen.hazennstuff.Item.Staves.Reference.RodOfDiscord.RodOfDiscord;
 import net.hazen.hazennstuff.Item.Staves.Special.SoulcallingScepter.SoulcallingScepter;
 import net.hazen.hazennstuff.Item.Staves.Reference.WhiteLilyStaff.WhiteLilyStaff;
 import net.hazen.hazennstuff.Item.Staves.Generic.WisewoodCane.WisewoodCane;
 import net.hazen.hazennstuff.Item.UpgradeOrbs.Concentrated.Fire.ConcentratedFireUpgradeOrb;
 import net.hazen.hazennstuff.Item.UpgradeOrbs.Concentrated.Ice.ConcentratedIceUpgradeOrb;
-import net.hazen.hazennstuff.Item.Util.PickaxeAxe.DivineGold.PickaxeAxeDivineGoldItem;
-import net.hazen.hazennstuff.Item.Util.PickaxeAxe.PickaxeAxeItem;
 import net.hazen.hazennstuff.Item.Util.SpectralPickaxe.SpectralPickaxeItem;
 import net.hazen.hazennstuff.Item.Weapons.Ascended.Devastator.Dormant.Devastator;
 import net.hazen.hazennstuff.Item.Weapons.Ascended.DraconicSplitter.DraconicSplitterItem;
@@ -160,39 +146,23 @@ import net.hazen.hazennstuff.Item.Weapons.Ascended.Umbranova.T3.UmbranovaT3;
 import net.hazen.hazennstuff.Item.Weapons.Generic.AncientWarriorsAxe.AncientWarriorsAxeItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.AstraliteCleaver.AstraliteCleaver;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Beongae.BeongaeItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.BladeOfGrass.BladeOfGrassItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.BountifulHarvest.BountifulHarvestItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.HonkaiStarRail.Dawnmaker.DawnmakerItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.DivineGreatsword.DivineGreatswordItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Excalibur.HazensExcaliburItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.ISSxTerraria.ISSExcaliburItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Terraria.ExcaliburItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.FireblossomRapier.FireblossomRapierItem;
+import net.hazen.hazennstuff.Item.Weapons.Generic.SoulReaper.SoulReaper;
 import net.hazen.hazennstuff.Item.Weapons.Reference.MCDungeons.Firebrand.FirebrandItem;
 import net.hazen.hazennstuff.Item.Weapons.Special.FrostburnDagger.FrostburnDaggerItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.HammerOfJustice.HammerOfJusticeItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Hammush.HammushItem;
 import net.hazen.hazennstuff.Item.Weapons.Ascended.IcePike.IcePikeItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.LegionnaireWarlockAxe.LegionnaireWarlockAxeItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.LightsBane.LightsBaneItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.MageBane.MageBaneItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Malice.MaliceItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Meowmere.MeowmereItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Muramasa.MuramasaItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.NightsEdge.NightsEdgeItem;
 import net.hazen.hazennstuff.Item.Weapons.Reference.MCDungeons.ObsidianClaymore.ObsidianClaymoreItem;
 import net.hazen.hazennstuff.Item.Weapons.Special.Skyscorcher.SkyscorcherItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.SoulReaper.SoulReaper;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Spectrum.SpectrumItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Starfury.StarfuryItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Terraprisma.TerraprismaItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.TheDevourer.TheDevourerItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.ThornChakram.ThornChakramItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.TidalWave.TidalWave;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.TrueNightsEdge.TrueNightsEdgeItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.VampireKnives.VampireKnivesItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.Terraria.Volcano.VolcanoItem;
-import net.hazen.hazennstuff.Item.Weapons.Reference.HonkaiStarRail.WarFlamingLance.WarFlamingLanceItem;
 import net.hazen.hazentouvelib.Rarities.HLRarities;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ArmorItem;
@@ -737,14 +707,6 @@ public class HnSItemRegistry {
     public static final DeferredHolder<Item, Item> RAVENS_BANE = ITEMS.register
             ("ravens_bane", RavensBaneItem::new);
 
-    // War-Flaming Lance
-    public static final DeferredHolder<Item, Item> WARFLAMING_LANCE = ITEMS.register
-            ("war_flaming_lance", WarFlamingLanceItem::new);
-
-    // War-Flaming Lance
-    public static final DeferredHolder<Item, Item> VOLCANO = ITEMS.register
-            ("volcano", VolcanoItem::new);
-
     /*
      *** Ice
      */
@@ -793,14 +755,6 @@ public class HnSItemRegistry {
     public static final DeferredHolder<Item, Item> BOUNTIFUL_HARVEST = ITEMS.register
             ("bountiful_harvest", BountifulHarvestItem::new);
 
-    //Thorn Chakram
-    public static final DeferredHolder<Item, Item> THORN_CHAKRAM = ITEMS.register
-            ("thorn_chakram", ThornChakramItem::new);
-
-    //Thorn Chakram
-    public static final DeferredHolder<Item, Item> BLADE_OF_GRASS = ITEMS.register
-            ("blade_of_grass", BladeOfGrassItem::new);
-
     /*
     O' Fortuna
      */
@@ -810,10 +764,6 @@ public class HnSItemRegistry {
     /*
      *** Blood
      */
-
-    //Vampire Knives
-    public static final DeferredHolder<Item, Item> VAMPIRE_KNIVES = ITEMS.register
-            ("vampire_knives", VampireKnivesItem::new);
 
     /*
     Devastator
@@ -829,10 +779,6 @@ public class HnSItemRegistry {
     public static final DeferredHolder<Item, Item> OBSIDIAN_CLAYMORE = ITEMS.register
             ("obsidian_claymore", ObsidianClaymoreItem::new);
 
-    //Starfury
-    public static final DeferredHolder<Item, Item> STARFURY = ITEMS.register
-            ("starfury", StarfuryItem::new);
-
     /*
     Umbranova
      */
@@ -844,45 +790,20 @@ public class HnSItemRegistry {
             ("umbranova_t3", UmbranovaT3::new);
 
     /*
-     *** Radiance
-     */
-
-    //Spectrum
-    public static final DeferredHolder<Item, Item> SPECTRUM = ITEMS.register
-            ("spectrum", SpectrumItem::new);
-
-    //Meowmere
-    public static final DeferredHolder<Item, Item> MEOWMERE = ITEMS.register
-            ("meowmere", MeowmereItem::new);
-
-    //Hammush
-    public static final DeferredHolder<Item, Item> HAMMUSH = ITEMS.register
-            ("hammush", HammushItem::new);
-
-    //Terraprisma
-    public static final DeferredHolder<Item, Item> TERRAPRISMA = ITEMS.register
-            ("terraprisma", TerraprismaItem::new);
-
-    /*
      *** Shadow
      */
 
-    // Soul Reaper
+    // Spectrum
     public static final DeferredHolder<Item, Item> SOUL_REAPER = ITEMS.register
             ("soul_reaper", SoulReaper::new);
 
-    //Lights Bane
-    public static final DeferredHolder<Item, Item> LIGHTS_BANE = ITEMS.register
-            ("lights_bane", LightsBaneItem::new);
+    /*
+     *** Radiance
+     */
 
-    //Nights Edge
-    public static final DeferredHolder<Item, Item> NIGHTS_EDGE = ITEMS.register
-            ("nights_edge", NightsEdgeItem::new);
-
-
-    //True Nights Edge
-    public static final DeferredHolder<Item, Item> TRUE_NIGHTS_EDGE = ITEMS.register
-            ("true_nights_edge", TrueNightsEdgeItem::new);
+    // Spectrum
+    public static final DeferredHolder<Item, Item> SPECTRUM = ITEMS.register
+            ("spectrum", SpectrumItem::new);
 
     /*
      *** Holy
@@ -896,17 +817,9 @@ public class HnSItemRegistry {
     public static final DeferredHolder<Item, Item> DIVINE_GREATSWORD = ITEMS.register
             ("divine_greatsword", DivineGreatswordItem::new);
 
-    //Hazen's Excalibur
-    public static final DeferredHolder<Item, Item> HAZENS_EXCALIBUR = ITEMS.register
-            ("hazens_excalibur", HazensExcaliburItem::new);
-
-    //Excalibur
+    // Excalibur
     public static final DeferredHolder<Item, Item> EXCALIBUR = ITEMS.register
-            ("excalibur", ExcaliburItem::new);
-
-    //Excalibur Divine Gold
-    public static final DeferredHolder<Item, Item> ISS_EXCALIBUR = ITEMS.register
-            ("excalibur_divine_gold", ISSExcaliburItem::new);
+            ("hazens_excalibur", HazensExcaliburItem::new);
 
     /*
      *** Evocation
@@ -957,14 +870,6 @@ public class HnSItemRegistry {
     //Mage Bane
     public static final DeferredHolder<Item, Item> MAGE_BANE = ITEMS.register
             ("mage_bane", MageBaneItem::new);
-
-    //Dawn Maker
-    public static final DeferredHolder<Item, Item> DAWNMAKER = ITEMS.register
-            ("dawnmaker", DawnmakerItem::new);
-
-    //Muramasa
-    public static final DeferredHolder<Item, Item> MURAMASA = ITEMS.register
-            ("muramasa", MuramasaItem::new);
 
     //Legionnaire Warlock Axe
     public static final DeferredHolder<Item, Item> LEGIONNAIRE_WARLOCK_AXE = ITEMS.register
@@ -1035,9 +940,6 @@ public class HnSItemRegistry {
      *** Radiance
      */
 
-    //Rod of Discord
-    public static final DeferredHolder<Item, Item> ROD_OF_DISCORD = ITEMS.register("rod_of_discord", RodOfDiscord::new);
-
     //Glassweaver Scepter
     public static final DeferredHolder<Item, Item> GLASSWEAVER_SCEPTER = ITEMS.register("glassweaver_scepter", GlassweaverScepter::new);
 
@@ -1078,11 +980,6 @@ public class HnSItemRegistry {
 
     //Spectral Pickaxe
     public static final DeferredHolder<Item, Item> SPECTRAL_PICKAXE = ITEMS.register("spectral_pickaxe", SpectralPickaxeItem::new);
-
-    //Pickaxe Axe
-    public static final DeferredHolder<Item, Item> PICKAXE_AXE = ITEMS.register("pickaxe_axe", PickaxeAxeItem::new);
-    //Pickaxe Axe [Divine Gold]
-    public static final DeferredHolder<Item, Item> PICKAXE_AXE_DIVINE_GOLD = ITEMS.register("pickaxe_axe_divine_gold", PickaxeAxeDivineGoldItem::new);
 
     /*
      *** [Curios] **************************************************************************
@@ -1132,7 +1029,6 @@ public class HnSItemRegistry {
      *** Spellbooks
      */
 
-    public static final DeferredItem <GoldenShowerSpellbook> GOLDEN_SHOWER_SPELLBOOK = ITEMS.register("golden_shower_spellbook", GoldenShowerSpellbook::new);
     public static final DeferredItem <EnergizedCoreSpellbook> ENERGIZED_CORE_SPELLBOOK = ITEMS.register("energized_core_spellbook", EnergizedCoreSpellbook::new);
 
     /*
@@ -1164,8 +1060,6 @@ public class HnSItemRegistry {
     //Ring of Efficiency
     public static final DeferredItem<RingOfEfficiencyCurio> RING_OF_EFFICIENCY = ITEMS.register("ring_of_efficiency", RingOfEfficiencyCurio::new);
 
-    //Pendant of Harmony
-    public static final DeferredItem<PendantOfHarmonyCurio> PENDANT_OF_HARMONY = ITEMS.register("pendant_of_harmony", PendantOfHarmonyCurio::new);
 
 
 
@@ -1189,35 +1083,19 @@ public class HnSItemRegistry {
     //Blazeborne Armor
 
     public static final DeferredHolder<Item, Item> BLAZEBORNE_HELMET = ITEMS.register("blazeborne_helmet", () -> new BlazeborneArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .fireResistant()
-            .rarity(HLRarities.FIRE_RARITY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
     public static final DeferredHolder<Item, Item> BLAZEBORNE_CHESTPLATE = ITEMS.register("blazeborne_chestplate", () -> new BlazeborneArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.FIRE_RARITY.getValue())
-            .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
     public static final DeferredHolder<Item, Item> BLAZEBORNE_LEGGINGS = ITEMS.register("blazeborne_leggings", () -> new BlazeborneArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.FIRE_RARITY.getValue())
-            .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
     public static final DeferredHolder<Item, Item> BLAZEBORNE_BOOTS = ITEMS.register("blazeborne_boots", () -> new BlazeborneArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
-            .stacksTo(1)
-            .fireResistant()
-            .rarity(HLRarities.FIRE_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
 
@@ -1227,35 +1105,19 @@ public class HnSItemRegistry {
 
 
     public static final DeferredHolder<Item, Item> GECKOLIB_BLAZEBORNE_HELMET = ITEMS.register("geckolib_blazeborne_helmet", () -> new GeckolibBlazeborneArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .fireResistant()
-            .rarity(HLRarities.FIRE_RARITY.getValue())
             .durability(ArmorItem.Type.HELMET.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
     public static final DeferredHolder<Item, Item> GECKOLIB_BLAZEBORNE_CHESTPLATE = ITEMS.register("geckolib_blazeborne_chestplate", () -> new GeckolibBlazeborneArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.FIRE_RARITY.getValue())
-            .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
     public static final DeferredHolder<Item, Item> GECKOLIB_BLAZEBORNE_LEGGINGS = ITEMS.register("geckolib_blazeborne_leggings", () -> new GeckolibBlazeborneArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.FIRE_RARITY.getValue())
-            .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
     public static final DeferredHolder<Item, Item> GECKOLIB_BLAZEBORNE_BOOTS = ITEMS.register("geckolib_blazeborne_boots", () -> new GeckolibBlazeborneArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
-            .stacksTo(1)
-            .fireResistant()
-            .rarity(HLRarities.FIRE_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
 
@@ -1263,88 +1125,33 @@ public class HnSItemRegistry {
      *** Ice
      */
 
-    //Cryogenic Ruler
-
-    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_HELMET = ITEMS.register("cryogenic_ruler_helmet", () -> new CryogenicRulerArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.ICE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
-    ));
-    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_CHESTPLATE = ITEMS.register("cryogenic_ruler_chestplate", () -> new CryogenicRulerArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.ICE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
-    ));
-    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_LEGGINGS = ITEMS.register("cryogenic_ruler_leggings", () -> new CryogenicRulerArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.ICE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
-    ));
-    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_BOOTS = ITEMS.register("cryogenic_ruler_boots", () -> new CryogenicRulerArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.ICE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
-    ));
-
     //Crystal Arachnid
 
     public static final DeferredHolder<Item, Item> CRYSTAL_ARACHNID_HELMET = ITEMS.register("crystal_arachnid_helmet", () -> new CrystalArachnidArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.ICE_RARITY.getValue())
-            .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
     public static final DeferredHolder<Item, Item> CRYSTAL_ARACHNID_CHESTPLATE = ITEMS.register("crystal_arachnid_chestplate", () -> new CrystalArachnidArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.ICE_RARITY.getValue())
-            .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
     public static final DeferredHolder<Item, Item> CRYSTAL_ARACHNID_LEGGINGS = ITEMS.register("crystal_arachnid_leggings", () -> new CrystalArachnidArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.ICE_RARITY.getValue())
-            .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
     public static final DeferredHolder<Item, Item> CRYSTAL_ARACHNID_BOOTS = ITEMS.register("crystal_arachnid_boots", () -> new CrystalArachnidArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.ICE_RARITY.getValue())
-            .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
     ));
 
-    //Herta Puppet
+    //Cryogenic Ruler
 
-    public static final DeferredHolder<Item, Item> HERTA_PUPPET_HELMET = ITEMS.register("herta_puppet_helmet", () -> new HertaPuppetArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.ICE_RARITY.getValue())
-            .fireResistant()
+    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_HELMET = ITEMS.register("cryogenic_ruler_helmet", () -> new CryogenicRulerArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> HERTA_PUPPET_CHESTPLATE = ITEMS.register("herta_puppet_chestplate", () -> new HertaPuppetArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.ICE_RARITY.getValue())
-            .fireResistant()
+    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_CHESTPLATE = ITEMS.register("cryogenic_ruler_chestplate", () -> new CryogenicRulerArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> HERTA_PUPPET_LEGGINGS = ITEMS.register("herta_puppet_leggings", () -> new HertaPuppetArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.ICE_RARITY.getValue())
-            .fireResistant()
+    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_LEGGINGS = ITEMS.register("cryogenic_ruler_leggings", () -> new CryogenicRulerArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
     ));
-    public static final DeferredHolder<Item, Item> HERTA_PUPPET_BOOTS = ITEMS.register("herta_puppet_boots", () -> new HertaPuppetArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.ICE_RARITY.getValue())
-            .fireResistant()
+    public static final DeferredHolder<Item, Item> CRYOGENIC_RULER_BOOTS = ITEMS.register("cryogenic_ruler_boots", () -> new CryogenicRulerArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
     ));
 
@@ -1356,35 +1163,19 @@ public class HnSItemRegistry {
     //Creaking
 
     public static final DeferredHolder<Item, Item> CREAKING_HELMET = ITEMS.register("creaking_helmet", () -> new CreakingSorcererArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.NATURE_RARITY.getValue())
-            .fireResistant()
             .durability(ArmorItem.Type.HELMET.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
     public static final DeferredHolder<Item, Item> CREAKING_CHESTPLATE = ITEMS.register("creaking_chestplate", () -> new CreakingSorcererArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.NATURE_RARITY.getValue())
-            .fireResistant()
             .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
     public static final DeferredHolder<Item, Item> CREAKING_LEGGINGS = ITEMS.register("creaking_leggings", () -> new CreakingSorcererArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.NATURE_RARITY.getValue())
-            .fireResistant()
             .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
     public static final DeferredHolder<Item, Item> CREAKING_BOOTS = ITEMS.register("creaking_boots", () -> new CreakingSorcererArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.NATURE_RARITY.getValue())
-            .fireResistant()
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
 
 
@@ -1415,51 +1206,6 @@ public class HnSItemRegistry {
             .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
     ));
     public static final DeferredHolder<Item, Item> GECKOLIB_CREAKING_BOOTS = ITEMS.register("geckolib_creaking_boots", () -> new GeckolibCreakingSorcererArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.NATURE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
-    ));
-
-    //Chlorophyte
-
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_HELMET = ITEMS.register("chlorophyte_helmet", () -> new ChlorophyteHelmetArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.NATURE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
-    ));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_MASK = ITEMS.register("chlorophyte_mask", () -> new ChlorophyteMaskArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.NATURE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
-    ));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_HEADGEAR = ITEMS.register("chlorophyte_headgear", () -> new ChlorophyteHeadgearArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.NATURE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
-    ));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_CHESTPLATE = ITEMS.register("chlorophyte_chestplate", () -> new ChlorophyteArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.NATURE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
-    ));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_LEGGINGS = ITEMS.register("chlorophyte_leggings", () -> new ChlorophyteArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.NATURE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-            .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
-    ));
-    public static final DeferredHolder<Item, Item> CHLOROPHYTE_BOOTS = ITEMS.register("chlorophyte_boots", () -> new ChlorophyteArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
             .stacksTo(1)
             .rarity(HLRarities.NATURE_RARITY.getValue())
             .fireResistant()
@@ -2016,34 +1762,6 @@ public class HnSItemRegistry {
 
     ));
 
-    //Shadow Scale
-
-    public static final DeferredHolder<Item, Item> SHADOW_SCALE_HELMET = ITEMS.register("shadow_scale_helmet", () -> new ShadowScaleArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.SHADOW_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> SHADOW_SCALE_CHESTPLATE = ITEMS.register("shadow_scale_chestplate", () -> new ShadowScaleArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.SHADOW_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> SHADOW_SCALE_LEGGINGS = ITEMS.register("shadow_scale_leggings", () -> new ShadowScaleArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.SHADOW_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> SHADOW_SCALE_BOOTS = ITEMS.register("shadow_scale_boots", () -> new ShadowScaleArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.SHADOW_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-
-    ));
-
     // Masked Fool
 
     public static final DeferredHolder<Item, Item> MASKED_FOOL_HELMET = ITEMS.register("masked_fool_helmet", () -> new MaskedFoolArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
@@ -2105,34 +1823,6 @@ public class HnSItemRegistry {
     /*
      *** Radiance
      */
-
-    //Mycelium Guardian
-
-    public static final DeferredHolder<Item, Item> MYCELIUM_GUARDIAN_HELMET = ITEMS.register("mycelium_guardian_helmet", () -> new MyceliumGuardianArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.RADIANCE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> MYCELIUM_GUARDIAN_CHESTPLATE = ITEMS.register("mycelium_guardian_chestplate", () -> new MyceliumGuardianArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.RADIANCE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> MYCELIUM_GUARDIAN_LEGGINGS = ITEMS.register("mycelium_guardian_leggings", () -> new MyceliumGuardianArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.RADIANCE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
-    ));
-    public static final DeferredHolder<Item, Item> MYCELIUM_GUARDIAN_BOOTS = ITEMS.register("mycelium_guardian_boots", () -> new MyceliumGuardianArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
-            .stacksTo(1)
-            .rarity(HLRarities.RADIANCE_RARITY.getValue())
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(64))
-
-    ));
 
     // Radiant Crystal
 
@@ -2775,25 +2465,6 @@ public class HnSItemRegistry {
      *** Misc
      */
 
-    //Frieren
-
-    public static final DeferredHolder<Item, Item> FRIEREN_HELMET = ITEMS.register("frieren_helmet", () -> new FrierenArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .durability(ArmorItem.Type.HELMET.getDurability(37))
-    ));
-    public static final DeferredHolder<Item, Item> FRIEREN_CHESTPLATE = ITEMS.register("frieren_chestplate", () -> new FrierenArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-            .stacksTo(1)
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))
-    ));
-    public static final DeferredHolder<Item, Item> FRIEREN_LEGGINGS = ITEMS.register("frieren_leggings", () -> new FrierenArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
-            .stacksTo(1)
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(37))
-    ));
-    public static final DeferredHolder<Item, Item> FRIEREN_BOOTS = ITEMS.register("frieren_boots", () -> new FrierenArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
-            .stacksTo(1)
-            .durability(ArmorItem.Type.BOOTS.getDurability(37))
-    ));
-
     //Miner
 
     public static final DeferredHolder<Item, Item> MINER_HELMET = ITEMS.register("miner_helmet", () -> new MinerArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
@@ -2834,29 +2505,6 @@ public class HnSItemRegistry {
             .stacksTo(1)
             .rarity(HLRarities.EVOCATION_RARITY.getValue())
             .durability(ArmorItem.Type.BOOTS.getDurability(64))
-    ));
-
-    //Giorno Giovanna
-
-    public static final DeferredHolder<Item, Item> GIORNO_GIOVANNA_HELMET = ITEMS.register("giorno_giovanna_helmet", () -> new GiornoGiovannaArmorItem(ArmorItem.Type.HELMET, new Item.Properties()
-            .stacksTo(1)
-            .fireResistant()
-            .durability(ArmorItem.Type.HELMET.getDurability(37))
-    ));
-    public static final DeferredHolder<Item, Item> GIORNO_GIOVANNA_CHESTPLATE = ITEMS.register("giorno_giovanna_chestplate", () -> new GiornoGiovannaArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-            .stacksTo(1)
-            .fireResistant()
-            .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))
-    ));
-    public static final DeferredHolder<Item, Item> GIORNO_GIOVANNA_LEGGINGS = ITEMS.register("giorno_giovanna_leggings", () -> new GiornoGiovannaArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties()
-            .stacksTo(1)
-            .fireResistant()
-            .durability(ArmorItem.Type.LEGGINGS.getDurability(37))
-    ));
-    public static final DeferredHolder<Item, Item> GIORNO_GIOVANNA_BOOTS = ITEMS.register("giorno_giovanna_boots", () -> new GiornoGiovannaArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()
-            .stacksTo(1)
-            .fireResistant()
-            .durability(ArmorItem.Type.BOOTS.getDurability(37))
     ));
 
     //Mithril Battlemage

@@ -22,6 +22,22 @@ import java.util.function.Supplier;
 public class HnSExtendedWeaponsTiers implements Tier, IronsWeaponTier {
 
     /*
+    *** Arcane Vessels
+     */
+
+    public static HnSExtendedWeaponsTiers LIGHT_WEAPON = new HnSExtendedWeaponsTiers(
+            8064,
+            11,
+            -2.9F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.of(HnSItemRegistry.ZENALITE_INGOT.get()),
+            new AttributeContainer(AttributeRegistry.MAX_MANA, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, -1, AttributeModifier.Operation.ADD_VALUE)
+    );
+
+
+    /*
      *** Ice
      */
 

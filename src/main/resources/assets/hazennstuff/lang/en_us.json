@@ -1043,7 +1043,7 @@
   "entity.hazennstuff.lightning_strike": "Lightning Strike",
   "entity.hazennstuff.ningu_demonbane_petalblade": "Ningu Demonbane Petalblade",
   "entity.hazennstuff.ningu_demonbane_petalblade_shuriken": "Ningu Demonbane Petalblade",
-  "entity.hazennstuff.coruscation_discharge": "Coruscation Discharge",
+  "entity.hazennstuff.coruscated_discharge": "Coruscated Discharge",
 
   "entity.hazennstuff.thorn_chakram": "Thorn Chakram",
   "entity.hazennstuff.spider_lily": "Spider Lily",
@@ -1098,6 +1098,7 @@
   "spell.hazennstuff.energy_burst": "Energy Burst",
   "spell.hazennstuff.ionic_slash": "Ionic Slash",
   "spell.hazennstuff.dazzling_obliteration": "Dazzling Obliteration",
+  "spell.hazennstuff.coruscated_discharge": "Coruscated Discharge",
 
   "spell.hazennstuff.thorn_chakram": "Thorn Chakram",
   "spell.hazennstuff.counterspell_spider_lily": "Spider Lily Counterspell",
@@ -1154,8 +1155,8 @@
   "spell.hazennstuff.energy_burst.guide": "A Calamity Fables Reference ''Fire a burst of electrifying energy balls, leaving your enemies shocked.''",
   "spell.hazennstuff.ionic_slash.guide": "Unleash an electric slash that can smite down your foes. Such slash has the power and electricity to allow ignition for some artifacts... This spell resonates well with a dormant weapon...",
   "spell.hazennstuff.dazzling_obliteration.guide": "A Honkai Star Rail reference. Ninjutsu Secret Technique: Dazzling Obliteration!",
+  "spell.hazennstuff.coruscated_discharge.guide": "Fire an overcharged ball of lightning that counterspells in an area and deals heavy damage.",
 
-  "spell.hazennstuff.thorn_chakram.guide": "A Terraria Reference ''Throw the Thorn Chakram at your foes and watch as it ricochets from the walls and your enemies.''",
   "spell.hazennstuff.counterspell_spider_lily.guide": "Return your opponent's spells back to the soil of the earth.",
   "spell.hazennstuff.shard_sword.guide": "A Honkai Star-Rail Reference. May your blade pierce through your foes...",
   "spell.hazennstuff.death_sentence.guide": "A Honkai Star-Rail Reference ''That paradise may be unreachable for me... Savor it in my place''",
@@ -1168,27 +1169,21 @@
   "spell.hazennstuff.golden_shower.guide": "A Terraria Reference ''Sprays a shower of ichor. Decreases target's defense''",
 
   "spell.hazennstuff.spectral_axe.guide": "Throw a spectral axe, imbued with arcane magic, and strike down your foes.",
-  "spell.hazennstuff.parry.guide": "A ULTRAKILL Reference. ''Parry this you filthy casual. Parries a projectile with mana coursing through your left hand.'' ",
+  "spell.hazennstuff.parry.guide": "A ULTRAKILL Reference. ''Parry this you filthy casual.'' Parries a projectile with mana coursing through your left hand.",
 
   "spell.hazennstuff.syringe_barrage.guide": "A Calamity Fables Reference ''Landing all 3 shots infects the target. Infected enemies erupt into mana-rich mushrooms on death, spreading the infection to nearby monsters.''",
-  "spell.hazennstuff.call_forth_terraprisma.guide": "A Terraria Reference. Call forth Terraprismas that will attack and defend you. These fierce swords were the unrefined version of Summoned Swords once casted by the most pure entity in the Hallowed...",
-  "spell.hazennstuff.terraprismic_barrage.guide": "A Terraria Reference. Command a barrage of Terraprismas, homing in on where you command them to go and piercing through your enemies.",
-  "spell.hazennstuff.prismatic_shift.guide": "A Terraria Reference ''A low cool down teleporting spell that the prismatic elementals have mastered. Unfortunately, due to your untuned vessel, each teleport puts you into a state of chaos. You must wait for your body to stabilize or else your vessel will start to crack...''",
+  "spell.hazennstuff.prismatic_barrage.guide": "A Terraria Reference. Command a barrage of Terraprismas, homing in on where you command them to go and piercing through your enemies.",
 
-  "spell.hazennstuff.nights_edge_strike.guide": "A Terraria Reference ''Strike your foes with the strike of the Night's Edge.''",
   "spell.hazennstuff.umbrashift_barrage.guide": "Teleport and fire daggers on your victims",
   "spell.hazennstuff.shadow_reaver.guide": "The Shadow Reaver seeks to claim its victim and corrupt their spellcasting...",
   "spell.hazennstuff.arcane_cards.guide": "Fires a spread of cards at your foes.",
 
-  "spell.hazennstuff.shooting_star.guide": "A Terraria Reference. Fire 2 stars down on your opponent.",
   "spell.hazennstuff.cosmic_bolt.guide": "Fire a cosmic bolt that homes in on more enemies the higher the level.",
   "spell.hazennstuff.evercomet_barrage.guide": "Fire a barrage of comets that scale off of cosmic and ice spell power.",
   "spell.hazennstuff.moonkissed.guide": "Call upon the blessing of the moon.",
   "spell.hazennstuff.supernova.guide": "Your final stand... become a dying star and be engulfed by your spirit's black hole...",
 
   "spell.hazennstuff.hydrobullet.guide": "Fires a hydrobullet that deals splash damage.",
-  "spell.hazennstuff.water_bolt.guide": "A Terraria Reference. Fire a bouncing bolt of water",
-  "spell.hazennstuff.razorblade_typhoon.guide": "A Terraria Reference. A typhoon that shreds through your foes.",
   "spell.hazennstuff.horn_shell.guide": "Fire a piercing horn shell.",
   "spell.hazennstuff.trident_jetstream.guide": "Fire a barrage of tridents.",
 

@@ -1,9 +1,7 @@
-package net.hazen.hazennstuff.HnSUtilities;
+package net.hazen.hazennstuff.Datagen;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
-import net.hazen.hazennstuff.Datagen.HnSEnchantmentTags;
-import net.hazen.hazennstuff.Datagen.HnSTags;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazentouvelib.Datagen.HLTags;
 import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
@@ -66,8 +64,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -86,8 +83,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -106,8 +102,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -126,8 +121,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -146,8 +140,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -166,8 +159,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -186,8 +178,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -206,8 +197,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -226,8 +216,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -246,8 +235,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -266,8 +254,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -286,8 +273,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -306,8 +292,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -326,8 +311,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -346,8 +330,7 @@ public class HnSEnchantments {
                         3,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        3,
-                        EquipmentSlotGroup.ANY))
+                        3))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
@@ -367,8 +350,7 @@ public class HnSEnchantments {
                         4,
                         Enchantment.dynamicCost(5, 7),
                         Enchantment.dynamicCost(25, 7),
-                        2,
-                        EquipmentSlotGroup.ANY))
+                        2))
                 .exclusiveWith(enchantments.getOrThrow(HnSEnchantmentTags.SPELLBOOK_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,

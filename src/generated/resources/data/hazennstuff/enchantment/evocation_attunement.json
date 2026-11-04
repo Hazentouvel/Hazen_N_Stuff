@@ -27,9 +27,7 @@
     "base": 5,
     "per_level_above_first": 7
   },
-  "slots": [
-    "any"
-  ],
+  "slots": [],
   "supported_items": "#hazentouvelib:enchanted_spellbook",
   "weight": 1
 }

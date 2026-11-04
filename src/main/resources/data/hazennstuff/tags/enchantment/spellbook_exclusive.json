@@ -1,0 +1,20 @@
+{
+  "values": [
+    "hazennstuff:arcane_affinity",
+    "hazennstuff:blood_attunement",
+    "hazennstuff:cosmic_attunement",
+    "hazennstuff:eldritch_attunement",
+    "hazennstuff:ender_attunement",
+    "hazennstuff:evocation_attunement",
+    "hazennstuff:fire_attunement",
+    "hazennstuff:holy_attunement",
+    "hazennstuff:hydro_attunement",
+    "hazennstuff:ice_attunement",
+    "hazennstuff:lightning_attunement",
+    "hazennstuff:nature_attunement",
+    "hazennstuff:occult_attunement",
+    "hazennstuff:radiance_attunement",
+    "hazennstuff:shadow_attunement",
+    "hazennstuff:technomancy_attunement"
+  ]
+}

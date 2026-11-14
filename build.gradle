@@ -171,7 +171,7 @@ dependencies {
     implementation "curse.maven:ace_utils-1299492:9300944"
 
     //HazentouveLib
-    implementation "curse.maven:hazentouvelib-1528722:8977077"
+    implementation "curse.maven:hazentouvelib-1528722:9615682"
 
     //AzureLib
     implementation "curse.maven:azurelib-817423:9107208"
@@ -213,6 +213,7 @@ dependencies {
     compileOnly "curse.maven:artifex-1515507:9396871"
 
     // Rogues & Warriors ***********************************************************************************************
+    /*
     localRuntime "curse.maven:rogues_and_warriors-1048409:8982142"
     compileOnly "curse.maven:rogues_and_warriors-1048409:8982142"
 
@@ -230,6 +231,7 @@ dependencies {
 
     localRuntime "curse.maven:cloth_config-348521:5729127"
     compileOnly "curse.maven:cloth_config-348521:5729127"
+     */
 
     //Ars Nouveau
     localRuntime "curse.maven:ars_nouveau-401955:6827634"

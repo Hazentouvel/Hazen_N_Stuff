@@ -110,7 +110,7 @@ public class ShadowReaver extends AbstractMagicProjectile implements GeoEntity {
 
             DamageSources.applyDamage(target, damage, HnSSpellRegistries.SHADOW_REAVER.get().getDamageSource(this, owner));
 
-            target.addEffect(new MobEffectInstance(HLEffects.HEXED, 100, 0));
+            target.addEffect(new MobEffectInstance(HnSEffects.CURSED, 100, 0));
         }
 
         impactParticles(center.x, center.y, center.z);

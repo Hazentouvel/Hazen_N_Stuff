@@ -88,4 +88,8 @@ public class Diamond extends AbstractMagicProjectile implements GeoEntity {
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
     }
+
+    public void setDamage(float damage) {
+        this.damage = damage * 1.5f;
+    }
 }

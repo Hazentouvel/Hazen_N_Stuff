@@ -220,6 +220,9 @@ public class HnSEffects {
     public static final DeferredHolder<MobEffect, MobEffect> INFESTED = MOB_EFFECTS.register("infested",
             () -> new InfestedEffect(MobEffectCategory.HARMFUL, 0x2E2EFF));
 
+    public static final DeferredHolder<MobEffect, MobEffect> CURSED = MOB_EFFECTS.register("cursed",
+            () -> new CursedEffect(MobEffectCategory.HARMFUL, 0x2E2EFF));
+
     public static final DeferredHolder<MobEffect, MobEffect> CHAOS_STATE = MOB_EFFECTS.register("chaos_state",
             () -> new GenericHazenEffect(MobEffectCategory.HARMFUL, 0x2E2EFF));
 

@@ -198,7 +198,7 @@ public class HnSSounds {
     public static final Holder<SoundEvent> CALAMITAS_EQUIP = registerSoundEvent("calamitas_equip");
 
 
-    /***
+    /*
      * Block Sounds
      */
 

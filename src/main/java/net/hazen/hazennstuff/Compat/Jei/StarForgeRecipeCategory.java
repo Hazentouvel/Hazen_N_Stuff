@@ -116,7 +116,7 @@ public class StarForgeRecipeCategory implements IRecipeCategory<StarForgeRecipeJ
 
         Font font = Minecraft.getInstance().font;
         String time = String.format("%.1fs", recipe.smeltTime() / 20.0f);
-        guiGraphics.drawString(font, time, WIDTH - 8 - font.width(time), 34, 0xFFE8C87A, false);
+        guiGraphics.drawString(font, time, WIDTH - 8 - font.width(time), 68, 0xFFE8C87A, false);
     }
 
     @Override

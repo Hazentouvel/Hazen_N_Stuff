@@ -43,13 +43,13 @@ public class SoulflameBoltSpell extends AbstractSpell {
                 .setMinRarity(SpellRarity.RARE)
                 .setSchoolResource(SchoolRegistry.FIRE_RESOURCE)
                 .setMaxLevel(10)
-                .setCooldownSeconds((double)1.0F)
+                .setCooldownSeconds((double)2.0F)
                 .build();
-        this.manaCostPerLevel = 2;
+        this.manaCostPerLevel = 4;
         this.baseSpellPower = 12;
         this.spellPowerPerLevel = 1;
         this.castTime = 0;
-        this.baseManaCost = 10;
+        this.baseManaCost = 40;
     }
 
     public CastType getCastType() {
@@ -78,6 +78,6 @@ public class SoulflameBoltSpell extends AbstractSpell {
     }
 
     private float getDamage(int spellLevel, LivingEntity entity) {
-        return 5.0F + (this.getSpellPower(spellLevel, entity) * 0.4F);
+        return 4.0F + (this.getSpellPower(spellLevel, entity) * 0.4F);
     }
 }

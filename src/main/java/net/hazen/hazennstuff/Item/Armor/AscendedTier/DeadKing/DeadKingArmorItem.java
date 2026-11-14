@@ -12,6 +12,7 @@ import net.hazen.hazennstuff.HnSUtilities.Armor.HnSArmorMaterials;
 import net.hazen.hazennstuff.HnSUtilities.Armor.HnSGeckolibArmorItem;
 import net.hazen.hazennstuff.HnSUtilities.Armor.ImbuableGeckolibHnSArmorItem;
 import net.hazen.hazennstuff.Registries.HnSEffects;
+import net.hazen.hazentouvelib.Registries.HLAttributeRegistry;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -31,7 +32,8 @@ import java.util.List;
 
 public class DeadKingArmorItem extends ImbuableGeckolibHnSArmorItem implements IDisableJacket, IDisableHat {
     public DeadKingArmorItem(Type type, Properties settings) {
-        super(HnSArmorMaterials.PARAGON_MATERIAL, type, settings, paragonTier(
+        super(HnSArmorMaterials.PARAGON_MATERIAL, type, settings, paragonTierDual(
+                AttributeRegistry.BLOOD_SPELL_POWER,
                 AttributeRegistry.SUMMON_DAMAGE
         ));
     }

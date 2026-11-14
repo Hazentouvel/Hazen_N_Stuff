@@ -80,7 +80,7 @@ public class ArcaneCardsSpell extends AbstractSpell {
         final int maxLevel = 10;
         final int extraMax = 2;
         int extra = Math.round((float)(Math.max(1, Math.min(spellLevel, maxLevel)) - 1) * extraMax / (float)(maxLevel - 1));
-        int cardCount = 3 + extra * 2;
+        int cardCount = 1 + extra * 2;
 
         // Spread configuration
         float totalSpread = 30f;

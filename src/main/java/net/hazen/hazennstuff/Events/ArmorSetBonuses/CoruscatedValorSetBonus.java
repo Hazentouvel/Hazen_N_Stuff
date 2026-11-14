@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Setup;
+package net.hazen.hazennstuff.Events.ArmorSetBonuses;
 
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Item.Armor.AscendedTier.CoruscatedValor.CoruscatedValorArmorItem;
@@ -10,7 +10,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 
 @EventBusSubscriber(modid = HazenNStuff.MOD_ID)
-public class HnSSetBonuses {
+public class CoruscatedValorSetBonus {
     private static boolean isCoruscatedValor(LivingEntity entity) {
         return entity.getItemBySlot(ArmorItem.Type.HELMET.getSlot()).getItem() instanceof CoruscatedValorArmorItem &&
                 entity.getItemBySlot(ArmorItem.Type.CHESTPLATE.getSlot()).getItem() instanceof CoruscatedValorArmorItem &&

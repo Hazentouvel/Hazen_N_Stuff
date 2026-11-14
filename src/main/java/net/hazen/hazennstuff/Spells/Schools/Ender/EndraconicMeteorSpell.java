@@ -9,14 +9,17 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import net.hazen.hazennstuff.Entity.Spells.Ender.EndraconicMeteor.EndraconicMeteor;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Registries.HnSSounds;
+import net.hazen.hazentouvelib.Spells.HLSpellDamageSource;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +56,7 @@ public class EndraconicMeteorSpell extends AbstractSpell {
         this.manaCostPerLevel = 15;
         this.baseSpellPower = 1;
         this.spellPowerPerLevel = 1;
-        this.castTime = 50;
+        this.castTime = 100;
         this.baseManaCost = 60;
     }
 
@@ -84,11 +87,13 @@ public class EndraconicMeteorSpell extends AbstractSpell {
         return Optional.of(HnSSounds.ENDRACONIC_METEOR_CHARGING.get());
     }
 
+    public Optional<SoundEvent> getCastFinishSound() {
+        return Optional.empty();
+    }
+
     @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         if (world.isClientSide) return;
-
-        Vec3 look = entity.getLookAngle().normalize();
 
         int count = 3;
         double arcAngle = Math.toRadians(45);
@@ -135,6 +140,9 @@ public class EndraconicMeteorSpell extends AbstractSpell {
         super.onCast(world, spellLevel, entity, castSource, playerMagicData);
     }
 
+    public HLSpellDamageSource getDamageSource(@Nullable Entity projectile, Entity attacker) {
+        return HLSpellDamageSource.source(projectile == null ? attacker : projectile, attacker, this).setEnderFireTicks(60);
+    }
 
     public float getDamage(int spellLevel, LivingEntity caster) {
         return 5.0F + 5.0F * this.getSpellPower(spellLevel, caster);

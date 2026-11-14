@@ -88,4 +88,8 @@ public class Club extends AbstractMagicProjectile implements GeoEntity {
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
     }
+
+    public void setDamage(float damage) {
+        this.damage = damage * 0.5f;
+    }
 }

@@ -1,0 +1,69 @@
+{
+  "type": "hazennstuff:radiant_altar",
+  "main": {
+    "item": "hazennstuff:blazeborne_helmet"
+  },
+  "secondary": {
+    "ingredient": {
+      "item": "hazennstuff:catalyst"
+    },
+    "count": 1
+  },
+  "materials": [
+    {
+      "ingredient": {
+        "item": "minecraft:blaze_rod"
+      },
+      "count": 12
+    },
+    {
+      "ingredient": {
+        "item": "irons_spellbooks:fire_rune"
+      },
+      "count": 4
+    },
+    {
+      "ingredient": {
+        "item": "irons_spellbooks:pyrium_ingot"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "irons_spellbooks:mithril_weave"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "hazennstuff:cloth_of_the_flamebearer"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "hazennstuff:charred_bones"
+      },
+      "count": 16
+    },
+    {
+      "ingredient": {
+        "item": "hazennstuff:solar_core"
+      },
+      "count": 16
+    },
+    {
+      "ingredient": {
+        "item": "hazennstuff:zenalite_ingot"
+      },
+      "count": 4
+    }
+  ],
+  "result": {
+    "id": "hazennstuff:garments_of_the_first_flamebearer_helmet",
+    "count": 1
+  },
+  "mana": 350,
+  "craft_time": 400,
+  "keep_components": true
+}

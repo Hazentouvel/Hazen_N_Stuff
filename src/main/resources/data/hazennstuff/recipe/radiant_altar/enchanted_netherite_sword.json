@@ -1,0 +1,27 @@
+{
+  "type": "hazennstuff:radiant_altar",
+  "main": {
+    "item": "minecraft:diamond_sword"
+  },
+  "materials": [
+    {
+      "ingredient": {
+        "item": "minecraft:netherite_ingot"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "hazennstuff:stardust"
+      },
+      "count": 8
+    }
+  ],
+  "result": {
+    "id": "minecraft:netherite_sword",
+    "count": 1
+  },
+  "mana": 250,
+  "craft_time": 200,
+  "keep_components": true
+}

@@ -1,6 +1,7 @@
 package net.hazen.hazennstuff.Registries;
 
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Item.Block.RadiantAltar.RadiantAltarRecipe;
 import net.hazen.hazennstuff.Item.Block.Starforge.StarForgeRecipe;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -26,6 +27,17 @@ public class HnSRecipes {
 
     public static final DeferredHolder<RecipeType<?>, RecipeType<StarForgeRecipe>> STARFORGE_TYPE =
             RECIPE_TYPES.register("starforge", registry -> new RecipeType<StarForgeRecipe>() {
+                @Override
+                public String toString() {
+                    return registry.toString();
+                }
+            });
+
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<RadiantAltarRecipe>> RADIANT_ALTAR_SERIALIZER =
+            RECIPE_SERIALIZERS.register("radiant_altar", RadiantAltarRecipe.Serializer::new);
+
+    public static final DeferredHolder<RecipeType<?>, RecipeType<RadiantAltarRecipe>> RADIANT_ALTAR_TYPE =
+            RECIPE_TYPES.register("radiant_altar", registry -> new RecipeType<RadiantAltarRecipe>() {
                 @Override
                 public String toString() {
                     return registry.toString();

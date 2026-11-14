@@ -1,0 +1,44 @@
+{
+  "type": "hazennstuff:radiant_altar",
+  "main": {
+    "item": "hazennstuff:zenalite_ingot"
+  },
+  "secondary": {
+    "ingredient": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "count": 1
+  },
+  "materials": [
+    {
+      "ingredient": {
+        "item": "hazennstuff:nether_star_fragment"
+      },
+      "count": 3
+    },
+    {
+      "ingredient": {
+        "item": "hazennstuff:stardust"
+      },
+      "count": 16
+    },
+    {
+      "ingredient": {
+        "item": "irons_spellbooks:arcane_essence"
+      },
+      "count": 8
+    },
+    {
+      "ingredient": {
+        "tag": "c:gems/diamond"
+      },
+      "count": 2
+    }
+  ],
+  "result": {
+    "id": "minecraft:nether_star",
+    "count": 1
+  },
+  "mana": 400,
+  "craft_time": 300
+}

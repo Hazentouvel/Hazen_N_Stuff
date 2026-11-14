@@ -1,5 +1,6 @@
 package net.hazen.hazennstuff.Item.Block;
 
+import net.hazen.hazennstuff.Item.Block.RadiantAltar.RadiantAltarBlockEntity;
 import net.hazen.hazennstuff.Item.Block.Starforge.StarForgeBlockEntity;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose1.HazelStatueBlockEntity;
 import net.hazen.hazennstuff.HazenNStuff;
@@ -36,6 +37,10 @@ public class HnSBlockEntities {
     public static final Supplier<BlockEntityType<StarForgeBlockEntity>> STARFORGE =
             BLOCK_ENTITIES.register("starforge", () -> BlockEntityType.Builder.of(
                     StarForgeBlockEntity::new, HnSBlocks.STARFORGE.get()).build(null));
+
+    public static final Supplier<BlockEntityType<RadiantAltarBlockEntity>> RADIANT_ALTAR =
+            BLOCK_ENTITIES.register("radiant_altar", () -> BlockEntityType.Builder.of(
+                    RadiantAltarBlockEntity::new, HnSBlocks.RADIANT_ALTAR.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

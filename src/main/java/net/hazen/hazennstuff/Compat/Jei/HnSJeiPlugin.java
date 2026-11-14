@@ -2,12 +2,14 @@ package net.hazen.hazennstuff.Compat.Jei;
 
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
+import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.minecraft.client.Minecraft;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
@@ -22,7 +24,8 @@ public class HnSJeiPlugin implements IModPlugin {
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
         registration.addRecipeCategories(
-                new StarForgeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+                new StarForgeRecipeCategory(registration.getJeiHelpers().getGuiHelper()),
+                new RadiantAltarRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -30,6 +33,9 @@ public class HnSJeiPlugin implements IModPlugin {
         registration.addRecipes(
                 StarForgeRecipeCategory.RECIPE_TYPE,
                 StarForgeRecipeJei.getRecipes(Minecraft.getInstance().level));
+        registration.addRecipes(
+                RadiantAltarRecipeCategory.RECIPE_TYPE,
+                RadiantAltarRecipeCategory.getRecipes(Minecraft.getInstance().level));
     }
 
     @Override

@@ -42,6 +42,7 @@ import net.hazen.hazennstuff.Item.Staves.Generic.InsaniaAeternus.InsaniaAeternus
 import net.hazen.hazennstuff.Item.Staves.Special.SoulcallingScepter.SoulcallingScepterRenderer;
 import net.hazen.hazennstuff.Item.Weapons.Generic.HammerOfJustice.HammerOfJusticeRenderer;
 import net.hazen.hazennstuff.Registries.*;
+import net.hazen.hazennstuff.Screens.RadiantAltar.RadiantAltarScreen;
 import net.hazen.hazennstuff.Screens.Starforge.StarForgeScreen;
 import net.hazen.hazennstuff.Spells.HnSSpellRegistries;
 import net.hazen.hazentouvelib.Items.Curios.GenericCurioRenderer;
@@ -192,6 +193,7 @@ public class HazenNStuff
         @SubscribeEvent
         public static void onRegisterScreens(RegisterMenuScreensEvent event) {
             event.register(HnSMenus.STARFORGE.get(), StarForgeScreen::new);
+            event.register(HnSMenus.RADIANT_ALTAR.get(), RadiantAltarScreen::new);
         }
 
         @SubscribeEvent
@@ -478,6 +480,9 @@ public class HazenNStuff
     public void registerCapabilities(RegisterCapabilitiesEvent event) {
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK,
                 HnSBlockEntities.STARFORGE.get(),
+                (be, side) -> be.getItemHandler(side));
+        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK,
+                HnSBlockEntities.RADIANT_ALTAR.get(),
                 (be, side) -> be.getItemHandler(side));
     }
 

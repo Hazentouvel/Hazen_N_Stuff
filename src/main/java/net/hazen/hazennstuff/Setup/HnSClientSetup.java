@@ -31,6 +31,7 @@ import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowDagger.ShadowDaggerRende
 import net.hazen.hazennstuff.Entity.Spells.Shadow.ShadowReaver.ShadowReaverRenderer;
 import net.hazen.hazennstuff.HazenNStuff;
 import net.hazen.hazennstuff.HnSUtilities.Tooltips.HnSSpellTooltip;
+import net.hazen.hazennstuff.Item.Block.RadiantAltar.RadiantAltarBlockRenderer;
 import net.hazen.hazennstuff.Item.Block.Starforge.StarForgeBlockRenderer;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose1.HazelStatueRenderer;
 import net.hazen.hazennstuff.Item.Block.HnSBlockEntities;
@@ -62,6 +63,7 @@ import net.hazen.hazennstuff.Particle.SlashParticles.Spells.EnderThrust.EnderThr
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.ScorchingSlash.ScorchingSlash;
 import net.hazen.hazennstuff.Particle.SlashParticles.Spells.SoulFlameStrike.SoulFlameStrike;
 import net.hazen.hazennstuff.Particle.SoulParticle;
+import net.hazen.hazennstuff.Particle.RadiantAltarStarParticle;
 import net.hazen.hazennstuff.Particle.StarForgeStarParticle;
 import net.hazen.hazennstuff.Registries.HnSEntityRegistry;
 import net.hazen.hazennstuff.Registries.HnSParticleRegistry;
@@ -165,6 +167,7 @@ public class HnSClientSetup {
         event.registerBlockEntityRenderer(HnSBlockEntities.HAZEL_STATUE_POSE_2.get(), HazelStatueRendererPose2::new);
         event.registerBlockEntityRenderer(HnSBlockEntities.HAZEL_STATUE_POSE_3.get(), HazelStatueRendererPose3::new);
         event.registerBlockEntityRenderer(HnSBlockEntities.STARFORGE.get(), StarForgeBlockRenderer::new);
+        event.registerBlockEntityRenderer(HnSBlockEntities.RADIANT_ALTAR.get(), RadiantAltarBlockRenderer::new);
     }
 
     @SubscribeEvent
@@ -192,6 +195,7 @@ public class HnSClientSetup {
         event.registerSpriteSet(HnSParticleRegistry.SCORCHING_SLASH.get(), ScorchingSlash.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.SOUL_FLAMING_STRIKE_PARTICLE.get(), SoulFlameStrike.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.STARFORGE_STAR.get(), StarForgeStarParticle.Provider::new);
+        event.registerSpriteSet(HnSParticleRegistry.RADIANT_ALTAR_STAR.get(), RadiantAltarStarParticle.Provider::new);
         event.registerSpriteSet(HnSParticleRegistry.SOUL_PARTICLE.get(), SoulParticle.Provider::new);
     }
 

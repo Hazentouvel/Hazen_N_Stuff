@@ -23,6 +23,8 @@ public class HnSBlockTagProvider extends BlockTagsProvider {
 
         //Mining Tags
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(HnSBlocks.RADIANT_ALTAR.get())
+                .add(HnSBlocks.RADIANT_ALTAR_PART.get())
                 .add(HnSBlocks.ZENALITE_ABYSSLATE_ORE.get())
                 .add(HnSBlocks.ZENALITE_DEEPSLATE_ORE.get())
                 .add(HnSBlocks.ZENALITE_STONE_ORE.get())

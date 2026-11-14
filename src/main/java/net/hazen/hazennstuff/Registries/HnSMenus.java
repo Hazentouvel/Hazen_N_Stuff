@@ -1,6 +1,7 @@
 package net.hazen.hazennstuff.Registries;
 
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Screens.RadiantAltar.RadiantAltarMenu;
 import net.hazen.hazennstuff.Screens.Starforge.StarForgeMenu;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.inventory.MenuType;
@@ -16,6 +17,9 @@ public class HnSMenus {
 
     public static final Supplier<MenuType<StarForgeMenu>> STARFORGE =
             MENUS.register("starforge", () -> IMenuTypeExtension.create(StarForgeMenu::new));
+
+    public static final Supplier<MenuType<RadiantAltarMenu>> RADIANT_ALTAR =
+            MENUS.register("radiant_altar", () -> IMenuTypeExtension.create(RadiantAltarMenu::new));
 
     public static void register(IEventBus eventBus) {
         MENUS.register(eventBus);

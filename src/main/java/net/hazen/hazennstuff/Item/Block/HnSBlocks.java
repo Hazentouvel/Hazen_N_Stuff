@@ -1,5 +1,7 @@
 package net.hazen.hazennstuff.Item.Block;
 
+import net.hazen.hazennstuff.Item.Block.RadiantAltar.RadiantAltarBlock;
+import net.hazen.hazennstuff.Item.Block.RadiantAltar.RadiantAltarPartBlock;
 import net.hazen.hazennstuff.Item.Block.Starforge.StarForgeBlock;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose1.HazelStatue;
 import net.hazen.hazennstuff.Datagen.Worldgen.Biomes.Trees.HnSTreeGrower;
@@ -634,6 +636,27 @@ public class HnSBlocks {
                         .requiresCorrectToolForDrops()
                         .sound(SoundType.METAL)
                         .noOcclusion()
+                        .pushReaction(PushReaction.BLOCK)
+                ));
+
+        public static final DeferredBlock<Block> RADIANT_ALTAR = registerBlock("radiant_altar",
+                () -> new RadiantAltarBlock(BlockBehaviour
+                        .Properties.of()
+                        .strength(4f)
+                        .noLootTable()
+                        .sound(SoundType.STONE)
+                        .noOcclusion()
+                        .lightLevel(state -> 7)
+                        .pushReaction(PushReaction.BLOCK)
+                ));
+
+        public static final DeferredBlock<Block> RADIANT_ALTAR_PART = registerBlock("radiant_altar_part",
+                () -> new RadiantAltarPartBlock(BlockBehaviour
+                        .Properties.of()
+                        .strength(4f)
+                        .sound(SoundType.STONE)
+                        .noOcclusion()
+                        .noLootTable()
                         .pushReaction(PushReaction.BLOCK)
                 ));
 

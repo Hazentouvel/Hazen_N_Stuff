@@ -10,9 +10,11 @@ import java.util.List;
 import java.util.function.Consumer;
 
 /**
- * Geometry of the 3x3x3 altar.
+ * Geometry of the 3x2x3 altar.
  */
 public final class RadiantAltarShapes {
+
+    public static final int HEIGHT = 2;
 
     // Model cubes in pixels, relative to the core block's corner (model x/z + 8)
     private static final List<double[]> MODEL_BOXES = new ArrayList<>();
@@ -43,12 +45,12 @@ public final class RadiantAltarShapes {
         MODEL_BOXES.add(new double[]{x0 + 8, y0, z0 + 8, x1 + 8, y1, z1 + 8});
     }
 
-    // Indexed [x][y][z] with x,z in 0..2 (1 = centre column) and y in 0..2 (0 = bottom)
-    private static final VoxelShape[][][] SHAPES = new VoxelShape[3][3][3];
+    // Indexed [x][y][z] with x,z in 0..2 (1 = centre column) and y in 0..1 (0 = bottom)
+    private static final VoxelShape[][][] SHAPES = new VoxelShape[3][HEIGHT][3];
 
     static {
         for (int x = 0; x < 3; x++) {
-            for (int y = 0; y < 3; y++) {
+            for (int y = 0; y < HEIGHT; y++) {
                 for (int z = 0; z < 3; z++) {
                     SHAPES[x][y][z] = build((x - 1) * 16, y * 16, (z - 1) * 16);
                 }
@@ -78,7 +80,7 @@ public final class RadiantAltarShapes {
 
     public static void forEachPart(BlockPos core, PartVisitor visitor) {
         for (int x = 0; x < 3; x++) {
-            for (int y = 0; y < 3; y++) {
+            for (int y = 0; y < HEIGHT; y++) {
                 for (int z = 0; z < 3; z++) {
                     if (isCore(x, y, z)) continue;
                     visitor.visit(x, y, z, core.offset(x - 1, y, z - 1));

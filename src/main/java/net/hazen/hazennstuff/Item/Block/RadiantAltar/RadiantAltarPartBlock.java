@@ -9,7 +9,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -18,14 +17,10 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/**
- * An invisible filler cell of the Radiant Altar.
- */
 public class RadiantAltarPartBlock extends Block {
 
-    // Offset inside the 3x3x3: x and z are 0..2 with 1 the centre column, y is 0..2 from the bottom
     public static final IntegerProperty OX = IntegerProperty.create("ox", 0, 2);
-    public static final IntegerProperty OY = IntegerProperty.create("oy", 0, 2);
+    public static final IntegerProperty OY = IntegerProperty.create("oy", 0, RadiantAltarShapes.HEIGHT - 1);
     public static final IntegerProperty OZ = IntegerProperty.create("oz", 0, 2);
 
     public RadiantAltarPartBlock(Properties properties) {
@@ -75,35 +70,35 @@ public class RadiantAltarPartBlock extends Block {
         return coreState.useWithoutItem(level, player, hit.withPosition(core));
     }
 
-    // Creative or wrong tool: take the core down without drops before this cell goes
+    @Override
+    protected float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos) {
+        return original(state).getDestroyProgress(player, level, pos);
+    }
+
+    private static BlockState original(BlockState state) {
+        return RadiantAltarStructure.originalState(state.getValue(OX), state.getValue(OY), state.getValue(OZ));
+    }
+
     @Override
     public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
-        BlockPos core = corePos(pos, state);
-        if (!level.isClientSide && isCore(level, core)) {
-            BlockState coreState = level.getBlockState(core);
-            if (player.isCreative() || !player.hasCorrectToolForDrops(coreState)) {
-                level.setBlock(core, Blocks.AIR.defaultBlockState(), Block.UPDATE_ALL | Block.UPDATE_SUPPRESS_DROPS);
-            } else {
-                level.destroyBlock(core, true, player);
-            }
+        if (!level.isClientSide) {
+            RadiantAltarStructure.disassemble(level, corePos(pos, state), pos);
+            RadiantAltarStructure.dropOriginal(level, pos, state.getValue(OX), state.getValue(OY), state.getValue(OZ), player);
         }
         return super.playerWillDestroy(level, pos, state, player);
     }
 
-    // Anything else that removes a cell (explosions, commands) breaks the altar and drops it
     @Override
     protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-        if (!state.is(newState.getBlock()) && !level.isClientSide) {
-            BlockPos core = corePos(pos, state);
-            if (isCore(level, core)) {
-                level.destroyBlock(core, true);
-            }
+        if (!state.is(newState.getBlock()) && !level.isClientSide && isCore(level, corePos(pos, state))) {
+            RadiantAltarStructure.disassemble(level, corePos(pos, state), pos);
         }
         super.onRemove(state, level, pos, newState, movedByPiston);
     }
 
     @Override
     public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
-        return new ItemStack(HnSBlocks.RADIANT_ALTAR.get());
+        BlockState original = original(state);
+        return original.isAir() ? ItemStack.EMPTY : new ItemStack(original.getBlock());
     }
 }

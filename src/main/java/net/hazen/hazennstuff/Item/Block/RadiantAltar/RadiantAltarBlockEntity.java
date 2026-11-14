@@ -116,6 +116,8 @@ public class RadiantAltarBlockEntity extends GeckolibBlockEntity implements GeoB
 
     private List<ItemStack> orbitItems = new ArrayList<>();
 
+    private boolean disassembling = false;
+
     // Client-only
     private int craftingTicks = 0;
     private int starTimer = 0;
@@ -145,6 +147,14 @@ public class RadiantAltarBlockEntity extends GeckolibBlockEntity implements GeoB
             return 3;
         }
     };
+
+    public boolean isDisassembling() {
+        return disassembling;
+    }
+
+    public void setDisassembling(boolean disassembling) {
+        this.disassembling = disassembling;
+    }
 
     public RadiantAltarBlockEntity(BlockPos pos, BlockState state) {
         super(HnSBlockEntities.RADIANT_ALTAR.get(), pos, state);
@@ -374,7 +384,7 @@ public class RadiantAltarBlockEntity extends GeckolibBlockEntity implements GeoB
 
         for (ItemStack stack : drops) {
             while (!stack.isEmpty()) {
-                Block.popResource(level, worldPosition.above(), stack.split(stack.getMaxStackSize()));
+                Block.popResource(level, worldPosition.above(RadiantAltarShapes.HEIGHT), stack.split(stack.getMaxStackSize()));
             }
         }
     }

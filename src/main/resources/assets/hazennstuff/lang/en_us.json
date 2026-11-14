@@ -50,6 +50,7 @@
   "gui.hazennstuff.radiant_altar.problem.no_secondary": "Missing the secondary item",
   "gui.hazennstuff.radiant_altar.problem.no_materials": "Missing materials",
   "gui.hazennstuff.radiant_altar.problem.no_mana": "Not enough mana",
+  "message.hazennstuff.radiant_altar.incomplete": "The Radiant Altar structure is incomplete",
 
   "tooltip.hazennstuff.atlas_lore": "Sorrowful be the heart...",
 

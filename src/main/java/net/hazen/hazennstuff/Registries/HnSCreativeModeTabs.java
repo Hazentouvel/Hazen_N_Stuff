@@ -243,7 +243,6 @@ public class HnSCreativeModeTabs {
                         *** Work Stations
                          */
                         output.accept(HnSItemRegistry.STARFORGE.get());
-                        output.accept(HnSItemRegistry.RADIANT_ALTAR.get());
 
                         /*
                         *** Statues

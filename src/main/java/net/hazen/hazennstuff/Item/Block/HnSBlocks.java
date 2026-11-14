@@ -639,12 +639,11 @@ public class HnSBlocks {
                         .pushReaction(PushReaction.BLOCK)
                 ));
 
-        // 3x3x3 multiblock: the core owns the block entity, the parts fill the rest of the space.
         public static final DeferredBlock<Block> RADIANT_ALTAR = registerBlock("radiant_altar",
                 () -> new RadiantAltarBlock(BlockBehaviour
                         .Properties.of()
                         .strength(4f)
-                        .requiresCorrectToolForDrops()
+                        .noLootTable()
                         .sound(SoundType.STONE)
                         .noOcclusion()
                         .lightLevel(state -> 7)
@@ -655,7 +654,6 @@ public class HnSBlocks {
                 () -> new RadiantAltarPartBlock(BlockBehaviour
                         .Properties.of()
                         .strength(4f)
-                        .requiresCorrectToolForDrops()
                         .sound(SoundType.STONE)
                         .noOcclusion()
                         .noLootTable()

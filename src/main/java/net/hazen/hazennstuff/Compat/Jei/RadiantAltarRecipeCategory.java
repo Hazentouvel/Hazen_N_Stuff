@@ -52,7 +52,7 @@ public class RadiantAltarRecipeCategory implements IRecipeCategory<RadiantAltarR
         this.slot = helper.getSlotDrawable();
         this.arrow = helper.getRecipeArrow();
         this.star = helper.drawableBuilder(GUI, 339, 1, 14, 14).setTextureSize(512, 512).build();
-        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(HnSBlocks.RADIANT_ALTAR.get()));
+        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(HnSBlocks.ZENALITE_BLOCK.get()));
     }
 
     public static List<RadiantAltarRecipe> getRecipes(Level level) {

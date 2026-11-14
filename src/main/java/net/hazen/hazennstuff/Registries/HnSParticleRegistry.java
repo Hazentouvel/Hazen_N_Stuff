@@ -65,6 +65,10 @@ public class HnSParticleRegistry {
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> STARFORGE_STAR =
             PARTICLE_TYPES.register("starforge_star", () -> new SimpleParticleType(true));
 
+    //Radiant Altar Star
+    public static final DeferredHolder<ParticleType<?>, SimpleParticleType> RADIANT_ALTAR_STAR =
+            PARTICLE_TYPES.register("radiant_altar_star", () -> new SimpleParticleType(true));
+
     // Leaf Particle
     public static final Supplier<ParticleType<LeafParticleOptions>> LEAF_PARTICLE =
             PARTICLE_TYPES.register("leaf_particle", () -> new ParticleType<LeafParticleOptions>(true) {

@@ -1,0 +1,26 @@
+{
+  "type": "hazennstuff:radiant_altar",
+  "main": {
+    "item": "hazennstuff:zenalite_ingot"
+  },
+  "materials": [
+    {
+      "ingredient": {
+        "item": "hazennstuff:stardust"
+      },
+      "count": 4
+    },
+    {
+      "ingredient": {
+        "item": "irons_spellbooks:arcane_essence"
+      },
+      "count": 2
+    }
+  ],
+  "result": {
+    "id": "hazennstuff:starkissed_zenalite",
+    "count": 1
+  },
+  "mana": 100,
+  "craft_time": 160
+}

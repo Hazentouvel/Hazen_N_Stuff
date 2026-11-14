@@ -22,7 +22,8 @@ public class HnSJeiPlugin implements IModPlugin {
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
         registration.addRecipeCategories(
-                new StarForgeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+                new StarForgeRecipeCategory(registration.getJeiHelpers().getGuiHelper()),
+                new RadiantAltarRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -30,6 +31,9 @@ public class HnSJeiPlugin implements IModPlugin {
         registration.addRecipes(
                 StarForgeRecipeCategory.RECIPE_TYPE,
                 StarForgeRecipeJei.getRecipes(Minecraft.getInstance().level));
+        registration.addRecipes(
+                RadiantAltarRecipeCategory.RECIPE_TYPE,
+                RadiantAltarRecipeCategory.getRecipes(Minecraft.getInstance().level));
     }
 
     @Override
@@ -37,5 +41,8 @@ public class HnSJeiPlugin implements IModPlugin {
         registration.addRecipeCatalyst(
                 new ItemStack(HnSBlocks.STARFORGE.get()),
                 StarForgeRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(
+                new ItemStack(HnSBlocks.RADIANT_ALTAR.get()),
+                RadiantAltarRecipeCategory.RECIPE_TYPE);
     }
 }

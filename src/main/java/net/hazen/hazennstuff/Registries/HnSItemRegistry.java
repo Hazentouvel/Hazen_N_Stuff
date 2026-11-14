@@ -90,6 +90,7 @@ import net.hazen.hazennstuff.Item.Armor.SchoolTier.RadiantCrystal.AzureLib.Radia
 import net.hazen.hazennstuff.Item.Armor.SchoolTier.RadiantCrystal.GeckolibRadiantCrystalArmorItem;
 import net.hazen.hazennstuff.Item.Block.HnSBlocks;
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Item.Block.RadiantAltar.Item.RadiantAltarItem;
 import net.hazen.hazennstuff.Item.Block.Starforge.Item.StarForgeItem;
 import net.hazen.hazennstuff.Item.Block.Statues.HazelStatue.Pose1.Item.HazelStatueItem;
 import net.hazen.hazennstuff.Item.Curios.Crystals.LifeCrystals.SacredCurio;
@@ -3617,6 +3618,10 @@ public class HnSItemRegistry {
     public static final DeferredHolder<Item, Item> STARFORGE = ITEMS.register("starforge", () -> new StarForgeItem((Block)
             HnSBlocks.STARFORGE.get(), new Item.Properties()
             //.rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final DeferredHolder<Item, Item> RADIANT_ALTAR = ITEMS.register("radiant_altar", () -> new RadiantAltarItem((Block)
+            HnSBlocks.RADIANT_ALTAR.get(), new Item.Properties()
     ));
 
     public static final DeferredHolder<Item, Item> HAZEL_STATUE = ITEMS.register("hazel_statue", () -> new HazelStatueItem((Block)

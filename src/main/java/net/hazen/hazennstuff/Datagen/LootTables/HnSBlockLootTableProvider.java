@@ -112,6 +112,7 @@ public class HnSBlockLootTableProvider extends BlockLootSubProvider {
 
         //Workstations
         dropSelf(HnSBlocks.STARFORGE.get());
+        dropSelf(HnSBlocks.RADIANT_ALTAR.get());
 
         /*
         *** Ore

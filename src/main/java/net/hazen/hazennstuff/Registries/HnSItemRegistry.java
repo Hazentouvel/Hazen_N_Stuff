@@ -149,7 +149,7 @@ import net.hazen.hazennstuff.Item.Weapons.Generic.Beongae.BeongaeItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.BountifulHarvest.BountifulHarvestItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.DivineGreatsword.DivineGreatswordItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.Excalibur.HazensExcaliburItem;
-import net.hazen.hazennstuff.Item.Weapons.Generic.FireblossomRapier.FireblossomRapierItem;
+import net.hazen.hazennstuff.Item.Weapons.Special.FireblossomRapier.FireblossomRapierItem;
 import net.hazen.hazennstuff.Item.Weapons.Generic.SoulReaper.SoulReaper;
 import net.hazen.hazennstuff.Item.Weapons.Reference.MCDungeons.Firebrand.FirebrandItem;
 import net.hazen.hazennstuff.Item.Weapons.Special.FrostburnDagger.FrostburnDaggerItem;

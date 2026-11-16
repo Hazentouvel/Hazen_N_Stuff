@@ -171,7 +171,7 @@ dependencies {
     implementation "curse.maven:ace_utils-1299492:9300944"
 
     //HazentouveLib
-    implementation "curse.maven:hazentouvelib-1528722:9615682"
+    implementation "curse.maven:hazentouvelib-1528722:9617408"
 
     //AzureLib
     implementation "curse.maven:azurelib-817423:9107208"

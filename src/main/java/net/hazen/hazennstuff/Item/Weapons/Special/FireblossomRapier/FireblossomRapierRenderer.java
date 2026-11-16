@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Weapons.Generic.FireblossomRapier;
+package net.hazen.hazennstuff.Item.Weapons.Special.FireblossomRapier;
 
 import software.bernie.geckolib.renderer.GeoItemRenderer;
 import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;

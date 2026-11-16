@@ -18,7 +18,7 @@ public class StarForgeScreen extends AbstractContainerScreen<StarForgeMenu> {
     private static final int FUEL_W = 13, FUEL_H = 55;
     private static final int FUEL_X = 28, FUEL_Y = 28;
 
-    private static final int FUEL_RIGHT_X = 135;
+    private static final int FUEL_RIGHT_X = 134;
     private static final int FUEL_RIGHT_Y = 28;
 
     private static final int PROG_U = 196, PROG_V = 2;

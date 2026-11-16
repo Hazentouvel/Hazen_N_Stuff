@@ -22,6 +22,15 @@ public class HnSPlayerAnimations {
 
 
     // Ionic Splitter
+    public static final AnimationHolder RAPIER_THRUST = new AnimationHolder(HazenNStuff.id("rapier_thrust"), true);
+    public static final AnimationHolder RAPIER_HEAVY_THRUST = new AnimationHolder(HazenNStuff.id("rapier_heavy_thrust"), true);
+    public static final AnimationHolder RAPIER_THRUST_BURST = new AnimationHolder(HazenNStuff.id("rapier_thrust_burst"), true);
+    public static final AnimationHolder RAPIER_PARRY = new AnimationHolder(HazenNStuff.id("rapier_parry"), true);
+    public static final AnimationHolder RAPIER_IDLE = new AnimationHolder(HazenNStuff.id("rapier_idle"), true);
+    public static final AnimationHolder RAPIER_WALK = new AnimationHolder(HazenNStuff.id("rapier_walk"), true);
+    public static final AnimationHolder RAPIER_RUNNING = new AnimationHolder(HazenNStuff.id("rapier_running"), true);
+
+    // Ionic Splitter
     public static final AnimationHolder IONIC_SLASH_LEFT = new AnimationHolder(HazenNStuff.id("ionic_slash_left"), true);
     public static final AnimationHolder IONIC_SLASH_RIGHT = new AnimationHolder(HazenNStuff.id("ionic_slash_right"), true);
     public static final AnimationHolder IONIC_SLASH_BARRAGE_LEFT = new AnimationHolder(HazenNStuff.id("ionic_slash_barrage_left"), true);

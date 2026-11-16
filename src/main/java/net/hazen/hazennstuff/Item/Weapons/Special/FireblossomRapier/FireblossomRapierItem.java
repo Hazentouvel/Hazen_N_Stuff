@@ -1,4 +1,4 @@
-package net.hazen.hazennstuff.Item.Weapons.Generic.FireblossomRapier;
+package net.hazen.hazennstuff.Item.Weapons.Special.FireblossomRapier;
 
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;

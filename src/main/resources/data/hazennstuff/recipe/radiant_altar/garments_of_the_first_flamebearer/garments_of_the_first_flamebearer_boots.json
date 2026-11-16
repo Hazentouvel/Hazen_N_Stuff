@@ -18,15 +18,27 @@
     },
     {
       "ingredient": {
+        "item": "irons_spellbooks:timeless_slurry"
+      },
+      "count": 2
+    },
+    {
+      "ingredient": {
+        "item": "hazentouvelib:steel_ingot"
+      },
+      "count": 8
+    },
+    {
+      "ingredient": {
         "item": "irons_spellbooks:fire_rune"
       },
       "count": 4
     },
     {
       "ingredient": {
-        "item": "irons_spellbooks:pyrium_ingot"
+        "item": "irons_spellbooks:magic_cloth"
       },
-      "count": 1
+      "count": 6
     },
     {
       "ingredient": {

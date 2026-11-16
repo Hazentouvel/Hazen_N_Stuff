@@ -1,6 +1,8 @@
 package net.hazen.hazennstuff.Setup;
 
 import net.hazen.hazennstuff.HazenNStuff;
+import net.hazen.hazennstuff.Packets.FireblossomRapier.FireblossomRapierAnimationPacket;
+import net.hazen.hazennstuff.Packets.FireblossomRapier.FireblossomRapierPacket;
 import net.hazen.hazennstuff.Packets.IonicSplitter.IonicSplitterT1AnimationPacket;
 import net.hazen.hazennstuff.Packets.EnderExplosionParticlesPacket;
 import net.hazen.hazennstuff.Packets.IonicSplitter.IonicSplitterT1Packet;
@@ -33,6 +35,10 @@ public class HnSPayloadHandler {
         // Umbranova
         payloadRegistrar.playToServer(UmbranovaT1Packet.TYPE, UmbranovaT1Packet.STREAM_CODEC, UmbranovaT1Packet::handle);
         payloadRegistrar.playToClient(UmbranovaT1AnimationPacket.TYPE, UmbranovaT1AnimationPacket.STREAM_CODEC, UmbranovaT1AnimationPacket::handle);
+
+        // Rapier
+        payloadRegistrar.playToServer(FireblossomRapierPacket.TYPE, FireblossomRapierPacket.STREAM_CODEC, FireblossomRapierPacket::handle);
+        payloadRegistrar.playToClient(FireblossomRapierAnimationPacket.TYPE, FireblossomRapierAnimationPacket.STREAM_CODEC, FireblossomRapierAnimationPacket::handle);
 
     }
 }

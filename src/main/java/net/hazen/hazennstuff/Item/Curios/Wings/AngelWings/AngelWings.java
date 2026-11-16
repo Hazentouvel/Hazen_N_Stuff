@@ -19,8 +19,6 @@ import top.theillusivec4.curios.api.SlotContext;
 import java.util.function.Consumer;
 
 public class AngelWings extends WingCurioItem {
-    private static final Holder<Attribute> FALL_FLY_ATTRIBUTE = CaelusApi.getInstance().getFallFlyingAttribute();
-    private static final ResourceLocation ANGEL_WINGS = ResourceLocation.fromNamespaceAndPath(HazenNStuff.MOD_ID, "angel_wings_flight");
 
 
     public AngelWings() {
@@ -44,14 +42,5 @@ public class AngelWings extends WingCurioItem {
                 return this.renderer;
             }
         });
-    }
-
-    @Override
-    public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {
-        Multimap<Holder<Attribute>, AttributeModifier> attributes = LinkedHashMultimap.create();
-
-        attributes.put(FALL_FLY_ATTRIBUTE, new AttributeModifier(ANGEL_WINGS, 1.0D, AttributeModifier.Operation.ADD_VALUE));
-
-        return attributes;
     }
 }

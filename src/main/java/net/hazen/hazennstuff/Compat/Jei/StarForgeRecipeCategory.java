@@ -45,6 +45,9 @@ public class StarForgeRecipeCategory implements IRecipeCategory<StarForgeRecipeJ
     private static final int FUEL_X = 27, FUEL_Y = 98;
     private static final int OUTPUT_X = 80, OUTPUT_Y = 98;
 
+    private static final int FUEL_RIGHT_X = 134;
+    private static final int FUEL_RIGHT_Y = 28;
+
     private static final int FUEL_U = 179, FUEL_V = 3, FUEL_W = 13, FUEL_H = 55;
     private static final int FUEL_DRAW_X = 28, FUEL_DRAW_Y = 28;
     private static final int PROG_U = 196, PROG_V = 2, PROG_W = 56, PROG_H = 123;
@@ -60,6 +63,7 @@ public class StarForgeRecipeCategory implements IRecipeCategory<StarForgeRecipeJ
 
     private final IDrawableStatic background;
     private final IDrawableStatic fuelBar;
+    private final IDrawableStatic rightFuelBar;
     private final IDrawableAnimated progressBar;
     private final IDrawable icon;
 
@@ -68,6 +72,9 @@ public class StarForgeRecipeCategory implements IRecipeCategory<StarForgeRecipeJ
                 .setTextureSize(256, 256).build();
 
         this.fuelBar = helper.drawableBuilder(TEXTURE, FUEL_U, FUEL_V, FUEL_W, FUEL_H)
+                .setTextureSize(256, 256).build();
+
+        this.rightFuelBar = helper.drawableBuilder(TEXTURE, FUEL_U, FUEL_V, FUEL_W, FUEL_H)
                 .setTextureSize(256, 256).build();
 
         IDrawableStatic progressStatic = helper.drawableBuilder(TEXTURE, PROG_U, PROG_V, PROG_W, PROG_H)
@@ -111,12 +118,13 @@ public class StarForgeRecipeCategory implements IRecipeCategory<StarForgeRecipeJ
 
         // Show the gauge full
         fuelBar.draw(guiGraphics, FUEL_DRAW_X, FUEL_DRAW_Y);
+        rightFuelBar.draw(guiGraphics, FUEL_RIGHT_X, FUEL_RIGHT_Y);
 
         progressBar.draw(guiGraphics, PROG_DRAW_X, PROG_DRAW_Y);
 
         Font font = Minecraft.getInstance().font;
         String time = String.format("%.1fs", recipe.smeltTime() / 20.0f);
-        guiGraphics.drawString(font, time, WIDTH - 8 - font.width(time), 68, 0xFFE8C87A, false);
+        guiGraphics.drawString(font, time, WIDTH - 8 - font.width(time), 12, 0xFFE8C87A, false);
     }
 
     @Override
